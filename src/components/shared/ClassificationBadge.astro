@@ -1,0 +1,75 @@
+---
+/**
+ * Classification badge component
+ * Displays classification with color coding
+ */
+
+import type { Classification } from '../../types/analysis';
+
+interface Props {
+  classification: Classification;
+  size?: 'sm' | 'md' | 'lg';
+  showIcon?: boolean;
+}
+
+const { classification, size = 'md', showIcon = true } = Astro.props;
+
+// Format label (remove underscore)
+const label = classification.replace('_', ' ');
+
+// Color schemes
+const colors: Record<Classification, { bg: string; text: string; border: string }> = {
+  FULL_DISCLOSURE: {
+    bg: 'bg-green-100',
+    text: 'text-green-800',
+    border: 'border-green-300'
+  },
+  PARTIAL: {
+    bg: 'bg-yellow-100',
+    text: 'text-yellow-800',
+    border: 'border-yellow-300'
+  },
+  UNCLEAR: {
+    bg: 'bg-orange-100',
+    text: 'text-orange-800',
+    border: 'border-orange-300'
+  },
+  NO_DISCLOSURE: {
+    bg: 'bg-red-100',
+    text: 'text-red-800',
+    border: 'border-red-300'
+  }
+};
+
+// Icons
+const icons: Record<Classification, string> = {
+  FULL_DISCLOSURE: '✓',
+  PARTIAL: '⚠',
+  UNCLEAR: '?',
+  NO_DISCLOSURE: '✗'
+};
+
+// Size classes
+const sizeClasses = {
+  sm: 'text-xs px-2 py-0.5',
+  md: 'text-sm px-2.5 py-1',
+  lg: 'text-base px-3 py-1.5'
+};
+
+const colorScheme = colors[classification];
+const icon = icons[classification];
+---
+
+<span
+  class:list={[
+    'inline-flex items-center gap-1 rounded-md font-medium border',
+    colorScheme.bg,
+    colorScheme.text,
+    colorScheme.border,
+    sizeClasses[size]
+  ]}
+  title={`Classification: ${label}`}
+>
+  {showIcon && <span class="font-bold">{icon}</span>}
+  <span>{label}</span>
+</span>

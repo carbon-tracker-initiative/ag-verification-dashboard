@@ -1,0 +1,70 @@
+---
+/**
+ * Verification status badge component
+ * Used in comparison mode to show if snippet was corrected/removed/passed
+ */
+
+interface Props {
+  status: 'passed' | 'corrected' | 'removed';
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const { status, size = 'md' } = Astro.props;
+
+// Labels and icons
+const labels = {
+  passed: 'Passed',
+  corrected: 'Corrected',
+  removed: 'Removed'
+};
+
+const icons = {
+  passed: '✓',
+  corrected: '⚠',
+  removed: '✗'
+};
+
+// Color schemes
+const colors = {
+  passed: {
+    bg: 'bg-blue-100',
+    text: 'text-blue-800',
+    border: 'border-blue-300'
+  },
+  corrected: {
+    bg: 'bg-amber-100',
+    text: 'text-amber-800',
+    border: 'border-amber-300'
+  },
+  removed: {
+    bg: 'bg-red-100',
+    text: 'text-red-800',
+    border: 'border-red-300'
+  }
+};
+
+// Size classes
+const sizeClasses = {
+  sm: 'text-xs px-2 py-0.5',
+  md: 'text-sm px-2.5 py-1',
+  lg: 'text-base px-3 py-1.5'
+};
+
+const colorScheme = colors[status];
+const label = labels[status];
+const icon = icons[status];
+---
+
+<span
+  class:list={[
+    'inline-flex items-center gap-1 rounded-md font-medium border',
+    colorScheme.bg,
+    colorScheme.text,
+    colorScheme.border,
+    sizeClasses[size]
+  ]}
+  title={`Verification status: ${label}`}
+>
+  <span class="font-bold">{icon}</span>
+  <span>{label}</span>
+</span>
