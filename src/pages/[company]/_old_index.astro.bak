@@ -13,7 +13,7 @@ import {
 } from '../../utils/dataLoader';
 import { calculateCategoryStats, groupQuestionsByCategory, getCategoryGroup } from '../../utils/categoryMapper';
 import TimelineChart from '../../components/TimelineChart.astro';
-import MatrixView from '../../components/MatrixView.astro';
+// import MatrixView from '../../components/MatrixView.astro'; // TODO: Replace with new components
 import ClassificationBar from '../../components/ClassificationBar.astro';
 import MultiYearBarChart from '../../components/MultiYearBarChart.astro';
 
@@ -662,6 +662,8 @@ const questionsByYear = new Map(ourQuestionsByYear);
       </section>
 
       <!-- Matrix View -->
+      <!-- TODO: Replace with new verification dashboard components in Phase 5 -->
+      <!--
       <section class="mb-12">
         <div class="card">
           <MatrixView
@@ -676,6 +678,7 @@ const questionsByYear = new Map(ourQuestionsByYear);
           />
         </div>
       </section>
+      -->
 
       <!-- Year-by-Year Analysis -->
       <section class="mb-12">

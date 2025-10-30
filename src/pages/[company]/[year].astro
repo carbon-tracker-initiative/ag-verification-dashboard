@@ -1,16 +1,22 @@
 ---
+/**
+ * Company-Year Detail Page
+ * Displays comprehensive analysis for a specific company and fiscal year
+ * with snippet-level disclosure quality scoring
+ */
+
 import Layout from '../../layouts/Layout.astro';
-import {
-  loadComparison,
-  getAvailableCompanies,
-  getCompanyYears,
-  calculateApplicableQuestions,
-  loadQuestionsMetadata,
-  findCommonCanonicalQuestions,
-  getDefaultModel
-} from '../../utils/dataLoader';
-import { getClassificationInfo, getCategoryGroup, groupQuestionsByCategory } from '../../utils/categoryMapper';
-import ClassificationBar from '../../components/ClassificationBar.astro';
+import Header from '../../components/layout/Header.astro';
+import Breadcrumb from '../../components/layout/Breadcrumb.astro';
+import SummaryDashboard from '../../components/detail/SummaryDashboard.astro';
+import FiltersBar from '../../components/detail/FiltersBar.astro';
+import QuestionAccordion from '../../components/detail/QuestionAccordion.astro';
+import ComparisonToggle from '../../components/detail/ComparisonToggle.astro';
+
+import { loadCompanyYear } from '../../utils/dataLoader';
+import { calculateCompanyMetrics, calculateQuestionMetrics } from '../../utils/metricsCalculator';
+import { compareOriginalVsVerified } from '../../utils/verificationComparison';
+import categoriesConfig from '../../config/categories.json';
 
 // Get company and year from URL
 const { company, year } = Astro.params;
@@ -19,1237 +25,211 @@ if (!company || !year) {
   return Astro.redirect('/');
 }
 
-// Get model from URL params
-const url = Astro.url;
-let model = url.searchParams.get('model') || undefined;
+// Load company data
+const yearNum = parseInt(year);
+const companyData = await loadCompanyYear(company, yearNum);
 
-// If no model specified, use default (flash preferred over pro)
-if (!model) {
-  model = await getDefaultModel(company) || undefined;
+if (!companyData) {
+  return Astro.redirect('/');
 }
 
-// Load comparison data
-const { ourSystem, drag } = await loadComparison(company, year, model);
+// Calculate metrics
+const companyMetrics = calculateCompanyMetrics(companyData.verified);
 
-if (!ourSystem && !drag) {
-  return Astro.redirect(`/${company.toLowerCase()}`);
+// Calculate question-level metrics
+const questionMetrics = companyData.verified.analysis_results.map(question =>
+  calculateQuestionMetrics(question)
+);
+
+// Calculate verification metrics if comparison available
+let verificationMetrics;
+if (companyData.hasComparison && companyData.original) {
+  verificationMetrics = compareOriginalVsVerified(
+    companyData.original,
+    companyData.verified,
+    companyData.verificationReport
+  );
 }
-
-// Use our system's data as primary, fallback to D-RAG
-const primaryData = ourSystem || drag;
-const questions = primaryData!.questions;
-const metadata = primaryData!.metadata;
 
 // Group questions by category
-const groupedQuestions = groupQuestionsByCategory(questions);
+const questionsByCategory = new Map<string, Array<{ question: any; metrics: any }>>();
 
-// Calculate applicable questions for this company
-const applicableInfo = await calculateApplicableQuestions(company, questions);
+companyData.verified.analysis_results.forEach((question, index) => {
+  const category = question.category || 'Other';
+  if (!questionsByCategory.has(category)) {
+    questionsByCategory.set(category, []);
+  }
+  questionsByCategory.get(category)!.push({
+    question,
+    metrics: questionMetrics[index]
+  });
+});
 
-// Load questions metadata for total canonical count
-const questionsMetadata = await loadQuestionsMetadata();
-const totalCanonicalQuestions = questionsMetadata._meta.total_canonical_questions;
+// Get all unique categories
+const allCategories = Array.from(questionsByCategory.keys());
 
-// Calculate common canonical questions if both systems have data
-let commonCanonicalIds = new Set<string>();
-if (ourSystem && drag) {
-  const nllmQuestions = ourSystem.questions;
-  const dragQuestions = drag.questions;
-  const canonicalComparison = await findCommonCanonicalQuestions(
-    nllmQuestions,
-    dragQuestions,
-    applicableInfo.companySector
-  );
-  commonCanonicalIds = new Set(canonicalComparison.commonCanonicals.map(q => q.id));
-}
-
+// Build breadcrumb items
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: company, href: '#' },
+  { label: year.toString(), href: '#', current: true }
+];
 ---
 
-<Layout title={`${company} ${year} - Detailed Analysis`}>
-  <div class="min-h-screen bg-slate-900">
-    <!-- Header -->
-    <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
+<Layout title={`${company} ${year} - Analysis`}>
+  <Header />
+
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+    <!-- Page Header -->
+    <div class="bg-white border-b border-slate-200 shadow-sm">
       <div class="container mx-auto px-6 py-4">
-        <div class="flex items-center justify-between">
+        <Breadcrumb items={breadcrumbItems} />
+
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mt-4">
           <div>
-            <a href={`/${company.toLowerCase()}${model ? `?model=${model}` : ''}`} class="text-emerald-400 hover:text-emerald-300 text-sm inline-block mb-1">
-              ← Back to {company}
-            </a>
-            <h1 class="text-3xl font-bold text-slate-100">
-              {company} - {year}
+            <h1 class="text-3xl font-bold text-slate-800 mb-1">
+              {company} - Fiscal Year {year}
             </h1>
-            {model && (
-              <div class="text-sm text-blue-400 mt-1 font-mono">
-                Using: {model}
-              </div>
-            )}
+            <div class="flex items-center gap-4 text-sm text-slate-600">
+              <span>Model: {companyData.model}</span>
+              <span>•</span>
+              <span>{companyMetrics.total_questions} questions analyzed</span>
+              <span>•</span>
+              <span>{companyMetrics.total_snippets} evidence snippets</span>
+            </div>
           </div>
-          <div class="flex gap-2">
-            {ourSystem && (
-              <span class="text-sm bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded">
-                N-LLM
-              </span>
-            )}
-            {drag && (
-              <span class="text-sm bg-blue-500/20 text-blue-400 px-3 py-1 rounded">
-                D-RAG Available
-              </span>
-            )}
+
+          <div class="flex items-center gap-6">
+            <!-- Overall Grade -->
+            <div class="text-center">
+              <div class="text-5xl font-bold text-blue-600">
+                {companyMetrics.overall_grade}
+              </div>
+              <div class="text-sm text-slate-600 mt-1">
+                {companyMetrics.overall_disclosure_score.toFixed(1)}%
+              </div>
+              <div class="text-xs text-slate-500">Overall Quality</div>
+            </div>
           </div>
         </div>
       </div>
-    </header>
+    </div>
 
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-8">
-      <!-- System Toggle Buttons -->
-      {ourSystem && drag && (
-        <section class="mb-6">
-          <div class="flex gap-3">
-            <button id="toggle-nllm" class="px-4 py-2 rounded font-medium bg-emerald-500 text-white">
-              N-LLM
-            </button>
-            <button id="toggle-drag" class="px-4 py-2 rounded font-medium bg-slate-700 text-slate-300">
-              D-RAG
-            </button>
-            <button id="toggle-compare" class="px-4 py-2 rounded font-medium bg-slate-700 text-slate-300">
-              Compare
-            </button>
-          </div>
-        </section>
-      )}
+      <!-- Comparison Toggle (if available) -->
+      <ComparisonToggle
+        hasComparison={companyData.hasComparison}
+        verificationMetrics={verificationMetrics}
+      />
 
-      <!-- Classification Distribution -->
+      <!-- Summary Dashboard -->
       <section class="mb-8">
-        <div class="card">
-          <div id="classification-nllm">
-            <h3 class="text-sm font-semibold text-emerald-400 mb-3">
-              N-LLM Classification Distribution
-            </h3>
-            {ourSystem && <ClassificationBar questions={ourSystem.questions} title="" />}
-          </div>
-
-          <div id="classification-drag" class="hidden">
-            <h3 class="text-sm font-semibold text-cyan-400 mb-3">
-              D-RAG Classification Distribution
-            </h3>
-            {drag && <ClassificationBar questions={drag.questions} title="" />}
-          </div>
-
-          <div id="classification-compare" class="hidden space-y-6">
-            <div>
-              <h3 class="text-sm font-semibold text-emerald-400 mb-3">
-                N-LLM Classification Distribution
-              </h3>
-              {ourSystem && <ClassificationBar questions={ourSystem.questions} title="" />}
-            </div>
-            <div>
-              <h3 class="text-sm font-semibold text-cyan-400 mb-3">
-                D-RAG Classification Distribution
-              </h3>
-              {drag && <ClassificationBar questions={drag.questions} title="" />}
-            </div>
-          </div>
-        </div>
+        <SummaryDashboard metrics={companyMetrics} />
       </section>
 
-      <!-- Sorting Controls -->
-      <section class="mb-6">
-        <div class="flex items-center justify-between">
-          <h2 class="text-xl font-bold text-slate-100">Questions</h2>
-          <div class="flex items-center gap-3">
-            <label class="text-sm text-slate-400">Sort by:</label>
-            <select
-              id="sort-select"
-              class="bg-slate-800 text-slate-200 border border-slate-700 rounded px-3 py-2 text-sm focus:outline-none focus:border-emerald-500"
-            >
-              <option value="category" id="category-option">Category</option>
-              <option value="score-high">Score (High to Low)</option>
-              <option value="score-low">Score (Low to High)</option>
-              <option value="question-id" selected>Question ID</option>
-              {ourSystem && drag ? (
-                <option value="disagreement" id="disagreement-option">
-                  By Disagreement
-                </option>
-              ) : (
-                <option value="disagreement" id="disagreement-option" disabled style="display:none;">
-                  By Disagreement
-                </option>
-              )}
-            </select>
-          </div>
-        </div>
-      </section>
-
-      <!-- Metadata -->
+      <!-- Category Scores Overview -->
       <section class="mb-8">
-        <div class="card">
-          <h2 class="text-lg font-bold text-slate-100 mb-4">📋 Analysis Metadata</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 text-sm">
-            <div>
-              <div class="text-slate-400">Model Used</div>
-              <div class="text-slate-100 font-medium">{metadata.model_used}</div>
-            </div>
-            <div>
-              <div class="text-slate-400">Company Sector</div>
-              <div class="text-slate-100 font-medium">
-                {applicableInfo.companySector}
-                <span class="text-xs text-slate-400 ml-2">
-                  ({applicableInfo.companySector === 'P' ? 'Pesticides' :
-                    applicableInfo.companySector === 'F' ? 'Fertilizers' : 'Both'})
-                </span>
-              </div>
-            </div>
-            <div>
-              <div class="text-slate-400">Analysis Date</div>
-              <div class="text-slate-100 font-medium">{metadata.analysis_date}</div>
-            </div>
-            <div>
-              <div class="text-slate-400">Documents Analyzed</div>
-              <div class="text-slate-100 font-medium">{metadata.documents_analyzed.length} files</div>
-            </div>
-            <div>
-              <div class="text-slate-400">Questions Analyzed</div>
-              <div class="text-slate-100 font-medium">{metadata.total_questions}</div>
-            </div>
-            <div>
-              <div class="text-slate-400">Applicable Questions</div>
-              <div class="text-slate-100 font-medium">
-                {applicableInfo.totalApplicable}
-                <span class="text-xs text-slate-400 ml-2">
-                  ({applicableInfo.totalCanonical}/{totalCanonicalQuestions} canonical + {applicableInfo.totalVariants} variants)
-                </span>
-              </div>
-            </div>
-            {applicableInfo.totalExcluded > 0 && (
-              <div>
-                <div class="text-slate-400">Excluded Questions</div>
-                <div class="text-slate-100 font-medium">
-                  {applicableInfo.totalExcluded}
-                  <a href={`/${company.toLowerCase()}`} class="text-xs text-red-400 hover:text-red-300 ml-2">
-                    View details →
-                  </a>
-                </div>
-              </div>
-            )}
-            {metadata.processing_time_seconds && (
-              <div>
-                <div class="text-slate-400">Processing Time</div>
-                <div class="text-slate-100 font-medium">{metadata.processing_time_seconds}s</div>
-              </div>
-            )}
-            {metadata.estimated_cost && (
-              <div>
-                <div class="text-slate-400">Estimated Cost</div>
-                <div class="text-slate-100 font-medium">{metadata.estimated_cost}</div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+        <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
+          <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+            Category Performance
+          </h2>
 
-      <!-- Questions Container -->
-      <div id="questions-container">
-        <!-- Questions by Category -->
-        {Array.from(groupedQuestions.entries()).map(([categoryName, categoryQuestions]) => {
-        const categoryInfo = getCategoryGroup(categoryQuestions[0]);
-        return (
-          <section class="mb-12" id={`category-${categoryName.toLowerCase().replace(/\s+/g, '-')}`}>
-            <div class="flex items-center gap-3 mb-6">
-              <span class="text-3xl">{categoryInfo.icon}</span>
-              <div>
-                <h2 class="text-2xl font-bold text-slate-100">{categoryName}</h2>
-                <p class="text-sm text-slate-400">{categoryInfo.description}</p>
-              </div>
-            </div>
-
-            <div class="space-y-4">
-              {categoryQuestions.map((question) => {
-                const classInfo = getClassificationInfo(question.answer.classification);
-                return (
-                  <div
-                    id={`question-${question.question_id}`}
-                    class="card hover:border-slate-600 transition-colors"
-                    data-question-classification={question.answer.classification}
-                    data-question-id={question.question_id}
-                    data-question-category={question.category}
-                    data-question-score={getClassificationInfo(question.answer.classification).score}
-                  >
-                    <!-- Question Header -->
-                    <div class="flex items-start justify-between gap-4 mb-4">
-                      <div class="flex-1">
-                        <div class="text-sm text-slate-400 mb-1">
-                          Question ID: {question.question_id}
-                          {question.priority && (
-                            <span class="ml-2 text-xs px-2 py-0.5 rounded bg-slate-700 text-slate-300">
-                              {question.priority}
-                            </span>
-                          )}
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {categoriesConfig.categories.map(cat => {
+              const score = companyMetrics.category_scores[cat.name] || 0;
+              return (
+                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                  <div class="flex items-center gap-2 mb-2">
+                    <span class="text-2xl">{cat.icon}</span>
+                    <div class="flex-1">
+                      <div class="text-sm font-semibold text-slate-700">{cat.name}</div>
+                      <div class="flex items-center gap-2 mt-1">
+                        <div class="flex-1 bg-slate-200 rounded-full h-2">
+                          <div
+                            class="h-2 rounded-full transition-all"
+                            style={`width: ${score}%; background-color: ${cat.color}`}
+                          ></div>
                         </div>
-                        <h3 class="text-lg font-semibold text-slate-100">
-                          {question.question_text}
-                        </h3>
-                      </div>
-                      <div
-                        class="px-4 py-2 rounded-lg font-semibold text-sm whitespace-nowrap"
-                        style={`background-color: ${classInfo.bgColor}; color: ${classInfo.color}`}
-                      >
-                        {question.answer.classification}
-                      </div>
-                    </div>
-
-                    <!-- Classification Justification -->
-                    <div class="mb-4">
-                      <div class="text-sm font-semibold text-slate-300 mb-2">Justification:</div>
-                      <div class="text-sm text-slate-400 italic">
-                        {question.answer.classification_justification}
-                      </div>
-                    </div>
-
-                    <!-- Financial Quantification -->
-                    {question.answer.financial_quantification && (
-                      <div class="mb-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-3">
-                        <div class="text-sm font-semibold text-emerald-400 mb-1">
-                          💰 Financial Quantification:
-                        </div>
-                        <div class="text-sm text-emerald-300">
-                          {question.answer.financial_quantification}
-                        </div>
-                      </div>
-                    )}
-
-                    <!-- Evidence (supports both N-LLM and D-RAG formats) -->
-                    {question.answer.evidence && question.answer.evidence.length > 0 && (
-                      <div class="mb-4">
-                        <div class="text-sm font-semibold text-slate-300 mb-2">
-                          📄 Evidence ({question.answer.evidence.length}):
-                        </div>
-                        <div class="space-y-3">
-                          {question.answer.evidence.map((evidence, idx) => (
-                            <div class="bg-slate-700/50 rounded p-3 text-sm">
-                              {/* D-RAG format (has source_url and text) */}
-                              {evidence.source_url && evidence.text ? (
-                                <div>
-                                  <div class="text-slate-300 mb-2 leading-relaxed">
-                                    "{evidence.text}"
-                                  </div>
-                                  <div class="text-xs text-slate-400 mb-1">
-                                    📍 Evidence #{evidence.evidence_number || idx + 1}
-                                  </div>
-                                  <div class="text-xs">
-                                    <a
-                                      href={evidence.source_url}
-                                      target="_blank"
-                                      rel="noopener noreferrer"
-                                      class="text-cyan-400 hover:text-cyan-300 hover:underline transition-colors"
-                                    >
-                                      🔗 View source
-                                    </a>
-                                  </div>
-                                </div>
-                              ) : (
-                                /* N-LLM format (has quote and source) */
-                                <div>
-                                  <div class="text-slate-300 mb-2 leading-relaxed">
-                                    "{evidence.quote}"
-                                  </div>
-                                  <div class="text-xs text-slate-400">
-                                    📍 Source: {evidence.source}
-                                    {evidence.page && ` (Page ${evidence.page})`}
-                                  </div>
-                                  {evidence.financial_amounts && evidence.financial_amounts.length > 0 && (
-                                    <div class="text-xs text-emerald-400 mt-1">
-                                      💵 Amounts: {evidence.financial_amounts.join(', ')}
-                                    </div>
-                                  )}
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    <!-- Summary -->
-                    <div>
-                      <div class="text-sm font-semibold text-slate-300 mb-2">Summary:</div>
-                      <div class="text-sm text-slate-400">
-                        {question.answer.summary}
+                        <span class="text-sm font-bold text-slate-800 min-w-[50px] text-right">
+                          {score.toFixed(1)}%
+                        </span>
                       </div>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </section>
-        );
-      })}
-      </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
+      <!-- Filters and Questions -->
+      <section>
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold text-slate-800 mb-4">Detailed Question Analysis</h2>
+          <p class="text-sm text-slate-600 mb-6">
+            Explore each question with snippet-level scoring. Questions are collapsed by default - click to expand and view detailed evidence.
+          </p>
+
+          <!-- Filters Bar -->
+          <FiltersBar categories={allCategories} />
+        </div>
+
+        <!-- Questions Container -->
+        <div id="questions-container" class="space-y-4">
+          {Array.from(questionsByCategory.entries()).map(([categoryName, items]) => {
+            const categoryConfig = categoriesConfig.categories.find(c => c.name === categoryName);
+            const categoryIcon = categoryConfig?.icon || '📊';
+            const categoryColor = categoryConfig?.color || '#6b7280';
+
+            return items.map(({ question, metrics }) => (
+              <QuestionAccordion
+                question={question}
+                metrics={metrics}
+                category={categoryName}
+                categoryIcon={categoryIcon}
+                categoryColor={categoryColor}
+              />
+            ));
+          })}
+        </div>
+
+        <!-- No Results Message (Hidden by default, shown by JS when all questions are filtered out) -->
+        <div id="no-results" class="hidden text-center py-12">
+          <svg class="w-16 h-16 text-slate-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h3 class="text-lg font-semibold text-slate-600 mb-2">No questions match your filters</h3>
+          <p class="text-sm text-slate-500">Try adjusting your filter criteria</p>
+        </div>
+      </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-slate-800 border-t border-slate-700 mt-12">
-      <div class="container mx-auto px-6 py-6 text-center text-slate-400 text-sm">
-        <p>Agricultural Document Analyzer - D-Rag Validation System</p>
-      </div>
-    </footer>
   </div>
-
-  <!-- Embed questions data for sorting and toggling -->
-  <script id="questions-data" type="application/json" set:html={JSON.stringify({
-    nllm: ourSystem ? {
-      questions: ourSystem.questions,
-      groupedQuestions: Array.from(groupQuestionsByCategory(ourSystem.questions).entries()).map(([category, qs]) => ({
-        category,
-        questions: qs.map(q => q.question_id)
-      }))
-    } : null,
-    drag: drag ? {
-      questions: drag.questions,
-      groupedQuestions: Array.from(groupQuestionsByCategory(drag.questions).entries()).map(([category, qs]) => ({
-        category,
-        questions: qs.map(q => q.question_id)
-      }))
-    } : null,
-    // Legacy format for current sorting (using primary data)
-    questions: questions.map(q => ({
-      question_id: q.question_id,
-      question_text: q.question_text,
-      category: q.category,
-      classification: q.answer.classification,
-      score: getClassificationInfo(q.answer.classification).score
-    })),
-    groupedQuestions: Array.from(groupedQuestions.entries()).map(([category, qs]) => ({
-      category,
-      questions: qs.map(q => q.question_id)
-    })),
-    commonCanonicalIds: Array.from(commonCanonicalIds)
-  })}></script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Parse URL query parameters for mode (e.g., ?mode=compare)
-      let targetQuestionId = null;
-      let targetMode = null;
-
-      const urlParams = new URLSearchParams(window.location.search);
-      const modeParam = urlParams.get('mode');
-      if (modeParam === 'compare' || modeParam === 'nllm' || modeParam === 'drag') {
-        targetMode = modeParam;
-      }
-
-      // Parse URL hash for question ID (e.g., #question-99901)
-      if (window.location.hash) {
-        const hash = window.location.hash.substring(1);
-
-        // Check if it's the new format with parameters
-        if (hash.includes('=')) {
-          const params = new URLSearchParams(hash);
-          targetQuestionId = params.get('q');
-          if (!targetMode) targetMode = params.get('m');
-        } else if (hash.startsWith('question-')) {
-          // Extract question ID from hash like #question-99901
-          targetQuestionId = hash.replace('question-', '');
-        } else {
-          // Old format - just try to scroll to element
-          const element = document.getElementById(hash);
-          if (element) {
-            setTimeout(() => {
-              element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              element.classList.add('highlight-flash');
-              setTimeout(() => {
-                element.classList.remove('highlight-flash');
-              }, 2000);
-            }, 500);
-          }
-        }
-      }
-
-      const sortSelect = document.getElementById('sort-select');
-      const questionsContainer = document.getElementById('questions-container');
-
-      // Parse questions data
-      const dataScript = document.getElementById('questions-data');
-      const data = JSON.parse(dataScript.textContent);
-
-      if (!sortSelect || !questionsContainer) return;
-
-      // System Toggle Logic (N-LLM / D-RAG / Compare)
-      const toggleNllm = document.getElementById('toggle-nllm');
-      const toggleDrag = document.getElementById('toggle-drag');
-      const toggleCompare = document.getElementById('toggle-compare');
-
-      const classificationNllm = document.getElementById('classification-nllm');
-      const classificationDrag = document.getElementById('classification-drag');
-      const classificationCompare = document.getElementById('classification-compare');
-
-      let currentMode = 'nllm'; // 'nllm', 'drag', 'compare'
-
-      // Set initial sort based on mode
-      function getDefaultSort(mode) {
-        if (mode === 'compare') {
-          return 'disagreement';
-        }
-        return 'question-id'; // Default for nllm and drag
-      }
-
-      // Set initial sort value based on default for current mode
-      sortSelect.value = getDefaultSort(currentMode);
-
-      // Update sort event listener to use unified sorting function
-      sortSelect.addEventListener('change', () => {
-        const sortType = sortSelect.value;
-        applySorting(sortType);
-      });
-
-      function updateToggleButtons() {
-        if (!toggleNllm || !toggleDrag || !toggleCompare) return;
-
-        const buttons = [toggleNllm, toggleDrag, toggleCompare];
-        const modes = ['nllm', 'drag', 'compare'];
-
-        buttons.forEach((btn, idx) => {
-          if (modes[idx] === currentMode) {
-            btn.className = 'px-4 py-2 rounded font-medium bg-emerald-500 text-white';
-          } else {
-            btn.className = 'px-4 py-2 rounded font-medium bg-slate-700 text-slate-300';
-          }
-        });
-      }
-
-      function switchMode(mode, scrollToQuestionId = null) {
-        currentMode = mode;
-        updateToggleButtons();
-
-        // Toggle classification distributions
-        if (classificationNllm) classificationNllm.classList.toggle('hidden', mode !== 'nllm');
-        if (classificationDrag) classificationDrag.classList.toggle('hidden', mode !== 'drag');
-        if (classificationCompare) classificationCompare.classList.toggle('hidden', mode !== 'compare');
-
-        // Update available sort options based on mode
-        const disagreementOption = document.getElementById('disagreement-option');
-        const categoryOption = sortSelect.querySelector('option[value="category"]');
-
-        if (mode === 'nllm') {
-          // N-LLM: Allow category, disable disagreement
-          if (categoryOption) {
-            categoryOption.disabled = false;
-            categoryOption.style.display = '';
-          }
-          if (disagreementOption) {
-            disagreementOption.style.display = 'none';
-            disagreementOption.disabled = true;
-          }
-        } else if (mode === 'drag') {
-          // D-RAG: Disable both category and disagreement
-          if (categoryOption) {
-            categoryOption.disabled = true;
-            categoryOption.style.display = 'none';
-          }
-          if (disagreementOption) {
-            disagreementOption.style.display = 'none';
-            disagreementOption.disabled = true;
-          }
-        } else if (mode === 'compare') {
-          // Compare: Disable category, enable disagreement
-          if (categoryOption) {
-            categoryOption.disabled = true;
-            categoryOption.style.display = 'none';
-          }
-          if (disagreementOption) {
-            disagreementOption.style.display = '';
-            disagreementOption.disabled = false;
-          }
-        }
-
-        // Set default sort for this mode
-        currentSortType = getDefaultSort(mode);
-        sortSelect.value = currentSortType;
-
-        // Render appropriate questions
-        renderQuestions(mode);
-
-        // Apply sorting with default for this mode
-        applySorting(currentSortType);
-
-        // Scroll to specific question if requested
-        if (scrollToQuestionId) {
-          setTimeout(() => {
-            const questionElement = document.getElementById(`question-${scrollToQuestionId}`);
-            if (questionElement) {
-              // If the question is inside a collapsed section, expand it first
-              const parentSection = questionElement.closest('section');
-              if (parentSection) {
-                const header = parentSection.querySelector('.cursor-pointer');
-                const contentDiv = parentSection.querySelector('.space-y-4');
-                const arrow = header?.querySelector('.collapse-arrow');
-
-                if (contentDiv && contentDiv.style.display === 'none') {
-                  // Expand the section
-                  contentDiv.style.display = '';
-                  if (arrow) arrow.style.transform = 'rotate(90deg)';
-                }
-              }
-
-              // Scroll and highlight
-              questionElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-              questionElement.classList.add('highlight-flash');
-              setTimeout(() => {
-                questionElement.classList.remove('highlight-flash');
-              }, 2000);
-            }
-          }, 300);
-        }
-      }
-
-      function renderQuestions(mode) {
-        const container = questionsContainer;
-        if (!container) return;
-
-        const fullData = JSON.parse(dataScript.textContent);
-
-        if (mode === 'nllm') {
-          // Show N-LLM questions (already rendered in HTML, just make visible)
-          container.innerHTML = generateQuestionCards(fullData.nllm, 'nllm');
-        } else if (mode === 'drag') {
-          // Show D-RAG questions
-          container.innerHTML = generateQuestionCards(fullData.drag, 'drag');
-        } else if (mode === 'compare') {
-          // Show comparison view
-          container.innerHTML = generateCompareView(fullData.nllm, fullData.drag);
-        }
-      }
-
-      function generateQuestionCards(systemData, system) {
-        if (!systemData || !systemData.groupedQuestions) return '';
-
-        const colorScheme = system === 'nllm' ? {
-          primary: '#10b981',
-          label: 'N-LLM'
-        } : {
-          primary: '#06b6d4',
-          label: 'D-RAG'
-        };
-
-        let html = '';
-
-        systemData.groupedQuestions.forEach(group => {
-          const questions = group.questions.map(qId =>
-            systemData.questions.find(q => q.question_id === qId)
-          ).filter(q => q);
-
-          if (questions.length === 0) return;
-
-          const categoryInfo = getCategoryInfo(questions[0].category);
-
-          html += `
-            <section class="mb-12">
-              <div class="flex items-center gap-3 mb-6">
-                <span class="text-3xl">${categoryInfo.icon}</span>
-                <div>
-                  <h2 class="text-2xl font-bold text-slate-100">${group.category}</h2>
-                  <p class="text-sm text-slate-400">${categoryInfo.description}</p>
-                </div>
-              </div>
-              <div class="space-y-4">
-          `;
-
-          questions.forEach(q => {
-            const classInfo = getClassInfo(q.answer.classification);
-            html += generateSingleQuestionCard(q, classInfo, system);
-          });
-
-          html += '</div></section>';
-        });
-
-        return html;
-      }
-
-      function generateSingleQuestionCard(question, classInfo, system) {
-        const themeColor = system === 'nllm' ? 'emerald' : 'cyan';
-
-        return `
-          <div id="question-${question.question_id}"
-               class="card hover:border-slate-600 transition-colors"
-               data-question-classification="${question.answer.classification}"
-               data-question-id="${question.question_id}"
-               data-question-category="${question.category}"
-               data-question-score="${classInfo.score || 0}">
-            <div class="flex items-start justify-between gap-4 mb-4">
-              <div class="flex-1">
-                <div class="text-sm text-slate-400 mb-1">
-                  Question ID: ${question.question_id}
-                </div>
-                <h3 class="text-lg font-semibold text-slate-100">
-                  ${question.question_text}
-                </h3>
-              </div>
-              <div class="px-4 py-2 rounded-lg font-semibold text-sm whitespace-nowrap" style="background-color: ${classInfo.bgColor}; color: ${classInfo.color}">
-                ${question.answer.classification}
-              </div>
-            </div>
-
-            <div class="mb-4">
-              <div class="text-sm font-semibold text-slate-300 mb-2">Justification:</div>
-              <div class="text-sm text-slate-400 italic">${question.answer.classification_justification || question.answer.justification || 'N/A'}</div>
-            </div>
-
-            ${question.answer.financial_quantification ? `
-              <div class="mb-4 bg-${themeColor}-500/10 border border-${themeColor}-500/30 rounded-lg p-3">
-                <div class="text-sm font-semibold text-${themeColor}-400 mb-1">💰 Financial Quantification:</div>
-                <div class="text-sm text-${themeColor}-300">${question.answer.financial_quantification}</div>
-              </div>
-            ` : ''}
-
-            ${question.answer.evidence && question.answer.evidence.length > 0 ? `
-              <div class="mb-4">
-                <div class="text-sm font-semibold text-slate-300 mb-2">📄 Evidence (${question.answer.evidence.length}):</div>
-                <div class="space-y-3">
-                  ${question.answer.evidence.map((ev, idx) => {
-                    if (ev.source_url && ev.text) {
-                      // D-RAG format
-                      const safeText = ev.text.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                      const safeUrl = ev.source_url.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                      return `
-                        <div class="bg-slate-700/50 rounded p-3 text-sm">
-                          <div class="text-slate-300 mb-2 leading-relaxed">"${safeText}"</div>
-                          <div class="text-xs text-slate-400 mb-1">📍 Evidence #${ev.evidence_number || idx + 1}</div>
-                          <div class="text-xs">
-                            <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 hover:underline transition-colors">
-                              🔗 View source
-                            </a>
-                          </div>
-                        </div>
-                      `;
-                    } else {
-                      // N-LLM format
-                      const safeQuote = (ev.quote || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                      const safeSource = (ev.source || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                      return `
-                        <div class="bg-slate-700/50 rounded p-3 text-sm">
-                          <div class="text-slate-300 mb-2 leading-relaxed">"${safeQuote}"</div>
-                          <div class="text-xs text-slate-400">📍 Source: ${safeSource}${ev.page ? ` (Page ${ev.page})` : ''}</div>
-                          ${ev.financial_amounts && ev.financial_amounts.length > 0 ? `
-                            <div class="text-xs text-emerald-400 mt-1">💵 Amounts: ${ev.financial_amounts.join(', ')}</div>
-                          ` : ''}
-                        </div>
-                      `;
-                    }
-                  }).join('')}
-                </div>
-              </div>
-            ` : ''}
-
-            ${question.answer.summary ? `
-              <div>
-                <div class="text-sm font-semibold text-slate-300 mb-2">Summary:</div>
-                <div class="text-sm text-slate-400">${question.answer.summary}</div>
-              </div>
-            ` : ''}
-          </div>
-        `;
-      }
-
-      function generateCompareView(nllmData, dragData) {
-        if (!nllmData || !dragData) return '';
-
-        let html = '';
-
-        // Get common canonical IDs from the data
-        const dataScript = document.getElementById('questions-data');
-        const data = JSON.parse(dataScript.textContent);
-        const commonCanonicalIds = new Set(data.commonCanonicalIds || []);
-
-        // Get all unique question IDs from both systems
-        const nllmIds = new Set(nllmData.questions.map(q => q.question_id));
-        const dragIds = new Set(dragData.questions.map(q => q.question_id));
-        let allIds = new Set([...nllmIds, ...dragIds]);
-
-        // Filter to only common canonical questions if we have the filter data
-        if (commonCanonicalIds.size > 0) {
-          // Extract base question IDs and filter
-          allIds = new Set(
-            Array.from(allIds).filter(qId => {
-              // Get base ID (remove variant suffixes like -A, -B)
-              const baseId = qId.replace(/-[A-Z]$/, '');
-              // Only include if it's a canonical question (no variant) AND in common set
-              return qId === baseId && commonCanonicalIds.has(qId);
-            })
-          );
-        }
-
-        // Group by category
-        const categories = {};
-        allIds.forEach(qId => {
-          const nllmQ = nllmData.questions.find(q => q.question_id === qId);
-          const dragQ = dragData.questions.find(q => q.question_id === qId);
-          const category = (nllmQ || dragQ).category;
-
-          if (!categories[category]) categories[category] = [];
-          categories[category].push({ qId, nllmQ, dragQ });
-        });
-
-        Object.entries(categories).forEach(([category, questions]) => {
-          const categoryInfo = getCategoryInfo(category);
-
-          html += `
-            <section class="mb-12">
-              <div class="flex items-center gap-3 mb-6">
-                <span class="text-3xl">${categoryInfo.icon}</span>
-                <div>
-                  <h2 class="text-2xl font-bold text-slate-100">${category}</h2>
-                  <p class="text-sm text-slate-400">${categoryInfo.description}</p>
-                </div>
-              </div>
-              <div class="space-y-4">
-          `;
-
-          questions.forEach(({ qId, nllmQ, dragQ }) => {
-            html += generateCompareCard(qId, nllmQ, dragQ);
-          });
-
-          html += '</div></section>';
-        });
-
-        return html;
-      }
-
-      function generateCompareCard(qId, nllmQ, dragQ) {
-        const question = nllmQ || dragQ;
-        const nllmClass = nllmQ ? getClassInfo(nllmQ.answer.classification) : null;
-        const dragClass = dragQ ? getClassInfo(dragQ.answer.classification) : null;
-
-        const disagreement = nllmQ && dragQ && nllmQ.answer.classification !== dragQ.answer.classification;
-        const disagreementScore = calculateDisagreementScore(
-          nllmQ?.answer.classification,
-          dragQ?.answer.classification
-        );
-
-        const nllmScore = nllmQ ? (nllmClass?.score || 0) : 0;
-        const dragScore = dragQ ? (dragClass?.score || 0) : 0;
-
-        return `
-          <div id="question-${qId}"
-               class="card hover:border-slate-600 transition-colors ${disagreement ? 'border-amber-500/30' : ''}"
-               data-question-id="${qId}"
-               data-question-category="${question.category}"
-               data-nllm-classification="${nllmQ?.answer.classification || 'N/A'}"
-               data-drag-classification="${dragQ?.answer.classification || 'N/A'}"
-               data-nllm-score="${nllmScore}"
-               data-drag-score="${dragScore}"
-               data-disagreement="${disagreementScore}">
-            <div class="mb-4">
-              <div class="text-sm text-slate-400 mb-1">Question ID: ${qId}</div>
-              <h3 class="text-lg font-semibold text-slate-100">${question.question_text}</h3>
-              ${disagreement ? '<div class="mt-2 text-xs text-amber-400 flex items-center gap-1"><span>⚠️</span><span>Systems disagree on classification</span></div>' : ''}
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <!-- N-LLM Column -->
-              <div class="border-l-4 border-l-emerald-500 pl-4">
-                <h4 class="text-sm font-bold text-emerald-400 mb-3">N-LLM Analysis</h4>
-                ${nllmQ ? `
-                  <div class="mb-3">
-                    <div class="px-3 py-1 rounded inline-block text-xs font-semibold" style="background-color: ${nllmClass.bgColor}; color: ${nllmClass.color}">
-                      ${nllmQ.answer.classification}
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <div class="text-xs font-semibold text-slate-300 mb-1">Justification:</div>
-                    <div class="text-xs text-slate-400">${nllmQ.answer.classification_justification || 'N/A'}</div>
-                  </div>
-                  ${nllmQ.answer.financial_quantification ? `
-                    <div class="mb-3 text-xs">
-                      <span class="font-semibold text-emerald-400">💰 Financial:</span>
-                      <span class="text-slate-300">${nllmQ.answer.financial_quantification}</span>
-                    </div>
-                  ` : ''}
-                  ${nllmQ.answer.evidence && nllmQ.answer.evidence.length > 0 ? `
-                    <div class="mb-3">
-                      <div class="text-xs font-semibold text-slate-300 mb-2">📄 Evidence (${nllmQ.answer.evidence.length}):</div>
-                      <div class="space-y-2">
-                        ${nllmQ.answer.evidence.map((ev, idx) => {
-                          if (ev.source_url && ev.text) {
-                            const safeText = ev.text.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                            const safeUrl = ev.source_url.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                            return `
-                              <div class="bg-slate-700/50 rounded p-2 text-xs">
-                                <div class="text-slate-300 mb-1 leading-relaxed">"${safeText}"</div>
-                                <div class="text-xs text-slate-400 mb-1">📍 Evidence #${ev.evidence_number || idx + 1}</div>
-                                <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 hover:underline">
-                                  🔗 View source
-                                </a>
-                              </div>
-                            `;
-                          } else {
-                            const safeQuote = (ev.quote || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                            const safeSource = (ev.source || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                            let html = '<div class="bg-slate-700/50 rounded p-2 text-xs">';
-                            html += '<div class="text-slate-300 mb-1 leading-relaxed">"' + safeQuote + '"</div>';
-                            html += '<div class="text-slate-400">📍 ' + safeSource;
-                            if (ev.page) html += ' (Page ' + ev.page + ')';
-                            html += '</div>';
-                            if (ev.financial_amounts && ev.financial_amounts.length > 0) {
-                              html += '<div class="text-emerald-400 mt-1">💵 ' + ev.financial_amounts.join(', ') + '</div>';
-                            }
-                            html += '</div>';
-                            return html;
-                          }
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                ` : '<div class="text-xs text-slate-500 italic">Not available</div>'}
-              </div>
-
-              <!-- D-RAG Column -->
-              <div class="border-l-4 border-l-cyan-500 pl-4">
-                <h4 class="text-sm font-bold text-cyan-400 mb-3">D-RAG Analysis</h4>
-                ${dragQ ? `
-                  <div class="mb-3">
-                    <div class="px-3 py-1 rounded inline-block text-xs font-semibold" style="background-color: ${dragClass.bgColor}; color: ${dragClass.color}">
-                      ${dragQ.answer.classification}
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <div class="text-xs font-semibold text-slate-300 mb-1">Justification:</div>
-                    <div class="text-xs text-slate-400">${dragQ.answer.classification_justification || dragQ.answer.justification || 'N/A'}</div>
-                  </div>
-                  ${dragQ.answer.financial_quantification ? `
-                    <div class="mb-3 text-xs">
-                      <span class="font-semibold text-cyan-400">💰 Financial:</span>
-                      <span class="text-slate-300">${dragQ.answer.financial_quantification}</span>
-                    </div>
-                  ` : ''}
-                  ${dragQ.answer.evidence && dragQ.answer.evidence.length > 0 ? `
-                    <div class="mb-3">
-                      <div class="text-xs font-semibold text-slate-300 mb-2">📄 Evidence (${dragQ.answer.evidence.length}):</div>
-                      <div class="space-y-2">
-                        ${dragQ.answer.evidence.map((ev, idx) => {
-                          if (ev.source_url && ev.text) {
-                            const safeText = ev.text.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                            const safeUrl = ev.source_url.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                            return `
-                              <div class="bg-slate-700/50 rounded p-2 text-xs">
-                                <div class="text-slate-300 mb-1 leading-relaxed">"${safeText}"</div>
-                                <div class="text-xs text-slate-400 mb-1">📍 Evidence #${ev.evidence_number || idx + 1}</div>
-                                <a href="${safeUrl}" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:text-cyan-300 hover:underline">
-                                  🔗 View source
-                                </a>
-                              </div>
-                            `;
-                          } else {
-                            const safeQuote = (ev.quote || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                            const safeSource = (ev.source || '').replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/`/g, '\\`').replace(/\$/g, '\\$');
-                            let html = '<div class="bg-slate-700/50 rounded p-2 text-xs">';
-                            html += '<div class="text-slate-300 mb-1 leading-relaxed">"' + safeQuote + '"</div>';
-                            html += '<div class="text-slate-400">📍 ' + safeSource;
-                            if (ev.page) html += ' (Page ' + ev.page + ')';
-                            html += '</div>';
-                            if (ev.financial_amounts && ev.financial_amounts.length > 0) {
-                              html += '<div class="text-emerald-400 mt-1">💵 ' + ev.financial_amounts.join(', ') + '</div>';
-                            }
-                            html += '</div>';
-                            return html;
-                          }
-                        }).join('')}
-                      </div>
-                    </div>
-                  ` : ''}
-                ` : '<div class="text-xs text-slate-500 italic">Not available</div>'}
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      function getCategoryInfo(category) {
-        const mapping = {
-          'Environmental Risk': { icon: '🌱', description: 'Environmental damage, ecosystem collapse, pollution' },
-          'Operational Risk': { icon: '🌱', description: 'Operational environmental impacts' },
-          'Health Risk': { icon: '🏥', description: 'Human health impacts from product exposure' },
-          'Legal Risk': { icon: '⚖️', description: 'Legal and litigation risks' },
-          'Regulatory Risk': { icon: '📋', description: 'Regulatory compliance and restrictions' },
-          'Market Risk': { icon: '📊', description: 'Market shifts and disruption' },
-          'Reputational Risk': { icon: '📢', description: 'Reputation and perception issues' },
-          'Technology Risk': { icon: '🔬', description: 'Technology disruption and innovation' },
-          'Product Risk': { icon: '📦', description: 'Product-related risks' }
-        };
-        return mapping[category] || { icon: '❓', description: '' };
-      }
-
-      function getClassInfo(classification) {
-        const mapping = {
-          'YES': { color: '#10b981', bgColor: '#d1fae5', score: 3 },
-          'PARTIAL': { color: '#f59e0b', bgColor: '#fef3c7', score: 2 },
-          'UNCLEAR': { color: '#6b7280', bgColor: '#f3f4f6', score: 1 },
-          'NONE': { color: '#ef4444', bgColor: '#fee2e2', score: 0 }
-        };
-        return mapping[classification] || { color: '#6b7280', bgColor: '#f3f4f6', score: 0 };
-      }
-
-      // Calculate disagreement score between two classifications
-      function calculateDisagreementScore(nllmClass, dragClass) {
-        if (!nllmClass || !dragClass) return 0;
-        if (nllmClass === dragClass) return 0;
-
-        const scoreMap = { 'YES': 3, 'PARTIAL': 2, 'UNCLEAR': 1, 'NONE': 0 };
-        const nllmScore = scoreMap[nllmClass] || 0;
-        const dragScore = scoreMap[dragClass] || 0;
-
-        return Math.abs(nllmScore - dragScore);
-      }
-
-      // Store the original category HTML to restore it later
-      let originalCategoryHTML = questionsContainer.innerHTML;
-
-      // Unified sorting function that works across all modes
-      let currentSortType = getDefaultSort(currentMode);
-
-      function applySorting(sortType) {
-        if (!questionsContainer) return;
-
-        currentSortType = sortType;
-
-        if (sortType === 'category') {
-          // Restore original category HTML
-          questionsContainer.innerHTML = originalCategoryHTML;
-
-          // Make category sections collapsible
-          const sections = Array.from(questionsContainer.querySelectorAll('section'));
-          sections.forEach(section => {
-            makeCollapsibleSection(section);
-          });
-        } else if (sortType === 'score-high' || sortType === 'score-low') {
-          applyScoreSorting(sortType);
-        } else if (sortType === 'question-id') {
-          applyQuestionIdSorting();
-        } else if (sortType === 'disagreement') {
-          applyDisagreementSorting();
-        }
-      }
-
-      function makeCollapsibleSection(section) {
-        const header = section.querySelector('.flex.items-center.gap-3');
-        if (!header) return;
-
-        // Check if already collapsible (IMPORTANT: check FIRST before doing anything)
-        if (header.querySelector('.collapse-arrow')) return;
-
-        header.classList.add('cursor-pointer', 'hover:bg-slate-800/30', 'p-3', 'rounded-lg', 'transition-colors');
-        const contentDiv = section.querySelector('.space-y-4');
-        if (!contentDiv) return;
-
-        let isOpen = false; // Start collapsed
-
-        // Add toggle arrow
-        const arrow = document.createElement('span');
-        arrow.textContent = '▶';
-        arrow.className = 'collapse-arrow text-slate-400 text-sm transition-transform mr-2';
-        header.insertBefore(arrow, header.firstChild);
-
-        // Start collapsed
-        contentDiv.style.display = 'none';
-
-        // Remove any existing click listeners by cloning the header
-        const newHeader = header.cloneNode(true);
-        header.parentNode.replaceChild(newHeader, header);
-
-        // Get the arrow from the new header
-        const newArrow = newHeader.querySelector('.collapse-arrow');
-
-        newHeader.addEventListener('click', () => {
-          isOpen = !isOpen;
-          contentDiv.style.display = isOpen ? 'block' : 'none';
-          if (newArrow) {
-            newArrow.textContent = isOpen ? '▼' : '▶';
-          }
-        });
-      }
-
-      function createCollapsibleGroup(title, cards, color) {
-        const section = document.createElement('section');
-        section.className = 'mb-8';
-
-        const header = document.createElement('div');
-        header.className = 'flex items-center gap-3 mb-4 cursor-pointer hover:bg-slate-800/30 p-3 rounded-lg transition-colors';
-        header.style.borderLeft = `4px solid ${color}`;
-
-        const arrow = document.createElement('span');
-        arrow.textContent = '▶';
-        arrow.className = 'text-slate-400 text-sm transition-transform';
-
-        const titleElem = document.createElement('h2');
-        titleElem.className = 'text-xl font-bold text-slate-100';
-        titleElem.textContent = title;
-
-        const count = document.createElement('span');
-        count.className = 'text-sm text-slate-400 ml-2';
-        count.textContent = `(${cards.length} question${cards.length !== 1 ? 's' : ''})`;
-
-        header.appendChild(arrow);
-        header.appendChild(titleElem);
-        titleElem.appendChild(count);
-
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'space-y-4';
-        cards.forEach(card => contentDiv.appendChild(card.cloneNode(true)));
-
-        section.appendChild(header);
-        section.appendChild(contentDiv);
-
-        // Start collapsed
-        let isOpen = false;
-        contentDiv.style.display = 'none';
-
-        header.addEventListener('click', () => {
-          isOpen = !isOpen;
-          contentDiv.style.display = isOpen ? 'block' : 'none';
-          arrow.textContent = isOpen ? '▼' : '▶';
-        });
-
-        return section;
-      }
-
-      function applyScoreSorting(sortType) {
-        const allCards = Array.from(questionsContainer.querySelectorAll('[data-question-id]'));
-
-        // Group by score
-        const scoreGroups = { 3: [], 2: [], 1: [], 0: [] };
-        allCards.forEach(card => {
-          let score;
-          if (currentMode === 'compare') {
-            score = parseFloat(card.getAttribute('data-nllm-score') || 0);
-          } else {
-            score = parseFloat(card.getAttribute('data-question-score') || 0);
-          }
-          scoreGroups[score] = scoreGroups[score] || [];
-          scoreGroups[score].push(card);
-        });
-
-        questionsContainer.innerHTML = '';
-
-        // Sort scores (high to low or low to high)
-        const scoreOrder = sortType === 'score-high' ? [3, 2, 1, 0] : [0, 1, 2, 3];
-        const scoreLabels = { 3: 'YES (Quantified)', 2: 'PARTIAL (Acknowledged)', 1: 'UNCLEAR (Mentioned)', 0: 'NONE (Not Disclosed)' };
-        const scoreColors = { 3: '#10b981', 2: '#f59e0b', 1: '#6b7280', 0: '#ef4444' };
-
-        scoreOrder.forEach(score => {
-          if (scoreGroups[score] && scoreGroups[score].length > 0) {
-            const section = createCollapsibleGroup(
-              scoreLabels[score],
-              scoreGroups[score],
-              scoreColors[score]
-            );
-            questionsContainer.appendChild(section);
-          }
-        });
-      }
-
-      function applyQuestionIdSorting() {
-        const allCards = Array.from(questionsContainer.querySelectorAll('[data-question-id]'));
-
-        // Sort by question ID
-        allCards.sort((a, b) => {
-          const aId = a.getAttribute('data-question-id');
-          const bId = b.getAttribute('data-question-id');
-          return aId.localeCompare(bId);
-        });
-
-        questionsContainer.innerHTML = '';
-
-        // Each question is its own collapsible group
-        allCards.forEach(card => {
-          const questionId = card.getAttribute('data-question-id');
-          const section = createCollapsibleGroup(
-            `Question ${questionId}`,
-            [card],
-            '#6366f1'
-          );
-          questionsContainer.appendChild(section);
-        });
-      }
-
-      function applyDisagreementSorting() {
-        const allCards = Array.from(questionsContainer.querySelectorAll('[data-question-id]'));
-
-        // Sort by disagreement score
-        allCards.sort((a, b) => {
-          const aDisagreement = parseFloat(a.getAttribute('data-disagreement') || 0);
-          const bDisagreement = parseFloat(b.getAttribute('data-disagreement') || 0);
-          if (aDisagreement !== bDisagreement) {
-            return bDisagreement - aDisagreement;
-          }
-          const aId = a.getAttribute('data-question-id');
-          const bId = b.getAttribute('data-question-id');
-          return aId.localeCompare(bId);
-        });
-
-        questionsContainer.innerHTML = '';
-
-        // Each question is its own collapsible group
-        allCards.forEach(card => {
-          const questionId = card.getAttribute('data-question-id');
-          const disagreement = parseFloat(card.getAttribute('data-disagreement') || 0);
-          const section = createCollapsibleGroup(
-            `${questionId} ${disagreement > 0 ? '⚠️ Disagreement: ' + disagreement : '✓ Agreement'}`,
-            [card],
-            disagreement > 0 ? '#f59e0b' : '#10b981'
-          );
-          questionsContainer.appendChild(section);
-        });
-      }
-
-      // Event listeners for toggle buttons
-      if (toggleNllm) toggleNllm.addEventListener('click', () => switchMode('nllm'));
-      if (toggleDrag) toggleDrag.addEventListener('click', () => switchMode('drag'));
-      if (toggleCompare) toggleCompare.addEventListener('click', () => switchMode('compare'));
-
-      // On initial page load for N-LLM mode:
-      // 1. Hide/show appropriate sort options
-      // 2. The HTML is already rendered by category, so just make sections collapsible
-      const categoryOption = document.getElementById('category-option');
-      const disagreementOption = document.getElementById('disagreement-option');
-
-      // Initial mode is nllm - allow category, hide disagreement
-      if (categoryOption) {
-        categoryOption.disabled = false;
-        categoryOption.style.display = '';
-      }
-      if (disagreementOption) {
-        disagreementOption.style.display = 'none';
-        disagreementOption.disabled = true;
-      }
-
-      // On page load: Apply question-id sorting (default for N-LLM)
-      sortSelect.value = 'question-id';
-      currentSortType = 'question-id';
-      applySorting('question-id');
-
-      // Handle URL hash navigation with mode switching
-      if (targetMode && targetQuestionId) {
-        // Auto-switch to the requested mode and navigate to question
-        if (targetMode === 'compare' && toggleCompare) {
-          switchMode('compare', targetQuestionId);
-        } else if (targetMode === 'nllm' && toggleNllm) {
-          switchMode('nllm', targetQuestionId);
-        } else if (targetMode === 'drag' && toggleDrag) {
-          switchMode('drag', targetQuestionId);
-        }
-      } else if (targetQuestionId) {
-        // Just navigate to question in current mode
-        setTimeout(() => {
-          const questionElement = document.getElementById(`question-${targetQuestionId}`);
-          if (questionElement) {
-            questionElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            questionElement.classList.add('highlight-flash');
-            setTimeout(() => {
-              questionElement.classList.remove('highlight-flash');
-            }, 2000);
-          }
-        }, 500);
-      }
-    });
-  </script>
 </Layout>
+
+<style>
+  /* Smooth transitions for interactive elements */
+  .question-header {
+    transition: background-color 0.2s ease;
+  }
+
+  .question-header:hover {
+    background-color: rgb(248 250 252);
+  }
+
+  /* Custom scrollbar for long content */
+  .question-content {
+    max-height: none;
+  }
+
+  @media (max-width: 768px) {
+    .question-content {
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+  }
+</style>

@@ -1,0 +1,177 @@
+---
+/**
+ * Comparison Toggle Component
+ * Allows toggling between verified-only view and comparison view (original vs verified)
+ */
+
+import type { VerificationMetrics } from '../../types/verification';
+
+interface Props {
+  hasComparison: boolean;
+  verificationMetrics?: VerificationMetrics;
+}
+
+const { hasComparison, verificationMetrics } = Astro.props;
+---
+
+{hasComparison && verificationMetrics && (
+  <div class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-4 border border-purple-200 mb-6">
+    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+      <!-- Left: Comparison Info -->
+      <div class="flex-1">
+        <div class="flex items-center gap-2 mb-2">
+          <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <h3 class="text-sm font-bold text-purple-900">Verification Comparison Available</h3>
+        </div>
+        <p class="text-xs text-purple-800 mb-3">
+          Compare original AI analysis with verified results to see corrections and improvements.
+        </p>
+
+        <!-- Verification Stats -->
+        <div class="flex flex-wrap gap-4 text-xs">
+          <div class="flex items-center gap-1">
+            <span class="text-purple-600 font-semibold">Pass Rate:</span>
+            <span class="text-purple-900 font-bold">
+              {verificationMetrics.verification_pass_rate.toFixed(1)}%
+            </span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="text-purple-600 font-semibold">Corrected:</span>
+            <span class="text-purple-900 font-bold">
+              {verificationMetrics.total_corrected_snippets}
+            </span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="text-purple-600 font-semibold">Removed:</span>
+            <span class="text-purple-900 font-bold">
+              {verificationMetrics.total_removed_snippets}
+            </span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="text-purple-600 font-semibold">Unchanged:</span>
+            <span class="text-purple-900 font-bold">
+              {verificationMetrics.total_unchanged_snippets}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Toggle Button -->
+      <div class="flex-shrink-0">
+        <button
+          id="comparison-toggle"
+          class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md transition-all transform hover:scale-105 active:scale-95 flex items-center gap-2"
+          data-mode="verified"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+          </svg>
+          <span id="toggle-text">Enable Comparison Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Comparison Legend (Hidden by default, shown when comparison mode is active) -->
+    <div id="comparison-legend" class="hidden mt-4 pt-4 border-t border-purple-200">
+      <div class="text-xs font-semibold text-purple-900 mb-2">Comparison Legend:</div>
+      <div class="flex flex-wrap gap-4 text-xs">
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+          <span class="text-slate-700">Unchanged (passed verification)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-amber-400"></div>
+          <span class="text-slate-700">Corrected (modified)</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="w-3 h-3 rounded-full bg-red-400"></div>
+          <span class="text-slate-700">Removed (failed verification)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+{!hasComparison && (
+  <div class="bg-slate-50 rounded-lg p-4 border border-slate-200 mb-6">
+    <div class="flex items-start gap-2">
+      <svg class="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <div>
+        <div class="text-sm font-semibold text-slate-700 mb-1">Verified Results Only</div>
+        <div class="text-xs text-slate-600">
+          Comparison data not available. Showing verified analysis results.
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleButton = document.getElementById('comparison-toggle');
+    const toggleText = document.getElementById('toggle-text');
+    const legend = document.getElementById('comparison-legend');
+
+    if (!toggleButton || !toggleText) return;
+
+    let currentMode: 'verified' | 'comparison' = 'verified';
+
+    toggleButton.addEventListener('click', () => {
+      currentMode = currentMode === 'verified' ? 'comparison' : 'verified';
+      toggleButton.dataset.mode = currentMode;
+
+      if (currentMode === 'comparison') {
+        toggleText.textContent = 'Show Verified Only';
+        toggleButton.classList.remove('bg-purple-600', 'hover:bg-purple-700');
+        toggleButton.classList.add('bg-blue-600', 'hover:bg-blue-700');
+        legend?.classList.remove('hidden');
+
+        // Show comparison view
+        document.querySelectorAll('[data-snippet-status]').forEach(el => {
+          const snippet = el as HTMLElement;
+          const status = snippet.dataset.snippetStatus;
+
+          // Add border and badge based on status
+          if (status === 'unchanged') {
+            snippet.classList.add('ring-2', 'ring-emerald-400');
+          } else if (status === 'corrected') {
+            snippet.classList.add('ring-2', 'ring-amber-400');
+          } else if (status === 'removed') {
+            snippet.classList.add('ring-2', 'ring-red-400', 'opacity-50');
+          }
+        });
+
+        // Show comparison badges
+        document.querySelectorAll('.comparison-badge').forEach(badge => {
+          (badge as HTMLElement).classList.remove('hidden');
+        });
+
+      } else {
+        toggleText.textContent = 'Enable Comparison Mode';
+        toggleButton.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+        toggleButton.classList.add('bg-purple-600', 'hover:bg-purple-700');
+        legend?.classList.add('hidden');
+
+        // Hide comparison view
+        document.querySelectorAll('[data-snippet-status]').forEach(el => {
+          const snippet = el as HTMLElement;
+          snippet.classList.remove('ring-2', 'ring-emerald-400', 'ring-amber-400', 'ring-red-400', 'opacity-50');
+        });
+
+        // Hide comparison badges
+        document.querySelectorAll('.comparison-badge').forEach(badge => {
+          (badge as HTMLElement).classList.add('hidden');
+        });
+      }
+
+      // Dispatch custom event for other components to listen to
+      window.dispatchEvent(new CustomEvent('comparisonModeChanged', {
+        detail: { mode: currentMode }
+      }));
+    });
+  });
+</script>

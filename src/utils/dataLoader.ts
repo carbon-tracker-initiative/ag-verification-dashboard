@@ -3,7 +3,10 @@
  * Loads JSON files from results folder and parses them
  */
 
-import type { AnalysisResult, CompanyYearData, ParsedFilename } from '../types/analysis';
+import type { AnalysisResult, CompanyYearData, ParsedFilename, Question } from '../types/analysis';
+
+// Re-export Question type for backward compatibility
+export type { Question };
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
@@ -184,6 +187,14 @@ export async function getYearsForCompany(company: string): Promise<number[]> {
     .map(d => d.year);
 
   return Array.from(new Set(years)).sort((a, b) => b - a); // Descending
+}
+
+/**
+ * Get base question ID (remove variant suffixes like -A, -B)
+ * This is for backward compatibility with dark-doppler components
+ */
+export function getBaseQuestionId(questionId: string): string {
+  return questionId.replace(/-[A-Z]$/, '');
 }
 
 /**

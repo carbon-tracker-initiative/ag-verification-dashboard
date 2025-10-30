@@ -1,0 +1,136 @@
+---
+/**
+ * Question rankings component
+ * Shows best and worst disclosed questions across all companies
+ */
+
+import type { CrossCompanyMetrics } from '../../types/metrics';
+import GradeDisplay from '../shared/GradeDisplay.astro';
+import { formatNumber } from '../../utils/formatters';
+
+interface Props {
+  questionRankings: CrossCompanyMetrics['question_rankings'];
+  sortBy?: 'quality' | 'question_id' | 'evidence_count';
+}
+
+const { questionRankings, sortBy = 'quality' } = Astro.props;
+
+// Sort based on sortBy parameter
+let sorted = [...questionRankings];
+if (sortBy === 'question_id') {
+  sorted.sort((a, b) => a.question_id.localeCompare(b.question_id));
+} else if (sortBy === 'evidence_count') {
+  sorted.sort((a, b) => b.total_snippets_across_companies - a.total_snippets_across_companies);
+} else {
+  // quality (default)
+  sorted.sort((a, b) => b.average_score_across_companies - a.average_score_across_companies);
+}
+
+const topQuestions = sorted.slice(0, 10);
+const bottomQuestions = sorted.slice(-10).reverse();
+---
+
+<section class="mb-12">
+  <div class="flex items-center justify-between mb-6">
+    <h2 class="text-2xl font-bold text-slate-900">Question Performance Rankings</h2>
+
+    <!-- Sort Controls -->
+    <div class="flex gap-2">
+      <a
+        href={`/?sort=quality`}
+        class:list={[
+          'px-3 py-1.5 text-sm font-medium rounded-md transition-colors',
+          sortBy === 'quality'
+            ? 'bg-blue-600 text-white'
+            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+        ]}
+      >
+        By Quality
+      </a>
+      <a
+        href={`/?sort=question_id`}
+        class:list={[
+          'px-3 py-1.5 text-sm font-medium rounded-md transition-colors',
+          sortBy === 'question_id'
+            ? 'bg-blue-600 text-white'
+            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+        ]}
+      >
+        By ID
+      </a>
+      <a
+        href={`/?sort=evidence_count`}
+        class:list={[
+          'px-3 py-1.5 text-sm font-medium rounded-md transition-colors',
+          sortBy === 'evidence_count'
+            ? 'bg-blue-600 text-white'
+            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+        ]}
+      >
+        By Evidence
+      </a>
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <!-- Best Disclosed Questions -->
+    <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6">
+      <h3 class="text-lg font-bold text-green-600 mb-4 flex items-center gap-2">
+        <span>📈</span>
+        <span>Best Disclosed Questions</span>
+      </h3>
+      <ol class="space-y-3">
+        {topQuestions.map((q, index) => (
+          <li class="border-b border-slate-100 pb-3 last:border-0">
+            <div class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 text-green-700 text-xs font-bold flex items-center justify-center">
+                {index + 1}
+              </span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-2 mb-1">
+                  <span class="font-mono text-xs text-slate-500">{q.question_id}</span>
+                  <GradeDisplay score={q.average_score_across_companies} showScore={true} size="sm" />
+                </div>
+                <p class="text-sm text-slate-700 line-clamp-2">{q.question_text}</p>
+                <div class="flex items-center gap-4 mt-2 text-xs text-slate-500">
+                  <span title="Evidence snippets">📝 {formatNumber(q.total_snippets_across_companies)}</span>
+                  <span title="Companies with full disclosure">✓ {q.companies_with_full_disclosure}/{q.companies_analyzed}</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+
+    <!-- Poorly Disclosed Questions -->
+    <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6">
+      <h3 class="text-lg font-bold text-orange-600 mb-4 flex items-center gap-2">
+        <span>📉</span>
+        <span>Poorly Disclosed Questions</span>
+      </h3>
+      <ol class="space-y-3">
+        {bottomQuestions.map((q, index) => (
+          <li class="border-b border-slate-100 pb-3 last:border-0">
+            <div class="flex items-start gap-3">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-orange-100 text-orange-700 text-xs font-bold flex items-center justify-center">
+                {sorted.length - 9 + index}
+              </span>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between gap-2 mb-1">
+                  <span class="font-mono text-xs text-slate-500">{q.question_id}</span>
+                  <GradeDisplay score={q.average_score_across_companies} showScore={true} size="sm" />
+                </div>
+                <p class="text-sm text-slate-700 line-clamp-2">{q.question_text}</p>
+                <div class="flex items-center gap-4 mt-2 text-xs text-slate-500">
+                  <span title="Evidence snippets">📝 {formatNumber(q.total_snippets_across_companies)}</span>
+                  <span title="Companies analyzed">{q.companies_analyzed} companies</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>

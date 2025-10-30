@@ -1,0 +1,275 @@
+---
+/**
+ * Filters Bar Component
+ * Allows filtering and sorting of questions by category, classification, and various metrics
+ */
+
+import categoriesConfig from '../../config/categories.json';
+
+interface Props {
+  categories: string[];
+}
+
+const { categories } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-sm p-4 border border-slate-200 sticky top-20 z-40">
+  <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
+    <!-- Left Side: Filters -->
+    <div class="flex flex-col sm:flex-row gap-3 flex-1">
+      <!-- Category Filter -->
+      <div class="flex-1 min-w-[200px]">
+        <label for="category-filter" class="block text-xs font-semibold text-slate-600 mb-1">
+          Category
+        </label>
+        <select
+          id="category-filter"
+          class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="all">All Categories</option>
+          {categoriesConfig.categories.map(cat => (
+            <option value={cat.id}>{cat.name}</option>
+          ))}
+        </select>
+      </div>
+
+      <!-- Classification Filter -->
+      <div class="flex-1 min-w-[200px]">
+        <label for="classification-filter" class="block text-xs font-semibold text-slate-600 mb-1">
+          Classification
+        </label>
+        <select
+          id="classification-filter"
+          class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="all">All Classifications</option>
+          <option value="FULL_DISCLOSURE">Full Disclosure</option>
+          <option value="PARTIAL">Partial</option>
+          <option value="UNCLEAR">Unclear</option>
+          <option value="NO_DISCLOSURE">No Disclosure</option>
+        </select>
+      </div>
+
+      <!-- Quality Filter -->
+      <div class="flex-1 min-w-[200px]">
+        <label for="quality-filter" class="block text-xs font-semibold text-slate-600 mb-1">
+          Quality Grade
+        </label>
+        <select
+          id="quality-filter"
+          class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="all">All Grades</option>
+          <option value="A">A (90-100%)</option>
+          <option value="B">B (80-89%)</option>
+          <option value="C">C (70-79%)</option>
+          <option value="D">D (60-69%)</option>
+          <option value="F">F (&lt;60%)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Right Side: Sort and Actions -->
+    <div class="flex gap-3 items-end">
+      <!-- Sort Dropdown -->
+      <div class="min-w-[180px]">
+        <label for="sort-select" class="block text-xs font-semibold text-slate-600 mb-1">
+          Sort By
+        </label>
+        <select
+          id="sort-select"
+          class="w-full bg-white border border-slate-300 rounded-lg px-3 py-2 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+        >
+          <option value="quality-desc">Quality (High to Low)</option>
+          <option value="quality-asc">Quality (Low to High)</option>
+          <option value="question-id">Question ID</option>
+          <option value="evidence-desc">Evidence Count (High to Low)</option>
+          <option value="evidence-asc">Evidence Count (Low to High)</option>
+        </select>
+      </div>
+
+      <!-- Reset Filters Button -->
+      <button
+        id="reset-filters"
+        class="px-4 py-2 text-sm font-medium text-slate-600 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors"
+        title="Reset all filters"
+      >
+        Reset
+      </button>
+
+      <!-- Expand/Collapse All Button -->
+      <button
+        id="toggle-all"
+        class="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
+        title="Expand or collapse all questions"
+      >
+        Expand All
+      </button>
+    </div>
+  </div>
+
+  <!-- Active Filters Display -->
+  <div id="active-filters" class="mt-3 flex flex-wrap gap-2 hidden">
+    <span class="text-xs font-semibold text-slate-600">Active Filters:</span>
+    <!-- Filter tags will be added here by JavaScript -->
+  </div>
+
+  <!-- Results Count -->
+  <div id="results-count" class="mt-3 text-xs text-slate-500">
+    <!-- Count will be updated by JavaScript -->
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
+    const classificationFilter = document.getElementById('classification-filter') as HTMLSelectElement;
+    const qualityFilter = document.getElementById('quality-filter') as HTMLSelectElement;
+    const sortSelect = document.getElementById('sort-select') as HTMLSelectElement;
+    const resetButton = document.getElementById('reset-filters') as HTMLButtonElement;
+    const toggleAllButton = document.getElementById('toggle-all') as HTMLButtonElement;
+    const activeFiltersDiv = document.getElementById('active-filters');
+    const resultsCountDiv = document.getElementById('results-count');
+
+    let allExpanded = false;
+
+    // Apply filters and sorting
+    function applyFiltersAndSort() {
+      const categoryValue = categoryFilter.value;
+      const classificationValue = classificationFilter.value;
+      const qualityValue = qualityFilter.value;
+      const sortValue = sortSelect.value;
+
+      const questions = Array.from(document.querySelectorAll('[data-question-id]'));
+      let visibleCount = 0;
+
+      // Filter questions
+      questions.forEach(question => {
+        const questionEl = question as HTMLElement;
+        const category = questionEl.dataset.category || '';
+        const classification = questionEl.dataset.classification || '';
+        const grade = questionEl.dataset.grade || '';
+
+        let visible = true;
+
+        if (categoryValue !== 'all' && !category.includes(categoryValue)) {
+          visible = false;
+        }
+
+        if (classificationValue !== 'all' && classification !== classificationValue) {
+          visible = false;
+        }
+
+        if (qualityValue !== 'all' && grade !== qualityValue) {
+          visible = false;
+        }
+
+        questionEl.style.display = visible ? '' : 'none';
+        if (visible) visibleCount++;
+      });
+
+      // Sort visible questions
+      const container = document.getElementById('questions-container');
+      if (container) {
+        const visibleQuestions = questions.filter(q => (q as HTMLElement).style.display !== 'none');
+
+        visibleQuestions.sort((a, b) => {
+          const aEl = a as HTMLElement;
+          const bEl = b as HTMLElement;
+
+          switch (sortValue) {
+            case 'quality-desc':
+              return parseFloat(bEl.dataset.score || '0') - parseFloat(aEl.dataset.score || '0');
+            case 'quality-asc':
+              return parseFloat(aEl.dataset.score || '0') - parseFloat(bEl.dataset.score || '0');
+            case 'evidence-desc':
+              return parseInt(bEl.dataset.snippets || '0') - parseInt(aEl.dataset.snippets || '0');
+            case 'evidence-asc':
+              return parseInt(aEl.dataset.snippets || '0') - parseInt(bEl.dataset.snippets || '0');
+            case 'question-id':
+            default:
+              return (aEl.dataset.questionId || '').localeCompare(bEl.dataset.questionId || '');
+          }
+        });
+
+        // Reorder DOM
+        visibleQuestions.forEach(q => container.appendChild(q));
+      }
+
+      // Update results count
+      if (resultsCountDiv) {
+        resultsCountDiv.textContent = `Showing ${visibleCount} of ${questions.length} questions`;
+      }
+
+      // Update active filters display
+      updateActiveFilters();
+    }
+
+    function updateActiveFilters() {
+      if (!activeFiltersDiv) return;
+
+      const activeFilters: string[] = [];
+
+      if (categoryFilter.value !== 'all') {
+        activeFilters.push(`Category: ${categoryFilter.options[categoryFilter.selectedIndex].text}`);
+      }
+      if (classificationFilter.value !== 'all') {
+        activeFilters.push(`Classification: ${classificationFilter.options[classificationFilter.selectedIndex].text}`);
+      }
+      if (qualityFilter.value !== 'all') {
+        activeFilters.push(`Grade: ${qualityFilter.value}`);
+      }
+
+      if (activeFilters.length > 0) {
+        activeFiltersDiv.classList.remove('hidden');
+        const tagsHTML = activeFilters.map(filter =>
+          `<span class="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded">${filter}</span>`
+        ).join('');
+        activeFiltersDiv.innerHTML = '<span class="text-xs font-semibold text-slate-600">Active Filters:</span>' + tagsHTML;
+      } else {
+        activeFiltersDiv.classList.add('hidden');
+      }
+    }
+
+    function resetFilters() {
+      categoryFilter.value = 'all';
+      classificationFilter.value = 'all';
+      qualityFilter.value = 'all';
+      sortSelect.value = 'quality-desc';
+      applyFiltersAndSort();
+    }
+
+    function toggleAll() {
+      allExpanded = !allExpanded;
+      const questions = document.querySelectorAll('[data-question-id]');
+
+      questions.forEach(question => {
+        const content = question.querySelector('.question-content') as HTMLElement;
+        const toggle = question.querySelector('.toggle-icon') as HTMLElement;
+
+        if (content && toggle) {
+          if (allExpanded) {
+            content.style.display = 'block';
+            toggle.textContent = '▼';
+          } else {
+            content.style.display = 'none';
+            toggle.textContent = '▶';
+          }
+        }
+      });
+
+      toggleAllButton.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+    }
+
+    // Event listeners
+    categoryFilter.addEventListener('change', applyFiltersAndSort);
+    classificationFilter.addEventListener('change', applyFiltersAndSort);
+    qualityFilter.addEventListener('change', applyFiltersAndSort);
+    sortSelect.addEventListener('change', applyFiltersAndSort);
+    resetButton.addEventListener('click', resetFilters);
+    toggleAllButton.addEventListener('click', toggleAll);
+
+    // Initial application
+    applyFiltersAndSort();
+  });
+</script>

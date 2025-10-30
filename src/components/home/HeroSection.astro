@@ -1,0 +1,78 @@
+---
+/**
+ * Hero section for home page
+ * Displays title, subtitle, and global statistics
+ */
+
+import { formatNumber, formatPercentage } from '../../utils/formatters';
+
+interface GlobalStats {
+  total_companies: number;
+  total_questions: number;
+  total_snippets: number;
+  average_disclosure_score_all: number;
+}
+
+interface Props {
+  globalStats: GlobalStats;
+}
+
+const { globalStats } = Astro.props;
+---
+
+<section class="bg-gradient-to-br from-slate-50 to-slate-100 border-b border-slate-200">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Title and subtitle -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+        Agricultural Risk Disclosure Analysis
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
+        Verified AI-powered analysis of environmental, health, market, and regulatory risks
+      </p>
+    </div>
+
+    <!-- Global stats bar -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+      <!-- Companies -->
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
+        <div class="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">
+          {globalStats.total_companies}
+        </div>
+        <div class="text-sm sm:text-base text-slate-600 font-medium">
+          Companies
+        </div>
+      </div>
+
+      <!-- Questions -->
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
+        <div class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">
+          {formatNumber(globalStats.total_questions)}
+        </div>
+        <div class="text-sm sm:text-base text-slate-600 font-medium">
+          Questions
+        </div>
+      </div>
+
+      <!-- Disclosures -->
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
+        <div class="text-3xl sm:text-4xl font-bold text-purple-600 mb-2">
+          {formatNumber(globalStats.total_snippets)}
+        </div>
+        <div class="text-sm sm:text-base text-slate-600 font-medium">
+          Disclosures
+        </div>
+      </div>
+
+      <!-- Avg Quality -->
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
+        <div class="text-3xl sm:text-4xl font-bold text-green-600 mb-2">
+          {formatPercentage(globalStats.average_disclosure_score_all, 1)}
+        </div>
+        <div class="text-sm sm:text-base text-slate-600 font-medium">
+          Avg Quality
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

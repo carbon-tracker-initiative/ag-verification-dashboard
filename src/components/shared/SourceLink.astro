@@ -1,0 +1,42 @@
+---
+/**
+ * Source link component
+ * Displays clickable link to PDF source document
+ */
+
+import { sourceToPdfUrl, getSourceDisplayText } from '../../utils/sourceParser';
+
+interface Props {
+  source: string;
+  showIcon?: boolean;
+  className?: string;
+}
+
+const { source, showIcon = true, className = '' } = Astro.props;
+
+const pdfUrl = sourceToPdfUrl(source);
+const displayText = getSourceDisplayText(source);
+const isValid = pdfUrl !== '#';
+---
+
+<a
+  href={pdfUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={[
+    'inline-flex items-center gap-1.5 text-sm hover:underline transition-colors',
+    isValid ? 'text-blue-600 hover:text-blue-800' : 'text-gray-500 cursor-not-allowed',
+    className
+  ]}
+  title={isValid ? `Open ${displayText} in new tab` : 'PDF source not available'}
+>
+  {showIcon && <span class="text-base">📄</span>}
+  <span class="font-medium">{displayText}</span>
+  {isValid && showIcon && <span class="text-xs">🔗</span>}
+</a>
+
+<style>
+  a[href="#"] {
+    pointer-events: none;
+  }
+</style>
