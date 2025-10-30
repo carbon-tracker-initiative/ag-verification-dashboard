@@ -1,0 +1,401 @@
+---
+interface YearData {
+  year: number;
+  data: {
+    YES: number;
+    PARTIAL: number;
+    UNCLEAR: number;
+    NONE: number;
+  };
+  total: number;
+}
+
+interface Props {
+  yearlyData: YearData[];
+  canonicalData?: YearData[];
+  title: string;
+  color: string;
+  showCanonicalFilter?: boolean;
+}
+
+const { yearlyData, canonicalData, title, color, showCanonicalFilter = false } = Astro.props;
+
+// Generate unique ID for this chart instance
+const chartId = `donut-${Math.random().toString(36).substring(2, 9)}`;
+
+// SVG parameters
+const centerX = 200;
+const centerY = 200;
+const baseInnerRadius = 50; // Center hole
+const ringWidth = 20; // Width of each ring
+const gapBetweenRings = 3; // Small gap between year rings
+
+const colors = {
+  YES: '#10b981',
+  PARTIAL: '#f59e0b',
+  UNCLEAR: '#6b7280',
+  NONE: '#ef4444'
+};
+
+// Fixed angular positions for each classification (in degrees from top)
+// This ensures each classification stays in the same position across all rings
+const classificationAngles = {
+  YES: { start: -90, end: -90 }, // Will be calculated based on percentage
+  PARTIAL: { start: 0, end: 0 },
+  UNCLEAR: { start: 0, end: 0 },
+  NONE: { start: 0, end: 0 }
+};
+
+// Helper function to convert polar to cartesian coordinates
+function polarToCartesian(centerX: number, centerY: number, radius: number, angleInDegrees: number) {
+  const angleInRadians = (angleInDegrees * Math.PI) / 180.0;
+  return {
+    x: centerX + (radius * Math.cos(angleInRadians)),
+    y: centerY + (radius * Math.sin(angleInRadians))
+  };
+}
+
+// Helper function to create a donut segment path
+function createDonutSegment(
+  cx: number,
+  cy: number,
+  innerRadius: number,
+  outerRadius: number,
+  startAngle: number,
+  endAngle: number
+) {
+  // Add small gap between segments
+  const gapAngle = 1;
+  startAngle += gapAngle / 2;
+  endAngle -= gapAngle / 2;
+
+  const startOuter = polarToCartesian(cx, cy, outerRadius, startAngle);
+  const endOuter = polarToCartesian(cx, cy, outerRadius, endAngle);
+  const startInner = polarToCartesian(cx, cy, innerRadius, startAngle);
+  const endInner = polarToCartesian(cx, cy, innerRadius, endAngle);
+
+  const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+
+  return [
+    "M", startOuter.x, startOuter.y,
+    "A", outerRadius, outerRadius, 0, largeArcFlag, 1, endOuter.x, endOuter.y,
+    "L", endInner.x, endInner.y,
+    "A", innerRadius, innerRadius, 0, largeArcFlag, 0, startInner.x, startInner.y,
+    "Z"
+  ].join(" ");
+}
+
+interface Segment {
+  classification: string;
+  pathData: string;
+  color: string;
+  percentage: string;
+  count: number;
+  year: number;
+  ringIndex: number;
+}
+
+// Helper function to generate segments from data
+function generateSegments(data: YearData[]): Segment[] {
+  const segments: Segment[] = [];
+
+  // Process each year from oldest (innermost) to newest (outermost)
+  data.forEach((yearData, ringIndex) => {
+    const innerRadius = baseInnerRadius + (ringIndex * (ringWidth + gapBetweenRings));
+    const outerRadius = innerRadius + ringWidth;
+
+    // Calculate percentages for this year
+    const percentages = {
+      YES: yearData.total > 0 ? ((yearData.data.YES || 0) / yearData.total * 100) : 0,
+      PARTIAL: yearData.total > 0 ? ((yearData.data.PARTIAL || 0) / yearData.total * 100) : 0,
+      UNCLEAR: yearData.total > 0 ? ((yearData.data.UNCLEAR || 0) / yearData.total * 100) : 0,
+      NONE: yearData.total > 0 ? ((yearData.data.NONE || 0) / yearData.total * 100) : 0,
+    };
+
+    // Start from top and go clockwise, maintaining position for each classification
+    let currentAngle = -90;
+
+    // Always process in the same order to maintain consistent positions
+    (['YES', 'PARTIAL', 'NONE', 'UNCLEAR'] as const).forEach(classification => {
+      const percentage = percentages[classification];
+      if (percentage > 0) {
+        const angle = (percentage / 100) * 360;
+        const endAngle = currentAngle + angle;
+
+        const pathData = createDonutSegment(
+          centerX,
+          centerY,
+          innerRadius,
+          outerRadius,
+          currentAngle,
+          endAngle
+        );
+
+        segments.push({
+          classification,
+          pathData,
+          color: colors[classification],
+          percentage: percentage.toFixed(1),
+          count: yearData.data[classification] || 0,
+          year: yearData.year,
+          ringIndex
+        });
+
+        currentAngle = endAngle;
+      }
+    });
+  });
+
+  return segments;
+}
+
+// Generate initial segments (canonical if available, otherwise all)
+const initialData = showCanonicalFilter && canonicalData ? canonicalData : yearlyData;
+const segments = generateSegments(initialData);
+
+// Calculate SVG viewBox based on number of rings
+const maxRadius = baseInnerRadius + (yearlyData.length * (ringWidth + gapBetweenRings));
+const viewBoxSize = (maxRadius + 50) * 2;
+
+// Calculate year label positions (gray circles at bottom of each ring)
+const yearLabels = yearlyData.map((yd, index) => {
+  const ringRadius = baseInnerRadius + (index * (ringWidth + gapBetweenRings)) + (ringWidth / 2);
+  const angle = 180; // Bottom position (180 degrees)
+  const labelX = centerX + (ringRadius * Math.cos((angle * Math.PI) / 180));
+  const labelY = centerY + (ringRadius * Math.sin((angle * Math.PI) / 180));
+  return { year: yd.year, x: labelX, y: labelY, ringRadius };
+});
+---
+
+<div id={chartId} class="multi-year-donut-chart">
+  <h3 class="text-sm font-semibold mb-6" style={`color: ${color}`}>{title}</h3>
+
+  {/* Canonical Filter Toggle */}
+  {showCanonicalFilter && canonicalData && (
+    <div class="flex justify-center mb-4">
+      <div class="inline-flex rounded-lg border border-slate-600 bg-slate-800 p-1">
+        <button class="filter-toggle-btn px-3 py-1 text-xs rounded transition-colors" data-filter="all">
+          All Questions
+        </button>
+        <button class="filter-toggle-btn active px-3 py-1 text-xs rounded transition-colors bg-orange-500 text-white font-medium" data-filter="canonical">
+          Common Canonical
+        </button>
+      </div>
+    </div>
+  )}
+
+  <div class="flex flex-col items-center">
+    <div class="svg-container"></div>
+
+    <!-- Legend with year labels -->
+    <div class="mt-6 w-full space-y-4">
+      <!-- Classification legend -->
+      <div class="grid grid-cols-2 gap-3">
+        {(['YES', 'PARTIAL', 'UNCLEAR', 'NONE'] as const).map(classification => (
+          <div
+            class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-2 rounded transition-colors legend-item"
+            data-classification={classification}
+          >
+            <div class="w-4 h-4 rounded" style={`background-color: ${colors[classification]}`}></div>
+            <div class="text-sm text-slate-200 font-medium">{classification}</div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Year labels (innermost to outermost) -->
+      <div class="border-t border-slate-700 pt-3">
+        <div class="text-xs text-slate-400 mb-2">Year Progression (inner to outer):</div>
+        <div class="flex flex-wrap gap-2">
+          {yearlyData.map((yd, index) => (
+            <div class="text-xs px-2 py-1 bg-slate-800 rounded text-slate-300">
+              {yd.year}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ chartId, yearlyData, canonicalData, showCanonicalFilter, centerX, centerY, baseInnerRadius, ringWidth, gapBetweenRings, viewBoxSize }}>
+  (function() {
+    const chartContainer = document.getElementById(chartId);
+    if (!chartContainer) return;
+
+    const colors = {
+      YES: '#10b981',
+      PARTIAL: '#f59e0b',
+      UNCLEAR: '#6b7280',
+      NONE: '#ef4444'
+    };
+
+    let selectedClassification = null;
+    let currentFilter = 'canonical'; // Default to canonical
+
+    // Helper functions (same as server-side)
+    function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+      const angleInRadians = (angleInDegrees * Math.PI) / 180.0;
+      return {
+        x: centerX + (radius * Math.cos(angleInRadians)),
+        y: centerY + (radius * Math.sin(angleInRadians))
+      };
+    }
+
+    function createDonutSegment(cx, cy, innerRadius, outerRadius, startAngle, endAngle) {
+      const gapAngle = 1;
+      startAngle += gapAngle / 2;
+      endAngle -= gapAngle / 2;
+
+      const startOuter = polarToCartesian(cx, cy, outerRadius, startAngle);
+      const endOuter = polarToCartesian(cx, cy, outerRadius, endAngle);
+      const startInner = polarToCartesian(cx, cy, innerRadius, startAngle);
+      const endInner = polarToCartesian(cx, cy, innerRadius, endAngle);
+
+      const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+
+      return [
+        "M", startOuter.x, startOuter.y,
+        "A", outerRadius, outerRadius, 0, largeArcFlag, 1, endOuter.x, endOuter.y,
+        "L", endInner.x, endInner.y,
+        "A", innerRadius, innerRadius, 0, largeArcFlag, 0, startInner.x, startInner.y,
+        "Z"
+      ].join(" ");
+    }
+
+    function generateSegments(data) {
+      const segments = [];
+
+      data.forEach((yearData, ringIndex) => {
+        const innerRadius = baseInnerRadius + (ringIndex * (ringWidth + gapBetweenRings));
+        const outerRadius = innerRadius + ringWidth;
+
+        const percentages = {
+          YES: yearData.total > 0 ? ((yearData.data.YES || 0) / yearData.total * 100) : 0,
+          PARTIAL: yearData.total > 0 ? ((yearData.data.PARTIAL || 0) / yearData.total * 100) : 0,
+          UNCLEAR: yearData.total > 0 ? ((yearData.data.UNCLEAR || 0) / yearData.total * 100) : 0,
+          NONE: yearData.total > 0 ? ((yearData.data.NONE || 0) / yearData.total * 100) : 0,
+        };
+
+        let currentAngle = -90;
+
+        ['YES', 'PARTIAL', 'NONE', 'UNCLEAR'].forEach(classification => {
+          const percentage = percentages[classification];
+          if (percentage > 0) {
+            const angle = (percentage / 100) * 360;
+            const endAngle = currentAngle + angle;
+
+            const pathData = createDonutSegment(
+              centerX,
+              centerY,
+              innerRadius,
+              outerRadius,
+              currentAngle,
+              endAngle
+            );
+
+            segments.push({
+              classification,
+              pathData,
+              color: colors[classification],
+              percentage: percentage.toFixed(1),
+              count: yearData.data[classification] || 0,
+              year: yearData.year,
+              ringIndex
+            });
+
+            currentAngle = endAngle;
+          }
+        });
+      });
+
+      return segments;
+    }
+
+    function renderChart() {
+      const data = currentFilter === 'canonical' && canonicalData ? canonicalData : yearlyData;
+      const segments = generateSegments(data);
+      const svgContainer = chartContainer.querySelector('.svg-container');
+
+      let svg = `<svg viewBox="0 0 ${viewBoxSize} ${viewBoxSize}" class="w-full max-w-lg h-auto">`;
+
+      // Render segments
+      segments.forEach(({ pathData, color, year, classification, percentage, count }) => {
+        svg += `<path d="${pathData}" fill="${color}" class="donut-segment transition-all duration-300 cursor-pointer" data-year="${year}" data-classification="${classification}"><title>${year} - ${classification}: ${count} (${percentage}%)</title></path>`;
+      });
+
+      // Center text
+      svg += `<text x="${centerX}" y="${centerY - 5}" text-anchor="middle" class="text-xl font-bold fill-slate-100">${data.length}</text>`;
+      svg += `<text x="${centerX}" y="${centerY + 10}" text-anchor="middle" class="text-xs fill-slate-400">Years</text>`;
+      svg += `</svg>`;
+
+      svgContainer.innerHTML = svg;
+
+      // Reattach event listeners
+      attachSegmentListeners();
+    }
+
+    function attachSegmentListeners() {
+      const segments = chartContainer.querySelectorAll('.donut-segment');
+      segments.forEach(segment => {
+        segment.addEventListener('click', () => {
+          const classification = segment.getAttribute('data-classification');
+          const correspondingLegendItem = chartContainer.querySelector(`.legend-item[data-classification="${classification}"]`);
+          if (correspondingLegendItem) {
+            correspondingLegendItem.click();
+          }
+        });
+      });
+    }
+
+    // Handle legend clicks
+    const legendItems = chartContainer.querySelectorAll('.legend-item');
+    legendItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const classification = item.getAttribute('data-classification');
+        const segments = chartContainer.querySelectorAll('.donut-segment');
+
+        if (selectedClassification === classification) {
+          selectedClassification = null;
+          segments.forEach(seg => seg.style.opacity = '1');
+          legendItems.forEach(li => li.style.backgroundColor = '');
+        } else {
+          selectedClassification = classification;
+          segments.forEach(seg => {
+            seg.style.opacity = seg.getAttribute('data-classification') === classification ? '1' : '0.15';
+          });
+          legendItems.forEach(li => {
+            li.style.backgroundColor = li.getAttribute('data-classification') === classification ? 'rgb(30, 41, 59)' : '';
+          });
+        }
+      });
+    });
+
+    // Handle filter toggle
+    if (showCanonicalFilter) {
+      const filterButtons = chartContainer.querySelectorAll('.filter-toggle-btn');
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+          if (filter === currentFilter) return;
+
+          currentFilter = filter;
+
+          // Update button styles
+          filterButtons.forEach(b => {
+            if (b.getAttribute('data-filter') === filter) {
+              b.classList.add('active', 'bg-orange-500', 'text-white', 'font-medium');
+            } else {
+              b.classList.remove('active', 'bg-orange-500', 'text-white', 'font-medium');
+            }
+          });
+
+          // Redraw chart
+          renderChart();
+        });
+      });
+    }
+
+    // Initial render
+    renderChart();
+  })();
+</script>

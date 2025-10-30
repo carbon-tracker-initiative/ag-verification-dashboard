@@ -1,0 +1,30 @@
+---
+import '../styles/main.css';
+import ThemeToggle from '../components/ThemeToggle.astro';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'D-Rag Validation Dashboard' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script is:inline>
+			// Initialize theme before page renders to avoid flash
+			const theme = localStorage.getItem('theme') || 'dark';
+			document.documentElement.classList.toggle('dark', theme === 'dark');
+		</script>
+	</head>
+	<body>
+		<ThemeToggle />
+		<slot />
+	</body>
+</html>

@@ -1,0 +1,127 @@
+---
+import type { Question } from '../utils/dataLoader';
+import { calculateCategoryStats } from '../utils/categoryMapper';
+
+interface Props {
+  questions: Question[];
+  title?: string;
+  showPercentages?: boolean;
+}
+
+const { questions, title = 'Classification Distribution', showPercentages = true } = Astro.props;
+
+const stats = calculateCategoryStats(questions);
+const total = stats.total;
+
+// Calculate percentages
+const percentages = {
+  YES: total > 0 ? (stats.byClassification.YES / total * 100) : 0,
+  PARTIAL: total > 0 ? (stats.byClassification.PARTIAL / total * 100) : 0,
+  UNCLEAR: total > 0 ? (stats.byClassification.UNCLEAR / total * 100) : 0,
+  NONE: total > 0 ? (stats.byClassification.NONE / total * 100) : 0,
+};
+
+const classifications = [
+  { key: 'YES', label: 'YES (Quantified)', color: '#10b981', count: stats.byClassification.YES, percentage: percentages.YES },
+  { key: 'PARTIAL', label: 'PARTIAL (Acknowledged)', color: '#f59e0b', count: stats.byClassification.PARTIAL, percentage: percentages.PARTIAL },
+  { key: 'UNCLEAR', label: 'UNCLEAR (Mentioned)', color: '#6b7280', count: stats.byClassification.UNCLEAR, percentage: percentages.UNCLEAR },
+  { key: 'NONE', label: 'NONE (Not Disclosed)', color: '#ef4444', count: stats.byClassification.NONE, percentage: percentages.NONE },
+];
+---
+
+<div class="classification-bar">
+  {title && (
+    <h3 class="text-lg font-semibold text-slate-100 mb-4">{title}</h3>
+  )}
+
+  <!-- Stacked Bar -->
+  <div class="flex w-full h-12 rounded-lg overflow-hidden mb-4 shadow-lg">
+    {classifications.map(cls => (
+      cls.percentage > 0 && (
+        <div
+          class="flex items-center justify-center text-white font-semibold text-sm relative group cursor-pointer transition-all hover:opacity-90 hover:scale-105"
+          style={`width: ${cls.percentage}%; background-color: ${cls.color}`}
+          title={`${cls.label}: ${cls.count} (${cls.percentage.toFixed(1)}%)`}
+          data-classification={cls.key}
+        >
+          {cls.percentage > 10 && (
+            <span class="text-xs">{cls.count}</span>
+          )}
+
+          <!-- Tooltip -->
+          <div class="hidden group-hover:block absolute z-[100] bg-slate-900 border border-slate-600 rounded px-3 py-2 bottom-full mb-2 whitespace-nowrap shadow-xl">
+            <div class="text-xs text-slate-300">{cls.label}</div>
+            <div class="text-sm font-bold">{cls.count} questions ({cls.percentage.toFixed(1)}%)</div>
+            <div class="text-xs text-slate-400 mt-1">Click to jump to questions</div>
+          </div>
+        </div>
+      )
+    ))}
+  </div>
+
+  <!-- Legend with counts -->
+  {showPercentages && (
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+      {classifications.map(cls => (
+        <div class="flex items-center gap-2">
+          <div
+            class="w-4 h-4 rounded flex-shrink-0"
+            style={`background-color: ${cls.color}`}
+          ></div>
+          <div class="flex-1">
+            <div class="text-slate-300 font-medium">{cls.key}</div>
+            <div class="text-slate-400 text-xs">
+              {cls.count} ({cls.percentage.toFixed(1)}%)
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
+<script>
+  // Add click handlers to classification bar segments
+  document.addEventListener('DOMContentLoaded', () => {
+    const classificationSegments = document.querySelectorAll('[data-classification]');
+
+    classificationSegments.forEach(segment => {
+      segment.addEventListener('click', () => {
+        const classification = segment.getAttribute('data-classification');
+
+        // Find all question cards with this classification
+        const questionCards = document.querySelectorAll('[data-question-classification]');
+        let firstMatch = null;
+
+        questionCards.forEach(card => {
+          const cardClass = card.getAttribute('data-question-classification');
+          if (cardClass === classification) {
+            card.classList.add('highlight-flash', 'ring-2', 'ring-emerald-400');
+            if (!firstMatch) firstMatch = card;
+
+            // Remove highlight after 3 seconds
+            setTimeout(() => {
+              card.classList.remove('highlight-flash', 'ring-2', 'ring-emerald-400');
+            }, 3000);
+          }
+        });
+
+        // Scroll to first matching question
+        if (firstMatch) {
+          firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  @keyframes highlight-flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+  }
+
+  .highlight-flash {
+    animation: highlight-flash 0.5s ease-in-out 3;
+  }
+</style>

@@ -1,0 +1,149 @@
+---
+interface Props {
+  data: {
+    YES: number;
+    PARTIAL: number;
+    UNCLEAR: number;
+    NONE: number;
+  };
+  total: number;
+  title: string;
+  color: string;
+}
+
+const { data, total, title, color } = Astro.props;
+
+// Calculate percentages
+const percentages = {
+  YES: total > 0 ? ((data.YES || 0) / total * 100) : 0,
+  PARTIAL: total > 0 ? ((data.PARTIAL || 0) / total * 100) : 0,
+  UNCLEAR: total > 0 ? ((data.UNCLEAR || 0) / total * 100) : 0,
+  NONE: total > 0 ? ((data.NONE || 0) / total * 100) : 0,
+};
+
+// SVG parameters
+const radius = 80;
+const innerRadius = 50;
+const centerX = 100;
+const centerY = 100;
+
+const colors = {
+  YES: '#10b981',
+  PARTIAL: '#f59e0b',
+  UNCLEAR: '#6b7280',
+  NONE: '#ef4444'
+};
+
+// Helper function to convert polar to cartesian coordinates
+function polarToCartesian(centerX: number, centerY: number, radius: number, angleInDegrees: number) {
+  const angleInRadians = (angleInDegrees * Math.PI) / 180.0;
+  return {
+    x: centerX + (radius * Math.cos(angleInRadians)),
+    y: centerY + (radius * Math.sin(angleInRadians))
+  };
+}
+
+// Helper function to create a donut segment path
+function createDonutSegment(
+  cx: number,
+  cy: number,
+  innerRadius: number,
+  outerRadius: number,
+  startAngle: number,
+  endAngle: number
+) {
+  // Add small gap between segments
+  const gapAngle = 2;
+  startAngle += gapAngle / 2;
+  endAngle -= gapAngle / 2;
+
+  const startOuter = polarToCartesian(cx, cy, outerRadius, startAngle);
+  const endOuter = polarToCartesian(cx, cy, outerRadius, endAngle);
+  const startInner = polarToCartesian(cx, cy, innerRadius, startAngle);
+  const endInner = polarToCartesian(cx, cy, innerRadius, endAngle);
+
+  const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+
+  return [
+    "M", startOuter.x, startOuter.y,
+    "A", outerRadius, outerRadius, 0, largeArcFlag, 1, endOuter.x, endOuter.y,
+    "L", endInner.x, endInner.y,
+    "A", innerRadius, innerRadius, 0, largeArcFlag, 0, startInner.x, startInner.y,
+    "Z"
+  ].join(" ");
+}
+
+// Create segments
+interface Segment {
+  classification: string;
+  pathData: string;
+  color: string;
+  percentage: string;
+  count: number;
+}
+
+const segments: Segment[] = [];
+let currentAngle = -90; // Start at top
+
+(['YES', 'PARTIAL', 'UNCLEAR', 'NONE'] as const).forEach(classification => {
+  const percentage = percentages[classification];
+  if (percentage > 0) {
+    const angle = (percentage / 100) * 360;
+    const endAngle = currentAngle + angle;
+
+    const pathData = createDonutSegment(
+      centerX,
+      centerY,
+      innerRadius,
+      radius,
+      currentAngle,
+      endAngle
+    );
+
+    segments.push({
+      classification,
+      pathData,
+      color: colors[classification],
+      percentage: percentage.toFixed(1),
+      count: data[classification] || 0
+    });
+
+    currentAngle = endAngle;
+  }
+});
+---
+
+<div>
+  <h3 class="text-sm font-semibold mb-6" style={`color: ${color}`}>{title}</h3>
+  <div class="flex flex-col items-center">
+    <svg viewBox="0 0 200 200" class="w-64 h-64">
+      {segments.map(({ pathData, color }) => (
+        <path
+          d={pathData}
+          fill={color}
+          class="hover:opacity-80 transition-opacity cursor-pointer"
+        />
+      ))}
+      <!-- Center text -->
+      <text x="100" y="95" text-anchor="middle" class="text-2xl font-bold fill-slate-100">
+        {total}
+      </text>
+      <text x="100" y="110" text-anchor="middle" class="text-xs fill-slate-400">
+        Questions
+      </text>
+    </svg>
+
+    <!-- Legend -->
+    <div class="mt-6 grid grid-cols-2 gap-3 w-full">
+      {segments.map(({ classification, color, percentage, count }) => (
+        <div class="flex items-center gap-2">
+          <div class="w-4 h-4 rounded" style={`background-color: ${color}`}></div>
+          <div class="text-sm">
+            <div class="text-slate-200 font-medium">{classification}</div>
+            <div class="text-xs text-slate-400">{count} ({percentage}%)</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,268 @@
+---
+interface YearData {
+  year: number;
+  data: {
+    YES: number;
+    PARTIAL: number;
+    UNCLEAR: number;
+    NONE: number;
+  };
+  total: number;
+}
+
+interface Props {
+  yearlyData: YearData[];  // All questions data (canonical + variants)
+  canonicalData?: YearData[];  // Canonical-only data (optional)
+  title: string;
+  color: string;
+  showCanonicalFilter?: boolean;  // Enable canonical-only filter toggle for N-LLM
+  systemType?: 'nllm' | 'drag';  // System type for custom button labels
+}
+
+const { yearlyData, canonicalData, title, color, showCanonicalFilter = false, systemType = 'nllm' } = Astro.props;
+
+// Define button labels based on system type
+const buttonLabels = systemType === 'drag'
+  ? { all: 'All Canonical Questions', canonical: 'Common Canonical' }
+  : { all: 'Canonical + Variants', canonical: 'Common Canonical' };
+
+const colors = {
+  YES: '#10b981',
+  PARTIAL: '#f59e0b',
+  UNCLEAR: '#6b7280',
+  NONE: '#ef4444'
+};
+
+// Helper function to calculate stats
+const calculateStats = (data: YearData[]) => {
+  return data.map(yd => {
+    const percentages = {
+      YES: yd.total > 0 ? ((yd.data.YES || 0) / yd.total * 100) : 0,
+      PARTIAL: yd.total > 0 ? ((yd.data.PARTIAL || 0) / yd.total * 100) : 0,
+      UNCLEAR: yd.total > 0 ? ((yd.data.UNCLEAR || 0) / yd.total * 100) : 0,
+      NONE: yd.total > 0 ? ((yd.data.NONE || 0) / yd.total * 100) : 0,
+    };
+    return { year: yd.year, percentages, counts: yd.data };
+  });
+};
+
+// Calculate percentages for both datasets
+const allQuestionsStats = calculateStats(yearlyData);
+const canonicalOnlyStats = canonicalData ? calculateStats(canonicalData) : allQuestionsStats;
+
+// Generate unique ID for this chart instance
+const chartId = `bar-chart-${Math.random().toString(36).substring(2, 9)}`;
+---
+
+<div id={chartId} class="multi-year-bar-chart">
+  <div class="flex items-center justify-between mb-6">
+    <h3 class="text-sm font-semibold" style={`color: ${color}`}>{title}</h3>
+
+    {showCanonicalFilter && (
+      <div class="filter-toggle-container">
+        <div class="inline-flex rounded-lg border border-slate-600 bg-slate-800 p-1">
+          <button
+            class="filter-toggle-btn px-3 py-1 text-xs font-medium rounded-md transition-colors"
+            data-filter="all"
+          >
+            {buttonLabels.all}
+          </button>
+          <button
+            class="filter-toggle-btn active px-3 py-1 text-xs font-medium rounded-md transition-colors"
+            data-filter="canonical"
+          >
+            {buttonLabels.canonical}
+          </button>
+        </div>
+      </div>
+    )}
+  </div>
+
+  <div class="space-y-8 chart-data-container">
+    {/* Bar chart for each classification - Use canonical by default */}
+    {(['YES', 'PARTIAL', 'UNCLEAR', 'NONE'] as const).map(classification => {
+      // Use canonical stats by default when filter is enabled
+      const defaultStats = showCanonicalFilter ? canonicalOnlyStats : allQuestionsStats;
+
+      return (
+        <div class="classification-group" data-classification={classification}>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-3 h-3 rounded" style={`background-color: ${colors[classification]}`}></div>
+            <h4 class="text-sm font-semibold text-slate-200">{classification}</h4>
+          </div>
+
+          <div class="bars-container flex gap-1 items-end mx-auto" style="height: 120px; max-width: 400px;">
+            {defaultStats.map(({ year, percentages, counts }) => {
+              const percentage = percentages[classification];
+              const count = counts[classification] || 0;
+              const heightPx = Math.max((percentage / 100) * 120, 3);
+
+              return (
+                <div class="flex flex-col items-center gap-1" style="flex: 0 0 auto; width: 50px;">
+                  <div
+                    class="bar-segment w-full rounded-t transition-all duration-300 cursor-pointer hover:opacity-80 relative group"
+                    style={`height: ${heightPx}px; background-color: ${colors[classification]}`}
+                    data-year={year}
+                    data-classification={classification}
+                    data-percentage={percentage.toFixed(1)}
+                    data-count={count}
+                  >
+                    <div class="bar-tooltip absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-10">
+                      {percentage.toFixed(0)}%
+                    </div>
+                    <div class="percentage-label absolute -top-5 left-1/2 -translate-x-1/2 text-[10px] font-semibold text-slate-300">
+                      {percentage.toFixed(0)}%
+                    </div>
+                  </div>
+                  <div class="text-[10px] text-slate-400 font-medium">
+                    {year}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- Legend -->
+  <div class="mt-6 pt-4 border-t border-slate-700">
+    <div class="grid grid-cols-2 gap-3">
+      {(['YES', 'PARTIAL', 'UNCLEAR', 'NONE'] as const).map(classification => (
+        <div
+          class="flex items-center gap-2 cursor-pointer hover:bg-slate-800 p-2 rounded transition-colors legend-item"
+          data-classification={classification}
+        >
+          <div class="w-4 h-4 rounded" style={`background-color: ${colors[classification]}`}></div>
+          <div class="text-sm text-slate-200 font-medium">{classification}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+<style>
+  .filter-toggle-btn {
+    color: rgb(148, 163, 184); /* slate-400 */
+  }
+
+  .filter-toggle-btn:hover {
+    color: rgb(203, 213, 225); /* slate-300 */
+  }
+
+  .filter-toggle-btn.active {
+    background-color: rgb(30, 41, 59); /* slate-800 */
+    color: rgb(255, 255, 255);
+  }
+</style>
+
+<script define:vars={{ chartId, showCanonicalFilter, allQuestionsStats, canonicalOnlyStats }}>
+  // Interactive filtering functionality
+  (function() {
+    const chartContainer = document.getElementById(chartId);
+    if (!chartContainer) return;
+
+    const groups = chartContainer.querySelectorAll('.classification-group');
+    const legendItems = chartContainer.querySelectorAll('.legend-item');
+    let selectedClassification = null;
+
+    // Handle canonical/variant filter toggle (N-LLM only)
+    if (showCanonicalFilter) {
+      const filterBtns = chartContainer.querySelectorAll('.filter-toggle-btn');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const filter = btn.getAttribute('data-filter');
+
+          // Update button active states
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          // Select the appropriate dataset
+          const selectedData = filter === 'canonical' ? canonicalOnlyStats : allQuestionsStats;
+
+          // Update all bar charts
+          groups.forEach(group => {
+            const classification = group.getAttribute('data-classification');
+            const barsContainer = group.querySelector('.bars-container');
+            if (!barsContainer) return;
+
+            // Get all bar segments
+            const barSegments = Array.from(barsContainer.querySelectorAll('.bar-segment'));
+
+            // Update each bar
+            barSegments.forEach((bar, index) => {
+              if (index >= selectedData.length) return;
+
+              const yearData = selectedData[index];
+              const percentage = yearData.percentages[classification];
+              const count = yearData.counts[classification] || 0;
+              const heightPx = Math.max((percentage / 100) * 120, 3);
+
+              // Update height
+              bar.style.height = `${heightPx}px`;
+
+              // Update data attributes
+              bar.setAttribute('data-percentage', percentage.toFixed(1));
+              bar.setAttribute('data-count', count);
+
+              // Update percentage label
+              const percentageLabel = bar.querySelector('.percentage-label');
+              if (percentageLabel) {
+                percentageLabel.textContent = `${percentage.toFixed(0)}%`;
+              }
+
+              // Update tooltip
+              const tooltip = bar.querySelector('.bar-tooltip');
+              if (tooltip) {
+                tooltip.textContent = `${percentage.toFixed(0)}%`;
+              }
+            });
+          });
+        });
+      });
+    }
+
+    // Handle legend item clicks
+    legendItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const classification = item.getAttribute('data-classification');
+
+        // Toggle selection
+        if (selectedClassification === classification) {
+          // Deselect - show all groups
+          selectedClassification = null;
+          groups.forEach(group => {
+            group.style.opacity = '1';
+          });
+          legendItems.forEach(li => {
+            li.style.backgroundColor = '';
+          });
+        } else {
+          // Select this classification - dim others
+          selectedClassification = classification;
+
+          groups.forEach(group => {
+            const groupClass = group.getAttribute('data-classification');
+            if (groupClass === classification) {
+              group.style.opacity = '1';
+            } else {
+              group.style.opacity = '0.2';
+            }
+          });
+
+          // Highlight selected legend item
+          legendItems.forEach(li => {
+            const liClass = li.getAttribute('data-classification');
+            if (liClass === classification) {
+              li.style.backgroundColor = 'rgb(30, 41, 59)'; // slate-800
+            } else {
+              li.style.backgroundColor = '';
+            }
+          });
+        }
+      });
+    });
+  })();
+</script>

@@ -1,0 +1,1048 @@
+---
+import type { Question } from '../utils/dataLoader';
+import { getClassificationInfo, getCategoryGroup } from '../utils/categoryMapper';
+import { getBaseQuestionId } from '../utils/dataLoader';
+
+interface Props {
+  years: string[];
+  ourSystemData: Map<string, Map<string, Question>>; // year -> questionId -> Question
+  dragData?: Map<string, Map<string, Question>>; // year -> questionId -> Question (optional)
+  commonCanonicalIds?: Set<string>; // IDs of questions common to both systems (sector-filtered)
+}
+
+const { years, ourSystemData, dragData, commonCanonicalIds } = Astro.props;
+
+// Helper: Get all unique question IDs from a dataset
+function getAllQuestionIds(dataMap: Map<string, Map<string, Question>>): string[] {
+  const allIds = new Set<string>();
+  dataMap.forEach(yearMap => {
+    yearMap.forEach((_, questionId) => {
+      allIds.add(questionId);
+    });
+  });
+  return Array.from(allIds).sort();
+}
+
+// Helper: Get canonical question IDs that exist in both N-LLM and D-RAG
+function getCanonicalQuestionIds(
+  nllmData: Map<string, Map<string, Question>>,
+  dragData?: Map<string, Map<string, Question>>
+): string[] {
+  if (!dragData) return [];
+
+  const nllmBaseIds = new Set<string>();
+  const dragBaseIds = new Set<string>();
+
+  getAllQuestionIds(nllmData).forEach(id => {
+    nllmBaseIds.add(getBaseQuestionId(id));
+  });
+
+  getAllQuestionIds(dragData).forEach(id => {
+    dragBaseIds.add(getBaseQuestionId(id));
+  });
+
+  // Return intersection - questions that exist in both systems
+  return Array.from(nllmBaseIds).filter(id => dragBaseIds.has(id)).sort();
+}
+
+const allNllmQuestions = getAllQuestionIds(ourSystemData);
+const allDragQuestions = dragData ? getAllQuestionIds(dragData) : [];
+
+// Use provided common canonical IDs if available (sector-filtered), otherwise calculate intersection
+const canonicalQuestions = commonCanonicalIds
+  ? Array.from(commonCanonicalIds).sort()
+  : getCanonicalQuestionIds(ourSystemData, dragData);
+
+// Generate color palette for many questions
+function generateColors(count: number): string[] {
+  const base = [
+    '#10b981', '#f59e0b', '#3b82f6', '#ef4444', '#8b5cf6',
+    '#06b6d4', '#f97316', '#84cc16', '#ec4899', '#14b8a6',
+    '#6366f1', '#f43f5e', '#a855f7', '#22c55e', '#fb923c'
+  ];
+
+  const colors = [];
+  for (let i = 0; i < count; i++) {
+    if (i < base.length) {
+      colors.push(base[i]);
+    } else {
+      const hue = (i * 137.5) % 360;
+      colors.push(`hsl(${hue}, 70%, 55%)`);
+    }
+  }
+  return colors;
+}
+
+// CATEGORY-BASED CALCULATION
+function calculateCategoryScores(yearMap: Map<string, Question> | undefined, filterSet?: Set<string>) {
+  const scores = {
+    'Environmental Risks': 0,
+    'Human Health Risks': 0,
+    'Transition Risks': 0
+  };
+
+  if (!yearMap) {
+    return { ...scores, total: 0 };
+  }
+
+  yearMap.forEach((question, questionId) => {
+    // Apply canonical filter if provided
+    if (filterSet) {
+      const baseId = getBaseQuestionId(questionId);
+      if (!filterSet.has(baseId)) return;
+    }
+
+    const categoryInfo = getCategoryGroup(question);
+    const categoryName = categoryInfo.name;
+    const classificationScore = getClassificationInfo(question.answer.classification).score;
+
+    if (scores.hasOwnProperty(categoryName)) {
+      scores[categoryName as keyof typeof scores] += classificationScore;
+    }
+  });
+
+  const total = scores['Environmental Risks'] + scores['Human Health Risks'] + scores['Transition Risks'];
+  return { ...scores, total };
+}
+
+// QUESTION-BASED CALCULATION
+function calculateQuestionScores(yearMap: Map<string, Question> | undefined, questionList: string[], filterSet?: Set<string>) {
+  const scores: Record<string, number> = {};
+
+  // Initialize all questions to 0
+  questionList.forEach(qId => {
+    scores[qId] = 0;
+  });
+
+  if (!yearMap) {
+    return { scores, total: 0 };
+  }
+
+  yearMap.forEach((question, questionId) => {
+    // Apply canonical filter if provided (filter out non-matching questions)
+    if (filterSet) {
+      const baseId = getBaseQuestionId(questionId);
+      if (!filterSet.has(baseId)) return;
+    }
+
+    // Use actual question ID (including variants) - treat each as separate
+    if (scores.hasOwnProperty(questionId)) {
+      scores[questionId] = getClassificationInfo(question.answer.classification).score;
+    }
+  });
+
+  const total = Object.values(scores).reduce((sum, val) => sum + val, 0);
+  return { scores, total };
+}
+
+// Prepare all data configurations
+const canonicalFilter = dragData && canonicalQuestions.length > 0 ? new Set(canonicalQuestions) : undefined;
+
+// Category data with D-RAG normalization (alignment method)
+const nllmCategoryData = years.map(year => {
+  const yearMap = ourSystemData.get(year);
+  const scores = calculateCategoryScores(yearMap);
+  const scoresCanonical = calculateCategoryScores(yearMap, canonicalFilter);
+
+  // D-RAG method: Divide by maximum possible score (num_questions × 3)
+  const numQuestionsAll = yearMap ? yearMap.size : 0;
+  const maxPossibleAll = numQuestionsAll * 3;
+
+  // Count canonical questions for this year
+  let numQuestionsCanonical = 0;
+  if (yearMap && canonicalFilter) {
+    yearMap.forEach((_, questionId) => {
+      const baseId = getBaseQuestionId(questionId);
+      if (canonicalFilter.has(baseId)) numQuestionsCanonical++;
+    });
+  }
+  const maxPossibleCanonical = numQuestionsCanonical * 3;
+
+  return {
+    year,
+    all: scores,
+    canonical: scoresCanonical,
+    allNormalized: maxPossibleAll > 0 ? {
+      'Environmental Risks': (scores['Environmental Risks'] / maxPossibleAll) * 100,
+      'Human Health Risks': (scores['Human Health Risks'] / maxPossibleAll) * 100,
+      'Transition Risks': (scores['Transition Risks'] / maxPossibleAll) * 100
+    } : { 'Environmental Risks': 0, 'Human Health Risks': 0, 'Transition Risks': 0 },
+    canonicalNormalized: maxPossibleCanonical > 0 ? {
+      'Environmental Risks': (scoresCanonical['Environmental Risks'] / maxPossibleCanonical) * 100,
+      'Human Health Risks': (scoresCanonical['Human Health Risks'] / maxPossibleCanonical) * 100,
+      'Transition Risks': (scoresCanonical['Transition Risks'] / maxPossibleCanonical) * 100
+    } : { 'Environmental Risks': 0, 'Human Health Risks': 0, 'Transition Risks': 0 }
+  };
+});
+
+const dragCategoryData = dragData ? years.map(year => {
+  const yearMap = dragData.get(year);
+  const scores = calculateCategoryScores(yearMap);
+  const scoresCanonical = calculateCategoryScores(yearMap, canonicalFilter);
+
+  // D-RAG method: Divide by maximum possible score (num_questions × 3)
+  const numQuestionsAll = yearMap ? yearMap.size : 0;
+  const maxPossibleAll = numQuestionsAll * 3;
+
+  // Count canonical questions for this year
+  let numQuestionsCanonical = 0;
+  if (yearMap && canonicalFilter) {
+    yearMap.forEach((_, questionId) => {
+      const baseId = getBaseQuestionId(questionId);
+      if (canonicalFilter.has(baseId)) numQuestionsCanonical++;
+    });
+  }
+  const maxPossibleCanonical = numQuestionsCanonical * 3;
+
+  return {
+    year,
+    all: scores,
+    canonical: scoresCanonical,
+    allNormalized: maxPossibleAll > 0 ? {
+      'Environmental Risks': (scores['Environmental Risks'] / maxPossibleAll) * 100,
+      'Human Health Risks': (scores['Human Health Risks'] / maxPossibleAll) * 100,
+      'Transition Risks': (scores['Transition Risks'] / maxPossibleAll) * 100
+    } : { 'Environmental Risks': 0, 'Human Health Risks': 0, 'Transition Risks': 0 },
+    canonicalNormalized: maxPossibleCanonical > 0 ? {
+      'Environmental Risks': (scoresCanonical['Environmental Risks'] / maxPossibleCanonical) * 100,
+      'Human Health Risks': (scoresCanonical['Human Health Risks'] / maxPossibleCanonical) * 100,
+      'Transition Risks': (scoresCanonical['Transition Risks'] / maxPossibleCanonical) * 100
+    } : { 'Environmental Risks': 0, 'Human Health Risks': 0, 'Transition Risks': 0 }
+  };
+}) : [];
+
+// Question data (new - D-RAG style)
+// "All Questions" mode: use full question lists (including variants for N-LLM)
+const nllmQuestionList = allNllmQuestions;
+const dragQuestionList = allDragQuestions;
+
+// "Canonical Only" mode: use ONLY the common canonical IDs (no variants)
+// Both N-LLM and DRAG use the same 14 common canonical questions
+const nllmCanonicalList = canonicalFilter ? canonicalQuestions : allNllmQuestions;
+const dragCanonicalList = canonicalFilter ? canonicalQuestions : allDragQuestions;
+
+const nllmQuestionData = years.map(year => {
+  const all = calculateQuestionScores(ourSystemData.get(year), nllmQuestionList);
+  // For canonical mode: use exact common canonicals (no variants)
+  const canonical = canonicalFilter ? calculateQuestionScores(ourSystemData.get(year), nllmCanonicalList, canonicalFilter) : all;
+
+  // D-RAG method: Divide by maximum possible score (num_questions × 3)
+  const maxPossibleAll = nllmQuestionList.length * 3;
+  const maxPossibleCanonical = canonicalFilter ? nllmCanonicalList.length * 3 : maxPossibleAll;
+
+  const allNormalized: Record<string, number> = {};
+  const canonicalNormalized: Record<string, number> = {};
+
+  Object.keys(all.scores).forEach(qId => {
+    allNormalized[qId] = maxPossibleAll > 0 ? (all.scores[qId] / maxPossibleAll) * 100 : 0;
+  });
+
+  Object.keys(canonical.scores).forEach(qId => {
+    canonicalNormalized[qId] = maxPossibleCanonical > 0 ? (canonical.scores[qId] / maxPossibleCanonical) * 100 : 0;
+  });
+
+  return { year, all: all.scores, canonical: canonical.scores, allNormalized, canonicalNormalized };
+});
+
+const dragQuestionData = dragData ? years.map(year => {
+  const all = calculateQuestionScores(dragData.get(year), dragQuestionList);
+  // For canonical mode: DRAG uses common canonical IDs only (no variants in DRAG)
+  const canonical = canonicalFilter ? calculateQuestionScores(dragData.get(year), dragCanonicalList, canonicalFilter) : all;
+
+  // D-RAG method: Divide by maximum possible score (num_questions × 3)
+  const maxPossibleAll = dragQuestionList.length * 3;
+  const maxPossibleCanonical = canonicalFilter ? dragCanonicalList.length * 3 : maxPossibleAll;
+
+  const allNormalized: Record<string, number> = {};
+  const canonicalNormalized: Record<string, number> = {};
+
+  Object.keys(all.scores).forEach(qId => {
+    allNormalized[qId] = maxPossibleAll > 0 ? (all.scores[qId] / maxPossibleAll) * 100 : 0;
+  });
+
+  Object.keys(canonical.scores).forEach(qId => {
+    canonicalNormalized[qId] = maxPossibleCanonical > 0 ? (canonical.scores[qId] / maxPossibleCanonical) * 100 : 0;
+  });
+
+  return { year, all: all.scores, canonical: canonical.scores, allNormalized, canonicalNormalized };
+}) : [];
+
+// Generate colors
+const categoryColors = { 'Environmental Risks': '#10b981', 'Human Health Risks': '#f59e0b', 'Transition Risks': '#3b82f6' };
+const questionColors = generateColors(Math.max(nllmQuestionList.length, dragQuestionList.length));
+
+// Package all data for JSON embedding
+const chartData = {
+  years: years.map(y => `${y}`),
+  category: {
+    nllm: nllmCategoryData,
+    drag: dragCategoryData
+  },
+  question: {
+    nllm: nllmQuestionData,
+    drag: dragQuestionData,
+    nllmList: nllmQuestionList,
+    dragList: dragQuestionList,
+    canonicalList: canonicalQuestions,
+    nllmCanonicalList: nllmCanonicalList,
+    dragCanonicalList: dragCanonicalList
+  },
+  colors: {
+    category: categoryColors,
+    question: questionColors
+  },
+  meta: {
+    totalNllmQuestions: allNllmQuestions.length,
+    totalDragQuestions: allDragQuestions.length,
+    canonicalCount: canonicalQuestions.length
+  }
+};
+---
+
+<div class="timeline-chart">
+  <h2 class="text-2xl font-bold text-slate-100 mb-6">📈 Timeline: Risk Disclosure Trends</h2>
+
+  <div class="card">
+    <!-- Controls -->
+    <div class="flex justify-between items-start mb-6 flex-wrap gap-4">
+      <div class="flex flex-col gap-2">
+        <div class="text-sm text-slate-400">
+          Track how risk disclosure evolves over time
+        </div>
+        <div id="filter-info" class="text-xs text-emerald-400"></div>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <!-- System Selection -->
+        {dragData && (
+          <div class="flex gap-2">
+            <button id="toggle-nllm" class="px-3 py-1 text-sm rounded bg-emerald-500 text-white font-medium">
+              N-LLM
+            </button>
+            <button id="toggle-drag" class="px-3 py-1 text-sm rounded bg-slate-700 text-slate-300">
+              D-RAG
+            </button>
+            <button id="toggle-both" class="px-3 py-1 text-sm rounded bg-slate-700 text-slate-300">
+              Both
+            </button>
+          </div>
+        )}
+
+        <!-- Group By & View Mode -->
+        <div class="flex gap-2 flex-wrap">
+          <button id="toggle-category" class="px-3 py-1 text-sm rounded bg-slate-700 text-slate-300">
+            By Category
+          </button>
+          <button id="toggle-question" class="px-3 py-1 text-sm rounded bg-purple-500 text-white font-medium">
+            By Question
+          </button>
+          <span class="border-l border-slate-600 mx-1"></span>
+          <button id="toggle-absolute" class="px-3 py-1 text-sm rounded bg-blue-500 text-white font-medium">
+            Absolute
+          </button>
+          <button id="toggle-normalized" class="px-3 py-1 text-sm rounded bg-slate-700 text-slate-300">
+            Normalized
+          </button>
+          {dragData && canonicalQuestions.length > 0 && (
+            <>
+              <span class="border-l border-slate-600 mx-1"></span>
+              <button id="toggle-all-questions" class="px-3 py-1 text-sm rounded bg-slate-700 text-slate-300">
+                All Questions
+              </button>
+              <button id="toggle-canonical" class="px-3 py-1 text-sm rounded bg-orange-500 text-white font-medium">
+                Canonical Only
+              </button>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <!-- Canvas -->
+    <div class="relative h-96">
+      <canvas id="timeline-chart"></canvas>
+    </div>
+
+    <!-- Y-Axis Zoom Controls (shown only in normalized mode) -->
+    <div id="zoom-controls" class="mt-4 flex gap-2 items-center hidden">
+      <span class="text-xs text-slate-400">Y-axis range:</span>
+      <button id="zoom-auto" class="px-2 py-1 text-xs rounded bg-indigo-500 text-white font-medium">
+        Auto
+      </button>
+      <button id="zoom-25" class="px-2 py-1 text-xs rounded bg-slate-700 text-slate-300">
+        0-25%
+      </button>
+      <button id="zoom-50" class="px-2 py-1 text-xs rounded bg-slate-700 text-slate-300">
+        0-50%
+      </button>
+      <button id="zoom-100" class="px-2 py-1 text-xs rounded bg-slate-700 text-slate-300">
+        0-100%
+      </button>
+    </div>
+
+    <!-- Stats Table (Category Mode) -->
+    <div id="stats-category" class="mt-6 overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-slate-700">
+            <th class="text-left p-2 text-slate-400">Year</th>
+            <th class="text-center p-2 text-slate-300" colspan="4">N-LLM</th>
+            {dragData && (
+              <th class="text-center p-2 text-slate-300" colspan="4">D-RAG</th>
+            )}
+          </tr>
+          <tr class="border-b border-slate-700">
+            <th class="text-left p-2 text-slate-400"></th>
+            <th class="text-right p-2 text-emerald-400">Environmental</th>
+            <th class="text-right p-2 text-amber-400">Human Health</th>
+            <th class="text-right p-2 text-blue-400">Transition</th>
+            <th class="text-right p-2 text-slate-300">Total</th>
+            {dragData && (
+              <>
+                <th class="text-right p-2 text-emerald-400">Environmental</th>
+                <th class="text-right p-2 text-amber-400">Human Health</th>
+                <th class="text-right p-2 text-blue-400">Transition</th>
+                <th class="text-right p-2 text-slate-300">Total</th>
+              </>
+            )}
+          </tr>
+        </thead>
+        <tbody>
+          {nllmCategoryData.map((data, idx) => (
+            <tr class="border-b border-slate-800 hover:bg-slate-800/50">
+              <td class="p-2 text-slate-300">{data.year}</td>
+              <td class="text-right p-2 text-emerald-400">{data.all['Environmental Risks'].toFixed(1)}</td>
+              <td class="text-right p-2 text-amber-400">{data.all['Human Health Risks'].toFixed(1)}</td>
+              <td class="text-right p-2 text-blue-400">{data.all['Transition Risks'].toFixed(1)}</td>
+              <td class="text-right p-2 text-slate-300 font-semibold">{data.all.total.toFixed(1)}</td>
+              {dragData && dragCategoryData[idx] && (
+                <>
+                  <td class="text-right p-2 text-emerald-400">{dragCategoryData[idx].all['Environmental Risks'].toFixed(1)}</td>
+                  <td class="text-right p-2 text-amber-400">{dragCategoryData[idx].all['Human Health Risks'].toFixed(1)}</td>
+                  <td class="text-right p-2 text-blue-400">{dragCategoryData[idx].all['Transition Risks'].toFixed(1)}</td>
+                  <td class="text-right p-2 text-slate-300 font-semibold">{dragCategoryData[idx].all.total.toFixed(1)}</td>
+                </>
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Stats Info (Question Mode) -->
+    <div id="stats-question" class="mt-6 hidden">
+      <div class="mb-4 flex flex-wrap gap-2 items-center">
+        <span class="text-sm text-slate-400">Showing individual question trends. Hover over chart legend or areas to see question details.</span>
+        <span class="text-xs text-emerald-400">
+          <span class="font-semibold">Total questions:</span>
+          <span id="question-count"></span>
+        </span>
+      </div>
+      <div id="pair-selection-hint" class="mb-4 p-3 bg-slate-800/50 border border-slate-700 rounded hidden">
+        <span class="text-xs text-cyan-400">
+          💡 <span class="font-semibold">Tip:</span> In "Both" mode, double-click on any question in the legend to isolate and compare it with its twin from the other system. Double-click again to show all questions.
+        </span>
+      </div>
+
+      <!-- Question Filter Controls -->
+      <div class="mb-4 flex flex-wrap gap-2 items-center">
+        <span class="text-xs text-slate-400">Show in table:</span>
+        <button id="filter-top10" class="px-2 py-1 text-xs rounded bg-indigo-500 text-white font-medium">
+          Top 10
+        </button>
+        <button id="filter-all-table" class="px-2 py-1 text-xs rounded bg-slate-700 text-slate-300">
+          All Questions
+        </button>
+        <button id="filter-category-env" class="px-2 py-1 text-xs rounded bg-slate-700 text-slate-300">
+          Environmental
+        </button>
+        <button id="filter-category-health" class="px-2 py-1 text-xs rounded bg-slate-700 text-slate-300">
+          Human Health
+        </button>
+        <button id="filter-category-transition" class="px-2 py-1 text-xs rounded bg-slate-700 text-slate-300">
+          Transition
+        </button>
+      </div>
+
+      <!-- Question Summary Table -->
+      <div class="overflow-x-auto">
+        <table id="question-table" class="w-full text-xs">
+          <thead>
+            <tr class="border-b border-slate-700">
+              <th class="text-left p-2 text-slate-400 sticky left-0 bg-slate-800">Question ID</th>
+              <th class="text-center p-2 text-emerald-400 font-semibold" colspan="100" id="question-table-system-header">N-LLM</th>
+            </tr>
+            <tr class="border-b border-slate-700" id="question-table-year-headers">
+              <th class="text-left p-2 text-slate-400 sticky left-0 bg-slate-800"></th>
+            </tr>
+          </thead>
+          <tbody id="question-table-body">
+            <!-- Populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="timeline-data" type="application/json" set:html={JSON.stringify(chartData)}></script>
+
+<script>
+  import { Chart, registerables } from 'chart.js';
+  Chart.register(...registerables);
+
+  const dataScript = document.getElementById('timeline-data');
+  const chartData = JSON.parse(dataScript.textContent);
+
+  let chart = null;
+  let currentView = 'nllm'; // 'nllm', 'drag', 'both'
+  let groupBy = 'question'; // 'category', 'question' - DEFAULT: question
+  let viewMode = 'absolute'; // 'absolute', 'normalized'
+  let questionFilter = 'canonical'; // 'all', 'canonical' - DEFAULT: canonical
+  let yAxisZoom = 'auto'; // 'auto', '25', '50', '100'
+  let tableFilter = 'top10'; // 'top10', 'all', 'env', 'health', 'transition'
+  let lastLegendClickTime = 0;
+  let lastLegendClickIndex = -1;
+  let lastChartClickTime = 0;
+  let lastChartClickPoint = null;
+
+  function updateFilterInfo() {
+    const info = document.getElementById('filter-info');
+    if (!info) return;
+
+    if (questionFilter === 'canonical' && chartData.meta.canonicalCount > 0) {
+      info.textContent = `Comparing ${chartData.meta.canonicalCount} common canonical questions`;
+      info.classList.remove('hidden');
+    } else if (groupBy === 'question') {
+      const count = questionFilter === 'canonical' ? chartData.meta.canonicalCount :
+                    (currentView === 'nllm' || currentView === 'both' ? chartData.meta.totalNllmQuestions : chartData.meta.totalDragQuestions);
+      info.textContent = `Showing ${count} individual questions`;
+      info.classList.remove('hidden');
+    } else {
+      info.classList.add('hidden');
+    }
+  }
+
+  // Calculate optimal Y-axis maximum based on actual data
+  function calculateYAxisMax(datasets, isNormalized) {
+    if (!isNormalized || yAxisZoom !== 'auto') {
+      // Return fixed values for absolute mode or manual zoom
+      if (yAxisZoom === '25') return 25;
+      if (yAxisZoom === '50') return 50;
+      if (yAxisZoom === '100') return 100;
+      if (!isNormalized) return undefined; // Chart.js auto-scale for absolute
+    }
+
+    // Auto mode: calculate from data
+    let maxValue = 0;
+    datasets.forEach(dataset => {
+      dataset.data.forEach(value => {
+        maxValue = Math.max(maxValue, value || 0);
+      });
+    });
+
+    // For stacked charts, we need to sum all values per year
+    if (datasets.length > 0) {
+      const yearCount = datasets[0].data.length;
+      for (let i = 0; i < yearCount; i++) {
+        let stackSum = 0;
+        datasets.forEach(dataset => {
+          stackSum += (dataset.data[i] || 0);
+        });
+        maxValue = Math.max(maxValue, stackSum);
+      }
+    }
+
+    // Add 10% padding and round up to nearest 5
+    const withPadding = maxValue * 1.1;
+    return Math.ceil(withPadding / 5) * 5;
+  }
+
+  function createChart() {
+    const ctx = document.getElementById('timeline-chart');
+    if (!ctx) return;
+
+    if (chart) chart.destroy();
+
+    const datasets = [];
+    const isNormalized = viewMode === 'normalized';
+    const filterKey = questionFilter === 'canonical' ? 'canonical' : 'all';
+    const normalizedKey = questionFilter === 'canonical' ? 'canonicalNormalized' : 'allNormalized';
+
+    if (groupBy === 'category') {
+      // Category-based stacking
+      const categories = ['Environmental Risks', 'Human Health Risks', 'Transition Risks'];
+
+      if (currentView === 'nllm' || currentView === 'both') {
+        categories.forEach(cat => {
+          datasets.push({
+            label: currentView === 'both' ? `N-LLM: ${cat}` : cat,
+            data: chartData.category.nllm.map(d => isNormalized ? d[normalizedKey][cat] : d[filterKey][cat]),
+            backgroundColor: chartData.colors.category[cat] + '80',
+            borderColor: chartData.colors.category[cat],
+            borderWidth: 2,
+            fill: true
+          });
+        });
+      }
+
+      if ((currentView === 'drag' || currentView === 'both') && chartData.category.drag.length > 0) {
+        categories.forEach(cat => {
+          datasets.push({
+            label: `D-RAG: ${cat}`,
+            data: chartData.category.drag.map(d => isNormalized ? d[normalizedKey][cat] : d[filterKey][cat]),
+            backgroundColor: chartData.colors.category[cat] + '60',
+            borderColor: chartData.colors.category[cat],
+            borderWidth: 2,
+            borderDash: currentView === 'both' ? [5, 5] : [],
+            fill: true
+          });
+        });
+      }
+    } else {
+      // Question-based stacking
+      const nllmList = questionFilter === 'canonical' ? chartData.question.nllmCanonicalList : chartData.question.nllmList;
+      const dragList = questionFilter === 'canonical' ? chartData.question.dragCanonicalList : chartData.question.dragList;
+
+      if (currentView === 'nllm' || currentView === 'both') {
+        nllmList.forEach((qId, idx) => {
+          datasets.push({
+            label: currentView === 'both' ? `N-LLM: Q${qId}` : `Q${qId}`,
+            data: chartData.question.nllm.map(d => isNormalized ? d[normalizedKey][qId] || 0 : d[filterKey][qId] || 0),
+            backgroundColor: chartData.colors.question[idx] + '80',  // Solid color with high opacity
+            borderColor: chartData.colors.question[idx],
+            borderWidth: 1,
+            fill: true
+          });
+        });
+      }
+
+      if ((currentView === 'drag' || currentView === 'both') && chartData.question.drag.length > 0) {
+        dragList.forEach((qId, idx) => {
+          datasets.push({
+            label: `D-RAG: Q${qId}`,
+            data: chartData.question.drag.map(d => isNormalized ? d[normalizedKey][qId] || 0 : d[filterKey][qId] || 0),
+            backgroundColor: chartData.colors.question[idx] + '60',  // Solid color with slightly lower opacity to differentiate
+            borderColor: chartData.colors.question[idx],
+            borderWidth: 1,
+            borderDash: currentView === 'both' ? [5, 5] : [],
+            fill: true
+          });
+        });
+      }
+    }
+
+    const yMax = calculateYAxisMax(datasets, isNormalized);
+
+    // When in "Both" mode, don't stack - show side-by-side for comparison
+    const shouldStack = currentView !== 'both';
+
+    chart = new Chart(ctx, {
+      type: 'line',
+      data: { labels: chartData.years, datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        onClick: function(event, elements, chart) {
+          if (elements.length === 0) return;
+
+          const currentTime = Date.now();
+          const clickedElement = elements[0];
+          const datasetIndex = clickedElement.datasetIndex;
+          const dataIndex = clickedElement.index;
+
+          // Check for double-click (within 300ms on same point)
+          const isSamePoint = lastChartClickPoint &&
+                             lastChartClickPoint.datasetIndex === datasetIndex &&
+                             lastChartClickPoint.dataIndex === dataIndex;
+          const isDoubleClick = (currentTime - lastChartClickTime < 300) && isSamePoint;
+
+          if (isDoubleClick && currentView === 'both' && groupBy === 'question') {
+            // Extract information from the clicked point
+            const year = chartData.years[dataIndex]; // Year without prefix
+            const dataset = chart.data.datasets[datasetIndex];
+            const label = dataset.label;
+
+            // Extract question ID from label (format: "N-LLM: Q99901" or "D-RAG: Q99901" or "Q99901")
+            const questionMatch = label.match(/Q(\d+)/);
+            if (questionMatch) {
+              const questionId = questionMatch[1];
+
+              // Get company name from URL
+              const pathParts = window.location.pathname.split('/').filter(p => p);
+              const company = pathParts[0] || 'syngenta';
+
+              // Navigate to year detail page with compare mode and question scroll
+              // Preserve current model from URL search params
+              const currentUrl = new URL(window.location.href);
+              const currentModel = currentUrl.searchParams.get('model');
+              const modelQuery = currentModel ? `?mode=compare&model=${currentModel}` : `?mode=compare`;
+              window.location.href = `/${company}/${year}${modelQuery}#question-${questionId}`;
+            }
+          }
+
+          // Store click info for double-click detection
+          lastChartClickTime = currentTime;
+          lastChartClickPoint = { datasetIndex, dataIndex };
+        },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: { color: '#cbd5e1', usePointStyle: true, padding: 10, boxWidth: 10, font: { size: 10 } },
+            onClick: function(e, legendItem, legend) {
+              const index = legendItem.datasetIndex;
+              const ci = legend.chart;
+              const currentTime = Date.now();
+
+              // Check for double-click (within 300ms)
+              const isDoubleClick = (currentTime - lastLegendClickTime < 300) && (lastLegendClickIndex === index);
+
+              if (isDoubleClick && currentView === 'both' && groupBy === 'question') {
+                // DOUBLE CLICK IN BOTH MODE: Find and toggle the twin question
+                const clickedLabel = ci.data.datasets[index].label;
+
+                // Extract question ID from label (format: "N-LLM: Q99901" or "D-RAG: Q99901")
+                const questionMatch = clickedLabel.match(/Q(\d+)/);
+
+                if (questionMatch) {
+                  const questionId = questionMatch[1];
+                  const isNLLM = clickedLabel.startsWith('N-LLM');
+
+                  // Find the twin dataset (same question ID, different system)
+                  const twinPrefix = isNLLM ? 'D-RAG' : 'N-LLM';
+                  const twinLabel = `${twinPrefix}: Q${questionId}`;
+                  const twinIndex = ci.data.datasets.findIndex(ds => ds.label === twinLabel);
+
+                  // Check if all others are hidden (isolated view)
+                  const allOthersHidden = ci.data.datasets.every((ds, i) =>
+                    i === index || i === twinIndex || ci.getDatasetMeta(i).hidden
+                  );
+
+                  if (allOthersHidden && !ci.getDatasetMeta(index).hidden && (twinIndex === -1 || !ci.getDatasetMeta(twinIndex).hidden)) {
+                    // If only this pair is visible, show all
+                    ci.data.datasets.forEach((dataset, i) => {
+                      ci.getDatasetMeta(i).hidden = false;
+                    });
+                  } else {
+                    // Hide all except this pair
+                    ci.data.datasets.forEach((dataset, i) => {
+                      ci.getDatasetMeta(i).hidden = (i !== index && i !== twinIndex);
+                    });
+                  }
+                } else {
+                  // Fallback to original double-click behavior
+                  const meta = ci.getDatasetMeta(index);
+                  const allHidden = ci.data.datasets.every((ds, i) => i === index || ci.getDatasetMeta(i).hidden);
+
+                  if (allHidden) {
+                    ci.data.datasets.forEach((dataset, i) => {
+                      ci.getDatasetMeta(i).hidden = false;
+                    });
+                  } else {
+                    ci.data.datasets.forEach((dataset, i) => {
+                      ci.getDatasetMeta(i).hidden = i !== index;
+                    });
+                  }
+                }
+              } else if (isDoubleClick) {
+                // DOUBLE CLICK (not in both+question mode): Show only this item, or add to visible set if others are already isolated
+                const meta = ci.getDatasetMeta(index);
+                const allHidden = ci.data.datasets.every((ds, i) => i === index || ci.getDatasetMeta(i).hidden);
+
+                if (allHidden) {
+                  // If only this one is visible, show all
+                  ci.data.datasets.forEach((dataset, i) => {
+                    ci.getDatasetMeta(i).hidden = false;
+                  });
+                } else {
+                  // Hide all except this one
+                  ci.data.datasets.forEach((dataset, i) => {
+                    ci.getDatasetMeta(i).hidden = i !== index;
+                  });
+                }
+              } else {
+                // SINGLE CLICK: Toggle this item (default Chart.js behavior)
+                const meta = ci.getDatasetMeta(index);
+                meta.hidden = !meta.hidden;
+              }
+
+              ci.update();
+
+              // Store click time and index for double-click detection
+              lastLegendClickTime = currentTime;
+              lastLegendClickIndex = index;
+            }
+          },
+          tooltip: {
+            backgroundColor: '#1e293b',
+            titleColor: '#f1f5f9',
+            bodyColor: '#cbd5e1',
+            borderColor: '#475569',
+            borderWidth: 1,
+            padding: 12,
+            displayColors: true,
+            callbacks: {
+              label: (ctx) => {
+                let label = ctx.dataset.label || '';
+                if (label) label += ': ';
+                label += isNormalized ? ctx.parsed.y.toFixed(1) + '%' : ctx.parsed.y.toFixed(1);
+                return label;
+              }
+            }
+          }
+        },
+        scales: {
+          x: { stacked: shouldStack, grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+          y: {
+            stacked: shouldStack,
+            grid: { color: '#334155' },
+            ticks: {
+              color: '#94a3b8',
+              callback: (val) => isNormalized ? val.toFixed(0) + '%' : val.toFixed(0)
+            },
+            max: yMax,
+            min: 0
+          }
+        }
+      }
+    });
+
+    // Update UI
+    document.getElementById('stats-category').style.display = groupBy === 'category' ? 'block' : 'none';
+    document.getElementById('stats-question').style.display = groupBy === 'question' ? 'block' : 'none';
+
+    // Show/hide zoom controls (only for normalized mode)
+    const zoomControls = document.getElementById('zoom-controls');
+    if (zoomControls) {
+      zoomControls.style.display = viewMode === 'normalized' ? 'flex' : 'none';
+    }
+
+    // Show/hide pair selection hint (only in Both + Question mode)
+    const pairHint = document.getElementById('pair-selection-hint');
+    if (pairHint) {
+      pairHint.style.display = (currentView === 'both' && groupBy === 'question') ? 'block' : 'none';
+    }
+
+    if (groupBy === 'question') {
+      const count = questionFilter === 'canonical' ? chartData.meta.canonicalCount :
+                    (currentView === 'nllm' ? chartData.meta.totalNllmQuestions : chartData.meta.totalDragQuestions);
+      document.getElementById('question-count').textContent = count;
+
+      // Populate question summary table
+      populateQuestionTable();
+    }
+
+    updateFilterInfo();
+  }
+
+  // Populate the question summary table
+  function populateQuestionTable() {
+    const filterKey = questionFilter === 'canonical' ? 'canonical' : 'all';
+    const normalizedKey = questionFilter === 'canonical' ? 'canonicalNormalized' : 'allNormalized';
+    const nllmList = questionFilter === 'canonical' ? chartData.question.nllmCanonicalList : chartData.question.nllmList;
+    const dragList = questionFilter === 'canonical' ? chartData.question.dragCanonicalList : chartData.question.dragList;
+
+    // Prepare question data with totals for sorting/filtering
+    const questionData = nllmList.map(qId => {
+      const nllmTotal = chartData.question.nllm.reduce((sum, yearData) =>
+        sum + (yearData[filterKey][qId] || 0), 0);
+      const dragTotal = (currentView === 'drag' || currentView === 'both') && chartData.question.drag.length > 0 ?
+        chartData.question.drag.reduce((sum, yearData) => sum + (yearData[filterKey][qId] || 0), 0) : 0;
+
+      return { qId, nllmTotal, dragTotal };
+    });
+
+    // Apply table filter
+    let filteredQuestions = [...questionData];
+    if (tableFilter === 'top10') {
+      filteredQuestions = questionData
+        .sort((a, b) => b.nllmTotal - a.nllmTotal)
+        .slice(0, 10);
+    } else if (tableFilter === 'env' || tableFilter === 'health' || tableFilter === 'transition') {
+      // Filter by category (need to match question IDs to categories)
+      // For now, use simple ID ranges (this should ideally use category mapping)
+      const categoryRanges = {
+        'env': (id) => parseInt(id) >= 99901 && parseInt(id) <= 99904,
+        'health': (id) => parseInt(id) >= 99905 && parseInt(id) <= 99908,
+        'transition': (id) => parseInt(id) >= 99909 && parseInt(id) <= 99912
+      };
+      const rangeCheck = categoryRanges[tableFilter];
+      if (rangeCheck) {
+        filteredQuestions = questionData.filter(q => rangeCheck(q.qId));
+      }
+    }
+
+    // Build table headers
+    const yearHeaders = document.getElementById('question-table-year-headers');
+    let headerHTML = '<th class="text-left p-2 text-slate-400 sticky left-0 bg-slate-800"></th>';
+
+    if (currentView === 'nllm' || currentView === 'both') {
+      chartData.years.forEach(year => {
+        headerHTML += `<th class="text-right p-1 text-slate-300">${year}</th>`;
+      });
+    }
+    if ((currentView === 'drag' || currentView === 'both') && chartData.question.drag.length > 0) {
+      chartData.years.forEach(year => {
+        headerHTML += `<th class="text-right p-1 text-slate-300">${year}</th>`;
+      });
+    }
+    yearHeaders.innerHTML = headerHTML;
+
+    // Update system header colspan
+    const systemHeader = document.getElementById('question-table-system-header');
+    const yearCount = chartData.years.length;
+    if (currentView === 'both' && chartData.question.drag.length > 0) {
+      systemHeader.innerHTML = `
+        <th class="text-center p-2 text-emerald-400 font-semibold" colspan="${yearCount}">N-LLM</th>
+        <th class="text-center p-2 text-cyan-400 font-semibold" colspan="${yearCount}">D-RAG</th>
+      `;
+      systemHeader.setAttribute('colspan', yearCount * 2);
+    } else if (currentView === 'drag' && chartData.question.drag.length > 0) {
+      systemHeader.textContent = 'D-RAG';
+      systemHeader.setAttribute('colspan', yearCount);
+      systemHeader.className = 'text-center p-2 text-cyan-400 font-semibold';
+    } else {
+      systemHeader.textContent = 'N-LLM';
+      systemHeader.setAttribute('colspan', yearCount);
+      systemHeader.className = 'text-center p-2 text-emerald-400 font-semibold';
+    }
+
+    // Build table body
+    const tbody = document.getElementById('question-table-body');
+    let bodyHTML = '';
+
+    filteredQuestions.forEach(({ qId }) => {
+      bodyHTML += `
+        <tr class="border-b border-slate-800 hover:bg-slate-800/50">
+          <td class="p-2 text-slate-300 font-mono text-xs sticky left-0 bg-slate-800">Q${qId}</td>
+      `;
+
+      if (currentView === 'nllm' || currentView === 'both') {
+        chartData.question.nllm.forEach(yearData => {
+          const value = viewMode === 'normalized' ?
+            yearData[normalizedKey][qId] || 0 :
+            yearData[filterKey][qId] || 0;
+          const displayValue = viewMode === 'normalized' ?
+            value.toFixed(1) + '%' :
+            value.toFixed(1);
+          const colorClass = value > 0 ? 'text-emerald-400' : 'text-slate-600';
+          bodyHTML += `<td class="text-right p-1 ${colorClass}">${displayValue}</td>`;
+        });
+      }
+
+      if ((currentView === 'drag' || currentView === 'both') && chartData.question.drag.length > 0) {
+        chartData.question.drag.forEach(yearData => {
+          const value = viewMode === 'normalized' ?
+            yearData[normalizedKey][qId] || 0 :
+            yearData[filterKey][qId] || 0;
+          const displayValue = viewMode === 'normalized' ?
+            value.toFixed(1) + '%' :
+            value.toFixed(1);
+          const colorClass = value > 0 ? 'text-cyan-400' : 'text-slate-600';
+          bodyHTML += `<td class="text-right p-1 ${colorClass}">${displayValue}</td>`;
+        });
+      }
+
+      bodyHTML += '</tr>';
+    });
+
+    tbody.innerHTML = bodyHTML;
+  }
+
+  function updateButtons() {
+    // System buttons
+    ['toggle-nllm', 'toggle-drag', 'toggle-both'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const active = (id === 'toggle-nllm' && currentView === 'nllm') ||
+                     (id === 'toggle-drag' && currentView === 'drag') ||
+                     (id === 'toggle-both' && currentView === 'both');
+      btn.className = `px-3 py-1 text-sm rounded font-medium ${active ? 'bg-emerald-500 text-white' : 'bg-slate-700 text-slate-300'}`;
+    });
+
+    // Group buttons
+    ['toggle-category', 'toggle-question'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const active = (id === 'toggle-category' && groupBy === 'category') ||
+                     (id === 'toggle-question' && groupBy === 'question');
+      btn.className = `px-3 py-1 text-sm rounded font-medium ${active ? 'bg-purple-500 text-white' : 'bg-slate-700 text-slate-300'}`;
+    });
+
+    // View buttons
+    ['toggle-absolute', 'toggle-normalized'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const active = (id === 'toggle-absolute' && viewMode === 'absolute') ||
+                     (id === 'toggle-normalized' && viewMode === 'normalized');
+      btn.className = `px-3 py-1 text-sm rounded font-medium ${active ? 'bg-blue-500 text-white' : 'bg-slate-700 text-slate-300'}`;
+    });
+
+    // Filter buttons
+    ['toggle-all-questions', 'toggle-canonical'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const active = (id === 'toggle-all-questions' && questionFilter === 'all') ||
+                     (id === 'toggle-canonical' && questionFilter === 'canonical');
+      btn.className = `px-3 py-1 text-sm rounded font-medium ${active ? 'bg-orange-500 text-white' : 'bg-slate-700 text-slate-300'}`;
+    });
+
+    // Zoom buttons
+    ['zoom-auto', 'zoom-25', 'zoom-50', 'zoom-100'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const active = (id === 'zoom-auto' && yAxisZoom === 'auto') ||
+                     (id === 'zoom-25' && yAxisZoom === '25') ||
+                     (id === 'zoom-50' && yAxisZoom === '50') ||
+                     (id === 'zoom-100' && yAxisZoom === '100');
+      btn.className = `px-2 py-1 text-xs rounded font-medium ${active ? 'bg-indigo-500 text-white' : 'bg-slate-700 text-slate-300'}`;
+    });
+
+    // Table filter buttons
+    ['filter-top10', 'filter-all-table', 'filter-category-env', 'filter-category-health', 'filter-category-transition'].forEach(id => {
+      const btn = document.getElementById(id);
+      if (!btn) return;
+      const active = (id === 'filter-top10' && tableFilter === 'top10') ||
+                     (id === 'filter-all-table' && tableFilter === 'all') ||
+                     (id === 'filter-category-env' && tableFilter === 'env') ||
+                     (id === 'filter-category-health' && tableFilter === 'health') ||
+                     (id === 'filter-category-transition' && tableFilter === 'transition');
+      btn.className = `px-2 py-1 text-xs rounded font-medium ${active ? 'bg-indigo-500 text-white' : 'bg-slate-700 text-slate-300'}`;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    createChart();
+
+    // Event listeners - System selection
+    document.getElementById('toggle-nllm')?.addEventListener('click', () => { currentView = 'nllm'; createChart(); updateButtons(); });
+    document.getElementById('toggle-drag')?.addEventListener('click', () => { currentView = 'drag'; createChart(); updateButtons(); });
+    document.getElementById('toggle-both')?.addEventListener('click', () => { currentView = 'both'; createChart(); updateButtons(); });
+
+    // Event listeners - Group by
+    document.getElementById('toggle-category')?.addEventListener('click', () => { groupBy = 'category'; createChart(); updateButtons(); });
+    document.getElementById('toggle-question')?.addEventListener('click', () => { groupBy = 'question'; createChart(); updateButtons(); });
+
+    // Event listeners - View mode
+    document.getElementById('toggle-absolute')?.addEventListener('click', () => { viewMode = 'absolute'; createChart(); updateButtons(); });
+    document.getElementById('toggle-normalized')?.addEventListener('click', () => { viewMode = 'normalized'; createChart(); updateButtons(); });
+
+    // Event listeners - Question filter
+    document.getElementById('toggle-all-questions')?.addEventListener('click', () => { questionFilter = 'all'; createChart(); updateButtons(); });
+    document.getElementById('toggle-canonical')?.addEventListener('click', () => { questionFilter = 'canonical'; createChart(); updateButtons(); });
+
+    // Event listeners - Y-axis zoom
+    document.getElementById('zoom-auto')?.addEventListener('click', () => { yAxisZoom = 'auto'; createChart(); updateButtons(); });
+    document.getElementById('zoom-25')?.addEventListener('click', () => { yAxisZoom = '25'; createChart(); updateButtons(); });
+    document.getElementById('zoom-50')?.addEventListener('click', () => { yAxisZoom = '50'; createChart(); updateButtons(); });
+    document.getElementById('zoom-100')?.addEventListener('click', () => { yAxisZoom = '100'; createChart(); updateButtons(); });
+
+    // Event listeners - Table filters
+    document.getElementById('filter-top10')?.addEventListener('click', () => { tableFilter = 'top10'; populateQuestionTable(); updateButtons(); });
+    document.getElementById('filter-all-table')?.addEventListener('click', () => { tableFilter = 'all'; populateQuestionTable(); updateButtons(); });
+    document.getElementById('filter-category-env')?.addEventListener('click', () => { tableFilter = 'env'; populateQuestionTable(); updateButtons(); });
+    document.getElementById('filter-category-health')?.addEventListener('click', () => { tableFilter = 'health'; populateQuestionTable(); updateButtons(); });
+    document.getElementById('filter-category-transition')?.addEventListener('click', () => { tableFilter = 'transition'; populateQuestionTable(); updateButtons(); });
+  });
+</script>
