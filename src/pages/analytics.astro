@@ -1,0 +1,214 @@
+---
+/**
+ * Analytics Page
+ * Cross-company insights, benchmarking, and comparative analysis
+ */
+
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/layout/Header.astro';
+import Breadcrumb from '../components/layout/Breadcrumb.astro';
+import TrendsInsights from '../components/analytics/TrendsInsights.astro';
+import QuestionBenchmark from '../components/analytics/QuestionBenchmark.astro';
+import RadarComparison from '../components/analytics/RadarComparison.astro';
+import CategoryDeepDive from '../components/analytics/CategoryDeepDive.astro';
+
+import { loadAllCompanyData } from '../utils/dataLoader';
+import { calculateCompanyMetrics, calculateCrossCompanyMetrics } from '../utils/metricsCalculator';
+
+// Load all company data
+const allCompanyData = await loadAllCompanyData();
+
+// Calculate metrics for each company
+const companyMetrics = allCompanyData.map(data =>
+  calculateCompanyMetrics(data.verified)
+);
+
+// Calculate cross-company metrics
+const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics);
+
+// Build breadcrumb items
+const breadcrumbItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Analytics', href: '/analytics', current: true }
+];
+---
+
+<Layout title="Analytics - Cross-Company Insights">
+  <Header />
+
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+    <!-- Page Header -->
+    <div class="bg-white border-b border-slate-200 shadow-sm">
+      <div class="container mx-auto px-6 py-6">
+        <Breadcrumb items={breadcrumbItems} />
+
+        <div class="mt-4">
+          <h1 class="text-4xl font-bold text-slate-800 mb-3">
+            Analytics & Insights
+          </h1>
+          <p class="text-lg text-slate-600 max-w-3xl">
+            Cross-company benchmarking, performance analysis, and actionable insights to improve
+            disclosure quality across the agricultural sector.
+          </p>
+        </div>
+
+        <!-- Global Stats Summary -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+          <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-lg border border-blue-200">
+            <div class="text-3xl font-bold text-blue-600">
+              {crossCompanyMetrics.global_stats.total_companies}
+            </div>
+            <div class="text-sm text-slate-600">Companies Analyzed</div>
+          </div>
+          <div class="bg-gradient-to-br from-emerald-50 to-white p-4 rounded-lg border border-emerald-200">
+            <div class="text-3xl font-bold text-emerald-600">
+              {crossCompanyMetrics.global_stats.total_questions}
+            </div>
+            <div class="text-sm text-slate-600">Total Questions</div>
+          </div>
+          <div class="bg-gradient-to-br from-purple-50 to-white p-4 rounded-lg border border-purple-200">
+            <div class="text-3xl font-bold text-purple-600">
+              {crossCompanyMetrics.global_stats.total_snippets}
+            </div>
+            <div class="text-sm text-slate-600">Evidence Snippets</div>
+          </div>
+          <div class="bg-gradient-to-br from-amber-50 to-white p-4 rounded-lg border border-amber-200">
+            <div class="text-3xl font-bold text-amber-600">
+              {crossCompanyMetrics.global_stats.average_disclosure_score.toFixed(1)}%
+            </div>
+            <div class="text-sm text-slate-600">Avg Quality Score</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-8">
+      <!-- Navigation Tabs -->
+      <div class="mb-8">
+        <div class="flex gap-2 border-b border-slate-200 overflow-x-auto">
+          <button
+            class="nav-tab px-6 py-3 text-sm font-semibold border-b-2 border-blue-600 text-blue-600 whitespace-nowrap"
+            data-target="insights"
+          >
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+              Key Insights
+            </span>
+          </button>
+          <button
+            class="nav-tab px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800 whitespace-nowrap"
+            data-target="questions"
+          >
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+              Question Benchmark
+            </span>
+          </button>
+          <button
+            class="nav-tab px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800 whitespace-nowrap"
+            data-target="comparison"
+          >
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+              </svg>
+              Company Comparison
+            </span>
+          </button>
+          <button
+            class="nav-tab px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800 whitespace-nowrap"
+            data-target="categories"
+          >
+            <span class="flex items-center gap-2">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+              </svg>
+              Category Deep Dive
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Contents -->
+      <div id="tab-insights" class="tab-content">
+        <TrendsInsights crossCompanyMetrics={crossCompanyMetrics} />
+      </div>
+
+      <div id="tab-questions" class="tab-content hidden">
+        <QuestionBenchmark crossCompanyMetrics={crossCompanyMetrics} />
+      </div>
+
+      <div id="tab-comparison" class="tab-content hidden">
+        <RadarComparison companyMetrics={companyMetrics} />
+      </div>
+
+      <div id="tab-categories" class="tab-content hidden">
+        <CategoryDeepDive crossCompanyMetrics={crossCompanyMetrics} />
+      </div>
+    </main>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navTabs = document.querySelectorAll('.nav-tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-target');
+
+        // Update tab button states
+        navTabs.forEach(t => {
+          if (t.getAttribute('data-target') === target) {
+            t.classList.remove('border-transparent', 'text-slate-600');
+            t.classList.add('border-blue-600', 'text-blue-600');
+          } else {
+            t.classList.remove('border-blue-600', 'text-blue-600');
+            t.classList.add('border-transparent', 'text-slate-600');
+          }
+        });
+
+        // Update content visibility
+        tabContents.forEach(content => {
+          if (content.id === `tab-${target}`) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<style>
+  .nav-tab {
+    transition: all 0.2s ease;
+  }
+
+  .nav-tab:hover {
+    background-color: rgb(248 250 252);
+  }
+
+  .tab-content {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

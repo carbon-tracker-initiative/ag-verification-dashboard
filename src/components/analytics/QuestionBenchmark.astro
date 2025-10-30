@@ -1,0 +1,245 @@
+---
+/**
+ * Question Benchmark Component
+ * Compares performance of specific questions across all companies
+ */
+
+import type { CrossCompanyMetrics } from '../../types/metrics';
+import GradeDisplay from '../shared/GradeDisplay.astro';
+
+interface Props {
+  crossCompanyMetrics: CrossCompanyMetrics;
+}
+
+const { crossCompanyMetrics } = Astro.props;
+
+// Get top and bottom performing questions
+const topQuestions = crossCompanyMetrics.question_performance
+  .sort((a, b) => b.average_score - a.average_score)
+  .slice(0, 10);
+
+const bottomQuestions = crossCompanyMetrics.question_performance
+  .sort((a, b) => a.average_score - b.average_score)
+  .slice(0, 10);
+
+// Get questions with highest variance (most inconsistent across companies)
+const highVarianceQuestions = crossCompanyMetrics.question_performance
+  .sort((a, b) => b.score_variance - a.score_variance)
+  .slice(0, 10);
+---
+
+<div class="space-y-6">
+  <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
+    <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+      <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+      </svg>
+      Question Benchmarking Across Companies
+    </h2>
+    <p class="text-sm text-slate-600 mb-6">
+      Compare how different questions perform across all analyzed companies
+    </p>
+
+    <!-- Tabs -->
+    <div class="flex gap-2 mb-6 border-b border-slate-200">
+      <button
+        class="tab-button px-4 py-2 text-sm font-semibold border-b-2 border-blue-600 text-blue-600"
+        data-tab="top-performers"
+      >
+        Top Performers
+      </button>
+      <button
+        class="tab-button px-4 py-2 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800"
+        data-tab="bottom-performers"
+      >
+        Bottom Performers
+      </button>
+      <button
+        class="tab-button px-4 py-2 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800"
+        data-tab="high-variance"
+      >
+        High Variance
+      </button>
+    </div>
+
+    <!-- Top Performers Tab -->
+    <div id="tab-top-performers" class="tab-content">
+      <div class="space-y-3">
+        {topQuestions.map((q, index) => (
+          <div class="p-4 bg-gradient-to-r from-emerald-50 to-white rounded-lg border border-emerald-200 hover:shadow-md transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 text-center">
+                <div class="text-2xl font-bold text-emerald-600">#{index + 1}</div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <div class="flex-1">
+                    <div class="text-xs font-mono text-slate-500 mb-1">{q.question_id}</div>
+                    <h3 class="text-sm font-semibold text-slate-800 leading-tight">
+                      {q.question_text}
+                    </h3>
+                  </div>
+                  <GradeDisplay
+                    grade={q.average_grade}
+                    score={q.average_score}
+                    size="small"
+                  />
+                </div>
+                <div class="flex flex-wrap gap-4 text-xs text-slate-600">
+                  <div>
+                    <span class="font-semibold">Avg Score:</span> {q.average_score.toFixed(1)}%
+                  </div>
+                  <div>
+                    <span class="font-semibold">Companies:</span> {q.company_count}
+                  </div>
+                  <div>
+                    <span class="font-semibold">Avg Snippets:</span> {q.average_snippets.toFixed(1)}
+                  </div>
+                  <div>
+                    <span class="font-semibold">Financial Rate:</span> {q.financial_rate.toFixed(0)}%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Bottom Performers Tab -->
+    <div id="tab-bottom-performers" class="tab-content hidden">
+      <div class="space-y-3">
+        {bottomQuestions.map((q, index) => (
+          <div class="p-4 bg-gradient-to-r from-red-50 to-white rounded-lg border border-red-200 hover:shadow-md transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 text-center">
+                <div class="text-2xl font-bold text-red-600">#{index + 1}</div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <div class="flex-1">
+                    <div class="text-xs font-mono text-slate-500 mb-1">{q.question_id}</div>
+                    <h3 class="text-sm font-semibold text-slate-800 leading-tight">
+                      {q.question_text}
+                    </h3>
+                  </div>
+                  <GradeDisplay
+                    grade={q.average_grade}
+                    score={q.average_score}
+                    size="small"
+                  />
+                </div>
+                <div class="flex flex-wrap gap-4 text-xs text-slate-600">
+                  <div>
+                    <span class="font-semibold">Avg Score:</span> {q.average_score.toFixed(1)}%
+                  </div>
+                  <div>
+                    <span class="font-semibold">Companies:</span> {q.company_count}
+                  </div>
+                  <div>
+                    <span class="font-semibold">Avg Snippets:</span> {q.average_snippets.toFixed(1)}
+                  </div>
+                  <div>
+                    <span class="font-semibold">No Disclosure:</span> {q.no_disclosure_count} companies
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- High Variance Tab -->
+    <div id="tab-high-variance" class="tab-content hidden">
+      <div class="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
+        <div class="text-xs text-amber-800">
+          <strong>High variance questions</strong> show significant differences in how companies disclose this information.
+          This could indicate industry best practices vs laggards, or topic-specific challenges.
+        </div>
+      </div>
+      <div class="space-y-3">
+        {highVarianceQuestions.map((q, index) => (
+          <div class="p-4 bg-gradient-to-r from-amber-50 to-white rounded-lg border border-amber-200 hover:shadow-md transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 text-center">
+                <div class="text-2xl font-bold text-amber-600">#{index + 1}</div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-start justify-between gap-4 mb-2">
+                  <div class="flex-1">
+                    <div class="text-xs font-mono text-slate-500 mb-1">{q.question_id}</div>
+                    <h3 class="text-sm font-semibold text-slate-800 leading-tight">
+                      {q.question_text}
+                    </h3>
+                  </div>
+                  <div class="text-right">
+                    <div class="text-lg font-bold text-amber-600">
+                      {q.score_variance.toFixed(1)}
+                    </div>
+                    <div class="text-xs text-slate-500">Variance</div>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-4 text-xs text-slate-600 mb-2">
+                  <div>
+                    <span class="font-semibold">Best:</span> {q.best_score.toFixed(0)}%
+                  </div>
+                  <div>
+                    <span class="font-semibold">Worst:</span> {q.worst_score.toFixed(0)}%
+                  </div>
+                  <div>
+                    <span class="font-semibold">Range:</span> {(q.best_score - q.worst_score).toFixed(0)}%
+                  </div>
+                  <div>
+                    <span class="font-semibold">Avg:</span> {q.average_score.toFixed(1)}%
+                  </div>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2">
+                  <div class="relative h-2">
+                    <div
+                      class="absolute bg-gradient-to-r from-red-400 via-amber-400 to-emerald-400 h-2 rounded-full"
+                      style={`left: ${q.worst_score}%; width: ${q.best_score - q.worst_score}%`}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tabId = button.getAttribute('data-tab');
+
+        // Update button states
+        tabButtons.forEach(btn => {
+          if (btn.getAttribute('data-tab') === tabId) {
+            btn.classList.remove('border-transparent', 'text-slate-600');
+            btn.classList.add('border-blue-600', 'text-blue-600');
+          } else {
+            btn.classList.remove('border-blue-600', 'text-blue-600');
+            btn.classList.add('border-transparent', 'text-slate-600');
+          }
+        });
+
+        // Update content visibility
+        tabContents.forEach(content => {
+          if (content.id === `tab-${tabId}`) {
+            content.classList.remove('hidden');
+          } else {
+            content.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>
