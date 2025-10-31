@@ -130,45 +130,62 @@ const bestClassification = question.disclosures.length > 0
   </div>
 </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Add click handlers to all question headers
-    const headers = document.querySelectorAll('.question-header');
+<script is:inline>
+  // This script runs for each instance of the component
+  (function() {
+    // Run immediately and also on page load
+    function initAccordions() {
+      const headers = document.querySelectorAll('.question-header');
 
-    headers.forEach(header => {
-      header.addEventListener('click', (e) => {
-        const target = e.target as HTMLElement;
+      headers.forEach(header => {
+        // Remove existing listeners to avoid duplicates
+        const newHeader = header.cloneNode(true);
+        header.parentNode?.replaceChild(newHeader, header);
 
-        // Don't toggle if clicking on a link or button
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-          return;
-        }
+        newHeader.addEventListener('click', function(e) {
+          const target = e.target;
 
-        const questionId = header.getAttribute('data-question-id');
-        const questionDiv = document.querySelector(`[data-question-id="${questionId}"]`);
+          // Don't toggle if clicking on a link or button
+          if (target.tagName === 'A' || target.tagName === 'BUTTON') {
+            return;
+          }
 
-        if (!questionDiv) return;
+          const questionId = newHeader.getAttribute('data-question-id');
+          const questionDiv = document.querySelector(`[data-question-id="${questionId}"]`);
 
-        const content = questionDiv.querySelector('.question-content') as HTMLElement;
-        const toggle = questionDiv.querySelector('.toggle-icon') as HTMLElement;
+          if (!questionDiv) return;
 
-        if (!content || !toggle) return;
+          const content = questionDiv.querySelector('.question-content');
+          const toggle = questionDiv.querySelector('.toggle-icon');
 
-        // Toggle visibility
-        const isHidden = content.style.display === 'none';
+          if (!content || !toggle) return;
 
-        if (isHidden) {
-          content.style.display = 'block';
-          toggle.textContent = '▼';
-          toggle.classList.remove('text-slate-400');
-          toggle.classList.add('text-blue-600');
-        } else {
-          content.style.display = 'none';
-          toggle.textContent = '▶';
-          toggle.classList.remove('text-blue-600');
-          toggle.classList.add('text-slate-400');
-        }
+          // Toggle visibility
+          const isHidden = content.style.display === 'none' || content.style.display === '';
+
+          if (isHidden) {
+            content.style.display = 'block';
+            toggle.textContent = '▼';
+            toggle.classList.remove('text-slate-400');
+            toggle.classList.add('text-blue-600');
+          } else {
+            content.style.display = 'none';
+            toggle.textContent = '▶';
+            toggle.classList.remove('text-blue-600');
+            toggle.classList.add('text-slate-400');
+          }
+        });
       });
-    });
-  });
+    }
+
+    // Run on DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initAccordions);
+    } else {
+      initAccordions();
+    }
+
+    // Also run on Astro page load (for SPA navigation)
+    document.addEventListener('astro:page-load', initAccordions);
+  })();
 </script>

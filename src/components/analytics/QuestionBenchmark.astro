@@ -24,18 +24,20 @@ function scoreToGrade(score: number): string {
 
 // Get top and bottom performing questions (with safety check)
 const rankings = crossCompanyMetrics.question_rankings || [];
-const topQuestions = [...rankings]
-  .sort((a, b) => b.average_score_across_companies - a.average_score_across_companies)
-  .slice(0, 10);
+console.log('Question rankings count:', rankings.length);
 
-const bottomQuestions = [...rankings]
-  .sort((a, b) => a.average_score_across_companies - b.average_score_across_companies)
-  .slice(0, 10);
+const topQuestions = rankings.length > 0
+  ? [...rankings].sort((a, b) => b.average_score_across_companies - a.average_score_across_companies).slice(0, 10)
+  : [];
+
+const bottomQuestions = rankings.length > 0
+  ? [...rankings].sort((a, b) => a.average_score_across_companies - b.average_score_across_companies).slice(0, 10)
+  : [];
 
 // Get questions sorted by companies with full disclosure (as a proxy for consistency)
-const highVarianceQuestions = [...rankings]
-  .sort((a, b) => a.companies_with_full_disclosure - b.companies_with_full_disclosure)
-  .slice(0, 10);
+const highVarianceQuestions = rankings.length > 0
+  ? [...rankings].sort((a, b) => a.companies_with_full_disclosure - b.companies_with_full_disclosure).slice(0, 10)
+  : [];
 ---
 
 <div class="space-y-6">
@@ -74,6 +76,12 @@ const highVarianceQuestions = [...rankings]
 
     <!-- Top Performers Tab -->
     <div id="tab-top-performers" class="tab-content">
+      {topQuestions.length === 0 ? (
+        <div class="text-center py-12">
+          <p class="text-slate-500">No question data available. Make sure analytics data is being generated correctly.</p>
+          <p class="text-xs text-slate-400 mt-2">Expected rankings: {rankings.length}</p>
+        </div>
+      ) : (
       <div class="space-y-3">
         {topQuestions.map((q, index) => (
           <div class="p-4 bg-gradient-to-r from-emerald-50 to-white rounded-lg border border-emerald-200 hover:shadow-md transition-shadow">
@@ -114,6 +122,7 @@ const highVarianceQuestions = [...rankings]
           </div>
         ))}
       </div>
+      )}
     </div>
 
     <!-- Bottom Performers Tab -->
