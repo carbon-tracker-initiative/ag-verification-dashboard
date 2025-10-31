@@ -111,63 +111,99 @@ const { hasComparison, verificationMetrics } = Astro.props;
 )}
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  function initComparisonToggle() {
     const toggleButton = document.getElementById('comparison-toggle');
     const toggleText = document.getElementById('toggle-text');
     const legend = document.getElementById('comparison-legend');
 
-    if (!toggleButton || !toggleText) return;
+    if (!(toggleButton instanceof HTMLButtonElement) || !(toggleText instanceof HTMLElement)) {
+      return;
+    }
 
-    let currentMode: 'verified' | 'comparison' = 'verified';
+    if (toggleButton.dataset.bound === 'true') {
+      return;
+    }
+    toggleButton.dataset.bound = 'true';
 
-    toggleButton.addEventListener('click', () => {
-      currentMode = currentMode === 'verified' ? 'comparison' : 'verified';
-      toggleButton.dataset.mode = currentMode;
+    let currentMode = toggleButton.dataset.mode === 'comparison' ? 'comparison' : 'verified';
+    const legendEl = legend instanceof HTMLElement ? legend : null;
 
-      if (currentMode === 'comparison') {
+    function applyMode(mode) {
+      const comparisonClasses = ['from-sky-500', 'to-emerald-500', 'hover:from-sky-400', 'hover:to-emerald-400'];
+      const verifiedClasses = ['from-purple-600', 'to-indigo-600', 'hover:from-purple-500', 'hover:to-indigo-500'];
+
+      if (mode === 'comparison') {
         toggleText.textContent = 'Show Verified Only';
-        toggleButton.classList.remove('from-purple-600', 'to-indigo-600', 'hover:from-purple-500', 'hover:to-indigo-500');
-        toggleButton.classList.add('from-sky-500', 'to-emerald-500', 'hover:from-sky-400', 'hover:to-emerald-400');
-        legend?.classList.remove('hidden');
+        toggleButton.classList.remove(...verifiedClasses);
+        toggleButton.classList.add(...comparisonClasses);
+        if (legendEl) {
+          legendEl.classList.remove('hidden');
+        }
 
-        // Show comparison view
         document.querySelectorAll('[data-snippet-status]').forEach(el => {
-          const snippet = el as HTMLElement;
-          const status = snippet.dataset.snippetStatus;
-
-          snippet.classList.add('comparison-mode');
+          if (!(el instanceof HTMLElement)) {
+            return;
+          }
+          const status = el.dataset.snippetStatus;
+          el.classList.remove('ring-2', 'ring-emerald-400', 'ring-amber-400', 'ring-rose-500', 'opacity-60');
+          el.classList.add('comparison-mode');
 
           if (status === 'unchanged') {
-            snippet.classList.add('ring-2', 'ring-emerald-400');
+            el.classList.add('ring-2', 'ring-emerald-400');
           } else if (status === 'corrected') {
-            snippet.classList.add('ring-2', 'ring-amber-400');
+            el.classList.add('ring-2', 'ring-amber-400');
           } else if (status === 'removed') {
-            snippet.classList.add('ring-2', 'ring-rose-500', 'opacity-60');
+            el.classList.add('ring-2', 'ring-rose-500', 'opacity-60');
           }
         });
 
         document.querySelectorAll('.comparison-badge').forEach(badge => {
-          (badge as HTMLElement).classList.remove('hidden');
+          if (badge instanceof HTMLElement) {
+            badge.classList.remove('hidden');
+          }
         });
       } else {
         toggleText.textContent = 'Enable Comparison Mode';
-        toggleButton.classList.remove('from-sky-500', 'to-emerald-500', 'hover:from-sky-400', 'hover:to-emerald-400');
-        toggleButton.classList.add('from-purple-600', 'to-indigo-600', 'hover:from-purple-500', 'hover:to-indigo-500');
-        legend?.classList.add('hidden');
+        toggleButton.classList.remove(...comparisonClasses);
+        toggleButton.classList.add(...verifiedClasses);
+        if (legendEl) {
+          legendEl.classList.add('hidden');
+        }
 
         document.querySelectorAll('[data-snippet-status]').forEach(el => {
-          const snippet = el as HTMLElement;
-          snippet.classList.remove('comparison-mode', 'ring-2', 'ring-emerald-400', 'ring-amber-400', 'ring-rose-500', 'opacity-60');
+          if (!(el instanceof HTMLElement)) {
+            return;
+          }
+          el.classList.remove('comparison-mode', 'ring-2', 'ring-emerald-400', 'ring-amber-400', 'ring-rose-500', 'opacity-60');
         });
 
         document.querySelectorAll('.comparison-badge').forEach(badge => {
-          (badge as HTMLElement).classList.add('hidden');
+          if (badge instanceof HTMLElement) {
+            badge.classList.add('hidden');
+          }
         });
       }
+    }
+
+    applyMode(currentMode);
+
+    toggleButton.addEventListener('click', () => {
+      currentMode = currentMode === 'verified' ? 'comparison' : 'verified';
+      toggleButton.dataset.mode = currentMode;
+      applyMode(currentMode);
 
       window.dispatchEvent(new CustomEvent('comparisonModeChanged', {
         detail: { mode: currentMode }
       }));
     });
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initComparisonToggle);
+  } else {
+    initComparisonToggle();
+  }
+
+  document.addEventListener('astro:page-load', initComparisonToggle);
 </script>
+

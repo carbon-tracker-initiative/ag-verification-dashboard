@@ -110,7 +110,7 @@ const disabledIcon = '—';
   </div>
 
   {isExpandable && (
-    <div class="question-content border-t border-slate-800 hidden" data-question-id={question.question_id}>
+    <div class="question-content hidden" data-question-id={question.question_id} hidden>
       <div class="p-5 bg-slate-900/70 rounded-b-xl border-t border-slate-800 space-y-5">
         {question.summary && (
           <div class="p-4 bg-slate-900 rounded-lg border border-slate-800">
@@ -143,27 +143,34 @@ const disabledIcon = '—';
 
       document.querySelectorAll('.question-card').forEach(card => {
         const header = card.querySelector('.question-header');
+        if (!(header instanceof HTMLElement)) {
+          return;
+        }
+
         const toggleIcon = card.querySelector('.toggle-icon');
+        if (!(toggleIcon instanceof HTMLElement)) {
+          return;
+        }
+
         const content = card.querySelector('.question-content');
         const expandable = card.dataset.expandable === 'true';
 
-        if (!header || !toggleIcon) return;
-        if (!expandable || !content) {
+        if (!expandable || !(content instanceof HTMLElement)) {
           header.setAttribute('aria-expanded', 'false');
           return;
         }
 
         header.addEventListener('click', (event) => {
-          const target = event.target as HTMLElement;
-          if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('button')) {
+          const target = event.target;
+          if (target instanceof HTMLElement && (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('button'))) {
             return;
           }
 
-          const isHidden = content.classList.contains('hidden') || content.style.display === 'none';
+          const isHidden = content.hasAttribute('hidden') || content.classList.contains('hidden');
 
           if (isHidden) {
             content.classList.remove('hidden');
-            content.style.display = 'block';
+            content.hidden = false;
             toggleIcon.textContent = expandedIcon;
             toggleIcon.classList.remove('text-slate-500');
             toggleIcon.classList.add('text-sky-300');
@@ -171,7 +178,7 @@ const disabledIcon = '—';
             card.classList.add('expanded');
           } else {
             content.classList.add('hidden');
-            content.style.display = 'none';
+            content.hidden = true;
             toggleIcon.textContent = collapsedIcon;
             toggleIcon.classList.remove('text-sky-300');
             toggleIcon.classList.add('text-slate-500');

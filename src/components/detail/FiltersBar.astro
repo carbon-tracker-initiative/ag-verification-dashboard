@@ -111,93 +111,63 @@ const { categories } = Astro.props;
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  const collapsedIcon = '▸';
+  const expandedIcon = '▾';
+
+  function initFiltersBar() {
     const container = document.getElementById('questions-container');
-    if (!container) return;
-
-    const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
-    const classificationFilter = document.getElementById('classification-filter') as HTMLSelectElement;
-    const qualityFilter = document.getElementById('quality-filter') as HTMLSelectElement;
-    const sortSelect = document.getElementById('sort-select') as HTMLSelectElement;
-
-    const resetButton = document.getElementById('reset-filters') as HTMLButtonElement;
-    const toggleAllButton = document.getElementById('toggle-all') as HTMLButtonElement;
-
-    const activeFiltersDiv = document.getElementById('active-filters') as HTMLDivElement;
-    const resultsCountDiv = document.getElementById('results-count') as HTMLDivElement;
-
-    const questionNodes = Array.from(container.querySelectorAll<HTMLElement>('[data-question-id]'));
-    const totalQuestionCount = questionNodes.length;
-
-    let allExpanded = false;
-
-    function getComparator(sortValue: string) {
-      return (a: HTMLElement, b: HTMLElement) => {
-        switch (sortValue) {
-          case 'quality-desc':
-            return parseFloat(b.dataset.score || '0') - parseFloat(a.dataset.score || '0');
-          case 'quality-asc':
-            return parseFloat(a.dataset.score || '0') - parseFloat(b.dataset.score || '0');
-          case 'evidence-desc':
-            return parseInt(b.dataset.snippets || '0', 10) - parseInt(a.dataset.snippets || '0', 10);
-          case 'evidence-asc':
-            return parseInt(a.dataset.snippets || '0', 10) - parseInt(b.dataset.snippets || '0', 10);
-          case 'question-id':
-          default:
-            return (a.dataset.questionId || '').localeCompare(b.dataset.questionId || '');
-        }
-      };
+    if (!(container instanceof HTMLElement)) {
+      return;
     }
 
-    function applyFiltersAndSort() {
-      const categoryValue = categoryFilter.value;
-      const classificationValue = classificationFilter.value;
-      const qualityValue = qualityFilter.value;
-      const sortValue = sortSelect.value;
+    const categoryFilter = document.getElementById('category-filter');
+    const classificationFilter = document.getElementById('classification-filter');
+    const qualityFilter = document.getElementById('quality-filter');
+    const sortSelect = document.getElementById('sort-select');
+    const resetButton = document.getElementById('reset-filters');
+    const toggleAllButton = document.getElementById('toggle-all');
+    const activeFiltersDiv = document.getElementById('active-filters');
+    const resultsCountDiv = document.getElementById('results-count');
 
-      let visibleCount = 0;
+    if (!(categoryFilter instanceof HTMLSelectElement) ||
+        !(classificationFilter instanceof HTMLSelectElement) ||
+        !(qualityFilter instanceof HTMLSelectElement) ||
+        !(sortSelect instanceof HTMLSelectElement) ||
+        !(resetButton instanceof HTMLButtonElement) ||
+        !(toggleAllButton instanceof HTMLButtonElement)) {
+      return;
+    }
 
-      questionNodes.forEach(questionEl => {
-        const category = questionEl.dataset.category || '';
-        const classification = questionEl.dataset.classification || '';
-        const grade = questionEl.dataset.grade || '';
+    const questionNodes = Array.from(container.querySelectorAll('.question-card')).filter(
+      (node) => node instanceof HTMLElement
+    );
 
-        let visible = true;
+    let allExpanded = false;
+    const totalQuestionCount = questionNodes.length;
 
-        if (categoryValue !== 'all' && !category.includes(categoryValue)) {
-          visible = false;
-        }
-
-        if (classificationValue !== 'all' && classification !== classificationValue) {
-          visible = false;
-        }
-
-        if (qualityValue !== 'all' && grade !== qualityValue) {
-          visible = false;
-        }
-
-        if (visible) {
-          questionEl.style.display = '';
-          visibleCount++;
-        } else {
-          questionEl.style.display = 'none';
-        }
-      });
-
-      const comparator = getComparator(sortValue);
-      [...questionNodes].sort(comparator).forEach(node => container.appendChild(node));
-
-      if (resultsCountDiv) {
-        resultsCountDiv.textContent = `Showing ${visibleCount} of ${totalQuestionCount} questions`;
+    function getComparator(sortValue) {
+      switch (sortValue) {
+        case 'quality-asc':
+          return (a, b) => (parseFloat(a.dataset.score || '0') || 0) - (parseFloat(b.dataset.score || '0') || 0);
+        case 'quality-desc':
+          return (a, b) => (parseFloat(b.dataset.score || '0') || 0) - (parseFloat(a.dataset.score || '0') || 0);
+        case 'evidence-asc':
+          return (a, b) => (parseInt(a.dataset.snippets || '0', 10) || 0) - (parseInt(b.dataset.snippets || '0', 10) || 0);
+        case 'evidence-desc':
+          return (a, b) => (parseInt(b.dataset.snippets || '0', 10) || 0) - (parseInt(a.dataset.snippets || '0', 10) || 0);
+        case 'question-id':
+          return (a, b) => (a.dataset.questionId || '').localeCompare(b.dataset.questionId || '');
+        default:
+          return (a, b) => (parseFloat(b.dataset.score || '0') || 0) - (parseFloat(a.dataset.score || '0') || 0);
       }
-
-      updateActiveFilters();
     }
 
     function updateActiveFilters() {
-      if (!activeFiltersDiv) return;
+      if (!(activeFiltersDiv instanceof HTMLElement)) {
+        return;
+      }
 
-      const activeFilters: string[] = [];
+      const activeFilters = [];
 
       if (categoryFilter.value !== 'all') {
         activeFilters.push(`Category: ${categoryFilter.options[categoryFilter.selectedIndex].text}`);
@@ -211,14 +181,48 @@ const { categories } = Astro.props;
 
       if (activeFilters.length > 0) {
         activeFiltersDiv.classList.remove('hidden');
-        const tagsHTML = activeFilters.map(filter =>
-          `<span class="px-2 py-1 text-xs bg-sky-500/20 text-sky-200 rounded border border-sky-400/30">${filter}</span>`
-        ).join('');
-        activeFiltersDiv.innerHTML = '<span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Active Filters:</span>' + tagsHTML;
+        const tagsHTML = activeFilters
+          .map(filter => `<span class="px-2 py-1 text-xs bg-sky-500/20 text-sky-200 rounded border border-sky-400/30">${filter}</span>`)
+          .join('');
+        activeFiltersDiv.innerHTML =
+          '<span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Active Filters:</span>' + tagsHTML;
       } else {
         activeFiltersDiv.classList.add('hidden');
         activeFiltersDiv.innerHTML = '';
       }
+    }
+
+    function applyFiltersAndSort() {
+      const categoryValue = categoryFilter.value;
+      const classificationValue = classificationFilter.value;
+      const qualityValue = qualityFilter.value;
+      const sortValue = sortSelect.value;
+
+      let visibleCount = 0;
+
+      questionNodes.forEach(questionEl => {
+        const matchesCategory = categoryValue === 'all' || (questionEl.dataset.category || '').includes(categoryValue);
+        const matchesClassification = classificationValue === 'all' || questionEl.dataset.classification === classificationValue;
+        const matchesQuality = qualityValue === 'all' || questionEl.dataset.grade === qualityValue;
+
+        const visible = matchesCategory && matchesClassification && matchesQuality;
+
+        if (visible) {
+          questionEl.style.display = '';
+          visibleCount += 1;
+        } else {
+          questionEl.style.display = 'none';
+        }
+      });
+
+      const comparator = getComparator(sortValue);
+      [...questionNodes].sort(comparator).forEach(node => container.appendChild(node));
+
+      if (resultsCountDiv instanceof HTMLElement) {
+        resultsCountDiv.textContent = `Showing ${visibleCount} of ${totalQuestionCount} questions`;
+      }
+
+      updateActiveFilters();
     }
 
     function resetFilters() {
@@ -233,27 +237,39 @@ const { categories } = Astro.props;
       allExpanded = !allExpanded;
 
       questionNodes.forEach(questionEl => {
-        if (questionEl.dataset.expandable !== 'true') return;
+        if (questionEl.dataset.expandable !== 'true') {
+          return;
+        }
 
-        const content = questionEl.querySelector('.question-content') as HTMLElement | null;
-        const toggle = questionEl.querySelector('.toggle-icon') as HTMLElement | null;
+        const content = questionEl.querySelector('.question-content');
+        const toggle = questionEl.querySelector('.toggle-icon');
 
-        if (!content || !toggle) return;
+        if (!(content instanceof HTMLElement) || !(toggle instanceof HTMLElement)) {
+          return;
+        }
 
         if (allExpanded) {
-          content.style.display = 'block';
+          content.hidden = false;
           content.classList.remove('hidden');
-          toggle.textContent = '▾';
+          toggle.textContent = expandedIcon;
           toggle.classList.add('text-sky-300');
           toggle.classList.remove('text-slate-500');
           questionEl.classList.add('expanded');
+          const header = questionEl.querySelector('.question-header');
+          if (header instanceof HTMLElement) {
+            header.setAttribute('aria-expanded', 'true');
+          }
         } else {
-          content.style.display = 'none';
+          content.hidden = true;
           content.classList.add('hidden');
-          toggle.textContent = '▸';
+          toggle.textContent = collapsedIcon;
           toggle.classList.remove('text-sky-300');
           toggle.classList.add('text-slate-500');
           questionEl.classList.remove('expanded');
+          const header = questionEl.querySelector('.question-header');
+          if (header instanceof HTMLElement) {
+            header.setAttribute('aria-expanded', 'false');
+          }
         }
       });
 
@@ -268,5 +284,14 @@ const { categories } = Astro.props;
     toggleAllButton.addEventListener('click', toggleAll);
 
     applyFiltersAndSort();
-  });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFiltersBar);
+  } else {
+    initFiltersBar();
+  }
+
+  document.addEventListener('astro:page-load', initFiltersBar);
 </script>
+
