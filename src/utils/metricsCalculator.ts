@@ -622,6 +622,30 @@ export function calculateCrossCompanyMetrics(
     ? companyMetrics.reduce((sum, cm) => sum + cm.forward_looking_rate, 0) / companyMetrics.length
     : 0;
 
+  // Aggregate classification counts
+  const full_disclosure_count = companyMetrics.reduce((sum, cm) =>
+    sum + (cm.snippets_by_classification['Full Disclosure'] || 0), 0);
+  const partial_disclosure_count = companyMetrics.reduce((sum, cm) =>
+    sum + (cm.snippets_by_classification['Partial'] || 0), 0);
+  const unclear_count = companyMetrics.reduce((sum, cm) =>
+    sum + (cm.snippets_by_classification['Unclear'] || 0), 0);
+  const no_disclosure_count = companyMetrics.reduce((sum, cm) =>
+    sum + (cm.snippets_by_classification['No Disclosure'] || 0), 0);
+
+  // Grade distribution
+  const grade_distribution: Record<Grade, number> = { A: 0, B: 0, C: 0, D: 0, F: 0 };
+  companyMetrics.forEach(cm => {
+    grade_distribution[cm.overall_grade] = (grade_distribution[cm.overall_grade] || 0) + 1;
+  });
+
+  // Best company
+  const best_company = company_rankings.length > 0
+    ? {
+        company_name: company_rankings[0].company_name,
+        score: company_rankings[0].overall_score
+      }
+    : undefined;
+
   return {
     question_rankings,
     company_rankings,
@@ -632,7 +656,13 @@ export function calculateCrossCompanyMetrics(
       total_snippets,
       average_disclosure_score_all,
       average_financial_rate_all,
-      average_forward_looking_rate_all
+      average_forward_looking_rate_all,
+      full_disclosure_count,
+      partial_disclosure_count,
+      unclear_count,
+      no_disclosure_count,
+      grade_distribution,
+      best_company
     }
   };
 }

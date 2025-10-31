@@ -16,12 +16,12 @@ const { crossCompanyMetrics } = Astro.props;
 const insights = [];
 
 // Financial disclosure insight
-if (crossCompanyMetrics.global_stats.average_financial_rate < 50) {
+if (crossCompanyMetrics.global_stats.average_financial_rate_all < 50) {
   insights.push({
     type: 'warning',
     icon: '💰',
     title: 'Low Financial Quantification',
-    message: `Only ${crossCompanyMetrics.global_stats.average_financial_rate.toFixed(0)}% of questions include financial amounts. Companies should prioritize quantifying risks in monetary terms.`,
+    message: `Only ${crossCompanyMetrics.global_stats.average_financial_rate_all.toFixed(0)}% of questions include financial amounts. Companies should prioritize quantifying risks in monetary terms.`,
     action: 'Recommend: Implement standardized financial impact assessment frameworks'
   });
 } else {
@@ -29,7 +29,7 @@ if (crossCompanyMetrics.global_stats.average_financial_rate < 50) {
     type: 'success',
     icon: '💰',
     title: 'Strong Financial Disclosure',
-    message: `${crossCompanyMetrics.global_stats.average_financial_rate.toFixed(0)}% of questions include financial amounts, exceeding industry benchmarks.`,
+    message: `${crossCompanyMetrics.global_stats.average_financial_rate_all.toFixed(0)}% of questions include financial amounts, exceeding industry benchmarks.`,
     action: 'Maintain this high standard across all future reports'
   });
 }

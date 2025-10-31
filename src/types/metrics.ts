@@ -220,6 +220,15 @@ export interface CrossCompanyMetrics {
     average_disclosure_score_all: number;
     average_financial_rate_all: number;
     average_forward_looking_rate_all: number;
+    full_disclosure_count: number;
+    partial_disclosure_count: number;
+    unclear_count: number;
+    no_disclosure_count: number;
+    grade_distribution: Record<Grade, number>;
+    best_company?: {
+      company_name: string;
+      score: number;
+    };
   };
 }
 

@@ -14,17 +14,17 @@ interface Props {
 const { crossCompanyMetrics } = Astro.props;
 
 // Get top and bottom performing questions
-const topQuestions = crossCompanyMetrics.question_performance
-  .sort((a, b) => b.average_score - a.average_score)
+const topQuestions = crossCompanyMetrics.question_rankings
+  .sort((a, b) => b.average_score_across_companies - a.average_score_across_companies)
   .slice(0, 10);
 
-const bottomQuestions = crossCompanyMetrics.question_performance
-  .sort((a, b) => a.average_score - b.average_score)
+const bottomQuestions = crossCompanyMetrics.question_rankings
+  .sort((a, b) => a.average_score_across_companies - b.average_score_across_companies)
   .slice(0, 10);
 
-// Get questions with highest variance (most inconsistent across companies)
-const highVarianceQuestions = crossCompanyMetrics.question_performance
-  .sort((a, b) => b.score_variance - a.score_variance)
+// Get questions sorted by companies with full disclosure (as a proxy for consistency)
+const highVarianceQuestions = crossCompanyMetrics.question_rankings
+  .sort((a, b) => a.companies_with_full_disclosure - b.companies_with_full_disclosure)
   .slice(0, 10);
 ---
 

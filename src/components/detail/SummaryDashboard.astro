@@ -17,10 +17,10 @@ const { metrics } = Astro.props;
 const classificationData = {
   labels: ['Full Disclosure', 'Partial', 'Unclear', 'No Disclosure'],
   values: [
-    metrics.full_disclosure_count,
-    metrics.partial_disclosure_count,
-    metrics.unclear_count,
-    metrics.no_disclosure_count
+    metrics.snippets_by_classification['Full Disclosure'] || 0,
+    metrics.snippets_by_classification['Partial'] || 0,
+    metrics.snippets_by_classification['Unclear'] || 0,
+    metrics.snippets_by_classification['No Disclosure'] || 0
   ],
   colors: ['#10b981', '#f59e0b', '#94a3b8', '#ef4444']
 };
@@ -28,8 +28,8 @@ const classificationData = {
 const financialData = {
   labels: ['Financial', 'Non-Financial'],
   values: [
-    metrics.questions_with_financial,
-    metrics.total_questions - metrics.questions_with_financial
+    metrics.snippets_with_financial_full + metrics.snippets_with_financial_partial,
+    metrics.snippets_with_financial_none
   ],
   percentages: [
     metrics.financial_quantification_rate,
@@ -40,28 +40,20 @@ const financialData = {
 const timeframeData = {
   labels: ['Current', 'Future', 'Historical', 'Unclear'],
   values: [
-    metrics.radar_metrics.temporal_specificity.current_focus,
-    metrics.radar_metrics.temporal_specificity.forward_looking,
-    metrics.radar_metrics.temporal_specificity.historical,
-    metrics.total_snippets - (
-      metrics.radar_metrics.temporal_specificity.current_focus +
-      metrics.radar_metrics.temporal_specificity.forward_looking +
-      metrics.radar_metrics.temporal_specificity.historical
-    )
+    metrics.snippets_current,
+    metrics.snippets_future,
+    metrics.snippets_historical,
+    metrics.snippets_unclear_time
   ]
 };
 
 const framingData = {
   labels: ['Risk', 'Opportunity', 'Both', 'Neutral'],
   values: [
-    metrics.radar_metrics.narrative_balance.risk_focused,
-    metrics.radar_metrics.narrative_balance.opportunity_focused,
-    metrics.radar_metrics.narrative_balance.balanced,
-    metrics.total_snippets - (
-      metrics.radar_metrics.narrative_balance.risk_focused +
-      metrics.radar_metrics.narrative_balance.opportunity_focused +
-      metrics.radar_metrics.narrative_balance.balanced
-    )
+    metrics.snippets_risk,
+    metrics.snippets_opportunity,
+    metrics.snippets_balanced,
+    metrics.snippets_neutral
   ]
 };
 ---
@@ -78,7 +70,7 @@ const framingData = {
         size="large"
       />
       <div class="mt-4 text-xs text-slate-500">
-        Based on {metrics.total_snippets} snippets across {metrics.total_questions} questions
+        Based on {metrics.total_snippets} snippets across {metrics.total_questions_analyzed} questions
       </div>
     </div>
 
@@ -93,13 +85,13 @@ const framingData = {
         <div class="flex items-center justify-between">
           <span class="text-xs text-slate-600">Avg per Question</span>
           <span class="text-lg font-bold text-slate-800">
-            {(metrics.total_snippets / metrics.total_questions).toFixed(1)}
+            {metrics.average_snippets_per_question.toFixed(1)}
           </span>
         </div>
         <div class="flex items-center justify-between">
           <span class="text-xs text-slate-600">With Financial Data</span>
           <span class="text-lg font-bold text-emerald-600">
-            {metrics.questions_with_financial}
+            {metrics.snippets_with_financial_full + metrics.snippets_with_financial_partial}
           </span>
         </div>
       </div>
@@ -169,7 +161,7 @@ const framingData = {
             {financialData.percentages[0].toFixed(1)}%
           </span>
           <span class="text-xs text-slate-500">
-            {financialData.values[0]} of {metrics.total_questions} questions
+            {financialData.values[0]} of {metrics.total_snippets} snippets
           </span>
         </div>
         <div class="space-y-2">
@@ -306,9 +298,9 @@ const framingData = {
 
 <canvas
   id="classification-chart"
-  data-full={metrics.full_disclosure_count}
-  data-partial={metrics.partial_disclosure_count}
-  data-unclear={metrics.unclear_count}
-  data-none={metrics.no_disclosure_count}
+  data-full={metrics.snippets_by_classification['Full Disclosure'] || 0}
+  data-partial={metrics.snippets_by_classification['Partial'] || 0}
+  data-unclear={metrics.snippets_by_classification['Unclear'] || 0}
+  data-none={metrics.snippets_by_classification['No Disclosure'] || 0}
   class="hidden"
 ></canvas>
