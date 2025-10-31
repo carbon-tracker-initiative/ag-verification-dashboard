@@ -15,21 +15,19 @@ interface Props {
 const { company } = Astro.props;
 ---
 
-<div class="surface glow-ring p-6 hover:translate-y-[-2px] transition-transform duration-200">
-  <!-- Header -->
-  <div class="flex items-start justify-between mb-4">
+<div class="surface flex flex-col h-full p-6 transition-transform duration-200 hover:-translate-y-1">
+  <div class="flex items-start justify-between mb-5">
     <div>
-      <h3 class="text-xl font-bold text-slate-100 mb-1 tracking-tight">{company.company_name}</h3>
+      <h3 class="text-lg font-semibold text-slate-100">{company.company_name}</h3>
       <p class="text-sm text-slate-400">Fiscal Year {company.fiscal_year}</p>
     </div>
-    <GradeDisplay score={company.overall_disclosure_score} showGrade={true} showScore={true} size="lg" />
+    <GradeDisplay score={company.overall_disclosure_score} showGrade={true} showScore={true} size="md" />
   </div>
 
-  <!-- Mini Radar Visualization (simplified as bars) -->
-  <div class="mb-4 space-y-3">
+  <div class="space-y-3 mb-5">
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-400 w-24 uppercase tracking-wide">Quality</span>
-      <div class="flex-1 bg-slate-900/60 rounded-full h-2">
+      <span class="text-xs text-slate-500 w-24 uppercase tracking-wide">Quality</span>
+      <div class="flex-1 bg-slate-900 rounded-full h-2">
         <div
           class="bg-emerald-400 h-2 rounded-full transition-all"
           style={`width: ${company.radar_metrics.disclosure_quality}%`}
@@ -40,8 +38,8 @@ const { company } = Astro.props;
       </span>
     </div>
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-400 w-24 uppercase tracking-wide">Evidence</span>
-      <div class="flex-1 bg-slate-900/60 rounded-full h-2">
+      <span class="text-xs text-slate-500 w-24 uppercase tracking-wide">Evidence</span>
+      <div class="flex-1 bg-slate-900 rounded-full h-2">
         <div
           class="bg-sky-400 h-2 rounded-full transition-all"
           style={`width: ${company.radar_metrics.evidence_depth}%`}
@@ -52,8 +50,8 @@ const { company } = Astro.props;
       </span>
     </div>
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-400 w-24 uppercase tracking-wide">Financial</span>
-      <div class="flex-1 bg-slate-900/60 rounded-full h-2">
+      <span class="text-xs text-slate-500 w-24 uppercase tracking-wide">Financial</span>
+      <div class="flex-1 bg-slate-900 rounded-full h-2">
         <div
           class="bg-purple-400 h-2 rounded-full transition-all"
           style={`width: ${company.radar_metrics.financial_transparency}%`}
@@ -65,33 +63,32 @@ const { company } = Astro.props;
     </div>
   </div>
 
-  <!-- Stats Grid -->
-  <div class="grid grid-cols-3 gap-3 mb-5 text-center">
+  <div class="grid grid-cols-3 gap-3 text-center mb-6">
     <div>
-      <div class="text-lg font-bold text-emerald-300">
+      <div class="text-lg font-semibold text-slate-100">
         {company.snippets_by_classification.FULL_DISCLOSURE}
       </div>
-      <div class="text-xs text-slate-400 uppercase tracking-wide">Full</div>
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">Full</div>
     </div>
     <div>
-      <div class="text-lg font-bold text-indigo-300">
+      <div class="text-lg font-semibold text-slate-100">
         {formatNumber(company.total_snippets)}
       </div>
-      <div class="text-xs text-slate-400 uppercase tracking-wide">Snippets</div>
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">Snippets</div>
     </div>
     <div>
-      <div class="text-lg font-bold text-cyan-300">
+      <div class="text-lg font-semibold text-slate-100">
         {formatPercentage(company.financial_quantification_rate, 0)}
       </div>
-      <div class="text-xs text-slate-400 uppercase tracking-wide">Financial</div>
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">Financial</div>
     </div>
   </div>
 
-  <!-- View Analysis Button -->
   <a
     href={`/${company.company_name.toLowerCase()}/${company.fiscal_year}`}
-    class="block w-full text-center bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 hover:from-sky-400 hover:via-indigo-400 hover:to-purple-400 text-white font-semibold py-2 px-4 rounded-md transition-all shadow-lg shadow-indigo-900/40"
+    class="mt-auto inline-flex items-center justify-center gap-2 rounded-md border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-200 transition-colors hover:border-slate-400 hover:text-slate-50"
   >
-    View Analysis →
+    View Analysis
+    <span aria-hidden="true">→</span>
   </a>
 </div>

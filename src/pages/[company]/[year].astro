@@ -69,6 +69,10 @@ companyData.verified.analysis_results.forEach((question, index) => {
 const allCategories = Array.from(questionsByCategory.keys());
 
 // Build breadcrumb items
+const totalQuestionsAnalyzed =
+  companyData.verified.summary_statistics?.total_questions_analyzed ??
+  companyData.verified.analysis_results.length;
+
 const breadcrumbItems = [
   { label: 'Home', href: '/' },
   { label: company, href: '#' },
@@ -93,7 +97,7 @@ const breadcrumbItems = [
             <div class="flex items-center gap-4 text-sm text-slate-400 flex-wrap">
               <span>Model: {companyData.model}</span>
               <span aria-hidden="true">&bull;</span>
-              <span>{companyData.verified.analysis_results.length} questions analyzed</span>
+              <span>{totalQuestionsAnalyzed} questions analyzed</span>
               <span aria-hidden="true">&bull;</span>
               <span>{companyMetrics.total_snippets} evidence snippets</span>
             </div>
@@ -180,7 +184,7 @@ const breadcrumbItems = [
         </div>
 
         <!-- Questions Container -->
-        <div id="questions-container" class="space-y-4">
+        <div id="questions-container" data-total-questions={companyData.verified.summary_statistics?.total_questions_analyzed ?? companyData.verified.analysis_results.length} class="space-y-4">
           {Array.from(questionsByCategory.entries()).map(([categoryName, items]) => {
             const categoryConfig = categoriesConfig.categories.find(c => c.name === categoryName);
             const categoryIcon = categoryConfig?.icon || '📊';
@@ -218,7 +222,7 @@ const breadcrumbItems = [
   }
 
   .question-header:hover {
-    background-color: rgb(248 250 252);
+    background-color: rgba(46, 58, 85, 0.45);
   }
 
   /* Custom scrollbar for long content */

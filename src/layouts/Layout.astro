@@ -22,9 +22,6 @@ const {
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 
-		<!-- Preload critical fonts -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-
 		<!-- SEO Meta Tags -->
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
@@ -34,11 +31,6 @@ const {
 		<meta name="theme-color" content="#0f172a" />
 	</head>
 	<body class="bg-slate-950 text-slate-100 relative overflow-x-hidden">
-		<div class="pointer-events-none fixed inset-0 opacity-40" aria-hidden="true">
-			<div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,0.15),transparent_55%)]"></div>
-			<div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_0%,rgba(16,185,129,0.12),transparent_55%)]"></div>
-			<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_100%,rgba(139,92,246,0.12),transparent_60%)]"></div>
-		</div>
 
 		<!-- Skip to main content for accessibility -->
 		<a href="#main-content" class="skip-to-main">

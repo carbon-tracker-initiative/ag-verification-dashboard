@@ -14,7 +14,6 @@ interface Props {
 
 const { category, expandable = true } = Astro.props;
 
-// Category icons
 const categoryIcons: Record<string, string> = {
   'Environmental Risk': '🌱',
   'Human Health Risk': '🩺',
@@ -24,7 +23,6 @@ const categoryIcons: Record<string, string> = {
 
 const icon = categoryIcons[category.category_name] || '🛰️';
 
-// Calculate percentages for classification distribution
 const total = category.total_snippets || 0;
 const fullPct = total > 0 ? (category.snippets_by_classification.FULL_DISCLOSURE / total) * 100 : 0;
 const partialPct = total > 0 ? (category.snippets_by_classification.PARTIAL / total) * 100 : 0;
@@ -32,103 +30,103 @@ const unclearPct = total > 0 ? (category.snippets_by_classification.UNCLEAR / to
 const nonePct = total > 0 ? (category.snippets_by_classification.NO_DISCLOSURE / total) * 100 : 0;
 ---
 
-<div class="surface glow-ring p-6">
-  <!-- Header -->
-  <div class="flex items-center justify-between mb-4">
-    <div class="flex items-center gap-3">
-      <span class="text-3xl drop-shadow">{icon}</span>
-      <h3 class="text-lg font-bold text-slate-100 tracking-tight">{category.category_name}</h3>
+<div class="surface flex flex-col h-full p-6">
+  <div class="flex items-start justify-between gap-3 mb-6">
+    <div>
+      <div class="flex items-center gap-2 text-sm text-slate-400 uppercase tracking-wide">
+        <span class="text-xl" aria-hidden="true">{icon}</span>
+        <span>{category.category_name}</span>
+      </div>
+      <div class="mt-4 grid grid-cols-3 gap-4 text-center">
+        <div>
+          <div class="text-xl font-semibold text-slate-100">
+            {category.questions_answered}/{category.total_questions}
+          </div>
+          <div class="text-[11px] uppercase tracking-wide text-slate-500">Questions</div>
+        </div>
+        <div>
+          <div class="text-xl font-semibold text-slate-100">
+            {category.average_evidence_depth.toFixed(1)}
+          </div>
+          <div class="text-[11px] uppercase tracking-wide text-slate-500">Avg Snippets</div>
+        </div>
+        <div>
+          <div class="text-xl font-semibold text-slate-100">
+            {category.average_financial_rate.toFixed(0)}%
+          </div>
+          <div class="text-[11px] uppercase tracking-wide text-slate-500">Financial</div>
+        </div>
+      </div>
     </div>
-    <GradeDisplay score={category.average_question_score} showGrade={true} showScore={true} size="lg" />
+    <GradeDisplay score={category.average_question_score} showGrade={true} showScore={true} size="md" />
   </div>
 
-  <!-- Stats Grid -->
-  <div class="grid grid-cols-3 gap-4 mb-5">
-    <div class="text-center">
-      <div class="text-2xl font-bold text-sky-300">
-        {category.questions_answered}/{category.total_questions}
-      </div>
-      <div class="text-xs text-slate-400 uppercase tracking-wide">Questions</div>
-    </div>
-    <div class="text-center">
-      <div class="text-2xl font-bold text-violet-300">
-        {category.average_evidence_depth.toFixed(1)}
-      </div>
-      <div class="text-xs text-slate-400 uppercase tracking-wide">Avg Snippets</div>
-    </div>
-    <div class="text-center">
-      <div class="text-2xl font-bold text-emerald-300">
-        {category.average_financial_rate.toFixed(0)}%
-      </div>
-      <div class="text-xs text-slate-400 uppercase tracking-wide">Financial</div>
-    </div>
-  </div>
-
-  <!-- Classification Distribution Bar -->
   <div class="mb-5">
-    <div class="text-xs font-medium text-slate-300 mb-2 uppercase tracking-wide">Classification Distribution</div>
-    <div class="h-8 flex rounded-md overflow-hidden border border-slate-700/70">
+    <div class="text-xs font-semibold text-slate-300 mb-2 uppercase tracking-wide">
+      Classification Distribution
+    </div>
+    <div class="h-7 flex rounded-full overflow-hidden border border-slate-700">
       {fullPct > 0 && (
         <div
-          class="bg-emerald-500/90 hover:bg-emerald-400 transition-colors flex items-center justify-center text-slate-900 text-xs font-semibold"
+          class="bg-emerald-500/85 flex items-center justify-center text-slate-900 text-xs font-semibold"
           style={`width: ${fullPct}%`}
           title={`Full: ${category.snippets_by_classification.FULL_DISCLOSURE} (${fullPct.toFixed(1)}%)`}
         >
-          {fullPct > 10 && `${fullPct.toFixed(0)}%`}
+          {fullPct > 12 && `${fullPct.toFixed(0)}%`}
         </div>
       )}
       {partialPct > 0 && (
         <div
-          class="bg-amber-500/90 hover:bg-amber-400 transition-colors flex items-center justify-center text-slate-900 text-xs font-semibold"
+          class="bg-amber-500/85 flex items-center justify-center text-slate-900 text-xs font-semibold"
           style={`width: ${partialPct}%`}
           title={`Partial: ${category.snippets_by_classification.PARTIAL} (${partialPct.toFixed(1)}%)`}
         >
-          {partialPct > 10 && `${partialPct.toFixed(0)}%`}
+          {partialPct > 12 && `${partialPct.toFixed(0)}%`}
         </div>
       )}
       {unclearPct > 0 && (
         <div
-          class="bg-slate-500/90 hover:bg-slate-400 transition-colors flex items-center justify-center text-slate-900 text-xs font-semibold"
+          class="bg-slate-500/85 flex items-center justify-center text-slate-100 text-xs font-semibold"
           style={`width: ${unclearPct}%`}
           title={`Unclear: ${category.snippets_by_classification.UNCLEAR} (${unclearPct.toFixed(1)}%)`}
         >
-          {unclearPct > 10 && `${unclearPct.toFixed(0)}%`}
+          {unclearPct > 12 && `${unclearPct.toFixed(0)}%`}
         </div>
       )}
       {nonePct > 0 && (
         <div
-          class="bg-rose-500/90 hover:bg-rose-400 transition-colors flex items-center justify-center text-slate-900 text-xs font-semibold"
+          class="bg-rose-500/85 flex items-center justify-center text-slate-900 text-xs font-semibold"
           style={`width: ${nonePct}%`}
           title={`None: ${category.snippets_by_classification.NO_DISCLOSURE} (${nonePct.toFixed(1)}%)`}
         >
-          {nonePct > 10 && `${nonePct.toFixed(0)}%`}
+          {nonePct > 12 && `${nonePct.toFixed(0)}%`}
         </div>
       )}
       {total === 0 && (
-        <div class="flex-1 bg-slate-800/90 text-slate-500 text-xs flex items-center justify-center">
+        <div class="flex-1 bg-slate-800 text-slate-500 text-xs flex items-center justify-center">
           No snippets verified
         </div>
       )}
     </div>
   </div>
 
-  <!-- Expandable Questions List -->
   {expandable && category.top_questions.length > 0 && (
-    <details class="mt-4 rounded-lg border border-slate-800/60 bg-slate-900/60">
-      <summary class="cursor-pointer text-sm font-medium text-sky-300 hover:text-sky-200 transition-colors px-4 py-3">
-        View Top Questions ({category.top_questions.length})
+    <details class="mt-auto rounded-lg border border-slate-800 bg-slate-900/80">
+      <summary class="cursor-pointer flex items-center justify-between gap-2 px-4 py-3 text-sm font-medium text-slate-200 hover:text-sky-200 transition-colors">
+        <span>Top Questions ({category.top_questions.length})</span>
+        <span class="text-xs text-slate-500">Expand</span>
       </summary>
       <ul class="mt-0 space-y-2 px-4 pb-4 pt-1">
         {category.top_questions.map(q => (
           <li class="text-sm">
             <a
               href={`/analytics#question-${q.question_id}`}
-              class="flex items-center justify-between gap-3 p-2 rounded-md hover:bg-slate-800/70 transition-colors border border-transparent hover:border-slate-700/80"
+              class="flex items-center justify-between gap-3 p-2 rounded-md border border-transparent hover:border-slate-700 hover:bg-slate-800/70 transition-colors"
             >
               <span class="text-slate-200 flex-1 min-w-0">
-                <span class="font-mono text-xs text-slate-400">{q.question_id}:</span>
+                <span class="font-mono text-[11px] text-slate-500">{q.question_id}</span>
                 {' '}
-                <span class="truncate">{q.question_text.substring(0, 60)}{q.question_text.length > 60 ? '…' : ''}</span>
+                <span class="truncate">{q.question_text}</span>
               </span>
               <GradeDisplay score={q.score} showScore={true} size="sm" />
             </a>

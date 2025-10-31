@@ -15,14 +15,12 @@ interface Props {
 
 const { questionRankings, sortBy = 'quality' } = Astro.props;
 
-// Sort based on sortBy parameter
 let sorted = [...questionRankings];
 if (sortBy === 'question_id') {
   sorted.sort((a, b) => a.question_id.localeCompare(b.question_id));
 } else if (sortBy === 'evidence_count') {
   sorted.sort((a, b) => b.total_snippets_across_companies - a.total_snippets_across_companies);
 } else {
-  // quality (default)
   sorted.sort((a, b) => b.average_score_across_companies - a.average_score_across_companies);
 }
 
@@ -32,16 +30,15 @@ const bottomQuestions = sorted.slice(-10).reverse();
 
 <section class="mb-12">
   <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
-    <h2 class="text-2xl font-bold text-slate-50 tracking-tight">Question Performance Rankings</h2>
+    <h2 class="text-2xl font-semibold text-slate-50 tracking-tight">Question Performance Rankings</h2>
 
-    <!-- Sort Controls -->
-    <div class="flex gap-2 bg-slate-900/60 border border-slate-800 rounded-lg p-1">
+    <div class="flex gap-2 bg-slate-900/70 border border-slate-800 rounded-lg p-1">
       <a
         href={`/?sort=quality`}
         class:list={[
-          'px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-150',
+          'px-3 py-1.5 text-sm font-medium rounded-md transition-colors',
           sortBy === 'quality'
-            ? 'bg-slate-800 text-slate-100 shadow-inner border border-slate-700'
+            ? 'bg-slate-800 text-slate-100 border border-slate-700'
             : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/70'
         ]}
       >
@@ -50,9 +47,9 @@ const bottomQuestions = sorted.slice(-10).reverse();
       <a
         href={`/?sort=question_id`}
         class:list={[
-          'px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-150',
+          'px-3 py-1.5 text-sm font-medium rounded-md transition-colors',
           sortBy === 'question_id'
-            ? 'bg-slate-800 text-slate-100 shadow-inner border border-slate-700'
+            ? 'bg-slate-800 text-slate-100 border border-slate-700'
             : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/70'
         ]}
       >
@@ -61,9 +58,9 @@ const bottomQuestions = sorted.slice(-10).reverse();
       <a
         href={`/?sort=evidence_count`}
         class:list={[
-          'px-3 py-1.5 text-sm font-medium rounded-md transition-all duration-150',
+          'px-3 py-1.5 text-sm font-medium rounded-md transition-colors',
           sortBy === 'evidence_count'
-            ? 'bg-slate-800 text-slate-100 shadow-inner border border-slate-700'
+            ? 'bg-slate-800 text-slate-100 border border-slate-700'
             : 'text-slate-300 hover:text-slate-100 hover:bg-slate-800/70'
         ]}
       >
@@ -74,16 +71,16 @@ const bottomQuestions = sorted.slice(-10).reverse();
 
   <div class="grid md:grid-cols-2 gap-6">
     <!-- Best Disclosed Questions -->
-    <div class="surface glow-ring p-6 border border-emerald-500/20">
+    <div class="surface p-6 border border-emerald-500/20">
       <h3 class="text-lg font-semibold text-emerald-300 mb-4 flex items-center gap-2">
-        <span>🟢</span>
+        <span aria-hidden="true">🟢</span>
         <span>Best Disclosed Questions</span>
       </h3>
       <ol class="space-y-3">
         {topQuestions.map((q, index) => (
           <li class="border-b border-slate-800/60 pb-3 last:border-0">
             <div class="flex items-start gap-3">
-              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-200 text-xs font-bold flex items-center justify-center border border-emerald-500/40">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/15 text-emerald-200 text-xs font-bold flex items-center justify-center border border-emerald-500/40">
                 {index + 1}
               </span>
               <div class="flex-1 min-w-0">
@@ -93,8 +90,10 @@ const bottomQuestions = sorted.slice(-10).reverse();
                 </div>
                 <p class="text-sm text-slate-200 line-clamp-2">{q.question_text}</p>
                 <div class="flex items-center gap-4 mt-2 text-xs text-slate-400">
-                  <span title="Evidence snippets">🧾 {formatNumber(q.total_snippets_across_companies)}</span>
-                  <span title="Companies with full disclosure">✅ {q.companies_with_full_disclosure}/{q.companies_analyzed}</span>
+                  <span title="Evidence snippets">Snippets: {formatNumber(q.total_snippets_across_companies)}</span>
+                  <span title="Companies with full disclosure">
+                    Full disclosure: {q.companies_with_full_disclosure}/{q.companies_analyzed}
+                  </span>
                 </div>
               </div>
             </div>
@@ -104,16 +103,16 @@ const bottomQuestions = sorted.slice(-10).reverse();
     </div>
 
     <!-- Poorly Disclosed Questions -->
-    <div class="surface glow-ring p-6 border border-amber-500/20">
+    <div class="surface p-6 border border-amber-500/20">
       <h3 class="text-lg font-semibold text-amber-300 mb-4 flex items-center gap-2">
-        <span>🟠</span>
+        <span aria-hidden="true">🟠</span>
         <span>Poorly Disclosed Questions</span>
       </h3>
       <ol class="space-y-3">
         {bottomQuestions.map((q, index) => (
           <li class="border-b border-slate-800/60 pb-3 last:border-0">
             <div class="flex items-start gap-3">
-              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-amber-500/20 text-amber-200 text-xs font-bold flex items-center justify-center border border-amber-500/40">
+              <span class="flex-shrink-0 w-6 h-6 rounded-full bg-amber-500/15 text-amber-200 text-xs font-bold flex items-center justify-center border border-amber-500/40">
                 {sorted.length - 9 + index}
               </span>
               <div class="flex-1 min-w-0">
@@ -123,8 +122,8 @@ const bottomQuestions = sorted.slice(-10).reverse();
                 </div>
                 <p class="text-sm text-slate-200 line-clamp-2">{q.question_text}</p>
                 <div class="flex items-center gap-4 mt-2 text-xs text-slate-400">
-                  <span title="Evidence snippets">🧾 {formatNumber(q.total_snippets_across_companies)}</span>
-                  <span title="Companies analyzed">🏢 {q.companies_analyzed} companies</span>
+                  <span title="Evidence snippets">Snippets: {formatNumber(q.total_snippets_across_companies)}</span>
+                  <span title="Companies analyzed">{q.companies_analyzed} companies</span>
                 </div>
               </div>
             </div>
