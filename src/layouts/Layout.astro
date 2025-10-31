@@ -1,30 +1,58 @@
 ---
-import '../styles/main.css';
-import ThemeToggle from '../components/ThemeToggle.astro';
+import '../styles/global.css';
 
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = 'D-Rag Validation Dashboard' } = Astro.props;
+const {
+  title = 'Verification Dashboard - Agricultural Risk Disclosure Analysis',
+  description = 'Interactive dashboard for verified agricultural risk disclosure analysis with AI-powered snippet-level quality scoring'
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<script is:inline>
-			// Initialize theme before page renders to avoid flash
-			const theme = localStorage.getItem('theme') || 'dark';
-			document.documentElement.classList.toggle('dark', theme === 'dark');
-		</script>
+
+		<!-- Preload critical fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+
+		<!-- SEO Meta Tags -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+
+		<!-- Accessibility -->
+		<meta name="theme-color" content="#3b82f6" />
 	</head>
 	<body>
-		<ThemeToggle />
-		<slot />
+		<!-- Skip to main content for accessibility -->
+		<a href="#main-content" class="skip-to-main">
+			Skip to main content
+		</a>
+
+		<!-- Main content -->
+		<div id="main-content">
+			<slot />
+		</div>
+
+		<!-- Global page transition script -->
+		<script>
+			document.addEventListener('astro:page-load', () => {
+				// Add fade-in animation to new page content
+				const main = document.getElementById('main-content');
+				if (main) {
+					main.classList.add('animate-fade-in');
+				}
+			});
+		</script>
 	</body>
 </html>

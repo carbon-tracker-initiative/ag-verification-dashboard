@@ -62,14 +62,18 @@ const icon = icons[classification];
 
 <span
   class:list={[
-    'inline-flex items-center gap-1 rounded-md font-medium border',
+    'inline-flex items-center gap-1 rounded-md font-medium border transition-all duration-200',
     colorScheme.bg,
     colorScheme.text,
     colorScheme.border,
     sizeClasses[size]
   ]}
+  role="status"
+  aria-label={`Classification: ${label}`}
   title={`Classification: ${label}`}
 >
-  {showIcon && <span class="font-bold">{icon}</span>}
+  {showIcon && (
+    <span class="font-bold" aria-hidden="true">{icon}</span>
+  )}
   <span>{label}</span>
 </span>

@@ -8,14 +8,15 @@ import type { Grade } from '../../types/metrics';
 
 interface Props {
   score: number; // 0-100
+  grade?: Grade; // Optional pre-calculated grade
   showGrade?: boolean;
   showScore?: boolean;
   size?: 'sm' | 'md' | 'lg';
 }
 
-const { score, showGrade = true, showScore = true, size = 'md' } = Astro.props;
+const { score, grade: providedGrade, showGrade = true, showScore = true, size = 'md' } = Astro.props;
 
-// Calculate grade
+// Calculate grade if not provided
 function calculateGrade(score: number): Grade {
   if (score >= 90) return "A";
   if (score >= 80) return "B";
@@ -24,7 +25,16 @@ function calculateGrade(score: number): Grade {
   return "F";
 }
 
-const grade = calculateGrade(score);
+const grade = providedGrade || calculateGrade(score);
+
+// Grade descriptions for accessibility
+const gradeDescriptions: Record<Grade, string> = {
+  'A': 'Excellent (90-100%)',
+  'B': 'Good (80-89%)',
+  'C': 'Fair (70-79%)',
+  'D': 'Poor (60-69%)',
+  'F': 'Failing (below 60%)'
+};
 
 // Color scheme by grade
 const colors: Record<Grade, { bg: string; text: string; border: string }> = {
@@ -67,16 +77,18 @@ const colorScheme = colors[grade];
 
 <span
   class:list={[
-    'inline-flex items-center gap-1.5 rounded-md font-semibold border',
+    'inline-flex items-center gap-1.5 rounded-md font-semibold border transition-all duration-200',
     colorScheme.bg,
     colorScheme.text,
     colorScheme.border,
     sizeClasses[size]
   ]}
-  title={`Quality score: ${score.toFixed(1)}%`}
+  role="status"
+  aria-label={`Grade: ${gradeDescriptions[grade]} - Score: ${score.toFixed(1)}%`}
+  title={`Grade: ${gradeDescriptions[grade]} - Score: ${score.toFixed(1)}%`}
 >
-  {showGrade && <span class="font-bold text-lg">{grade}</span>}
-  {showScore && <span>{score.toFixed(1)}%</span>}
+  {showGrade && <span class="font-bold text-lg" aria-hidden="true">{grade}</span>}
+  {showScore && <span aria-hidden="true">{score.toFixed(1)}%</span>}
 </span>
 
 <style>

@@ -23,39 +23,48 @@ function isActive(href: string): boolean {
 }
 ---
 
-<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 shadow-sm" role="banner">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
       <!-- Logo/Title -->
       <div class="flex items-center gap-3">
-        <a href="/" class="flex items-center gap-2 text-xl font-bold text-slate-900 hover:text-slate-700 transition-colors">
-          <span class="text-2xl">🌾</span>
-          <span>Agricultural Risk Disclosure</span>
+        <a
+          href="/"
+          class="flex items-center gap-2 text-xl font-bold text-slate-900 hover:text-slate-700 transition-all duration-200 hover:scale-105"
+          aria-label="Agricultural Risk Disclosure - Home"
+        >
+          <span class="text-2xl" aria-hidden="true">🌾</span>
+          <span class="hidden sm:inline">Agricultural Risk Disclosure</span>
+          <span class="sm:hidden">Ag Disclosure</span>
         </a>
       </div>
 
       <!-- Navigation -->
-      <nav class="hidden md:flex items-center gap-6">
+      <nav class="hidden md:flex items-center gap-6" aria-label="Main navigation">
         {navItems.map(item => (
           <a
             href={item.href}
             class:list={[
-              'flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors',
+              'flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200',
               isActive(item.href)
-                ? 'bg-slate-100 text-slate-900'
+                ? 'bg-slate-100 text-slate-900 shadow-sm'
                 : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
             ]}
+            aria-current={isActive(item.href) ? 'page' : undefined}
           >
-            <span>{item.icon}</span>
+            <span aria-hidden="true">{item.icon}</span>
             <span>{item.label}</span>
           </a>
         ))}
       </nav>
 
       <!-- Mobile menu button (placeholder) -->
-      <button class="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100">
-        <span class="sr-only">Open menu</span>
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <button
+        class="md:hidden p-2 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>

@@ -1,0 +1,40 @@
+---
+/**
+ * Loading Skeleton Component
+ * Displays loading state with shimmer effect
+ */
+
+interface Props {
+  variant?: 'card' | 'text' | 'circle' | 'rectangle';
+  width?: string;
+  height?: string;
+  count?: number;
+}
+
+const {
+  variant = 'rectangle',
+  width = '100%',
+  height = variant === 'text' ? '1rem' : '4rem',
+  count = 1
+} = Astro.props;
+
+const baseClasses = 'skeleton animate-shimmer bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200';
+
+const variantClasses = {
+  card: 'rounded-lg',
+  text: 'rounded',
+  circle: 'rounded-full',
+  rectangle: 'rounded'
+};
+---
+
+<div class="space-y-3" role="status" aria-label="Loading">
+  {Array.from({ length: count }).map(() => (
+    <div
+      class:list={[baseClasses, variantClasses[variant]]}
+      style={`width: ${width}; height: ${height};`}
+      aria-hidden="true"
+    ></div>
+  ))}
+  <span class="sr-only">Loading content...</span>
+</div>
