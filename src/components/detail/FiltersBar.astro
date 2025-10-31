@@ -112,6 +112,9 @@ const { categories } = Astro.props;
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('questions-container');
+    if (!container) return;
+
     const categoryFilter = document.getElementById('category-filter') as HTMLSelectElement;
     const classificationFilter = document.getElementById('classification-filter') as HTMLSelectElement;
     const qualityFilter = document.getElementById('quality-filter') as HTMLSelectElement;
@@ -122,14 +125,29 @@ const { categories } = Astro.props;
 
     const activeFiltersDiv = document.getElementById('active-filters') as HTMLDivElement;
     const resultsCountDiv = document.getElementById('results-count') as HTMLDivElement;
-    const questionsContainer = document.getElementById('questions-container') as HTMLElement | null;
 
-    const questionNodes = Array.from(document.querySelectorAll('[data-question-id]'));
-    const totalQuestionCount = questionsContainer
-      ? parseInt(questionsContainer.dataset.totalQuestions || String(questionNodes.length), 10)
-      : questionNodes.length;
+    const questionNodes = Array.from(container.querySelectorAll<HTMLElement>('[data-question-id]'));
+    const totalQuestionCount = questionNodes.length;
 
     let allExpanded = false;
+
+    function getComparator(sortValue: string) {
+      return (a: HTMLElement, b: HTMLElement) => {
+        switch (sortValue) {
+          case 'quality-desc':
+            return parseFloat(b.dataset.score || '0') - parseFloat(a.dataset.score || '0');
+          case 'quality-asc':
+            return parseFloat(a.dataset.score || '0') - parseFloat(b.dataset.score || '0');
+          case 'evidence-desc':
+            return parseInt(b.dataset.snippets || '0', 10) - parseInt(a.dataset.snippets || '0', 10);
+          case 'evidence-asc':
+            return parseInt(a.dataset.snippets || '0', 10) - parseInt(b.dataset.snippets || '0', 10);
+          case 'question-id':
+          default:
+            return (a.dataset.questionId || '').localeCompare(b.dataset.questionId || '');
+        }
+      };
+    }
 
     function applyFiltersAndSort() {
       const categoryValue = categoryFilter.value;
@@ -139,8 +157,7 @@ const { categories } = Astro.props;
 
       let visibleCount = 0;
 
-      questionNodes.forEach(question => {
-        const questionEl = question as HTMLElement;
+      questionNodes.forEach(questionEl => {
         const category = questionEl.dataset.category || '';
         const classification = questionEl.dataset.classification || '';
         const grade = questionEl.dataset.grade || '';
@@ -159,35 +176,16 @@ const { categories } = Astro.props;
           visible = false;
         }
 
-        questionEl.style.display = visible ? '' : 'none';
-        if (visible) visibleCount++;
+        if (visible) {
+          questionEl.style.display = '';
+          visibleCount++;
+        } else {
+          questionEl.style.display = 'none';
+        }
       });
 
-      const container = questionsContainer;
-      if (container) {
-        const visibleQuestions = questionNodes.filter(q => (q as HTMLElement).style.display !== 'none');
-
-        visibleQuestions.sort((a, b) => {
-          const aEl = a as HTMLElement;
-          const bEl = b as HTMLElement;
-
-          switch (sortValue) {
-            case 'quality-desc':
-              return parseFloat(bEl.dataset.score || '0') - parseFloat(aEl.dataset.score || '0');
-            case 'quality-asc':
-              return parseFloat(aEl.dataset.score || '0') - parseFloat(bEl.dataset.score || '0');
-            case 'evidence-desc':
-              return parseInt(bEl.dataset.snippets || '0') - parseInt(aEl.dataset.snippets || '0');
-            case 'evidence-asc':
-              return parseInt(aEl.dataset.snippets || '0') - parseInt(bEl.dataset.snippets || '0');
-            case 'question-id':
-            default:
-              return (aEl.dataset.questionId || '').localeCompare(bEl.dataset.questionId || '');
-          }
-        });
-
-        visibleQuestions.forEach(q => container.appendChild(q));
-      }
+      const comparator = getComparator(sortValue);
+      [...questionNodes].sort(comparator).forEach(node => container.appendChild(node));
 
       if (resultsCountDiv) {
         resultsCountDiv.textContent = `Showing ${visibleCount} of ${totalQuestionCount} questions`;
@@ -233,27 +231,29 @@ const { categories } = Astro.props;
 
     function toggleAll() {
       allExpanded = !allExpanded;
-      questionNodes.forEach(question => {
-        const questionEl = question as HTMLElement;
+
+      questionNodes.forEach(questionEl => {
+        if (questionEl.dataset.expandable !== 'true') return;
+
         const content = questionEl.querySelector('.question-content') as HTMLElement | null;
         const toggle = questionEl.querySelector('.toggle-icon') as HTMLElement | null;
 
-        if (content && toggle) {
-          if (allExpanded) {
-            content.style.display = 'block';
-            content.classList.remove('hidden');
-            toggle.textContent = '▾';
-            toggle.classList.add('text-sky-300');
-            toggle.classList.remove('text-slate-500');
-            questionEl.classList.add('expanded');
-          } else {
-            content.style.display = 'none';
-            content.classList.add('hidden');
-            toggle.textContent = '▸';
-            toggle.classList.remove('text-sky-300');
-            toggle.classList.add('text-slate-500');
-            questionEl.classList.remove('expanded');
-          }
+        if (!content || !toggle) return;
+
+        if (allExpanded) {
+          content.style.display = 'block';
+          content.classList.remove('hidden');
+          toggle.textContent = '▾';
+          toggle.classList.add('text-sky-300');
+          toggle.classList.remove('text-slate-500');
+          questionEl.classList.add('expanded');
+        } else {
+          content.style.display = 'none';
+          content.classList.add('hidden');
+          toggle.textContent = '▸';
+          toggle.classList.remove('text-sky-300');
+          toggle.classList.add('text-slate-500');
+          questionEl.classList.remove('expanded');
         }
       });
 
