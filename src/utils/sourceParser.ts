@@ -110,11 +110,28 @@ export function buildPdfUrl(parsedSource: ParsedSource): string {
 
   const { company, year, filename, page } = parsedSource;
 
-  // Build path
-  const path = `/source_documents/${company}/${year}/${filename}`;
+  const companySlug = company
+    ? company
+        .trim()
+        .replace(/\s+/g, ' ')
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+    : '';
 
-  // Add page anchor
-  const url = page > 0 ? `${path}#page=${page}` : path;
+  const segments = ['/source_documents'];
+  if (companySlug) {
+    segments.push(companySlug);
+  }
+  segments.push(String(year));
+  segments.push(filename.trim());
+
+  const rawPath = segments.join('/').replace(/\/+/g, '/');
+  const encodedPath = rawPath
+    .split('/')
+    .map((segment, index) => (index === 0 ? segment : encodeURIComponent(segment)))
+    .join('/');
+
+  const url = page > 0 ? `${encodedPath}#page=${page}` : encodedPath;
 
   return url;
 }

@@ -15,29 +15,33 @@ interface Props {
 const { classification, size = 'md', showIcon = true } = Astro.props;
 
 // Format label (remove underscore)
-const label = classification.replace('_', ' ');
+const rawLabel = classification.replace('_', ' ');
+const label = rawLabel
+  .split(' ')
+  .map(part => part.charAt(0) + part.slice(1).toLowerCase())
+  .join(' ');
 
 // Color schemes
 const colors: Record<Classification, { bg: string; text: string; border: string }> = {
   FULL_DISCLOSURE: {
-    bg: 'bg-green-100',
-    text: 'text-green-800',
-    border: 'border-green-300'
+    bg: 'bg-emerald-500/15',
+    text: 'text-emerald-200',
+    border: 'border-emerald-400/40'
   },
   PARTIAL: {
-    bg: 'bg-yellow-100',
-    text: 'text-yellow-800',
-    border: 'border-yellow-300'
+    bg: 'bg-amber-500/20',
+    text: 'text-amber-200',
+    border: 'border-amber-400/30'
   },
   UNCLEAR: {
-    bg: 'bg-orange-100',
-    text: 'text-orange-800',
-    border: 'border-orange-300'
+    bg: 'bg-sky-500/15',
+    text: 'text-sky-200',
+    border: 'border-sky-400/30'
   },
   NO_DISCLOSURE: {
-    bg: 'bg-red-100',
-    text: 'text-red-800',
-    border: 'border-red-300'
+    bg: 'bg-rose-500/15',
+    text: 'text-rose-200',
+    border: 'border-rose-400/30'
   }
 };
 
@@ -45,8 +49,8 @@ const colors: Record<Classification, { bg: string; text: string; border: string 
 const icons: Record<Classification, string> = {
   FULL_DISCLOSURE: '✓',
   PARTIAL: '⚠',
-  UNCLEAR: '?',
-  NO_DISCLOSURE: '✗'
+  UNCLEAR: '❓',
+  NO_DISCLOSURE: '✖'
 };
 
 // Size classes

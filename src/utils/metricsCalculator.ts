@@ -45,12 +45,21 @@ export function calculateFinancialScore(snippet: Snippet): number {
  * Current = 3, Future = 2, Historical = 1, Unclear = 0
  */
 export function calculateTemporalScore(snippet: Snippet): number {
-  const timeframe = snippet.categorization.timeframe;
+  const timeframeRaw = snippet.categorization.timeframe || "";
+  const timeframe = timeframeRaw.trim().toLowerCase();
 
-  if (timeframe === "Current") return 3;
-  if (timeframe === "Future") return 2;
-  if (timeframe === "Historical") return 1;
-  if (timeframe === "Multiple or Unclear") return 0;
+  if (["current", "present day", "present-day", "ongoing", "today"].includes(timeframe)) {
+    return 3;
+  }
+  if (["future", "forward-looking", "upcoming"].includes(timeframe)) {
+    return 2;
+  }
+  if (["historical", "past"].includes(timeframe)) {
+    return 1;
+  }
+  if (timeframe === "multiple or unclear") {
+    return 0;
+  }
 
   return 0;
 }

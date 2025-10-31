@@ -107,7 +107,15 @@ const framingData = {
           How this grade is calculated
         </div>
         <p class="text-xs text-slate-400 leading-relaxed">
-          Each snippet is scored on financial transparency, temporal specificity, and narrative framing.
+          Each snippet earns up to 9 points across three dimensions, then converts to a percentage:
+        </p>
+        <ul class="mt-2 space-y-1 text-[11px] text-slate-400 leading-relaxed list-disc list-inside">
+          <li><span class="font-semibold text-slate-300">Financial disclosure type</span>: Financial = 3, Partial-type = 2, Non-Financial = 1.</li>
+          <li><span class="font-semibold text-slate-300">Temporal specificity</span>: Present day/current = 3, Future = 2, Historical = 1, Unclear = 0.</li>
+          <li><span class="font-semibold text-slate-300">Narrative framing</span>: Balanced = 3, Risk/Opportunity = 2, Neutral = 1.</li>
+          <li>The composite score is <span class="font-semibold text-slate-300">((financial + temporal + narrative) / 9) × 100</span>.</li>
+        </ul>
+        <p class="mt-2 text-xs text-slate-400 leading-relaxed">
           Grade {metrics.overall_grade} reflects an aggregate score {gradeInfo.range}; {gradeInfo.message}
         </p>
       </div>
