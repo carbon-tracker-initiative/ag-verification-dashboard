@@ -145,6 +145,40 @@ const { categories } = Astro.props;
     let allExpanded = false;
     const totalQuestionCount = questionNodes.length;
 
+    function setQuestionExpanded(card, expand) {
+      if (!(card instanceof HTMLElement)) {
+        return;
+      }
+
+      const content = card.querySelector('.question-content');
+      const toggle = card.querySelector('.toggle-icon');
+      const header = card.querySelector('.question-header');
+
+      if (!(content instanceof HTMLElement) || !(toggle instanceof HTMLElement) || !(header instanceof HTMLElement)) {
+        return;
+      }
+
+      if (expand) {
+        content.hidden = false;
+        content.classList.remove('hidden');
+        content.removeAttribute('hidden');
+        toggle.textContent = expandedIcon;
+        toggle.classList.add('text-sky-300');
+        toggle.classList.remove('text-slate-500');
+        header.setAttribute('aria-expanded', 'true');
+        card.classList.add('expanded');
+      } else {
+        content.hidden = true;
+        content.classList.add('hidden');
+        content.setAttribute('hidden', '');
+        toggle.textContent = collapsedIcon;
+        toggle.classList.remove('text-sky-300');
+        toggle.classList.add('text-slate-500');
+        header.setAttribute('aria-expanded', 'false');
+        card.classList.remove('expanded');
+      }
+    }
+
     function getComparator(sortValue) {
       switch (sortValue) {
         case 'quality-asc':
@@ -223,6 +257,15 @@ const { categories } = Astro.props;
       }
 
       updateActiveFilters();
+
+      allExpanded = questionNodes.every(card => {
+        if (card.style.display === 'none' || card.dataset.expandable !== 'true') {
+          return true;
+        }
+        return card.classList.contains('expanded');
+      });
+
+      toggleAllButton.textContent = allExpanded ? 'Collapse All' : 'Expand All';
     }
 
     function resetFilters() {
@@ -237,44 +280,57 @@ const { categories } = Astro.props;
       allExpanded = !allExpanded;
 
       questionNodes.forEach(questionEl => {
-        if (questionEl.dataset.expandable !== 'true') {
+        if (questionEl.style.display === 'none' || questionEl.dataset.expandable !== 'true') {
           return;
         }
 
-        const content = questionEl.querySelector('.question-content');
-        const toggle = questionEl.querySelector('.toggle-icon');
-
-        if (!(content instanceof HTMLElement) || !(toggle instanceof HTMLElement)) {
-          return;
-        }
-
-        if (allExpanded) {
-          content.hidden = false;
-          content.classList.remove('hidden');
-          toggle.textContent = expandedIcon;
-          toggle.classList.add('text-sky-300');
-          toggle.classList.remove('text-slate-500');
-          questionEl.classList.add('expanded');
-          const header = questionEl.querySelector('.question-header');
-          if (header instanceof HTMLElement) {
-            header.setAttribute('aria-expanded', 'true');
-          }
-        } else {
-          content.hidden = true;
-          content.classList.add('hidden');
-          toggle.textContent = collapsedIcon;
-          toggle.classList.remove('text-sky-300');
-          toggle.classList.add('text-slate-500');
-          questionEl.classList.remove('expanded');
-          const header = questionEl.querySelector('.question-header');
-          if (header instanceof HTMLElement) {
-            header.setAttribute('aria-expanded', 'false');
-          }
-        }
+        setQuestionExpanded(questionEl, allExpanded);
       });
 
       toggleAllButton.textContent = allExpanded ? 'Collapse All' : 'Expand All';
     }
+
+    container.addEventListener('click', event => {
+      const target = event.target;
+      if (!(target instanceof HTMLElement)) {
+        return;
+      }
+
+      const header = target.closest('.question-header');
+      if (!(header instanceof HTMLElement)) {
+        return;
+      }
+
+      const card = header.closest('.question-card');
+      if (!(card instanceof HTMLElement) || card.dataset.expandable !== 'true') {
+        return;
+      }
+
+      if (target.closest('button')) {
+        return;
+      }
+
+      const content = card.querySelector('.question-content');
+      if (!(content instanceof HTMLElement)) {
+        return;
+      }
+
+      const shouldExpand = content.classList.contains('hidden') || content.hasAttribute('hidden');
+      setQuestionExpanded(card, shouldExpand);
+
+      if (shouldExpand) {
+        allExpanded = questionNodes.every(node => {
+          if (node.style.display === 'none' || node.dataset.expandable !== 'true') {
+            return true;
+          }
+          return node.classList.contains('expanded');
+        });
+      } else {
+        allExpanded = false;
+      }
+
+      toggleAllButton.textContent = allExpanded ? 'Collapse All' : 'Expand All';
+    });
 
     categoryFilter.addEventListener('change', applyFiltersAndSort);
     classificationFilter.addEventListener('change', applyFiltersAndSort);
