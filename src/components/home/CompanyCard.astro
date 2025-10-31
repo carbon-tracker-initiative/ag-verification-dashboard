@@ -20,7 +20,7 @@ const { company } = Astro.props;
   <div class="flex items-start justify-between mb-4">
     <div>
       <h3 class="text-xl font-bold text-slate-900 mb-1">{company.company_name}</h3>
-      <p class="text-sm text-slate-600">Fiscal Year {company.fiscal_year}</p>
+      <p class="text-sm text-slate-600">Year {company.fiscal_year}</p>
     </div>
     <GradeDisplay score={company.overall_disclosure_score} showGrade={true} showScore={true} size="lg" />
   </div>

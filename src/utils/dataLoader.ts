@@ -125,13 +125,26 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
         console.log(`No verification report found for ${verifiedFile}`);
       }
 
+      // Normalize and add metadata from filename
+      const normalizedVerified = normalizeAnalysisResult(verified);
+      normalizedVerified.company_name = parsed.company;
+      normalizedVerified.fiscal_year = parsed.year;
+      normalizedVerified.model_used = parsed.model;
+
+      const normalizedOriginal = original ? normalizeAnalysisResult(original) : undefined;
+      if (normalizedOriginal) {
+        normalizedOriginal.company_name = parsed.company;
+        normalizedOriginal.fiscal_year = parsed.year;
+        normalizedOriginal.model_used = parsed.model;
+      }
+
       // Create CompanyYearData
       const companyData: CompanyYearData = {
         company: parsed.company,
         year: parsed.year,
         model: parsed.model,
-        verified: normalizeAnalysisResult(verified),
-        original: original ? normalizeAnalysisResult(original) : undefined,
+        verified: normalizedVerified,
+        original: normalizedOriginal,
         verificationReport,
         hasComparison: !!(original && verificationReport)
       };
@@ -201,10 +214,20 @@ export function getBaseQuestionId(questionId: string): string {
  * Normalize analysis result (ensure all required fields exist)
  */
 export function normalizeAnalysisResult(result: any): AnalysisResult {
+  // Add default top-level fields if missing
+  if (!result.company_name) result.company_name = '';
+  if (!result.fiscal_year) result.fiscal_year = 0;
+  if (!result.analysis_date) result.analysis_date = new Date().toISOString().split('T')[0];
+  if (!result.model_used) result.model_used = '';
+  if (!result.documents_analyzed) result.documents_analyzed = [];
+
   // Ensure analysis_results field exists
   if (!result.analysis_results) {
     result.analysis_results = [];
   }
+
+  // Set total_questions to match analysis_results length
+  result.total_questions = result.analysis_results.length;
 
   // Normalize each question
   result.analysis_results = result.analysis_results.map((q: any) => {
@@ -230,6 +253,11 @@ export function normalizeAnalysisResult(result: any): AnalysisResult {
           timeframe: "Multiple or Unclear",
           timeframe_justification: ""
         };
+      }
+
+      // Fix financial_type values (remove "-type" suffix if present)
+      if (s.categorization.financial_type) {
+        s.categorization.financial_type = s.categorization.financial_type.replace('-type', '');
       }
 
       return s;

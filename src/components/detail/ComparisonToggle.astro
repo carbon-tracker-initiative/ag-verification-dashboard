@@ -34,25 +34,25 @@ const { hasComparison, verificationMetrics } = Astro.props;
           <div class="flex items-center gap-1">
             <span class="text-purple-600 font-semibold">Pass Rate:</span>
             <span class="text-purple-900 font-bold">
-              {verificationMetrics.verification_pass_rate.toFixed(1)}%
+              {verificationMetrics.pass_rate.toFixed(1)}%
             </span>
           </div>
           <div class="flex items-center gap-1">
             <span class="text-purple-600 font-semibold">Corrected:</span>
             <span class="text-purple-900 font-bold">
-              {verificationMetrics.total_corrected_snippets}
+              {verificationMetrics.snippets_corrected}
             </span>
           </div>
           <div class="flex items-center gap-1">
             <span class="text-purple-600 font-semibold">Removed:</span>
             <span class="text-purple-900 font-bold">
-              {verificationMetrics.total_removed_snippets}
+              {verificationMetrics.snippets_removed}
             </span>
           </div>
           <div class="flex items-center gap-1">
             <span class="text-purple-600 font-semibold">Unchanged:</span>
             <span class="text-purple-900 font-bold">
-              {verificationMetrics.total_unchanged_snippets}
+              {verificationMetrics.snippets_unchanged}
             </span>
           </div>
         </div>

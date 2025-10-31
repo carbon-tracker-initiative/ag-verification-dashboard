@@ -35,7 +35,7 @@ if (crossCompanyMetrics.global_stats.average_financial_rate < 50) {
 }
 
 // Temporal specificity insight
-const avgTemporalScore = crossCompanyMetrics.global_stats.average_disclosure_score;
+const avgTemporalScore = crossCompanyMetrics.global_stats.average_disclosure_score_all;
 if (avgTemporalScore < 70) {
   insights.push({
     type: 'warning',
