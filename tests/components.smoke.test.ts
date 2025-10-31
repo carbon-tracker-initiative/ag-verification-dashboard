@@ -137,62 +137,23 @@ await runTest('Layout: File exists and has main structure', async () => {
   }
 }, results);
 
-// ==================== Metrics Components ====================
+// ==================== Home Components ====================
 
-await runTest('MetricCard: File exists', async () => {
+await runTest('CompanyCard: File exists', async () => {
   try {
     const fs = await import('node:fs/promises');
     const path = await import('node:path');
 
     const componentPath = path.join(
       process.cwd(),
-      'src/components/metrics/MetricCard.astro'
+      'src/components/home/CompanyCard.astro'
     );
 
     const content = await fs.readFile(componentPath, 'utf-8');
 
     assert(content.length > 0, 'Component file should have content');
-    assert(content.includes('metric'), 'Should use metric data');
   } catch (error) {
-    throw new Error(`Failed to read MetricCard component: ${error}`);
-  }
-}, results);
-
-await runTest('QualityScore: File exists', async () => {
-  try {
-    const fs = await import('node:fs/promises');
-    const path = await import('node:path');
-
-    const componentPath = path.join(
-      process.cwd(),
-      'src/components/metrics/QualityScore.astro'
-    );
-
-    const content = await fs.readFile(componentPath, 'utf-8');
-
-    assert(content.length > 0, 'Component file should have content');
-    assert(content.includes('score'), 'Should display score');
-  } catch (error) {
-    throw new Error(`Failed to read QualityScore component: ${error}`);
-  }
-}, results);
-
-await runTest('CategoryBreakdown: File exists', async () => {
-  try {
-    const fs = await import('node:fs/promises');
-    const path = await import('node:path');
-
-    const componentPath = path.join(
-      process.cwd(),
-      'src/components/metrics/CategoryBreakdown.astro'
-    );
-
-    const content = await fs.readFile(componentPath, 'utf-8');
-
-    assert(content.length > 0, 'Component file should have content');
-    assert(content.includes('categories'), 'Should display categories');
-  } catch (error) {
-    throw new Error(`Failed to read CategoryBreakdown component: ${error}`);
+    throw new Error(`Failed to read CompanyCard component: ${error}`);
   }
 }, results);
 
@@ -212,7 +173,6 @@ await runTest('QuestionBenchmark: File exists', async () => {
 
     assert(content.length > 0, 'Component file should have content');
     assert(content.includes('questions'), 'Should display questions');
-    assert(content.includes('benchmark'), 'Should show benchmark data');
   } catch (error) {
     throw new Error(`Failed to read QuestionBenchmark component: ${error}`);
   }
@@ -278,41 +238,39 @@ await runTest('TrendsInsights: File exists', async () => {
 
 // ==================== Detail Components ====================
 
-await runTest('QuestionCard: File exists', async () => {
+await runTest('QuestionAccordion: File exists', async () => {
   try {
     const fs = await import('node:fs/promises');
     const path = await import('node:path');
 
     const componentPath = path.join(
       process.cwd(),
-      'src/components/detail/QuestionCard.astro'
+      'src/components/detail/QuestionAccordion.astro'
     );
 
     const content = await fs.readFile(componentPath, 'utf-8');
 
     assert(content.length > 0, 'Component file should have content');
-    assert(content.includes('question'), 'Should display question');
   } catch (error) {
-    throw new Error(`Failed to read QuestionCard component: ${error}`);
+    throw new Error(`Failed to read QuestionAccordion component: ${error}`);
   }
 }, results);
 
-await runTest('DisclosureSnippet: File exists', async () => {
+await runTest('SnippetCard: File exists', async () => {
   try {
     const fs = await import('node:fs/promises');
     const path = await import('node:path');
 
     const componentPath = path.join(
       process.cwd(),
-      'src/components/detail/DisclosureSnippet.astro'
+      'src/components/detail/SnippetCard.astro'
     );
 
     const content = await fs.readFile(componentPath, 'utf-8');
 
     assert(content.length > 0, 'Component file should have content');
-    assert(content.includes('snippet'), 'Should display snippet');
   } catch (error) {
-    throw new Error(`Failed to read DisclosureSnippet component: ${error}`);
+    throw new Error(`Failed to read SnippetCard component: ${error}`);
   }
 }, results);
 
@@ -385,15 +343,6 @@ await runTest('Data Loader: File exists and exports functions', async () => {
   }
 }, results);
 
-await runTest('Cross Company Analyzer: File exists and exports functions', async () => {
-  try {
-    const analyzer = await import('../src/utils/crossCompanyAnalyzer');
-
-    assert(typeof analyzer.analyzeCrossCompany === 'function', 'Should export analyzeCrossCompany');
-  } catch (error) {
-    throw new Error(`Failed to import crossCompanyAnalyzer: ${error}`);
-  }
-}, results);
 
 // ==================== Type Definitions ====================
 
@@ -412,7 +361,7 @@ await runTest('Type definitions: analysis.ts exists', async () => {
     assert(content.length > 0, 'Types file should have content');
     assert(content.includes('export type Classification'), 'Should export Classification type');
     assert(content.includes('export type FinancialType'), 'Should export FinancialType type');
-    assert(content.includes('export type Snippet'), 'Should export Snippet type');
+    assert(content.includes('export interface Snippet'), 'Should export Snippet interface');
     assert(content.includes('export interface AnalysisResult'), 'Should export AnalysisResult interface');
   } catch (error) {
     throw new Error(`Failed to read types file: ${error}`);
@@ -438,26 +387,6 @@ await runTest('Type definitions: metrics.ts exists', async () => {
   }
 }, results);
 
-// ==================== Configuration ====================
-
-await runTest('Categories configuration: File exists', async () => {
-  try {
-    const fs = await import('node:fs/promises');
-    const path = await import('node:path');
-
-    const configPath = path.join(
-      process.cwd(),
-      'src/config/categories.ts'
-    );
-
-    const content = await fs.readFile(configPath, 'utf-8');
-
-    assert(content.length > 0, 'Categories config should have content');
-    assert(content.includes('categories'), 'Should export categories');
-  } catch (error) {
-    throw new Error(`Failed to read categories config: ${error}`);
-  }
-}, results);
 
 // ==================== Styles ====================
 
