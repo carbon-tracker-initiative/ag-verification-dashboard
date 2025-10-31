@@ -15,82 +15,82 @@ interface Props {
 const { company } = Astro.props;
 ---
 
-<div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 hover:shadow-lg transition-all hover:scale-[1.02]">
+<div class="surface glow-ring p-6 hover:translate-y-[-2px] transition-transform duration-200">
   <!-- Header -->
   <div class="flex items-start justify-between mb-4">
     <div>
-      <h3 class="text-xl font-bold text-slate-900 mb-1">{company.company_name}</h3>
-      <p class="text-sm text-slate-600">Year {company.fiscal_year}</p>
+      <h3 class="text-xl font-bold text-slate-100 mb-1 tracking-tight">{company.company_name}</h3>
+      <p class="text-sm text-slate-400">Fiscal Year {company.fiscal_year}</p>
     </div>
     <GradeDisplay score={company.overall_disclosure_score} showGrade={true} showScore={true} size="lg" />
   </div>
 
   <!-- Mini Radar Visualization (simplified as bars) -->
-  <div class="mb-4 space-y-2">
+  <div class="mb-4 space-y-3">
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-600 w-24">Quality:</span>
-      <div class="flex-1 bg-slate-100 rounded-full h-2">
+      <span class="text-xs text-slate-400 w-24 uppercase tracking-wide">Quality</span>
+      <div class="flex-1 bg-slate-900/60 rounded-full h-2">
         <div
-          class="bg-green-500 h-2 rounded-full transition-all"
+          class="bg-emerald-400 h-2 rounded-full transition-all"
           style={`width: ${company.radar_metrics.disclosure_quality}%`}
         ></div>
       </div>
-      <span class="text-xs font-semibold text-slate-700 w-12 text-right">
+      <span class="text-xs font-semibold text-slate-200 w-12 text-right">
         {formatPercentage(company.radar_metrics.disclosure_quality, 0)}
       </span>
     </div>
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-600 w-24">Evidence:</span>
-      <div class="flex-1 bg-slate-100 rounded-full h-2">
+      <span class="text-xs text-slate-400 w-24 uppercase tracking-wide">Evidence</span>
+      <div class="flex-1 bg-slate-900/60 rounded-full h-2">
         <div
-          class="bg-blue-500 h-2 rounded-full transition-all"
+          class="bg-sky-400 h-2 rounded-full transition-all"
           style={`width: ${company.radar_metrics.evidence_depth}%`}
         ></div>
       </div>
-      <span class="text-xs font-semibold text-slate-700 w-12 text-right">
+      <span class="text-xs font-semibold text-slate-200 w-12 text-right">
         {formatPercentage(company.radar_metrics.evidence_depth, 0)}
       </span>
     </div>
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-600 w-24">Financial:</span>
-      <div class="flex-1 bg-slate-100 rounded-full h-2">
+      <span class="text-xs text-slate-400 w-24 uppercase tracking-wide">Financial</span>
+      <div class="flex-1 bg-slate-900/60 rounded-full h-2">
         <div
-          class="bg-purple-500 h-2 rounded-full transition-all"
+          class="bg-purple-400 h-2 rounded-full transition-all"
           style={`width: ${company.radar_metrics.financial_transparency}%`}
         ></div>
       </div>
-      <span class="text-xs font-semibold text-slate-700 w-12 text-right">
+      <span class="text-xs font-semibold text-slate-200 w-12 text-right">
         {formatPercentage(company.radar_metrics.financial_transparency, 0)}
       </span>
     </div>
   </div>
 
   <!-- Stats Grid -->
-  <div class="grid grid-cols-3 gap-3 mb-4 text-center">
+  <div class="grid grid-cols-3 gap-3 mb-5 text-center">
     <div>
-      <div class="text-lg font-bold text-blue-600">
+      <div class="text-lg font-bold text-emerald-300">
         {company.snippets_by_classification.FULL_DISCLOSURE}
       </div>
-      <div class="text-xs text-slate-600">Full</div>
+      <div class="text-xs text-slate-400 uppercase tracking-wide">Full</div>
     </div>
     <div>
-      <div class="text-lg font-bold text-purple-600">
+      <div class="text-lg font-bold text-indigo-300">
         {formatNumber(company.total_snippets)}
       </div>
-      <div class="text-xs text-slate-600">Snippets</div>
+      <div class="text-xs text-slate-400 uppercase tracking-wide">Snippets</div>
     </div>
     <div>
-      <div class="text-lg font-bold text-green-600">
+      <div class="text-lg font-bold text-cyan-300">
         {formatPercentage(company.financial_quantification_rate, 0)}
       </div>
-      <div class="text-xs text-slate-600">Financial</div>
+      <div class="text-xs text-slate-400 uppercase tracking-wide">Financial</div>
     </div>
   </div>
 
   <!-- View Analysis Button -->
   <a
     href={`/${company.company_name.toLowerCase()}/${company.fiscal_year}`}
-    class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition-colors"
+    class="block w-full text-center bg-gradient-to-r from-sky-500 via-indigo-500 to-purple-500 hover:from-sky-400 hover:via-indigo-400 hover:to-purple-400 text-white font-semibold py-2 px-4 rounded-md transition-all shadow-lg shadow-indigo-900/40"
   >
     View Analysis →
   </a>

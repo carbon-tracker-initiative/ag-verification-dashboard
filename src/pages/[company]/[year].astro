@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * Company-Year Detail Page
  * Displays comprehensive analysis for a specific company and fiscal year
@@ -79,22 +79,22 @@ const breadcrumbItems = [
 <Layout title={`${company} ${year} - Analysis`}>
   <Header />
 
-  <div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
+  <div class="min-h-screen bg-slate-950/70">
     <!-- Page Header -->
-    <div class="bg-white border-b border-slate-200 shadow-sm">
-      <div class="container mx-auto px-6 py-4">
+    <div class="bg-slate-950/85 border-b border-slate-800 shadow-lg">
+      <div class="container mx-auto px-6 py-6">
         <Breadcrumb items={breadcrumbItems} />
 
         <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mt-4">
           <div>
-            <h1 class="text-3xl font-bold text-slate-800 mb-1">
+            <h1 class="text-3xl font-bold text-slate-50 mb-1 tracking-tight">
               {company} - Year {year}
             </h1>
-            <div class="flex items-center gap-4 text-sm text-slate-600">
+            <div class="flex items-center gap-4 text-sm text-slate-400 flex-wrap">
               <span>Model: {companyData.model}</span>
-              <span>•</span>
+              <span aria-hidden="true">&bull;</span>
               <span>{companyData.verified.analysis_results.length} questions analyzed</span>
-              <span>•</span>
+              <span aria-hidden="true">&bull;</span>
               <span>{companyMetrics.total_snippets} evidence snippets</span>
             </div>
           </div>
@@ -102,13 +102,13 @@ const breadcrumbItems = [
           <div class="flex items-center gap-6">
             <!-- Overall Grade -->
             <div class="text-center">
-              <div class="text-5xl font-bold text-blue-600">
+              <div class="text-5xl font-bold text-sky-300">
                 {companyMetrics.overall_grade}
               </div>
-              <div class="text-sm text-slate-600 mt-1">
+              <div class="text-sm text-slate-300 mt-1">
                 {companyMetrics.overall_disclosure_score.toFixed(1)}%
               </div>
-              <div class="text-xs text-slate-500">Overall Quality</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wide">Overall Quality</div>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ const breadcrumbItems = [
     </div>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-6 py-8">
+    <main class="container mx-auto px-6 py-10">
       <!-- Comparison Toggle (if available) -->
       <ComparisonToggle
         hasComparison={companyData.hasComparison}
@@ -130,9 +130,9 @@ const breadcrumbItems = [
 
       <!-- Category Scores Overview -->
       <section class="mb-8">
-        <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
-          <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="surface p-6">
+          <h2 class="text-xl font-bold text-slate-100 mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
             </svg>
             Category Performance
@@ -142,19 +142,19 @@ const breadcrumbItems = [
             {categoriesConfig.categories.map(cat => {
               const score = companyMetrics.category_scores[cat.name] || 0;
               return (
-                <div class="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                <div class="p-4 bg-slate-900/60 rounded-lg border border-slate-800">
                   <div class="flex items-center gap-2 mb-2">
                     <span class="text-2xl">{cat.icon}</span>
                     <div class="flex-1">
-                      <div class="text-sm font-semibold text-slate-700">{cat.name}</div>
+                      <div class="text-sm font-semibold text-slate-200">{cat.name}</div>
                       <div class="flex items-center gap-2 mt-1">
-                        <div class="flex-1 bg-slate-200 rounded-full h-2">
+                        <div class="flex-1 bg-slate-800 rounded-full h-2">
                           <div
                             class="h-2 rounded-full transition-all"
                             style={`width: ${score}%; background-color: ${cat.color}`}
                           ></div>
                         </div>
-                        <span class="text-sm font-bold text-slate-800 min-w-[50px] text-right">
+                        <span class="text-sm font-bold text-slate-100 min-w-[50px] text-right">
                           {score.toFixed(1)}%
                         </span>
                       </div>
@@ -170,8 +170,8 @@ const breadcrumbItems = [
       <!-- Filters and Questions -->
       <section>
         <div class="mb-6">
-          <h2 class="text-2xl font-bold text-slate-800 mb-4">Detailed Question Analysis</h2>
-          <p class="text-sm text-slate-600 mb-6">
+          <h2 class="text-2xl font-bold text-slate-100 mb-4">Detailed Question Analysis</h2>
+          <p class="text-sm text-slate-400 mb-6">
             Explore each question with snippet-level scoring. Questions are collapsed by default - click to expand and view detailed evidence.
           </p>
 
@@ -233,3 +233,4 @@ const breadcrumbItems = [
     }
   }
 </style>
+

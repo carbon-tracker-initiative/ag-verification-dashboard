@@ -16,22 +16,22 @@ const { items } = Astro.props;
 ---
 
 <nav aria-label="Breadcrumb" class="mb-6">
-  <ol class="flex items-center gap-2 text-sm">
+  <ol class="flex items-center gap-2 text-sm text-slate-400">
     {items.map((item, index) => (
       <li class="flex items-center gap-2">
         {index > 0 && (
-          <span class="text-slate-400" aria-hidden="true">›</span>
+          <span class="text-slate-600" aria-hidden="true">›</span>
         )}
 
         {item.href ? (
           <a
             href={item.href}
-            class="text-slate-600 hover:text-slate-900 transition-colors font-medium"
+            class="text-slate-300 hover:text-sky-300 transition-colors font-medium"
           >
             {item.label}
           </a>
         ) : (
-          <span class="text-slate-900 font-semibold">
+          <span class="text-slate-100 font-semibold">
             {item.label}
           </span>
         )}

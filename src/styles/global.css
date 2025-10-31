@@ -1,9 +1,170 @@
 /**
  * Global Styles for Verification Dashboard
- * Tailwind v4 compatible - using CSS variables and direct utilities
+ * Tailwind v4 compatible - extended with dark Doppler-inspired theme
  */
 
 @import "tailwindcss";
+
+/* ==================== Theme Tokens ==================== */
+
+:root {
+  color-scheme: dark;
+
+  --v-gradient-primary: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.25), transparent 60%),
+    radial-gradient(circle at 80% 0%, rgba(16, 185, 129, 0.2), transparent 55%),
+    radial-gradient(circle at 50% 100%, rgba(147, 51, 234, 0.18), transparent 55%),
+    linear-gradient(160deg, #020617, #0f172a 45%, #020617);
+
+  --v-surface-base: rgba(15, 23, 42, 0.92);
+  --v-surface-elevated: rgba(30, 41, 59, 0.9);
+  --v-surface-glow: rgba(30, 64, 175, 0.18);
+  --v-border: rgba(148, 163, 184, 0.25);
+  --v-border-strong: rgba(148, 163, 184, 0.4);
+
+  --v-text-primary: #e2e8f0;
+  --v-text-secondary: #94a3b8;
+  --v-text-tertiary: #64748b;
+  --v-text-accent: #38bdf8;
+
+  --v-chip-bg: rgba(51, 65, 85, 0.7);
+  --v-chip-text: #cbd5f5;
+}
+
+body {
+  background: var(--v-gradient-primary);
+  color: var(--v-text-primary);
+  min-height: 100vh;
+  font-feature-settings: "kern" 1, "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+main,
+section {
+  color: inherit;
+}
+
+a {
+  color: var(--v-text-accent);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #60a5fa;
+}
+
+.card,
+.surface {
+  background-color: var(--v-surface-base);
+  border: 1px solid var(--v-border);
+  border-radius: 1rem;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover,
+.surface:hover {
+  transform: translateY(-2px);
+  border-color: rgba(96, 165, 250, 0.35);
+  box-shadow: 0 25px 55px rgba(14, 165, 233, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.glass {
+  background-color: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.chip {
+  background-color: var(--v-chip-bg);
+  color: var(--v-chip-text);
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.accent-border {
+  border-image: linear-gradient(120deg, rgba(56, 189, 248, 0.6), rgba(59, 130, 246, 0.35)) 1;
+}
+
+/* Tailwind Utility Overrides for Dark Theme Alignment */
+.bg-white,
+.bg-slate-50,
+.bg-slate-100,
+.bg-blue-50,
+.bg-blue-100 {
+  background-color: var(--v-surface-base) !important;
+  color: inherit;
+}
+
+.bg-slate-200,
+.bg-slate-300 {
+  background-color: rgba(71, 85, 105, 0.45) !important;
+}
+
+.border-slate-200,
+.border-slate-100,
+.border-slate-300 {
+  border-color: var(--v-border) !important;
+}
+
+.text-slate-900,
+.text-slate-800,
+.text-slate-700 {
+  color: var(--v-text-primary) !important;
+}
+
+.text-slate-600 {
+  color: var(--v-text-secondary) !important;
+}
+
+.text-slate-500,
+.text-slate-400,
+.text-slate-300 {
+  color: var(--v-text-tertiary) !important;
+}
+
+.shadow-sm,
+.shadow-md,
+.shadow-lg {
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.35) !important;
+}
+
+.hover\:bg-slate-50:hover,
+.hover\:bg-slate-100:hover,
+.hover\:bg-blue-50:hover,
+.hover\:bg-blue-100:hover {
+  background-color: rgba(30, 64, 175, 0.35) !important;
+  color: #f8fafc !important;
+}
+
+.bg-gradient-panel {
+  background: linear-gradient(160deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.85));
+}
+
+.glow-ring {
+  position: relative;
+}
+
+.glow-ring::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+  background: conic-gradient(from 120deg, rgba(56, 189, 248, 0.65), rgba(59, 130, 246, 0.15), rgba(16, 185, 129, 0.6));
+  transition: opacity 0.25s ease;
+  filter: blur(12px);
+  z-index: -1;
+}
+
+.glow-ring:hover::after {
+  opacity: 0.9;
+}
 
 /* ==================== Custom Animations ==================== */
 
@@ -89,10 +250,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-feature-settings: "kern" 1, "liga" 1;
-}
-
 /* ==================== Accessibility Enhancements ==================== */
 
 /* Focus Visible */
@@ -161,16 +318,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(241 245 249);
+  background-color: rgba(15, 23, 42, 0.75);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(148 163 184);
+  background-color: rgba(148, 163, 184, 0.6);
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(100 116 139);
+  background-color: rgba(148, 163, 184, 0.9);
 }
 
 /* ==================== Print Styles ==================== */
@@ -219,35 +376,29 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, rgb(37 99 235), rgb(96 165 250));
+  background-image: linear-gradient(to right, rgb(56 189 248), rgb(37 99 235));
 }
 
 .text-gradient-green {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, rgb(5 150 105), rgb(52 211 153));
+  background-image: linear-gradient(to right, rgb(16 185 129), rgb(45 212 191));
 }
 
 .text-gradient-purple {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, rgb(124 58 237), rgb(167 139 250));
+  background-image: linear-gradient(to right, rgb(139 92 246), rgb(168 85 247));
 }
 
-/* Glass morphism effect */
-.glass {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+.chip-warning {
+  background-color: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
 }
 
-/* Shadows with color */
-.shadow-blue {
-  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1), 0 4px 6px -4px rgba(59, 130, 246, 0.1);
-}
-
-.shadow-green {
-  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.1), 0 4px 6px -4px rgba(16, 185, 129, 0.1);
+.chip-success {
+  background-color: rgba(16, 185, 129, 0.18);
+  color: #6ee7b7;
 }

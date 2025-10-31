@@ -24,15 +24,17 @@ const isValid = pdfUrl !== '#';
   target="_blank"
   rel="noopener noreferrer"
   class:list={[
-    'inline-flex items-center gap-1.5 text-sm hover:underline transition-colors',
-    isValid ? 'text-blue-600 hover:text-blue-800' : 'text-gray-500 cursor-not-allowed',
+    'inline-flex items-center gap-1.5 text-sm transition-colors',
+    isValid
+      ? 'text-sky-300 hover:text-sky-200 hover:underline'
+      : 'text-slate-500 cursor-not-allowed',
     className
   ]}
   title={isValid ? `Open ${displayText} in new tab` : 'PDF source not available'}
 >
-  {showIcon && <span class="text-base">📄</span>}
+  {showIcon && <span class="text-base" aria-hidden="true">📄</span>}
   <span class="font-medium">{displayText}</span>
-  {isValid && showIcon && <span class="text-xs">🔗</span>}
+  {isValid && showIcon && <span class="text-xs" aria-hidden="true">↗</span>}
 </a>
 
 <style>

@@ -1,7 +1,7 @@
 ---
 /**
  * Hero section for home page
- * Displays title, subtitle, and global statistics
+ * Dark Doppler aesthetic with glowing stat tiles
  */
 
 import { formatNumber, formatPercentage } from '../../utils/formatters';
@@ -20,58 +20,56 @@ interface Props {
 const { globalStats } = Astro.props;
 ---
 
-<section class="bg-gradient-to-br from-slate-50 to-slate-100 border-b border-slate-200">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<section class="relative overflow-hidden border-b border-slate-800 bg-slate-950/60">
+  <div class="absolute inset-0 opacity-60 blur-3xl bg-[radial-gradient(circle_at_25%_10%,rgba(96,165,250,0.25),transparent_55%),radial-gradient(circle_at_75%_10%,rgba(59,130,246,0.2),transparent_55%)]" aria-hidden="true"></div>
+
+  <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-14">
     <!-- Title and subtitle -->
     <div class="text-center mb-12">
-      <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-        Agricultural Risk Disclosure Analysis
+      <h1 class="text-4xl sm:text-5xl font-bold text-slate-50 mb-4 tracking-tight">
+        Agricultural Risk Verification Command Center
       </h1>
-      <p class="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
-        Verified AI-powered analysis of environmental, health, market, and regulatory risks
+      <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto">
+        Dark Doppler styled intelligence layer for certified risk disclosures, scored at the snippet level.
       </p>
     </div>
 
     <!-- Global stats bar -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
       <!-- Companies -->
-      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
-        <div class="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">
+      <div class="surface glow-ring p-6 text-center">
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Companies</div>
+        <div class="text-3xl sm:text-4xl font-bold text-sky-300 mb-2">
           {globalStats.total_companies}
         </div>
-        <div class="text-sm sm:text-base text-slate-600 font-medium">
-          Companies
-        </div>
+        <div class="text-sm text-slate-400">with verified disclosure reviews</div>
       </div>
 
       <!-- Questions -->
-      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
-        <div class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-2">
+      <div class="surface glow-ring p-6 text-center">
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Questions</div>
+        <div class="text-3xl sm:text-4xl font-bold text-indigo-300 mb-2">
           {formatNumber(globalStats.total_questions)}
         </div>
-        <div class="text-sm sm:text-base text-slate-600 font-medium">
-          Questions
-        </div>
+        <div class="text-sm text-slate-400">scored for transparency</div>
       </div>
 
       <!-- Disclosures -->
-      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
-        <div class="text-3xl sm:text-4xl font-bold text-purple-600 mb-2">
+      <div class="surface glow-ring p-6 text-center">
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Evidence Snippets</div>
+        <div class="text-3xl sm:text-4xl font-bold text-purple-300 mb-2">
           {formatNumber(globalStats.total_snippets)}
         </div>
-        <div class="text-sm sm:text-base text-slate-600 font-medium">
-          Disclosures
-        </div>
+        <div class="text-sm text-slate-400">triangulated citations</div>
       </div>
 
       <!-- Avg Quality -->
-      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-6 text-center hover:shadow-md transition-shadow">
-        <div class="text-3xl sm:text-4xl font-bold text-green-600 mb-2">
+      <div class="surface glow-ring p-6 text-center">
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Average Quality</div>
+        <div class="text-3xl sm:text-4xl font-bold text-emerald-300 mb-2">
           {formatPercentage(globalStats.average_disclosure_score_all, 1)}
         </div>
-        <div class="text-sm sm:text-base text-slate-600 font-medium">
-          Avg Quality
-        </div>
+        <div class="text-sm text-slate-400">weighted verification score</div>
       </div>
     </div>
   </div>

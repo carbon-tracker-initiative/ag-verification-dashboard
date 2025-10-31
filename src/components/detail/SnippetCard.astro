@@ -2,222 +2,229 @@
 /**
  * Snippet Card Component
  * Displays detailed snippet information with multi-dimensional scoring
+ * Now collapsed by default with expandable summary
  */
 
 import type { Snippet } from '../../types/analysis';
 import ClassificationBadge from '../shared/ClassificationBadge.astro';
 import SourceLink from '../shared/SourceLink.astro';
-import { calculateSnippetScore, calculateFinancialScore, calculateTemporalScore, calculateNarrativeScore } from '../../utils/metricsCalculator';
+import {
+  calculateSnippetScore,
+  calculateFinancialScore,
+  calculateTemporalScore,
+  calculateNarrativeScore
+} from '../../utils/metricsCalculator';
 
 interface Props {
   snippet: Snippet;
+  index: number;
 }
 
-const { snippet } = Astro.props;
+const { snippet, index } = Astro.props;
 
-// Calculate scores
 const totalScore = calculateSnippetScore(snippet);
 const financialScore = calculateFinancialScore(snippet);
 const temporalScore = calculateTemporalScore(snippet);
 const narrativeScore = calculateNarrativeScore(snippet);
 
-// Determine grade color
 function getScoreColor(score: number): string {
-  if (score >= 90) return 'text-emerald-600';
-  if (score >= 80) return 'text-blue-600';
-  if (score >= 70) return 'text-amber-600';
-  if (score >= 60) return 'text-orange-600';
-  return 'text-red-600';
+  if (score >= 90) return 'text-emerald-300';
+  if (score >= 80) return 'text-sky-300';
+  if (score >= 70) return 'text-amber-300';
+  if (score >= 60) return 'text-orange-300';
+  return 'text-rose-300';
 }
 
 function getProgressBarColor(score: number): string {
-  if (score >= 90) return 'bg-emerald-500';
-  if (score >= 80) return 'bg-blue-500';
-  if (score >= 70) return 'bg-amber-500';
-  if (score >= 60) return 'bg-orange-500';
-  return 'bg-red-500';
+  if (score >= 90) return 'bg-emerald-400';
+  if (score >= 80) return 'bg-sky-400';
+  if (score >= 70) return 'bg-amber-400';
+  if (score >= 60) return 'bg-orange-400';
+  return 'bg-rose-400';
 }
+
+const status = (snippet as any).comparison_status || 'unchanged';
+const statusBadge = {
+  unchanged: { label: 'Unchanged', classes: 'bg-emerald-500/20 text-emerald-200 border border-emerald-400/30' },
+  corrected: { label: 'Corrected', classes: 'bg-amber-500/20 text-amber-200 border border-amber-400/30' },
+  removed: { label: 'Removed', classes: 'bg-rose-500/20 text-rose-200 border border-rose-400/30' }
+}[status] || { label: 'Verified', classes: 'bg-slate-800 text-slate-300 border border-slate-700' };
+
+const openByDefault = index === 1;
 ---
 
-<div class="bg-white border border-slate-200 rounded-lg p-4 hover:border-blue-300 transition-colors">
-  <!-- Header: Classification and Overall Score -->
-  <div class="flex items-start justify-between gap-3 mb-3">
-    <div class="flex items-center gap-2">
-      <ClassificationBadge classification={snippet.classification} size="small" />
-      <span class="text-xs text-slate-500">ID: {snippet.snippet_id}</span>
-    </div>
-    <div class="text-right">
-      <div class={`text-2xl font-bold ${getScoreColor(totalScore)}`}>
-        {totalScore.toFixed(0)}%
-      </div>
-      <div class="text-xs text-slate-500">Quality Score</div>
-    </div>
-  </div>
-
-  <!-- Quote -->
-  <div class="mb-3 p-3 bg-slate-50 rounded border-l-4 border-blue-400">
-    <div class="text-sm text-slate-700 leading-relaxed italic">
-      "{snippet.quote}"
-    </div>
-  </div>
-
-  <!-- Source -->
-  <div class="mb-3">
-    <SourceLink source={snippet.source} />
-  </div>
-
-  <!-- Multi-Dimensional Scoring Breakdown -->
-  <div class="mb-3 p-3 bg-gradient-to-br from-blue-50 to-slate-50 rounded-lg border border-slate-200">
-    <div class="text-xs font-semibold text-slate-700 mb-3">Score Breakdown</div>
-
-    <!-- Financial Transparency -->
-    <div class="mb-2">
-      <div class="flex items-center justify-between mb-1">
-        <div class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          <span class="text-xs font-medium text-slate-700">Financial Transparency</span>
+<div class="snippet-card">
+  <details
+    class="group border border-slate-800 rounded-xl bg-slate-950/70 transition-colors"
+    data-snippet-status={status}
+    open={openByDefault}
+  >
+    <summary class="flex items-start justify-between gap-4 px-4 py-3 sm:px-5 sm:py-4 cursor-pointer list-none">
+      <div class="flex items-start gap-3">
+        <div class="flex-shrink-0 mt-0.5">
+          <ClassificationBadge classification={snippet.classification} size="small" />
         </div>
-        <div class="flex items-center gap-2">
-          <span class="text-xs text-slate-600">{snippet.categorization.financial_type}</span>
-          <span class="text-xs font-bold text-emerald-600">{financialScore}/3</span>
+        <div class="space-y-1">
+          <div class="flex flex-wrap items-center gap-2 text-xs text-slate-400 uppercase tracking-wide">
+            <span>Snippet #{index}</span>
+            <span class="font-mono text-slate-500">{snippet.snippet_id}</span>
+            <span class="px-2 py-0.5 rounded-full text-[11px] {statusBadge.classes} comparison-badge hidden">
+              {statusBadge.label}
+            </span>
+          </div>
+          <div class="text-sm text-slate-200 line-clamp-2 sm:line-clamp-1">
+            "{snippet.quote}"
+          </div>
         </div>
       </div>
-      <div class="w-full bg-slate-200 rounded-full h-1.5">
-        <div
-          class="bg-emerald-500 h-1.5 rounded-full transition-all"
-          style={`width: ${(financialScore / 3) * 100}%`}
-        ></div>
-      </div>
-    </div>
 
-    <!-- Temporal Specificity -->
-    <div class="mb-2">
-      <div class="flex items-center justify-between mb-1">
-        <div class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-          <span class="text-xs font-medium text-slate-700">Temporal Specificity</span>
+      <div class="text-right">
+        <div class={`text-2xl font-bold ${getScoreColor(totalScore)}`}>
+          {totalScore.toFixed(0)}%
         </div>
-        <div class="flex items-center gap-2">
-          <span class="text-xs text-slate-600">{snippet.categorization.timeframe}</span>
-          <span class="text-xs font-bold text-blue-600">{temporalScore}/3</span>
-        </div>
+        <div class="text-xs text-slate-500">Quality score</div>
       </div>
-      <div class="w-full bg-slate-200 rounded-full h-1.5">
-        <div
-          class="bg-blue-500 h-1.5 rounded-full transition-all"
-          style={`width: ${(temporalScore / 3) * 100}%`}
-        ></div>
-      </div>
-    </div>
-
-    <!-- Narrative Framing -->
-    <div>
-      <div class="flex items-center justify-between mb-1">
-        <div class="flex items-center gap-2">
-          <svg class="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
-          </svg>
-          <span class="text-xs font-medium text-slate-700">Narrative Framing</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="text-xs text-slate-600">{snippet.categorization.framing}</span>
-          <span class="text-xs font-bold text-purple-600">{narrativeScore}/3</span>
-        </div>
-      </div>
-      <div class="w-full bg-slate-200 rounded-full h-1.5">
-        <div
-          class="bg-purple-500 h-1.5 rounded-full transition-all"
-          style={`width: ${(narrativeScore / 3) * 100}%`}
-        ></div>
-      </div>
-    </div>
-
-    <!-- Total Score Progress Bar -->
-    <div class="mt-3 pt-3 border-t border-slate-200">
-      <div class="flex items-center justify-between mb-1">
-        <span class="text-xs font-bold text-slate-700">Composite Score</span>
-        <span class={`text-sm font-bold ${getScoreColor(totalScore)}`}>
-          {totalScore.toFixed(1)}%
-        </span>
-      </div>
-      <div class="w-full bg-slate-200 rounded-full h-2">
-        <div
-          class={`${getProgressBarColor(totalScore)} h-2 rounded-full transition-all`}
-          style={`width: ${totalScore}%`}
-        ></div>
-      </div>
-      <div class="text-xs text-slate-500 mt-1 text-center">
-        ({financialScore} + {temporalScore} + {narrativeScore}) / 9 × 100%
-      </div>
-    </div>
-  </div>
-
-  <!-- Classification Justification -->
-  <div class="mb-3">
-    <div class="text-xs font-semibold text-slate-600 mb-1">Classification Justification</div>
-    <div class="text-xs text-slate-700 p-2 bg-slate-50 rounded border border-slate-200">
-      {snippet.classification_justification}
-    </div>
-  </div>
-
-  <!-- Detailed Justifications (Collapsible) -->
-  <details class="mb-3">
-    <summary class="text-xs font-semibold text-slate-600 cursor-pointer hover:text-blue-600 flex items-center gap-1">
-      <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-      </svg>
-      <span>View Detailed Justifications</span>
     </summary>
-    <div class="mt-2 space-y-2 pl-4">
-      <!-- Financial Justification -->
+
+    <div class="px-4 pb-4 sm:px-5 sm:pb-5 space-y-4">
+      <div class="text-sm text-slate-300 leading-relaxed bg-slate-900/60 border border-slate-800 rounded-lg p-3">
+        "{snippet.quote}"
+      </div>
+
       <div>
-        <div class="text-xs font-medium text-emerald-700 mb-1">Financial Type Reasoning</div>
-        <div class="text-xs text-slate-600 p-2 bg-emerald-50 rounded border border-emerald-200">
-          {snippet.categorization.financial_justification}
+        <SourceLink source={snippet.source} />
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="space-y-3 p-4 rounded-lg border border-slate-800 bg-slate-900/40">
+          <div class="text-xs font-semibold text-slate-300 uppercase tracking-wide">
+            Score Breakdown
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1 text-xs text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Financial Transparency
+              </span>
+              <span class="font-bold text-emerald-200">{financialScore}/3</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-1.5">
+              <div
+                class="h-1.5 rounded-full transition-all bg-emerald-400"
+                style={`width: ${(financialScore / 3) * 100}%`}
+              ></div>
+            </div>
+            <div class="text-[11px] text-slate-500 mt-1">
+              {snippet.categorization.financial_type}
+            </div>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1 text-xs text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                Temporal Specificity
+              </span>
+              <span class="font-bold text-sky-200">{temporalScore}/3</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-1.5">
+              <div
+                class="h-1.5 rounded-full transition-all bg-sky-400"
+                style={`width: ${(temporalScore / 3) * 100}%`}
+              ></div>
+            </div>
+            <div class="text-[11px] text-slate-500 mt-1">
+              {snippet.categorization.timeframe}
+            </div>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between mb-1 text-xs text-slate-400">
+              <span class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path>
+                </svg>
+                Narrative Framing
+              </span>
+              <span class="font-bold text-purple-200">{narrativeScore}/3</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-1.5">
+              <div
+                class="h-1.5 rounded-full transition-all bg-purple-400"
+                style={`width: ${(narrativeScore / 3) * 100}%`}
+              ></div>
+            </div>
+            <div class="text-[11px] text-slate-500 mt-1">
+              {snippet.categorization.framing}
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-3 p-4 rounded-lg border border-slate-800 bg-slate-900/40">
+          <div class="text-xs font-semibold text-slate-300 uppercase tracking-wide">
+            Verification Notes
+          </div>
+          <div class="text-xs text-slate-300 bg-slate-900 rounded-lg border border-slate-800 p-3">
+            {snippet.classification_justification}
+          </div>
+
+          <div class="bg-slate-900 rounded-lg border border-slate-800 p-3 space-y-2 text-xs text-slate-300">
+            <div>
+              <div class="font-semibold text-emerald-300 mb-1">Financial Type</div>
+              <div>{snippet.categorization.financial_justification}</div>
+            </div>
+            <div>
+              <div class="font-semibold text-sky-300 mb-1">Timeframe</div>
+              <div>{snippet.categorization.timeframe_justification}</div>
+            </div>
+            <div>
+              <div class="font-semibold text-purple-300 mb-1">Narrative Framing</div>
+              <div>{snippet.categorization.framing_justification}</div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Temporal Justification -->
-      <div>
-        <div class="text-xs font-medium text-blue-700 mb-1">Timeframe Reasoning</div>
-        <div class="text-xs text-slate-600 p-2 bg-blue-50 rounded border border-blue-200">
-          {snippet.categorization.timeframe_justification}
+      <div class="pt-3 border-t border-slate-800">
+        <div class="flex items-center justify-between mb-1">
+          <span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Composite Score</span>
+          <span class={`text-sm font-bold ${getScoreColor(totalScore)}`}>
+            {totalScore.toFixed(1)}%
+          </span>
+        </div>
+        <div class="w-full bg-slate-800 rounded-full h-2">
+          <div
+            class={`${getProgressBarColor(totalScore)} h-2 rounded-full transition-all`}
+            style={`width: ${totalScore}%`}
+          ></div>
+        </div>
+        <div class="text-[11px] text-slate-500 mt-1 text-center">
+          ({financialScore} + {temporalScore} + {narrativeScore}) / 9
         </div>
       </div>
 
-      <!-- Framing Justification -->
-      <div>
-        <div class="text-xs font-medium text-purple-700 mb-1">Framing Reasoning</div>
-        <div class="text-xs text-slate-600 p-2 bg-purple-50 rounded border border-purple-200">
-          {snippet.categorization.framing_justification}
+      {snippet.financial_amounts && snippet.financial_amounts.length > 0 && (
+        <div class="space-y-2">
+          <div class="text-xs font-semibold text-emerald-300 uppercase tracking-wide">
+            Financial Amounts
+          </div>
+          <div class="flex flex-wrap gap-2">
+            {snippet.financial_amounts.map(amount => (
+              <div class="px-2 py-1 bg-emerald-500/15 border border-emerald-400/40 rounded text-xs font-mono text-emerald-200">
+                {amount.amount} {amount.currency}
+                {amount.context && (
+                  <span class="text-emerald-300 ml-1">({amount.context})</span>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   </details>
-
-  <!-- Financial Amounts (if any) -->
-  {snippet.financial_amounts && snippet.financial_amounts.length > 0 && (
-    <div class="mb-3">
-      <div class="text-xs font-semibold text-emerald-600 mb-1 flex items-center gap-1">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        <span>Financial Amounts</span>
-      </div>
-      <div class="flex flex-wrap gap-2">
-        {snippet.financial_amounts.map(amount => (
-          <div class="px-2 py-1 bg-emerald-50 border border-emerald-200 rounded text-xs font-mono text-emerald-800">
-            {amount.amount} {amount.currency}
-            {amount.context && (
-              <span class="text-emerald-600 ml-1">({amount.context})</span>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )}
 </div>
