@@ -235,7 +235,7 @@ const { categories } = Astro.props;
       let visibleCount = 0;
 
       questionNodes.forEach(questionEl => {
-        const matchesCategory = categoryValue === 'all' || (questionEl.dataset.category || '').includes(categoryValue);
+        const matchesCategory = categoryValue === 'all' || questionEl.dataset.categoryId === categoryValue;
         const matchesClassification = classificationValue === 'all' || questionEl.dataset.classification === classificationValue;
         const matchesQuality = qualityValue === 'all' || questionEl.dataset.grade === qualityValue;
 

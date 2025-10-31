@@ -189,6 +189,7 @@ const breadcrumbItems = [
             const categoryConfig = categoriesConfig.categories.find(c => c.name === categoryName);
             const categoryIcon = categoryConfig?.icon || '📊';
             const categoryColor = categoryConfig?.color || '#6b7280';
+            const categoryId = categoryConfig?.id || categoryName;
 
             return items.map(({ question, metrics }) => (
               <QuestionAccordion
@@ -197,6 +198,7 @@ const breadcrumbItems = [
                 category={categoryName}
                 categoryIcon={categoryIcon}
                 categoryColor={categoryColor}
+                categoryId={categoryId}
               />
             ));
           })}

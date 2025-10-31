@@ -16,9 +16,10 @@ interface Props {
   category: string;
   categoryIcon: string;
   categoryColor: string;
+  categoryId: string;
 }
 
-const { question, metrics, category, categoryIcon, categoryColor } = Astro.props;
+const { question, metrics, category, categoryIcon, categoryColor, categoryId } = Astro.props;
 
 const bestClassification = question.disclosures.length > 0
   ? question.disclosures[0].classification
@@ -35,6 +36,7 @@ const disabledIcon = '—';
   class="question-card surface transition-all"
   data-question-id={question.question_id}
   data-category={category}
+  data-category-id={categoryId}
   data-classification={bestClassification}
   data-grade={metrics.disclosure_quality_grade}
   data-score={metrics.average_snippet_score}
