@@ -13,17 +13,27 @@ interface Props {
 
 const { crossCompanyMetrics } = Astro.props;
 
-// Get top and bottom performing questions
-const topQuestions = crossCompanyMetrics.question_rankings
+// Helper function to calculate grade from score
+function scoreToGrade(score: number): string {
+  if (score >= 90) return 'A';
+  if (score >= 80) return 'B';
+  if (score >= 70) return 'C';
+  if (score >= 60) return 'D';
+  return 'F';
+}
+
+// Get top and bottom performing questions (with safety check)
+const rankings = crossCompanyMetrics.question_rankings || [];
+const topQuestions = [...rankings]
   .sort((a, b) => b.average_score_across_companies - a.average_score_across_companies)
   .slice(0, 10);
 
-const bottomQuestions = crossCompanyMetrics.question_rankings
+const bottomQuestions = [...rankings]
   .sort((a, b) => a.average_score_across_companies - b.average_score_across_companies)
   .slice(0, 10);
 
 // Get questions sorted by companies with full disclosure (as a proxy for consistency)
-const highVarianceQuestions = crossCompanyMetrics.question_rankings
+const highVarianceQuestions = [...rankings]
   .sort((a, b) => a.companies_with_full_disclosure - b.companies_with_full_disclosure)
   .slice(0, 10);
 ---
@@ -80,23 +90,23 @@ const highVarianceQuestions = crossCompanyMetrics.question_rankings
                     </h3>
                   </div>
                   <GradeDisplay
-                    grade={q.average_grade}
-                    score={q.average_score}
+                    grade={scoreToGrade(q.average_score_across_companies)}
+                    score={q.average_score_across_companies}
                     size="small"
                   />
                 </div>
                 <div class="flex flex-wrap gap-4 text-xs text-slate-600">
                   <div>
-                    <span class="font-semibold">Avg Score:</span> {q.average_score.toFixed(1)}%
+                    <span class="font-semibold">Avg Score:</span> {q.average_score_across_companies.toFixed(1)}%
                   </div>
                   <div>
-                    <span class="font-semibold">Companies:</span> {q.company_count}
+                    <span class="font-semibold">Companies:</span> {q.companies_analyzed}
                   </div>
                   <div>
-                    <span class="font-semibold">Avg Snippets:</span> {q.average_snippets.toFixed(1)}
+                    <span class="font-semibold">Total Snippets:</span> {q.total_snippets_across_companies}
                   </div>
                   <div>
-                    <span class="font-semibold">Financial Rate:</span> {q.financial_rate.toFixed(0)}%
+                    <span class="font-semibold">Financial Rate:</span> {q.average_financial_rate.toFixed(0)}%
                   </div>
                 </div>
               </div>
@@ -124,23 +134,23 @@ const highVarianceQuestions = crossCompanyMetrics.question_rankings
                     </h3>
                   </div>
                   <GradeDisplay
-                    grade={q.average_grade}
-                    score={q.average_score}
+                    grade={scoreToGrade(q.average_score_across_companies)}
+                    score={q.average_score_across_companies}
                     size="small"
                   />
                 </div>
                 <div class="flex flex-wrap gap-4 text-xs text-slate-600">
                   <div>
-                    <span class="font-semibold">Avg Score:</span> {q.average_score.toFixed(1)}%
+                    <span class="font-semibold">Avg Score:</span> {q.average_score_across_companies.toFixed(1)}%
                   </div>
                   <div>
-                    <span class="font-semibold">Companies:</span> {q.company_count}
+                    <span class="font-semibold">Companies:</span> {q.companies_analyzed}
                   </div>
                   <div>
-                    <span class="font-semibold">Avg Snippets:</span> {q.average_snippets.toFixed(1)}
+                    <span class="font-semibold">Full Disclosure:</span> {q.companies_with_full_disclosure} companies
                   </div>
                   <div>
-                    <span class="font-semibold">No Disclosure:</span> {q.no_disclosure_count} companies
+                    <span class="font-semibold">Total Snippets:</span> {q.total_snippets_across_companies}
                   </div>
                 </div>
               </div>
@@ -173,33 +183,24 @@ const highVarianceQuestions = crossCompanyMetrics.question_rankings
                       {q.question_text}
                     </h3>
                   </div>
-                  <div class="text-right">
-                    <div class="text-lg font-bold text-amber-600">
-                      {q.score_variance.toFixed(1)}
-                    </div>
-                    <div class="text-xs text-slate-500">Variance</div>
-                  </div>
+                  <GradeDisplay
+                    grade={scoreToGrade(q.average_score_across_companies)}
+                    score={q.average_score_across_companies}
+                    size="small"
+                  />
                 </div>
                 <div class="flex flex-wrap gap-4 text-xs text-slate-600 mb-2">
                   <div>
-                    <span class="font-semibold">Best:</span> {q.best_score.toFixed(0)}%
+                    <span class="font-semibold">Avg Score:</span> {q.average_score_across_companies.toFixed(1)}%
                   </div>
                   <div>
-                    <span class="font-semibold">Worst:</span> {q.worst_score.toFixed(0)}%
+                    <span class="font-semibold">Companies:</span> {q.companies_analyzed}
                   </div>
                   <div>
-                    <span class="font-semibold">Range:</span> {(q.best_score - q.worst_score).toFixed(0)}%
+                    <span class="font-semibold">Full Disclosure:</span> {q.companies_with_full_disclosure} / {q.companies_analyzed}
                   </div>
                   <div>
-                    <span class="font-semibold">Avg:</span> {q.average_score.toFixed(1)}%
-                  </div>
-                </div>
-                <div class="w-full bg-slate-200 rounded-full h-2">
-                  <div class="relative h-2">
-                    <div
-                      class="absolute bg-gradient-to-r from-red-400 via-amber-400 to-emerald-400 h-2 rounded-full"
-                      style={`left: ${q.worst_score}%; width: ${q.best_score - q.worst_score}%`}
-                    ></div>
+                    <span class="font-semibold">Total Snippets:</span> {q.total_snippets_across_companies}
                   </div>
                 </div>
               </div>

@@ -17,10 +17,10 @@ const { metrics } = Astro.props;
 const classificationData = {
   labels: ['Full Disclosure', 'Partial', 'Unclear', 'No Disclosure'],
   values: [
-    metrics.snippets_by_classification['Full Disclosure'] || 0,
-    metrics.snippets_by_classification['Partial'] || 0,
-    metrics.snippets_by_classification['Unclear'] || 0,
-    metrics.snippets_by_classification['No Disclosure'] || 0
+    metrics.snippets_by_classification['FULL_DISCLOSURE'] || 0,
+    metrics.snippets_by_classification['PARTIAL'] || 0,
+    metrics.snippets_by_classification['UNCLEAR'] || 0,
+    metrics.snippets_by_classification['NO_DISCLOSURE'] || 0
   ],
   colors: ['#10b981', '#f59e0b', '#94a3b8', '#ef4444']
 };
@@ -298,9 +298,9 @@ const framingData = {
 
 <canvas
   id="classification-chart"
-  data-full={metrics.snippets_by_classification['Full Disclosure'] || 0}
-  data-partial={metrics.snippets_by_classification['Partial'] || 0}
-  data-unclear={metrics.snippets_by_classification['Unclear'] || 0}
-  data-none={metrics.snippets_by_classification['No Disclosure'] || 0}
+  data-full={metrics.snippets_by_classification['FULL_DISCLOSURE'] || 0}
+  data-partial={metrics.snippets_by_classification['PARTIAL'] || 0}
+  data-unclear={metrics.snippets_by_classification['UNCLEAR'] || 0}
+  data-none={metrics.snippets_by_classification['NO_DISCLOSURE'] || 0}
   class="hidden"
 ></canvas>

@@ -16,30 +16,30 @@ const { companyMetrics } = Astro.props;
 const radarData = companyMetrics.map(company => ({
   name: company.company_name,
   dimensions: {
-    financial_quantification: company.radar_metrics.financial_quantification.score,
-    temporal_specificity: company.radar_metrics.temporal_specificity.score,
-    narrative_balance: company.radar_metrics.narrative_balance.score,
-    evidence_depth: company.radar_metrics.evidence_depth.score,
-    disclosure_breadth: company.radar_metrics.disclosure_breadth.score
+    financial_transparency: company.radar_metrics.financial_transparency,
+    forward_looking_maturity: company.radar_metrics.forward_looking_maturity,
+    narrative_balance: company.radar_metrics.narrative_balance,
+    evidence_depth: company.radar_metrics.evidence_depth,
+    disclosure_quality: company.radar_metrics.disclosure_quality
   },
   overall: company.overall_disclosure_score
 }));
 
 // Calculate industry averages for each dimension
 const industryAverage = {
-  financial_quantification: radarData.reduce((sum, c) => sum + c.dimensions.financial_quantification, 0) / radarData.length,
-  temporal_specificity: radarData.reduce((sum, c) => sum + c.dimensions.temporal_specificity, 0) / radarData.length,
+  financial_transparency: radarData.reduce((sum, c) => sum + c.dimensions.financial_transparency, 0) / radarData.length,
+  forward_looking_maturity: radarData.reduce((sum, c) => sum + c.dimensions.forward_looking_maturity, 0) / radarData.length,
   narrative_balance: radarData.reduce((sum, c) => sum + c.dimensions.narrative_balance, 0) / radarData.length,
   evidence_depth: radarData.reduce((sum, c) => sum + c.dimensions.evidence_depth, 0) / radarData.length,
-  disclosure_breadth: radarData.reduce((sum, c) => sum + c.dimensions.disclosure_breadth, 0) / radarData.length
+  disclosure_quality: radarData.reduce((sum, c) => sum + c.dimensions.disclosure_quality, 0) / radarData.length
 };
 
 const dimensions = [
-  { key: 'financial_quantification', label: 'Financial Quantification', icon: '💰', color: '#10b981' },
-  { key: 'temporal_specificity', label: 'Temporal Specificity', icon: '🕐', color: '#3b82f6' },
+  { key: 'financial_transparency', label: 'Financial Transparency', icon: '💰', color: '#10b981' },
+  { key: 'forward_looking_maturity', label: 'Forward-Looking Maturity', icon: '🕐', color: '#3b82f6' },
   { key: 'narrative_balance', label: 'Narrative Balance', icon: '⚖️', color: '#8b5cf6' },
   { key: 'evidence_depth', label: 'Evidence Depth', icon: '📄', color: '#f59e0b' },
-  { key: 'disclosure_breadth', label: 'Disclosure Breadth', icon: '📊', color: '#ec4899' }
+  { key: 'disclosure_quality', label: 'Disclosure Quality', icon: '📊', color: '#ec4899' }
 ];
 ---
 

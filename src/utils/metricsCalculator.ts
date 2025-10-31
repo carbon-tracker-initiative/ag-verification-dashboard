@@ -624,13 +624,13 @@ export function calculateCrossCompanyMetrics(
 
   // Aggregate classification counts
   const full_disclosure_count = companyMetrics.reduce((sum, cm) =>
-    sum + (cm.snippets_by_classification['Full Disclosure'] || 0), 0);
+    sum + (cm.snippets_by_classification['FULL_DISCLOSURE'] || 0), 0);
   const partial_disclosure_count = companyMetrics.reduce((sum, cm) =>
-    sum + (cm.snippets_by_classification['Partial'] || 0), 0);
+    sum + (cm.snippets_by_classification['PARTIAL'] || 0), 0);
   const unclear_count = companyMetrics.reduce((sum, cm) =>
-    sum + (cm.snippets_by_classification['Unclear'] || 0), 0);
+    sum + (cm.snippets_by_classification['UNCLEAR'] || 0), 0);
   const no_disclosure_count = companyMetrics.reduce((sum, cm) =>
-    sum + (cm.snippets_by_classification['No Disclosure'] || 0), 0);
+    sum + (cm.snippets_by_classification['NO_DISCLOSURE'] || 0), 0);
 
   // Grade distribution
   const grade_distribution: Record<Grade, number> = { A: 0, B: 0, C: 0, D: 0, F: 0 };
