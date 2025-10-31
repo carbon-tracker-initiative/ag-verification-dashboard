@@ -122,8 +122,12 @@ export function buildPdfUrl(parsedSource: ParsedSource): string {
   if (companySlug) {
     segments.push(companySlug);
   }
-  segments.push(String(year));
-  segments.push(filename.trim());
+  if (year > 0) {
+    segments.push(String(year));
+  }
+  if (filename.trim()) {
+    segments.push(filename.trim());
+  }
 
   const rawPath = segments.join('/').replace(/\/+/g, '/');
   const encodedPath = rawPath

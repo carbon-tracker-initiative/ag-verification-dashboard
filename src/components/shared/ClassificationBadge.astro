@@ -9,10 +9,9 @@ import type { Classification } from '../../types/analysis';
 interface Props {
   classification: Classification;
   size?: 'sm' | 'md' | 'lg';
-  showIcon?: boolean;
 }
 
-const { classification, size = 'md', showIcon = true } = Astro.props;
+const { classification, size = 'md' } = Astro.props;
 
 // Format label (remove underscore)
 const rawLabel = classification.replace('_', ' ');
@@ -45,14 +44,6 @@ const colors: Record<Classification, { bg: string; text: string; border: string 
   }
 };
 
-// Icons
-const icons: Record<Classification, string> = {
-  FULL_DISCLOSURE: '✓',
-  PARTIAL: '⚠',
-  UNCLEAR: '❓',
-  NO_DISCLOSURE: '✖'
-};
-
 // Size classes
 const sizeClasses = {
   sm: 'text-xs px-2 py-0.5',
@@ -61,12 +52,11 @@ const sizeClasses = {
 };
 
 const colorScheme = colors[classification];
-const icon = icons[classification];
 ---
 
 <span
   class:list={[
-    'inline-flex items-center gap-1 rounded-md font-medium border transition-all duration-200',
+    'inline-flex items-center rounded-md font-medium border transition-all duration-200',
     colorScheme.bg,
     colorScheme.text,
     colorScheme.border,
@@ -76,8 +66,6 @@ const icon = icons[classification];
   aria-label={`Classification: ${label}`}
   title={`Classification: ${label}`}
 >
-  {showIcon && (
-    <span class="font-bold" aria-hidden="true">{icon}</span>
-  )}
   <span>{label}</span>
 </span>
+

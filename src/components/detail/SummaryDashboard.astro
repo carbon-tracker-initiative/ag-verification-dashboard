@@ -18,31 +18,6 @@ const averageSnippetsRounded = Math.max(
   Math.floor(metrics.average_snippets_per_question)
 );
 
-const gradeInsights = {
-  A: {
-    range: '90-100%',
-    message: 'Evidence is comprehensive with consistent financial, temporal, and narrative strength.'
-  },
-  B: {
-    range: '80-89%',
-    message: 'Strong disclosures with minor gaps across the scoring dimensions.'
-  },
-  C: {
-    range: '70-79%',
-    message: 'Adequate coverage but notable room for improvement in specificity or balance.'
-  },
-  D: {
-    range: '60-69%',
-    message: 'Limited detail or consistency across key scoring factors.'
-  },
-  F: {
-    range: 'below 60%',
-    message: 'Few snippets meet the financial, temporal, and narrative criteria used in scoring.'
-  }
-} as const;
-
-const gradeInfo = gradeInsights[metrics.overall_grade] ?? gradeInsights.F;
-
 // Prepare chart data
 const classificationData = {
   labels: ['Full Disclosure', 'Partial', 'Unclear', 'No Disclosure'],
@@ -68,7 +43,7 @@ const financialData = {
 };
 
 const timeframeData = {
-  labels: ['Current', 'Future', 'Historical', 'Unclear'],
+  labels: ['Present day', 'Forward-looking', 'Backward-looking', 'Multiple or Unclear'],
   values: [
     metrics.snippets_current,
     metrics.snippets_future,
@@ -102,25 +77,7 @@ const framingData = {
       <div class="mt-4 text-xs text-slate-500">
         Based on {metrics.total_snippets} snippets across {metrics.total_questions_analyzed} questions
       </div>
-      <div class="mt-3 p-3 rounded-lg bg-slate-900/70 border border-slate-800">
-        <div class="text-[11px] font-semibold text-slate-300 uppercase tracking-wide mb-1">
-          How this grade is calculated
-        </div>
-        <p class="text-xs text-slate-400 leading-relaxed">
-          Each snippet earns up to 9 points across three dimensions, then converts to a percentage:
-        </p>
-        <ul class="mt-2 space-y-1 text-[11px] text-slate-400 leading-relaxed list-disc list-inside">
-          <li><span class="font-semibold text-slate-300">Financial disclosure type</span>: Financial = 3, Partial-type = 2, Non-Financial = 1.</li>
-          <li><span class="font-semibold text-slate-300">Temporal specificity</span>: Present day/current = 3, Future = 2, Historical = 1, Unclear = 0.</li>
-          <li><span class="font-semibold text-slate-300">Narrative framing</span>: Balanced = 3, Risk/Opportunity = 2, Neutral = 1.</li>
-          <li>The composite score is <span class="font-semibold text-slate-300">((financial + temporal + narrative) / 9) × 100</span>.</li>
-        </ul>
-        <p class="mt-2 text-xs text-slate-400 leading-relaxed">
-          Grade {metrics.overall_grade} reflects an aggregate score {gradeInfo.range}; {gradeInfo.message}
-        </p>
-      </div>
     </div>
-
     <!-- Evidence Stats Card -->
     <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
       <div class="text-sm font-semibold text-slate-600 mb-3">Evidence Statistics</div>
@@ -365,3 +322,6 @@ const framingData = {
 
   document.addEventListener('astro:page-load', drawClassificationChart);
 </script>
+
+
+

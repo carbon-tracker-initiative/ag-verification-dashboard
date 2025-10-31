@@ -23,21 +23,47 @@ import type {
 // Snippet-Level Scoring Functions
 // ============================================================================
 
+export function normalizeFinancialDisclosureType(value: string | undefined): "Financial" | "Partial-type" | "Non-Financial" {
+  const normalized = (value || '').trim().toLowerCase();
+
+  if (["full", "financial", "financial-type", "financial disclosure"].includes(normalized)) {
+    return "Financial";
+  }
+  if (["partial", "partial-type", "partial type", "partial-financial"].includes(normalized)) {
+    return "Partial-type";
+  }
+
+  return "Non-Financial";
+}
+
+export function normalizeTimeframeCategory(value: string | undefined): "Present day" | "Forward-looking" | "Backward-looking" | "Multiple or Unclear" {
+  const normalized = (value || '').trim().toLowerCase();
+
+  if (["current", "present day", "present-day", "present", "ongoing", "today"].includes(normalized)) {
+    return "Present day";
+  }
+
+  if (["future", "forward-looking", "forward looking", "upcoming", "planned"].includes(normalized)) {
+    return "Forward-looking";
+  }
+
+  if (["historical", "past", "backward-looking", "backward looking", "retrospective"].includes(normalized)) {
+    return "Backward-looking";
+  }
+
+  return "Multiple or Unclear";
+}
+
 /**
  * Calculate financial transparency score (0-3 points)
- * Full = 3, Partial = 2, Non-Financial = 1
+ * Financial = 3, Partial-type = 2, Non-Financial = 1
  */
 export function calculateFinancialScore(snippet: Snippet): number {
-  switch (snippet.categorization.financial_type) {
-    case "Full":
-      return 3;
-    case "Partial":
-      return 2;
-    case "Non-Financial":
-      return 1;
-    default:
-      return 1;
-  }
+  const disclosureType = normalizeFinancialDisclosureType(snippet.categorization.financial_type);
+
+  if (disclosureType === "Financial") return 3;
+  if (disclosureType === "Partial-type") return 2;
+  return 1;
 }
 
 /**
@@ -45,23 +71,18 @@ export function calculateFinancialScore(snippet: Snippet): number {
  * Current = 3, Future = 2, Historical = 1, Unclear = 0
  */
 export function calculateTemporalScore(snippet: Snippet): number {
-  const timeframeRaw = snippet.categorization.timeframe || "";
-  const timeframe = timeframeRaw.trim().toLowerCase();
+  const timeframe = normalizeTimeframeCategory(snippet.categorization.timeframe);
 
-  if (["current", "present day", "present-day", "ongoing", "today"].includes(timeframe)) {
-    return 3;
+  switch (timeframe) {
+    case "Present day":
+      return 3;
+    case "Forward-looking":
+      return 2;
+    case "Backward-looking":
+      return 1;
+    default:
+      return 0;
   }
-  if (["future", "forward-looking", "upcoming"].includes(timeframe)) {
-    return 2;
-  }
-  if (["historical", "past"].includes(timeframe)) {
-    return 1;
-  }
-  if (timeframe === "multiple or unclear") {
-    return 0;
-  }
-
-  return 0;
 }
 
 /**
@@ -165,9 +186,8 @@ export function calculateQuestionMetrics(question: Question): QuestionMetrics {
   const best_snippet_id = snippets[bestSnippetIndex]?.snippet_id || "";
 
   // Financial metrics
-  const snippets_with_financial_data = snippets.filter(s =>
-    s.categorization.financial_type === "Full" || s.categorization.financial_type === "Partial"
-  ).length;
+  const financialTypes = snippets.map(s => normalizeFinancialDisclosureType(s.categorization.financial_type));
+  const snippets_with_financial_data = financialTypes.filter(type => type !== "Non-Financial").length;
 
   const financial_quantification_rate = snippets.length > 0
     ? (snippets_with_financial_data / snippets.length) * 100
@@ -181,10 +201,18 @@ export function calculateQuestionMetrics(question: Question): QuestionMetrics {
   }, 0);
 
   // Temporal metrics
-  const snippets_current = snippets.filter(s => s.categorization.timeframe === "Current").length;
-  const snippets_future = snippets.filter(s => s.categorization.timeframe === "Future").length;
-  const snippets_historical = snippets.filter(s => s.categorization.timeframe === "Historical").length;
-  const snippets_unclear_time = snippets.filter(s => s.categorization.timeframe === "Multiple or Unclear").length;
+  let snippets_current = 0;
+  let snippets_future = 0;
+  let snippets_historical = 0;
+  let snippets_unclear_time = 0;
+
+  snippets.forEach(s => {
+    const timeframeCategory = normalizeTimeframeCategory(s.categorization.timeframe);
+    if (timeframeCategory === "Present day") snippets_current++;
+    else if (timeframeCategory === "Forward-looking") snippets_future++;
+    else if (timeframeCategory === "Backward-looking") snippets_historical++;
+    else snippets_unclear_time++;
+  });
 
   const forward_looking_rate = snippets.length > 0
     ? (snippets_future / snippets.length) * 100
@@ -287,17 +315,18 @@ export function calculateCategoryMetrics(
   // Financial metrics
   const total_financial_amount = questionMetrics.reduce((sum, qm) => sum + qm.total_financial_amount, 0);
 
-  const snippets_with_financial_full = categoryQuestions.reduce((sum, q) => {
-    return sum + q.disclosures.filter(s => s.categorization.financial_type === "Full").length;
-  }, 0);
+  let snippets_with_financial_full = 0;
+  let snippets_with_financial_partial = 0;
+  let snippets_with_financial_none = 0;
 
-  const snippets_with_financial_partial = categoryQuestions.reduce((sum, q) => {
-    return sum + q.disclosures.filter(s => s.categorization.financial_type === "Partial").length;
-  }, 0);
-
-  const snippets_with_financial_none = categoryQuestions.reduce((sum, q) => {
-    return sum + q.disclosures.filter(s => s.categorization.financial_type === "Non-Financial").length;
-  }, 0);
+  categoryQuestions.forEach(q => {
+    q.disclosures.forEach(s => {
+      const type = normalizeFinancialDisclosureType(s.categorization.financial_type);
+      if (type === "Financial") snippets_with_financial_full++;
+      else if (type === "Partial-type") snippets_with_financial_partial++;
+      else snippets_with_financial_none++;
+    });
+  });
 
   // Top and bottom questions
   const sortedQuestions = questionMetrics.sort((a, b) => b.average_snippet_score - a.average_snippet_score);
@@ -391,9 +420,16 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
   };
 
   // Financial metrics
-  const snippets_with_financial_full = allSnippets.filter(s => s.categorization.financial_type === "Full").length;
-  const snippets_with_financial_partial = allSnippets.filter(s => s.categorization.financial_type === "Partial").length;
-  const snippets_with_financial_none = allSnippets.filter(s => s.categorization.financial_type === "Non-Financial").length;
+  let snippets_with_financial_full = 0;
+  let snippets_with_financial_partial = 0;
+  let snippets_with_financial_none = 0;
+
+  allSnippets.forEach(s => {
+    const type = normalizeFinancialDisclosureType(s.categorization.financial_type);
+    if (type === "Financial") snippets_with_financial_full++;
+    else if (type === "Partial-type") snippets_with_financial_partial++;
+    else snippets_with_financial_none++;
+  });
 
   const financial_quantification_rate = total_snippets > 0
     ? ((snippets_with_financial_full + snippets_with_financial_partial) / total_snippets) * 100
@@ -404,10 +440,18 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
   }, 0);
 
   // Temporal metrics
-  const snippets_current = allSnippets.filter(s => s.categorization.timeframe === "Current").length;
-  const snippets_future = allSnippets.filter(s => s.categorization.timeframe === "Future").length;
-  const snippets_historical = allSnippets.filter(s => s.categorization.timeframe === "Historical").length;
-  const snippets_unclear_time = allSnippets.filter(s => s.categorization.timeframe === "Multiple or Unclear").length;
+  let snippets_current = 0;
+  let snippets_future = 0;
+  let snippets_historical = 0;
+  let snippets_unclear_time = 0;
+
+  allSnippets.forEach(s => {
+    const timeframeCategory = normalizeTimeframeCategory(s.categorization.timeframe);
+    if (timeframeCategory === "Present day") snippets_current++;
+    else if (timeframeCategory === "Forward-looking") snippets_future++;
+    else if (timeframeCategory === "Backward-looking") snippets_historical++;
+    else snippets_unclear_time++;
+  });
 
   const forward_looking_rate = total_snippets > 0
     ? (snippets_future / total_snippets) * 100
