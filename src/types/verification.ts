@@ -47,6 +47,12 @@ export interface VerificationReport {
  */
 export type ChangeType = "removed" | "classification_corrected" | "categorization_corrected" | "unchanged";
 
+export interface CategorizationChangeDetail {
+  field: "financial_type" | "timeframe" | "framing";
+  original_value: string;
+  verified_value: string;
+}
+
 /**
  * Detailed information about a snippet change
  */
@@ -58,6 +64,7 @@ export interface SnippetChange {
   verified_classification?: string;
   original_score?: number;
   verified_score?: number;
+  categorization_changes?: CategorizationChangeDetail[];
   verification_report?: {
     relevance_explanation: string;
     issues: string[];

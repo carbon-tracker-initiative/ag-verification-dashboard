@@ -34,6 +34,50 @@ export function compareOriginalVsVerified(
     });
   });
 
+  const reportSnippetMap = new Map<string, any>();
+  if (verificationReport?.question_verifications) {
+    verificationReport.question_verifications.forEach((q: any) => {
+      (q.verification_results || []).forEach((result: any) => {
+        reportSnippetMap.set(result.snippet_id, result);
+      });
+    });
+  }
+
+  const buildVerificationSummary = (snippetId: string) => {
+    const reportEntry = reportSnippetMap.get(snippetId);
+    if (!reportEntry) {
+      return undefined;
+    }
+
+    const issues: string[] = [];
+
+    if (Array.isArray(reportEntry.classification_issues)) {
+      reportEntry.classification_issues.forEach((issue: any) => {
+        const current = issue.current_value ?? '';
+        const suggested = issue.suggested_value ?? '';
+        const explanation = issue.explanation ? ` — ${issue.explanation}` : '';
+        issues.push(`Classification: ${current} → ${suggested}${explanation}`.trim());
+      });
+    }
+
+    if (Array.isArray(reportEntry.categorization_issues)) {
+      reportEntry.categorization_issues.forEach((issue: any) => {
+        const field = (issue.field || 'Categorization').replace(/_/g, ' ');
+        const current = issue.current_value ?? '';
+        const suggested = issue.suggested_value ?? '';
+        const explanation = issue.explanation ? ` — ${issue.explanation}` : '';
+        issues.push(`${field}: ${current} → ${suggested}${explanation}`.trim());
+      });
+    }
+
+    return {
+      relevance_explanation: reportEntry.relevance_explanation || '',
+      issues,
+      quality: reportEntry.overall_quality,
+      recommendation: reportEntry.recommendation
+    };
+  };
+
   // Find removed, corrected, and unchanged snippets
   const snippets_removed: string[] = [];
   const snippets_corrected: string[] = [];
@@ -176,7 +220,8 @@ export function compareOriginalVsVerified(
         question_id: questionId,
         change_type: 'removed',
         original_classification: originalSnippet.classification,
-        original_score: calculateSnippetScore(originalSnippet)
+        original_score: calculateSnippetScore(originalSnippet),
+        verification_report: buildVerificationSummary(snippetId)
       };
 
     } else if (originalSnippet.classification !== verifiedSnippet.classification) {
@@ -193,7 +238,8 @@ export function compareOriginalVsVerified(
         original_classification: originalSnippet.classification,
         verified_classification: verifiedSnippet.classification,
         original_score: calculateSnippetScore(originalSnippet),
-        verified_score: calculateSnippetScore(verifiedSnippet)
+        verified_score: calculateSnippetScore(verifiedSnippet),
+        verification_report: buildVerificationSummary(snippetId)
       };
 
     } else if (
@@ -207,19 +253,60 @@ export function compareOriginalVsVerified(
         q.disclosures.some(s => s.snippet_id === snippetId)
       )?.question_id || '';
 
+      const categorization_changes = [];
+      if (originalSnippet.categorization.financial_type !== verifiedSnippet.categorization.financial_type) {
+        categorization_changes.push({
+          field: "financial_type" as const,
+          original_value: originalSnippet.categorization.financial_type,
+          verified_value: verifiedSnippet.categorization.financial_type
+        });
+      }
+      if (originalSnippet.categorization.timeframe !== verifiedSnippet.categorization.timeframe) {
+        categorization_changes.push({
+          field: "timeframe" as const,
+          original_value: originalSnippet.categorization.timeframe,
+          verified_value: verifiedSnippet.categorization.timeframe
+        });
+      }
+      if (originalSnippet.categorization.framing !== verifiedSnippet.categorization.framing) {
+        categorization_changes.push({
+          field: "framing" as const,
+          original_value: originalSnippet.categorization.framing,
+          verified_value: verifiedSnippet.categorization.framing
+        });
+      }
+
       change = {
         snippet_id: snippetId,
         question_id: questionId,
         change_type: 'categorization_corrected',
         original_score: calculateSnippetScore(originalSnippet),
-        verified_score: calculateSnippetScore(verifiedSnippet)
+        verified_score: calculateSnippetScore(verifiedSnippet),
+        categorization_changes,
+        verification_report: buildVerificationSummary(snippetId)
       };
-    }
+  }
 
-    if (change) {
+  if (change) {
       snippet_changes.push(change);
     }
   }
+
+  const snippetChangeMap = new Map<string, SnippetChange>();
+  snippet_changes.forEach(change => {
+    snippetChangeMap.set(change.snippet_id, change);
+  });
+
+  verified.analysis_results = verified.analysis_results.map(question => ({
+    ...question,
+    disclosures: question.disclosures.map(snippet => {
+      const change = snippetChangeMap.get(snippet.snippet_id);
+      const enhanced = { ...snippet } as any;
+      enhanced.comparison_status = change ? change.change_type : 'unchanged';
+      enhanced.comparison_change = change || null;
+      return enhanced;
+    })
+  }));
 
   return {
     company_name: verified.company_name,
