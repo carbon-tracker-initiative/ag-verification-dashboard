@@ -44,8 +44,8 @@ const colors: Record<Grade, string> = {
 
 const containerSize: Record<typeof size, string> = {
   sm: 'px-3 py-1 text-xs',
-  md: 'px-4 py-1.5 text-sm',
-  lg: 'px-5 py-2 text-base'
+  md: 'px-4 py-1.75 text-sm',
+  lg: 'px-5 py-2.5 text-base'
 };
 
 const gradeSize: Record<typeof size, string> = {
@@ -57,7 +57,7 @@ const gradeSize: Record<typeof size, string> = {
 
 <span
   class:list={[
-    'inline-flex items-center gap-1.5 rounded-md font-semibold transition-all duration-200',
+    'inline-flex items-center gap-2 rounded-full font-semibold transition-all duration-200',
     colors[grade],
     containerSize[size]
   ]}
