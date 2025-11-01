@@ -157,7 +157,7 @@ const { hasComparison, verificationMetrics } = Astro.props;
           }
         });
 
-        document.querySelectorAll('.comparison-badge').forEach(badge => {
+        document.querySelectorAll('[data-comparison-badge]').forEach(badge => {
           if (badge instanceof HTMLElement) {
             badge.classList.remove('hidden');
           }
@@ -177,7 +177,7 @@ const { hasComparison, verificationMetrics } = Astro.props;
           el.classList.remove('comparison-mode', 'ring-2', 'ring-emerald-400', 'ring-amber-400', 'ring-rose-500', 'opacity-60');
         });
 
-        document.querySelectorAll('.comparison-badge').forEach(badge => {
+        document.querySelectorAll('[data-comparison-badge]').forEach(badge => {
           if (badge instanceof HTMLElement) {
             badge.classList.add('hidden');
           }
@@ -206,4 +206,5 @@ const { hasComparison, verificationMetrics } = Astro.props;
 
   document.addEventListener('astro:page-load', initComparisonToggle);
 </script>
+
 
