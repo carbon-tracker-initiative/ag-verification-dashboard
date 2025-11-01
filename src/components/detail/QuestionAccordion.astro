@@ -34,6 +34,35 @@ const hasVerificationCorrection = question.disclosures.some(snippet => {
   const status = (snippet as any)?.comparison_status;
   return status === 'classification_corrected' || status === 'categorization_corrected';
 });
+
+const normalize = (value?: string) => (value || '').toLowerCase();
+
+const financialTypesSet = new Set<string>();
+const timeframesSet = new Set<string>();
+const framingsSet = new Set<string>();
+
+question.disclosures.forEach(snippet => {
+  const financialType = normalize(snippet.categorization?.financial_type);
+  const timeframe = normalize(snippet.categorization?.timeframe);
+  const framing = normalize(snippet.categorization?.framing);
+
+  if (financialType) financialTypesSet.add(financialType);
+  if (timeframe) timeframesSet.add(timeframe);
+  if (framing) framingsSet.add(framing);
+});
+
+const financialTypes = Array.from(financialTypesSet);
+const timeframes = Array.from(timeframesSet);
+const framings = Array.from(framingsSet);
+
+const primarySnippet = question.disclosures[0];
+const primaryFinancialType = normalize(primarySnippet?.categorization?.financial_type) || financialTypes[0] || 'none';
+const primaryTimeframe = normalize(primarySnippet?.categorization?.timeframe) || timeframes[0] || 'none';
+const primaryFraming = normalize(primarySnippet?.categorization?.framing) || framings[0] || 'none';
+
+if (!financialTypes.length) financialTypes.push('none');
+if (!timeframes.length) timeframes.push('none');
+if (!framings.length) framings.push('none');
 ---
 
 <div
@@ -47,6 +76,12 @@ const hasVerificationCorrection = question.disclosures.some(snippet => {
   data-score={metrics.average_snippet_score}
   data-snippets={snippetCount}
   data-expandable={isExpandable ? 'true' : 'false'}
+  data-financial-types={financialTypes.join('|')}
+  data-timeframes={timeframes.join('|')}
+  data-framings={framings.join('|')}
+  data-primary-financial={primaryFinancialType}
+  data-primary-timeframe={primaryTimeframe}
+  data-primary-framing={primaryFraming}
 >
   <div
     class="p-5 question-header flex items-start gap-4"
@@ -81,7 +116,7 @@ const hasVerificationCorrection = question.disclosures.some(snippet => {
           <div class="flex items-center gap-2">
             <ClassificationBadge classification={bestClassification} size="lg" />
             {hasVerificationCorrection && (
-              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md border border-amber-400/40 bg-amber-500/15 text-[11px] font-semibold uppercase tracking-wide text-amber-200">
+              <span class="chip correction-chip uppercase whitespace-nowrap">
                 Corrected by verification
               </span>
             )}
