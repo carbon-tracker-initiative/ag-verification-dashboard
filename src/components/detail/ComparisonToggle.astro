@@ -132,6 +132,8 @@ const { hasComparison, verificationMetrics } = Astro.props;
       const comparisonClasses = ['from-sky-500', 'to-emerald-500', 'hover:from-sky-400', 'hover:to-emerald-400'];
       const verifiedClasses = ['from-purple-600', 'to-indigo-600', 'hover:from-purple-500', 'hover:to-indigo-500'];
 
+      document.body.dataset.comparisonMode = mode;
+
       if (mode === 'comparison') {
         toggleText.textContent = 'Show Verified Only';
         toggleButton.classList.remove(...verifiedClasses);
