@@ -12,6 +12,8 @@ interface Props {
 }
 
 const { hasComparison, verificationMetrics } = Astro.props;
+const correctedQuestions = verificationMetrics?.corrected_questions ?? [];
+const hasCorrectedQuestions = correctedQuestions.length > 0;
 ---
 
 {hasComparison && verificationMetrics && (
@@ -73,6 +75,36 @@ const { hasComparison, verificationMetrics } = Astro.props;
       </div>
     </div>
 
+    {hasCorrectedQuestions && (
+      <div
+        id="corrected-questions-container"
+        class="hidden border-t border-slate-800 pt-4 space-y-3"
+      >
+        <div class="flex items-center justify-between gap-2">
+          <div class="text-xs font-semibold text-slate-200 uppercase tracking-wide">
+            Questions Corrected During Verification
+          </div>
+          <div class="text-[11px] text-slate-500">
+            Select a question to jump to its updated evidence.
+          </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          {correctedQuestions.map(question => (
+            <a
+              href={`#question-${question.question_id}`}
+              data-corrected-question-link={question.question_id}
+              class="inline-flex items-center gap-2 px-3 py-2 rounded-lg border border-amber-400/40 bg-amber-500/10 text-xs font-semibold text-amber-100 hover:bg-amber-500/20 hover:border-amber-300/60 transition-colors"
+            >
+              <span class="font-mono text-[11px] uppercase tracking-wide text-amber-200">
+                {question.question_id}
+              </span>
+              <span class="text-slate-200 normal-case">{question.question_text}</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
     <!-- Comparison Legend (Hidden by default, shown when comparison mode is active) -->
     <div id="comparison-legend" class="hidden pt-4 border-t border-slate-800">
       <div class="text-xs font-semibold text-slate-200 mb-2 uppercase tracking-wide">Comparison Legend</div>
@@ -115,6 +147,7 @@ const { hasComparison, verificationMetrics } = Astro.props;
     const toggleButton = document.getElementById('comparison-toggle');
     const toggleText = document.getElementById('toggle-text');
     const legend = document.getElementById('comparison-legend');
+    const correctedContainer = document.getElementById('corrected-questions-container');
 
     if (!(toggleButton instanceof HTMLButtonElement) || !(toggleText instanceof HTMLElement)) {
       return;
@@ -127,6 +160,47 @@ const { hasComparison, verificationMetrics } = Astro.props;
 
     let currentMode = toggleButton.dataset.mode === 'comparison' ? 'comparison' : 'verified';
     const legendEl = legend instanceof HTMLElement ? legend : null;
+    const correctedContainerEl = correctedContainer instanceof HTMLElement ? correctedContainer : null;
+
+    function bindCorrectedQuestionLinks() {
+      document.querySelectorAll('[data-corrected-question-link]').forEach(link => {
+        if (!(link instanceof HTMLAnchorElement) || link.dataset.bound === 'true') {
+          return;
+        }
+
+        link.dataset.bound = 'true';
+
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          const questionId = link.dataset.correctedQuestionLink;
+          if (!questionId) {
+            return;
+          }
+
+          const card = document.getElementById(`question-${questionId}`);
+          if (!(card instanceof HTMLElement)) {
+            return;
+          }
+
+          const header = card.querySelector('.question-header');
+          const content = card.querySelector('.question-content');
+
+          if (header instanceof HTMLElement && content instanceof HTMLElement) {
+            if (content.classList.contains('hidden') || content.hasAttribute('hidden')) {
+              header.click();
+            }
+          }
+
+          card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          card.classList.add('ring-2', 'ring-amber-300', 'ring-offset-2', 'ring-offset-slate-950');
+
+          window.setTimeout(() => {
+            card.classList.remove('ring-2', 'ring-amber-300', 'ring-offset-2', 'ring-offset-slate-950');
+          }, 1600);
+        });
+      });
+    }
+    bindCorrectedQuestionLinks();
 
     function applyMode(mode) {
       const comparisonClasses = ['from-sky-500', 'to-emerald-500', 'hover:from-sky-400', 'hover:to-emerald-400'];
@@ -141,6 +215,9 @@ const { hasComparison, verificationMetrics } = Astro.props;
         if (legendEl) {
           legendEl.classList.remove('hidden');
         }
+        if (correctedContainerEl) {
+          correctedContainerEl.classList.remove('hidden');
+        }
 
         document.querySelectorAll('[data-snippet-status]').forEach(el => {
           if (!(el instanceof HTMLElement)) {
@@ -152,7 +229,7 @@ const { hasComparison, verificationMetrics } = Astro.props;
 
           if (status === 'unchanged') {
             el.classList.add('ring-2', 'ring-emerald-400');
-          } else if (status === 'corrected') {
+          } else if (status === 'classification_corrected' || status === 'categorization_corrected') {
             el.classList.add('ring-2', 'ring-amber-400');
           } else if (status === 'removed') {
             el.classList.add('ring-2', 'ring-rose-500', 'opacity-60');
@@ -184,6 +261,9 @@ const { hasComparison, verificationMetrics } = Astro.props;
             badge.classList.add('hidden');
           }
         });
+        if (correctedContainerEl) {
+          correctedContainerEl.classList.add('hidden');
+        }
       }
     }
 

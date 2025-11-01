@@ -292,6 +292,14 @@ export function compareOriginalVsVerified(
     }
   }
 
+  const corrected_questions = Array.from(questions_with_corrections).map(questionId => {
+    const question = verified.analysis_results.find(q => q.question_id === questionId);
+    return {
+      question_id: questionId,
+      question_text: question?.question_text || questionId
+    };
+  });
+
   const snippetChangeMap = new Map<string, SnippetChange>();
   snippet_changes.forEach(change => {
     snippetChangeMap.set(change.snippet_id, change);
@@ -324,6 +332,7 @@ export function compareOriginalVsVerified(
     questions_modified: Array.from(questions_modified),
     questions_with_removals: Array.from(questions_with_removals),
     questions_with_corrections: Array.from(questions_with_corrections),
+    corrected_questions,
     score_change_original_vs_verified,
     category_score_changes: {},
     most_corrected_category,

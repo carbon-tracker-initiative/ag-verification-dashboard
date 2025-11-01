@@ -100,6 +100,10 @@ export interface VerificationMetrics {
   questions_modified: string[];
   questions_with_removals: string[];
   questions_with_corrections: string[];
+  corrected_questions: Array<{
+    question_id: string;
+    question_text: string;
+  }>;
 
   // Score changes
   score_change_original_vs_verified: number;

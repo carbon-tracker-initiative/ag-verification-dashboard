@@ -29,10 +29,15 @@ const snippetCount = question.disclosures.length;
 const isExpandable = snippetCount > 0;
 const collapsedIcon = '▸';
 const expandedIcon = '▾';
-const disabledIcon = '—';
+const disabledIcon = '-';
+const hasVerificationCorrection = question.disclosures.some(snippet => {
+  const status = (snippet as any)?.comparison_status;
+  return status === 'classification_corrected' || status === 'categorization_corrected';
+});
 ---
 
 <div
+  id={`question-${question.question_id}`}
   class="question-card surface transition-all"
   data-question-id={question.question_id}
   data-category={category}
@@ -73,7 +78,14 @@ const disabledIcon = '—';
         </div>
 
         <div class="flex flex-col items-end gap-3">
-          <ClassificationBadge classification={bestClassification} size="lg" />
+          <div class="flex items-center gap-2">
+            <ClassificationBadge classification={bestClassification} size="lg" />
+            {hasVerificationCorrection && (
+              <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md border border-amber-400/40 bg-amber-500/15 text-[11px] font-semibold uppercase tracking-wide text-amber-200">
+                Corrected by verification
+              </span>
+            )}
+          </div>
           <GradeDisplay
             grade={metrics.disclosure_quality_grade}
             score={metrics.average_snippet_score}
