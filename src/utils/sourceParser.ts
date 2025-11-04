@@ -53,19 +53,43 @@ export function parseSource(source: string): ParsedSource {
 
     // Try to extract company and year from filename
     // Pattern: CompanyName-AG-YYYY-Report.pdf or CompanyName-YYYY-Financial-Report.pdf
+    // or: YYYY CompanyName Report.pdf
     const yearMatch = filename.match(/(\d{4})/);
     const year = yearMatch ? parseInt(yearMatch[1]) : 0;
 
-    // Extract company name (everything before first dash or year)
+    // Extract company name
     let company = '';
     if (yearMatch) {
       const beforeYear = filename.substring(0, yearMatch.index);
-      company = beforeYear.replace(/[-_]/g, ' ').trim();
+      const afterYear = filename.substring(yearMatch.index + 4);
+
+      // If year is at the beginning (beforeYear is empty or just whitespace)
+      if (!beforeYear.trim()) {
+        // Extract company from after the year
+        // Pattern: "2024 Nutrien Annual Report.pdf" -> extract "Nutrien"
+        const afterYearTrimmed = afterYear.trim();
+        const words = afterYearTrimmed.split(/\s+/);
+        // Take first word(s) until we hit common keywords
+        const stopWords = ['annual', 'sustainability', 'financial', 'report', 'esg'];
+        const companyWords = [];
+        for (const word of words) {
+          if (stopWords.includes(word.toLowerCase()) || word.endsWith('.pdf')) {
+            break;
+          }
+          companyWords.push(word);
+        }
+        company = companyWords.join(' ').trim();
+      } else {
+        // Year is in the middle or end - extract company from before year
+        company = beforeYear.replace(/[-_]/g, ' ').trim();
+      }
+
       // Remove common suffixes
       company = company.replace(/\s+(AG|Ltd|Inc|Corp|Company)$/i, '').trim();
     } else {
-      // Fallback: use first part before dash
-      company = filename.split(/[-_]/)[0].trim();
+      // Fallback: use first part before dash or space
+      const parts = filename.split(/[-_\s]/);
+      company = parts[0].trim();
     }
 
     if (!page || !year) {

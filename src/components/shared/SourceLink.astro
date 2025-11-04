@@ -14,7 +14,10 @@ interface Props {
 
 const { source, showIcon = true, className = '' } = Astro.props;
 
-const pdfUrl = sourceToPdfUrl(source);
+const baseUrl = import.meta.env.BASE_URL;
+const rawPdfUrl = sourceToPdfUrl(source);
+// Add base URL prefix to the PDF URL (unless it's just '#')
+const pdfUrl = rawPdfUrl === '#' ? '#' : `${baseUrl}${rawPdfUrl}`;
 const displayText = getSourceDisplayText(source);
 const isValid = pdfUrl !== '#';
 ---

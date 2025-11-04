@@ -7,7 +7,11 @@
       "Bash(ping:*)",
       "Bash(nul)",
       "Bash(findstr:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(dir /B \"h:\\D_and_M\\Ag_project\\ag-verification-dashboard\\public\\source_documents\" 2)",
+      "Bash(dir /S /B h:D_and_MAg_projectag-verification-dashboardpublicsource_documentsNutrien 2)",
+      "Bash(temp_nutrien.html)",
+      "Bash(del temp_nutrien.html 2)"
     ],
     "deny": [],
     "ask": []
