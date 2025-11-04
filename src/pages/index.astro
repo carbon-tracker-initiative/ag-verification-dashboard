@@ -55,14 +55,14 @@ const categoryMetrics = Array.from(allCategories).map(categoryName => {
     <HeroSection globalStats={crossCompanyMetrics.global_stats} />
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <!-- Category Performance Overview -->
+      <!-- Company Cards -->
       <section class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 mb-6">Risk Category Performance</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categoryMetrics
-            .sort((a, b) => b.average_question_score - a.average_question_score)
-            .map(category => (
-              <CategoryCard category={category} expandable={true} />
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Companies Analyzed</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {companyMetrics
+            .sort((a, b) => b.overall_disclosure_score - a.overall_disclosure_score)
+            .map(company => (
+              <CompanyCard company={company} />
             ))}
         </div>
       </section>
@@ -73,14 +73,14 @@ const categoryMetrics = Array.from(allCategories).map(categoryName => {
         sortBy={sortBy}
       />
 
-      <!-- Company Cards -->
+      <!-- Category Performance Overview -->
       <section class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 mb-6">Companies Analyzed</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {companyMetrics
-            .sort((a, b) => b.overall_disclosure_score - a.overall_disclosure_score)
-            .map(company => (
-              <CompanyCard company={company} />
+        <h2 class="text-2xl font-bold text-slate-900 mb-6">Risk Category Performance</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {categoryMetrics
+            .sort((a, b) => b.average_question_score - a.average_question_score)
+            .map(category => (
+              <CategoryCard category={category} expandable={true} />
             ))}
         </div>
       </section>

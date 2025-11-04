@@ -14,7 +14,8 @@
       "Bash(del temp_nutrien.html 2)",
       "Bash(git push)",
       "Bash(gh run list:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
