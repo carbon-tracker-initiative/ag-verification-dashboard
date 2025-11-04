@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "description": "Classification types for disclosure snippets",
+    "version": "1.0",
+    "last_updated": "2025-10-30",
+    "note": "Snippet-level classifications from v3.0 schema"
+  },
+  "classifications": {
+    "FULL_DISCLOSURE": {
+      "label": "Full Disclosure",
+      "short_label": "Full",
+      "color": "#22c55e",
+      "bg_color": "#d1fae5",
+      "icon": "✓",
+      "description": "Complete disclosure with explicit details and materiality assessment"
+    },
+    "PARTIAL": {
+      "label": "Partial",
+      "short_label": "Partial",
+      "color": "#eab308",
+      "bg_color": "#fef3c7",
+      "icon": "⚠",
+      "description": "Partial disclosure with limited details or incomplete information"
+    },
+    "UNCLEAR": {
+      "label": "Unclear",
+      "short_label": "Unclear",
+      "color": "#f97316",
+      "bg_color": "#ffedd5",
+      "icon": "?",
+      "description": "Ambiguous or vague disclosure with unclear implications"
+    },
+    "NO_DISCLOSURE": {
+      "label": "No Disclosure",
+      "short_label": "None",
+      "color": "#ef4444",
+      "bg_color": "#fee2e2",
+      "icon": "✗",
+      "description": "No relevant disclosure found"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "_meta": {
+    "description": "Category configuration for verification dashboard",
+    "version": "2.0",
+    "last_updated": "2025-10-30",
+    "note": "Updated to 4 risk categories for snippet-level disclosure quality analysis"
+  },
+  "categories": [
+    {
+      "id": "environmental",
+      "name": "Environmental Risk",
+      "color": "#10b981",
+      "icon": "🌳",
+      "description": "Risks related to environmental damage, ecosystem impacts, pollution, and contamination"
+    },
+    {
+      "id": "human_health",
+      "name": "Human Health Risk",
+      "color": "#f43f5e",
+      "icon": "🏥",
+      "description": "Risks related to human health impacts from product exposure, worker safety, and health litigation"
+    },
+    {
+      "id": "market_business",
+      "name": "Market/Business Risk",
+      "color": "#6366f1",
+      "icon": "📊",
+      "description": "Risks related to market dynamics, business operations, competition, and commercial challenges"
+    },
+    {
+      "id": "regulatory_financial",
+      "name": "Regulatory/Financial Risk",
+      "color": "#8b5cf6",
+      "icon": "⚖️",
+      "description": "Risks related to regulatory changes, compliance requirements, and financial impacts"
+    }
+  ]
+}

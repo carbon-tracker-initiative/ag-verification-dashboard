@@ -80,7 +80,7 @@ export async function loadJsonFile(filePath: string): Promise<AnalysisResult | a
  * Load all company data from results folder
  */
 export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
-  const resultsPath = join(process.cwd(), '../../results');
+  const resultsPath = join(process.cwd(), 'results');
 
   try {
     const files = await readdir(resultsPath);

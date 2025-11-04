@@ -1,0 +1,124 @@
+{
+  "_meta": {
+    "description": "Category mapping for dashboard visualization",
+    "version": "1.0",
+    "last_updated": "2025-10-15",
+    "purpose": "Maps granular question categories to 3 main risk groups for dashboard display"
+  },
+  "category_groups": {
+    "Environmental Risks": {
+      "display_name": "Environmental Risks",
+      "display_color": "#10b981",
+      "icon": "🌱",
+      "description": "Risks related to environmental damage, ecosystem collapse, pollution, and contamination",
+      "includes": [
+        "Environmental Risk",
+        "Operational Risk"
+      ],
+      "keywords": [
+        "pollinator",
+        "water contamination",
+        "soil",
+        "waste",
+        "ecosystem",
+        "pollution",
+        "eutrophication",
+        "gypstack",
+        "mining",
+        "remediation",
+        "N2O",
+        "emissions"
+      ]
+    },
+    "Human Health Risks": {
+      "display_name": "Human Health Risks",
+      "display_color": "#ef4444",
+      "icon": "🏥",
+      "description": "Risks related to human health impacts from product exposure, worker safety, and health litigation",
+      "includes": [
+        "Health Risk",
+        "Legal Risk"
+      ],
+      "keywords": [
+        "health",
+        "exposure",
+        "worker",
+        "litigation",
+        "lawsuit",
+        "cancer",
+        "parkinson",
+        "glyphosate",
+        "paraquat",
+        "safety",
+        "residue"
+      ]
+    },
+    "Transition Risks": {
+      "display_name": "Transition Risks",
+      "display_color": "#f59e0b",
+      "icon": "⚡",
+      "description": "Risks related to market shifts, regulatory changes, technology disruption, and reputational issues",
+      "includes": [
+        "Regulatory Risk",
+        "Market Risk",
+        "Reputational Risk",
+        "Technology Risk",
+        "Product Risk"
+      ],
+      "keywords": [
+        "regulation",
+        "ban",
+        "restriction",
+        "organic",
+        "biological",
+        "alternative",
+        "perception",
+        "reputation",
+        "technology",
+        "resistance",
+        "GMO",
+        "compliance",
+        "carbon tax"
+      ]
+    }
+  },
+  "classification_colors": {
+    "YES": {
+      "color": "#10b981",
+      "bg_color": "#d1fae5",
+      "label": "Quantified",
+      "icon": "✓",
+      "score": 3
+    },
+    "PARTIAL": {
+      "color": "#f59e0b",
+      "bg_color": "#fef3c7",
+      "label": "Acknowledged",
+      "icon": "⚠",
+      "score": 2
+    },
+    "UNCLEAR": {
+      "color": "#6b7280",
+      "bg_color": "#f3f4f6",
+      "label": "Mentioned",
+      "icon": "?",
+      "score": 1
+    },
+    "NONE": {
+      "color": "#ef4444",
+      "bg_color": "#fee2e2",
+      "label": "Not Disclosed",
+      "icon": "✗",
+      "score": 0
+    }
+  },
+  "normalization_formula": {
+    "description": "Calculate normalized score for comparison across years/companies (D-RAG alignment method)",
+    "formula": "sum(question_scores) / (num_questions × 3)",
+    "example": "(3 YES * 3 + 5 PARTIAL * 2 + 2 UNCLEAR * 1 + 13 NONE * 0) / (23 × 3) = 21 / 69 = 30.4%"
+  },
+  "drag_mapping": {
+    "description": "Map D-Rag classifications to our system (DEPRECATED - both systems now use UNCLEAR)",
+    "note": "Both N-LLM and D-RAG now use 'UNCLEAR' classification"
+  }
+}
