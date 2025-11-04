@@ -9,9 +9,10 @@ interface Props {
 
 const { currentPath = '/' } = Astro.props;
 
+const baseUrl = import.meta.env.BASE_URL;
 const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Analytics', href: '/analytics' }
+  { label: 'Home', href: baseUrl },
+  { label: 'Analytics', href: `${baseUrl}/analytics` }
 ];
 
 function isActive(href: string): boolean {
@@ -31,7 +32,7 @@ function isActive(href: string): boolean {
       <!-- Logo/Title -->
       <div class="flex items-center gap-3">
         <a
-          href="/"
+          href={baseUrl}
           class="text-2xl font-semibold tracking-tight text-slate-100 hover:text-sky-300 transition-all duration-200"
           aria-label="Agricultural Risk Disclosure - Home"
         >

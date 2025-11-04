@@ -120,7 +120,7 @@ const nonePct = total > 0 ? (category.snippets_by_classification.NO_DISCLOSURE /
         {category.top_questions.map(q => (
           <li class="text-sm">
             <a
-              href={`/analytics#question-${q.question_id}`}
+              href={`${import.meta.env.BASE_URL}/analytics#question-${q.question_id}`}
               class="flex items-center justify-between gap-3 p-2 rounded-md border border-transparent hover:border-slate-700 hover:bg-slate-800/70 transition-colors"
             >
               <span class="text-slate-200 flex-1 min-w-0">

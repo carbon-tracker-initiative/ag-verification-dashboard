@@ -85,7 +85,7 @@ const { company } = Astro.props;
   </div>
 
   <a
-    href={`/${company.company_name.toLowerCase()}/${company.fiscal_year}`}
+    href={`${import.meta.env.BASE_URL}/${company.company_name.toLowerCase()}/${company.fiscal_year}`}
     class="mt-auto inline-flex items-center justify-center gap-2 rounded-md border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-200 transition-colors hover:border-slate-400 hover:text-slate-50"
   >
     View Analysis

@@ -24,9 +24,9 @@ export async function getStaticPaths() {
   const allData = await loadAllCompanyData();
   
   return allData.map(data => ({
-    params: { 
-      company: data.company, 
-      year: data.year.toString() 
+    params: {
+      company: data.company.toLowerCase(),
+      year: data.year.toString()
     }
   }));
 }
@@ -87,6 +87,8 @@ const totalQuestionsAnalyzed = new Set(
   companyData.verified.analysis_results.map(q => q.question_id)
 ).size;
 
+// Use properly capitalized company name for display
+const displayCompanyName = companyData.company;
 
 const gradeScale = [
   { grade: 'A', range: '90-100%', summary: 'Comprehensive evidence with financial detail, specific timing, and balanced narratives.' },
@@ -96,13 +98,13 @@ const gradeScale = [
   { grade: 'F', range: 'below 60%', summary: 'Few snippets meet the financial, temporal, and narrative standards used in verification.' }
 ];
 const breadcrumbItems = [
-  { label: 'Home', href: '/' },
-  { label: company, href: '#' },
+  { label: 'Home', href: import.meta.env.BASE_URL },
+  { label: displayCompanyName, href: '#' },
   { label: year.toString(), href: '#', current: true }
 ];
 ---
 
-<Layout title={`${company} ${year} - Analysis`}>
+<Layout title={`${displayCompanyName} ${year} - Analysis`}>
   <Header />
 
   <div class="min-h-screen bg-slate-950/70">
@@ -114,7 +116,7 @@ const breadcrumbItems = [
         <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mt-4">
           <div>
             <h1 class="text-3xl font-bold text-slate-50 mb-1 tracking-tight">
-              {company} - Year {year}
+              {displayCompanyName} - Year {year}
             </h1>
             <div class="flex items-center gap-4 text-sm text-slate-400 flex-wrap">
               <span>Model: {companyData.model}</span>
