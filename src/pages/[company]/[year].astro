@@ -13,7 +13,8 @@ import FiltersBar from '../../components/detail/FiltersBar.astro';
 import QuestionAccordion from '../../components/detail/QuestionAccordion.astro';
 import ComparisonToggle from '../../components/detail/ComparisonToggle.astro';
 
-import { loadCompanyYear } from '../../utils/dataLoader';
+// Fix: Change this line to include loadAllCompanyData
+import { loadCompanyYear, loadAllCompanyData } from '../../utils/dataLoader';
 import { calculateCompanyMetrics, calculateQuestionMetrics } from '../../utils/metricsCalculator';
 import { compareOriginalVsVerified } from '../../utils/verificationComparison';
 import categoriesConfig from '../../config/categories.json';
@@ -29,6 +30,7 @@ export async function getStaticPaths() {
     }
   }));
 }
+
 
 // Get company and year from URL
 const { company, year } = Astro.params;
