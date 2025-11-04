@@ -18,6 +18,18 @@ import { calculateCompanyMetrics, calculateQuestionMetrics } from '../../utils/m
 import { compareOriginalVsVerified } from '../../utils/verificationComparison';
 import categoriesConfig from '../../config/categories.json';
 
+// Add getStaticPaths for static site generation
+export async function getStaticPaths() {
+  const allData = await loadAllCompanyData();
+  
+  return allData.map(data => ({
+    params: { 
+      company: data.company, 
+      year: data.year.toString() 
+    }
+  }));
+}
+
 // Get company and year from URL
 const { company, year } = Astro.params;
 
