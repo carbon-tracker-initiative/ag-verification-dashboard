@@ -1,0 +1,30 @@
+{
+  "name": "verification-dashboard",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Interactive dashboard for verified agricultural risk disclosure analysis with snippet-level quality scoring",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "node --import tsx tests/metricsCalculator.test.ts && node --import tsx tests/dataValidation.test.ts && node --import tsx tests/dataLoader.test.ts && node --import tsx tests/components.smoke.test.ts",
+    "test:metrics": "node --import tsx tests/metricsCalculator.test.ts",
+    "test:validation": "node --import tsx tests/dataValidation.test.ts",
+    "test:loader": "node --import tsx tests/dataLoader.test.ts",
+    "test:smoke": "node --import tsx tests/components.smoke.test.ts"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.5.0",
+    "astro": "^5.14.5",
+    "chart.js": "^4.5.1",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.545.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.19.2",
+    "@types/node": "^22.10.5"
+  }
+}
