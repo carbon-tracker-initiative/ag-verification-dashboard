@@ -3,11 +3,14 @@
   "type": "module",
   "version": "1.0.0",
   "description": "Interactive dashboard for verified agricultural risk disclosure analysis with snippet-level quality scoring",
+  "homepage": "https://carbon-tracker-initiative.github.io/ag-verification-dashboard",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "test": "node --import tsx tests/metricsCalculator.test.ts && node --import tsx tests/dataValidation.test.ts && node --import tsx tests/dataLoader.test.ts && node --import tsx tests/components.smoke.test.ts",
     "test:metrics": "node --import tsx tests/metricsCalculator.test.ts",
     "test:validation": "node --import tsx tests/dataValidation.test.ts",
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.14",
+    "gh-pages": "^6.2.0",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.19.2",
     "@types/node": "^22.10.5"
