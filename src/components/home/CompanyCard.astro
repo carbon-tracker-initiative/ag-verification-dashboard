@@ -6,19 +6,30 @@
 
 import type { CompanyMetrics } from '../../types/metrics';
 import GradeDisplay from '../shared/GradeDisplay.astro';
+import VersionBadge from '../VersionBadge.astro';
 import { formatNumber, formatPercentage } from '../../utils/formatters';
 
 interface Props {
   company: CompanyMetrics;
+  version: string;
+  year: number;
+  companyName: string;
 }
 
-const { company } = Astro.props;
+const { company, version, year, companyName } = Astro.props;
+
+// Determine if this is the latest version (v4 > v3, etc.)
+const versionNum = parseInt(version.replace('v', ''));
+const isLatest = versionNum >= 4; // Simple heuristic - can be improved
 ---
 
 <div class="surface flex flex-col h-full p-6 transition-transform duration-200 hover:-translate-y-1">
   <div class="flex items-start justify-between mb-5">
     <div>
-      <h3 class="text-lg font-semibold text-slate-100">{company.company_name}</h3>
+      <div class="flex items-center gap-2 mb-1">
+        <h3 class="text-lg font-semibold text-slate-100">{company.company_name}</h3>
+        <VersionBadge version={version} isLatest={isLatest} size="sm" />
+      </div>
       <p class="text-sm text-slate-400">Calendar Year {company.fiscal_year}</p>
     </div>
     <GradeDisplay score={company.overall_disclosure_score} showGrade={true} showScore={true} size="md" />
@@ -85,7 +96,7 @@ const { company } = Astro.props;
   </div>
 
   <a
-    href={`${import.meta.env.BASE_URL}/${company.company_name.toLowerCase()}/${company.fiscal_year}`}
+    href={`${import.meta.env.BASE_URL}/${companyName.toLowerCase()}/${year}/${version}`}
     class="mt-auto inline-flex items-center justify-center gap-2 rounded-md border border-slate-600 px-4 py-2 text-sm font-semibold text-slate-200 transition-colors hover:border-slate-400 hover:text-slate-50"
   >
     View Analysis

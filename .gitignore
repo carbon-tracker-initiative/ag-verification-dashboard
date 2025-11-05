@@ -22,3 +22,8 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# generated reports
+reports/*.xlsx
+reports/*.csv
+reports/*.pdf

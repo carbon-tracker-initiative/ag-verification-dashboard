@@ -96,6 +96,7 @@ export interface VerificationMetadata {
 export interface AnalysisResult {
   company_name: string;
   fiscal_year: number;
+  version: string; // v3, v4, etc. from filename
   model_used: string;
   analysis_date: string;
   schema_version: string;
@@ -123,6 +124,7 @@ export interface ParsedFilename {
 export interface CompanyYearData {
   company: string;
   year: number;
+  version: string; // v3, v4, etc.
   model: string;
   verified: AnalysisResult;
   original?: AnalysisResult;

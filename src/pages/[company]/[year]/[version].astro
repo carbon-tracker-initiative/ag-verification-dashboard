@@ -1,56 +1,56 @@
 ---
 /**
- * Company-Year Detail Page
- * Displays comprehensive analysis for a specific company and fiscal year
+ * Company-Year-Version Detail Page
+ * Displays comprehensive analysis for a specific company, fiscal year, and version
  * with snippet-level disclosure quality scoring
  */
 
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/layout/Header.astro';
-import Breadcrumb from '../../components/layout/Breadcrumb.astro';
-import SummaryDashboard from '../../components/detail/SummaryDashboard.astro';
-import FiltersBar from '../../components/detail/FiltersBar.astro';
-import QuestionAccordion from '../../components/detail/QuestionAccordion.astro';
-import ComparisonToggle from '../../components/detail/ComparisonToggle.astro';
+import Layout from '../../../layouts/Layout.astro';
+import Header from '../../../components/layout/Header.astro';
+import Breadcrumb from '../../../components/layout/Breadcrumb.astro';
+import SummaryDashboard from '../../../components/detail/SummaryDashboard.astro';
+import FiltersBar from '../../../components/detail/FiltersBar.astro';
+import QuestionAccordion from '../../../components/detail/QuestionAccordion.astro';
+import ComparisonToggle from '../../../components/detail/ComparisonToggle.astro';
+import VersionBadge from '../../../components/VersionBadge.astro';
 
-// Fix: Change this line to include loadAllCompanyData
-import { loadCompanyYear, loadAllCompanyData } from '../../utils/dataLoader';
-import { calculateCompanyMetrics, calculateQuestionMetrics } from '../../utils/metricsCalculator';
-import { compareOriginalVsVerified } from '../../utils/verificationComparison';
-import categoriesConfig from '../../config/categories.json';
+import { loadCompanyYear, loadAllCompanyData, getVersionsForCompanyYear } from '../../../utils/dataLoader';
+import { calculateCompanyMetrics, calculateQuestionMetrics } from '../../../utils/metricsCalculator';
+import { compareOriginalVsVerified } from '../../../utils/verificationComparison';
+import categoriesConfig from '../../../config/categories.json';
 
 // Add getStaticPaths for static site generation
 export async function getStaticPaths() {
   const allData = await loadAllCompanyData();
-  
+
   return allData.map(data => ({
     params: {
       company: data.company.toLowerCase(),
-      year: data.year.toString()
+      year: data.year.toString(),
+      version: data.version
     }
   }));
 }
 
+// Get company, year, and version from URL
+const { company, year, version } = Astro.params;
 
-// Get company and year from URL
-const { company, year } = Astro.params;
-
-if (!company || !year) {
+if (!company || !year || !version) {
   return Astro.redirect('/');
 }
 
-// Load company data (this will get the latest version)
+// Load company data for specific version
 const yearNum = parseInt(year);
-const companyData = await loadCompanyYear(company, yearNum);
+const companyData = await loadCompanyYear(company, yearNum, version);
 
 if (!companyData) {
   return Astro.redirect('/');
 }
 
-// Redirect to versioned URL
-return Astro.redirect(`${import.meta.env.BASE_URL}/${company}/${year}/${companyData.version}`);
+// Get all available versions for this company-year
+const availableVersions = await getVersionsForCompanyYear(company, yearNum);
+const isLatestVersion = availableVersions[0] === version;
 
-// Note: The code below is kept for reference but will not execute due to redirect
 // Calculate metrics
 const companyMetrics = calculateCompanyMetrics(companyData.verified);
 
@@ -101,14 +101,15 @@ const gradeScale = [
   { grade: 'D', range: '60-69%', summary: 'Limited specificity or inconsistent coverage across the scoring dimensions.' },
   { grade: 'F', range: 'below 60%', summary: 'Few snippets meet the financial, temporal, and narrative standards used in verification.' }
 ];
+
 const breadcrumbItems = [
   { label: 'Home', href: import.meta.env.BASE_URL },
   { label: displayCompanyName, href: '#' },
-  { label: year.toString(), href: '#', current: true }
+  { label: `${year} ${version}`, href: '#', current: true }
 ];
 ---
 
-<Layout title={`${displayCompanyName} ${year} - Analysis`}>
+<Layout title={`${displayCompanyName} ${year} ${version} - Analysis`}>
   <Header />
 
   <div class="min-h-screen bg-slate-950/70">
@@ -119,9 +120,12 @@ const breadcrumbItems = [
 
         <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 mt-4">
           <div>
-            <h1 class="text-3xl font-bold text-slate-50 mb-1 tracking-tight">
-              {displayCompanyName} - Year {year}
-            </h1>
+            <div class="flex items-center gap-3 mb-2">
+              <h1 class="text-3xl font-bold text-slate-50 tracking-tight">
+                {displayCompanyName} - Year {year}
+              </h1>
+              <VersionBadge version={version} isLatest={isLatestVersion} size="md" />
+            </div>
             <div class="flex items-center gap-4 text-sm text-slate-400 flex-wrap">
               <span>Model: {companyData.model}</span>
               <span aria-hidden="true">&bull;</span>
@@ -129,6 +133,23 @@ const breadcrumbItems = [
               <span aria-hidden="true">&bull;</span>
               <span>{companyMetrics.total_snippets} evidence snippets</span>
             </div>
+
+            <!-- Version Selector -->
+            {availableVersions.length > 1 && (
+              <div class="mt-3 flex items-center gap-2">
+                <span class="text-sm text-slate-400">Other versions:</span>
+                <div class="flex gap-2">
+                  {availableVersions.filter(v => v !== version).map(v => (
+                    <a
+                      href={`${import.meta.env.BASE_URL}/${company}/${year}/${v}`}
+                      class="text-sm px-3 py-1 rounded-md border border-slate-600 text-slate-300 hover:border-slate-400 hover:text-slate-100 transition-colors"
+                    >
+                      {v}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <div class="flex items-center gap-6">
@@ -242,7 +263,7 @@ const breadcrumbItems = [
           })}
         </div>
 
-        <!-- No Results Message (Hidden by default, shown by JS when all questions are filtered out) -->
+        <!-- No Results Message -->
         <div id="no-results" class="hidden text-center py-12">
           <svg class="w-16 h-16 text-slate-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -251,6 +272,7 @@ const breadcrumbItems = [
           <p class="text-sm text-slate-500">Try adjusting your filter criteria</p>
         </div>
       </section>
+
       <!-- Verification & Scoring Reference -->
       <section id="score-system-reference" class="mt-12 space-y-6">
         <div class="surface p-6 space-y-4">
@@ -276,7 +298,6 @@ const breadcrumbItems = [
           </div>
         </div>
       </section>
-
     </main>
   </div>
 </Layout>
@@ -303,14 +324,3 @@ const breadcrumbItems = [
     }
   }
 </style>
-
-
-
-
-
-
-
-
-
-
-

@@ -99,7 +99,7 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
       const parsed = parseFilename(verifiedFile);
       if (!parsed) continue;
 
-      const key = `${parsed.company}_${parsed.year}_${parsed.model}`;
+      const key = `${parsed.company}_${parsed.year}_${parsed.version}_${parsed.model}`;
 
       // Load verified file
       const verifiedPath = join(resultsPath, verifiedFile);
@@ -129,12 +129,14 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
       const normalizedVerified = normalizeAnalysisResult(verified);
       normalizedVerified.company_name = parsed.company;
       normalizedVerified.fiscal_year = parsed.year;
+      normalizedVerified.version = parsed.version;
       normalizedVerified.model_used = parsed.model;
 
       const normalizedOriginal = original ? normalizeAnalysisResult(original) : undefined;
       if (normalizedOriginal) {
         normalizedOriginal.company_name = parsed.company;
         normalizedOriginal.fiscal_year = parsed.year;
+        normalizedOriginal.version = parsed.version;
         normalizedOriginal.model_used = parsed.model;
       }
 
@@ -142,6 +144,7 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
       const companyData: CompanyYearData = {
         company: parsed.company,
         year: parsed.year,
+        version: parsed.version,
         model: parsed.model,
         verified: normalizedVerified,
         original: normalizedOriginal,
@@ -162,21 +165,37 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
 }
 
 /**
- * Load data for a specific company and year
+ * Load data for a specific company, year, and optionally version
+ * If version is not specified, returns the latest version available
  */
 export async function loadCompanyYear(
   company: string,
-  year: number
+  year: number,
+  version?: string
 ): Promise<CompanyYearData | null> {
   const allData = await loadAllCompanyData();
 
   // Find matching company-year (case-insensitive company name)
   const companyLower = company.toLowerCase();
-  const found = allData.find(d =>
+  const matches = allData.filter(d =>
     d.company.toLowerCase() === companyLower && d.year === year
   );
 
-  return found || null;
+  if (matches.length === 0) return null;
+
+  // If version is specified, find exact match
+  if (version) {
+    return matches.find(d => d.version === version) || null;
+  }
+
+  // Otherwise, return the latest version (v4 > v3, etc.)
+  matches.sort((a, b) => {
+    const versionA = parseInt(a.version.replace('v', ''));
+    const versionB = parseInt(b.version.replace('v', ''));
+    return versionB - versionA; // Descending order
+  });
+
+  return matches[0];
 }
 
 /**
@@ -203,6 +222,44 @@ export async function getYearsForCompany(company: string): Promise<number[]> {
 }
 
 /**
+ * Get list of versions for a company and year
+ */
+export async function getVersionsForCompanyYear(
+  company: string,
+  year: number
+): Promise<string[]> {
+  const allData = await loadAllCompanyData();
+  const companyLower = company.toLowerCase();
+
+  const versions = allData
+    .filter(d => d.company.toLowerCase() === companyLower && d.year === year)
+    .map(d => d.version);
+
+  // Sort versions (v4, v3, v2, v1, etc.)
+  return Array.from(new Set(versions)).sort((a, b) => {
+    const versionA = parseInt(a.replace('v', ''));
+    const versionB = parseInt(b.replace('v', ''));
+    return versionB - versionA; // Descending order
+  });
+}
+
+/**
+ * Get all unique company-year-version combinations
+ */
+export async function getAllCompanyYearVersions(): Promise<Array<{
+  company: string;
+  year: number;
+  version: string;
+}>> {
+  const allData = await loadAllCompanyData();
+  return allData.map(d => ({
+    company: d.company,
+    year: d.year,
+    version: d.version
+  }));
+}
+
+/**
  * Get base question ID (remove variant suffixes like -A, -B)
  * This is for backward compatibility with dark-doppler components
  */
@@ -217,6 +274,7 @@ export function normalizeAnalysisResult(result: any): AnalysisResult {
   // Add default top-level fields if missing
   if (!result.company_name) result.company_name = '';
   if (!result.fiscal_year) result.fiscal_year = 0;
+  if (!result.version) result.version = '';
   if (!result.analysis_date) result.analysis_date = new Date().toISOString().split('T')[0];
   if (!result.model_used) result.model_used = '';
   if (!result.documents_analyzed) result.documents_analyzed = [];

@@ -11,6 +11,7 @@
     "astro": "astro",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
+    "export:excel": "node --import tsx src/scripts/generateExcelReport.ts",
     "test": "node --import tsx tests/metricsCalculator.test.ts && node --import tsx tests/dataValidation.test.ts && node --import tsx tests/dataLoader.test.ts && node --import tsx tests/components.smoke.test.ts",
     "test:metrics": "node --import tsx tests/metricsCalculator.test.ts",
     "test:validation": "node --import tsx tests/dataValidation.test.ts",
@@ -22,10 +23,14 @@
     "astro": "^5.14.5",
     "chart.js": "^4.5.1",
     "date-fns": "^4.1.0",
-    "lucide-react": "^0.545.0"
+    "exceljs": "^4.4.0",
+    "file-saver": "^2.0.5",
+    "lucide-react": "^0.545.0",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.14",
+    "@types/file-saver": "^2.0.7",
     "@types/node": "^22.10.5",
     "gh-pages": "^6.3.0",
     "tailwindcss": "^4.1.14",

@@ -1,0 +1,434 @@
+{
+  "metadata": {
+    "company": "SQM",
+    "year": "2024",
+    "verification_model": "gemini-2.5-pro",
+    "original_file": "2025-11-04T23:06:27.939022"
+  },
+  "question_verifications": [
+    {
+      "question_id": "99903",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99903-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses 'product hazards and risks' and the potential 'impact on human beings', directly addressing the question's topic of human health problems from products.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet acknowledges 'product hazards and risks' to humans but does not frame this as a risk to the business itself (e.g., financial, reputational, or operational risk). It describes product stewardship actions, which fits the 'UNCLEAR' definition: topic acknowledged but not characterized as a business risk."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet acknowledges 'product hazards and risks' and the need to provide 'updated communications on hazards through safety data sheets and labeling.' While it states the company does not have a procedure for generating lower-impact alternatives, the explicit mention of product hazards and the communication efforts indicate an awareness of potential human health problems, classifying it as a partial disclosure of the risk.",
+              "suggested_value": "The snippet discloses that the company manages 'product hazards and risks' through communication and labeling. This acknowledges the existence of potential human health problems from its products. However, it does not characterize these hazards as a risk to the business, making the disclosure UNCLEAR.",
+              "explanation": "The current justification incorrectly equates acknowledging a product hazard with identifying a business risk, which is the key distinction between UNCLEAR and PARTIAL."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99903-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it explicitly identifies a product component (boron) that can lead to a specific human health problem ('toxic to reproduction category 1B') and is labeled as a 'potential hazard'.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet describes a product's hazardous property ('toxic to reproduction') and the company's labeling compliance. It acknowledges the health issue but does not frame it as a risk to the business. This aligns with the 'UNCLEAR' definition."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly identifies a specific component (boron) in their plant nutrition products that, if exceeding limits, leads to classification as 'toxic to reproduction category 1B' and requires labeling for 'potential hazards.' This directly links a product component to a specific human health problem (reproductive toxicity) and the need to manage this hazard, indicating a clear identification of a risk.",
+              "suggested_value": "The snippet acknowledges that a product component can be 'toxic to reproduction' and is labeled as a 'potential hazard'. While this clearly identifies a human health problem, the text does not characterize it as a risk to the business, making the disclosure UNCLEAR.",
+              "explanation": "The justification incorrectly assumes that identifying a product hazard is the same as identifying a business risk, which is the requirement for a PARTIAL classification."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99903-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it directly lists several human health hazards ('acute toxicity,' 'eye irritation,' 'skin irritation') associated with one of the company's products (iodine).",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet provides a factual list of GHS hazard classifications for a product. This acknowledges human health problems but does not frame them as a risk to the business, which is required for a PARTIAL classification. Therefore, it should be UNCLEAR."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly lists several human health hazards for their iodine product, including 'Category 4 acute toxicity,' 'Category 2 eye irritation,' and 'Category 2 skin irritation,' based on the GHS. This is a direct disclosure of potential human health problems associated with their product, indicating a clear identification of a risk.",
+              "suggested_value": "The snippet lists several GHS classifications for its iodine product, including 'acute toxicity' and 'skin irritation'. This is a direct acknowledgment of human health hazards but is presented as a factual product characteristic rather than a risk to the business, making the disclosure UNCLEAR.",
+              "explanation": "The current justification conflates the disclosure of a product hazard with the identification of a business risk, leading to an incorrect classification."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99904",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99904-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it establishes the company's risk framework, identifying 'transition risks' which include 'regulatory' risks arising from adapting to a 'decarbonized economy'. This directly relates to the concept of carbon costs as a regulatory risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99904-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant. It explicitly mentions 'payment of carbon taxes in Chile' impacting direct operations ('Coya Sur's nitrate production') and regulatory changes like the 'Carbon Border Adjustment Mechanism (CBAM)' impacting products sold to customers in the EU. This directly answers both parts of the question.",
+          "classification_issues": [
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Partial-type",
+              "suggested_value": "Non-Financial",
+              "explanation": "The 'Financial Type' is incorrect. The snippet discusses the impact of carbon taxes but does not provide any financial figures or make any statements about financial materiality. According to the definitions, 'Non-Financial' is the correct categorization."
+            }
+          ],
+          "overall_quality": "good",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99904-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it explicitly identifies 'Carbon tax' as a 'risk' stemming from 'increased costs due to carbon taxes on our fertilizers', directly addressing the question.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "FULL_DISCLOSURE",
+              "suggested_value": "PARTIAL",
+              "explanation": "The classification should be PARTIAL. While the snippet identifies carbon tax as a risk and provides financial figures (price per ton), it does not explicitly state that this risk is financially material to the business, which is a requirement for the FULL_DISCLOSURE classification."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly identifies 'Carbon tax' as a risk stemming from 'increased costs due to carbon taxes on our fertilizers' and provides quantified future costs (US$ 129/tCO2e in 2030, US$ 1,665/tCO2e in 2060) under an 'Optimistic scenario.' This directly links carbon costs to financial materiality and future business impact.",
+              "suggested_value": "This snippet explicitly identifies 'Carbon tax' as a risk stemming from 'increased costs'. It provides quantified potential future carbon prices under a specific scenario, which clearly outlines the financial nature of the risk. However, it does not make an explicit statement about the materiality of this risk to the business.",
+              "explanation": "The current justification incorrectly equates the presence of a financial figure with an explicit statement of financial materiality. The justification should be corrected to reflect this distinction."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99904-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant. It discloses a specific payment ('ThUS$ 410 in 2024') for a 'carbon tax' related to its direct operations ('Coya Sur boiler') and frames this in the context of mitigating future 'risks'.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "FULL_DISCLOSURE",
+              "suggested_value": "PARTIAL",
+              "explanation": "The classification should be PARTIAL. The snippet identifies a cost paid and frames it as a risk, but it does not explicitly state that this risk is financially material to the business. The presence of a dollar amount alone does not meet the criteria for FULL_DISCLOSURE."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly states that the company 'paid approximately ThUS$ 410 in 2024 for emissions from the Coya Sur boiler' due to a carbon tax in Chile. It also mentions monitoring to 'anticipate and mitigate risks in the event of possible increases in the scope of the carbon tax.' This directly links carbon costs to financial impact from direct operations and acknowledges future risk, providing a full disclosure.",
+              "suggested_value": "This snippet explicitly links carbon costs to a financial impact by stating the company 'paid approximately ThUS$ 410 in 2024' for a carbon tax. It also acknowledges future risk. This provides clear evidence of the risk, but lacks an explicit statement of financial materiality required for a full disclosure.",
+              "explanation": "The justification incorrectly concludes that linking a risk to a financial impact is sufficient for a FULL_DISCLOSURE classification. It fails to note the absence of an explicit statement on financial materiality."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99911",
+      "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99911-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it explicitly lists 'Site closure and rehabilitation' as a 'material topic' and a 'main challenge' for the company, directly addressing the question of whether it is considered a risk.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "FULL_DISCLOSURE",
+              "explanation": "The snippet includes a 'Double Materiality Matrix' with a 'Financial Materiality' axis. By plotting 'Site closure and rehabilitation' on this matrix, the company is explicitly stating that the topic is financially material, which meets the criteria for FULL_DISCLOSURE."
+            },
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Financial Type: Non-Financial",
+              "suggested_value": "Financial Type: Partial-type",
+              "explanation": "The snippet explicitly references 'Financial Materiality' via the matrix axis but provides no dollar amounts. This fits the definition of 'Partial-type', not 'Non-Financial'."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet identifies 'Site closure and rehabilitation' as a 'Material Topic' under the Environmental category. The introductory text states that material topics 'reflect the main challenges and opportunities facing SQM Iodine Plant Nutrition,' which clearly indicates that site closure and rehabilitation is considered a risk or challenge to the business. However, it does not provide specific financial details or a definitive statement about its financial materiality.",
+              "suggested_value": "The snippet identifies 'Site closure and rehabilitation' as a material topic and one of the company's 'main challenges,' which clearly frames it as a risk. Furthermore, by plotting this topic on a 'Double Materiality Matrix' with a 'Financial Materiality' axis, the company explicitly states that it is financially material, meeting the criteria for a full disclosure.",
+              "explanation": "The current justification incorrectly claims there is no definitive statement on financial materiality, ignoring the clear evidence of the materiality matrix itself."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99911-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses 'closure plans' for production facilities, which is the topic of the question. However, it does not frame the topic as a risk.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet states that the company has approved closure plans, which is a neutral statement of compliance. It does not characterize site closure as a risk to the business, which is a requirement for a PARTIAL classification. The analyst incorrectly inferred risk where none was stated."
+            },
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Framing: Risk",
+              "suggested_value": "Framing: Neutral",
+              "explanation": "The text is a factual statement about having approved closure plans to meet regulations. It does not frame this in terms of threats or potential losses, making the framing Neutral, not Risk."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet confirms that all production facilities have approved closure plans that meet current regulations. The existence of such plans, criteria, and measures implies a managed obligation and associated costs, which inherently represent a risk to the business if not properly executed or funded. However, it does not quantify the financial impact or explicitly state its financial materiality.",
+              "suggested_value": "This snippet acknowledges the topic of site closure by stating that approved plans are in place. However, it is presented as a matter of regulatory compliance and does not characterize site closure or restoration as a risk to the business.",
+              "explanation": "The current justification is based on the analyst's inference that having plans implies a risk. The justification should be based only on what the text explicitly states, which is a neutral fact about compliance."
+            }
+          ],
+          "overall_quality": "poor",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99912",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99912-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it mentions that the company's products are subject to regulations that include the 'restriction of chemical substances,' which directly relates to the question about product bans or restrictions.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet is a neutral statement of fact about the regulatory environment. It acknowledges the topic of product restrictions but does not frame it as a risk to the business, which fits the definition of UNCLEAR."
+            },
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Framing: Risk",
+              "suggested_value": "Framing: Neutral",
+              "explanation": "The text is descriptive and factual, stating that products are 'subject to' regulations. It does not use any language to frame this as a risk or threat."
+            },
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Timeframe: Forward-looking",
+              "suggested_value": "Timeframe: Multiple or Unclear",
+              "explanation": "The regulation is a present-day reality, while the potential for restriction is an ongoing and future concern. 'Multiple or Unclear' better captures this."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly mentions that chemical products sold in Europe are subject to regulations that include 'restriction of chemical substances and blends.' This directly addresses the possibility of the company's products being restricted or banned, which constitutes a clear regulatory risk to the business. However, it does not quantify the financial impact of such restrictions.",
+              "suggested_value": "The snippet mentions that its products are subject to regulations that include 'restriction of chemical substances,' which is relevant to the topic of product bans. However, it is a neutral statement of fact about the regulatory environment and does not frame this as a risk to the business.",
+              "explanation": "The current justification incorrectly infers that the statement 'constitutes a clear regulatory risk,' a conclusion not supported by the neutral language of the quote."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99912-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it states that specific company products fall under a regulation concerning the 'sale and use of explosives precursors,' which implies potential restrictions on their sale, directly addressing the question's topic.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet states a fact that certain products 'fall under the scope of Regulation'. It does not characterize this as a risk to the business, making the classification UNCLEAR more appropriate than PARTIAL."
+            },
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Framing: Risk",
+              "suggested_value": "Framing: Neutral",
+              "explanation": "The language is purely factual and descriptive. It lacks any framing that would characterize the regulation as a risk or threat to the business."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet states that some of the company's products (potassium nitrate, sodium nitrate, and other nitrogen compounds/fertilizers) fall under a regulation that restricts their 'sale and use.' This directly indicates a risk to the business regarding the market access and sales of these products. It clearly identifies the risk without providing financial quantification.",
+              "suggested_value": "The snippet acknowledges that certain products fall under a regulation concerning their 'sale and use,' which is relevant to the question. However, it is presented as a factual statement about the regulatory landscape and does not frame this as a risk to the business.",
+              "explanation": "The current justification claims the snippet 'directly indicates a risk,' but the text itself is a neutral statement of fact. The justification makes an unsupported leap in logic."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99913",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99913-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it explicitly lists 'Site closure and rehabilitation' as a 'Material Topic' for the company. The accompanying text states these topics represent the 'main challenges,' which directly frames site rehabilitation as a business risk, aligning with the question.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "FULL_DISCLOSURE",
+              "explanation": "The snippet includes a 'Double Materiality Matrix' with a 'Financial Materiality' axis. Plotting 'Site closure and rehabilitation' on this matrix constitutes an explicit statement of financial materiality, which meets the criteria for FULL_DISCLOSURE."
+            },
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Financial Type: Non-Financial",
+              "suggested_value": "Financial Type: Partial-type",
+              "explanation": "The snippet references financial materiality via the materiality matrix but does not provide specific dollar amounts. This aligns with the definition of 'Partial-type'."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet identifies 'Site closure and rehabilitation' as a 'Material Topic' under the Environmental category. The introductory text states that material topics 'reflect the main challenges and opportunities facing SQM Iodine Plant Nutrition,' which implies that the restoration of sites, including potentially contaminated ones, is considered a risk or challenge to the business. However, it does not provide specific financial details or a definitive statement about its financial materiality.",
+              "suggested_value": "The snippet identifies 'Site closure and rehabilitation' as a material 'challenge' for the business, which clearly frames it as a risk. The inclusion of this topic on the 'Double Materiality Matrix,' which has a 'Financial Materiality' axis, is an explicit statement that the topic is considered financially material to the business.",
+              "explanation": "The current justification incorrectly claims there is no definitive statement on financial materiality, overlooking the significance of the materiality matrix itself. The suggested justification correctly interprets the matrix as a statement of financial materiality."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99913-002",
+          "is_relevant": false,
+          "relevance_explanation": "The snippet is not relevant. It describes a specific chemical spill incident where the company's assessment concluded there was no environmental impact or soil contamination. Therefore, it does not address the risk of *restoration* of *contaminated* sites, but rather a successful instance of spill prevention/mitigation.",
+          "classification_issues": [],
+          "overall_quality": "poor",
+          "recommendation": "remove"
+        },
+        {
+          "snippet_id": "99913-003",
+          "is_relevant": false,
+          "relevance_explanation": "The snippet is not relevant. It lists general environmental expenditures on topics like waste management and mitigation measures. It does not mention the restoration of contaminated sites or frame these costs as being related to a risk of site restoration. The connection to the specific question is too tangential and speculative.",
+          "classification_issues": [],
+          "overall_quality": "poor",
+          "recommendation": "remove"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99915",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99915-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it explicitly discusses 'Regulatory Risks,' including 'Increased costs due to new carbon pricing mechanisms' and 'more stringent requirements in new regulations,' which directly address the question's topic of rising compliance costs.",
+          "classification_issues": [
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Financial Type: Partial-type",
+              "suggested_value": "Financial Type: Non-Financial",
+              "explanation": "The 'Partial-type' financial categorization requires a reference to financial materiality without providing specific amounts. This snippet discusses costs but does not mention materiality, so it should be categorized as 'Non-Financial'."
+            }
+          ],
+          "overall_quality": "good",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99916",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99916-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant. It identifies 'Stigmatization of the sector' and 'Increased concerns among stakeholders' as reputational risks. For a fertilizer company like SQM, this is a direct proxy for the negative public perception of chemical-intensive agriculture mentioned in the question.",
+          "classification_issues": [
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Partial-type",
+              "suggested_value": "Non-Financial",
+              "explanation": "The 'Financial Type' was incorrectly categorized as 'Partial-type'. The definition of 'Partial-type' requires a reference to financial materiality, which is absent in the snippet. The correct category is 'Non-Financial' as the snippet identifies a risk without discussing financial amounts or materiality."
+            }
+          ],
+          "overall_quality": "good",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99917",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99917-001",
+          "is_relevant": false,
+          "relevance_explanation": "The snippet discusses legal risks from 'legal non-compliance, or failure to adapt on time to new legal requirements' in the context of climate change regulations. The question specifically asks about risks from 'class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products'. These are two distinct types of legal risk; the snippet addresses regulatory compliance risk, not product liability risk, and is therefore not relevant.",
+          "classification_issues": [
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Financial Type: Partial-type",
+              "suggested_value": "Financial Type: Non-Financial",
+              "explanation": "The snippet does not mention or allude to financial materiality, which is a requirement for the 'Partial-type' classification. It only mentions the existence of a risk, making 'Non-Financial' the correct category."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly identifies 'Exposure to litigation and/or penalties due to legal non-compliance' as a legal risk. While it doesn't specifically mention 'class action lawsuits' or 'health/environmental claims from product exposure,' 'litigation and/or penalties due to legal non-compliance' is broad enough to encompass such challenges, especially in the context of environmental regulations and product-related impacts.",
+              "suggested_value": null,
+              "explanation": "The justification makes an unsupported logical leap by equating the risk of litigation for regulatory non-compliance with the risk of litigation from product exposure claims. The quoted text does not support this connection, leading to the incorrect assessment of relevance."
+            }
+          ],
+          "overall_quality": "poor",
+          "recommendation": "remove"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99918",
+      "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99918-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet explicitly lists 'Increased production costs due to greater costs of resources such as energy' as a 'Market Risk,' which directly answers the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99918-002",
+          "is_relevant": false,
+          "relevance_explanation": "The snippet discusses the financial risk from carbon taxes and regulations (e.g., CBAM, Chilean green tax), which are costs associated with the output of emissions. The question specifically asks about the risk from high input costs of energy. While related, these are distinct risks, and the snippet does not address the cost of energy itself.",
+          "classification_issues": [],
+          "overall_quality": "poor",
+          "recommendation": "remove"
+        }
+      ],
+      "has_issues": true
+    }
+  ],
+  "summary": {
+    "total_questions_verified": 9,
+    "total_snippets_verified": 19,
+    "relevant_snippets": 15,
+    "irrelevant_snippets": 4,
+    "snippets_needing_correction": 17,
+    "snippets_to_remove": 4,
+    "questions_with_issues": 9
+  }
+}

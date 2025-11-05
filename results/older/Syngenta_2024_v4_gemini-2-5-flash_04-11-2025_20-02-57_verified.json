@@ -1,0 +1,804 @@
+{
+  "analysis_results": [
+    {
+      "question_id": "99901",
+      "question_number": 1,
+      "category": "Market/Business Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that agricultural crops developing resistance to its pesticides, which are applied by the company's customers to cropland, is a risk to the business?",
+      "disclosures": [],
+      "summary": "The company does not explicitly disclose that agricultural crops developing resistance to its pesticides is a risk to the business in the provided documents. While general market factors and product efficacy are mentioned, there is no direct statement identifying pesticide resistance as a specific business risk."
+    },
+    {
+      "question_id": "99903",
+      "question_number": 2,
+      "category": "Human Health Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99903-001",
+          "quote": "Since September 2017, approximately 9,100 lawsuits, including more than 1,600 lawsuits that have been voluntarily dismissed or otherwise resolved, have been filed against Syngenta in state and federal courts in the United States by plaintiffs seeking damages from Syngenta arising from their use of or exposure to Syngenta’s paraquat products. Plaintiffs allege that their use or exposure to Syngenta’s paraquat products has caused them to develop Parkinson’s disease and/or kidney disease. The cases name Syngenta AG, Syngenta Crop Protection, LLC, and Syngenta Seeds, and variously named alleged distributors of paraquat as additional defendants.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 49, Notes to the Syngenta AG Group Consolidated Financial Statements",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the snippet clearly identifies a business risk, it does not explicitly state that this risk is financially material to the company, which is a requirement for the FULL_DISCLOSURE classification.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language explicitly describes 'lawsuits filed against Syngenta' and 'seeking damages' due to alleged health problems from its products, framing this as a direct threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The phrase 'seeking damages' indicates a direct financial impact and materiality, even without specific monetary figures in this sentence, as it implies potential financial losses for the company.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The lawsuits 'have been filed' since 2017 and are ongoing, with 'pending' cases, indicating a present-day and continuing risk.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99903-002",
+          "quote": "While the counts raised in each complaint differ slightly by plaintiff and jurisdiction, they tend to include: (1) Strict Liability - Design Defect; (2) Strict Liability - Failure to Warn; (3) Negligence; (4) Public Nuisance; (5) Violation of Consumer Fraud & Deceptive Business Practices Acts; (6) Breach of Implied Warranty of Merchantability; and (7) Punitive Damages. Certain suits also include claims by the spouses of individuals with Parkinson’s disease for Loss of Consortium.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 49, Notes to the Syngenta AG Group Consolidated Financial Statements",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. The snippet describes the legal basis for the risk to the business but does not contain a statement about the financial materiality of this risk, which is required for a FULL_DISCLOSURE classification.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The description of various legal claims like 'Strict Liability - Design Defect' and 'Punitive Damages' clearly frames the issue as a significant threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The mention of 'Punitive Damages' directly implies potential financial penalties and significant monetary impact, even without a specific amount, indicating financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "These are the 'counts raised in each complaint' for ongoing litigation, indicating a present-day and continuing legal and financial exposure.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99903-003",
+          "quote": "On April 17, 2024, the MDL court granted Defendants’ Motion to Exclude the expert testimony of the sole expert on the critical issue of general causation that had been presented by the Plaintiffs in the four initial bellwether cases selected for trial. On the same date, the MDL court also granted Defendants’ Joint Motion for Summary Judgment dismissing those four cases due to the Plaintiffs’ inability to establish a causal link between occupational paraquat exposure and Parkinson’s disease without the proffered expert testimony. Plaintiffs have since filed a notice of appeal of these dismissals to the 7th Circuit Court of Appeals; briefing was completed on October 16, 2024 and oral argument was held on February 12, 2025 and a decision is expected in the coming months.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 51, Notes to the Syngenta AG Group Consolidated Financial Statements",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. The snippet discusses the status of a known business risk but does not explicitly state its financial materiality, which is a necessary condition for the FULL_DISCLOSURE classification.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The snippet describes ongoing legal proceedings and appeals related to alleged health impacts, indicating a continuing challenge and uncertainty for the business, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "Although this snippet describes a favorable legal outcome for Syngenta, the context of ongoing litigation and appeals for 'damages' (as mentioned in other snippets) implies continued financial exposure and materiality, even if not quantified here.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The events described occurred in 'April 2024', 'October 16, 2024', and 'February 12, 2025', with a decision 'expected in the coming months', clearly indicating present-day and forward-looking aspects of the litigation.",
+            "timeframe": "Multiple or Unclear"
+          }
+        },
+        {
+          "snippet_id": "99903-004",
+          "quote": "Canadian Litigation. Lawsuits alleging that Syngenta’s paraquat products have caused their Parkinson’s disease have been filed by plaintiffs seeking class certification in Quebec, Ontario, and British Columbia. The Plaintiffs proceeded first in Quebec seeking to authorize a national class. Syngenta opposed the motion, and maintained that if authorized, the class should be limited to Quebec. The authorization motion was heard June 6, 2022, and a Quebec only class was authorized on July 27, 2022. In February 2023, the court granted the plaintiff’s motion to discontinue the Ontario proceeding to pursue the action in British Columbia. On August 9, 2024, the British Columbia Supreme Court issued a decision authorizing a Canadian class (excluding Quebec). Syngenta is appealing the decision, in part, related to claims certified in battery and of certain evidentiary admissibility issues.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 52, Notes to the Syngenta AG Group Consolidated Financial Statements",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. The snippet identifies a clear business risk through litigation but lacks an explicit statement on the financial materiality of this risk, which is required for a FULL_DISCLOSURE classification.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The description of 'Lawsuits alleging that Syngenta’s paraquat products have caused their Parkinson’s disease' clearly frames this as a significant risk and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "While this snippet doesn't state specific financial amounts, the context of 'lawsuits alleging... Parkinson's disease' and 'seeking class certification' implies potential significant financial liabilities and materiality for the company.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The lawsuits 'have been filed' and decisions were made in 'July 27, 2022', 'February 2023', and 'August 9, 2024', with Syngenta 'appealing the decision', indicating ongoing and present-day litigation.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99903-005",
+          "quote": "Syngenta maintains general liability insurance, including product liability insurance, covering claims on a worldwide basis with coverage limits and retention amounts which management believes to be adequate and appropriate in relation to Syngenta’s businesses and the risks to which it is subject.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 48, Notes to the Syngenta AG Group Consolidated Financial Statements",
+          "financial_amounts": [],
+          "classification_justification": "This snippet acknowledges the existence of 'product liability insurance' to cover 'claims on a worldwide basis' related to 'risks to which it is subject'. This implicitly confirms that product liability, which includes human health problems from products, is a recognized risk to the business, for which the company has financial mitigation in place.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The mention of 'product liability insurance, covering claims... and the risks to which it is subject' frames product liability as a recognized threat that requires financial protection.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'coverage limits and retention amounts' and 'product liability insurance', indicating financial planning and impact, but without providing specific monetary values for the risk itself, making it partial-type.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement describes current insurance coverage and ongoing risks, indicating a present-day assessment and strategy.",
+            "timeframe": "Present day"
+          }
+        }
+      ],
+      "summary": "Syngenta extensively discloses human health problems from its products as a risk to the business, primarily through ongoing litigation related to paraquat products causing Parkinson's disease and kidney disease. The company details numerous lawsuits, legal claims (including punitive damages), and the status of these proceedings in both US and Canadian courts. It also acknowledges product liability risks more broadly through its insurance coverage and mentions consumer perceptions of crop protection chemicals as a material risk. Furthermore, the company addresses occupational health risks, including chemical exposure, within its ESG reporting, outlining management systems and commitments to prevent work-related illnesses."
+    },
+    {
+      "question_id": "99904",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99904-001",
+          "quote": "Legislation may be enacted in the future that limits carbon dioxide emissions in the manufacture of Syngenta’s products or increases the costs associated with such emissions.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 4, Operating and Financial Review and Prospects",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that future legislation could 'increase the costs associated with such emissions' (carbon dioxide emissions) in the manufacture of its products. This directly identifies carbon costs as a potential financial risk to the business arising from its direct operations.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement uses 'increases the costs' and 'limits carbon dioxide emissions', clearly framing potential future legislation as a source of negative financial consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The phrase 'increases the costs' indicates a financial impact, but it does not provide a definitive statement about the materiality of these costs, making it a partial-type disclosure.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'may be enacted in the future' and 'increases the costs' indicates a forward-looking risk that has not yet materialized.",
+            "timeframe": "Forward-looking"
+          }
+        }
+      ],
+      "summary": "Syngenta discloses that carbon costs arising from its direct operations are a potential risk. Specifically, it notes that future legislation limiting carbon dioxide emissions in manufacturing could increase associated costs. However, the disclosure does not explicitly mention carbon costs arising from the use of its products by customers as a business risk, nor does it provide a definitive statement on the financial materiality of these potential costs."
+    },
+    {
+      "question_id": "99905",
+      "question_number": 4,
+      "category": "Environmental Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that reduced soil fertility caused by its pesticides is a risk to the business? For instance, the increase in toxicity of the soil impacting human health, or the potentially declining yield experienced by farmers applying the pesticide.",
+      "disclosures": [],
+      "summary": "The company does not explicitly disclose that reduced soil fertility caused by its pesticides is a risk to the business in the provided documents. While 'soil erosion and biodiversity loss' are mentioned as general problems farmers face, and 'regenerative agriculture and soil health' is a material topic, there is no direct link made between Syngenta's pesticides and a risk of reduced soil fertility or toxicity impacting yields as a business concern."
+    },
+    {
+      "question_id": "99906",
+      "question_number": 5,
+      "category": "Human Health Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that factory workplace hazards including chemical exposure during production of pesticides is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99906-001",
+          "quote": "Syngenta is committed to providing a safe and healthy work environment for all its employees, contractors, and visitors. This commitment extends to preventing work-related injuries, illnesses, and fatalities, as well as promoting overall well-being. Syngenta recognizes that effective health and safety management is crucial for operational excellence, employee morale, and maintaining its reputation as a responsible employer.",
+          "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, 3.3.3 Health and safety",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states Syngenta's commitment to preventing 'work-related injuries, illnesses, and fatalities' and recognizes that 'effective health and safety management is crucial for operational excellence'. This identifies factory workplace hazards as a risk to the business, impacting operations, employee morale, and reputation.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement focuses on 'preventing work-related injuries, illnesses, and fatalities' and the necessity of 'effective health and safety management', framing these as challenges that need to be mitigated to ensure operational excellence and reputation.",
+            "framing": "Risk",
+            "financial_justification": "This disclosure is qualitative, outlining a commitment and the importance of management without providing any explicit financial figures or statements of financial materiality related to workplace hazards.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The commitment is ongoing and pertains to the current work environment, indicating a present-day focus.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99906-002",
+          "quote": "The HSE Code of Practice on Occupational Health and Hygiene defines the requirements for managing occupational health risks, including chemical exposure, noise, and ergonomics. All Syngenta sites must implement a tailored HSE management system to identify, assess, and control occupational health and safety risks. This includes conducting regular risk assessments, providing appropriate training and personal protective equipment (PPE), and implementing emergency response procedures. Syngenta also monitors employee health through medical surveillance programs, particularly for those exposed to specific hazards.",
+          "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, 3.3.3 Health and safety",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly addresses 'occupational health risks, including chemical exposure' and details the management systems and practices (risk assessments, training, PPE, medical surveillance) implemented at 'All Syngenta sites' to control these risks. This clearly identifies chemical exposure during production as a factory workplace hazard and a risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The text explicitly refers to 'managing occupational health risks, including chemical exposure', clearly framing these as threats that require active management and control within the company's operations.",
+            "framing": "Risk",
+            "financial_justification": "This disclosure describes qualitative management practices and risk identification without providing any explicit financial figures or statements of financial materiality related to occupational health risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of ongoing 'requirements for managing', 'implement a tailored HSE management system', and 'monitors employee health' indicates a present-day and continuous activity.",
+            "timeframe": "Present day"
+          }
+        }
+      ],
+      "summary": "Syngenta discloses that factory workplace hazards, including chemical exposure during pesticide production, are a risk to the business. The company explicitly states its commitment to preventing work-related injuries, illnesses, and fatalities, and details its HSE Code of Practice on Occupational Health and Hygiene, which defines requirements for managing occupational health risks, including chemical exposure, at all its sites. This includes implementing management systems, conducting risk assessments, providing training and PPE, and monitoring employee health. However, the disclosures do not provide specific financial figures or definitive statements on the financial materiality of these risks."
+    },
+    {
+      "question_id": "99907",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "disclosures": [],
+      "summary": "The company does not explicitly disclose that waterway pollution and contamination from leaching of applied products is a risk to the business. While it discusses general environmental protection, water management in operations, and product innovation (e.g., nutrient use efficiency), it does not specifically link this type of pollution from applied products to a business risk."
+    },
+    {
+      "question_id": "99908",
+      "question_number": 2,
+      "category": "Market/Business Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99908-001",
+          "quote": "For Syngenta, such risks and uncertainties include risks relating to legal proceedings, regulatory approvals, new product development, increasing competition, customer credit risk, general economic and market conditions, compliance and remediation, intellectual property rights, implementation of organizational changes, impairment of intangible assets, consumer perceptions of genetically modified crops and organisms or crop protection chemicals, climatic variations, fluctuations in exchange rates and/or grain prices, single source supply arrangements, political uncertainty, natural disasters, and breaches of data security or other disruptions of information technology.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 96, Cautionary statement regarding forward-looking statements and linked websites",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet explicitly lists the topic under 'risks and uncertainties,' which clearly identifies it as a business risk. According to the definitions, if a topic is identified as a risk but financial materiality is not stated, the classification should be PARTIAL, not UNCLEAR.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement lists 'risks and uncertainties' that 'could cause the actual results to differ materially,' clearly framing consumer perceptions as a potential negative factor for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses potential impacts on 'actual results' but does not provide any specific financial figures or state financial materiality, making it non-financial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'could cause the actual results to differ materially' indicates a future-oriented perspective on potential impacts, classifying it as forward-looking.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99908-002",
+          "quote": "Farmers large and small face increasing problems caused by climate change, soil erosion and biodiversity loss. They must also adapt to evolving consumer expectations and perceptions of agricultural technology and navigate increasing restrictions on tools and techniques. Innovations are needed to address these challenges in ways that benefit growers, consumers, and the environment.",
+          "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 10, Innovation in agriculture",
+          "financial_amounts": [],
+          "classification_justification": "This snippet mentions 'evolving consumer expectations and perceptions of agricultural technology' and 'increasing restrictions on tools and techniques' as challenges that require innovation. While these factors could be driven by a shift towards organic farming or alternatives, the snippet does not explicitly frame them as a 'risk of demand destruction' to the business, but rather as a need for innovation.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language 'face increasing problems' and 'navigate increasing restrictions' suggests challenges, but the overall context is about the need for 'innovations' to 'address these challenges,' which leans towards a neutral or even opportunity-seeking framing for the company's response.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet discusses challenges and the need for innovation but provides no financial figures or statements about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrases 'face increasing problems' and 'evolving consumer expectations' suggest ongoing and future challenges, making the timeframe multiple or unclear.",
+            "timeframe": "Multiple or Unclear"
+          }
+        },
+        {
+          "snippet_id": "99908-003",
+          "quote": "Syngenta continued to increase investment in Biologicals research and development. Biologicals are agricultural technologies that harness nature to protect and improve the health of crops. Biocontrols, biostimulants, and nutrient use efficiency products complement conventional agricultural inputs, offering farmers greater flexibility to manage pests and diseases, address abiotic stress, and enhance nutrient use efficiency and soil health. Biologicals are crucial for supporting regenerative agriculture and helping agriculture shift towards more sustainable farming practices.",
+          "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 11, Innovation in agriculture",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes Syngenta's investment in biologicals and regenerative agriculture, which are alternatives to conventional farming. While this addresses the existence of 'alternatives,' it frames them as an 'opportunity' for new products and sustainable practices, rather than explicitly acknowledging 'demand destruction' from these alternatives as a 'risk' to the business.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language 'continued to increase investment,' 'harness nature to protect and improve,' 'complement conventional agricultural inputs,' and 'crucial for supporting regenerative agriculture' clearly frames biologicals and regenerative agriculture as beneficial and value-creating for the business.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet mentions 'investment' but does not provide specific financial figures for the risk of demand destruction or state its financial materiality. It focuses on qualitative benefits.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes ongoing investment and the role of biologicals in 'helping agriculture shift towards more sustainable farming practices,' indicating a present and forward-looking perspective.",
+            "timeframe": "Multiple or Unclear"
+          }
+        }
+      ],
+      "summary": "Syngenta acknowledges 'consumer perceptions' and 'consumer demand shifts' as factors, and invests in 'biologicals' and 'regenerative agriculture' as opportunities. However, the company does not explicitly state that 'demand destruction as organic farming and alternatives gain market share' is a direct risk to its business. The disclosures are too indirect or frame these shifts as opportunities for innovation rather than explicit risks of demand destruction."
+    },
+    {
+      "question_id": "99909",
+      "question_number": 3,
+      "category": "Environmental Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+      "disclosures": [],
+      "summary": "The company does not explicitly disclose that eutrophication from nutrient runoff when its products are applied by farmers is a risk to the business. While it discusses general environmental protection, water management in its operations, and the development of 'nutrient use efficiency products' as part of its innovation strategy, it does not specifically identify this type of pollution from applied products as a business risk."
+    },
+    {
+      "question_id": "99912",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99912-001",
+          "quote": "Syngenta also performs detailed impairment tests when there are asset specific indicators of impairment such as withdrawal of or restrictions placed upon product registrations, plans to divest products or, for property, plant and equipment, plans to restructure or close a site.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 22, Impairment",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'withdrawal of or restrictions placed upon product registrations' as an indicator for impairment tests, directly linking product bans/restrictions to a potential financial impact (impairment) on the business's assets.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'asset specific indicators of impairment' clearly frames the withdrawal or restriction of product registrations as a negative event or threat to the business's asset value.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'impairment tests' and 'impairment' which are financial concepts, indicating a financial impact without providing specific monetary values, thus it is partial-type.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement describes conditions ('when there are asset specific indicators') that trigger impairment tests, implying these are ongoing or potential future events, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99912-002",
+          "quote": "Costs of projects to develop new crop protection chemical active ingredients that have not yet obtained regulatory approval are expensed as incurred because their technical feasibility and commercial viability cannot be demonstrated until such approval has been obtained.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 22, Research and development expense",
+          "financial_amounts": [],
+          "classification_justification": "This snippet highlights that regulatory approval is essential for the 'technical feasibility and commercial viability' of new products. The inability to obtain such approval (akin to a ban on production/sale) directly impacts the business's ability to commercialize products, thus posing a risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement implies that the absence of regulatory approval is a barrier to 'commercial viability,' framing it as a challenge or threat to the business's ability to generate revenue from new products.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses 'commercial viability' and 'costs...expensed as incurred,' indicating financial implications without providing specific monetary values for the risk itself, making it partial-type.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The focus is on projects 'that have not yet obtained regulatory approval' and the condition 'until such approval has been obtained,' clearly indicating a forward-looking perspective on potential future commercialization.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99912-003",
+          "quote": "For Syngenta, such risks and uncertainties include risks relating to legal proceedings, regulatory approvals, new product development, increasing competition, customer credit risk, general economic and market conditions, compliance and remediation, intellectual property rights, implementation of organizational changes, impairment of intangible assets, consumer perceptions of genetically modified crops and organisms or crop protection chemicals, climatic variations, fluctuations in exchange rates and/or grain prices, single source supply arrangements, political uncertainty, natural disasters, and breaches of data security or other disruptions of information technology.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 96, Cautionary statement regarding forward-looking statements and linked websites",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly lists 'regulatory approvals' as one of the 'risks and uncertainties' that 'could cause the actual results to differ materially.' The failure to obtain or maintain regulatory approvals is directly related to products being banned or restricted from sale/production, thus identifying it as a business risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement explicitly lists 'risks and uncertainties' that 'could cause the actual results to differ materially,' clearly framing regulatory approvals as a potential negative factor for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses potential impacts on 'actual results' but does not provide any specific financial figures or state financial materiality, making it non-financial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'could cause the actual results to differ materially' indicates a future-oriented perspective on potential impacts, classifying it as forward-looking.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99912-004",
+          "quote": "Farmers large and small face increasing problems caused by climate change, soil erosion and biodiversity loss. They must also adapt to evolving consumer expectations and perceptions of agricultural technology and navigate increasing restrictions on tools and techniques. Innovations are needed to address these challenges in ways that benefit growers, consumers, and the environment.",
+          "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 10, Innovation in agriculture",
+          "financial_amounts": [],
+          "classification_justification": "This snippet mentions that farmers 'navigate increasing restrictions on tools and techniques.' These restrictions can include product bans or limitations, which directly impact the market for Syngenta's products, thus posing a risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'navigate increasing restrictions' frames these restrictions as a challenge or threat that the business must contend with, indicating a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses challenges and the need for innovation but provides no financial figures or statements about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'increasing restrictions' implies an ongoing trend that will affect future operations, making the timeframe forward-looking.",
+            "timeframe": "Forward-looking"
+          }
+        }
+      ],
+      "summary": "Syngenta explicitly discloses that products being banned or facing restrictions is a risk to the business. This is evidenced by statements linking 'withdrawal of or restrictions placed upon product registrations' to impairment tests, the necessity of 'regulatory approval' for commercial viability of new products, and the general 'risks relating to regulatory approvals' and 'increasing restrictions on tools and techniques' that farmers face. These disclosures indicate an awareness of the potential negative impact on asset values, commercialization, and market access."
+    },
+    {
+      "question_id": "99913",
+      "question_number": 5,
+      "category": "Environmental Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99913-001",
+          "quote": "Syngenta believes that the critical accounting policies and estimations underpinning the financial statements are in the areas of... (ix) environmental provisions...",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 5, Summary of results",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'environmental provisions' as a 'critical accounting policy and estimation,' indicating that the financial implications of environmental issues, including site restoration, are significant and require careful management judgment, thus posing a risk to the business's financial reporting and position.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "Identifying environmental provisions as 'critical accounting policies and estimations' implies that these are areas of financial uncertainty and potential negative impact, framing them as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet refers to 'accounting policies and estimations' and 'provisions,' which are financial concepts, but does not provide specific monetary values for the risk itself, making it partial-type.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement refers to ongoing 'accounting policies and estimations' for provisions, which cover current and future obligations, making the timeframe present day and forward-looking.",
+            "timeframe": "Multiple or Unclear"
+          }
+        },
+        {
+          "snippet_id": "99913-002",
+          "quote": "At December 31, 2024, Syngenta reported in Note 19 provisions for environmental remediation of $138 million (2023: $156 million), some of which are included within restructuring provisions. Remediation of environmental damage at sites with which Syngenta is associated typically takes a long time to complete due to the substantial amount of planning and regulatory approvals normally required before remediation activities can begin. The assumptions used by Syngenta to estimate its environmental provisions may change significantly before or during the remediation period due to changes in the extent of remediation required or the method used to remediate the damage. In addition, increases in or releases of environmental provisions may be necessary whenever new developments occur or additional information becomes available.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 24, Environmental provisions",
+          "financial_amounts": [
+            "$138 million",
+            "$156 million"
+          ],
+          "classification_justification": "This snippet explicitly states that Syngenta has 'provisions for environmental remediation' at associated sites, providing specific financial amounts. It also details the uncertainties and potential for 'increases in or releases of environmental provisions,' clearly identifying the financial risk associated with site restoration.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The discussion of 'provisions for environmental remediation' and the potential for 'increases' in these amounts due to 'uncertainties' clearly frames this as a financial threat or liability.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit financial amounts for 'provisions for environmental remediation' ($138 million and $156 million), directly linking the risk to quantifiable financial values.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement refers to provisions 'At December 31, 2024' and '2023,' indicating a present-day financial status, while also discussing remediation that 'typically takes a long time to complete' and future 'increases in or releases' of provisions, making it multiple or unclear.",
+            "timeframe": "Multiple or Unclear"
+          }
+        },
+        {
+          "snippet_id": "99913-003",
+          "quote": "The major uncertainties that impact the outcome of remediation are: − the extent of the contaminated land area, which is not always limited to land occupied by the Syngenta site. Ongoing monitoring or remediation work may identify changes in the area believed to be contaminated; − the nature of the work Syngenta will be obliged to perform or pay for. This depends upon the current or proposed use of contaminated land, substantively enacted legislation, and land zoning by and negotiation with the relevant regulatory authorities. In Switzerland, proposed remediation plans at certain sites may be subject to public referenda; − sharing of costs with other past and present occupiers of Syngenta’s sites. At certain shared sites, Syngenta is responsible for an agreed proportion of remediation costs, which may change following discussions with authorities and the affected third parties. At other sites, third parties have agreed to reimburse Syngenta for some or all of the costs it incurs.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 24, Environmental provisions",
+          "financial_amounts": [],
+          "classification_justification": "This snippet details the 'major uncertainties' impacting remediation, such as the extent of contamination, the nature of required work, and cost-sharing. These uncertainties directly relate to the financial and operational risks of restoring contaminated sites, indicating that the company views these as significant business risks.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The discussion of 'major uncertainties' and 'obliged to perform or pay for' clearly frames the remediation of contaminated sites as a source of potential negative consequences and financial exposure.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses 'costs' and 'reimburse Syngenta for some or all of the costs' but does not provide specific monetary values for the potential financial impact of these uncertainties, making it partial-type.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The uncertainties described relate to ongoing 'remediation work' and 'proposed remediation plans,' as well as future obligations, indicating a forward-looking timeframe.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99913-004",
+          "quote": "In 2024, $2 million of additional environmental provisions were recognized due to updated estimates of costs for remediation activity (2023: $10 million of environmental provisions were released) and a further $4 million of environmental provisions were recognized in relation to a third party contractor’s facility experiencing extensive operational and regulatory issues where regulators have required companies who used the facility to share the costs of remedial action (2023: $10 million). Syngenta has a 16 percent share of these costs. Otherwise, in 2024 and 2023, except for $18 million (2023: $13 million) of cash outflows reflecting remediation activity, there were no significant changes to environmental provisions.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 25, Environmental provisions",
+          "financial_amounts": [
+            "$2 million",
+            "$10 million",
+            "$4 million",
+            "$10 million",
+            "$18 million",
+            "$13 million"
+          ],
+          "classification_justification": "This snippet provides specific financial figures for 'additional environmental provisions' and 'cash outflows reflecting remediation activity,' directly quantifying the financial impact of contaminated site restoration. It also mentions sharing costs for a third-party facility, further demonstrating the financial nature of this risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The recognition of 'additional environmental provisions' and 'cash outflows' for remediation, along with cost-sharing for regulatory issues, clearly frames these as negative financial consequences or liabilities.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit financial amounts for 'additional environmental provisions' ($2 million, $4 million) and 'cash outflows' ($18 million, $13 million), directly linking the risk to quantifiable financial values.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The snippet refers to activities and provisions in '2024' and '2023,' indicating backward-looking and present-day financial impacts.",
+            "timeframe": "Backward-looking"
+          }
+        },
+        {
+          "snippet_id": "99913-005",
+          "quote": "Proposals have been made suggesting remediation of the existing contamination on certain shared sites in preference to monitoring and containment. Syngenta will negotiate the proposals with the relevant authorities but the final adopted solution is subject to regulatory uncertainty and the ultimate liability may be higher or lower than the amount provided. Taken together, the provisions at December 31, 2024, for these shared sites comprise approximately 27 percent of total environmental provisions. The top ten exposures at the end of 2024 comprise approximately 85 percent of the total environmental provisions. In the opinion of management, reasonably possible increases in the provisions related to these top 10 exposures would not exceed approximately 150 percent of the total environmental provision recognized at December 31, 2024.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 25, Environmental provisions",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly discusses the 'regulatory uncertainty' and the possibility that 'ultimate liability may be higher or lower than the amount provided' for remediation of contaminated sites. It also quantifies the proportion of total environmental provisions related to shared sites and top exposures, and provides a sensitivity analysis for 'reasonably possible increases' in provisions, demonstrating a clear assessment of financial risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The discussion of 'regulatory uncertainty,' 'ultimate liability may be higher,' and 'reasonably possible increases in the provisions' clearly frames the situation as a financial threat and potential negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides quantitative percentages ('27 percent of total environmental provisions,' '85 percent of the total environmental provisions,' '150 percent of the total environmental provision') and discusses 'ultimate liability' and 'increases in the provisions,' indicating financial materiality without providing exact monetary values for the potential increase, making it partial-type.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The discussion of 'provisions at December 31, 2024' indicates a present-day status, while the 'ultimate liability may be higher' and 'reasonably possible increases' point to future potential impacts, making the timeframe forward-looking.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99913-006",
+          "quote": "Syngenta has recorded provisions for environmental liabilities at some currently or formerly owned, leased and third-party sites throughout the world. These provisions are estimates of amounts payable or expected to become payable and take into consideration the number of other potentially responsible parties at each site and the identity and financial positions of such parties in light of the joint and several nature of certain of the liabilities. The material components of Syngenta’s environmental provisions are based on a risk assessment involving investigation of the various sites.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 47, Provisions",
+          "financial_amounts": [],
+          "classification_justification": "This snippet confirms that Syngenta has 'provisions for environmental liabilities' at various sites, which are 'estimates of amounts payable or expected to become payable.' It also mentions a 'risk assessment' for these provisions, clearly indicating that the company considers the restoration of contaminated sites as a business risk with financial implications.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement discusses 'provisions for environmental liabilities' and 'estimates of amounts payable or expected to become payable,' framing these as financial obligations and potential negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet refers to 'provisions' and 'amounts payable,' which are financial concepts, but does not provide specific monetary values for the risk itself, making it partial-type.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement refers to 'provisions' that are 'estimates of amounts payable or expected to become payable,' indicating a present-day assessment of future obligations, making the timeframe forward-looking.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99913-007",
+          "quote": "It is reasonably possible that Syngenta may be required to make expenditures in excess of the established provisions to remediate environmental liabilities at some currently or formerly owned, leased and third-party sites throughout the world. Further, in cases where it is not possible to estimate reliably the remediation costs that may be incurred in the future for environmental damage that has occurred at sites currently in operation and having no present obligation for environmental damage remediation, no provisions have been made. This is because it is neither possible to determine a time limit beyond which the sites will no longer be operated, nor what remediation costs may be required upon their eventual closure.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 47, Provisions",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states the 'reasonable possibility' of 'expenditures in excess of the established provisions' for environmental remediation, and acknowledges cases where reliable estimation of future costs is not possible. This clearly identifies the financial risk and uncertainty associated with contaminated site restoration.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrases 'reasonably possible that Syngenta may be required to make expenditures in excess' and 'not possible to estimate reliably the remediation costs' clearly frame this as a financial threat and uncertainty for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses 'expenditures in excess of the established provisions' and 'remediation costs' but does not provide specific monetary values for these potential excess costs, making it partial-type.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement refers to 'expenditures...in the future' and 'remediation costs that may be incurred in the future,' indicating a forward-looking timeframe.",
+            "timeframe": "Forward-looking"
+          }
+        }
+      ],
+      "summary": "Syngenta clearly discloses that the restoration of contaminated manufacturing sites is a risk to the business. This is supported by the identification of 'environmental provisions' as a critical accounting area, the reporting of specific financial provisions for environmental remediation, and detailed discussions of uncertainties that could lead to increased liabilities. The company also provides financial figures for additional provisions and cash outflows related to remediation activities, and quantifies the proportion of total environmental provisions related to top exposures, including a sensitivity analysis for potential increases. This demonstrates a comprehensive assessment of the financial and operational risks associated with contaminated site restoration."
+    },
+    {
+      "question_id": "99914",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that loss of pollinators and beneficial insects, such as bees, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99914-001",
+          "quote": "In September 2014, a claim was filed in Ontario, Canada by two proposed representative members on behalf of a putative class comprising all beekeepers who have owned or continue to own and operate honey producing, pollinating, and/or queen bee rearing businesses in Canada since January 1, 2006, against a number of Syngenta legal entities together with certain entities of a second manufacturer of neonicotinoid insecticides. Plaintiffs allege negligence through the sale by that manufacturer and by Syngenta of products containing such insecticides in the knowledge that they would be injurious to bees and by virtue of misrepresentations and concealment relating thereto. Plaintiffs claim 400 million Canadian dollars ($278 million at December 31, 2024, exchange rates) general and 50 million Canadian dollars ($35 million at December 31, 2024, exchange rates) punitive damages. The pleadings in the Ontario proceedings were subsequently amended by plaintiffs’ counsel to add waiver of tort and unlawful conspiracy to the single cause of action, negligence, which was previously pleaded. Both of the additional causes of action are ancillary to and largely dependent on the negligence claim. The class has not yet been authorized.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 49, Notes to the Syngenta AG Group Consolidated Financial Statements, 5.2 Litigation matters",
+          "financial_amounts": [
+            "400 million Canadian dollars",
+            "$278 million",
+            "50 million Canadian dollars",
+            "$35 million"
+          ],
+          "classification_justification": "This snippet explicitly identifies a class action lawsuit against Syngenta related to its products being 'injurious to bees,' which are pollinators. It details the allegations of negligence and specific financial damages sought, clearly characterizing the issue as a material business risk with financial implications.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language describes a legal claim alleging harm ('injurious to bees') caused by Syngenta's products, seeking damages, which clearly frames the issue as a negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for the damages claimed ('400 million Canadian dollars ($278 million)' and '50 million Canadian dollars ($35 million)'), directly linking the risk to monetary figures.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The lawsuit was filed in 2014 and is ongoing, with the class not yet authorized, indicating a present-day and forward-looking legal challenge.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99914-002",
+          "quote": "In October 2014, a Motion for Authorization was filed by the same firm of plaintiffs’ counsel in Montréal, Quebec seeking permission to bring a similar class proceeding in that province. The proposed representative plaintiff operates a family business specialized in the breeding of queen bees. The Quebec litigation closely resembles the original Ontario lawsuit claiming negligence except that, rather than a nationwide class, it alleges a class limited to Quebec. At this early stage, damages are unspecified. The Motion for Authorization was argued in November 2017. The Quebec class has been authorized on August 20, 2018, and notices have been sent to potential class members. Plaintiffs’ motion to add Syngenta AG as a defendant has been granted.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 49, Notes to the Syngenta AG Group Consolidated Financial Statements, 5.2 Litigation matters",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes an authorized class action lawsuit in Quebec, similar to the Ontario case, explicitly involving 'queen bees' and allegations of negligence related to Syngenta's products. While damages are unspecified, the authorization of the class and the addition of Syngenta AG as a defendant clearly identify this as a business risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The description of a class action lawsuit alleging negligence and seeking damages, even if unspecified, frames the situation as a threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet explicitly states that 'damages are unspecified,' indicating an acknowledgment of potential financial impact without providing concrete monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The lawsuit was filed in 2014, authorized in 2018, and is ongoing, indicating a present-day legal challenge with future implications.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99914-003",
+          "quote": "Farmers large and small face increasing problems caused by climate change, soil erosion and biodiversity loss. They must also adapt to evolving consumer expectations and perceptions of agricultural technology and navigate increasing restrictions on tools and techniques. Innovations are needed to address these challenges in ways that benefit growers, consumers, and the environment.",
+          "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 10, 3.1.1 Innovation in agriculture, Topic description",
+          "financial_amounts": [],
+          "classification_justification": "This snippet acknowledges 'biodiversity loss' as an 'increasing problem' that farmers face and that 'innovations are needed to address these challenges'. While it doesn't explicitly state it as a direct business risk to Syngenta, it frames it as a significant challenge in the agricultural sector that the company's innovations aim to address, implying an indirect business relevance.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The snippet describes 'biodiversity loss' as an 'increasing problem' and a 'challenge' that requires 'innovations,' indicating a negative context that the company seeks to address, thus framing it as a risk or problem to be solved.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure discusses a general problem and the need for innovation without any mention of financial values or materiality, making it non-financial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The language 'face increasing problems' and 'innovations are needed' indicates an ongoing situation with a focus on future solutions, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          }
+        }
+      ],
+      "summary": "Syngenta explicitly discloses class action lawsuits in Canada related to its neonicotinoid insecticides being 'injurious to bees,' which are pollinators. These lawsuits allege negligence and seek significant financial damages, clearly identifying the loss of pollinators as a direct business risk with financial implications. The company also generally acknowledges 'biodiversity loss' as a problem farmers face and highlights its 'Biologicals' products as solutions for sustainable farming, implying an awareness of broader environmental concerns related to its products, though not explicitly framing pollinator loss as a direct business risk in these contexts."
+    },
+    {
+      "question_id": "99915",
+      "question_number": 2,
+      "category": "Regulatory/Financial Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99915-001",
+          "quote": "Costs of projects to develop new crop protection chemical active ingredients that have not yet obtained regulatory approval are expensed as incurred because their technical feasibility and commercial viability cannot be demonstrated until such approval has been obtained. Costs of projects to develop new formulations or extend the use of existing formulations of active ingredients that have regulatory approval, or widen product label indications of existing products already on the market to include additional uses of such products, are capitalized as intangible assets throughout the duration of the projects, which is approximately 3 to 5 years, and are amortized over the useful economic lives of the related new products, starting from the date they are ready for use or sale. Useful economic lives are disclosed under ‘Intangible Assets’ in Note 26. Costs capitalized for a project are immediately and fully impaired if the project is discontinued before completion. Costs of projects to re-register active ingredients with existing approvals are expensed as incurred because such projects are considered to maintain existing intangible assets rather than create new ones.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 22, Notes to the Syngenta AG Group Consolidated Financial Statements, 2. Material accounting policy changes, judgments and estimates, Research and development expense",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the snippet identifies the uncertainty of regulatory approval as a risk that impacts accounting, it does not contain a statement about the financial materiality of these costs, which is required for a FULL_DISCLOSURE classification.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The snippet discusses costs that are 'expensed as incurred' due to regulatory uncertainty and the nature of maintaining existing assets, framing these as financial burdens or challenges to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly details how certain costs ('expensed as incurred', 'capitalized as intangible assets') are treated financially due to regulatory requirements, directly linking the risk to financial accounting practices.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The discussion covers costs for projects that 'have not yet obtained regulatory approval' (forward-looking) and 're-register active ingredients with existing approvals' (present/ongoing), indicating a multiple timeframe relevance.",
+            "timeframe": "Multiple or Unclear"
+          }
+        },
+        {
+          "snippet_id": "99915-002",
+          "quote": "Costs incurred internally to develop new chemical or biological crop protection products based on active ingredients that have not yet obtained regulatory approval, or to develop new seed varieties containing genetically modified (GM) traits that have not yet obtained regulatory approval, are expensed as incurred because of the uncertainty inherent in the outcome of the regulatory approval process.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 71, Notes to the Syngenta AG Group Consolidated Financial Statements, 26. New IFRSs and accounting policies, Research and development",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. The snippet clearly frames the regulatory process as a risk due to 'uncertainty', but it does not state that this risk or its associated costs are financially material, which is a prerequisite for the FULL_DISCLOSURE classification.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement highlights 'uncertainty inherent in the outcome of the regulatory approval process' leading to costs being 'expensed as incurred,' framing this as a financial challenge and risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly states that costs are 'expensed as incurred,' indicating a direct financial impact without providing specific monetary values, thus qualifying as partial-type financial disclosure.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The focus on products that 'have not yet obtained regulatory approval' clearly indicates a forward-looking timeframe for this risk.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99915-005",
+          "quote": "For Syngenta, such risks and uncertainties include risks relating to legal proceedings, regulatory approvals, new product development, increasing competition, customer credit risk, general economic and market conditions, compliance and remediation, intellectual property rights, implementation of organizational changes, impairment of intangible assets, consumer perceptions of genetically modified crops and organisms or crop protection chemicals, climatic variations, fluctuations in exchange rates and/or grain prices, single source supply arrangements, political uncertainty, natural disasters, and breaches of data security or other disruptions of information technology.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 96, Cautionary statement regarding forward-looking statements and linked websites",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly lists 'regulatory approvals' and 'compliance and remediation' as 'risks and uncertainties' that 'could cause the actual results to differ materially'. This directly identifies the topic as a business risk with potential material financial impact.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The statement explicitly labels 'regulatory approvals' and 'compliance and remediation' as 'risks and uncertainties' that 'could cause the actual results to differ materially,' clearly framing them as threats to the business.",
+            "framing": "Risk",
+            "financial_justification": "The phrase 'could cause the actual results to differ materially' indicates a definitive statement about potential financial materiality without providing specific figures, thus qualifying as partial-type financial.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of 'could cause' and 'future' in the context of 'forward-looking statements' clearly indicates a forward-looking timeframe.",
+            "timeframe": "Forward-looking"
+          }
+        }
+      ],
+      "summary": "Syngenta explicitly discloses that costs for new products awaiting regulatory approval and for re-registering existing active ingredients are 'expensed as incurred' due to inherent uncertainty, indicating a financial risk. It also lists 'regulatory approvals' and 'compliance and remediation' as risks that could materially affect results in its cautionary statement. Furthermore, 'withdrawal of or restrictions placed upon product registrations' are identified as triggers for asset impairment tests, and 'regulatory compliance claims' are a type of legal proceeding for which provisions are made. The company also notes 'increasing restrictions on tools and techniques' for farmers, which implies a broader regulatory challenge. These disclosures collectively indicate that Syngenta views rising compliance, testing, registration, or re-registration costs as a risk to its business, with clear financial implications."
+    },
+    {
+      "question_id": "99916",
+      "question_number": 3,
+      "category": "Market/Business Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99916-001",
+          "quote": "For Syngenta, such risks and uncertainties include risks relating to legal proceedings, regulatory approvals, new product development, increasing competition, customer credit risk, general economic and market conditions, compliance and remediation, intellectual property rights, implementation of organizational changes, impairment of intangible assets, consumer perceptions of genetically modified crops and organisms or crop protection chemicals, climatic variations, fluctuations in exchange rates and/or grain prices, single source supply arrangements, political uncertainty, natural disasters, and breaches of data security or other disruptions of information technology.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 96, Cautionary statement regarding forward-looking statements and linked websites",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly lists 'consumer perceptions of genetically modified crops and organisms or crop protection chemicals' as one of the 'risks and uncertainties' that 'could cause the actual results to differ materially'. This directly identifies negative public perception as a business risk with potential material financial impact.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The statement explicitly labels 'consumer perceptions of genetically modified crops and organisms or crop protection chemicals' as a 'risk' that 'could cause the actual results to differ materially,' clearly framing it as a threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The phrase 'could cause the actual results to differ materially' indicates a definitive statement about potential financial materiality without providing specific figures, thus qualifying as partial-type financial.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of 'could cause' and the context of 'forward-looking statements' clearly indicate a forward-looking timeframe for this risk.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99916-003",
+          "quote": "Farmers large and small face increasing problems caused by climate change, soil erosion and biodiversity loss. They must also adapt to evolving consumer expectations and perceptions of agricultural technology and navigate increasing restrictions on tools and techniques. Innovations are needed to address these challenges in ways that benefit growers, consumers, and the environment.",
+          "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 10, 3.1.1 Innovation in agriculture, Topic description",
+          "financial_amounts": [],
+          "classification_justification": "This snippet notes that farmers 'must also adapt to evolving consumer expectations and perceptions of agricultural technology' and 'navigate increasing restrictions on tools and techniques'. This acknowledges that consumer perceptions are a factor influencing the agricultural landscape and can lead to 'restrictions', which could impact Syngenta's business, thus implying an indirect risk.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The phrase 'evolving consumer expectations and perceptions' and 'increasing restrictions' describes external pressures and challenges that farmers and the industry must adapt to, framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure discusses general challenges in agriculture without any mention of financial values or materiality, making it non-financial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'evolving' and 'increasing' indicates an ongoing trend with future implications, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          }
+        },
+        {
+          "snippet_id": "99916-004",
+          "quote": "Syngenta conducts stakeholder research to understand consumers’ perception of topics associated with the agtech industry. Syngenta also performs regular materiality assessments to evaluate stakeholder concerns and expectations (see Materiality assessment).",
+          "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 6, 1.4 Our business model and stakeholder engagement, Engaging with stakeholders",
+          "financial_amounts": [],
+          "classification_justification": "This snippet states that Syngenta 'conducts stakeholder research to understand consumers’ perception of topics associated with the agtech industry' and performs 'regular materiality assessments to evaluate stakeholder concerns and expectations'. This demonstrates the company's awareness and active monitoring of public perception, implying that these perceptions are relevant to its business, though it doesn't explicitly state them as a 'risk' in this context.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The snippet describes activities to 'understand consumers’ perception' and 'evaluate stakeholder concerns and expectations,' which is a neutral, factual description of monitoring and engagement, without framing it as explicitly positive or negative.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure describes monitoring activities without any mention of financial values or materiality, making it non-financial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'conducts' and 'performs regular' indicates ongoing activities, placing the timeframe in the present day.",
+            "timeframe": "Present day"
+          }
+        }
+      ],
+      "summary": "Syngenta explicitly identifies 'consumer perceptions of genetically modified crops and organisms or crop protection chemicals' as a risk that 'could cause the actual results to differ materially' in its cautionary statement, indicating a full disclosure of this business risk. The company also acknowledges that 'evolving consumer expectations and perceptions of agricultural technology' can lead to 'increasing restrictions on tools and techniques' for farmers, implying an indirect business impact. Syngenta actively monitors consumer perceptions through stakeholder research and includes 'Consumer demand shifts' as a topic in its materiality assessment, further demonstrating its awareness of this issue as a business concern."
+    },
+    {
+      "question_id": "99917",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "sub_category": "none",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99917-003",
+          "quote": "In September 2014, a claim was filed in Ontario, Canada by two proposed representative members on behalf of a putative class comprising all beekeepers who have owned or continue to own and operate honey producing, pollinating, and/or queen bee rearing businesses in Canada since January 1, 2006, against a number of Syngenta legal entities together with certain entities of a second manufacturer of neonicotinoid insecticides. Plaintiffs allege negligence through the sale by that manufacturer and by Syngenta of products containing such insecticides in the knowledge that they would be injurious to bees and by virtue of misrepresentations and concealment relating thereto. Plaintiffs claim 400 million Canadian dollars ($278 million at December 31, 2024, exchange rates) general and 50 million Canadian dollars ($35 million at December 31, 2024, exchange rates) punitive damages. The pleadings in the Ontario proceedings were subsequently amended by plaintiffs’ counsel to add waiver of tort and unlawful conspiracy to the single cause of action, negligence, which was previously pleaded. Both of the additional causes of action are ancillary to and largely dependent on the negligence claim. The class has not yet been authorized.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 49, Notes to the Syngenta AG Group Consolidated Financial Statements, 5.2 Litigation matters",
+          "financial_amounts": [
+            "400 million Canadian dollars",
+            "$278 million",
+            "50 million Canadian dollars",
+            "$35 million"
+          ],
+          "classification_justification": "This snippet explicitly details a class action lawsuit alleging that Syngenta's 'neonicotinoid insecticides' were 'injurious to bees', which is an environmental claim. It specifies the financial damages sought, clearly identifying this as a business risk with significant financial implications.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language describes a legal claim alleging harm ('injurious to bees') caused by Syngenta's products, seeking damages, which clearly frames the issue as a negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for the damages claimed ('400 million Canadian dollars ($278 million)' and '50 million Canadian dollars ($35 million)'), directly linking the risk to monetary figures.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The lawsuit was filed in 2014 and is ongoing, with the class not yet authorized, indicating a present-day and forward-looking legal challenge.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99917-004",
+          "quote": "Since September 2017, approximately 9,100 lawsuits, including more than 1,600 lawsuits that have been voluntarily dismissed or otherwise resolved, have been filed against Syngenta in state and federal courts in the United States by plaintiffs seeking damages from Syngenta arising from their use of or exposure to Syngenta’s paraquat products. Plaintiffs allege that their use or exposure to Syngenta’s paraquat products has caused them to develop Parkinson’s disease and/or kidney disease. The cases name Syngenta AG, Syngenta Crop Protection, LLC, and Syngenta Seeds, and variously named alleged distributors of paraquat as additional defendants.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 49, Notes to the Syngenta AG Group Consolidated Financial Statements, 5.2 Litigation matters",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly discloses 'approximately 9,100 lawsuits' against Syngenta alleging that 'use or exposure to Syngenta’s paraquat products has caused them to develop Parkinson’s disease and/or kidney disease'. This directly identifies health claims from product exposure as a significant business risk, even without specific financial figures in this particular sentence.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The description of 'approximately 9,100 lawsuits' alleging health issues caused by Syngenta's products clearly frames this as a significant threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'seeking damages' but does not provide specific monetary values for these damages, thus qualifying as partial-type financial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The lawsuits began in 2017 and are ongoing, indicating a present-day legal challenge with forward-looking implications.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99917-005",
+          "quote": "On April 17, 2024, the MDL court granted Defendants’ Motion to Exclude the expert testimony of the sole expert on the critical issue of general causation that had been presented by the Plaintiffs in the four initial bellwether cases selected for trial. On the same date, the MDL court also granted Defendants’ Joint Motion for Summary Judgment dismissing those four cases due to the Plaintiffs’ inability to establish a causal link between occupational paraquat exposure and Parkinson’s disease without the proffered expert testimony. Plaintiffs have since filed a notice of appeal of these dismissals to the 7th Circuit Court of Appeals; briefing was completed on October 16, 2024 and oral argument was held on February 12, 2025 and a decision is expected in the coming months.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 51, Notes to the Syngenta AG Group Consolidated Financial Statements, 5.2 Litigation matters",
+          "financial_amounts": [],
+          "classification_justification": "This snippet provides an update on the Paraquat Parkinson’s disease litigation, detailing a significant legal development where the court dismissed four bellwether cases due to lack of causation evidence. While a positive development for Syngenta, the ongoing appeal and the need to defend against these lawsuits still represent a present and future business risk, even if the immediate outcome was favorable.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "While the court's decision was favorable to Syngenta, the ongoing nature of the litigation, including an appeal, means the company is still actively defending against a threat, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes legal proceedings and outcomes without providing specific financial figures for damages or costs, making it non-financial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The events described occurred in 2024, with an appeal hearing in February 2025 and a decision expected 'in the coming months', indicating a present-day and forward-looking timeframe.",
+            "timeframe": "Present day"
+          }
+        },
+        {
+          "snippet_id": "99917-006",
+          "quote": "Provisions for legal and product liability settlements, all of which are individually immaterial, relate to various legal proceedings incidental to the normal conduct of Syngenta’s business, including proceedings involving product liability claims, commercial claims, employment and wrongful termination claims, patent infringement claims, competition law claims, indirect tax assessment claims, regulatory compliance claims, waste disposal claims and tort claims relating to the release of chemicals into the environment.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 47, Notes to the Syngenta AG Group Consolidated Financial Statements, 19. Provisions, commitments and contingencies",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'Provisions for legal and product liability settlements' are made for 'product liability claims' and 'tort claims relating to the release of chemicals into the environment'. This directly identifies health/environmental claims from product exposure as a source of legal and financial risk, even if individual provisions are deemed immaterial.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The mention of 'provisions for legal and product liability settlements' and 'tort claims relating to the release of chemicals into the environment' clearly frames these as potential negative consequences and financial exposure for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure states 'provisions for legal and product liability settlements' are made, indicating a financial impact, but also notes 'all of which are individually immaterial' and does not provide specific amounts, making it partial-type financial.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The 'provisions' are for ongoing or potential future 'legal proceedings' and 'claims', indicating a present-day and forward-looking timeframe.",
+            "timeframe": "Multiple or Unclear"
+          }
+        },
+        {
+          "snippet_id": "99917-007",
+          "quote": "Litigation is subject to many uncertainties, and the outcome of individual matters cannot be predicted with certainty. Consequently, it is reasonably possible that the final resolution of some of these matters could require Syngenta to make expenditures in excess of the established provisions that are reported above. Further, the range of amounts involved, as well as the period of time over which many of these expenditures may be made, cannot be reasonably estimated.",
+          "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 48, Notes to the Syngenta AG Group Consolidated Financial Statements, 19. Provisions, commitments and contingencies, Litigation matters",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'Litigation is subject to many uncertainties' and that 'it is reasonably possible that the final resolution of some of these matters could require Syngenta to make expenditures in excess of the established provisions'. This clearly identifies the financial risk associated with litigation, including product-related claims, and acknowledges the potential for material financial impact beyond current provisions.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The statement highlights 'uncertainties' and the 'possibility' of 'expenditures in excess of the established provisions,' clearly framing litigation as a financial threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly mentions 'expenditures in excess of the established provisions' and the inability to 'reasonably estimate' the 'range of amounts involved,' indicating a definitive statement about potential financial materiality without precise quantification, thus qualifying as partial-type financial.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The discussion of 'final resolution' and 'future expenditures' indicates a forward-looking timeframe for this financial risk.",
+            "timeframe": "Forward-looking"
+          }
+        }
+      ],
+      "summary": "Syngenta provides extensive disclosure regarding class action lawsuits and legal challenges stemming from health and environmental claims related to its products. This includes detailed information on the Viptera corn seed litigation (product-related class actions with financial implications), the Canada beekeeper lawsuits (environmental claims alleging harm from insecticides with specific financial damages sought), and the Paraquat Parkinson’s disease litigation (health claims alleging disease from product exposure, involving thousands of lawsuits). The company also maintains 'provisions for legal and product liability settlements' for 'product liability claims' and 'tort claims relating to the release of chemicals into the environment', and explicitly states that it is 'reasonably possible' that expenditures could exceed these provisions. These disclosures collectively demonstrate that Syngenta views such lawsuits and claims as a significant business risk with material financial and operational implications."
+    }
+  ],
+  "completeness_summary": {
+    "total_questions_analyzed": 14,
+    "total_disclosure_snippets": 36,
+    "classification_distribution": {
+      "NO_DISCLOSURE": 4,
+      "UNCLEAR": 5,
+      "PARTIAL": 23,
+      "FULL_DISCLOSURE": 8
+    },
+    "categorization_distribution": {
+      "framing": {
+        "Risk": 33,
+        "Opportunity": 1,
+        "Neutral": 2
+      },
+      "financial_type": {
+        "Financial": 4,
+        "Non-Financial": 13,
+        "Partial-type": 19
+      },
+      "timeframe": {
+        "Backward-looking": 1,
+        "Present day": 12,
+        "Forward-looking": 16,
+        "Multiple or Unclear": 7
+      }
+    },
+    "total_financial_amounts_extracted": 16
+  },
+  "metadata": {
+    "company": "Syngenta",
+    "year": "2024",
+    "company_sector": "P",
+    "analysis_date": "2025-11-04T20:02:57.028436",
+    "model_used": "gemini-2.5-flash",
+    "schema_version": "4.0",
+    "documents_analyzed": [
+      "Syngenta-AG-2024-Financial-Report.pdf",
+      "Syngenta-AG-ESG-Report-2024.pdf",
+      "Syngenta-AG-PSF - Handbook for CP & Seeds Field Crops.pdf"
+    ],
+    "total_canonical_questions": 18,
+    "questions_applicable": 14,
+    "questions_excluded": 4,
+    "processing_info": {
+      "total_cost": "$0.1923",
+      "total_tokens": 458864,
+      "questions_analyzed": 14
+    }
+  },
+  "verification_metadata": {
+    "verified_at": "2025-11-04T20:08:45.306207",
+    "verification_model": "gemini-2.5-pro",
+    "corrections_applied": {
+      "snippets_removed": 11,
+      "snippets_corrected": 12,
+      "questions_modified": [
+        "99903",
+        "99904",
+        "99908",
+        "99913",
+        "99914",
+        "99915",
+        "99916",
+        "99917"
+      ]
+    }
+  }
+}
