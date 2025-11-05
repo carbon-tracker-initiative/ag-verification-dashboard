@@ -34,6 +34,8 @@ The Verification Dashboard provides comprehensive analysis of agricultural risk 
 - **Category Deep-Dive:** Analyze Environmental, Human Health, Market, and Regulatory risks separately
 - **Verification Support:** Compare original vs. verified results side-by-side
 - **A-F Grading:** Intuitive quality grades for quick assessment
+- **Excel Export:** Comprehensive 6-sheet reports with all metrics, perfect for presentations and further analysis
+- **Version Support:** Track and compare different schema versions (v3, v4, etc.) with separate cards and routes
 
 ## Features
 
@@ -137,6 +139,32 @@ npm run build
 # Preview production build
 npm run preview
 ```
+
+### Excel Export
+
+```bash
+# Generate comprehensive Excel report (all data, 6 sheets)
+npm run export:excel
+
+# Export specific company
+npm run export:excel -- --company Syngenta
+
+# Export specific version
+npm run export:excel -- --version v4
+
+# Custom output path
+npm run export:excel -- --output reports/my-report.xlsx
+```
+
+**📊 What gets exported:**
+- Executive Summary with high-level statistics
+- Company Details with full metrics
+- Question Performance rankings
+- Category Analysis breakdowns
+- Snippet Raw Data for custom analysis
+- Verification Reports
+
+**📖 See the complete guide:** [Excel Export Guide](docs/EXCEL_EXPORT_GUIDE.md)
 
 ### Testing
 
@@ -437,6 +465,7 @@ No environment variables required for basic deployment. Data is loaded from loca
 - **[tests/README.md](tests/README.md)** - Testing documentation
 - **[USER_GUIDE.md](USER_GUIDE.md)** - End-user guide
 - **[API.md](API.md)** - API and utilities documentation
+- **[docs/EXCEL_EXPORT_GUIDE.md](docs/EXCEL_EXPORT_GUIDE.md)** - Complete Excel export guide with examples and troubleshooting
 
 ## Contributing
 
