@@ -32,7 +32,7 @@ npm run export:excel -- --company Syngenta --version v4
 
 ---
 
-## What You Get (6 Sheets)
+## What You Get (7 Sheets)
 
 | Sheet # | Name | Use For |
 |---------|------|---------|
@@ -42,6 +42,7 @@ npm run export:excel -- --company Syngenta --version v4
 | 4 | Category Analysis | Risk category deep-dives |
 | 5 | Snippet Raw Data | Statistical analysis, pivot tables |
 | 6 | Verification Report | Quality assurance, audit trails |
+| 7 | Column Reference | Understanding what all columns mean |
 
 ---
 

@@ -34,7 +34,7 @@ const enrichedCompanyData = allCompanyData.map((data, index) => ({
 }));
 
 // Calculate cross-company metrics
-const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics);
+const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics, allCompanyData);
 
 // Get unique categories from all companies
 const allCategories = new Set<string>();

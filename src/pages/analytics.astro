@@ -24,7 +24,7 @@ const companyMetrics = allCompanyData.map(data =>
 );
 
 // Calculate cross-company metrics
-const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics);
+const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics, allCompanyData);
 
 // Build breadcrumb items
 const baseUrl = import.meta.env.BASE_URL;

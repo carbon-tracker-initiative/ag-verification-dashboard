@@ -26,6 +26,7 @@ export interface ExcelExportOptions {
   includeCategoryAnalysis?: boolean;
   includeSnippetData?: boolean;
   includeVerificationReport?: boolean;
+  includeColumnReference?: boolean;
 }
 
 // ============================================================================
@@ -47,6 +48,7 @@ export async function generateExcelWorkbook(
     includeCategoryAnalysis: true,
     includeSnippetData: true,
     includeVerificationReport: true,
+    includeColumnReference: true,
     ...options
   };
 
@@ -56,11 +58,11 @@ export async function generateExcelWorkbook(
 
   // Calculate all metrics
   const companyMetrics = companyDataArray.map(cd => calculateCompanyMetrics(cd.verified));
-  const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics);
+  const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics, companyDataArray);
 
   // Generate sheets
   if (opts.includeExecutiveSummary) {
-    await createExecutiveSummarySheet(workbook, companyMetrics, crossCompanyMetrics);
+    await createExecutiveSummarySheet(workbook, companyDataArray, companyMetrics, crossCompanyMetrics);
   }
 
   if (opts.includeCompanyDetails) {
@@ -83,6 +85,10 @@ export async function generateExcelWorkbook(
     await createVerificationReportSheet(workbook, companyMetrics);
   }
 
+  if (opts.includeColumnReference) {
+    await createColumnReferenceSheet(workbook);
+  }
+
   return workbook;
 }
 
@@ -92,6 +98,7 @@ export async function generateExcelWorkbook(
 
 async function createExecutiveSummarySheet(
   workbook: ExcelJS.Workbook,
+  companyDataArray: CompanyYearData[],
   companyMetrics: CompanyMetrics[],
   crossCompanyMetrics: any
 ) {
@@ -197,10 +204,10 @@ async function createExecutiveSummarySheet(
   });
   row++;
 
-  companyMetrics.forEach(cm => {
+  companyMetrics.forEach((cm, index) => {
     sheet.getCell(`A${row}`).value = cm.company_name;
     sheet.getCell(`B${row}`).value = cm.fiscal_year;
-    sheet.getCell(`C${row}`).value = (cm as any).verified?.version || 'N/A';
+    sheet.getCell(`C${row}`).value = companyDataArray[index].version;
     sheet.getCell(`D${row}`).value = cm.total_snippets;
     sheet.getCell(`E${row}`).value = cm.overall_disclosure_score.toFixed(1);
     sheet.getCell(`F${row}`).value = cm.overall_grade;
@@ -720,6 +727,151 @@ async function createVerificationReportSheet(
     from: { row: 1, column: 1 },
     to: { row: 1, column: headers.length }
   };
+}
+
+// ============================================================================
+// Sheet 7: Column Reference
+// ============================================================================
+
+async function createColumnReferenceSheet(
+  workbook: ExcelJS.Workbook
+) {
+  const sheet = workbook.addWorksheet('Column Reference', {
+    views: [{ showGridLines: true, state: 'frozen', ySplit: 1 }]
+  });
+
+  // Title
+  sheet.mergeCells('A1:E1');
+  sheet.getCell('A1').value = 'Column Reference - Understanding Your Data';
+  sheet.getCell('A1').font = { size: 16, bold: true };
+  sheet.getCell('A1').alignment = { horizontal: 'center' };
+  sheet.getCell('A1').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF4472C4' } };
+  sheet.getCell('A1').font.color = { argb: 'FFFFFFFF' };
+
+  let row = 3;
+
+  // Header row
+  const headers = ['Sheet', 'Column', 'Description', 'Calculation/Source', 'Example'];
+  headers.forEach((header, i) => {
+    const cell = sheet.getCell(row, i + 1);
+    cell.value = header;
+    cell.font = { bold: true };
+    cell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFD9E1F2' } };
+  });
+  row++;
+
+  // Column definitions
+  const columnData = [
+    // Executive Summary
+    ['Executive Summary', 'Total Companies', 'Total number of companies in the analysis', 'Count of unique companies in dataset', '5'],
+    ['Executive Summary', 'Total Questions Analyzed', 'Total number of questions analyzed across all companies', 'Sum of questions from all companies', '88'],
+    ['Executive Summary', 'Total Snippets', 'Total number of evidence snippets found', 'Sum of all disclosure snippets across companies', '235'],
+    ['Executive Summary', 'Average Disclosure Score', 'Average quality score across all snippets', 'Mean of all snippet scores (0-100%)', '52.6%'],
+    ['Executive Summary', 'Average Financial Transparency', 'Percentage of snippets with financial data', 'Snippets with financial amounts / Total snippets', '36.1%'],
+    ['Executive Summary', 'Average Forward-Looking Rate', 'Percentage of future-oriented disclosures', 'Forward-looking snippets / Total snippets', '32.8%'],
+    ['Executive Summary', 'Classification', 'Type of disclosure quality', 'FULL_DISCLOSURE, PARTIAL, UNCLEAR, or NO_DISCLOSURE', 'PARTIAL'],
+    ['Executive Summary', 'Version', 'Schema version used for analysis', 'Extracted from filename (v3, v4, etc.)', 'v4'],
+
+    // Company Details
+    ['Company Details', 'Overall Score', 'Company\'s average disclosure quality', 'Average of all snippet scores for this company (0-100%)', '48.0'],
+    ['Company Details', 'Grade', 'Letter grade for overall performance', 'A: 90-100%, B: 80-89%, C: 70-79%, D: 60-69%, F: <60%', 'F'],
+    ['Company Details', 'Questions Analyzed', 'Number of questions this company answered', 'Count of questions with at least one snippet', '14'],
+    ['Company Details', 'Total Snippets', 'Evidence snippets found for this company', 'Count of all disclosure snippets', '38'],
+    ['Company Details', 'Avg Snippets/Question', 'Average evidence depth per question', 'Total snippets / Questions analyzed', '2.71'],
+    ['Company Details', 'Full Disclosure', 'Snippets with complete, clear evidence', 'Count of FULL_DISCLOSURE classification', '7'],
+    ['Company Details', 'Partial', 'Snippets with incomplete evidence', 'Count of PARTIAL classification', '21'],
+    ['Company Details', 'Unclear', 'Snippets with ambiguous evidence', 'Count of UNCLEAR classification', '2'],
+    ['Company Details', 'No Disclosure', 'Questions with no evidence found', 'Count of NO_DISCLOSURE classification', '3'],
+    ['Company Details', 'Financial Transparency %', 'Percentage with monetary amounts', '(Full + Partial financial) / Total snippets × 100', '43.0%'],
+    ['Company Details', 'Forward-Looking %', 'Percentage of future-oriented statements', 'Future timeframe snippets / Total × 100', '25.0%'],
+    ['Company Details', 'Narrative Balance %', 'Percentage discussing both risks and opportunities', 'Both framing snippets / Total × 100', '8.0%'],
+    ['Company Details', 'Environmental Score', 'Score for Environmental Risk category', 'Average snippet score for this category', '55.3'],
+    ['Company Details', 'Verification Pass Rate %', 'Quality assurance pass rate', '(Original - Removed - Corrected) / Original × 100', '94.7%'],
+
+    // Question Performance
+    ['Question Performance', 'Rank', 'Ranking by average score (1 = best)', 'Sorted by average score descending', '1'],
+    ['Question Performance', 'Question ID', 'Unique identifier for the question', 'From canonical question set', '99918'],
+    ['Question Performance', 'Category', 'Risk category classification', 'Environmental, Human Health, Market/Business, or Regulatory/Financial', 'Environmental Risk'],
+    ['Question Performance', 'Avg Score', 'Average score across all companies', 'Mean of scores from companies that answered this question', '66.7'],
+    ['Question Performance', 'Companies Analyzed', 'Number of companies that answered this question', 'Count of companies with evidence for this question', '4'],
+    ['Question Performance', 'Total Snippets', 'Total evidence snippets across all companies', 'Sum of snippets from all companies for this question', '12'],
+    ['Question Performance', 'Full Disclosure Count', 'Companies with complete evidence', 'Count of companies with at least one FULL_DISCLOSURE snippet', '2'],
+    ['Question Performance', 'Avg Financial Rate %', 'Average financial transparency', 'Mean financial quantification rate across companies', '45.0%'],
+
+    // Category Analysis
+    ['Category Analysis', 'Category', 'Risk category name', 'One of four risk categories', 'Environmental Risk'],
+    ['Category Analysis', 'Avg Score', 'Average score for this category', 'Mean of all question scores in category', '58.6'],
+    ['Category Analysis', 'Total Questions', 'Questions in this category', 'Count of questions assigned to category', '8'],
+    ['Category Analysis', 'Questions Answered', 'Questions with evidence', 'Count of questions with at least one snippet', '7'],
+    ['Category Analysis', 'Avg Evidence Depth', 'Average snippets per question', 'Total snippets / Questions in category', '3.2'],
+    ['Category Analysis', 'Financial Rate %', 'Percentage with financial data', 'Average financial transparency for category', '38.0%'],
+    ['Category Analysis', 'Forward-Looking %', 'Percentage future-oriented', 'Average forward-looking rate for category', '28.0%'],
+    ['Category Analysis', 'Narrative Balance %', 'Percentage balanced risk/opportunity', 'Average narrative balance rate for category', '12.0%'],
+
+    // Snippet Raw Data
+    ['Snippet Raw Data', 'Snippet ID', 'Unique identifier for evidence snippet', 'Question ID + sequential number (e.g., 99903-001)', '99903-001'],
+    ['Snippet Raw Data', 'Quote', 'Extracted text from document', 'Actual text quoted from company document', '"Our products may..."'],
+    ['Snippet Raw Data', 'Source', 'Document location', 'PDF name, page number, and section', 'Annual Report, Page 45, Risk Factors'],
+    ['Snippet Raw Data', 'Classification', 'Quality of evidence', 'FULL_DISCLOSURE, PARTIAL, UNCLEAR, or NO_DISCLOSURE', 'PARTIAL'],
+    ['Snippet Raw Data', 'Framing', 'Narrative perspective', 'Risk, Opportunity, Neutral, or Both', 'Risk'],
+    ['Snippet Raw Data', 'Financial Type', 'Level of financial detail', 'Full (explicit $), Partial (relative terms), or Non-Financial', 'Partial'],
+    ['Snippet Raw Data', 'Timeframe', 'Temporal orientation', 'Current, Future, Historical, or Multiple/Unclear', 'Forward-looking'],
+    ['Snippet Raw Data', 'Financial Score (0-3)', 'Points for financial transparency', '3=Full, 2=Partial, 1=Non-Financial', '2'],
+    ['Snippet Raw Data', 'Temporal Score (0-3)', 'Points for time specificity', '3=Current, 2=Future, 1=Historical, 0=Unclear', '2'],
+    ['Snippet Raw Data', 'Narrative Score (1-3)', 'Points for framing balance', '3=Both, 2=Risk or Opportunity, 1=Neutral', '2'],
+    ['Snippet Raw Data', 'Total Score (0-100)', 'Composite quality score', '(Financial + Temporal + Narrative) / 9 × 100', '66.7'],
+    ['Snippet Raw Data', 'Financial Amounts', 'Extracted monetary values', 'Currency, amount, and context', 'USD 10000000 (investment cost)'],
+
+    // Verification Report
+    ['Verification Report', 'Verified Date', 'When verification was performed', 'ISO date from verification process', '2025-11-04'],
+    ['Verification Report', 'Verification Model', 'AI model used for verification', 'Model name and version', 'gemini-2.5-pro'],
+    ['Verification Report', 'Pass Rate %', 'Percentage of snippets that passed verification', '(Total - Removed - Corrected) / Total × 100', '94.7%'],
+    ['Verification Report', 'Snippets Removed', 'Low-quality snippets removed', 'Count of snippets deleted during verification', '1'],
+    ['Verification Report', 'Snippets Corrected', 'Snippets with corrections', 'Count of snippets modified during verification', '6'],
+    ['Verification Report', 'Questions Modified', 'Questions affected by verification', 'List of question IDs that had changes', '99903, 99911'],
+    ['Verification Report', 'Total Original Snippets', 'Count before verification', 'Original snippet count + Removed', '39'],
+    ['Verification Report', 'Total Final Snippets', 'Count after verification', 'Current snippet count in verified file', '38']
+  ];
+
+  // Add data rows
+  columnData.forEach(([sheetName, column, description, calculation, example]) => {
+    sheet.getCell(row, 1).value = sheetName;
+    sheet.getCell(row, 2).value = column;
+    sheet.getCell(row, 3).value = description;
+    sheet.getCell(row, 4).value = calculation;
+    sheet.getCell(row, 5).value = example;
+
+    // Add subtle banding
+    if (row % 2 === 0) {
+      for (let col = 1; col <= 5; col++) {
+        sheet.getCell(row, col).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFF5F5F5' } };
+      }
+    }
+
+    row++;
+  });
+
+  // Column widths
+  sheet.columns = [
+    { key: 'A', width: 20 },  // Sheet
+    { key: 'B', width: 25 },  // Column
+    { key: 'C', width: 50 },  // Description
+    { key: 'D', width: 60 },  // Calculation
+    { key: 'E', width: 30 }   // Example
+  ];
+
+  // Enable auto-filter
+  sheet.autoFilter = {
+    from: { row: 3, column: 1 },
+    to: { row: 3, column: 5 }
+  };
+
+  // Add note at bottom
+  row += 2;
+  sheet.mergeCells(`A${row}:E${row}`);
+  sheet.getCell(`A${row}`).value = 'Note: Use Excel\'s filter feature (dropdown arrows in header row) to find specific columns or sheets.';
+  sheet.getCell(`A${row}`).font = { italic: true, color: { argb: 'FF666666' } };
+  sheet.getCell(`A${row}`).alignment = { horizontal: 'left', wrapText: true };
 }
 
 // ============================================================================

@@ -134,7 +134,7 @@ async function main() {
     console.log(`📊 Generating report for ${companyDataArray.length} datasets...\n`);
 
     // Generate Excel workbook
-    console.log('📝 Creating Excel workbook with 6 sheets...');
+    console.log('📝 Creating Excel workbook with 7 sheets...');
     const workbook = await generateExcelWorkbook(companyDataArray);
 
     // Create reports directory if it doesn't exist
@@ -165,6 +165,7 @@ async function main() {
     console.log(`   • Category Analysis - Category-level breakdown`);
     console.log(`   • Snippet Raw Data - All snippets with full details`);
     console.log(`   • Verification Report - Quality assurance metrics`);
+    console.log(`   • Column Reference - Explanation of all columns`);
 
     // Summary stats
     const companies = Array.from(new Set(companyDataArray.map(cd => cd.company)));

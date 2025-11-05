@@ -7,7 +7,8 @@ import type {
   AnalysisResult,
   Question,
   Snippet,
-  Classification
+  Classification,
+  CompanyYearData
 } from '../types/analysis';
 import type {
   QuestionMetrics,
@@ -556,7 +557,8 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
  * Calculate cross-company analytics for all companies
  */
 export function calculateCrossCompanyMetrics(
-  companyMetrics: CompanyMetrics[]
+  companyMetrics: CompanyMetrics[],
+  companyDataArray: CompanyYearData[]
 ): CrossCompanyMetrics {
   // Question rankings across all companies
   const questionMap = new Map<string, {
@@ -569,14 +571,16 @@ export function calculateCrossCompanyMetrics(
     financial_rates: number[];
   }>();
 
-  // Collect question data from all companies
-  companyMetrics.forEach(cm => {
-    cm.top_questions.concat(cm.bottom_questions).forEach(q => {
-      if (!questionMap.has(q.question_id)) {
-        questionMap.set(q.question_id, {
-          question_id: q.question_id,
-          question_text: q.question_text,
-          category: q.category,
+  // Collect question data from ALL questions in ALL companies
+  companyDataArray.forEach((companyData) => {
+    companyData.verified.analysis_results.forEach(question => {
+      const qm = calculateQuestionMetrics(question);
+
+      if (!questionMap.has(question.question_id)) {
+        questionMap.set(question.question_id, {
+          question_id: question.question_id,
+          question_text: question.question_text,
+          category: question.category,
           scores: [],
           full_disclosure_count: 0,
           total_snippets: 0,
@@ -584,8 +588,15 @@ export function calculateCrossCompanyMetrics(
         });
       }
 
-      const qData = questionMap.get(q.question_id)!;
-      qData.scores.push(q.score);
+      const qData = questionMap.get(question.question_id)!;
+      qData.scores.push(qm.average_snippet_score);
+      qData.total_snippets += qm.total_snippets;
+      qData.financial_rates.push(qm.financial_quantification_rate);
+
+      // Count companies with full disclosure (at least one FULL_DISCLOSURE snippet)
+      if (qm.snippets_by_classification.FULL_DISCLOSURE > 0) {
+        qData.full_disclosure_count++;
+      }
     });
   });
 

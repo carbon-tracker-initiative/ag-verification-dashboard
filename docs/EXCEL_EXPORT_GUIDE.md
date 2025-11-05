@@ -30,7 +30,7 @@ This creates a comprehensive Excel file at:
 reports/AG_Verification_Summary_YYYY-MM-DD.xlsx
 ```
 
-The file contains all companies, all versions (v3, v4, etc.), and all available data across **6 sheets**.
+The file contains all companies, all versions (v3, v4, etc.), and all available data across **7 sheets**.
 
 ---
 
@@ -268,6 +268,40 @@ npm run export:excel -- --output reports/monthly-report-$(date +%Y-%m).xlsx
 - Documents AI verification process
 
 **Best For**: Quality reporting, methodology documentation, audit trails
+
+---
+
+### Sheet 7: Column Reference
+
+**Purpose**: Self-service documentation for understanding all column meanings and calculations.
+
+**Contains**:
+- **Sheet Name**: Which sheet the column appears in
+- **Column Name**: Exact name of the column
+- **Description**: Plain English explanation of what the column represents
+- **Calculation/Source**: How the value is calculated or where it comes from
+- **Example Value**: Sample data to illustrate typical values
+
+**Coverage** (55+ columns explained):
+- Executive Summary: All summary statistics and metrics
+- Company Details: All 24 company-level columns
+- Question Performance: Cross-company question metrics
+- Category Analysis: Risk category performance measures
+- Snippet Raw Data: All 22 snippet-level data points
+- Verification Report: Quality assurance metrics
+
+**Features**:
+- Auto-filter enabled for easy searching
+- Organized by sheet name
+- Searchable reference for all metrics
+- No need to ask what columns mean - it's all documented
+
+**Best For**: Understanding the data model, training new team members, clarifying metric definitions
+
+**Example entries**:
+- "Companies Analyzed" in Question Performance = "Number of companies that answered this question"
+- "Financial Quantification Rate" = "Percentage of snippets with explicit monetary amounts"
+- "Pass Rate" in Verification = "Percentage of original snippets that passed quality review"
 
 ---
 
