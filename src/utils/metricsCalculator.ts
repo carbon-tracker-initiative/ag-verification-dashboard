@@ -173,6 +173,11 @@ export function calculateQuestionMetrics(question: Question): QuestionMetrics {
     snippets_by_classification[s.classification]++;
   });
 
+  // If no snippets exist (empty disclosures array), this is a NO_DISCLOSURE question
+  if (snippets.length === 0) {
+    snippets_by_classification.NO_DISCLOSURE = 1;
+  }
+
   // Calculate snippet scores
   const snippetScores = snippets.map(s => calculateSnippetScore(s));
   const average_snippet_score = snippetScores.length > 0
@@ -307,10 +312,12 @@ export function calculateCategoryMetrics(
     NO_DISCLOSURE: 0
   };
 
-  categoryQuestions.forEach(q => {
-    q.disclosures.forEach(s => {
-      snippets_by_classification[s.classification]++;
-    });
+  // Aggregate from question metrics to include NO_DISCLOSURE questions
+  questionMetrics.forEach(qm => {
+    snippets_by_classification.FULL_DISCLOSURE += qm.snippets_by_classification.FULL_DISCLOSURE;
+    snippets_by_classification.PARTIAL += qm.snippets_by_classification.PARTIAL;
+    snippets_by_classification.UNCLEAR += qm.snippets_by_classification.UNCLEAR;
+    snippets_by_classification.NO_DISCLOSURE += qm.snippets_by_classification.NO_DISCLOSURE;
   });
 
   // Financial metrics
@@ -375,6 +382,9 @@ export function calculateCategoryMetrics(
 export function calculateCompanyMetrics(analysisResult: AnalysisResult): CompanyMetrics {
   const questions = analysisResult.analysis_results;
 
+  // Calculate question metrics first to properly capture NO_DISCLOSURE questions
+  const questionMetrics = questions.map(q => calculateQuestionMetrics(q));
+
   // Calculate all snippet scores
   const allSnippets = questions.flatMap(q => q.disclosures);
   const allSnippetScores = allSnippets.map(s => calculateSnippetScore(s));
@@ -401,7 +411,7 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
     ? total_snippets / total_questions_analyzed
     : 0;
 
-  // Classification distribution
+  // Classification distribution - aggregate from question metrics to include NO_DISCLOSURE
   const snippets_by_classification: Record<Classification, number> = {
     FULL_DISCLOSURE: 0,
     PARTIAL: 0,
@@ -409,8 +419,11 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
     NO_DISCLOSURE: 0
   };
 
-  allSnippets.forEach(s => {
-    snippets_by_classification[s.classification]++;
+  questionMetrics.forEach(qm => {
+    snippets_by_classification.FULL_DISCLOSURE += qm.snippets_by_classification.FULL_DISCLOSURE;
+    snippets_by_classification.PARTIAL += qm.snippets_by_classification.PARTIAL;
+    snippets_by_classification.UNCLEAR += qm.snippets_by_classification.UNCLEAR;
+    snippets_by_classification.NO_DISCLOSURE += qm.snippets_by_classification.NO_DISCLOSURE;
   });
 
   const classification_percentages: Record<Classification, number> = {
@@ -477,9 +490,8 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
     narrative_balance: narrative_balance_rate
   };
 
-  // Top and bottom questions
-  const questionMetrics = questions.map(q => calculateQuestionMetrics(q));
-  const sortedQuestions = questionMetrics.sort((a, b) => b.average_snippet_score - a.average_snippet_score);
+  // Top and bottom questions (questionMetrics already calculated at top of function)
+  const sortedQuestions = [...questionMetrics].sort((a, b) => b.average_snippet_score - a.average_snippet_score);
 
   const top_questions = sortedQuestions.slice(0, 5).map(qm => ({
     question_id: qm.question_id,
