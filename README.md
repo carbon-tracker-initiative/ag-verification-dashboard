@@ -35,7 +35,7 @@ The Verification Dashboard provides comprehensive analysis of agricultural risk 
 - **Question Benchmarking:** Discover which questions are universally well or poorly disclosed
 - **Category Deep-Dive:** Analyze Environmental, Human Health, Market, and Regulatory risks separately
 - **Verification Support:** Compare original vs. verified results side-by-side
-- **Distribution Metrics:** Track financial transparency rates, forward-looking rates, and narrative balance
+- **Distribution Metrics:** Track financial transparency, present-day vs. forward-looking temporal balance, and narrative framing rates
 - **Excel Export:** Comprehensive 7-sheet reports with all metrics, perfect for presentations and further analysis
 - **Version Support:** Track and compare different schema versions (v3, v4, etc.) with separate cards and routes
 
@@ -64,6 +64,8 @@ Evidence depth measures the number of supporting snippets per question:
 #### 3. Distribution Metrics
 
 Three key metrics tracked as percentages:
+
+Temporal analysis surfaces both the average present-day rate and the average forward-looking rate across all companies, highlighting how disclosures balance current status versus future commitments.
 
 **Financial Transparency Rate**
 - **Full Financial**: Explicit monetary amounts and specific ranges

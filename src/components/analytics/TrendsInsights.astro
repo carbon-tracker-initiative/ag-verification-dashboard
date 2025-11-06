@@ -35,7 +35,7 @@ if (crossCompanyMetrics.global_stats.average_financial_rate_all < 50) {
 }
 
 // Temporal specificity insight
-const presentDayRate = crossCompanyMetrics.global_stats.average_temporal_present_day_rate_all;
+const presentDayRate = crossCompanyMetrics.global_stats.average_temporal_present_day_rate_all ?? 0;
 if (presentDayRate > 70) {
   insights.push({
     type: 'warning',

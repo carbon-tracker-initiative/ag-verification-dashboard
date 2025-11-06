@@ -5,8 +5,10 @@
 
 import {
   calculateQuestionMetrics,
-  calculateCompanyMetrics
+  calculateCompanyMetrics,
+  calculateCrossCompanyMetrics
 } from '../src/utils/metricsCalculator';
+import type { CompanyYearData } from '../src/types/analysis';
 
 import {
   TestResults,
@@ -118,7 +120,12 @@ await runTest('Temporal rates: Correctly calculates present day rate', () => {
   });
 
   const metrics = calculateQuestionMetrics(question);
-  assertClose(metrics.temporal_present_day_rate, 50, 0.1, 'Half present day should be 50%');
+  assertEqual(metrics.snippets_current, 1, 'Should count 1 present-day snippet');
+  assertEqual(metrics.snippets_future, 1, 'Should count 1 future-oriented snippet');
+  const presentDayRate = metrics.total_snippets > 0
+    ? (metrics.snippets_current / metrics.total_snippets) * 100
+    : 0;
+  assertClose(presentDayRate, 50, 0.1, 'Half present day should be 50%');
 }, results);
 
 // ==================== Narrative Distribution Tests ====================
@@ -231,6 +238,81 @@ await runTest('Company metrics: Radar metrics are calculated', () => {
 
   assertClose(metrics.radar_metrics.financial_transparency, 100, 0.1, 'All Full financial = 100%');
   assertClose(metrics.radar_metrics.evidence_depth, 10, 0.1, 'Evidence depth scales based on average snippets per question');
+}, results);
+
+await runTest('Cross-company metrics: Calculates average present-day rate', () => {
+  function createTimeframeSnippet(id: string, timeframe: string) {
+    const base = createMockSnippet();
+    return {
+      ...base,
+      snippet_id: id,
+      categorization: {
+        ...base.categorization,
+        timeframe
+      }
+    };
+  }
+
+  const companyAAnalysis = createMockAnalysisResult({
+    company_name: 'Company A',
+    analysis_results: [
+      createMockQuestion({
+        question_id: 'A-Q1',
+        disclosures: [
+          createTimeframeSnippet('A-1', 'Present day'),
+          createTimeframeSnippet('A-2', 'Present day'),
+          createTimeframeSnippet('A-3', 'Future'),
+          createTimeframeSnippet('A-4', 'Future')
+        ]
+      })
+    ]
+  });
+
+  const companyBAnalysis = createMockAnalysisResult({
+    company_name: 'Company B',
+    analysis_results: [
+      createMockQuestion({
+        question_id: 'B-Q1',
+        disclosures: [
+          createTimeframeSnippet('B-1', 'Present day'),
+          createTimeframeSnippet('B-2', 'Present day'),
+          createTimeframeSnippet('B-3', 'Present day')
+        ]
+      })
+    ]
+  });
+
+  const companyMetrics = [
+    calculateCompanyMetrics(companyAAnalysis),
+    calculateCompanyMetrics(companyBAnalysis)
+  ];
+
+  const companyData: CompanyYearData[] = [
+    {
+      company: companyAAnalysis.company_name,
+      year: companyAAnalysis.fiscal_year,
+      version: 'v1',
+      model: companyAAnalysis.model_used,
+      verified: companyAAnalysis,
+      hasComparison: false
+    },
+    {
+      company: companyBAnalysis.company_name,
+      year: companyBAnalysis.fiscal_year,
+      version: 'v1',
+      model: companyBAnalysis.model_used,
+      verified: companyBAnalysis,
+      hasComparison: false
+    }
+  ];
+
+  const crossMetrics = calculateCrossCompanyMetrics(companyMetrics, companyData);
+  assertClose(
+    crossMetrics.global_stats.average_temporal_present_day_rate_all,
+    75,
+    0.1,
+    'Average of company present-day rates (50% and 100%) should be 75%'
+  );
 }, results);
 
 // ==================== Edge Cases ====================

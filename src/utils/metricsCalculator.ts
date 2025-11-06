@@ -562,6 +562,14 @@ export function calculateCrossCompanyMetrics(
   const average_forward_looking_rate_all = companyMetrics.length > 0
     ? companyMetrics.reduce((sum, cm) => sum + cm.forward_looking_rate, 0) / companyMetrics.length
     : 0;
+  const average_temporal_present_day_rate_all = companyMetrics.length > 0
+    ? companyMetrics.reduce((sum, cm) => {
+        const companyRate = cm.total_snippets > 0
+          ? (cm.snippets_current / cm.total_snippets) * 100
+          : 0;
+        return sum + companyRate;
+      }, 0) / companyMetrics.length
+    : 0;
 
   // Aggregate classification counts
   const full_disclosure_count = companyMetrics.reduce((sum, cm) =>
@@ -591,6 +599,7 @@ export function calculateCrossCompanyMetrics(
       total_snippets,
       average_financial_rate_all,
       average_forward_looking_rate_all,
+      average_temporal_present_day_rate_all,
       full_disclosure_count,
       partial_disclosure_count,
       unclear_count,

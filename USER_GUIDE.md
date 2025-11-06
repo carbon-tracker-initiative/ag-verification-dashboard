@@ -75,6 +75,8 @@ The dashboard tracks three key distribution metrics as percentages:
 
 **Higher forward-looking rate** = More future-oriented strategic disclosures
 
+Cross-company analytics surface both the average present-day rate and the average forward-looking rate, making it easy to see whether disclosure portfolios emphasize current progress or future commitments.
+
 #### 3. Narrative Balance Rate
 
 **What it measures:** Percentage of snippets presenting balanced perspectives.

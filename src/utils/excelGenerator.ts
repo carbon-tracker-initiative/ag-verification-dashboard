@@ -132,7 +132,8 @@ async function createExecutiveSummarySheet(
     ['Total Questions Analyzed', stats.total_questions],
     ['Total Snippets', stats.total_snippets],
     ['Average Financial Transparency', `${stats.average_financial_rate_all.toFixed(1)}%`],
-    ['Average Forward-Looking Rate', `${stats.average_forward_looking_rate_all.toFixed(1)}%`]
+    ['Average Forward-Looking Rate', `${stats.average_forward_looking_rate_all.toFixed(1)}%`],
+    ['Average Present-Day Rate', `${stats.average_temporal_present_day_rate_all.toFixed(1)}%`]
   ];
 
   summaryStats.forEach(([label, value]) => {
@@ -703,6 +704,7 @@ async function createColumnReferenceSheet(
     ['Executive Summary', 'Total Snippets', 'Total number of evidence snippets found', 'Sum of all disclosure snippets across companies', '235'],
     ['Executive Summary', 'Average Financial Transparency', 'Percentage of snippets with financial data', 'Snippets with financial amounts / Total snippets', '36.1%'],
     ['Executive Summary', 'Average Forward-Looking Rate', 'Percentage of future-oriented disclosures', 'Forward-looking snippets / Total snippets', '32.8%'],
+    ['Executive Summary', 'Average Present-Day Rate', 'Percentage of present-day disclosures', 'Present-day snippets / Total snippets (averaged across companies)', '45.0%'],
     ['Executive Summary', 'Classification', 'Type of disclosure quality', 'FULL_DISCLOSURE, PARTIAL, UNCLEAR, or NO_DISCLOSURE', 'PARTIAL'],
     ['Executive Summary', 'Version', 'Schema version used for analysis', 'Extracted from filename (v3, v4, etc.)', 'v4'],
 

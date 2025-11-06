@@ -47,12 +47,12 @@ The file contains all companies, all versions (v3, v4, etc.), and all available 
 
 ### Core Metrics
 
-✅ **Total snippets overall** - Executive Summary sheet
-✅ **Classification distribution** - Full/Partial/Unclear/No Disclosure counts
-✅ **Evidence depth** - Snippets per question across companies
-✅ **Distribution metrics** - Financial transparency, forward-looking, narrative balance rates
-✅ **Snippets per company** - Company Details sheet
-✅ **Raw snippet data** - Complete categorization and sourcing
+- **Total snippets overall**: Executive Summary sheet
+- **Classification distribution**: Full/Partial/Unclear/No Disclosure counts
+- **Evidence depth**: Snippets per question across companies
+- **Distribution metrics**: Financial transparency, present-day, forward-looking, and narrative balance rates
+- **Snippets per company**: Company Details sheet
+- **Raw snippet data**: Complete categorization and sourcing
 
 ### Key Features Included
 
@@ -130,6 +130,7 @@ npm run export:excel -- --output reports/monthly-report-$(date +%Y-%m).xlsx
   - Total companies, questions, and snippets
   - Average financial transparency rates
   - Average forward-looking disclosure rates
+  - Average present-day disclosure rates
 
 - **Classification Distribution**
   - Breakdown by classification type
@@ -156,7 +157,7 @@ npm run export:excel -- --output reports/monthly-report-$(date +%Y-%m).xlsx
 - Basic info: Company, Year, Version, Model
 - Evidence metrics: Questions analyzed/answered, total snippets, average per question
 - Classification breakdown: Full, Partial, Unclear, No Disclosure counts
-- Distribution metrics: Financial transparency %, Forward-looking %, Narrative balance %
+- Distribution metrics: Financial transparency %, Present-day %, Forward-looking %, Narrative balance %
 - Verification data: Pass rate, snippets removed/corrected
 
 **Features**:
