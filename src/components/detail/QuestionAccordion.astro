@@ -26,8 +26,8 @@ const bestClassification = question.disclosures.length > 0
 
 const snippetCount = question.disclosures.length;
 const isExpandable = snippetCount > 0;
-const collapsedIcon = '▸';
-const expandedIcon = '▾';
+const collapsedIcon = '>';
+const expandedIcon = 'v';
 const disabledIcon = '-';
 const hasVerificationCorrection = question.disclosures.some(snippet => {
   const status = (snippet as any)?.comparison_status;
@@ -121,11 +121,11 @@ if (!framings.length) framings.push('none');
 
       <div class="flex flex-wrap items-center gap-3 text-xs text-slate-400">
         <span class="chip">
-          <span aria-hidden="true">💰</span>
-          <span>{metrics.financial_quantification_rate.toFixed(0)}% financial</span>
+          <span class="font-semibold text-slate-200">Financial Rate</span>
+          <span>{metrics.financial_quantification_rate.toFixed(0)}%</span>
         </span>
         <span class="chip">
-          <span aria-hidden="true">📑</span>
+          <span class="font-semibold text-slate-200">Evidence</span>
           <span>{snippetCount} snippet{snippetCount === 1 ? '' : 's'}</span>
         </span>
         {!isExpandable && (
@@ -168,4 +168,10 @@ if (!framings.length) framings.push('none');
     </div>
   )}
 </div>
+
+
+
+
+
+
 

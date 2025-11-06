@@ -2,7 +2,7 @@
 /**
  * Company-Year Detail Page
  * Displays comprehensive analysis for a specific company and fiscal year
- * with snippet-level disclosure quality scoring
+ * with snippet-level evidence analysis
  */
 
 import Layout from '../../layouts/Layout.astro';
@@ -94,13 +94,6 @@ const totalQuestionsAnalyzed = new Set(
 // Use properly capitalized company name for display
 const displayCompanyName = companyData.company;
 
-const gradeScale = [
-  { grade: 'A', range: '90-100%', summary: 'Comprehensive evidence with financial detail, specific timing, and balanced narratives.' },
-  { grade: 'B', range: '80-89%', summary: 'Strong performance with minor gaps in disclosure clarity or depth.' },
-  { grade: 'C', range: '70-79%', summary: 'Adequate coverage but noticeable opportunities to tighten financial or temporal detail.' },
-  { grade: 'D', range: '60-69%', summary: 'Limited specificity or inconsistent coverage across the scoring dimensions.' },
-  { grade: 'F', range: 'below 60%', summary: 'Few snippets meet the financial, temporal, and narrative standards used in verification.' }
-];
 const breadcrumbItems = [
   { label: 'Home', href: import.meta.env.BASE_URL },
   { label: displayCompanyName, href: '#' },
@@ -166,7 +159,7 @@ const breadcrumbItems = [
         <div class="mb-6">
           <h2 class="text-2xl font-bold text-slate-100 mb-4">Detailed Question Analysis</h2>
           <p class="text-sm text-slate-400 mb-6">
-            Explore each question with snippet-level scoring. Questions are collapsed by default - click to expand and view detailed evidence.
+            Explore each question with snippet-level evidence. Questions are collapsed by default—click to expand and review the supporting disclosures.
           </p>
 
           <!-- Filters Bar -->
@@ -204,30 +197,6 @@ const breadcrumbItems = [
         </div>
       </section>
       <!-- Verification & Scoring Reference -->
-      <section id="score-system-reference" class="mt-12 space-y-6">
-        <div class="surface p-6 space-y-4">
-          <h2 class="text-xl font-bold text-slate-100">Score System Reference</h2>
-          <p class="text-sm text-slate-300 leading-relaxed">Each snippet is reviewed across three dimensions. Points from each dimension are summed (maximum 9) and converted to a percentage for grading.</p>
-          <ul class="list-disc list-inside text-sm text-slate-400 space-y-1">
-            <li><span class="text-slate-200 font-semibold">Financial disclosure type</span>: Financial = 3, Partial-type = 2, Non-Financial = 1.</li>
-            <li><span class="text-slate-200 font-semibold">Timeframe specificity</span>: Present day = 3, Forward-looking = 2, Backward-looking = 1, Multiple or Unclear = 0.</li>
-            <li><span class="text-slate-200 font-semibold">Narrative framing</span>: Balanced = 3, Risk or Opportunity = 2, Neutral = 1.</li>
-            <li>The composite score for a snippet is <span class="text-slate-200 font-semibold">((financial + timeframe + narrative) / 9) × 100</span>.</li>
-          </ul>
-
-          <div class="grid gap-3 sm:grid-cols-2">
-            {gradeScale.map(entry => (
-              <div class="rounded-lg border border-slate-800 bg-slate-900/60 p-4">
-                <div class="flex items-center justify-between text-slate-200 font-semibold">
-                  <span class="text-lg">{entry.grade}</span>
-                  <span class="text-xs uppercase tracking-wide text-slate-400">{entry.range}</span>
-                </div>
-                <p class="mt-2 text-xs text-slate-400 leading-relaxed">{entry.summary}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
     </main>
   </div>

@@ -107,9 +107,7 @@ const { categories } = Astro.props;
           id="sort-select"
           class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
         >
-          <option value="quality-desc">Quality (High to Low)</option>
-          <option value="quality-asc">Quality (Low to High)</option>
-          <option value="question-id">Question ID</option>
+          <option value="question-id" selected>Question ID</option>
           <option value="evidence-desc">Evidence Count (High to Low)</option>
           <option value="evidence-asc">Evidence Count (Low to High)</option>
           <option value="financial-type">Disclosure Type</option>
@@ -237,10 +235,6 @@ const { categories } = Astro.props;
 
     function getComparator(sortValue) {
       switch (sortValue) {
-        case 'quality-asc':
-          return (a, b) => (parseFloat(a.dataset.score || '0') || 0) - (parseFloat(b.dataset.score || '0') || 0);
-        case 'quality-desc':
-          return (a, b) => (parseFloat(b.dataset.score || '0') || 0) - (parseFloat(a.dataset.score || '0') || 0);
         case 'evidence-asc':
           return (a, b) => (parseInt(a.dataset.snippets || '0', 10) || 0) - (parseInt(b.dataset.snippets || '0', 10) || 0);
         case 'evidence-desc':
@@ -254,7 +248,7 @@ const { categories } = Astro.props;
         case 'framing':
           return (a, b) => compareByOrder(a.dataset.primaryFraming, b.dataset.primaryFraming, framingOrder);
         default:
-          return (a, b) => (parseFloat(b.dataset.score || '0') || 0) - (parseFloat(a.dataset.score || '0') || 0);
+          return (a, b) => (a.dataset.questionId || '').localeCompare(b.dataset.questionId || '');
       }
     }
 
@@ -360,7 +354,7 @@ const { categories } = Astro.props;
       financialFilter.value = 'all';
       timeframeFilter.value = 'all';
       framingFilter.value = 'all';
-      sortSelect.value = 'quality-desc';
+      sortSelect.value = 'question-id';
       applyFiltersAndSort();
     }
 
