@@ -35,171 +35,223 @@ const breadcrumbItems = [
 ---
 
 <Layout title="Analytics - Cross-Company Insights">
-  <Header />
+  <Header currentPath="/analytics" />
 
-  <div class="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
-    <!-- Page Header -->
-    <div class="bg-white border-b border-slate-200 shadow-sm">
-      <div class="container mx-auto px-6 py-6">
+  <main class="min-h-screen bg-slate-950 text-slate-100">
+    <!-- Hero -->
+    <section class="border-b border-slate-800 bg-slate-950/85">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <Breadcrumb items={breadcrumbItems} />
 
-        <div class="mt-4">
-          <h1 class="text-4xl font-bold text-slate-800 mb-3">
-            Analytics & Insights
-          </h1>
-          <p class="text-lg text-slate-600 max-w-3xl">
-            Cross-company benchmarking, performance analysis, and actionable insights to improve
-            disclosure quality across the agricultural sector.
-          </p>
+        <div class="mt-10 grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
+          <div>
+            <h1 class="text-4xl sm:text-[42px] font-semibold tracking-tight text-slate-50">
+              Analytics &amp; Insights
+            </h1>
+            <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-3xl">
+              Cross-company benchmarking, performance analysis, and actionable intelligence to elevate disclosure quality across the agricultural sector.
+            </p>
+          </div>
+
+          <div class="surface p-5 rounded-2xl border border-slate-700/70 shadow-xl shadow-slate-950/40">
+            <div class="text-xs uppercase tracking-[0.28em] text-slate-400 mb-3">
+              Snapshot
+            </div>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-center justify-between gap-4">
+                <span class="text-slate-400">Industry Leader</span>
+                {crossCompanyMetrics.global_stats.best_company ? (
+                  <span class="font-semibold text-sky-300">
+                    {crossCompanyMetrics.global_stats.best_company.company_name}
+                  </span>
+                ) : (
+                  <span class="text-slate-500">TBD</span>
+                )}
+              </li>
+              <li class="flex items-center justify-between gap-4">
+                <span class="text-slate-400">Evidence Depth Avg</span>
+                <span class="font-semibold text-slate-100">
+                  {(crossCompanyMetrics.global_stats.total_snippets / Math.max(crossCompanyMetrics.global_stats.total_questions, 1)).toFixed(1)} snippets
+                </span>
+              </li>
+              <li class="flex items-center justify-between gap-4">
+                <span class="text-slate-400">Present-Day Focus</span>
+                <span class="font-semibold text-amber-300">
+                  {crossCompanyMetrics.global_stats.average_temporal_present_day_rate_all.toFixed(1)}%
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <!-- Global Stats Summary -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-          <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-lg border border-blue-200">
-            <div class="text-3xl font-bold text-blue-600">
+        <!-- Global Stats -->
+        <div class="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div class="surface p-5 text-center sm:text-left">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Companies</p>
+            <p class="text-3xl font-semibold text-slate-50">
               {crossCompanyMetrics.global_stats.total_companies}
-            </div>
-            <div class="text-sm text-slate-600">Companies Analyzed</div>
+            </p>
+            <p class="text-xs text-slate-400 mt-1">with verified disclosure reviews</p>
           </div>
-          <div class="bg-gradient-to-br from-emerald-50 to-white p-4 rounded-lg border border-emerald-200">
-            <div class="text-3xl font-bold text-emerald-600">
+          <div class="surface p-5 text-center sm:text-left">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Questions</p>
+            <p class="text-3xl font-semibold text-slate-50">
               {crossCompanyMetrics.global_stats.total_questions}
-            </div>
-            <div class="text-sm text-slate-600">Total Questions</div>
+            </p>
+            <p class="text-xs text-slate-400 mt-1">analyzed for transparency</p>
           </div>
-          <div class="bg-gradient-to-br from-purple-50 to-white p-4 rounded-lg border border-purple-200">
-            <div class="text-3xl font-bold text-purple-600">
+          <div class="surface p-5 text-center sm:text-left">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Evidence Snippets</p>
+            <p class="text-3xl font-semibold text-slate-50">
               {crossCompanyMetrics.global_stats.total_snippets}
-            </div>
-            <div class="text-sm text-slate-600">Evidence Snippets</div>
+            </p>
+            <p class="text-xs text-slate-400 mt-1">triangulated citations</p>
           </div>
-          <div class="bg-gradient-to-br from-amber-50 to-white p-4 rounded-lg border border-amber-200">
-            <div class="text-3xl font-bold text-amber-600">
+          <div class="surface p-5 text-center sm:text-left">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Financial Rate</p>
+            <p class="text-3xl font-semibold text-emerald-300">
               {crossCompanyMetrics.global_stats.average_financial_rate_all.toFixed(1)}%
-            </div>
-            <div class="text-sm text-slate-600">Avg Financial Rate</div>
+            </p>
+            <p class="text-xs text-slate-400 mt-1">with financial data</p>
+          </div>
+          <div class="surface p-5 text-center sm:text-left">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Present Day Rate</p>
+            <p class="text-3xl font-semibold text-amber-300">
+              {crossCompanyMetrics.global_stats.average_temporal_present_day_rate_all.toFixed(1)}%
+            </p>
+            <p class="text-xs text-slate-400 mt-1">current timeframe disclosures</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6 py-8">
+    <!-- Content -->
+    <section class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
       <!-- Navigation Tabs -->
-      <div class="mb-8">
-        <div class="flex gap-2 border-b border-slate-200 overflow-x-auto">
+      <div class="surface px-3 py-3 sm:px-4 sm:py-4 border border-slate-700/60">
+        <div class="flex flex-wrap gap-2" role="tablist" aria-label="Analytics sections">
           <button
-            class="nav-tab px-6 py-3 text-sm font-semibold border-b-2 border-blue-600 text-blue-600 whitespace-nowrap"
+            class="nav-tab flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 border border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
             data-target="insights"
+            aria-pressed="true"
           >
-            <span class="flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-              </svg>
-              Key Insights
-            </span>
+            <svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+            </svg>
+            Key Insights
           </button>
           <button
-            class="nav-tab px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800 whitespace-nowrap"
+            class="nav-tab flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 border border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
             data-target="questions"
+            aria-pressed="false"
           >
-            <span class="flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
-              Question Benchmark
-            </span>
+            <svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+            Question Benchmark
           </button>
           <button
-            class="nav-tab px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800 whitespace-nowrap"
+            class="nav-tab flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 border border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
             data-target="comparison"
+            aria-pressed="false"
           >
-            <span class="flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
-              </svg>
-              Company Comparison
-            </span>
+            <svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+            </svg>
+            Company Comparison
           </button>
           <button
-            class="nav-tab px-6 py-3 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800 whitespace-nowrap"
+            class="nav-tab flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 border border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
             data-target="categories"
+            aria-pressed="false"
           >
-            <span class="flex items-center gap-2">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
-              </svg>
-              Category Deep Dive
-            </span>
+            <svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+            </svg>
+            Category Deep Dive
           </button>
         </div>
       </div>
 
-      <!-- Tab Contents -->
-      <div id="tab-insights" class="tab-content">
-        <TrendsInsights crossCompanyMetrics={crossCompanyMetrics} />
-      </div>
+      <!-- Panels -->
+      <div class="space-y-10">
+        <div id="tab-insights" class="tab-content">
+          <TrendsInsights crossCompanyMetrics={crossCompanyMetrics} />
+        </div>
 
-      <div id="tab-questions" class="tab-content hidden">
-        <QuestionBenchmark crossCompanyMetrics={crossCompanyMetrics} />
-      </div>
+        <div id="tab-questions" class="tab-content hidden">
+          <QuestionBenchmark crossCompanyMetrics={crossCompanyMetrics} />
+        </div>
 
-      <div id="tab-comparison" class="tab-content hidden">
-        <RadarComparison companyMetrics={companyMetrics} />
-      </div>
+        <div id="tab-comparison" class="tab-content hidden">
+          <RadarComparison companyMetrics={companyMetrics} />
+        </div>
 
-      <div id="tab-categories" class="tab-content hidden">
-        <CategoryDeepDive crossCompanyMetrics={crossCompanyMetrics} />
+        <div id="tab-categories" class="tab-content hidden">
+          <CategoryDeepDive crossCompanyMetrics={crossCompanyMetrics} />
+        </div>
       </div>
-    </main>
-  </div>
+    </section>
+  </main>
 </Layout>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const navTabs = document.querySelectorAll('.nav-tab');
-    const tabContents = document.querySelectorAll('.tab-content');
+    const navTabs = document.querySelectorAll<HTMLButtonElement>('.nav-tab');
+    const tabContents = document.querySelectorAll<HTMLElement>('.tab-content');
+
+    const activeClasses = [
+      'bg-slate-900/70',
+      'border-slate-600',
+      'text-sky-300',
+      'shadow-[0_18px_36px_-18px_rgba(56,189,248,0.55)]'
+    ];
+
+    const inactiveClasses = ['bg-transparent', 'border-transparent', 'text-slate-400'];
+
+    function setActiveTab(targetId: string) {
+      navTabs.forEach(tab => {
+        const isTarget = tab.dataset.target === targetId;
+        tab.setAttribute('aria-pressed', String(isTarget));
+
+        if (isTarget) {
+          tab.classList.remove(...inactiveClasses);
+          tab.classList.add(...activeClasses);
+        } else {
+          tab.classList.remove(...activeClasses);
+          tab.classList.add(...inactiveClasses);
+        }
+      });
+
+      tabContents.forEach(content => {
+        if (content.id === `tab-${targetId}`) {
+          content.classList.remove('hidden');
+          content.classList.add('block');
+        } else {
+          content.classList.add('hidden');
+          content.classList.remove('block');
+        }
+      });
+    }
 
     navTabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const target = tab.getAttribute('data-target');
-
-        // Update tab button states
-        navTabs.forEach(t => {
-          if (t.getAttribute('data-target') === target) {
-            t.classList.remove('border-transparent', 'text-slate-600');
-            t.classList.add('border-blue-600', 'text-blue-600');
-          } else {
-            t.classList.remove('border-blue-600', 'text-blue-600');
-            t.classList.add('border-transparent', 'text-slate-600');
-          }
-        });
-
-        // Update content visibility
-        tabContents.forEach(content => {
-          if (content.id === `tab-${target}`) {
-            content.classList.remove('hidden');
-          } else {
-            content.classList.add('hidden');
-          }
-        });
+        if (target) {
+          setActiveTab(target);
+        }
       });
     });
+
+    // Initialize default active state
+    setActiveTab('insights');
   });
 </script>
 
 <style>
-  .nav-tab {
-    transition: all 0.2s ease;
-  }
-
-  .nav-tab:hover {
-    background-color: rgb(248 250 252);
-  }
-
   .tab-content {
-    animation: fadeIn 0.3s ease-in;
+    animation: fadeIn 0.28s ease;
   }
 
   @keyframes fadeIn {

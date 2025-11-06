@@ -28,107 +28,127 @@ const radarData = companyMetrics.map(company => {
   };
 });
 
+const divisor = radarData.length || 1;
+
 // Calculate industry averages for each dimension
 const industryAverage = {
-  financial_transparency: radarData.reduce((sum, c) => sum + c.dimensions.financial_transparency, 0) / radarData.length,
-  forward_looking_maturity: radarData.reduce((sum, c) => sum + c.dimensions.forward_looking_maturity, 0) / radarData.length,
-  narrative_balance: radarData.reduce((sum, c) => sum + c.dimensions.narrative_balance, 0) / radarData.length,
-  evidence_depth: radarData.reduce((sum, c) => sum + c.dimensions.evidence_depth, 0) / radarData.length
+  financial_transparency: radarData.reduce((sum, c) => sum + c.dimensions.financial_transparency, 0) / divisor,
+  forward_looking_maturity: radarData.reduce((sum, c) => sum + c.dimensions.forward_looking_maturity, 0) / divisor,
+  narrative_balance: radarData.reduce((sum, c) => sum + c.dimensions.narrative_balance, 0) / divisor,
+  evidence_depth: radarData.reduce((sum, c) => sum + c.dimensions.evidence_depth, 0) / divisor
 };
 
 const dimensions = [
   { key: 'financial_transparency', label: 'Financial Transparency', icon: '💰', color: '#10b981' },
-  { key: 'forward_looking_maturity', label: 'Forward-Looking Maturity', icon: '🕐', color: '#3b82f6' },
+  { key: 'forward_looking_maturity', label: 'Forward-Looking Maturity', icon: '🔭', color: '#3b82f6' },
   { key: 'narrative_balance', label: 'Narrative Balance', icon: '⚖️', color: '#8b5cf6' },
-  { key: 'evidence_depth', label: 'Evidence Depth', icon: '📄', color: '#f59e0b' }
+  { key: 'evidence_depth', label: 'Evidence Depth', icon: '🧠', color: '#f59e0b' }
 ];
 ---
 
-<div class="space-y-6">
-  <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
-    <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-      <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+<div class="surface rounded-2xl border border-slate-700/60 p-6 sm:p-8 space-y-8">
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div class="flex items-center gap-3 text-sky-300">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
       </svg>
-      Multi-Dimensional Comparison
-    </h2>
-    <p class="text-sm text-slate-600 mb-6">
-      Compare companies across 5 key disclosure quality dimensions
+      <h2 class="text-xl font-semibold text-slate-100 tracking-tight">
+        Multi-Dimensional Comparison
+      </h2>
+    </div>
+    <p class="text-xs uppercase tracking-[0.2em] text-slate-500">
+      Financial · Temporal · Narrative · Evidence
     </p>
+  </div>
 
-    <!-- Dimension Explanations -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-      {dimensions.map(dim => (
-        <div class="p-3 bg-slate-50 rounded-lg border border-slate-200">
-          <div class="flex items-center gap-2 mb-2">
-            <span class="text-xl">{dim.icon}</span>
-            <span class="text-xs font-semibold text-slate-700">{dim.label}</span>
-          </div>
-          <div class="text-xs text-slate-600">
-            Industry Avg: <span class="font-bold" style={`color: ${dim.color}`}>
-              {industryAverage[dim.key].toFixed(1)}%
-            </span>
+  <p class="text-sm text-slate-400 max-w-3xl">
+    Benchmark each company across the four core disclosure quality dimensions. Bars highlight performance relative to the cross-company average (vertical marker).
+  </p>
+
+  <!-- Dimension Explanations -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    {dimensions.map(dim => (
+      <div class="rounded-xl border border-slate-700/60 bg-slate-950/60 px-4 py-4">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900/70 text-lg">
+            {dim.icon}
+          </span>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+              {dim.label}
+            </div>
+            <div class="text-[11px] text-slate-500">
+              Industry average: <span class="font-semibold" style={`color: ${dim.color}`}>{industryAverage[dim.key as keyof typeof industryAverage].toFixed(1)}%</span>
+            </div>
           </div>
         </div>
-      ))}
-    </div>
+        <p class="text-xs leading-relaxed text-slate-500">
+          Measures how consistently companies deliver {dim.label.toLowerCase()} in their disclosures.
+        </p>
+      </div>
+    ))}
+  </div>
 
-    <!-- Company Comparison Grid -->
+  <!-- Company Comparison Grid -->
+  {radarData.length === 0 ? (
+    <div class="rounded-xl border border-slate-700 bg-slate-900/70 p-10 text-center text-slate-400">
+      Company-level radar metrics will appear once verified data is available.
+    </div>
+  ) : (
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {radarData.map((company, index) => {
         const colors = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ec4899'];
         const color = colors[index % colors.length];
 
         return (
-          <div class="bg-gradient-to-br from-slate-50 to-white p-6 rounded-lg border-2 border-slate-200 hover:border-blue-300 transition-colors">
-            <div class="flex items-start justify-between mb-4">
-              <h3 class="text-lg font-bold text-slate-800">{company.name}</h3>
+          <div class="rounded-2xl border border-slate-700/60 bg-slate-950/60 px-5 py-6 shadow-inner">
+            <div class="flex items-start justify-between gap-4">
+              <h3 class="text-lg font-semibold text-slate-100">{company.name}</h3>
               <div class="text-right">
-                <div class="text-2xl font-bold text-blue-600">{company.overall.toFixed(1)}%</div>
-                <div class="text-xs text-slate-500">Overall</div>
+                <div class="text-2xl font-semibold" style={`color: ${color}`}>
+                  {company.overall.toFixed(1)}%
+                </div>
+                <div class="text-xs text-slate-500">Overall composite</div>
               </div>
             </div>
 
-            <!-- Radar Chart Placeholder (simplified as bars) -->
-            <div class="space-y-3">
+            <div class="mt-5 space-y-4">
               {dimensions.map(dim => {
                 const value = company.dimensions[dim.key];
-                const avg = industryAverage[dim.key];
-                const aboveAvg = value > avg;
+                const avg = industryAverage[dim.key as keyof typeof industryAverage];
+                const aboveAvg = value >= avg;
 
                 return (
-                  <div>
-                    <div class="flex items-center justify-between mb-1">
-                      <div class="flex items-center gap-2">
-                        <span class="text-sm">{dim.icon}</span>
-                        <span class="text-xs text-slate-600">{dim.label}</span>
+                  <div class="space-y-1">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-2 text-xs text-slate-400">
+                        <span class="text-base">{dim.icon}</span>
+                        <span>{dim.label}</span>
                       </div>
                       <div class="flex items-center gap-2">
-                        <span class={`text-xs font-bold ${aboveAvg ? 'text-emerald-600' : 'text-red-600'}`}>
+                        <span class={`text-xs font-semibold ${aboveAvg ? 'text-emerald-300' : 'text-rose-300'}`}>
                           {value.toFixed(1)}%
                         </span>
                         {aboveAvg ? (
-                          <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+                          <svg class="w-3 h-3 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
                           </svg>
                         ) : (
-                          <svg class="w-3 h-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                          <svg class="w-3 h-3 text-rose-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                           </svg>
                         )}
                       </div>
                     </div>
-                    <div class="relative w-full bg-slate-200 rounded-full h-2">
-                      <!-- Industry average marker -->
+                    <div class="relative h-2 w-full overflow-hidden rounded-full bg-slate-800/70">
                       <div
-                        class="absolute top-0 w-0.5 h-4 bg-slate-400 -mt-1"
+                        class="absolute top-1/2 h-3 w-0.5 -translate-y-1/2 bg-slate-300/70"
                         style={`left: ${avg}%`}
                         title={`Industry Avg: ${avg.toFixed(1)}%`}
                       ></div>
-                      <!-- Company score bar -->
                       <div
                         class="h-2 rounded-full transition-all"
-                        style={`width: ${value}%; background-color: ${dim.color}`}
+                        style={`width: ${Math.min(value, 100)}%; background-color: ${dim.color}`}
                       ></div>
                     </div>
                   </div>
@@ -136,17 +156,16 @@ const dimensions = [
               })}
             </div>
 
-            <!-- Strengths and Weaknesses -->
-            <div class="grid grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-200">
+            <div class="mt-5 grid grid-cols-2 gap-4 border-t border-slate-800/70 pt-4 text-xs">
               <div>
-                <div class="text-xs font-semibold text-emerald-700 mb-2">Strengths</div>
+                <div class="text-[11px] uppercase tracking-[0.3em] text-emerald-300 mb-2">Strengths</div>
                 <div class="space-y-1">
                   {dimensions
-                    .filter(dim => company.dimensions[dim.key] > industryAverage[dim.key])
+                    .filter(dim => company.dimensions[dim.key] > industryAverage[dim.key as keyof typeof industryAverage])
                     .sort((a, b) => company.dimensions[b.key] - company.dimensions[a.key])
                     .slice(0, 2)
                     .map(dim => (
-                      <div class="flex items-center gap-1 text-xs text-emerald-600">
+                      <div class="flex items-center gap-1 text-slate-300">
                         <span>{dim.icon}</span>
                         <span class="truncate">{dim.label}</span>
                       </div>
@@ -154,14 +173,14 @@ const dimensions = [
                 </div>
               </div>
               <div>
-                <div class="text-xs font-semibold text-red-700 mb-2">Areas to Improve</div>
+                <div class="text-[11px] uppercase tracking-[0.3em] text-rose-300 mb-2">Needs Focus</div>
                 <div class="space-y-1">
                   {dimensions
-                    .filter(dim => company.dimensions[dim.key] <= industryAverage[dim.key])
+                    .filter(dim => company.dimensions[dim.key] <= industryAverage[dim.key as keyof typeof industryAverage])
                     .sort((a, b) => company.dimensions[a.key] - company.dimensions[b.key])
                     .slice(0, 2)
                     .map(dim => (
-                      <div class="flex items-center gap-1 text-xs text-red-600">
+                      <div class="flex items-center gap-1 text-slate-300">
                         <span>{dim.icon}</span>
                         <span class="truncate">{dim.label}</span>
                       </div>
@@ -173,26 +192,34 @@ const dimensions = [
         );
       })}
     </div>
+  )}
 
-    <!-- Dimension Leaders -->
-    <div class="mt-8">
-      <h3 class="text-lg font-bold text-slate-800 mb-4">Dimension Leaders</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <!-- Dimension Leaders -->
+  {radarData.length > 0 && (
+    <div>
+      <h3 class="text-lg font-semibold text-slate-100 mb-4">Dimension Leaders</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {dimensions.map(dim => {
           const leader = radarData.reduce((best, current) =>
             current.dimensions[dim.key] > best.dimensions[dim.key] ? current : best
           );
 
           return (
-            <div class="p-4 bg-gradient-to-br from-white to-slate-50 rounded-lg border-2 border-slate-200">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="text-2xl">{dim.icon}</span>
-                <div class="flex-1">
-                  <div class="text-xs font-semibold text-slate-600">{dim.label}</div>
-                  <div class="text-xs text-slate-500">Best Performer</div>
+            <div class="rounded-xl border border-slate-700/60 bg-slate-950/60 px-4 py-4">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900/70 text-lg">
+                  {dim.icon}
+                </span>
+                <div>
+                  <div class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                    {dim.label}
+                  </div>
+                  <div class="text-[11px] text-slate-500">Best performer</div>
                 </div>
               </div>
-              <div class="text-lg font-bold text-slate-800">{leader.name}</div>
+              <div class="text-base font-semibold text-slate-100">
+                {leader.name}
+              </div>
               <div class="text-sm font-semibold" style={`color: ${dim.color}`}>
                 {leader.dimensions[dim.key].toFixed(1)}%
               </div>
@@ -201,5 +228,5 @@ const dimensions = [
         })}
       </div>
     </div>
-  </div>
+  )}
 </div>

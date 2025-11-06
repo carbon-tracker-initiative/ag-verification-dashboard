@@ -14,7 +14,6 @@ const { crossCompanyMetrics } = Astro.props;
 
 // Get top and bottom questions by evidence depth (with safety check)
 const rankings = crossCompanyMetrics.question_rankings || [];
-console.log('Question rankings count:', rankings.length);
 
 const topQuestions = rankings.length > 0
   ? [...rankings].sort((a, b) => b.average_evidence_depth - a.average_evidence_depth).slice(0, 10)
@@ -30,213 +29,257 @@ const highVarianceQuestions = rankings.length > 0
   : [];
 ---
 
-<div class="space-y-6">
-  <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
-    <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-      <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+<div class="surface rounded-2xl border border-slate-700/60 p-6 sm:p-8">
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-6">
+    <div class="flex items-center gap-3 text-sky-300">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
       </svg>
-      Question Benchmarking Across Companies
-    </h2>
-    <p class="text-sm text-slate-600 mb-6">
-      Compare how different questions perform across all analyzed companies
+      <h2 class="text-xl font-semibold text-slate-100 tracking-tight">
+        Question Benchmarking Across Companies
+      </h2>
+    </div>
+    <p class="text-xs uppercase tracking-[0.2em] text-slate-500">
+      Compare evidence depth performance
     </p>
+  </div>
 
-    <!-- Tabs -->
-    <div class="flex gap-2 mb-6 border-b border-slate-200">
-      <button
-        class="tab-button px-4 py-2 text-sm font-semibold border-b-2 border-blue-600 text-blue-600"
-        data-tab="top-performers"
-      >
-        Top Performers
-      </button>
-      <button
-        class="tab-button px-4 py-2 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800"
-        data-tab="bottom-performers"
-      >
-        Bottom Performers
-      </button>
-      <button
-        class="tab-button px-4 py-2 text-sm font-semibold border-b-2 border-transparent text-slate-600 hover:text-slate-800"
-        data-tab="high-variance"
-      >
-        High Variance
-      </button>
-    </div>
+  <p class="text-sm text-slate-400 mb-6 max-w-3xl">
+    Review which questions receive the strongest evidence coverage, where disclosure gaps persist, and which topics vary the most across companies.
+  </p>
 
-    <!-- Top Performers Tab -->
-    <div id="tab-top-performers" class="tab-content">
-      {topQuestions.length === 0 ? (
-        <div class="text-center py-12">
-          <p class="text-slate-500">No question data available. Make sure analytics data is being generated correctly.</p>
-          <p class="text-xs text-slate-400 mt-2">Expected rankings: {rankings.length}</p>
+  <!-- Tabs -->
+  <div class="flex flex-wrap gap-2 pb-2 mb-6 border-b border-slate-700/60" role="tablist" aria-label="Question performance views">
+    <button
+      class="qb-tab inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all border border-transparent text-slate-400 hover:text-slate-100 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50"
+      data-tab="top-performers"
+      aria-pressed="true"
+    >
+      <span class="h-2 w-2 rounded-full bg-emerald-400/80"></span>
+      Top Performers
+    </button>
+    <button
+      class="qb-tab inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all border border-transparent text-slate-400 hover:text-slate-100 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50"
+      data-tab="bottom-performers"
+      aria-pressed="false"
+    >
+      <span class="h-2 w-2 rounded-full bg-rose-400/80"></span>
+      Disclosure Gaps
+    </button>
+    <button
+      class="qb-tab inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all border border-transparent text-slate-400 hover:text-slate-100 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/50"
+      data-tab="high-variance"
+      aria-pressed="false"
+    >
+      <span class="h-2 w-2 rounded-full bg-amber-400/80"></span>
+      High Variance
+    </button>
+  </div>
+
+  <!-- Top Performers Tab -->
+  <div id="tab-top-performers" class="qb-content space-y-3">
+    {topQuestions.length === 0 ? (
+      <div class="rounded-xl border border-slate-700 bg-slate-900/70 p-10 text-center text-slate-400">
+        No question data available. Make sure analytics data is being generated correctly.
+      </div>
+    ) : (
+      topQuestions.map((q, index) => (
+        <div class="rounded-xl border border-emerald-400/35 bg-slate-950/60 px-5 py-4 transition-all hover:border-emerald-300/60">
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-emerald-500/15 text-sm font-semibold text-emerald-200">
+              #{index + 1}
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <div class="text-[10px] font-mono uppercase tracking-[0.3em] text-slate-500 mb-1">
+                    {q.question_id}
+                  </div>
+                  <h3 class="text-sm font-semibold leading-snug text-slate-100">
+                    {q.question_text}
+                  </h3>
+                  <div class="mt-2 inline-flex items-center gap-2 rounded-full bg-slate-900/80 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.3em] text-slate-400">
+                    {q.category}
+                  </div>
+                </div>
+                <div class="text-right">
+                  <div class="text-2xl font-semibold text-emerald-300">
+                    {q.average_evidence_depth.toFixed(1)}
+                  </div>
+                  <div class="text-xs text-slate-500">Avg snippets per company</div>
+                </div>
+              </div>
+              <div class="mt-4 grid gap-3 text-xs text-slate-400 sm:grid-cols-2 lg:grid-cols-4">
+                <div>
+                  <span class="text-slate-500">Companies with full disclosure</span>
+                  <div class="font-semibold text-slate-200">{q.companies_with_full_disclosure}</div>
+                </div>
+                <div>
+                  <span class="text-slate-500">Companies analysed</span>
+                  <div class="font-semibold text-slate-200">{q.companies_analyzed}</div>
+                </div>
+                <div>
+                  <span class="text-slate-500">Total snippets</span>
+                  <div class="font-semibold text-slate-200">{q.total_snippets_across_companies}</div>
+                </div>
+                <div>
+                  <span class="text-slate-500">Avg financial rate</span>
+                  <div class="font-semibold text-slate-200">
+                    {q.average_financial_rate.toFixed(1)}%
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      ) : (
-      <div class="space-y-3">
-        {topQuestions.map((q, index) => (
-          <div class="p-4 bg-gradient-to-r from-emerald-50 to-white rounded-lg border border-emerald-200 hover:shadow-md transition-shadow">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0 text-center">
-                <div class="text-2xl font-bold text-emerald-600">#{index + 1}</div>
+      ))
+    )}
+  </div>
+
+  <!-- Bottom Performers Tab -->
+  <div id="tab-bottom-performers" class="qb-content hidden space-y-3">
+    {bottomQuestions.length === 0 ? (
+      <div class="rounded-xl border border-slate-700 bg-slate-900/70 p-10 text-center text-slate-400">
+        No question data available. Make sure analytics data is being generated correctly.
+      </div>
+    ) : (
+      bottomQuestions.map((q, index) => (
+        <div class="rounded-xl border border-rose-400/35 bg-slate-950/60 px-5 py-4 transition-all hover:border-rose-300/60">
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-rose-500/15 text-sm font-semibold text-rose-200">
+              #{index + 1}
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <div class="text-[10px] font-mono uppercase tracking-[0.3em] text-slate-500 mb-1">
+                    {q.question_id}
+                  </div>
+                  <h3 class="text-sm font-semibold leading-snug text-slate-100">
+                    {q.question_text}
+                  </h3>
+                </div>
+                <div class="text-right">
+                  <div class="text-2xl font-semibold text-rose-200">
+                    {q.average_evidence_depth.toFixed(1)}
+                  </div>
+                  <div class="text-xs text-slate-500">Avg snippets per company</div>
+                </div>
               </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-start justify-between gap-4 mb-2">
-                  <div class="flex-1">
-                    <div class="text-xs font-mono text-slate-500 mb-1">{q.question_id}</div>
-                    <h3 class="text-sm font-semibold text-slate-800 leading-tight">
-                      {q.question_text}
-                    </h3>
-                  </div>
-                  <div class="flex-shrink-0 text-right">
-                    <div class="text-2xl font-bold text-sky-600">{q.average_evidence_depth.toFixed(1)}</div>
-                    <div class="text-[10px] text-slate-500 uppercase">Avg Evidence</div>
-                  </div>
-                </div>
-                <div class="flex flex-wrap gap-4 text-xs text-slate-600">
-                  <div>
-                    <span class="font-semibold">Avg Evidence:</span> {q.average_evidence_depth.toFixed(1)} snippets
-                  </div>
-                  <div>
-                    <span class="font-semibold">Companies:</span> {q.companies_analyzed}
-                  </div>
-                  <div>
-                    <span class="font-semibold">Total Snippets:</span> {q.total_snippets_across_companies}
-                  </div>
-                  <div>
-                    <span class="font-semibold">Financial Rate:</span> {q.average_financial_rate.toFixed(0)}%
-                  </div>
-                </div>
+              <div class="mt-3 text-xs text-slate-400">
+                {q.companies_with_full_disclosure} of {q.companies_analyzed} companies provide actionable evidence for this question.
               </div>
             </div>
           </div>
-        ))}
-      </div>
-      )}
-    </div>
-
-    <!-- Bottom Performers Tab -->
-    <div id="tab-bottom-performers" class="tab-content hidden">
-      <div class="space-y-3">
-        {bottomQuestions.map((q, index) => (
-          <div class="p-4 bg-gradient-to-r from-red-50 to-white rounded-lg border border-red-200 hover:shadow-md transition-shadow">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0 text-center">
-                <div class="text-2xl font-bold text-red-600">#{index + 1}</div>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-start justify-between gap-4 mb-2">
-                  <div class="flex-1">
-                    <div class="text-xs font-mono text-slate-500 mb-1">{q.question_id}</div>
-                    <h3 class="text-sm font-semibold text-slate-800 leading-tight">
-                      {q.question_text}
-                    </h3>
-                  </div>
-                  <div class="flex-shrink-0 text-right">
-                    <div class="text-2xl font-bold text-sky-600">{q.average_evidence_depth.toFixed(1)}</div>
-                    <div class="text-[10px] text-slate-500 uppercase">Avg Evidence</div>
-                  </div>
-                </div>
-                <div class="flex flex-wrap gap-4 text-xs text-slate-600">
-                  <div>
-                    <span class="font-semibold">Avg Evidence:</span> {q.average_evidence_depth.toFixed(1)} snippets
-                  </div>
-                  <div>
-                    <span class="font-semibold">Companies:</span> {q.companies_analyzed}
-                  </div>
-                  <div>
-                    <span class="font-semibold">Full Disclosure:</span> {q.companies_with_full_disclosure} companies
-                  </div>
-                  <div>
-                    <span class="font-semibold">Total Snippets:</span> {q.total_snippets_across_companies}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <!-- High Variance Tab -->
-    <div id="tab-high-variance" class="tab-content hidden">
-      <div class="mb-4 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-        <div class="text-xs text-amber-800">
-          <strong>High variance questions</strong> show significant differences in how companies disclose this information.
-          This could indicate industry best practices vs laggards, or topic-specific challenges.
         </div>
+      ))
+    )}
+  </div>
+
+  <!-- High Variance Tab -->
+  <div id="tab-high-variance" class="qb-content hidden space-y-3">
+    {highVarianceQuestions.length === 0 ? (
+      <div class="rounded-xl border border-slate-700 bg-slate-900/70 p-10 text-center text-slate-400">
+        No question data available. Make sure analytics data is being generated correctly.
       </div>
-      <div class="space-y-3">
-        {highVarianceQuestions.map((q, index) => (
-          <div class="p-4 bg-gradient-to-r from-amber-50 to-white rounded-lg border border-amber-200 hover:shadow-md transition-shadow">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0 text-center">
-                <div class="text-2xl font-bold text-amber-600">#{index + 1}</div>
+    ) : (
+      highVarianceQuestions.map((q, index) => (
+        <div class="rounded-xl border border-amber-400/35 bg-slate-950/60 px-5 py-4 transition-all hover:border-amber-300/60">
+          <div class="flex items-start gap-4">
+            <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-amber-500/15 text-sm font-semibold text-amber-200">
+              #{index + 1}
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <div class="text-[10px] font-mono uppercase tracking-[0.3em] text-slate-500 mb-1">
+                    {q.question_id}
+                  </div>
+                  <h3 class="text-sm font-semibold leading-snug text-slate-100">
+                    {q.question_text}
+                  </h3>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs uppercase tracking-[0.3em] text-slate-400">
+                    Full disclosure coverage
+                  </div>
+                  <div class="text-2xl font-semibold text-amber-200">
+                    {q.companies_with_full_disclosure} / {q.companies_analyzed}
+                  </div>
+                </div>
               </div>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-start justify-between gap-4 mb-2">
-                  <div class="flex-1">
-                    <div class="text-xs font-mono text-slate-500 mb-1">{q.question_id}</div>
-                    <h3 class="text-sm font-semibold text-slate-800 leading-tight">
-                      {q.question_text}
-                    </h3>
-                  </div>
-                  <div class="flex-shrink-0 text-right">
-                    <div class="text-2xl font-bold text-sky-600">{q.average_evidence_depth.toFixed(1)}</div>
-                    <div class="text-[10px] text-slate-500 uppercase">Avg Evidence</div>
-                  </div>
-                </div>
-                <div class="flex flex-wrap gap-4 text-xs text-slate-600 mb-2">
-                  <div>
-                    <span class="font-semibold">Avg Evidence:</span> {q.average_evidence_depth.toFixed(1)} snippets
-                  </div>
-                  <div>
-                    <span class="font-semibold">Companies:</span> {q.companies_analyzed}
-                  </div>
-                  <div>
-                    <span class="font-semibold">Full Disclosure:</span> {q.companies_with_full_disclosure} / {q.companies_analyzed}
-                  </div>
-                  <div>
-                    <span class="font-semibold">Total Snippets:</span> {q.total_snippets_across_companies}
-                  </div>
-                </div>
+              <div class="mt-3 text-xs text-slate-400">
+                Explore why some companies excel while others fall behind to develop targeted disclosure guidance.
               </div>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
+        </div>
+      ))
+    )}
   </div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
+    const tabs = document.querySelectorAll<HTMLButtonElement>('.qb-tab');
+    const contents = document.querySelectorAll<HTMLElement>('.qb-content');
 
-    tabButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const tabId = button.getAttribute('data-tab');
+    const activeClasses = [
+      'bg-slate-900/70',
+      'border-slate-600',
+      'text-sky-300',
+      'shadow-[0_12px_28px_-18px_rgba(56,189,248,0.45)]'
+    ];
+    const inactiveClasses = ['bg-transparent', 'border-transparent', 'text-slate-400'];
 
-        // Update button states
-        tabButtons.forEach(btn => {
-          if (btn.getAttribute('data-tab') === tabId) {
-            btn.classList.remove('border-transparent', 'text-slate-600');
-            btn.classList.add('border-blue-600', 'text-blue-600');
-          } else {
-            btn.classList.remove('border-blue-600', 'text-blue-600');
-            btn.classList.add('border-transparent', 'text-slate-600');
-          }
-        });
+    function setTab(target: string) {
+      tabs.forEach(tab => {
+        const match = tab.dataset.tab === target;
+        tab.setAttribute('aria-pressed', String(match));
+        if (match) {
+          tab.classList.remove(...inactiveClasses);
+          tab.classList.add(...activeClasses);
+        } else {
+          tab.classList.remove(...activeClasses);
+          tab.classList.add(...inactiveClasses);
+        }
+      });
 
-        // Update content visibility
-        tabContents.forEach(content => {
-          if (content.id === `tab-${tabId}`) {
-            content.classList.remove('hidden');
-          } else {
-            content.classList.add('hidden');
-          }
-        });
+      contents.forEach(content => {
+        if (content.id === `tab-${target}`) {
+          content.classList.remove('hidden');
+        } else {
+          content.classList.add('hidden');
+        }
+      });
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        if (target) {
+          setTab(target);
+        }
       });
     });
+
+    setTab('top-performers');
   });
 </script>
+
+<style>
+  .qb-content {
+    animation: fadeIn 0.25s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
