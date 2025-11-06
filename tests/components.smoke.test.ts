@@ -36,26 +36,6 @@ await runTest('ClassificationBadge: File exists and exports', async () => {
   }
 }, results);
 
-await runTest('GradeDisplay: File exists and exports', async () => {
-  try {
-    const fs = await import('node:fs/promises');
-    const path = await import('node:path');
-
-    const componentPath = path.join(
-      process.cwd(),
-      'src/components/shared/GradeDisplay.astro'
-    );
-
-    const content = await fs.readFile(componentPath, 'utf-8');
-
-    assert(content.length > 0, 'Component file should have content');
-    assert(content.includes('Grade'), 'Should import Grade type');
-    assert(content.includes('calculateGrade'), 'Should have calculateGrade function');
-  } catch (error) {
-    throw new Error(`Failed to read GradeDisplay component: ${error}`);
-  }
-}, results);
-
 await runTest('LoadingSkeleton: File exists and exports', async () => {
   try {
     const fs = await import('node:fs/promises');
@@ -320,11 +300,9 @@ await runTest('Metrics Calculator: File exists and exports functions', async () 
   try {
     const calculator = await import('../src/utils/metricsCalculator');
 
-    assert(typeof calculator.calculateSnippetScore === 'function', 'Should export calculateSnippetScore');
-    assert(typeof calculator.calculateFinancialScore === 'function', 'Should export calculateFinancialScore');
-    assert(typeof calculator.calculateTemporalScore === 'function', 'Should export calculateTemporalScore');
-    assert(typeof calculator.calculateNarrativeScore === 'function', 'Should export calculateNarrativeScore');
-    assert(typeof calculator.calculateGrade === 'function', 'Should export calculateGrade');
+    assert(typeof calculator.calculateQuestionMetrics === 'function', 'Should export calculateQuestionMetrics');
+    assert(typeof calculator.calculateCompanyMetrics === 'function', 'Should export calculateCompanyMetrics');
+    assert(typeof calculator.calculateCrossCompanyMetrics === 'function', 'Should export calculateCrossCompanyMetrics');
   } catch (error) {
     throw new Error(`Failed to import metricsCalculator: ${error}`);
   }
@@ -381,7 +359,8 @@ await runTest('Type definitions: metrics.ts exists', async () => {
     const content = await fs.readFile(typesPath, 'utf-8');
 
     assert(content.length > 0, 'Metrics types file should have content');
-    assert(content.includes('export type Grade'), 'Should export Grade type');
+    assert(content.includes('export interface QuestionMetrics'), 'Should export QuestionMetrics interface');
+    assert(content.includes('export interface CompanyMetrics'), 'Should export CompanyMetrics interface');
   } catch (error) {
     throw new Error(`Failed to read metrics types file: ${error}`);
   }

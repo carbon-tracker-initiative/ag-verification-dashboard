@@ -132,15 +132,12 @@ const breadcrumbItems = [
           </div>
 
           <div class="flex items-center gap-6">
-            <!-- Overall Grade -->
+            <!-- Total Evidence -->
             <div class="text-center">
               <div class="text-5xl font-bold text-sky-300">
-                {companyMetrics.overall_grade}
+                {companyMetrics.total_snippets}
               </div>
-              <div class="text-sm text-slate-300 mt-1">
-                {companyMetrics.overall_disclosure_score.toFixed(1)}%
-              </div>
-              <div class="text-xs text-slate-500 uppercase tracking-wide">Overall Quality</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wide mt-2">Total Evidence Snippets</div>
             </div>
           </div>
         </div>
@@ -153,12 +150,6 @@ const breadcrumbItems = [
       <section class="mb-8">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
           <h2 class="text-lg font-semibold text-slate-200">Overview</h2>
-          <a
-            href="#score-system-reference"
-            class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-lg bg-sky-500/20 border border-sky-400/30 text-sky-200 hover:bg-sky-500/30 transition-colors"
-          >
-            View Score System Reference
-          </a>
         </div>
         <SummaryDashboard metrics={companyMetrics} />
       </section>
@@ -168,45 +159,6 @@ const breadcrumbItems = [
           hasComparison={companyData.hasComparison}
           verificationMetrics={verificationMetrics}
         />
-      </section>
-
-      <!-- Category Scores Overview -->
-      <section class="mb-8">
-        <div class="surface p-6">
-          <h2 class="text-xl font-bold text-slate-100 mb-4 flex items-center gap-2">
-            <svg class="w-6 h-6 text-sky-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-            </svg>
-            Category Performance
-          </h2>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {categoriesConfig.categories.map(cat => {
-              const score = companyMetrics.category_scores[cat.name] || 0;
-              return (
-                <div class="p-4 bg-slate-900/60 rounded-lg border border-slate-800">
-                  <div class="flex items-center gap-2 mb-2">
-                    <span class="text-2xl">{cat.icon}</span>
-                    <div class="flex-1">
-                      <div class="text-sm font-semibold text-slate-200">{cat.name}</div>
-                      <div class="flex items-center gap-2 mt-1">
-                        <div class="flex-1 bg-slate-800 rounded-full h-2">
-                          <div
-                            class="h-2 rounded-full transition-all"
-                            style={`width: ${score}%; background-color: ${cat.color}`}
-                          ></div>
-                        </div>
-                        <span class="text-sm font-bold text-slate-100 min-w-[50px] text-right">
-                          {score.toFixed(1)}%
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
       </section>
 
       <!-- Filters and Questions -->

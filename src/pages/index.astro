@@ -38,8 +38,8 @@ const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics, allComp
 
 // Get unique categories from all companies
 const allCategories = new Set<string>();
-companyMetrics.forEach(cm => {
-  Object.keys(cm.category_scores).forEach(cat => allCategories.add(cat));
+allCompanyData.forEach(data => {
+  data.verified.analysis_results.forEach(q => allCategories.add(q.category));
 });
 
 // Calculate category metrics across all companies
@@ -66,7 +66,7 @@ const categoryMetrics = Array.from(allCategories).map(categoryName => {
         <h2 class="text-2xl font-bold text-slate-900 mb-6">Companies Analyzed</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {enrichedCompanyData
-            .sort((a, b) => b.metrics.overall_disclosure_score - a.metrics.overall_disclosure_score)
+            .sort((a, b) => b.metrics.total_snippets - a.metrics.total_snippets)
             .map(item => (
               <CompanyCard company={item.metrics} version={item.data.version} year={item.data.year} companyName={item.data.company} />
             ))}

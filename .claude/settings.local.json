@@ -1,8 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(for file in *v4*_verified.json)",
-      "Bash(do echo -n \"$file: Empty=\")"
+      "Bash(npm run build:*)",
+      "Bash(npx astro check)",
+      "Bash(npm test:*)"
     ],
     "deny": [],
     "ask": []

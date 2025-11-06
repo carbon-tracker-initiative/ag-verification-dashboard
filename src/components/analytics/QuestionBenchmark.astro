@@ -5,7 +5,6 @@
  */
 
 import type { CrossCompanyMetrics } from '../../types/metrics';
-import GradeDisplay from '../shared/GradeDisplay.astro';
 
 interface Props {
   crossCompanyMetrics: CrossCompanyMetrics;
@@ -13,25 +12,16 @@ interface Props {
 
 const { crossCompanyMetrics } = Astro.props;
 
-// Helper function to calculate grade from score
-function scoreToGrade(score: number): string {
-  if (score >= 90) return 'A';
-  if (score >= 80) return 'B';
-  if (score >= 70) return 'C';
-  if (score >= 60) return 'D';
-  return 'F';
-}
-
-// Get top and bottom performing questions (with safety check)
+// Get top and bottom questions by evidence depth (with safety check)
 const rankings = crossCompanyMetrics.question_rankings || [];
 console.log('Question rankings count:', rankings.length);
 
 const topQuestions = rankings.length > 0
-  ? [...rankings].sort((a, b) => b.average_score_across_companies - a.average_score_across_companies).slice(0, 10)
+  ? [...rankings].sort((a, b) => b.average_evidence_depth - a.average_evidence_depth).slice(0, 10)
   : [];
 
 const bottomQuestions = rankings.length > 0
-  ? [...rankings].sort((a, b) => a.average_score_across_companies - b.average_score_across_companies).slice(0, 10)
+  ? [...rankings].sort((a, b) => a.average_evidence_depth - b.average_evidence_depth).slice(0, 10)
   : [];
 
 // Get questions sorted by companies with full disclosure (as a proxy for consistency)
@@ -97,15 +87,14 @@ const highVarianceQuestions = rankings.length > 0
                       {q.question_text}
                     </h3>
                   </div>
-                  <GradeDisplay
-                    grade={scoreToGrade(q.average_score_across_companies)}
-                    score={q.average_score_across_companies}
-                    size="small"
-                  />
+                  <div class="flex-shrink-0 text-right">
+                    <div class="text-2xl font-bold text-sky-600">{q.average_evidence_depth.toFixed(1)}</div>
+                    <div class="text-[10px] text-slate-500 uppercase">Avg Evidence</div>
+                  </div>
                 </div>
                 <div class="flex flex-wrap gap-4 text-xs text-slate-600">
                   <div>
-                    <span class="font-semibold">Avg Score:</span> {q.average_score_across_companies.toFixed(1)}%
+                    <span class="font-semibold">Avg Evidence:</span> {q.average_evidence_depth.toFixed(1)} snippets
                   </div>
                   <div>
                     <span class="font-semibold">Companies:</span> {q.companies_analyzed}
@@ -142,15 +131,14 @@ const highVarianceQuestions = rankings.length > 0
                       {q.question_text}
                     </h3>
                   </div>
-                  <GradeDisplay
-                    grade={scoreToGrade(q.average_score_across_companies)}
-                    score={q.average_score_across_companies}
-                    size="small"
-                  />
+                  <div class="flex-shrink-0 text-right">
+                    <div class="text-2xl font-bold text-sky-600">{q.average_evidence_depth.toFixed(1)}</div>
+                    <div class="text-[10px] text-slate-500 uppercase">Avg Evidence</div>
+                  </div>
                 </div>
                 <div class="flex flex-wrap gap-4 text-xs text-slate-600">
                   <div>
-                    <span class="font-semibold">Avg Score:</span> {q.average_score_across_companies.toFixed(1)}%
+                    <span class="font-semibold">Avg Evidence:</span> {q.average_evidence_depth.toFixed(1)} snippets
                   </div>
                   <div>
                     <span class="font-semibold">Companies:</span> {q.companies_analyzed}
@@ -192,15 +180,14 @@ const highVarianceQuestions = rankings.length > 0
                       {q.question_text}
                     </h3>
                   </div>
-                  <GradeDisplay
-                    grade={scoreToGrade(q.average_score_across_companies)}
-                    score={q.average_score_across_companies}
-                    size="small"
-                  />
+                  <div class="flex-shrink-0 text-right">
+                    <div class="text-2xl font-bold text-sky-600">{q.average_evidence_depth.toFixed(1)}</div>
+                    <div class="text-[10px] text-slate-500 uppercase">Avg Evidence</div>
+                  </div>
                 </div>
                 <div class="flex flex-wrap gap-4 text-xs text-slate-600 mb-2">
                   <div>
-                    <span class="font-semibold">Avg Score:</span> {q.average_score_across_companies.toFixed(1)}%
+                    <span class="font-semibold">Avg Evidence:</span> {q.average_evidence_depth.toFixed(1)} snippets
                   </div>
                   <div>
                     <span class="font-semibold">Companies:</span> {q.companies_analyzed}

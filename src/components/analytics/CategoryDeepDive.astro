@@ -40,13 +40,7 @@ const { crossCompanyMetrics } = Astro.props;
               </p>
 
               <!-- Key Metrics Grid -->
-              <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div>
-                  <div class="text-2xl font-bold" style={`color: ${category.color}`}>
-                    {categoryStats.average_score_across_companies.toFixed(1)}%
-                  </div>
-                  <div class="text-xs text-slate-500">Average Score</div>
-                </div>
+              <div class="grid grid-cols-2 gap-4">
                 <div>
                   <div class="text-2xl font-bold text-blue-600">
                     {categoryStats.total_snippets}
@@ -70,9 +64,9 @@ const { crossCompanyMetrics } = Astro.props;
             <h3 class="text-sm font-semibold text-slate-700 mb-2">Category Summary</h3>
             <div class="space-y-1 text-sm text-slate-600">
               <p><span class="font-semibold">Category:</span> {category.name}</p>
-              <p><span class="font-semibold">Average Score:</span> {categoryStats.average_score_across_companies.toFixed(1)}%</p>
               <p><span class="font-semibold">Total Evidence Snippets:</span> {categoryStats.total_snippets}</p>
               <p><span class="font-semibold">Average Evidence Depth:</span> {categoryStats.average_evidence_depth.toFixed(1)} snippets per question</p>
+              <p><span class="font-semibold">Ranking:</span> #{categoryStats.ranking} across all categories</p>
             </div>
           </div>
         </div>

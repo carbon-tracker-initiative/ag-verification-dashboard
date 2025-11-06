@@ -9,7 +9,6 @@ import type {
   SnippetChange,
   ChangeType
 } from '../types/verification';
-import { calculateSnippetScore } from './metricsCalculator';
 
 /**
  * Compare original and verified results to calculate verification metrics
@@ -220,7 +219,6 @@ export function compareOriginalVsVerified(
         question_id: questionId,
         change_type: 'removed',
         original_classification: originalSnippet.classification,
-        original_score: calculateSnippetScore(originalSnippet),
         verification_report: buildVerificationSummary(snippetId)
       };
 
@@ -237,8 +235,6 @@ export function compareOriginalVsVerified(
         change_type: 'classification_corrected',
         original_classification: originalSnippet.classification,
         verified_classification: verifiedSnippet.classification,
-        original_score: calculateSnippetScore(originalSnippet),
-        verified_score: calculateSnippetScore(verifiedSnippet),
         verification_report: buildVerificationSummary(snippetId)
       };
 
@@ -280,8 +276,6 @@ export function compareOriginalVsVerified(
         snippet_id: snippetId,
         question_id: questionId,
         change_type: 'categorization_corrected',
-        original_score: calculateSnippetScore(originalSnippet),
-        verified_score: calculateSnippetScore(verifiedSnippet),
         categorization_changes,
         verification_report: buildVerificationSummary(snippetId)
       };

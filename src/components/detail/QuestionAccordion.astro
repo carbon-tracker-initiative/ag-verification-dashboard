@@ -7,7 +7,6 @@
 import type { QuestionResult } from '../../types/analysis';
 import type { QuestionMetrics } from '../../types/metrics';
 import ClassificationBadge from '../shared/ClassificationBadge.astro';
-import GradeDisplay from '../shared/GradeDisplay.astro';
 import SnippetCard from './SnippetCard.astro';
 
 interface Props {
@@ -72,8 +71,6 @@ if (!framings.length) framings.push('none');
   data-category={category}
   data-category-id={categoryId}
   data-classification={bestClassification}
-  data-grade={metrics.disclosure_quality_grade}
-  data-score={metrics.average_snippet_score}
   data-snippets={snippetCount}
   data-expandable={isExpandable ? 'true' : 'false'}
   data-financial-types={financialTypes.join('|')}
@@ -112,21 +109,13 @@ if (!framings.length) framings.push('none');
           </h3>
         </div>
 
-        <div class="flex flex-col items-end gap-3">
-          <div class="flex items-center gap-2">
-            <ClassificationBadge classification={bestClassification} size="lg" />
-            {hasVerificationCorrection && (
-              <span class="chip correction-chip uppercase whitespace-nowrap">
-                Corrected by verification
-              </span>
-            )}
-          </div>
-          <GradeDisplay
-            grade={metrics.disclosure_quality_grade}
-            score={metrics.average_snippet_score}
-            size="md"
-            showScore={true}
-          />
+        <div class="flex items-center gap-2">
+          <ClassificationBadge classification={bestClassification} size="lg" />
+          {hasVerificationCorrection && (
+            <span class="chip correction-chip uppercase whitespace-nowrap">
+              Corrected by verification
+            </span>
+          )}
         </div>
       </div>
 
@@ -134,10 +123,6 @@ if (!framings.length) framings.push('none');
         <span class="chip">
           <span aria-hidden="true">💰</span>
           <span>{metrics.financial_quantification_rate.toFixed(0)}% financial</span>
-        </span>
-        <span class="chip">
-          <span aria-hidden="true">⭐</span>
-          <span>Best snippet {metrics.best_snippet_score.toFixed(0)}%</span>
         </span>
         <span class="chip">
           <span aria-hidden="true">📑</span>

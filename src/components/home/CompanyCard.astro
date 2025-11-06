@@ -5,7 +5,6 @@
  */
 
 import type { CompanyMetrics } from '../../types/metrics';
-import GradeDisplay from '../shared/GradeDisplay.astro';
 import VersionBadge from '../VersionBadge.astro';
 import { formatNumber, formatPercentage } from '../../utils/formatters';
 
@@ -32,22 +31,9 @@ const isLatest = versionNum >= 4; // Simple heuristic - can be improved
       </div>
       <p class="text-sm text-slate-400">Calendar Year {company.fiscal_year}</p>
     </div>
-    <GradeDisplay score={company.overall_disclosure_score} showGrade={true} showScore={true} size="md" />
   </div>
 
   <div class="space-y-3 mb-5">
-    <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-500 w-24 uppercase tracking-wide">Quality</span>
-      <div class="flex-1 bg-slate-900 rounded-full h-2">
-        <div
-          class="bg-emerald-400 h-2 rounded-full transition-all"
-          style={`width: ${company.radar_metrics.disclosure_quality}%`}
-        ></div>
-      </div>
-      <span class="text-xs font-semibold text-slate-200 w-12 text-right">
-        {formatPercentage(company.radar_metrics.disclosure_quality, 0)}
-      </span>
-    </div>
     <div class="flex items-center gap-2">
       <span class="text-xs text-slate-500 w-24 uppercase tracking-wide">Evidence</span>
       <div class="flex-1 bg-slate-900 rounded-full h-2">

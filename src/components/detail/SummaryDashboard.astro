@@ -5,7 +5,6 @@
  */
 
 import type { CompanyMetrics } from '../../types/metrics';
-import GradeDisplay from '../shared/GradeDisplay.astro';
 
 interface Props {
   metrics: CompanyMetrics;
@@ -65,29 +64,7 @@ const framingData = {
 
 <div class="space-y-6">
   <!-- Summary Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    <!-- Overall Score Card -->
-    <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
-      <div class="flex items-start justify-between gap-3 mb-3">
-        <div class="text-sm font-semibold text-slate-600">Overall Disclosure Quality</div>
-        <a
-          href="#score-system-reference"
-          class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-semibold rounded-md bg-sky-500/10 text-sky-600 border border-sky-500/20 hover:bg-sky-500/20 hover:text-sky-700 transition-colors"
-        >
-          Score Reference
-        </a>
-      </div>
-      <div class="overall-grade-badge">
-        <GradeDisplay
-          grade={metrics.overall_grade}
-          score={metrics.overall_disclosure_score}
-          size="lg"
-        />
-      </div>
-      <div class="mt-4 text-xs text-slate-500">
-        Based on {metrics.total_snippets} snippets across {metrics.total_questions_analyzed} questions
-      </div>
-    </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <!-- Evidence Stats Card -->
     <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
       <div class="text-sm font-semibold text-slate-600 mb-3">Evidence Statistics</div>
@@ -111,33 +88,6 @@ const framingData = {
       </div>
     </div>
 
-    <!-- Category Breakdown Card -->
-    <div class="bg-white rounded-lg shadow-sm p-6 border border-slate-200">
-      <div class="text-sm font-semibold text-slate-600 mb-3">Top Category</div>
-      {Object.entries(metrics.category_scores)
-        .sort(([,a], [,b]) => b - a)
-        .slice(0, 1)
-        .map(([category, score]) => (
-          <div>
-            <div class="text-xl font-bold text-blue-600 mb-2">
-              {category}
-            </div>
-            <div class="flex items-center gap-2 mb-3">
-              <div class="text-2xl font-bold text-slate-800">{score.toFixed(1)}%</div>
-            </div>
-            <div class="w-full bg-slate-200 rounded-full h-2">
-              <div
-                class="bg-blue-600 h-2 rounded-full transition-all"
-                style={`width: ${score}%`}
-              ></div>
-            </div>
-          </div>
-        ))
-      }
-      <div class="mt-4 text-xs text-slate-500">
-        View all categories below
-      </div>
-    </div>
   </div>
 
   <!-- Visualization Charts -->

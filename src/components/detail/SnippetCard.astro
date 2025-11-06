@@ -1,7 +1,7 @@
 ---
 /**
  * Snippet Card Component
- * Displays detailed snippet information with multi-dimensional scoring
+ * Displays detailed snippet information with categorization
  * Now collapsed by default with expandable summary
  */
 
@@ -10,10 +10,6 @@ import type { SnippetChange } from '../../types/verification';
 import ClassificationBadge from '../shared/ClassificationBadge.astro';
 import SourceLink from '../shared/SourceLink.astro';
 import {
-  calculateSnippetScore,
-  calculateFinancialScore,
-  calculateTemporalScore,
-  calculateNarrativeScore,
   normalizeFinancialDisclosureType,
   normalizeTimeframeCategory
 } from '../../utils/metricsCalculator';
@@ -25,10 +21,6 @@ interface Props {
 
 const { snippet, index } = Astro.props;
 
-const totalScore = calculateSnippetScore(snippet);
-const financialScore = calculateFinancialScore(snippet);
-const temporalScore = calculateTemporalScore(snippet);
-const narrativeScore = calculateNarrativeScore(snippet);
 const financialDisclosureType = normalizeFinancialDisclosureType(snippet.categorization.financial_type);
 const timeframeDisplay = normalizeTimeframeCategory(snippet.categorization.timeframe);
 const comparisonStatus = (snippet as any).comparison_status || 'unchanged';
@@ -109,23 +101,6 @@ const shouldShowComparisonSummary =
   comparisonSummaries.length > 0 ||
   !!comparisonChange?.verification_report?.recommendation;
 
-function getScoreColor(score: number): string {
-  if (score >= 90) return 'text-emerald-300';
-  if (score >= 80) return 'text-sky-300';
-  if (score >= 70) return 'text-amber-300';
-  if (score >= 60) return 'text-orange-300';
-  return 'text-rose-300';
-}
-
-function getProgressBarColor(score: number): string {
-  if (score >= 90) return 'bg-emerald-400';
-  if (score >= 80) return 'bg-sky-400';
-  if (score >= 70) return 'bg-amber-400';
-  if (score >= 60) return 'bg-orange-400';
-  return 'bg-rose-400';
-}
-
-
 ---
 
 <div class="snippet-card">
@@ -134,11 +109,11 @@ function getProgressBarColor(score: number): string {
     data-snippet-status={comparisonStatus}
   >
     <summary class="flex items-start justify-between gap-4 px-4 py-3 sm:px-5 sm:py-4 cursor-pointer list-none">
-        <div class="flex items-start gap-3">
+        <div class="flex items-start gap-3 flex-1">
         <div class="flex-shrink-0 mt-0.5">
           <ClassificationBadge classification={snippet.classification} size="lg" />
         </div>
-        <div class="space-y-1">
+        <div class="space-y-1 flex-1">
           <div class="flex flex-wrap items-center gap-2 text-xs text-slate-400 uppercase tracking-wide">
             <span>Snippet #{index}</span>
             <span class="font-mono text-slate-500">{snippet.snippet_id}</span>
@@ -164,13 +139,13 @@ function getProgressBarColor(score: number): string {
           </div>
           <div class="flex flex-wrap gap-2 pt-1">
             <span class="px-2 py-0.5 rounded-full border border-emerald-400/40 bg-emerald-500/10 text-[11px] sm:text-xs font-semibold text-emerald-200">
-              Financial: {financialDisclosureType} ({financialScore}/3)
+              Financial: {financialDisclosureType}
             </span>
             <span class="px-2 py-0.5 rounded-full border border-sky-400/40 bg-sky-500/10 text-[11px] sm:text-xs font-semibold text-sky-200">
-              Timeframe: {timeframeDisplay} ({temporalScore}/3)
+              Timeframe: {timeframeDisplay}
             </span>
             <span class="px-2 py-0.5 rounded-full border border-purple-400/40 bg-purple-500/10 text-[11px] sm:text-xs font-semibold text-purple-200">
-              Narrative: {snippet.categorization.framing} ({narrativeScore}/3)
+              Narrative: {snippet.categorization.framing}
             </span>
             {isCorrected && (
               <span class="chip correction-chip uppercase whitespace-nowrap">
@@ -179,13 +154,6 @@ function getProgressBarColor(score: number): string {
             )}
           </div>
         </div>
-      </div>
-
-      <div class="text-right">
-        <div class={`text-2xl font-bold ${getScoreColor(totalScore)}`}>
-          {totalScore.toFixed(0)}%
-        </div>
-        <div class="text-xs text-slate-500">Quality score</div>
       </div>
     </summary>
 
@@ -201,19 +169,12 @@ function getProgressBarColor(score: number): string {
       <div class="grid md:grid-cols-2 gap-4">
         <div class="space-y-3 p-4 rounded-lg border border-slate-800 bg-slate-900/40">
           <div class="text-xs font-semibold text-slate-300 uppercase tracking-wide">
-            Score Breakdown (3 points per dimension)
+            Categorization
           </div>
 
           <div>
             <div class="flex items-center justify-between mb-1 text-xs text-slate-400">
               <span class="font-semibold text-slate-300">Financial Disclosure Type</span>
-              <span class="font-bold text-emerald-200">{financialScore}/3</span>
-            </div>
-            <div class="w-full bg-slate-800 rounded-full h-1.5">
-              <div
-                class="h-1.5 rounded-full transition-all bg-emerald-400"
-                style={`width: ${(financialScore / 3) * 100}%`}
-              ></div>
             </div>
             <div class="mt-2 px-2 py-1 rounded-md bg-emerald-500/10 border border-emerald-400/30 text-xs font-semibold text-emerald-100">
               {financialDisclosureType}
@@ -222,14 +183,7 @@ function getProgressBarColor(score: number): string {
 
           <div>
             <div class="flex items-center justify-between mb-1 text-xs text-slate-400">
-              <span class="font-semibold text-slate-300">Timeframe Specificity</span>
-              <span class="font-bold text-sky-200">{temporalScore}/3</span>
-            </div>
-            <div class="w-full bg-slate-800 rounded-full h-1.5">
-              <div
-                class="h-1.5 rounded-full transition-all bg-sky-400"
-                style={`width: ${(temporalScore / 3) * 100}%`}
-              ></div>
+              <span class="font-semibold text-slate-300">Timeframe</span>
             </div>
             <div class="mt-2 px-2 py-1 rounded-md bg-sky-500/10 border border-sky-400/30 text-xs font-semibold text-sky-100">
               {timeframeDisplay}
@@ -239,13 +193,6 @@ function getProgressBarColor(score: number): string {
           <div>
             <div class="flex items-center justify-between mb-1 text-xs text-slate-400">
               <span class="font-semibold text-slate-300">Narrative Framing</span>
-              <span class="font-bold text-purple-200">{narrativeScore}/3</span>
-            </div>
-            <div class="w-full bg-slate-800 rounded-full h-1.5">
-              <div
-                class="h-1.5 rounded-full transition-all bg-purple-400"
-                style={`width: ${(narrativeScore / 3) * 100}%`}
-              ></div>
             </div>
             <div class="mt-2 px-2 py-1 rounded-md bg-purple-500/10 border border-purple-400/30 text-xs font-semibold text-purple-100">
               {snippet.categorization.framing}
@@ -291,25 +238,7 @@ function getProgressBarColor(score: number): string {
         </div>
       </div>
 
-      <div class="pt-3 border-t border-slate-800">
-        <div class="flex items-center justify-between mb-1">
-          <span class="text-xs font-semibold text-slate-300 uppercase tracking-wide">Composite Score</span>
-          <span class={`text-sm font-bold ${getScoreColor(totalScore)}`}>
-            {totalScore.toFixed(1)}%
-          </span>
-        </div>
-        <div class="w-full bg-slate-800 rounded-full h-2">
-          <div
-            class={`${getProgressBarColor(totalScore)} h-2 rounded-full transition-all`}
-            style={`width: ${totalScore}%`}
-          ></div>
-        </div>
-        <div class="text-[11px] text-slate-500 mt-1 text-center">
-          ({financialScore} + {temporalScore} + {narrativeScore}) / 9
-        </div>
-      </div>
-
-{snippet.financial_amounts && snippet.financial_amounts.length > 0 && (
+      {snippet.financial_amounts && snippet.financial_amounts.length > 0 && (
         <div class="space-y-2">
           <div class="text-xs font-semibold text-emerald-300 uppercase tracking-wide">
             Financial Amounts
@@ -347,13 +276,3 @@ function getProgressBarColor(score: number): string {
     display: block;
   }
 </style>
-
-
-
-
-
-
-
-
-
-

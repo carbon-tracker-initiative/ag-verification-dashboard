@@ -10,7 +10,7 @@ interface GlobalStats {
   total_companies: number;
   total_questions: number;
   total_snippets: number;
-  average_disclosure_score_all: number;
+  average_financial_rate_all: number;
 }
 
 interface Props {
@@ -28,7 +28,7 @@ const { globalStats } = Astro.props;
         Agricultural Risk Verification Command Center
       </h1>
       <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto">
-        Comparing verified disclosure quality across agricultural risk categories, powered by snippet-level scoring.
+        Comparing verified disclosure analysis across agricultural risk categories, powered by evidence-based categorization.
       </p>
     </div>
 
@@ -49,7 +49,7 @@ const { globalStats } = Astro.props;
         <div class="text-3xl sm:text-4xl font-semibold text-slate-100 mb-2">
           {formatNumber(globalStats.total_questions)}
         </div>
-        <div class="text-sm text-slate-400">scored for transparency</div>
+        <div class="text-sm text-slate-400">analyzed for transparency</div>
       </div>
 
       <!-- Disclosures -->
@@ -61,13 +61,13 @@ const { globalStats } = Astro.props;
         <div class="text-sm text-slate-400">triangulated citations</div>
       </div>
 
-      <!-- Avg Quality -->
+      <!-- Avg Financial Rate -->
       <div class="surface p-6 text-center">
-        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Average Quality</div>
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Financial Rate</div>
         <div class="text-3xl sm:text-4xl font-semibold text-slate-100 mb-2">
-          {formatPercentage(globalStats.average_disclosure_score_all, 1)}
+          {formatPercentage(globalStats.average_financial_rate_all, 1)}
         </div>
-        <div class="text-sm text-slate-400">weighted verification score</div>
+        <div class="text-sm text-slate-400">with financial data</div>
       </div>
     </div>
   </div>

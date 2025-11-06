@@ -5,7 +5,6 @@
  */
 
 import type { CategoryMetrics } from '../../types/metrics';
-import GradeDisplay from '../shared/GradeDisplay.astro';
 
 interface Props {
   category: CategoryMetrics;
@@ -58,7 +57,6 @@ const nonePct = total > 0 ? (category.snippets_by_classification.NO_DISCLOSURE /
         </div>
       </div>
     </div>
-    <GradeDisplay score={category.average_question_score} showGrade={true} showScore={true} size="md" />
   </div>
 
   <div class="mb-5">
@@ -128,7 +126,9 @@ const nonePct = total > 0 ? (category.snippets_by_classification.NO_DISCLOSURE /
                 {' '}
                 <span class="truncate">{q.question_text}</span>
               </span>
-              <GradeDisplay score={q.score} showScore={true} size="sm" />
+              <span class="text-xs font-semibold text-slate-300 whitespace-nowrap">
+                {q.evidence_depth} snippets
+              </span>
             </a>
           </li>
         ))}

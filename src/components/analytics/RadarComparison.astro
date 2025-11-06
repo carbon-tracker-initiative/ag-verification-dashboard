@@ -1,7 +1,7 @@
 ---
 /**
  * Radar Comparison Component
- * Visual comparison of companies using radar charts for 5 key dimensions
+ * Visual comparison of companies using radar charts for 4 key dimensions
  */
 
 import type { CompanyMetrics } from '../../types/metrics';
@@ -13,33 +13,34 @@ interface Props {
 const { companyMetrics } = Astro.props;
 
 // Prepare radar chart data for each company
-const radarData = companyMetrics.map(company => ({
-  name: company.company_name,
-  dimensions: {
+const radarData = companyMetrics.map(company => {
+  const dimensions = {
     financial_transparency: company.radar_metrics.financial_transparency,
     forward_looking_maturity: company.radar_metrics.forward_looking_maturity,
     narrative_balance: company.radar_metrics.narrative_balance,
-    evidence_depth: company.radar_metrics.evidence_depth,
-    disclosure_quality: company.radar_metrics.disclosure_quality
-  },
-  overall: company.overall_disclosure_score
-}));
+    evidence_depth: company.radar_metrics.evidence_depth
+  };
+  const overall = (dimensions.financial_transparency + dimensions.forward_looking_maturity + dimensions.narrative_balance + dimensions.evidence_depth) / 4;
+  return {
+    name: company.company_name,
+    dimensions,
+    overall
+  };
+});
 
 // Calculate industry averages for each dimension
 const industryAverage = {
   financial_transparency: radarData.reduce((sum, c) => sum + c.dimensions.financial_transparency, 0) / radarData.length,
   forward_looking_maturity: radarData.reduce((sum, c) => sum + c.dimensions.forward_looking_maturity, 0) / radarData.length,
   narrative_balance: radarData.reduce((sum, c) => sum + c.dimensions.narrative_balance, 0) / radarData.length,
-  evidence_depth: radarData.reduce((sum, c) => sum + c.dimensions.evidence_depth, 0) / radarData.length,
-  disclosure_quality: radarData.reduce((sum, c) => sum + c.dimensions.disclosure_quality, 0) / radarData.length
+  evidence_depth: radarData.reduce((sum, c) => sum + c.dimensions.evidence_depth, 0) / radarData.length
 };
 
 const dimensions = [
   { key: 'financial_transparency', label: 'Financial Transparency', icon: '💰', color: '#10b981' },
   { key: 'forward_looking_maturity', label: 'Forward-Looking Maturity', icon: '🕐', color: '#3b82f6' },
   { key: 'narrative_balance', label: 'Narrative Balance', icon: '⚖️', color: '#8b5cf6' },
-  { key: 'evidence_depth', label: 'Evidence Depth', icon: '📄', color: '#f59e0b' },
-  { key: 'disclosure_quality', label: 'Disclosure Quality', icon: '📊', color: '#ec4899' }
+  { key: 'evidence_depth', label: 'Evidence Depth', icon: '📄', color: '#f59e0b' }
 ];
 ---
 

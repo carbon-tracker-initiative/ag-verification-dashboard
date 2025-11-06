@@ -1,6 +1,6 @@
 /**
- * Metrics calculator for disclosure quality scoring
- * Implements multi-dimensional snippet scoring and aggregation
+ * Metrics calculator for disclosure analysis
+ * Calculates distribution metrics, rates, and evidence depth
  */
 
 import type {
@@ -15,13 +15,11 @@ import type {
   CategoryMetrics,
   CompanyMetrics,
   CrossCompanyMetrics,
-  RadarMetrics,
-  Grade,
-  SnippetScoreComponents
+  RadarMetrics
 } from '../types/metrics';
 
 // ============================================================================
-// Snippet-Level Scoring Functions
+// Normalization Functions (Categorical Only)
 // ============================================================================
 
 export function normalizeFinancialDisclosureType(value: string | undefined): "Financial" | "Partial-type" | "Non-Financial" {
@@ -55,102 +53,6 @@ export function normalizeTimeframeCategory(value: string | undefined): "Present 
   return "Multiple or Unclear";
 }
 
-/**
- * Calculate financial transparency score (0-3 points)
- * Financial = 3, Partial-type = 2, Non-Financial = 1
- */
-export function calculateFinancialScore(snippet: Snippet): number {
-  const disclosureType = normalizeFinancialDisclosureType(snippet.categorization.financial_type);
-
-  if (disclosureType === "Financial") return 3;
-  if (disclosureType === "Partial-type") return 2;
-  return 1;
-}
-
-/**
- * Calculate temporal specificity score (0-3 points)
- * Current = 3, Future = 2, Historical = 1, Unclear = 0
- */
-export function calculateTemporalScore(snippet: Snippet): number {
-  const timeframe = normalizeTimeframeCategory(snippet.categorization.timeframe);
-
-  switch (timeframe) {
-    case "Present day":
-      return 3;
-    case "Forward-looking":
-      return 2;
-    case "Backward-looking":
-      return 1;
-    default:
-      return 0;
-  }
-}
-
-/**
- * Calculate narrative framing score (1-3 points)
- * Both = 3, Risk/Opportunity = 2, Neutral = 1
- */
-export function calculateNarrativeScore(snippet: Snippet): number {
-  switch (snippet.categorization.framing) {
-    case "Both":
-      return 3;
-    case "Risk":
-    case "Opportunity":
-      return 2;
-    case "Neutral":
-      return 1;
-    default:
-      return 1;
-  }
-}
-
-/**
- * Calculate composite snippet score (0-100%)
- * Combines financial, temporal, and narrative dimensions
- */
-export function calculateSnippetScore(snippet: Snippet): number {
-  const financial = calculateFinancialScore(snippet);
-  const temporal = calculateTemporalScore(snippet);
-  const narrative = calculateNarrativeScore(snippet);
-
-  const total = financial + temporal + narrative;
-  const maxPossible = 9; // 3 + 3 + 3
-
-  return (total / maxPossible) * 100;
-}
-
-/**
- * Get all score components for a snippet
- */
-export function getSnippetScoreComponents(snippet: Snippet): SnippetScoreComponents {
-  const financial_score = calculateFinancialScore(snippet);
-  const temporal_score = calculateTemporalScore(snippet);
-  const narrative_score = calculateNarrativeScore(snippet);
-  const total_score = calculateSnippetScore(snippet);
-
-  return {
-    financial_score,
-    temporal_score,
-    narrative_score,
-    total_score
-  };
-}
-
-// ============================================================================
-// Grading Functions
-// ============================================================================
-
-/**
- * Convert numeric score (0-100) to letter grade (A-F)
- */
-export function calculateGrade(score: number): Grade {
-  if (score >= 90) return "A";
-  if (score >= 80) return "B";
-  if (score >= 70) return "C";
-  if (score >= 60) return "D";
-  return "F";
-}
-
 // ============================================================================
 // Question-Level Metrics
 // ============================================================================
@@ -177,19 +79,6 @@ export function calculateQuestionMetrics(question: Question): QuestionMetrics {
   if (snippets.length === 0) {
     snippets_by_classification.NO_DISCLOSURE = 1;
   }
-
-  // Calculate snippet scores
-  const snippetScores = snippets.map(s => calculateSnippetScore(s));
-  const average_snippet_score = snippetScores.length > 0
-    ? snippetScores.reduce((sum, score) => sum + score, 0) / snippetScores.length
-    : 0;
-
-  const best_snippet_score = snippetScores.length > 0
-    ? Math.max(...snippetScores)
-    : 0;
-
-  const bestSnippetIndex = snippetScores.indexOf(best_snippet_score);
-  const best_snippet_id = snippets[bestSnippetIndex]?.snippet_id || "";
 
   // Financial metrics
   const financialTypes = snippets.map(s => normalizeFinancialDisclosureType(s.categorization.financial_type));
@@ -240,9 +129,6 @@ export function calculateQuestionMetrics(question: Question): QuestionMetrics {
     category: question.category,
     total_snippets: snippets.length,
     snippets_by_classification,
-    average_snippet_score,
-    best_snippet_score,
-    best_snippet_id,
     snippets_with_financial_data,
     financial_quantification_rate,
     total_financial_amount,
@@ -256,8 +142,7 @@ export function calculateQuestionMetrics(question: Question): QuestionMetrics {
     snippets_opportunity,
     snippets_neutral,
     narrative_balance_rate,
-    evidence_depth: snippets.length,
-    disclosure_quality_grade: calculateGrade(average_snippet_score)
+    evidence_depth: snippets.length
   };
 }
 
@@ -281,11 +166,7 @@ export function calculateCategoryMetrics(
   // Questions answered (with at least 1 snippet)
   const questions_answered = categoryQuestions.filter(q => q.disclosures.length > 0).length;
 
-  // Average scores
-  const average_question_score = questionMetrics.length > 0
-    ? questionMetrics.reduce((sum, qm) => sum + qm.average_snippet_score, 0) / questionMetrics.length
-    : 0;
-
+  // Average rates
   const average_evidence_depth = categoryQuestions.length > 0
     ? categoryQuestions.reduce((sum, q) => sum + q.disclosures.length, 0) / categoryQuestions.length
     : 0;
@@ -336,26 +217,25 @@ export function calculateCategoryMetrics(
     });
   });
 
-  // Top and bottom questions
-  const sortedQuestions = questionMetrics.sort((a, b) => b.average_snippet_score - a.average_snippet_score);
+  // Top and bottom questions by evidence depth (not score)
+  const sortedQuestions = questionMetrics.sort((a, b) => b.evidence_depth - a.evidence_depth);
 
   const top_questions = sortedQuestions.slice(0, 3).map(qm => ({
     question_id: qm.question_id,
     question_text: qm.question_text,
-    score: qm.average_snippet_score
+    evidence_depth: qm.evidence_depth
   }));
 
   const bottom_questions = sortedQuestions.slice(-3).reverse().map(qm => ({
     question_id: qm.question_id,
     question_text: qm.question_text,
-    score: qm.average_snippet_score
+    evidence_depth: qm.evidence_depth
   }));
 
   return {
     category_name: categoryName,
     total_questions: categoryQuestions.length,
     questions_answered,
-    average_question_score,
     average_evidence_depth,
     average_financial_rate,
     average_forward_looking_rate,
@@ -367,8 +247,7 @@ export function calculateCategoryMetrics(
     snippets_with_financial_partial,
     snippets_with_financial_none,
     top_questions,
-    bottom_questions,
-    category_grade: calculateGrade(average_question_score)
+    bottom_questions
   };
 }
 
@@ -385,23 +264,11 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
   // Calculate question metrics first to properly capture NO_DISCLOSURE questions
   const questionMetrics = questions.map(q => calculateQuestionMetrics(q));
 
-  // Calculate all snippet scores
+  // Get all snippets
   const allSnippets = questions.flatMap(q => q.disclosures);
-  const allSnippetScores = allSnippets.map(s => calculateSnippetScore(s));
-
-  const overall_disclosure_score = allSnippetScores.length > 0
-    ? allSnippetScores.reduce((sum, score) => sum + score, 0) / allSnippetScores.length
-    : 0;
 
   // Get unique categories
   const categories = Array.from(new Set(questions.map(q => q.category)));
-
-  // Calculate category scores
-  const category_scores: Record<string, number> = {};
-  categories.forEach(cat => {
-    const categoryMetrics = calculateCategoryMetrics(questions, cat);
-    category_scores[cat] = categoryMetrics.average_question_score;
-  });
 
   // Totals
   const total_questions_analyzed = questions.length;
@@ -481,30 +348,29 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
     ? (snippets_balanced / total_snippets) * 100
     : 0;
 
-  // Radar metrics (normalized to 0-100)
+  // Radar metrics (4 dimensions - removed disclosure_quality)
   const radar_metrics: RadarMetrics = {
-    disclosure_quality: overall_disclosure_score,
     evidence_depth: Math.min(average_snippets_per_question, 10) * 10, // Normalize to 100
     financial_transparency: financial_quantification_rate,
     forward_looking_maturity: forward_looking_rate,
     narrative_balance: narrative_balance_rate
   };
 
-  // Top and bottom questions (questionMetrics already calculated at top of function)
-  const sortedQuestions = [...questionMetrics].sort((a, b) => b.average_snippet_score - a.average_snippet_score);
+  // Top and bottom questions by evidence depth (not score)
+  const sortedQuestions = [...questionMetrics].sort((a, b) => b.evidence_depth - a.evidence_depth);
 
   const top_questions = sortedQuestions.slice(0, 5).map(qm => ({
     question_id: qm.question_id,
     question_text: qm.question_text,
     category: qm.category,
-    score: qm.average_snippet_score
+    evidence_depth: qm.evidence_depth
   }));
 
   const bottom_questions = sortedQuestions.slice(-5).reverse().map(qm => ({
     question_id: qm.question_id,
     question_text: qm.question_text,
     category: qm.category,
-    score: qm.average_snippet_score
+    evidence_depth: qm.evidence_depth
   }));
 
   // Verification metadata (if present)
@@ -530,9 +396,6 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
     company_name: analysisResult.company_name,
     fiscal_year: analysisResult.fiscal_year,
     model_used: analysisResult.model_used,
-    overall_disclosure_score,
-    overall_grade: calculateGrade(overall_disclosure_score),
-    category_scores,
     total_questions_analyzed,
     total_questions_answered,
     total_snippets,
@@ -572,15 +435,15 @@ export function calculateCrossCompanyMetrics(
   companyMetrics: CompanyMetrics[],
   companyDataArray: CompanyYearData[]
 ): CrossCompanyMetrics {
-  // Question rankings across all companies
+  // Question rankings across all companies (by evidence depth, not score)
   const questionMap = new Map<string, {
     question_id: string;
     question_text: string;
     category: string;
-    scores: number[];
     full_disclosure_count: number;
     total_snippets: number;
     financial_rates: number[];
+    evidence_depths: number[];
   }>();
 
   // Collect question data from ALL questions in ALL companies
@@ -593,15 +456,15 @@ export function calculateCrossCompanyMetrics(
           question_id: question.question_id,
           question_text: question.question_text,
           category: question.category,
-          scores: [],
           full_disclosure_count: 0,
           total_snippets: 0,
-          financial_rates: []
+          financial_rates: [],
+          evidence_depths: []
         });
       }
 
       const qData = questionMap.get(question.question_id)!;
-      qData.scores.push(qm.average_snippet_score);
+      qData.evidence_depths.push(qm.evidence_depth);
       qData.total_snippets += qm.total_snippets;
       qData.financial_rates.push(qm.financial_quantification_rate);
 
@@ -612,60 +475,66 @@ export function calculateCrossCompanyMetrics(
     });
   });
 
-  // Build question rankings
+  // Build question rankings (by average evidence depth)
   const question_rankings = Array.from(questionMap.values()).map((qData, index) => {
-    const average_score_across_companies = qData.scores.length > 0
-      ? qData.scores.reduce((sum, s) => sum + s, 0) / qData.scores.length
+    const average_evidence_depth = qData.evidence_depths.length > 0
+      ? qData.evidence_depths.reduce((sum, d) => sum + d, 0) / qData.evidence_depths.length
       : 0;
 
     return {
       question_id: qData.question_id,
       question_text: qData.question_text,
       category: qData.category,
-      average_score_across_companies,
+      average_evidence_depth,
       companies_with_full_disclosure: qData.full_disclosure_count,
-      companies_analyzed: qData.scores.length,
+      companies_analyzed: qData.evidence_depths.length,
       total_snippets_across_companies: qData.total_snippets,
       average_financial_rate: qData.financial_rates.length > 0
         ? qData.financial_rates.reduce((sum, r) => sum + r, 0) / qData.financial_rates.length
         : 0,
       ranking: 0 // Will be set after sorting
     };
-  }).sort((a, b) => b.average_score_across_companies - a.average_score_across_companies);
+  }).sort((a, b) => b.average_evidence_depth - a.average_evidence_depth);
 
   // Set rankings
   question_rankings.forEach((q, index) => {
     q.ranking = index + 1;
   });
 
-  // Company rankings
+  // Company rankings (by total snippets, not score)
   const company_rankings = companyMetrics
     .map(cm => ({
       company_name: cm.company_name,
-      overall_score: cm.overall_disclosure_score,
-      grade: cm.overall_grade,
+      total_snippets: cm.total_snippets,
       ranking: 0
     }))
-    .sort((a, b) => b.overall_score - a.overall_score);
+    .sort((a, b) => b.total_snippets - a.total_snippets);
 
   company_rankings.forEach((c, index) => {
     c.ranking = index + 1;
   });
 
-  // Category rankings
-  const categoryMap = new Map<string, { scores: number[]; snippets: number[]; evidence_depths: number[] }>();
+  // Category rankings (by average evidence depth)
+  const categoryMap = new Map<string, { snippets: number[]; evidence_depths: number[] }>();
 
-  companyMetrics.forEach(cm => {
-    Object.entries(cm.category_scores).forEach(([cat, score]) => {
+  // Collect category data
+  companyDataArray.forEach((companyData) => {
+    const categories = Array.from(new Set(companyData.verified.analysis_results.map(q => q.category)));
+
+    categories.forEach(cat => {
+      const catQuestions = companyData.verified.analysis_results.filter(q => q.category === cat);
+      const catMetrics = calculateCategoryMetrics(catQuestions, cat);
+
       if (!categoryMap.has(cat)) {
-        categoryMap.set(cat, { scores: [], snippets: [], evidence_depths: [] });
+        categoryMap.set(cat, { snippets: [], evidence_depths: [] });
       }
-      categoryMap.get(cat)!.scores.push(score);
+
+      categoryMap.get(cat)!.evidence_depths.push(catMetrics.average_evidence_depth);
+      categoryMap.get(cat)!.snippets.push(catMetrics.total_snippets);
     });
   });
 
   const category_rankings = Array.from(categoryMap.entries()).map(([cat, data]) => {
-    const average_score = data.scores.reduce((sum, s) => sum + s, 0) / data.scores.length;
     const total_snippets = data.snippets.reduce((sum, s) => sum + s, 0);
     const average_evidence_depth = data.evidence_depths.length > 0
       ? data.evidence_depths.reduce((sum, d) => sum + d, 0) / data.evidence_depths.length
@@ -673,12 +542,11 @@ export function calculateCrossCompanyMetrics(
 
     return {
       category_name: cat,
-      average_score_across_companies: average_score,
-      total_snippets,
       average_evidence_depth,
+      total_snippets,
       ranking: 0
     };
-  }).sort((a, b) => b.average_score_across_companies - a.average_score_across_companies);
+  }).sort((a, b) => b.average_evidence_depth - a.average_evidence_depth);
 
   category_rankings.forEach((c, index) => {
     c.ranking = index + 1;
@@ -688,9 +556,6 @@ export function calculateCrossCompanyMetrics(
   const total_companies = companyMetrics.length;
   const total_questions = companyMetrics.reduce((sum, cm) => sum + cm.total_questions_analyzed, 0);
   const total_snippets = companyMetrics.reduce((sum, cm) => sum + cm.total_snippets, 0);
-  const average_disclosure_score_all = companyMetrics.length > 0
-    ? companyMetrics.reduce((sum, cm) => sum + cm.overall_disclosure_score, 0) / companyMetrics.length
-    : 0;
   const average_financial_rate_all = companyMetrics.length > 0
     ? companyMetrics.reduce((sum, cm) => sum + cm.financial_quantification_rate, 0) / companyMetrics.length
     : 0;
@@ -708,17 +573,11 @@ export function calculateCrossCompanyMetrics(
   const no_disclosure_count = companyMetrics.reduce((sum, cm) =>
     sum + (cm.snippets_by_classification['NO_DISCLOSURE'] || 0), 0);
 
-  // Grade distribution
-  const grade_distribution: Record<Grade, number> = { A: 0, B: 0, C: 0, D: 0, F: 0 };
-  companyMetrics.forEach(cm => {
-    grade_distribution[cm.overall_grade] = (grade_distribution[cm.overall_grade] || 0) + 1;
-  });
-
-  // Best company
+  // Best company (by total snippets)
   const best_company = company_rankings.length > 0
     ? {
         company_name: company_rankings[0].company_name,
-        score: company_rankings[0].overall_score
+        total_snippets: company_rankings[0].total_snippets
       }
     : undefined;
 
@@ -730,14 +589,12 @@ export function calculateCrossCompanyMetrics(
       total_companies,
       total_questions,
       total_snippets,
-      average_disclosure_score_all,
       average_financial_rate_all,
       average_forward_looking_rate_all,
       full_disclosure_count,
       partial_disclosure_count,
       unclear_count,
       no_disclosure_count,
-      grade_distribution,
       best_company
     }
   };
