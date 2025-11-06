@@ -1,9 +1,17 @@
-/**
+﻿/**
  * Data loader for verified analysis results
  * Loads JSON files from results folder and parses them
  */
 
-import type { AnalysisResult, CompanyYearData, ParsedFilename, Question } from '../types/analysis';
+import type {
+  AnalysisResult,
+  CompanyYearData,
+  FinancialAmount,
+  ParsedFilename,
+  Question,
+  SummaryStatistics,
+  Snippet
+} from '../types/analysis';
 
 // Re-export Question type for backward compatibility
 export type { Question };
@@ -156,7 +164,11 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
     }
 
     // Convert map to array
-    return Array.from(dataMap.values());
+    const standardData = Array.from(dataMap.values());
+
+    const mergedData = await loadMergedCompanyData(resultsPath);
+
+    return [...standardData, ...mergedData];
 
   } catch (error) {
     console.error('Error loading company data:', error);
@@ -190,9 +202,9 @@ export async function loadCompanyYear(
 
   // Otherwise, return the latest version (v4 > v3, etc.)
   matches.sort((a, b) => {
-    const versionA = parseInt(a.version.replace('v', ''));
-    const versionB = parseInt(b.version.replace('v', ''));
-    return versionB - versionA; // Descending order
+    const weightA = getVersionSortWeight(a.version);
+    const weightB = getVersionSortWeight(b.version);
+    return weightB - weightA;
   });
 
   return matches[0];
@@ -237,9 +249,9 @@ export async function getVersionsForCompanyYear(
 
   // Sort versions (v4, v3, v2, v1, etc.)
   return Array.from(new Set(versions)).sort((a, b) => {
-    const versionA = parseInt(a.replace('v', ''));
-    const versionB = parseInt(b.replace('v', ''));
-    return versionB - versionA; // Descending order
+    const weightA = getVersionSortWeight(a);
+    const weightB = getVersionSortWeight(b);
+    return weightB - weightA;
   });
 }
 
@@ -326,3 +338,297 @@ export function normalizeAnalysisResult(result: any): AnalysisResult {
 
   return result as AnalysisResult;
 }
+
+function mapMergedFinancialType(value: string | undefined): "Full" | "Partial" | "Non-Financial" {
+  const normalized = (value || '').toLowerCase();
+
+  if (normalized.includes('full')) {
+    return "Full";
+  }
+
+  if (normalized.includes('partial') || normalized.includes('materiality')) {
+    return "Partial";
+  }
+
+  return "Non-Financial";
+}
+
+function mapMergedTimeframe(value: string | undefined): "Current" | "Future" | "Historical" | "Multiple or Unclear" {
+  const normalized = (value || '').toLowerCase();
+
+  if (normalized.includes('present')) {
+    return "Current";
+  }
+
+  if (normalized.includes('forward')) {
+    return "Future";
+  }
+
+  if (normalized.includes('backward') || normalized.includes('histor')) {
+    return "Historical";
+  }
+
+  return "Multiple or Unclear";
+}
+
+function mapMergedFraming(value: string | undefined): "Risk" | "Opportunity" | "Neutral" | "Both" {
+  const normalized = (value || '').toLowerCase();
+
+  if (normalized.includes('both')) {
+    return "Both";
+  }
+
+  if (normalized.includes('opportun')) {
+    return "Opportunity";
+  }
+
+  if (normalized.includes('risk')) {
+    return "Risk";
+  }
+
+  return "Neutral";
+}
+
+function safeNumber(value: any): number {
+  if (typeof value === 'number' && Number.isFinite(value)) {
+    return value;
+  }
+
+  if (typeof value === 'string') {
+    const cleaned = value.replace(/[^0-9.-]/g, '');
+    const parsed = parseFloat(cleaned);
+    if (!Number.isNaN(parsed)) {
+      return parsed;
+    }
+  }
+
+  return 0;
+}
+
+function convertMergedSnippet(rawSnippet: any, questionId: string, index: number): Snippet {
+  const financialAmounts = Array.isArray(rawSnippet.financial_amounts)
+    ? rawSnippet.financial_amounts
+        .map((amount: any) => {
+          const rawAmount = amount?.amount;
+          let numericAmount: number | null = null;
+
+          if (typeof rawAmount === 'number' && Number.isFinite(rawAmount)) {
+            numericAmount = rawAmount;
+          } else if (typeof rawAmount === 'string') {
+            const parsed = parseFloat(rawAmount.replace(/[^0-9.-]/g, ''));
+            if (!Number.isNaN(parsed)) {
+              numericAmount = parsed;
+            }
+          }
+
+          if (numericAmount === null) {
+            return null;
+          }
+
+          return {
+            amount: numericAmount,
+            currency: amount?.currency || 'USD',
+            context: amount?.context || ''
+          };
+        })
+        .filter(Boolean) as FinancialAmount[]
+    : [];
+
+  const sourceVersions = Array.isArray(rawSnippet.source_versions)
+    ? rawSnippet.source_versions
+    : [];
+
+  const pageLabel = rawSnippet.page && rawSnippet.page !== 'N/A' ? `p. ${rawSnippet.page}` : undefined;
+  const mergedSourceLabel = sourceVersions.length > 0 ? sourceVersions.join(', ') : undefined;
+  const source = rawSnippet.source
+    || rawSnippet.document
+    || [`Merged evidence`, mergedSourceLabel ? `sources: ${mergedSourceLabel}` : null, pageLabel]
+      .filter(Boolean)
+      .join(' | ');
+
+  return {
+    snippet_id: rawSnippet.snippet_id || `${questionId}-merged-${index + 1}`,
+    quote: rawSnippet.quote || rawSnippet.text || '',
+    source,
+    classification: rawSnippet.classification || 'UNCLEAR',
+    classification_justification:
+      rawSnippet.classification_justification
+      || rawSnippet.merger_metadata?.classification_rationale
+      || '',
+    categorization: {
+      framing: mapMergedFraming(rawSnippet.categorization?.framing),
+      framing_justification: rawSnippet.categorization?.framing_justification || '',
+      financial_type: mapMergedFinancialType(rawSnippet.categorization?.financial_type),
+      financial_justification: rawSnippet.categorization?.financial_justification || '',
+      timeframe: mapMergedTimeframe(rawSnippet.categorization?.timeframe),
+      timeframe_justification: rawSnippet.categorization?.timeframe_justification || ''
+    },
+    financial_amounts: financialAmounts,
+    source_versions: sourceVersions,
+    merger_metadata: rawSnippet.merger_metadata
+  };
+}
+
+function convertMergedQuestion(rawQuestion: any, index: number): Question {
+  const questionId = (rawQuestion.question_id || `Q${index + 1}`).toString();
+  const disclosures = Array.isArray(rawQuestion.disclosures)
+    ? rawQuestion.disclosures.map((snippet: any, snippetIndex: number) =>
+        convertMergedSnippet(snippet, questionId, snippetIndex)
+      )
+    : [];
+
+  return {
+    question_id: questionId,
+    question_number: rawQuestion.question_number ?? index + 1,
+    category: rawQuestion.category || 'Other',
+    sub_category: rawQuestion.sub_category || '',
+    question_text: rawQuestion.question_text || '',
+    disclosures,
+    summary: rawQuestion.summary || '',
+    merger_stats: rawQuestion.merger_stats
+  };
+}
+
+function buildSummaryStatisticsFromQuestions(questions: Question[]): SummaryStatistics {
+  const classification_distribution = {
+    NO_DISCLOSURE: 0,
+    UNCLEAR: 0,
+    PARTIAL: 0,
+    FULL_DISCLOSURE: 0
+  };
+
+  let total_disclosures_found = 0;
+  const categories = new Set<string>();
+
+  questions.forEach(question => {
+    categories.add(question.category || 'Other');
+    if (question.disclosures.length === 0) {
+      classification_distribution.NO_DISCLOSURE += 1;
+    }
+    question.disclosures.forEach(snippet => {
+      total_disclosures_found += 1;
+      const key = snippet.classification as keyof typeof classification_distribution;
+      if (classification_distribution[key] !== undefined) {
+        classification_distribution[key] += 1;
+      }
+    });
+  });
+
+  return {
+    total_questions_analyzed: questions.length,
+    total_disclosures_found,
+    classification_distribution,
+    categories_covered: Array.from(categories)
+  };
+}
+
+function createAnalysisResultFromMerged(raw: any, filename: string): AnalysisResult {
+  const metadata = raw?.metadata ?? {};
+  const companyName = metadata.company || raw.company_name || 'Unknown Company';
+  const year = safeNumber(metadata.year ?? raw.fiscal_year);
+  const analysisDate = metadata.analysis_date
+    ? new Date(metadata.analysis_date).toISOString().split('T')[0]
+    : new Date().toISOString().split('T')[0];
+  const modelUsed = metadata.merger_model || metadata.model || 'merged-model';
+  const schemaVersion = metadata.schema_version || 'merged';
+
+  const questions = Array.isArray(raw.analysis_results)
+    ? raw.analysis_results.map((question: any, index: number) => convertMergedQuestion(question, index))
+    : [];
+
+  const summaryStatistics = buildSummaryStatisticsFromQuestions(questions);
+
+  const analysisResult: AnalysisResult = {
+    company_name: companyName,
+    fiscal_year: year,
+    version: 'merged',
+    model_used: modelUsed,
+    analysis_date: analysisDate,
+    schema_version: schemaVersion,
+    analysis_results: questions,
+    summary_statistics: summaryStatistics,
+    completeness_summary: raw.completeness_summary,
+    merger_summary: raw.merger_summary,
+    metadata: {
+      ...metadata,
+      merged_filename: filename
+    }
+  };
+
+  return normalizeAnalysisResult(analysisResult);
+}
+
+async function loadMergedCompanyData(resultsPath: string): Promise<CompanyYearData[]> {
+  const mergedDir = join(resultsPath, 'merged');
+
+  let files: string[];
+  try {
+    files = await readdir(mergedDir);
+  } catch {
+    console.log('No merged results directory found');
+    return [];
+  }
+
+  const mergedData: CompanyYearData[] = [];
+
+  for (const file of files) {
+    if (!file.endsWith('.json')) {
+      continue;
+    }
+
+    try {
+      const raw = await loadJsonFile(join(mergedDir, file));
+      const metadata = raw?.metadata;
+      if (!metadata || !metadata.company || metadata.year === undefined) {
+        console.warn(`Merged file missing metadata: ${file}`);
+        continue;
+      }
+
+      const company = metadata.company;
+      const year = safeNumber(metadata.year);
+      if (!Number.isFinite(year) || Number.isNaN(year)) {
+        console.warn(`Merged file has invalid year: ${file}`);
+        continue;
+      }
+
+      const analysisResult = createAnalysisResultFromMerged(raw, file);
+      const sourceFiles = metadata.source_files || {};
+      const sourceVersions = Object.keys(sourceFiles);
+
+      mergedData.push({
+        company,
+        year,
+        version: 'merged',
+        model: metadata.merger_model || 'merged-model',
+        verified: analysisResult,
+        hasComparison: false,
+        isMerged: true,
+        mergedMetadata: {
+          sourceVersions,
+          sourceFiles,
+          mergerSummary: raw.merger_summary,
+          completenessSummary: raw.completeness_summary,
+          schemaVersion: metadata.schema_version,
+          mergerTimestamp: raw.merger_summary?.merger_timestamp || metadata.analysis_date,
+          mergedFilename: file
+        }
+      });
+    } catch (error) {
+      console.error(`Failed to load merged file ${file}:`, error);
+    }
+  }
+
+  return mergedData;
+}
+
+function getVersionSortWeight(version: string): number {
+  const lower = (version || '').toLowerCase();
+  if (lower.startsWith('merged')) {
+    return 1000;
+  }
+
+  const numeric = parseInt(version.replace(/[^0-9]/g, ''), 10);
+  return Number.isNaN(numeric) ? 0 : numeric;
+}
+
+

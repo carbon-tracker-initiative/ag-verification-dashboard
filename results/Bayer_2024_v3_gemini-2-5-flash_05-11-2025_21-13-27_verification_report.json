@@ -1,0 +1,477 @@
+{
+  "metadata": {
+    "company": "Bayer",
+    "year": "2024",
+    "verification_model": "gemini-2.5-pro",
+    "prompt_version": "v3",
+    "original_file": "2025-11-05T21:13:27.594996"
+  },
+  "question_verifications": [
+    {
+      "question_id": "99901",
+      "question_text": "Does the company disclose whether it thinks that agricultural crops developing resistance to its pesticides, which are applied by the company's customers to cropland, is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99901-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet discusses the priority of discovering new modes of action (MoAs) for its crop protection products. The need for new MoAs is a direct response to the problem of pesticide resistance, making the snippet highly relevant to the question.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet acknowledges the topic of pesticide resistance implicitly by discussing the need for new modes of action. However, it frames this as an R&D priority and an opportunity to create 'improved solutions,' not as a risk to the business. According to the definitions, if the topic is acknowledged but not characterized as a business risk, the classification should be UNCLEAR."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet indicates that 'Discovering new modes of action (MoAs)' is a priority for crop protection products. The need for new modes of action implicitly acknowledges that existing ones may become less effective over time, which is a direct consequence of crops developing resistance to pesticides. While it doesn't explicitly use the word 'risk' in this context, it describes a business activity (R&D for new MoAs) that directly addresses the challenge posed by resistance, thus acknowledging it as a business concern.",
+              "suggested_value": "This snippet implicitly acknowledges the issue of pesticide resistance by stating that 'Discovering new modes of action (MoAs) is one of the priorities'. This R&D effort is a response to existing pesticides becoming less effective. However, the company does not frame this as a risk, but rather as a business activity to find 'improved solutions'. Therefore, the topic is acknowledged but not characterized as a risk.",
+              "explanation": "The original justification correctly identifies the implicit link but incorrectly concludes it's a PARTIAL disclosure. The revised justification supports the UNCLEAR classification by highlighting that the topic is acknowledged but not framed as a risk."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99901-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it explicitly mentions that the company's biological products 'support resistance management strategies,' directly addressing the question's topic of pesticide resistance.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99903",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99903-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet discusses the negative impact of \"ongoing litigation\" on the company's share price. While not explicitly mentioning human health, the justification correctly notes that the broader report context links this litigation to product-related health claims, making it relevant to the business risk aspect of the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99903-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet directly discusses \"glyphosate litigation,\" including verdicts and potential settlements. This litigation is widely known to be about alleged human health problems from the company's product, making it highly relevant to the question of business risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99903-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it quantifies a multi-billion dollar financial provision specifically for \"glyphosate litigation,\" which stems from claims of human health problems caused by the company's product.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99903-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is extremely relevant, explicitly mentioning \"lawsuits claiming personal injury due to use of and exposure to PCB products\" and quantifying the financial damages awarded, directly addressing the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99903-005",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it details financial settlements for lawsuits related to PCB contamination. While focused on remediation, this is a direct consequence of a product known for human health risks and demonstrates the company acknowledging and paying for the product's negative impacts, which constitutes a business risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99903-006",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it describes the general business risk that \"unexpected side effects or negative effects of our products\" could lead to \"loss of sales and earnings,\" a \"negative impact on our reputation,\" and \"potential liability claims.\" This directly links product-related health issues to business risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99904",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99904-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it explicitly mentions 'financial risks' stemming from 'transition risks' related to the 'emission of greenhouse gases,' which directly addresses the question about carbon costs being a risk.",
+          "classification_issues": [
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Financial Type: Partial-type",
+              "suggested_value": "Financial Type: Non-Financial",
+              "explanation": "The snippet mentions 'financial risks' in a general sense but does not discuss materiality or specific financial impacts like 'costs' or 'expenditures'. Therefore, 'Non-Financial' (No financial amounts or materiality discussion) is more accurate than 'Partial-type' (References materiality but omits exact amounts)."
+            }
+          ],
+          "overall_quality": "good",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99904-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant. It directly identifies a 'Transitory climate risk' leading to a 'capital expenditure requirement' and explicitly links this to 'emissions trading systems,' a direct form of carbon cost from operations.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99904-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it explicitly discusses the 'risk of additional costs' from regulations and how 'Carbon prices' affect the company's cost structure, directly answering the question about carbon costs as a risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99904-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses 'transitory risks necessitating significant investment' to adapt production processes due to measures like 'emissions trading systems,' which are a form of carbon cost.",
+          "classification_issues": [
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly identifies 'transitory risks necessitating significant investment' for adapting production processes to GHG reduction targets and 'emissions trading systems.' It further states that the company has 'assessed and budgeted for our capital expenditure requirement through 2029' and expects it to total 'up to €200 million.' This provides a clear statement of financial materiality (capital expenditure) directly linked to carbon costs in its direct operations, even if it doesn't quantify costs beyond 2029.",
+              "suggested_value": "This snippet explicitly identifies 'transitory risks necessitating significant investment' to adapt production processes due to measures like 'emissions trading systems.' The statement that the investment is 'significant' and that the company has 'assessed and budgeted for our capital expenditure requirement' serves as an explicit, albeit qualitative, statement of financial materiality, justifying the FULL_DISCLOSURE classification.",
+              "explanation": "The current justification invents a monetary value ('up to €200 million') that is not present in the quoted text. The justification must be based solely on the evidence provided in the snippet."
+            },
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Financial Type: Financial",
+              "suggested_value": "Financial Type: Partial-type",
+              "explanation": "The 'Financial' type requires explicit dollar amounts, which are not present in the snippet. The snippet mentions 'significant investment' and 'capital expenditure requirement,' which fits the definition of 'Partial-type' (References materiality but omits exact amounts)."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99905",
+      "question_text": "Does the company disclose whether it thinks that reduced soil fertility caused by its pesticides is a risk to the business? For instance, the increase in toxicity of the soil impacting human health, or the potentially declining yield experienced by farmers applying the pesticide.",
+      "verification_results": [
+        {
+          "snippet_id": "99905-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses the company's strategy to 'improve soil health,' which is a core theme of the question. However, it does not link soil degradation to its own products or frame it as a risk.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The classification should be UNCLEAR because the snippet does not identify reduced soil fertility as a business risk. Instead, it frames improving soil health as a strategic goal and an opportunity. The PARTIAL classification requires the topic to be clearly identified as a business risk."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet highlights Bayer's commitment to 'striving to improve soil health' as part of its regenerative agriculture concept. While it doesn't explicitly state that reduced soil fertility is caused by its pesticides as a direct business risk, the focus on improving soil health implies that soil degradation is a recognized issue in agriculture that the company aims to address through its strategies, which is relevant to the question's underlying concern.",
+              "suggested_value": "The snippet discusses the company's goal to 'improve soil health' as part of its regenerative agriculture concept. This acknowledges the topic of soil health but frames it as an opportunity, not a risk to the business caused by its products. Therefore, it does not meet the criteria for a PARTIAL disclosure.",
+              "explanation": "The current justification acknowledges that the snippet doesn't frame the issue as a business risk, which contradicts the PARTIAL classification it's supposed to support. The justification should be rewritten to support the UNCLEAR classification."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99905-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it acknowledges that the company's products ('substances of (very high) concern') can have negative environmental impacts, including on soil, which directly relates to the question's concern about pesticides affecting soil.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99905-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it explicitly lists 'Soil degradation' as a sustainability-related impact, directly addressing a key term from the question.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The classification should be UNCLEAR. The snippet lists 'Soil degradation' as a sustainability impact but does not characterize it as a business risk, nor does it link it to the company's own products (pesticides). The PARTIAL classification requires a clear identification as a business risk."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This is a direct listing of 'Soil degradation' as a potential negative impact related to sustainability matters. While it doesn't explicitly link this degradation to Bayer's pesticides as the cause or frame it as a direct business risk, it acknowledges soil degradation as a relevant environmental issue in agriculture.",
+              "suggested_value": "The snippet lists 'Soil degradation' as a sustainability impact. However, it does not link this impact to the company's own products as the cause, nor does it explicitly frame it as a risk to the business. It is an acknowledgement of the topic without characterizing it as a business risk, making the classification UNCLEAR.",
+              "explanation": "The current justification correctly points out that the snippet doesn't frame the issue as a business risk or link it to the company's products, which contradicts the PARTIAL classification. The justification should be updated to support an UNCLEAR classification."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99905-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it explicitly identifies 'soil degradation' as a 'physical risk' that occurs within the company's value chain, directly addressing the question's requirement for the issue to be framed as a risk to the business.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99906",
+      "question_text": "Does the company disclose whether it thinks that factory workplace hazards including chemical exposure during production of pesticides is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99906-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it explicitly links 'operations at our sites' and 'chemical substances' to the risk of 'personal injury' and subsequent business impacts like 'declines in sales and/or margins'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99906-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it identifies 'personal injury' to employees resulting from noncompliance with safety standards as a risk that can lead to 'loss of production, business interruptions and/or liability for compensation payments'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99906-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it is a direct heading from a list of business impacts that names 'Health risks due to the handling of substances of concern,' directly addressing chemical exposure as a risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99906-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it is a direct heading from a list of business impacts that names 'Physical or psychological injuries for employees due to work-related incidents,' which encompasses factory workplace hazards.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99906-005",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it describes a policy designed to 'counteract potential negative impacts' from 'occupational injuries or potential hazards in the work environment,' thereby acknowledging these as risks to the business.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99907",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99907-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet discusses 'possible impacts on the environment through uncontrolled release into... water' caused by 'improper use of products,' which directly relates to the question about waterway pollution from applied products.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet identifies 'potentially negative effects' and 'possible impacts on the environment' from its products. However, it does not explicitly frame this as a risk *to the business* (e.g., financial, reputational, or regulatory risk). It describes an impact *on the environment*, which fits the definition of UNCLEAR (topic acknowledged but not characterized as a business risk)."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly identifies 'possible impacts on the environment through uncontrolled release into the air, water and soil' caused by 'improper use of products' as 'potentially negative effects'. This directly addresses waterway pollution from applied products as a risk, although it doesn't quantify the financial impact or explicitly state materiality.",
+              "suggested_value": "The snippet acknowledges 'possible impacts on the environment through uncontrolled release into... water' from the 'improper use of products'. While it frames these as 'potentially negative effects', it does not explicitly state that this constitutes a risk *to the business*, making the disclosure UNCLEAR.",
+              "explanation": "The current justification incorrectly equates 'negative effects' on the environment with a 'risk to the business'. The suggested justification clarifies this distinction, supporting the change to UNCLEAR."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99907-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet explicitly mentions 'Reduced water quality due to product residues,' which directly addresses the question's topic of waterway pollution from applied products.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet is from a section on 'Impacts Related to Sustainability Matters' and lists 'Reduced water quality' as an impact the company has on the environment. It does not characterize this impact as a risk *to the business*. Per the guidelines, acknowledging the topic without framing it as a business risk is classified as UNCLEAR."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet directly identifies 'Reduced water quality due to product residues in the downstream value chain' as a negative impact. While it doesn't explicitly state 'risk to the business' or financial materiality, it acknowledges a direct negative environmental impact from their products, which is a clear business concern.",
+              "suggested_value": "The snippet identifies 'Reduced water quality due to product residues' as a sustainability impact. However, it does not frame this as a risk *to the business*, but rather as an impact *of the business* on the environment. Therefore, the disclosure is UNCLEAR.",
+              "explanation": "The current justification makes an unsupported leap by stating the impact is 'a clear business concern.' The suggested justification corrects this by adhering strictly to the text, which describes an impact on the environment, not a risk to the business."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99912",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99912-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet directly addresses the question by discussing the risk of 'further restrictions... on the sale and use of various crop protection products' and the 'permanent revocation of product registrations', which are forms of product bans. It explicitly frames this as a risk leading to 'financial loss'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99912-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is directly relevant, stating that regulatory authorities can 'withdraw or substantially restrict the registration for a... product and thus prohibit or limit the sale of a product'. This directly addresses the risk of products being banned from sale.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99913",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99913-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it explicitly lists 'the obligation to remediate contamination' as a potential negative outcome of noncompliance, thereby framing it as a risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99913-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it discusses the company's accounting provisions specifically for 'obligations to remediate contaminated sites' and quantifies this provision, directly addressing the risk and its financial impact.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99913-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it provides a concrete, historical example of a financial cost incurred for 'PCB remediation' as part of a legal settlement, demonstrating that this is a realized business risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99914",
+      "question_text": "Does the company disclose whether it thinks that loss of pollinators and beneficial insects, such as bees, is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99914-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it explicitly mentions 'ecosystem services such as pollination' and connects risks related to biodiversity and agriculture directly to the company's value chain, stating they 'occur in value chains like that of Bayer'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99915",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99915-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses how \"Regulatory changes may also lead to higher product development costs\". This directly addresses the question's focus on rising costs related to compliance, testing, and registration, which are components of product development. It clearly frames this as a risk that \"may negatively impact our reputation.\"",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99916",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99916-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet directly addresses the question by stating that 'a negative public perception of Bayer represents a risk' and links this risk to 'modern agricultural methods, such as the application of certain classes of crop protection products and the use of biotechnology,' which aligns perfectly with the question's topic of 'chemical-intensive agriculture.' It also mentions potential consequences like unfavorable 'legislative and regulatory decisions,' which corresponds to the 'regulatory scrutiny' mentioned in the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99917",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99917-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it directly discusses 'ongoing litigation' concerning glyphosate, a company product, and explicitly states this has 'hurt our share price development', which addresses the question of whether legal challenges from health claims are considered a business risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it provides a general disclosure on 'risks from legal disputes' and specifically lists 'product liability' and 'environmental protection' as risk areas, which directly aligns with the health and environmental claims mentioned in the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant. It details lawsuits from plaintiffs alleging 'personal injuries resulting from exposure to glyphosate-based products' and quantifies the financial materiality by stating 'Bayer’s provision for the glyphosate litigation totaled US$5.9 billion,' directly answering the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it discusses lawsuits from governmental entities and individuals regarding 'damages due to PCBs in the environment' and 'personal injury due to use of and exposure to PCB products.' This directly addresses legal challenges from both environmental and health claims related to company products.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-005",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it describes the general financial risk from 'pending lawsuits and/or potential future cases,' such as incurring 'considerable financial disadvantages.' While the text is general, its source location within the 'PCB matters' section links it directly to the types of legal challenges specified in the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    }
+  ],
+  "summary": {
+    "total_questions_verified": 12,
+    "total_snippets_verified": 36,
+    "relevant_snippets": 36,
+    "irrelevant_snippets": 0,
+    "snippets_needing_correction": 7,
+    "snippets_to_remove": 0,
+    "questions_with_issues": 4
+  }
+}

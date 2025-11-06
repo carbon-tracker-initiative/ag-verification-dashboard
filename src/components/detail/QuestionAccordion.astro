@@ -135,6 +135,20 @@ if (!framings.length) framings.push('none');
         )}
       </div>
 
+      {question.merger_stats && (
+        <div class="flex flex-wrap items-center gap-3 text-[11px] text-slate-500">
+          <span>v3 {question.merger_stats.v3_snippets ?? 0}</span>
+          <span>v4 {question.merger_stats.v4_snippets ?? 0}</span>
+          <span>Merged {question.merger_stats.merged_snippets ?? 0}</span>
+          {typeof question.merger_stats.ai_reviews_conducted !== 'undefined' && (
+            <span>AI reviews {question.merger_stats.ai_reviews_conducted}</span>
+          )}
+          {typeof question.merger_stats.human_review_flagged !== 'undefined' && (
+            <span>Human flags {question.merger_stats.human_review_flagged}</span>
+          )}
+        </div>
+      )}
+
       {!isExpandable && (
         <div class="text-xs text-slate-500">
           No evidence snippets were surfaced for this question.

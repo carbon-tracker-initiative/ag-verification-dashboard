@@ -13,13 +13,33 @@ interface Props {
   version: string;
   year: number;
   companyName: string;
+  isMerged?: boolean;
+  mergedMetadata?: {
+    sourceVersions: string[];
+    mergerSummary?: Record<string, any>;
+    completenessSummary?: Record<string, any>;
+  };
+  sourcePresence?: Array<{ version: string; available: boolean }>;
 }
 
-const { company, version, year, companyName } = Astro.props;
+const {
+  company,
+  version,
+  year,
+  companyName,
+  isMerged = false,
+  mergedMetadata,
+  sourcePresence = []
+} = Astro.props;
 
 // Determine if this is the latest version (v4 > v3, etc.)
-const versionNum = parseInt(version.replace('v', ''));
-const isLatest = versionNum >= 4; // Simple heuristic - can be improved
+const versionLower = version.toLowerCase();
+const numericVersion = parseInt(version.replace(/[^0-9]/g, ''), 10);
+const hasNumericVersion = !Number.isNaN(numericVersion);
+const isMergedVersion = isMerged || versionLower.startsWith('merged');
+const isLatest = isMergedVersion || (hasNumericVersion && numericVersion >= 4);
+
+const mergerSummary = mergedMetadata?.mergerSummary ?? {};
 ---
 
 <div class="surface flex flex-col h-full p-6 transition-transform duration-200 hover:-translate-y-1">
@@ -80,6 +100,56 @@ const isLatest = versionNum >= 4; // Simple heuristic - can be improved
       <div class="text-[11px] uppercase tracking-wide text-slate-500">Financial</div>
     </div>
   </div>
+
+  {isMergedVersion && (
+    <div class="mt-4 space-y-3 text-xs text-slate-400">
+      {sourcePresence.length > 0 && (
+        <div class="flex flex-wrap gap-2">
+          {sourcePresence.map(source => (
+            <span
+              class={`px-2 py-1 rounded-full border ${
+                source.available
+                  ? 'border-emerald-400/40 bg-emerald-500/15 text-emerald-100'
+                  : 'border-slate-600 bg-slate-900/70 text-slate-400'
+              }`}
+            >
+              {source.version.toUpperCase()}
+              <span class="ml-2 text-[10px] uppercase tracking-wide">
+                {source.available ? 'Present' : 'Missing'}
+              </span>
+            </span>
+          ))}
+        </div>
+      )}
+
+      <div class="grid grid-cols-2 gap-3">
+        <div class="border border-slate-700 rounded-lg bg-slate-900/60 p-3">
+          <div class="text-[10px] uppercase tracking-wide text-slate-500">Merged Snippets</div>
+          <div class="text-sm font-semibold text-slate-100">
+            {formatNumber(mergerSummary.total_merged_snippets ?? company.total_snippets)}
+          </div>
+        </div>
+        <div class="border border-slate-700 rounded-lg bg-slate-900/60 p-3">
+          <div class="text-[10px] uppercase tracking-wide text-slate-500">AI Reviews</div>
+          <div class="text-sm font-semibold text-slate-100">
+            {formatNumber(mergerSummary.total_ai_reviews ?? 0)}
+          </div>
+        </div>
+        <div class="border border-slate-700 rounded-lg bg-slate-900/60 p-3">
+          <div class="text-[10px] uppercase tracking-wide text-slate-500">Human Flags</div>
+          <div class="text-sm font-semibold text-slate-100">
+            {formatNumber(mergerSummary.total_human_flags ?? 0)}
+          </div>
+        </div>
+        <div class="border border-slate-700 rounded-lg bg-slate-900/60 p-3">
+          <div class="text-[10px] uppercase tracking-wide text-slate-500">Source Snippets</div>
+          <div class="text-sm font-semibold text-slate-100">
+            v3 {formatNumber(mergerSummary.total_v3_snippets ?? 0)} | v4 {formatNumber(mergerSummary.total_v4_snippets ?? 0)}
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
 
   <a
     href={`${import.meta.env.BASE_URL}/${companyName.toLowerCase()}/${year}/${version}`}

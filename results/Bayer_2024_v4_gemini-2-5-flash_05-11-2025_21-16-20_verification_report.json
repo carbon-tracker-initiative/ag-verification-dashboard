@@ -1,0 +1,533 @@
+{
+  "metadata": {
+    "company": "Bayer",
+    "year": "2024",
+    "verification_model": "gemini-2.5-pro",
+    "prompt_version": "v4",
+    "original_file": "2025-11-05T21:16:20.776218"
+  },
+  "question_verifications": [
+    {
+      "question_id": "99901",
+      "question_text": "Does the company disclose whether it thinks that agricultural crops developing resistance to its pesticides, which are applied by the company's customers to cropland, is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99901-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it explicitly mentions 'resistance management strategies', which directly addresses the topic of crop resistance to pesticides. Although it frames the topic as an area where the company's products offer a solution, it is still on-topic.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99903",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99903-001",
+          "is_relevant": false,
+          "relevance_explanation": "The snippet mentions 'ongoing litigation' hurting the share price, but does not specify the nature of the litigation. The link to 'human health problems from its products' is not present in the quoted text, making it too generic to be relevant to the specific question.",
+          "classification_issues": [],
+          "overall_quality": "poor",
+          "recommendation": "remove"
+        },
+        {
+          "snippet_id": "99903-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet discusses 'glyphosate litigation' and the company's extensive legal defense, which clearly frames it as a business risk. While it doesn't explicitly mention 'human health problems', the specificity of the product litigation makes it relevant in the context of the overall disclosure.",
+          "classification_issues": [
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly discusses 'glyphosate litigation' as an ongoing and future challenge for the company, detailing legal actions and potential legislative impacts. While it doesn't explicitly state 'human health problems' in this snippet, the context of glyphosate litigation is widely understood to be related to such claims, and the company's defense efforts confirm it as a significant business risk.",
+              "suggested_value": "This snippet identifies 'glyphosate litigation' as a significant business risk, evidenced by the company's actions such as filing with the US Supreme Court and defending itself in numerous trials. While the text does not explicitly mention 'human health problems', it clearly establishes that litigation related to a specific product is a risk to the business.",
+              "explanation": "The current justification relies on external knowledge ('widely understood'). The suggested justification focuses only on the evidence within the snippet, which is that the company is treating the litigation as a serious business risk."
+            }
+          ],
+          "overall_quality": "good",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99903-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet discusses 'PCB litigation' and the risk of 'punitive damages', which directly links a product to a significant financial risk for the business. The mention of punitive damages strongly implies tort claims like personal injury, making it relevant to the question.",
+          "classification_issues": [
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly discusses 'PCB litigation' and the potential for 'punitive damages,' indicating a significant financial risk related to these products. While it doesn't explicitly state 'human health problems' in this snippet, the context of PCB litigation is widely understood to be related to such claims, and the mention of 'punitive damages' highlights the severity of the potential financial impact.",
+              "suggested_value": "This snippet identifies 'PCB litigation' as a business risk by highlighting the potential for 'punitive damages' and the need to ensure former customers 'shoulder the costs'. This language clearly frames the product-related litigation as a financial threat to the company.",
+              "explanation": "The current justification relies on external knowledge ('widely understood'). The suggested justification is stronger as it focuses only on the evidence within the snippet, such as the mention of 'punitive damages' and 'costs'."
+            }
+          ],
+          "overall_quality": "good",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99903-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it explicitly names 'product liability' as a risk to the business and states that such risks can lead to 'substantial monetary fines' and 'adverse financial consequences'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99903-005",
+          "is_relevant": true,
+          "relevance_explanation": "This snippet is directly relevant. It explicitly links 'glyphosate-based products' to alleged 'personal injuries' and 'non-Hodgkin lymphoma', and quantifies the business risk with a specific financial provision of '$5.9 billion'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99903-006",
+          "is_relevant": true,
+          "relevance_explanation": "This snippet is directly relevant. It explicitly links 'PCB products' to 'personal injury' and 'increased risk of cancer', and quantifies the business risk with specific damage awards ('US$320 million') and a qualitative statement about 'considerable financial disadvantages'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99903-007",
+          "is_relevant": true,
+          "relevance_explanation": "This snippet is relevant as it discusses the risk of 'unexpected side effects or negative effects of our products' leading to 'loss of sales and earnings' and 'potential liability claims', directly connecting potential health problems from products to a business risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99904",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99904-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it explicitly identifies a 'Transitory climate risk' associated with 'capital expenditure' needed to adapt 'production processes' due to regulations on 'emission of greenhouse gases', directly addressing the question of carbon costs from direct operations being a risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99904-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it addresses both parts of the question. It discusses the risk of 'additional costs' and impacts on the 'cost structure of our value chain' (direct operations) and how 'Carbon prices... could also impact demand' for its products (customer use).",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99904-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it clearly frames 'transitory risks necessitating significant investment' to adapt 'production processes' in response to regulations like 'emissions trading systems'. This directly answers the question regarding carbon costs from direct operations.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99904-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it quantifies the financial impact of mitigating carbon-related risks in direct operations. The planned 'capital expenditures of approximately €200 million' to meet 'climate targets' is a direct financial consequence of the risks associated with carbon costs.",
+          "classification_issues": [],
+          "overall_quality": "good",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99906",
+      "question_text": "Does the company disclose whether it thinks that factory workplace hazards including chemical exposure during production of pesticides is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99906-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses 'personal injury' resulting from 'operations at our sites' in the 'Crop Science' division, which produces pesticides. It explicitly mentions 'chemical substances' and links these operational issues to business impacts like 'declines in sales and/or margins'.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "FULL_DISCLOSURE",
+              "suggested_value": "PARTIAL",
+              "explanation": "The snippet clearly identifies a business risk with potential financial consequences ('declines in sales and/or margins'). However, it does not explicitly state that the financial impact would be material, which is required for a FULL_DISCLOSURE classification. Therefore, PARTIAL is the correct classification."
+            }
+          ],
+          "overall_quality": "good",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99906-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it discusses the risk of 'personal injury' to 'employees' within 'our own business operations'. It directly links this to business consequences such as 'loss of production, business interruptions and/or liability for compensation payments'.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "FULL_DISCLOSURE",
+              "suggested_value": "PARTIAL",
+              "explanation": "The snippet identifies a clear business risk with financial implications ('loss of production', 'liability for compensation'). However, it lacks an explicit statement of financial materiality, which is a prerequisite for the FULL_DISCLOSURE classification. The correct classification is PARTIAL."
+            }
+          ],
+          "overall_quality": "good",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99906-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it directly acknowledges the topic of 'Physical or psychological injuries for employees due to work-related incidents'.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet acknowledges the hazard ('injuries for employees') but does not characterize it as a risk to the business (e.g., by mentioning operational or financial consequences). It is presented as a sustainability impact, not a business risk. Therefore, the classification should be UNCLEAR."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly lists 'Physical or psychological injuries for employees due to work-related incidents' as a negative impact. This directly addresses factory workplace hazards and their human health consequences, which constitute a risk to the business.",
+              "suggested_value": null,
+              "explanation": "The justification makes an inferential leap by stating the impact 'constitute[s] a risk to the business.' The snippet itself does not provide this link, which is why the classification is incorrect. The justification should only rely on what is explicitly stated in the quote."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99906-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses the company's policy to counteract 'potential negative impacts such as those resulting from occupational injuries or potential hazards in the work environment,' which directly relates to the question.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet describes a risk mitigation strategy and acknowledges 'potential negative impacts' like 'occupational injuries'. However, it does not frame these impacts as a risk to the business itself (e.g., by mentioning financial or operational consequences). Therefore, the classification should be UNCLEAR."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly states that the HSE policy aims to 'counteract potential negative impacts such as those resulting from occupational injuries or potential hazards in the work environment.' Given Bayer's sector (pesticides), 'potential hazards in the work environment' strongly implies chemical exposure during production. This clearly identifies factory workplace hazards as a risk leading to human health problems for employees.",
+              "suggested_value": null,
+              "explanation": "The justification correctly establishes relevance but incorrectly concludes that the snippet 'clearly identifies' the hazard as a business risk. The snippet identifies it as a 'negative impact' to be managed, but the link to business risk is not made in the text."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99907",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99907-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it directly discusses 'residues of agrochemical products... in the environment' and links this to a potential business risk through 'more stringent regulation' that could be 'impacting our business'. This addresses the core components of the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99907-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it explicitly identifies 'Reduced water quality due to product residues' as a negative impact. The context, as explained in the justification, of this being part of a sustainability impacts assessment implies the company considers this a material issue, which is equivalent to acknowledging it as a risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99908",
+      "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99908-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses the risk of 'negative public perception' of 'modern agricultural methods, such as the application of certain classes of crop protection products and the use of biotechnology'. This is the direct counterpart to organic farming and alternatives. The snippet explicitly links this perception to risks that constitute demand destruction, such as 'significantly limiting the use of our products' or 'mandated product withdrawals'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99908-002",
+          "is_relevant": false,
+          "relevance_explanation": "This snippet discusses generic competition risk from 'new competitors', 'aggressive marketing', and 'digitalization'. It does not specifically mention organic farming, alternative agricultural methods, or a shift in consumer demand as the source of this competition. The connection to the question's specific topic is too indirect and requires an inference not supported by the text.",
+          "classification_issues": [],
+          "overall_quality": "poor",
+          "recommendation": "remove"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99909",
+      "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+      "verification_results": [
+        {
+          "snippet_id": "99909-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet discusses 'residues of agrochemical products... in the environment' leading to 'more stringent regulation' and 'impacting our business'. This is a direct reference to the consequences of product use by farmers (not factory pollution) and frames it as a business risk, which is directly relevant to the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99909-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet identifies 'Reduced water quality due to product residues in the downstream value chain'. This directly addresses the environmental impact of nutrient runoff from product application by farmers, which is the core topic of the question.",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet identifies a negative environmental impact ('Reduced water quality') but does not explicitly state this is a risk *to the business*. The PARTIAL classification requires the issue to be clearly identified as a business risk. Since the text only acknowledges the environmental impact without linking it to business repercussions, the classification should be UNCLEAR."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet explicitly lists 'Reduced water quality due to product residues in the downstream value chain' as a negative impact. Nutrient runoff from applied products by farmers contributes to 'product residues in the downstream value chain' and 'reduced water quality,' which is a direct cause of eutrophication. This is a material impact that implicitly poses a business risk.",
+              "suggested_value": "This snippet acknowledges 'Reduced water quality due to product residues in the downstream value chain' as a negative impact. This is directly related to nutrient runoff and eutrophication from product use. However, the text only frames this as an environmental impact caused by the company, not as a risk *to the business*. Therefore, the classification is UNCLEAR.",
+              "explanation": "The current justification makes an unsupported inference that the impact 'implicitly poses a business risk.' The justification should be revised to align with the definition of UNCLEAR, which is that the topic is acknowledged but not characterized as a business risk."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        },
+        {
+          "snippet_id": "99909-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet discusses a product that can 'reduce water and nutrient loss'. By presenting a solution to 'nutrient loss', the company implicitly acknowledges the existence of the problem, which is relevant to the question about nutrient runoff. The framing as an opportunity rather than a risk is what determines the classification, not the relevance.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99912",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99912-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it directly discusses the risk of 'further restrictions... on the sale and use' and 'permanent revocation of product registrations or approvals', which aligns perfectly with the question about products being banned or restricted from sale.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99912-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is directly relevant. It explicitly mentions 'The risk of... mandated product withdrawals', which directly answers the question about the company disclosing the risk of its products being banned.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99912-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant. It discusses the possibility that 'products may be partially or completely withdrawn from the market' due to 'legal or regulatory measures' and explicitly frames this as one of 'these risks' that could lead to a 'loss of sales and earnings'.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99912-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it describes the mechanism by which products can be banned from sale ('withdraw or substantially restrict the registration... and thus prohibit or limit the sale').",
+          "classification_issues": [
+            {
+              "issue_type": "classification_error",
+              "current_value": "PARTIAL",
+              "suggested_value": "UNCLEAR",
+              "explanation": "The snippet describes a regulatory power in a factual manner ('Regulatory authorities... can... withdraw') but does not frame this as a specific risk to the company. This fits the definition of UNCLEAR: 'Topic acknowledged but NOT characterized as a business risk'."
+            },
+            {
+              "issue_type": "categorization_error",
+              "current_value": "Risk",
+              "suggested_value": "Neutral",
+              "explanation": "The framing is Neutral, not Risk. The text is a factual, descriptive statement about the powers of regulatory bodies, without any evaluative language indicating a threat or potential loss to the company."
+            },
+            {
+              "issue_type": "justification_weak",
+              "current_value": "This snippet describes the power of regulatory authorities to 'withdraw or substantially restrict the registration' of products, which would 'prohibit or limit the sale.' While it doesn't explicitly use the word 'risk' in this sentence, it describes a fundamental vulnerability of the business model to regulatory action, which is inherently a risk. The context of the document, particularly the 'Opportunity and Risk Report,' reinforces this interpretation.",
+              "suggested_value": "This snippet describes the power of regulatory authorities to 'withdraw or substantially restrict the registration' of products, which would 'prohibit or limit the sale.' However, it presents this as a factual statement about regulatory power rather than characterizing it as a specific risk to the business.",
+              "explanation": "The current justification makes an inferential leap that the snippet is a risk disclosure, which is not supported by the text itself. The source section is also not the 'Opportunity and Risk Report', weakening the contextual argument. The justification should be revised to reflect the factual nature of the statement."
+            }
+          ],
+          "overall_quality": "needs_improvement",
+          "recommendation": "correct"
+        }
+      ],
+      "has_issues": true
+    },
+    {
+      "question_id": "99913",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99913-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it explicitly names 'the obligation to remediate contamination' as a potential liability and business risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99913-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it describes lawsuits where the company is held responsible for damages from PCBs in the environment, which directly relates to the risk of restoration/remediation costs.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99913-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it provides a specific financial amount (US$35 million) paid for 'PCB remediation,' directly demonstrating the materialization of the risk of contaminated site restoration.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99913-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it details a multi-million dollar settlement for a lawsuit related to contamination, which is a direct financial consequence of the risk in question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99913-005",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it quantifies the financial risk by providing large settlement amounts (US$456 million and US$698 million) for cases related to contamination.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99913-006",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it describes the forward-looking financial risks ('considerable financial disadvantages') associated with pending and future lawsuits, which, in context, relate to contamination.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99914",
+      "question_text": "Does the company disclose whether it thinks that loss of pollinators and beneficial insects, such as bees, is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99914-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant because it explicitly identifies 'pollination' as a key ecosystem service that agriculture is dependent on, and then states that 'transition risks' and 'physical risks' related to biodiversity and agriculture occur in the company's value chain. This directly links the concept of pollination to business risk.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99915",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99915-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant. It discusses 'higher product development costs' resulting from 'regulatory changes', which directly addresses the question's focus on rising costs related to compliance, testing, and registration for products.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99916",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99916-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet directly addresses the question by stating that 'a negative public perception of Bayer represents a risk' and explicitly links this risk to 'modern agricultural methods, such as the application of certain classes of crop protection products', which is a clear reference to chemical-intensive agriculture. It also mentions potential consequences like adverse effects on reputation and unfavorable regulatory decisions, aligning with the examples in the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    },
+    {
+      "question_id": "99917",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "verification_results": [
+        {
+          "snippet_id": "99917-001",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it explicitly identifies 'product liability' and 'environmental protection' as areas of risk from legal disputes, which directly addresses the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-002",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it details lawsuits concerning health claims ('personal injuries') from exposure to a specific company product (glyphosate-based products) and provides a specific, material financial provision.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-003",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it provides quantitative details on the scale of the glyphosate litigation (a key health-related legal challenge), which is central to the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-004",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is highly relevant as it describes class action lawsuits related to environmental claims ('PCBs in the environment') and provides multiple, specific, and material financial settlement amounts.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-005",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it discusses lawsuits for health claims ('personal injury') resulting from exposure to company products (PCBs) and quantifies the financial impact with a specific damage award.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        },
+        {
+          "snippet_id": "99917-006",
+          "is_relevant": true,
+          "relevance_explanation": "The snippet is relevant as it provides a general, forward-looking statement on the potential 'considerable financial disadvantages' from lawsuits, which summarizes the nature of the risk asked about in the question.",
+          "classification_issues": [],
+          "overall_quality": "excellent",
+          "recommendation": "keep_as_is"
+        }
+      ],
+      "has_issues": false
+    }
+  ],
+  "summary": {
+    "total_questions_verified": 13,
+    "total_snippets_verified": 42,
+    "relevant_snippets": 40,
+    "irrelevant_snippets": 2,
+    "snippets_needing_correction": 10,
+    "snippets_to_remove": 2,
+    "questions_with_issues": 5
+  }
+}

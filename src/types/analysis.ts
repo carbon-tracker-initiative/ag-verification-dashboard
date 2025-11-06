@@ -47,6 +47,8 @@ export interface Snippet {
   classification_justification: string;
   categorization: Categorization;
   financial_amounts: FinancialAmount[];
+  source_versions?: string[];
+  merger_metadata?: Record<string, any>;
 }
 
 /**
@@ -60,6 +62,7 @@ export interface Question {
   question_text: string;
   disclosures: Snippet[];
   summary: string;
+  merger_stats?: Record<string, any>;
 }
 
 /**
@@ -103,6 +106,9 @@ export interface AnalysisResult {
   analysis_results: Question[];
   summary_statistics: SummaryStatistics;
   verification_metadata?: VerificationMetadata;
+  completeness_summary?: Record<string, any>;
+  merger_summary?: Record<string, any>;
+  metadata?: Record<string, any>;
 }
 
 /**
@@ -130,4 +136,14 @@ export interface CompanyYearData {
   original?: AnalysisResult;
   verificationReport?: any; // Will be defined in verification.ts
   hasComparison: boolean;
+  isMerged?: boolean;
+  mergedMetadata?: {
+    sourceVersions: string[];
+    sourceFiles: Record<string, string>;
+    mergerSummary?: Record<string, any>;
+    completenessSummary?: Record<string, any>;
+    schemaVersion?: string;
+    mergerTimestamp?: string;
+    mergedFilename?: string;
+  };
 }

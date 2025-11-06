@@ -20,10 +20,16 @@ const sizeClasses = {
 };
 
 // Color scheme based on version (v4 = blue, v3 = gray, etc.)
-const versionNum = parseInt(version.replace('v', ''));
-const colorClass = isLatest || versionNum >= 4
-  ? 'bg-blue-100 text-blue-800 ring-blue-600/20'
-  : 'bg-gray-100 text-gray-700 ring-gray-600/20';
+const versionLower = version.toLowerCase();
+const isMergedVersion = versionLower.startsWith('merged');
+const numericVersion = parseInt(version.replace(/[^0-9]/g, ''), 10);
+const hasNumericVersion = !Number.isNaN(numericVersion);
+
+const colorClass = isMergedVersion
+  ? 'bg-emerald-100 text-emerald-800 ring-emerald-600/20'
+  : (isLatest || (hasNumericVersion && numericVersion >= 4)
+      ? 'bg-blue-100 text-blue-800 ring-blue-600/20'
+      : 'bg-gray-100 text-gray-700 ring-gray-600/20');
 ---
 
 <span class:list={[

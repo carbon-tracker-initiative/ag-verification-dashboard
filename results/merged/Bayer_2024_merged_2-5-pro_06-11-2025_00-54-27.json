@@ -1,0 +1,1831 @@
+{
+  "analysis_results": [
+    {
+      "question_id": "99901",
+      "question_number": 1,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that agricultural crops developing resistance to its pesticides, which are applied by the company's customers to cropland, is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on developing 'new, safe and sustainable crop protection products' and 'new modes of action' to help farmers manage threats. This proactive approach to innovation is framed as a way to provide improved solutions and achieve sustainability targets, indicating an effort to overcome a challenge, which aligns with an opportunity to innovate and maintain market relevance.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet discusses R&D priorities and strategies for product development without providing any specific monetary values or statements about financial materiality related to pesticide resistance. It focuses on qualitative aspects of innovation and solutions.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes ongoing R&D activities ('design, develop and optimize new... products', 'Discovering new modes of action is one of the priorities') and a continuous 'life-cycle management program', indicating a present-day and forward-looking approach to addressing challenges.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets have 'N/A' as the evidence text and are considered exact duplicates. The choice to keep v3 is arbitrary, as both provide similar context in their categorization justifications, but v3's is slightly more detailed.",
+            "merged_classification": "UNCLEAR",
+            "classification_rationale": "The evidence, as described in the categorization justifications, does not characterize pesticide resistance as a risk to Bayer's business. Instead, it frames the issue as a challenge that Bayer's products and R&D efforts are designed to solve (e.g., 'support resistance management strategies', 'developing new... products'). This is product benefit framing, not a risk disclosure, making the classification UNCLEAR.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": false,
+              "product_benefit_framing": true,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "support resistance management strategies",
+                "developing 'new, safe and sustainable crop protection products'",
+                "Discovering new modes of action is one of the priorities"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The source text for both snippets is 'N/A'. The entire analysis is based on the metadata (categorization justifications). A human should verify the original source to confirm if relevant text was missed or if 'N/A' is the correct final evidence."
+          }
+        },
+        {
+          "snippet_id": "99901-002",
+          "quote": "Our biologicals unit encompasses a broad range of solutions with a focus on microbial organisms and materials derived from them as well as plant extracts. Biologicals have the potential to reduce the use of synthetic chemicals, decrease residue levels and support resistance management strategies. By introducing biological products into programs with traditional chemistry, we are building a more holistic application system.",
+          "source": "Annual report 2024.pdf, Page 39, Crop Science",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that biological products 'support resistance management strategies.' This directly acknowledges the existence and importance of managing resistance to pesticides, indicating that it is a recognized challenge or risk that the business is actively addressing through its product portfolio and strategy. The development of biologicals as a solution confirms the company's awareness of this issue's relevance to its operations.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure presents biologicals as 'solutions' that 'have the potential to reduce the use of synthetic chemicals' and 'support resistance management strategies.' This frames the development and integration of biological products as a beneficial response to an existing challenge, aiming for improved outcomes and a 'more holistic application system,' which aligns with an opportunity for business growth and sustainability.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet describes the potential benefits and strategic role of biological products in 'resistance management strategies' without providing any specific financial figures, costs, or statements about the financial materiality of resistance itself. The focus is on qualitative strategic and product development aspects.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement discusses the 'potential' of biologicals and the ongoing process of 'introducing biological products into programs,' indicating a present-day strategy with a forward-looking perspective on developing and implementing solutions.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (2 snippets) and v4 (1 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 1,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 1,
+        "human_review_flagged": 1
+      }
+    },
+    {
+      "question_id": "99903",
+      "question_number": 2,
+      "category": "Human Health Risk",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'uncertainty caused by ongoing litigation hurt our share price development' clearly frames the situation as a negative consequence and a threat to the company's financial standing and market perception, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'hurt our share price development,' indicating a financial impact, but does not provide specific quantifiable financial values or state the financial materiality of the litigation. It refers to a general negative financial effect.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'ongoing litigation' and 'hurt our share price development' (past effect) combined with the forward-looking commitment to 'unleashing the full potential' and confidence in 'future' financial outcomes, indicates a present-day and forward-looking timeframe for the risk.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets are exact duplicates based on the 100% similarity score and pairing type. The categorization justifications refer to the same underlying text about litigation impacting share price. Version 3 is chosen as its justification more directly quotes the phrase linking the litigation to a negative financial outcome ('hurt our share price development'), making it slightly stronger evidence.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence, as described in the justifications, acknowledges that 'ongoing litigation' has 'hurt our share price development'. This directly identifies a business risk stemming from issues with the company's products. However, it lacks explicit financial materiality language (e.g., 'material impact') or specific quantified financial impacts, thus qualifying as a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "uncertainty caused by ongoing litigation hurt our share price development",
+                "ongoing litigation",
+                "continue to defend ourselves in court"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The text for both input snippets is 'N/A'. The entire analysis is based on the provided categorization justifications. The original source text should be reviewed to confirm the accuracy of the assessment."
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The discussion of 'PCB litigation,' 'punitive damages,' 'appealing the other verdicts,' and being 'prepared to settle' clearly frames the situation as a threat and a challenge, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'punitive damages' and being 'prepared to settle,' which imply financial consequences, but it does not provide specific monetary values. This indicates a potential financial impact without quantification.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The disclosure refers to multiple timeframes, including 'last year,' the 'coming months,' and '2025,' as well as the ongoing nature of the litigation ('will continue to defend').",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "The snippets are exact duplicates based on the 100% similarity score and 'exact' pairing type. They both describe litigation risk from products without providing the source text. I am selecting v4 arbitrarily, as both provide the same core information.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence, as described in the categorization, clearly frames litigation (e.g., 'PCB litigation', 'punitive damages') as a business risk. However, it lacks explicit financial materiality language (like 'material impact') or quantified financial figures, making it a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "PCB litigation",
+                "punitive damages",
+                "prepared to settle"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The source text for both snippets is 'N/A', which prevents verification of the provided analysis. The actual text from the source document is required to confirm the classification and categorization."
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure of a 'provision for the glyphosate litigation' clearly frames this as a financial burden and a negative consequence for the company, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values ('US$5.9 billion', '€5.7 billion') for the provision related to the glyphosate litigation, directly illustrating the financial impact of the disclosed risk.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The phrase 'As of December 31, 2024' indicates the provision exists at the reporting date, making it a present-day financial commitment, even though the litigation itself is ongoing and forward-looking.",
+            "timeframe": "Present day"
+          },
+          "financial_amounts": [
+            "US$5.9 billion",
+            "€5.7 billion"
+          ],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets describe the same disclosure based on the 100% similarity score. Version 3 is superior as it provides specific, quantified financial amounts ('US$5.9 billion', '€5.7 billion') for the glyphosate litigation, which is stronger and more direct evidence than the general statements described in Version 4's justification.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The disclosure of a multi-billion dollar provision ('US$5.9 billion') for litigation related to glyphosate, a product linked to human health concerns, represents a quantified financial impact. This meets the criteria for Full Disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": true,
+              "key_phrases": [
+                "provision for the glyphosate litigation",
+                "US$5.9 billion",
+                "adverse financial consequences"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The source text for both snippets is 'N/A'. The entire merge and analysis is based on the provided metadata. The original text should be located and verified to confirm the analysis."
+          }
+        },
+        {
+          "snippet_id": "99903-004",
+          "quote": "Monsanto also faces numerous lawsuits claiming personal injury due to use of and exposure to PCB products in school buildings. One group of pending cases with approximately 200 plaintiffs claims a wide variety of personal injuries allegedly due to PCBs in the building products of the school Sky Valley Education Center (“SVEC”) in King County, Washington. As of January 31, 2025, 10 trials had been completed in these matters, involving a total of 80 plaintiffs. 31 of these plaintiffs were not successful as the juries decided in favor of Monsanto or a mistrial was declared after the jury was unable to reach a decision. The other 49 plaintiffs were awarded a total of approximately US$320 million in compensatory and a multiple thereof in punitive damages. The undisputed evidence in these cases does not, in Bayer’s opinion, support the conclusions that plaintiffs were exposed to unsafe levels of PCBs or that any exposure could have caused their claimed injuries. Bayer has filed post-trial motions or appealed the adverse verdicts, or plans to do so, due to numerous significant trial errors.",
+          "source": "Annual report 2024.pdf, Page 94, Legal/compliance",
+          "financial_amounts": [
+            "US$320 million"
+          ],
+          "classification_justification": "This snippet explicitly details 'numerous lawsuits claiming personal injury due to use of and exposure to PCB products' and reports that plaintiffs were 'awarded a total of approximately US$320 million in compensatory and a multiple thereof in punitive damages.' This directly identifies human health problems from its products as a risk, quantifies some of the financial impact, and describes ongoing legal defense, clearly indicating its materiality to the business.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The description of 'numerous lawsuits claiming personal injury' and the awarding of 'compensatory and punitive damages' clearly frames this as a negative consequence and a threat to the business, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides an explicit, quantifiable financial value ('US$320 million') for damages awarded in PCB-related personal injury lawsuits, directly illustrating the financial impact of the disclosed risk.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure refers to 'pending cases,' '10 trials had been completed,' and 'Bayer has filed post-trial motions or appealed,' indicating a combination of backward-looking (completed trials), present-day (pending cases), and forward-looking (appeals) aspects of the risk.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_both",
+            "ai_rationale": "The snippets are distinct disclosures about the same topic. Snippet 3 refers to US$320 million in damages awarded for specific PCB-related lawsuits, while Snippet 4 refers to a much larger US$5.9 billion provision for litigation. Both are relevant and provide different, important pieces of information about the financial risk from personal injury claims. Keeping both provides a more complete picture.",
+            "human_review_recommended": false
+          }
+        },
+        {
+          "snippet_id": "99903-005",
+          "quote": "Glyphosate matter A large number of lawsuits from plaintiffs claiming to have been exposed to glyphosate-based products manufactured by Bayer’s subsidiary Monsanto Company (“Monsanto”) have been served upon Monsanto in the United States. Glyphosate is the active ingredient contained in a number of Monsanto’s herbicides, including Roundup™-branded products. Plaintiffs allege personal injuries resulting from exposure to those products, including non-Hodgkin lymphoma (NHL) and multiple myeloma, and are seeking compensatory and punitive damages. ... As of December 31, 2024, Bayer’s provision for the glyphosate litigation totaled US$5.9 billion (€5.7 billion). Bayer continues to believe there is no reason for safety concerns in connection with the products mentioned above.",
+          "source": "Annual report 2024.pdf, Page 93, Glyphosate matter",
+          "financial_amounts": [
+            "US$5.9 billion",
+            "€5.7 billion"
+          ],
+          "classification_justification": "This snippet provides a detailed disclosure of human health problems ('personal injuries resulting from exposure... including non-Hodgkin lymphoma (NHL) and multiple myeloma') alleged from glyphosate products. It explicitly states that plaintiffs are 'seeking compensatory and punitive damages' and provides a specific financial provision of 'US$5.9 billion (€5.7 billion)' for this litigation, thereby demonstrating financial materiality and clearly identifying this as a business risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The description of 'lawsuits,' 'personal injuries,' 'compensatory and punitive damages,' and a 'provision' clearly frames this as a threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "Explicit monetary values are provided for the provision ('US$5.9 billion', '€5.7 billion'), directly quantifying the financial impact of the litigation.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure refers to the provision 'As of December 31, 2024,' indicating a present-day financial commitment related to ongoing litigation.",
+            "timeframe": "Present day"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_both",
+            "ai_rationale": "The snippets are distinct disclosures about the same topic. Snippet 3 refers to US$320 million in damages awarded for specific PCB-related lawsuits, while Snippet 4 refers to a much larger US$5.9 billion provision for litigation. Both are relevant and provide different, important pieces of information about the financial risk from personal injury claims. Keeping both provides a more complete picture.",
+            "human_review_recommended": false
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The detailed description of 'numerous lawsuits,' 'personal injury,' 'damages,' 'settlements,' and 'considerable financial disadvantages' clearly frames this as a significant threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "Explicit monetary values are provided for damages awarded ('US$320 million') and various settlements ('US$160 million', 'US$35 million', 'US$456 million', 'US$698 million'), directly quantifying the financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure refers to 'pending cases' (present day), 'trials had been completed' (backward-looking), and 'may incur considerable financial disadvantages from... future cases' (forward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [
+            "US$160 million",
+            "US$35 million",
+            "US$320 million",
+            "US$456 million",
+            "US$698 million"
+          ],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Version 4 is a superset of Version 3. It includes all the financial amounts and context from v3 while adding several more significant financial figures and a broader description of the litigation risk, making it a more complete and informative snippet.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The disclosure quantifies significant financial impacts through multiple large settlements and damage awards (e.g., 'US$698 million', 'US$320 million') stemming from lawsuits over human health problems. The description of these as 'considerable financial disadvantages' confirms the company views this as a material business risk, meeting the criteria for full disclosure based on quantified impact.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "numerous lawsuits",
+                "personal injury",
+                "considerable financial disadvantages"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'products may be partially or completely withdrawn from the market due... to unexpected side effects or negative effects' and 'potential liability claims' clearly frames this as a source of potential harm and negative consequences for the business, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'loss of sales and earnings' and 'potential liability claims,' indicating a financial impact, but it does not provide specific monetary values. It acknowledges financial consequences without precise quantification.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The disclosure discusses potential future events ('products may be... withdrawn,' 'could lead to a loss of sales') and ongoing mitigation efforts ('We counter such risks by taking comprehensive measures'), indicating a forward-looking and present-day timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets are based on the same underlying evidence. Version 3 has the more accurate classification ('PARTIAL') as the text acknowledges the risk and financial impact without using explicit materiality language, whereas Version 4 is incorrectly classified as 'FULL_DISCLOSURE'.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence clearly identifies human health problems from products as a business risk, citing potential for market withdrawal, 'loss of sales and earnings,' and 'potential liability claims.' However, it lacks explicit financial materiality language (e.g., 'material impact') or quantified financial data, making 'PARTIAL' the correct classification.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "products may be partially or completely withdrawn from the market",
+                "unexpected side effects or negative effects",
+                "loss of sales and earnings",
+                "potential liability claims"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (6 snippets) and v4 (6 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 6,
+        "v4_snippets": 6,
+        "merged_snippets": 7,
+        "snippet_pairs": 6,
+        "ai_reviews_conducted": 6,
+        "human_review_flagged": 3
+      }
+    },
+    {
+      "question_id": "99904",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'Transitory climate risk' and the mention of 'capital expenditure requirement' and 'emissions trading systems' clearly frame this as a potential negative consequence or challenge for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet refers to a 'capital expenditure requirement' and 'emissions trading systems,' which inherently involve financial costs, thereby indicating financial materiality without providing specific monetary values in this particular passage.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The disclosure discusses a 'capital expenditure requirement for adaptation... depending on regulations, legislation or availabilities,' indicating future costs and potential regulatory changes.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Both snippets are exact duplicates. Version 4 is chosen because its categorization justification provides more specific and stronger evidence of risk disclosure by citing phrases like 'Transitory climate risk' and 'capital expenditure requirement'.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company identifies 'Transitory climate risk' and potential 'capital expenditure requirement' related to carbon costs, clearly acknowledging this as a business risk. However, the provided justifications do not mention explicit financial materiality language (e.g., 'material impact') or a quantified financial impact, which is required for a FULL_DISCLOSURE classification.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "Transitory climate risk",
+                "capital expenditure requirement",
+                "emissions trading systems"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The source text for both snippets is 'N/A', making it impossible to verify the analysis. Additionally, the classification was downgraded from the original v4's FULL_DISCLOSURE to PARTIAL based on the justification text, as no evidence of explicit materiality language was present."
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'reducing the risk of additional costs' and 'Carbon prices not only affect the cost structure... but could also impact demand' clearly frames this as a potential negative consequence or challenge for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet explicitly mentions 'additional costs' and the impact on 'cost structure' and 'demand,' indicating financial materiality without providing specific monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The disclosure refers to 'expected regulations,' 'could also impact demand,' and 'continuously analyze the further impacts,' indicating ongoing and potential future effects.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Exact duplicate based on the 100% similarity score. While both snippets lack the original text, the categorization justification for v4 provides a more comprehensive set of phrases ('risk of additional costs', 'affect the cost structure', 'impact demand') that clearly support the risk framing.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence, as described in the justifications, clearly identifies carbon costs as a business risk with financial implications (e.g., 'risk of additional costs,' 'affect the cost structure,' 'impact demand'). However, it lacks explicit financial materiality language (like 'material' or 'significant') or a quantified impact, which is required for a FULL_DISCLOSURE classification.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "Transitory climate risk",
+                "risk of additional costs",
+                "Carbon prices not only affect the cost structure... but could also impact demand"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'reducing the risk of additional costs,' 'Carbon prices not only affect the cost structure,' and 'transitory risks necessitating significant investment' clearly frames carbon costs as a potential negative financial consequence and a threat to the business, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet explicitly mentions 'additional costs,' 'affect the cost structure,' and 'significant investment,' indicating financial impacts. However, it lacks explicit materiality language (like 'material impact') or specific quantified values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The disclosure refers to 'expected regulations,' 'through 2029,' and 'years after 2029,' indicating a forward-looking or multiple timeframe perspective.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Both snippets are exact duplicates with 'N/A' text. Version 4's categorization provides slightly more specific details about the nature of the risk (e.g., 'capital expenditure requirement through 2029'), making it a better foundation for the merged snippet, although its classification requires correction.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence describes carbon costs as 'transitory risks necessitating significant investment' and a 'capital expenditure requirement.' This clearly acknowledges the topic as a business risk with financial implications. However, it does not contain explicit materiality language (e.g., 'material impact,' 'not material') or a quantified financial impact, which is required for a FULL_DISCLOSURE classification.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "transitory risks necessitating significant investment",
+                "capital expenditure requirement",
+                "Carbon prices not only affect the cost structure"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure explicitly identifies 'transitory risks necessitating significant investment' and 'capital expenditure requirement' to adapt to regulations, clearly framing this as a financial burden and a threat to the business if not managed, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides an explicit, quantifiable financial value ('up to €200 million') for the capital expenditure requirement related to greenhouse gas emissions reduction measures and emissions trading systems, directly illustrating the financial impact of the disclosed risk.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure refers to 'capital expenditure requirement through 2029' and 'ambitious climate target of net zero greenhouse gas emissions in 2050,' indicating a forward-looking timeframe for these costs and targets.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [
+            "€200 million"
+          ],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "The snippets are identical duplicates. Version 3 is chosen as its categorization justifications are more detailed and provide a clearer link to the concept of business risk.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The company provides a quantified financial impact ('up to €200 million') for capital expenditures required to manage climate-related 'transitory risks'. This specific financial quantification meets the criteria for a full disclosure of the risk's impact on the business.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "transitory risks necessitating significant investment",
+                "capital expenditure requirement",
+                "up to €200 million"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (4 snippets) and v4 (4 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 4,
+        "v4_snippets": 4,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 4,
+        "human_review_flagged": 1
+      }
+    },
+    {
+      "question_id": "99905",
+      "question_number": 4,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that reduced soil fertility caused by its pesticides is a risk to the business? For instance, the increase in toxicity of the soil impacting human health, or the potentially declining yield experienced by farmers applying the pesticide.",
+      "disclosures": [
+        {
+          "snippet_id": "99905-001",
+          "quote": "We promote a concept of regenerative agriculture that is defined as an outcome-based production model based on two key building blocks: productivity, which focuses on helping farmers maintain or increase yield with fewer inputs for improved social and economic wellbeing outcomes; and regeneration, which prioritizes a positive impact on nature, with efforts such as striving to improve soil health, reducing field-level greenhouse gas emissions and increasing carbon sequestration to mitigate climate change, preserving and restoring on-farm biodiversity, enhancing plant genetic diversity, and conserving water resources.",
+          "source": "Annual report 2024.pdf, Page 34, Strategies of the divisions",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR because the snippet does not identify reduced soil fertility as a business risk. Instead, it frames improving soil health as a strategic goal and an opportunity. The PARTIAL classification requires the topic to be clearly identified as a business risk.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure frames 'striving to improve soil health' as a 'positive impact on nature' and a key building block of 'regenerative agriculture.' This positions the company's efforts as beneficial and value-creating, aligning with an 'Opportunity' framing to contribute to sustainable agriculture.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet describes strategic goals and efforts related to soil health without providing any specific financial figures, costs, or statements about the financial materiality of reduced soil fertility. It focuses on qualitative strategic and environmental aspects.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes an ongoing strategic commitment ('We promote a concept') and future-oriented efforts ('striving to improve soil health'), indicating a present-day and forward-looking timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false
+          }
+        },
+        {
+          "snippet_id": "99905-002",
+          "quote": "Products containing substances of (very high) concern according to ESRS also harbor several potentially negative effects. These include possible impacts on the environment through uncontrolled release into the air, water and soil that could be caused, for example, by environmental events, improper use of products or improper disposal of waste.",
+          "source": "Annual report 2024.pdf, Page 111, Material impacts, risks and opportunities and their interaction with strategy and business model [SBM-3]",
+          "financial_amounts": [],
+          "classification_justification": "This snippet acknowledges that 'Products containing substances of (very high) concern' can have 'possible impacts on the environment through uncontrolled release into the air, water and soil,' including from 'improper use of products.' While it doesn't specifically name 'pesticides' or 'reduced soil fertility,' it broadly covers the potential for its products to negatively impact soil, especially with improper use, which is a partial acknowledgment of the underlying concern of the question.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure identifies 'potentially negative effects' and 'possible impacts on the environment' from its products, clearly framing this as a source of potential harm and negative consequences, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses potential negative environmental impacts without providing any specific financial figures, costs, or statements about financial materiality. It focuses on qualitative environmental effects.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'harbor several potentially negative effects' and 'could be caused' indicates a forward-looking perspective on potential future impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false
+          }
+        },
+        {
+          "snippet_id": "99905-003",
+          "quote": "14 – Soil degradation and species decline in flora and fauna on farmland",
+          "source": "Annual report 2024.pdf, Page 114, Impacts Related to Sustainability Matters",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The snippet lists 'Soil degradation' as a sustainability impact but does not characterize it as a business risk, nor does it link it to the company's own products (pesticides). The PARTIAL classification requires a clear identification as a business risk.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The listing of 'Soil degradation' as a 'Negative impact' clearly frames this as an undesirable outcome and a threat to environmental health, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "This is a qualitative statement of impact without any associated financial figures or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The listing of 'Potential' negative impacts suggests a forward-looking perspective on possible future occurrences.",
+            "timeframe": "Forward-looking"
+          },
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false
+          }
+        },
+        {
+          "snippet_id": "99905-004",
+          "quote": "Both transition risks (e.g. related to politics or our reputation) and physical risks (e.g. through soil degradation) related to biodiversity and agriculture in general therefore occur in value chains like that of Bayer, although these risks can vary broadly by region and in terms of our value chain. This also applies to systemic agricultural risks.",
+          "source": "Annual report 2024.pdf, Page 118, Description of processes to identify and assess material biodiversity and ecosystem-related impacts, risks and opportunities [E4.IRO-1]",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'physical risks (e.g. through soil degradation) related to biodiversity and agriculture in general' as occurring in Bayer's value chains. This directly acknowledges soil degradation as a physical risk relevant to the business, even if it doesn't specifically attribute the cause to its own pesticides or quantify the financial impact.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure explicitly identifies 'physical risks (e.g. through soil degradation)' as occurring in the value chain, clearly framing this as a source of potential harm and negative consequences for the business, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'physical risks' and 'systemic agricultural risks' but does not provide any specific financial figures or statements about financial materiality. It focuses on qualitative risk identification.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement uses 'occur in value chains' and 'applies to systemic agricultural risks,' indicating a present-day and ongoing nature of these risks, with implications for the future.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (4 snippets) and v4 (0 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 4,
+        "v4_snippets": 0,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99906",
+      "question_number": 5,
+      "category": "Human Health Risk",
+      "question_text": "Does the company disclose whether it thinks that factory workplace hazards including chemical exposure during production of pesticides is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure explicitly states that the 'materialization of any of these risks could lead to production disruptions or stoppages, result in personal injury and damage to our reputation, give rise to declines in sales and/or margins,' clearly framing this as a source of actual or potential harm and negative consequences for the business, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'declines in sales and/or margins' and 'necessitate the reconstruction of damaged infrastructure,' indicating financial impacts, but it does not provide specific monetary values. It acknowledges financial consequences without precise quantification.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of 'may be disrupted' and 'could lead to' indicates a forward-looking perspective on potential future events and their consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "The snippets are identical duplicates, as indicated by the 100% similarity score and nearly identical categorization justifications. Keeping one is sufficient.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence acknowledges workplace hazards as a business risk, citing potential impacts like 'production disruptions,' 'damage to our reputation,' and 'declines in sales and/or margins.' This directly addresses the question. However, it lacks explicit financial materiality language (e.g., 'material impact') or quantified financial data, making it a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "materialization of any of these risks could lead to production disruptions or stoppages",
+                "result in personal injury and damage to our reputation",
+                "give rise to declines in sales and/or margins"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure identifies 'personal injury' and 'loss of production, business interruptions and/or liability for compensation payments' as potential negative outcomes of noncompliance, clearly framing this as a source of actual or potential harm and negative consequences for the business, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'liability for compensation payments' and 'loss of production, business interruptions,' indicating financial impacts, but it does not provide specific monetary values. It acknowledges financial consequences without precise quantification.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement uses 'may result in' for potential negative outcomes and describes ongoing efforts ('We have put in place principles, standards and measures'), indicating a forward-looking and present-day timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "The snippets are identical, as indicated by the 100% similarity score and nearly identical categorization justifications. Version 3 is chosen as its justifications are slightly more comprehensive, particularly for the timeframe.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence, as described in the justifications, links noncompliance to 'personal injury' and subsequent business impacts like 'loss of production, business interruptions and/or liability for compensation payments'. This acknowledges the topic as a business risk but lacks explicit financial materiality language or quantified financial figures, thus qualifying as a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "personal injury",
+                "loss of production, business interruptions",
+                "liability for compensation payments"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The text for both snippets is 'N/A'. While the justifications provide context, the absence of the source text is a significant issue that requires human verification to ensure the analysis is based on actual evidence."
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The listing of 'Health risks' as a 'Negative impact' clearly frames this as an undesirable outcome and a threat to human health, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "This is a qualitative statement of impact without any associated financial figures or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The listing of 'Potential' negative impacts suggests a forward-looking perspective on possible future occurrences.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets are exact duplicates based on the same missing text ('N/A'). I recommend keeping v3 because its 'PARTIAL' classification is more consistent with the justifications provided in both snippets, which describe the topic being framed as a 'Negative impact' and a 'threat,' indicating it's acknowledged as a risk.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence, as described in the justifications, acknowledges 'Health risks' and 'injuries for employees' as 'Negative impacts,' which frames the topic as a business risk. However, there is no indication of an explicit financial materiality assessment, making the disclosure PARTIAL.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "Health risks",
+                "Negative impact",
+                "injuries for employees"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The source text for both snippets is 'N/A'. The entire analysis is based on interpreting the metadata (categorization justifications), which is unreliable. The original source document should be checked to find the actual text."
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The listing of 'Physical or psychological injuries for employees' as a 'Negative impact' clearly frames this as an undesirable outcome and a threat to employee well-being, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "This is a qualitative statement of impact without any associated financial figures or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The listing of 'Potential' negative impacts suggests a forward-looking perspective on possible future occurrences.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets are exact duplicates based on the 100% similarity score and pairing type, despite having 'N/A' as text. The analysis is based on the justification fields. v3 is chosen as its 'PARTIAL' classification is more accurate than v4's 'UNCLEAR', as the company clearly frames employee injuries as a 'Negative impact'.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company acknowledges 'Physical or psychological injuries for employees' and 'occupational injuries or potential hazards' as a 'Negative impact'. This clearly identifies the topic as a business risk, but it lacks any explicit financial materiality assessment or quantification, making it a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "Physical or psychological injuries for employees",
+                "Negative impact",
+                "occupational injuries or potential hazards"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The 'text' field for both snippets is 'N/A'. The analysis is based on reconstructing the evidence from the justification fields. The original source text should be located and added to the snippet."
+          }
+        },
+        {
+          "snippet_id": "99906-005",
+          "quote": "The Health, Safety and Environmental Management (HSE) and HSE Key Requirements Policy outlines the essential health, safety and environmental standards and practices that must be adhered to within our own operations. The policy aims to communicate guidelines on pollution control, waste management, occupational health and safety, emergency preparedness and environmental protection. In this way, we want to counteract potential negative impacts such as those resulting from occupational injuries or potential hazards in the work environment. Thus, we also want to ensure that the relevant statutory regulations pertaining to environmental management are known to our organization.",
+          "source": "Annual report 2024.pdf, Page 121, Holistic policies for managing material sustainability matters [MDR-P]",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that the HSE policy aims to 'communicate guidelines on... occupational health and safety' and 'counteract potential negative impacts such as those resulting from occupational injuries or potential hazards in the work environment.' This directly acknowledges factory workplace hazards, including chemical exposure (implied by 'hazards in the work environment' in a chemical production context), as a risk that the company actively manages to prevent 'occupational injuries.'",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The policy aims to 'counteract potential negative impacts such as those resulting from occupational injuries or potential hazards,' clearly framing these as threats that require mitigation and management, aligning with a 'Risk' framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes a policy and its objectives related to health and safety without providing any specific financial figures, costs, or statements about financial materiality. It focuses on qualitative management and prevention aspects.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The policy 'outlines the essential... standards and practices' and aims to 'counteract potential negative impacts,' indicating a present-day and forward-looking approach to risk management.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (5 snippets) and v4 (4 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 5,
+        "v4_snippets": 4,
+        "merged_snippets": 5,
+        "snippet_pairs": 5,
+        "ai_reviews_conducted": 4,
+        "human_review_flagged": 3
+      }
+    },
+    {
+      "question_id": "99907",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'could also become subject to more stringent regulation' and 'potentially impacting our business' frames this as a potential negative consequence or threat to the company's operations and financial performance.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'impacting our business' and 'financial losses' in the broader context of regulatory changes, but does not provide specific monetary values or state financial materiality for this particular risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'could also become subject to' and 'potentially impacting' indicates a future-oriented perspective on potential regulatory changes and business impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Both snippets are based on the same underlying evidence (100% similarity, 'exact' pairing). Version 4 is preferred because its 'PARTIAL' classification and supporting justification ('potentially impacting our business') more accurately reflect the acknowledgment of a business risk compared to Version 3's 'UNCLEAR' classification.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence, as described in the justifications, acknowledges that issues arising from product use could lead to 'more stringent regulation' and are 'potentially impacting our business'. This frames the topic as a business risk but lacks any explicit financial materiality assessment, fitting the definition of a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "potentially impacting our business",
+                "could also become subject to more stringent regulation",
+                "potentially negative effects"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The text for both snippets is 'N/A', preventing a full verification of the analysis. The classification is based solely on the provided justifications, which may be incomplete or misinterpreted without the source text."
+          }
+        },
+        {
+          "text": "Reduced water quality due to product residues",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing": "Risk",
+            "framing_justification": "The snippet is listed under 'Negative impacts' in a table, clearly framing the issue as a detrimental effect on the environment, which implicitly poses a risk to the business's license to operate and reputation.",
+            "financial_justification": "This disclosure identifies a negative environmental impact but does not provide any explicit financial figures or statements about its financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe": "Present day",
+            "timeframe_justification": "The statement describes an existing or ongoing impact ('Reduced water quality'), implying a present-day condition or a continuous process."
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Both snippets are identical, referencing the same disclosure. Version 4 has a more accurate classification (PARTIAL) as the company listing 'Reduced water quality' under 'Negative impacts' constitutes an acknowledgement of risk to the business.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company identifies 'Reduced water quality due to product residues' as a 'Negative impact'. This explicitly frames the issue as a detrimental consequence of its products/operations, which is an acknowledgement of a business risk. However, it lacks any explicit financial materiality assessment, making it a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "Negative impact",
+                "Reduced water quality due to product residues"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The 'text' field for both snippets is 'N/A', which is likely a data extraction error. The merged text 'Reduced water quality due to product residues' is inferred from the categorization justification and should be verified against the source document."
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (2 snippets) and v4 (2 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 2,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 2,
+        "human_review_flagged": 2
+      }
+    },
+    {
+      "question_id": "99908",
+      "question_number": 2,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99908-001",
+          "quote": "Moreover, a negative public perception of Bayer represents a risk. For example, modern agricultural methods, such as the application of certain classes of crop protection products and the use of biotechnology, are often the subject of intense public debate, which may adversely affect our reputation. The risk of an increasingly negative public debate that is not primarily based on science may, for example, lead to legislative and regulatory decisions that are unfavorable to our company, significantly limiting the use of our products or even resulting in voluntary or mandated product withdrawals.",
+          "source": "Annual report 2024.pdf, Page 86, Section 3.2.2 Opportunity and Risk Status",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'negative public perception' of modern agricultural methods (which includes the use of crop protection and biotechnology, often contrasted with organic farming) as a risk. It explicitly states this could lead to 'legislative and regulatory decisions that are unfavorable' and 'significantly limiting the use of our products or even resulting in voluntary or mandated product withdrawals,' which directly implies demand destruction for their products.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'negative public perception of Bayer represents a risk' and 'may adversely affect our reputation' clearly frames this as a threat or negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'significantly limiting the use of our products or even resulting in voluntary or mandated product withdrawals,' which implies financial impact through reduced sales, but does not provide specific monetary values or explicitly state financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrases 'increasingly negative public debate' and 'may, for example, lead to' indicate a forward-looking assessment of potential future developments and their consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (0 snippets) and v4 (1 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99909",
+      "question_number": 3,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+      "disclosures": [
+        {
+          "snippet_id": "99909-001",
+          "quote": "Residues of agrochemical products, pharmaceutical compounds or microplastics in the environment could also become subject to more stringent regulation. In addition, regulatory changes could affect agricultural imports from other parts of the world, potentially impacting our business in those regions.",
+          "source": "Annual report 2024.pdf, Page 87, Section 3.2.2 Opportunity and Risk Status",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'residues of agrochemical products... in the environment' as a potential issue that could lead to 'more stringent regulation' and 'impacting our business.' Nutrient runoff, which causes eutrophication, falls under 'residues of agrochemical products' from farmer application, and its regulation would directly impact the business. The instruction to exclude factory sources is met as this refers to 'agrochemical products' in the environment.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'could also become subject to more stringent regulation' and 'potentially impacting our business' frames this as a potential negative consequence or threat to the company's operations and financial performance.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'impacting our business' and 'financial losses' in the broader context of regulatory changes, but does not provide specific monetary values or state financial materiality for this particular risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'could also become subject to' and 'potentially impacting' indicates a forward-looking perspective on potential regulatory changes and business impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        },
+        {
+          "snippet_id": "99909-002",
+          "quote": "11 – Reduced water quality due to product residues in the downstream value chain",
+          "source": "Annual report 2024.pdf, Page 114, Section A 4.1/5 Impacts Related to Sustainability Matters",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies a negative environmental impact ('Reduced water quality') but does not explicitly state this is a risk *to the business*. The PARTIAL classification requires the issue to be clearly identified as a business risk. Since the text only acknowledges the environmental impact without linking it to business repercussions, the classification should be UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The snippet is listed under 'Negative impacts' in a table, clearly framing the issue as a detrimental effect on the environment, which implicitly poses a risk to the business's license to operate and reputation.",
+            "framing": "Risk",
+            "financial_justification": "This disclosure identifies a negative environmental impact but does not provide any explicit financial figures or statements about its financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes an existing or ongoing impact ('Reduced water quality'), implying a present-day condition or a continuous process.",
+            "timeframe": "Present day"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        },
+        {
+          "snippet_id": "99909-003",
+          "quote": "Our majority holding in CoverCress Inc., the producer of the eponymous cash crop which is used to produce biofuels, offers us additional market opportunities. Planted as a cash crop, this oilseed can help reduce erosion, improve soil health, reduce water and nutrient loss and boost carbon sequestration in soil.",
+          "source": "Annual report 2024.pdf, Page 33, Section 1.2.1 Strategy and Management",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes a product that 'can help... reduce water and nutrient loss.' While not explicitly stating 'eutrophication from nutrient runoff is a risk,' the company's effort to develop products that mitigate 'nutrient loss' implies an acknowledgment of this environmental problem, which is directly linked to eutrophication. The framing is as an opportunity to address this issue, which indirectly confirms the underlying problem as a concern.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language 'offers us additional market opportunities' and 'can help reduce' frames this disclosure as a positive development and a solution to an environmental problem, rather than explicitly as a risk.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet does not contain any explicit financial figures or statements about financial materiality. It focuses on the environmental benefits and market opportunities.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes the current capabilities of a product ('can help reduce') and future 'market opportunities,' indicating a present-day and forward-looking perspective.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (0 snippets) and v4 (3 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 3,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99912",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'restrictions could be imposed', 'challenged in court', 'revocation of product registrations or approvals', and 'financial loss' clearly frames this as a threat or negative consequence for the business, aligning with the 'Risk' definition.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly mentions 'financial loss from reduced sales' but does not provide a specific monetary value, indicating an acknowledgment of financial impact without quantification, thus 'Partial-type'.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrases 'continue to develop', 'may become more stringent', 'could be imposed', and 'will likely continue to be challenged' indicate potential future events and ongoing developments, aligning with 'Forward-looking'.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets are exact duplicates from the same source. Version 3 is chosen because its 'financial_type' categorization ('Partial-type') is more accurate than version 4's ('Non-Financial'), given that the evidence explicitly mentions 'financial loss'.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company acknowledges the risk of product bans or restrictions ('revocation of product registrations or approvals') and the potential for 'financial loss from reduced sales'. This is a clear acknowledgment of risk but lacks explicit financial materiality language or quantification, making it a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "restrictions could be imposed",
+                "revocation of product registrations or approvals",
+                "financial loss from reduced sales"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'risk of an increasingly negative public debate' and 'unfavorable to our company, significantly limiting the use of our products or even resulting in voluntary or mandated product withdrawals' clearly frames this as a threat or negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet implies financial impact through 'limiting the use of our products' or 'product withdrawals,' but it does not provide specific monetary values or explicitly state financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrases 'increasingly negative public debate' and 'may, for example, lead to' indicate a forward-looking assessment of potential future developments and their consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Both snippets are marked as exact duplicates and their justifications point to the same disclosure about risks leading to product withdrawals. Version 4 is chosen because its justification provides a slightly clearer and more direct link to the concept of 'risk' by quoting the phrase 'risk of an increasingly negative public debate'.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company explicitly identifies the 'risk of an increasingly negative public debate' which could result in 'voluntary or mandated product withdrawals' or 'significantly limiting the use of our products'. This acknowledges the topic as a business risk but lacks any explicit financial materiality assessment.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "risk of an increasingly negative public debate",
+                "significantly limiting the use of our products",
+                "voluntary or mandated product withdrawals"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "snippet_id": "99912-003",
+          "quote": "Despite extensive studies prior to approval or registration, products may be partially or completely withdrawn from the market due, for example, to the occurrence of unexpected side effects or negative effects of our products. Such a withdrawal may be voluntary or result from legal or regulatory measures. The materialization of any of these risks could, for example, lead to a loss of sales and earnings, a negative impact on our reputation and potential liability claims.",
+          "source": "Annual report 2024.pdf, Page 95, Section 3.2.2 Opportunity and Risk Status",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'products may be partially or completely withdrawn from the market' due to 'unexpected side effects or negative effects' or 'legal or regulatory measures.' It further links this to 'a loss of sales and earnings,' directly addressing the question of products being banned or withdrawn as a business risk with financial implications.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'products may be partially or completely withdrawn,' 'negative effects,' and 'loss of sales and earnings' clearly frames this as a threat or negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'a loss of sales and earnings,' indicating a financial impact, but it does not provide specific monetary values or explicitly state financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'may be partially or completely withdrawn' and 'could... lead to' indicates a forward-looking assessment of potential future events and their consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        },
+        {
+          "snippet_id": "99912-004",
+          "quote": "Regulatory authorities in a country can, in principle, withdraw or substantially restrict the registration for a pharmaceutical or crop protection product and thus prohibit or limit the sale of a product or product group in a market.",
+          "source": "Annual report 2024.pdf, Page 106, Section 4.1 General Information on the Sustainability Statement",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a regulatory power in a factual manner ('Regulatory authorities... can... withdraw') but does not frame this as a specific risk to the company. This fits the definition of UNCLEAR: 'Topic acknowledged but NOT characterized as a business risk'.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The statement describes a factual power of regulatory authorities that can lead to negative outcomes for the business ('prohibit or limit the sale'), thus framing it as a potential threat.",
+            "framing": "Risk",
+            "financial_justification": "The snippet implies a financial impact through 'prohibit or limit the sale,' but it does not provide specific monetary values or explicitly state financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes a general capability of regulatory authorities ('can, in principle, withdraw or substantially restrict'), which is a present-day condition with potential future consequences.",
+            "timeframe": "Present day"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (2 snippets) and v4 (4 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 4,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 2,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99913",
+      "question_number": 5,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'may result in... liability for compensation payments' and 'obligation to remediate contamination' clearly frames this as a threat or negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'liability for compensation payments' and 'obligation to remediate contamination,' indicating a financial impact, but it does not provide specific monetary values or explicitly state financial materiality for this general risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'may result in' indicates a forward-looking assessment of potential future events and their consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "The snippets are identical duplicates, as indicated by the 100% similarity score and nearly identical categorization justifications. Keeping one version is sufficient.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The disclosure acknowledges the 'obligation to remediate contamination' and potential 'liability for compensation payments' as a risk to the business. However, it lacks explicit financial materiality language (e.g., 'material impact') or quantified financial figures, thus qualifying as a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "may result in... liability for compensation payments",
+                "obligation to remediate contamination"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The text for both snippets is 'N/A', but the categorization justifications quote specific text. The original source text should be verified to confirm the analysis."
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The recognition of 'Provisions for environmental protection measures' for 'obligations to remediate contaminated sites' implies a financial burden and a necessary cost, framing it as a 'Risk' to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides an explicit, quantifiable financial value of '€1,000 million' for provisions related to contaminated site remediation, directly linking a monetary figure to the risk, thus 'Financial'.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement refers to 'provisions... as of December 31, 2024' and 'expected costs... required to fulfill the obligations', indicating an existing liability that will be addressed in the present and future, aligning with 'Present day'.",
+            "timeframe": "Present day"
+          },
+          "financial_amounts": [
+            "€1,000 million"
+          ],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Snippet v3 directly addresses the question by mentioning 'provisions for environmental protection measures' for 'obligations to remediate contaminated sites'. Snippet v4 discusses lawsuits against Monsanto for 'a variety of damages,' which is less specific and likely refers to product liability litigation rather than the restoration of manufacturing sites, making it less relevant.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The company quantifies the financial risk by disclosing a provision of '€1,000 million' specifically for 'obligations to remediate contaminated sites'. This large, specific financial figure serves as a direct quantification of the risk's impact on the business, meeting the criteria for a full disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "Provisions for environmental protection measures",
+                "obligations to remediate contaminated sites",
+                "€1,000 million"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The payment to 'settle the lawsuit' and the allocation for 'PCB remediation' clearly frame this as a negative consequence and financial burden for the business, aligning with the 'Risk' definition.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides explicit, quantifiable financial values ('US$160 million', 'US$35 million') directly linked to a legal settlement and remediation costs, making it 'Financial'.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The event 'In July 2024, Bayer agreed' refers to a completed past event with a financial outcome, aligning with 'Backward-looking'.",
+            "timeframe": "Backward-looking"
+          },
+          "financial_amounts": [
+            "US$160 million",
+            "US$35 million"
+          ],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "The snippets are identical in all substantive fields, including classification, categorization justifications, and financial amounts. They represent the same piece of evidence.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The evidence discloses a specific, quantified financial impact (a 'US$160 million' settlement with 'US$35 million' for 'PCB remediation') directly related to the restoration of contaminated sites. This quantification of financial consequences constitutes a full disclosure of the risk's impact, even without explicit materiality language.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "US$160 million",
+                "US$35 million",
+                "PCB remediation"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The 'text' field is 'N/A', which contradicts the detailed analysis in the categorization, financial amounts, and classification. The analysis appears to be based on evidence that is missing from the snippet."
+          }
+        },
+        {
+          "snippet_id": "99913-004",
+          "quote": "In September 2024, Bayer agreed, without admission of liability, to pay US$35 million to settle the lawsuit with the City of Los Angeles.",
+          "source": "Annual report 2024.pdf, Page 94, Section 3.2.2 Opportunity and Risk Status",
+          "financial_amounts": [
+            "US$35 million"
+          ],
+          "classification_justification": "This snippet provides another concrete example of a settlement payment for a lawsuit related to PCB contamination, which implies costs for remediation, thus demonstrating the financial impact of contaminated site restoration as a business risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The settlement to 'pay US$35 million' for a lawsuit is a direct consequence of a legal dispute, framing it as a negative financial outcome or risk realization.",
+            "framing": "Risk",
+            "financial_justification": "An explicit monetary value of 'US$35 million' is provided for the settlement, directly quantifying a financial impact related to contamination.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The event 'In September 2024, Bayer agreed' clearly places this event in the past, making it a backward-looking disclosure.",
+            "timeframe": "Backward-looking"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        },
+        {
+          "snippet_id": "99913-005",
+          "quote": "Prior cases filed or threatened by Washington, Washington D.C., New Mexico, New Hampshire, Ohio, Pennsylvania and Virginia were settled for a combined total of approximately US$456 million. The Company also settled a pending matter with the State of Oregon for US$698 million, reflecting unique circumstances in that State.",
+          "source": "Annual report 2024.pdf, Page 94, Section 3.2.2 Opportunity and Risk Status",
+          "financial_amounts": [
+            "US$456 million",
+            "US$698 million"
+          ],
+          "classification_justification": "This snippet details multiple settlements for 'prior cases' and a 'pending matter' related to PCB contamination, providing specific financial amounts. These settlements represent the financial consequences of contaminated site liabilities, directly addressing the question as a business risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The settlements for 'cases filed or threatened' and 'pending matter' are direct consequences of legal disputes, framing them as negative financial outcomes or risk realizations.",
+            "framing": "Risk",
+            "financial_justification": "Explicit monetary values are provided: 'US$456 million' and 'US$698 million' for settlements related to contamination, directly quantifying the financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The phrase 'Prior cases filed or threatened' and 'settled a pending matter' indicates these events occurred in the past, making it a backward-looking disclosure.",
+            "timeframe": "Backward-looking"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        },
+        {
+          "snippet_id": "99913-006",
+          "quote": "We may incur considerable financial disadvantages from pending lawsuits and/or potential future cases if, for example, we are ordered to pay compensatory and possibly punitive damages or if we assume payment obligations under out-of-court settlements. We could be compelled to cover any such increased financial requirements by issuing additional external debt, increasing our equity capital or divesting assets – possibly on unfavorable terms – or through combinations of these measures. The terms on which we obtain external financing could become less favorable as a result of any increased financial requirements. The materialization of any of these risks may also adversely affect our reputation and our commercial success.",
+          "source": "Annual report 2024.pdf, Page 95, Section 3.2.2 Opportunity and Risk Status",
+          "financial_amounts": [],
+          "classification_justification": "This snippet provides a forward-looking assessment of the financial disadvantages from 'pending lawsuits and/or potential future cases' related to contamination (as per the PCB context), including 'compensatory and possibly punitive damages' and 'payment obligations under out-of-court settlements.' It also details potential financial strategies to cover these, such as 'issuing additional external debt' or 'divesting assets,' clearly identifying the financial risk associated with contaminated site restoration.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'may incur considerable financial disadvantages,' 'ordered to pay damages,' and 'adversely affect our reputation and our commercial success' clearly frames this as a threat or negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses 'considerable financial disadvantages,' 'compensatory and possibly punitive damages,' and 'payment obligations,' indicating financial impact, but it does not provide specific monetary values for future potential costs.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrases 'may incur,' 'potential future cases,' and 'could be compelled' indicate a forward-looking assessment of potential future financial impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (3 snippets) and v4 (6 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 3,
+        "v4_snippets": 6,
+        "merged_snippets": 6,
+        "snippet_pairs": 6,
+        "ai_reviews_conducted": 3,
+        "human_review_flagged": 2
+      }
+    },
+    {
+      "question_id": "99914",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that loss of pollinators and beneficial insects, such as bees, is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language emphasizes agriculture's 'dependence' on pollination and explicitly mentions 'transition risks (e.g. related to politics or our reputation) and physical risks (e.g. through soil degradation) related to biodiversity and agriculture in general therefore occur in value chains like that of Bayer'. This framing clearly presents the topic as a source of potential harm and negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'transition risks (e.g. related to politics or our reputation)' and 'physical risks (e.g. through soil degradation)' which are types of business impacts, but it does not provide any explicit quantifiable financial values or state the financial materiality of these specific risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'agriculture is more dependent' describes a present-day condition, and the statement that 'risks... therefore occur in value chains like that of Bayer' indicates an ongoing, present-day risk. However, the nature of biodiversity loss and its impacts often spans medium to long-term horizons, making it not exclusively present-day.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets are identical in content. Version 3 is chosen because its categorization justifications are more detailed and include direct quotes from the source text, providing better context for the classification.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence, as described in the justifications, acknowledges that agriculture's dependence on pollination and biodiversity creates 'transition risks' and 'physical risks' for the company's value chain. This directly addresses the topic as a business risk but lacks an explicit statement on financial materiality, making it a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "agriculture's 'dependence' on pollination",
+                "transition risks (e.g. related to politics or our reputation)",
+                "physical risks (e.g. through soil degradation) related to biodiversity and agriculture"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The 'text' and 'page' fields are 'N/A', but the categorization justifications contain detailed quotes. This indicates the source text was likely available to the annotator but was not included in the final snippet, which should be corrected."
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (1 snippets) and v4 (1 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 1,
+        "human_review_flagged": 1
+      }
+    },
+    {
+      "question_id": "99915",
+      "question_number": 2,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language focuses on negative consequences such as 'higher product development costs', 'longer development times', and 'negatively impact our reputation', clearly presenting the topic as a threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'higher product development costs' but does not provide a specific financial amount or explicitly state the financial materiality of these costs.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'may also lead to' indicates potential future events and impacts that have not yet manifested, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "The snippets are exact duplicates, confirmed by the 100% similarity score and nearly identical categorization justifications. Keeping one is sufficient, and v4 is chosen as the later version.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The disclosure frames the issue as a risk by mentioning potential negative consequences like 'higher product development costs' and a negative impact on 'reputation'. However, it does not contain explicit financial materiality language (e.g., 'material impact') or quantified financial figures, thus qualifying as a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "higher product development costs",
+                "longer development times",
+                "negatively impact our reputation"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (1 snippets) and v4 (1 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 1,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99916",
+      "question_number": 3,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'negative public perception of Bayer represents a risk,' 'may adversely affect our reputation,' 'unfavorable to our company,' and 'significantly limiting the use of our products or even resulting in voluntary or mandated product withdrawals' clearly frames this as a threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes potential impacts like 'adversely affect our reputation,' 'limiting the use of our products,' and 'product withdrawals,' which imply financial consequences (e.g., lost sales) but does not provide any explicit monetary values or state the financial materiality of these impacts.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrases 'are often the subject of intense public debate' and 'may adversely affect our reputation' indicate an ongoing situation and potential future impacts stemming from current conditions. The risk is present and its consequences are forward-looking.",
+            "timeframe": "Present day"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "The snippets are exact duplicates based on the 100% similarity score and nearly identical categorization justifications quoting the same source text. Version 3 is chosen as its justifications are marginally more detailed.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The evidence, as described in the justifications, explicitly states that 'negative public perception of Bayer represents a risk' and could lead to 'limiting the use of our products' or 'product withdrawals'. This acknowledges the topic as a business risk but lacks any explicit financial materiality language, fitting the criteria for a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "negative public perception of Bayer represents a risk",
+                "may adversely affect our reputation",
+                "significantly limiting the use of our products or even resulting in voluntary or mandated product withdrawals"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (1 snippets) and v4 (1 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 1,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99917",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language uses phrases like 'exposed to risks', 'may result in the imposition of civil or criminal penalties', 'adverse financial consequences', and 'harm our reputation', clearly framing the topic as a threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure references 'substantial monetary fines' and 'payments... under out-of-court settlements or adverse court decisions', acknowledging financial impact without providing specific monetary values for the general category of legal risks.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement covers risks 'currently a party' and those 'could arise in the future', indicating both present day and forward-looking aspects, making the timeframe multiple or unclear.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Both snippets are marked as exact duplicates and confirm the company discloses litigation as a risk. Version 4's categorization provides a slightly broader and more explicit set of quotes ('exposed to risks', 'adverse financial consequences', 'harm our reputation') that directly support the risk classification.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company acknowledges litigation as a risk with financial consequences ('hurt our share price development', 'adverse financial consequences'). However, the evidence lacks explicit financial materiality language (e.g., 'material impact') or a specific quantified financial impact, making the disclosure partial.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "uncertainty caused by ongoing litigation hurt our share price development",
+                "exposed to risks",
+                "adverse financial consequences"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language describes 'lawsuits', 'personal injuries', and 'seeking compensatory and punitive damages', clearly framing the situation as a threat and negative consequence.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides explicit financial amounts for the provision: 'US$5.9 billion' and '€5.7 billion', directly quantifying the financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement 'As of December 31, 2024' for the provision and 'have been served upon Monsanto' for ongoing lawsuits indicates a present day impact and status.",
+            "timeframe": "Present day"
+          },
+          "financial_amounts": [
+            "US$5.9 billion",
+            "€5.7 billion"
+          ],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "While both snippets address legal risks, v4 is significantly more specific and relevant to the user's question about lawsuits from health claims. It provides a quantified financial impact ('US$5.9 billion'), whereas v3 is a general, non-quantified statement about legal risks.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The disclosure quantifies the financial impact of the risk by stating a provision of 'US$5.9 billion' and '€5.7 billion' has been set aside for lawsuits related to personal injuries. A quantified financial impact of this magnitude meets the criteria for FULL_DISCLOSURE.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "lawsuits",
+                "personal injuries",
+                "seeking compensatory and punitive damages"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'lawsuits from plaintiffs claiming to have been exposed,' 'allege personal injuries,' 'seeking compensatory and punitive damages,' and 'Bayer’s provision for the glyphosate litigation' clearly frames this as a significant threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values directly linked to the risk: 'US$5.9 billion (€5.7 billion)' for the provision for glyphosate litigation.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The phrase 'As of December 31, 2024, Bayer’s provision for the glyphosate litigation totaled US$5.9 billion' indicates a current financial liability. The mention of '29 Canadian lawsuits... are pending' also points to ongoing, present-day legal challenges.",
+            "timeframe": "Present day"
+          },
+          "financial_amounts": [
+            "US$5.9 billion",
+            "€5.7 billion"
+          ],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets address the same risk, but v3 is superior because it includes a specific, quantified financial provision (US$5.9 billion) directly linked to the litigation. This makes it a much stronger and more complete piece of evidence than v4, which is described as non-financial.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The disclosure quantifies a significant financial impact by stating a provision of \"US$5.9 billion (€5.7 billion)\" for glyphosate litigation. A provision of this magnitude represents a direct and material financial consequence for the business, meeting the criteria for FULL_DISCLOSURE.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "Bayer’s provision for the glyphosate litigation",
+                "lawsuits from plaintiffs claiming to have been exposed",
+                "allege personal injuries",
+                "seeking compensatory and punitive damages"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'named in lawsuits,' 'claiming... damages,' 'class settlement,' 'agreed... to pay,' and 'awarded... damages' clearly frames the topic as a source of actual and potential harm and negative financial consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides multiple explicit, quantifiable financial values directly linked to the risk events: 'US$650 million,' 'US$160 million,' 'US$35 million,' 'US$456 million,' 'US$698 million,' and 'US$320 million.'",
+            "financial_type": "Financial",
+            "timeframe_justification": "The snippet refers to a 'class settlement' in 2020 (backward-looking), settlements in 'July 2024' and 'September 2024' (backward-looking/present day), 'prior cases filed or threatened' (backward-looking), and 'Monsanto also faces numerous lawsuits claiming personal injury' (present day). This covers multiple timeframes.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "financial_amounts": [
+            "US$650 million",
+            "US$160 million",
+            "US$35 million",
+            "US$456 million",
+            "US$698 million",
+            "US$320 million"
+          ],
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets clearly refer to the same disclosure regarding lawsuits and settlements. Version 3 is selected because it provides a more comprehensive list of financial amounts and a slightly more detailed justification.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The disclosure provides multiple, specific, and significant quantified financial impacts (e.g., 'US$650 million', 'US$698 million') resulting from lawsuits and settlements. This quantification of financial harm meets the criteria for FULL_DISCLOSURE, even in the absence of explicit materiality language like 'material impact'.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "named in lawsuits",
+                "claiming... damages",
+                "agreed... to pay"
+              ]
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          }
+        },
+        {
+          "text": "N/A",
+          "page": "N/A",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language describes 'lawsuits claiming personal injury' and plaintiffs being 'awarded... compensatory and punitive damages', clearly framing the situation as a threat and negative consequence.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides an explicit financial amount for damages: 'US$320 million', directly quantifying the financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The snippet refers to past trials where plaintiffs 'were awarded' damages, indicating a backward-looking timeframe, even if appeals are ongoing.",
+            "timeframe": "Backward-looking"
+          },
+          "financial_amounts": [
+            "US$320 million"
+          ],
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact",
+            "similarity": 1.0,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "v4 is superior as it contains a specific quantified financial impact ('US$320 million'), making it a FULL_DISCLOSURE, whereas v3 is more general and classified as PARTIAL.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The disclosure provides a quantified financial impact ('US$320 million' in damages awarded to plaintiffs), which meets the criteria for FULL_DISCLOSURE.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": true,
+              "key_phrases": [
+                "lawsuits claiming personal injury",
+                "awarded... compensatory and punitive damages",
+                "US$320 million"
+              ]
+            },
+            "human_review_recommended": true,
+            "human_review_reason": "The source text for both snippets is 'N/A', which is likely an error. While the metadata allows for a merge decision, the absence of the original evidence text is a significant quality issue that requires verification."
+          }
+        },
+        {
+          "snippet_id": "99917-006",
+          "quote": "We may incur considerable financial disadvantages from pending lawsuits and/or potential future cases if, for example, we are ordered to pay compensatory and possibly punitive damages or if we assume payment obligations under out-of-court settlements. We could be compelled to cover any such increased financial requirements by issuing additional external debt, increasing our equity capital or divesting assets – possibly on unfavorable terms – or through combinations of these measures. The terms on which we obtain external financing could become less favorable as a result of any increased financial requirements. The materialization of any of these risks may also adversely affect our reputation and our commercial success.",
+          "source": "Annual report 2024.pdf, Page 95, Section PCB matters",
+          "financial_amounts": [],
+          "classification_justification": "This snippet provides a forward-looking summary of the potential 'considerable financial disadvantages' from litigation, including 'compensatory and possibly punitive damages' and 'payment obligations under out-of-court settlements', and outlines potential impacts on financing and reputation.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language uses phrases like 'may incur considerable financial disadvantages', 'compelled to cover any such increased financial requirements', and 'adversely affect our reputation and our commercial success', clearly framing the topic as a threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure references 'compensatory and possibly punitive damages' and 'payment obligations' without specific future amounts, and discusses impacts on 'financial requirements' and 'external financing', indicating an acknowledgment of financial materiality without precise quantification.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of 'may incur', 'potential future cases', and 'could be compelled' indicates future possibilities and anticipated impacts, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false
+          }
+        }
+      ],
+      "summary": "MERGED ANALYSIS: Combined best evidence from v3 (5 snippets) and v4 (6 snippets) analyses.",
+      "merger_stats": {
+        "v3_snippets": 5,
+        "v4_snippets": 6,
+        "merged_snippets": 6,
+        "snippet_pairs": 6,
+        "ai_reviews_conducted": 5,
+        "human_review_flagged": 1
+      }
+    }
+  ],
+  "completeness_summary": {
+    "total_questions_analyzed": 14,
+    "total_disclosure_snippets": 47,
+    "note": "Summary statistics recalculated from merged results"
+  },
+  "metadata": {
+    "company": "Bayer",
+    "year": "2024",
+    "analysis_date": "2025-11-06T00:54:27.652309",
+    "schema_version": "merged-v3-v4",
+    "merger_model": "gemini-2.5-pro",
+    "source_files": {
+      "v3": "Bayer_2024_v3_gemini-2-5-flash_05-11-2025_21-13-27_verified.json",
+      "v4": "Bayer_2024_v4_gemini-2-5-flash_05-11-2025_21-16-20_verified.json"
+    }
+  },
+  "merger_summary": {
+    "total_v3_snippets": 36,
+    "total_v4_snippets": 40,
+    "total_merged_snippets": 47,
+    "total_ai_reviews": 30,
+    "total_human_flags": 14,
+    "merger_timestamp": "06-11-2025_00-54-27"
+  }
+}

@@ -1,4 +1,4 @@
----
+﻿---
 /**
  * Company-Year-Version Detail Page
  * Displays comprehensive analysis for a specific company, fiscal year, and version
@@ -18,6 +18,7 @@ import { loadCompanyYear, loadAllCompanyData, getVersionsForCompanyYear } from '
 import { calculateCompanyMetrics, calculateQuestionMetrics } from '../../../utils/metricsCalculator';
 import { compareOriginalVsVerified } from '../../../utils/verificationComparison';
 import categoriesConfig from '../../../config/categories.json';
+import { formatNumber } from '../../../utils/formatters';
 
 // Add getStaticPaths for static site generation
 export async function getStaticPaths() {
@@ -50,6 +51,23 @@ if (!companyData) {
 // Get all available versions for this company-year
 const availableVersions = await getVersionsForCompanyYear(company, yearNum);
 const isLatestVersion = availableVersions[0] === version;
+const isMergedVersion = companyData.isMerged === true || version.toLowerCase().startsWith('merged');
+const sourceVersions = companyData.mergedMetadata?.sourceVersions ?? [];
+const sourcePresence = isMergedVersion
+  ? sourceVersions.map(vLabel => ({
+      version: vLabel,
+      available: availableVersions.some(av => av.toLowerCase() === vLabel.toLowerCase())
+    }))
+  : [];
+const mergerSummary = companyData.mergedMetadata?.mergerSummary
+  || companyData.verified.merger_summary
+  || {};
+const completenessSummary = companyData.mergedMetadata?.completenessSummary
+  || companyData.verified.completeness_summary;
+const mergerTimestamp = mergerSummary.merger_timestamp
+  || companyData.mergedMetadata?.mergerTimestamp
+  || companyData.verified.metadata?.merger_timestamp
+  || companyData.verified.analysis_date;
 
 // Calculate metrics
 const companyMetrics = calculateCompanyMetrics(companyData.verified);
@@ -142,6 +160,25 @@ const breadcrumbItems = [
                 </div>
               </div>
             )}
+
+            {isMergedVersion && sourcePresence.length > 0 && (
+              <div class="mt-4 flex flex-wrap gap-2">
+                {sourcePresence.map(source => (
+                  <span
+                    class={`px-2.5 py-1 rounded-full border text-xs ${
+                      source.available
+                        ? 'border-emerald-400/50 bg-emerald-500/15 text-emerald-200'
+                        : 'border-slate-600 bg-slate-900/70 text-slate-400'
+                    }`}
+                  >
+                    {source.version.toUpperCase()}
+                    <span class="ml-2 uppercase tracking-wide text-[10px]">
+                      {source.available ? 'Available' : 'Missing'}
+                    </span>
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           <div class="flex items-center gap-6">
@@ -159,6 +196,67 @@ const breadcrumbItems = [
 
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-10">
+      {isMergedVersion && (
+        <section class="mb-8">
+          <div class="surface p-6 space-y-4 border border-emerald-500/20">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div>
+                <h2 class="text-xl font-semibold text-emerald-200">Merged Evidence Overview</h2>
+                <p class="text-sm text-slate-400 mt-1">
+                  Combined snippets from {sourceVersions.join(' + ') || 'multiple versions'} reviewed for higher fidelity disclosure analysis.
+                </p>
+              </div>
+              <div class="text-sm text-slate-400">
+                <span class="uppercase tracking-wide text-[10px] text-slate-500 block">Merged</span>
+                <span class="font-semibold text-slate-200">{mergerTimestamp}</span>
+              </div>
+            </div>
+
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-sm text-slate-200">
+              <div class="rounded-lg border border-slate-700 bg-slate-900/60 p-4">
+                <div class="text-[10px] uppercase tracking-wide text-slate-500">Merged Snippets</div>
+                <div class="text-2xl font-semibold text-slate-100 mt-1">
+                  {formatNumber(mergerSummary.total_merged_snippets ?? companyMetrics.total_snippets)}
+                </div>
+                <div class="text-xs text-slate-500 mt-1">Combined evidence retained after merge</div>
+              </div>
+              <div class="rounded-lg border border-slate-700 bg-slate-900/60 p-4">
+                <div class="text-[10px] uppercase tracking-wide text-slate-500">Source Contributions</div>
+                <div class="text-sm font-semibold text-slate-100 mt-1">
+                  v3 {formatNumber(mergerSummary.total_v3_snippets ?? 0)} | v4 {formatNumber(mergerSummary.total_v4_snippets ?? 0)}
+                </div>
+                <div class="text-xs text-slate-500 mt-1">Snippets assessed from each version</div>
+              </div>
+              <div class="rounded-lg border border-slate-700 bg-slate-900/60 p-4">
+                <div class="text-[10px] uppercase tracking-wide text-slate-500">AI Reviews</div>
+                <div class="text-2xl font-semibold text-slate-100 mt-1">
+                  {formatNumber(mergerSummary.total_ai_reviews ?? 0)}
+                </div>
+                <div class="text-xs text-slate-500 mt-1">Automated merge decisions</div>
+              </div>
+              <div class="rounded-lg border border-slate-700 bg-slate-900/60 p-4">
+                <div class="text-[10px] uppercase tracking-wide text-slate-500">Human Flags</div>
+                <div class="text-2xl font-semibold text-slate-100 mt-1">
+                  {formatNumber(mergerSummary.total_human_flags ?? 0)}
+                </div>
+                <div class="text-xs text-slate-500 mt-1">Items recommended for reviewer follow-up</div>
+              </div>
+            </div>
+
+            {completenessSummary?.total_questions_analyzed && (
+              <div class="text-xs text-slate-400">
+                Coverage: {formatNumber(completenessSummary.total_questions_analyzed)} questions | {formatNumber(completenessSummary.total_disclosure_snippets ?? 0)} snippets.
+              </div>
+            )}
+            {completenessSummary?.note && (
+              <div class="text-[11px] text-slate-500">
+                {completenessSummary.note}
+              </div>
+            )}
+          </div>
+        </section>
+      )}
+
       <!-- Summary Dashboard -->
       <section class="mb-8">
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
@@ -243,3 +341,8 @@ const breadcrumbItems = [
     }
   }
 </style>
+
+
+
+
+
