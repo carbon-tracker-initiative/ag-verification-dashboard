@@ -8,10 +8,7 @@ import type { CompanyYearData } from '../types/analysis';
 import type { CompanyMetrics } from '../types/metrics';
 import {
   calculateCompanyMetrics,
-  calculateQuestionMetrics,
   calculateCategoryMetrics,
-  calculateSnippetScore,
-  getSnippetScoreComponents,
   calculateCrossCompanyMetrics
 } from './metricsCalculator';
 
@@ -134,7 +131,6 @@ async function createExecutiveSummarySheet(
     ['Total Companies', stats.total_companies],
     ['Total Questions Analyzed', stats.total_questions],
     ['Total Snippets', stats.total_snippets],
-    ['Average Disclosure Score', `${stats.average_disclosure_score_all.toFixed(1)}%`],
     ['Average Financial Transparency', `${stats.average_financial_rate_all.toFixed(1)}%`],
     ['Average Forward-Looking Rate', `${stats.average_forward_looking_rate_all.toFixed(1)}%`]
   ];
@@ -196,9 +192,8 @@ async function createExecutiveSummarySheet(
   sheet.getCell(`B${row}`).value = 'Year';
   sheet.getCell(`C${row}`).value = 'Version';
   sheet.getCell(`D${row}`).value = 'Total Snippets';
-  sheet.getCell(`E${row}`).value = 'Overall Score';
-  sheet.getCell(`F${row}`).value = 'Grade';
-  ['A', 'B', 'C', 'D', 'E', 'F'].forEach(col => {
+  sheet.getCell(`E${row}`).value = 'Evidence Depth';
+  ['A', 'B', 'C', 'D', 'E'].forEach(col => {
     sheet.getCell(`${col}${row}`).font = { bold: true };
     sheet.getCell(`${col}${row}`).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFD9E1F2' } };
   });
@@ -209,17 +204,7 @@ async function createExecutiveSummarySheet(
     sheet.getCell(`B${row}`).value = cm.fiscal_year;
     sheet.getCell(`C${row}`).value = companyDataArray[index].version;
     sheet.getCell(`D${row}`).value = cm.total_snippets;
-    sheet.getCell(`E${row}`).value = cm.overall_disclosure_score.toFixed(1);
-    sheet.getCell(`F${row}`).value = cm.overall_grade;
-
-    // Conditional formatting for grades
-    const gradeCell = sheet.getCell(`F${row}`);
-    if (cm.overall_grade === 'A') gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF00B050' } };
-    else if (cm.overall_grade === 'B') gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF92D050' } };
-    else if (cm.overall_grade === 'C') gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFC000' } };
-    else if (cm.overall_grade === 'D') gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF6600' } };
-    else gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF0000' } };
-    gradeCell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+    sheet.getCell(`E${row}`).value = cm.average_snippets_per_question.toFixed(2);
 
     row++;
   });
@@ -228,7 +213,7 @@ async function createExecutiveSummarySheet(
 
   // === SNIPPETS PER QUESTION (TOP 10) ===
   sheet.mergeCells(`A${row}:F${row}`);
-  sheet.getCell(`A${row}`).value = 'Top 10 Questions by Average Score';
+  sheet.getCell(`A${row}`).value = 'Top 10 Questions by Evidence Depth';
   sheet.getCell(`A${row}`).font = { size: 14, bold: true };
   sheet.getCell(`A${row}`).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF4472C4' } };
   sheet.getCell(`A${row}`).font.color = { argb: 'FFFFFFFF' };
@@ -237,7 +222,7 @@ async function createExecutiveSummarySheet(
   sheet.getCell(`A${row}`).value = 'Rank';
   sheet.getCell(`B${row}`).value = 'Question ID';
   sheet.getCell(`C${row}`).value = 'Question Text';
-  sheet.getCell(`D${row}`).value = 'Avg Score';
+  sheet.getCell(`D${row}`).value = 'Avg Evidence Depth';
   sheet.getCell(`E${row}`).value = 'Companies';
   sheet.getCell(`F${row}`).value = 'Total Snippets';
   ['A', 'B', 'C', 'D', 'E', 'F'].forEach(col => {
@@ -250,7 +235,7 @@ async function createExecutiveSummarySheet(
     sheet.getCell(`A${row}`).value = q.ranking;
     sheet.getCell(`B${row}`).value = q.question_id;
     sheet.getCell(`C${row}`).value = q.question_text;
-    sheet.getCell(`D${row}`).value = q.average_score_across_companies.toFixed(1);
+    sheet.getCell(`D${row}`).value = q.average_evidence_depth.toFixed(1);
     sheet.getCell(`E${row}`).value = q.companies_analyzed;
     sheet.getCell(`F${row}`).value = q.total_snippets_across_companies;
     row++;
@@ -286,8 +271,6 @@ async function createCompanyDetailsSheet(
     'Year',
     'Version',
     'Model',
-    'Overall Score',
-    'Grade',
     'Questions Analyzed',
     'Questions Answered',
     'Total Snippets',
@@ -299,10 +282,6 @@ async function createCompanyDetailsSheet(
     'Financial Transparency %',
     'Forward-Looking %',
     'Narrative Balance %',
-    'Environmental Score',
-    'Human Health Score',
-    'Market/Business Score',
-    'Regulatory/Financial Score',
     'Verification Pass Rate %',
     'Snippets Removed',
     'Snippets Corrected'
@@ -325,31 +304,23 @@ async function createCompanyDetailsSheet(
     sheet.getCell(rowNum, 2).value = cm.fiscal_year;
     sheet.getCell(rowNum, 3).value = companyData.version;
     sheet.getCell(rowNum, 4).value = cm.model_used;
-    sheet.getCell(rowNum, 5).value = cm.overall_disclosure_score.toFixed(1);
-    sheet.getCell(rowNum, 6).value = cm.overall_grade;
-    sheet.getCell(rowNum, 7).value = cm.total_questions_analyzed;
-    sheet.getCell(rowNum, 8).value = cm.total_questions_answered;
-    sheet.getCell(rowNum, 9).value = cm.total_snippets;
-    sheet.getCell(rowNum, 10).value = cm.average_snippets_per_question.toFixed(2);
-    sheet.getCell(rowNum, 11).value = cm.snippets_by_classification.FULL_DISCLOSURE;
-    sheet.getCell(rowNum, 12).value = cm.snippets_by_classification.PARTIAL;
-    sheet.getCell(rowNum, 13).value = cm.snippets_by_classification.UNCLEAR;
-    sheet.getCell(rowNum, 14).value = cm.snippets_by_classification.NO_DISCLOSURE;
-    sheet.getCell(rowNum, 15).value = cm.financial_quantification_rate.toFixed(1);
-    sheet.getCell(rowNum, 16).value = cm.forward_looking_rate.toFixed(1);
-    sheet.getCell(rowNum, 17).value = cm.narrative_balance_rate.toFixed(1);
-
-    // Category scores
-    sheet.getCell(rowNum, 18).value = (cm.category_scores['Environmental Risk'] || 0).toFixed(1);
-    sheet.getCell(rowNum, 19).value = (cm.category_scores['Human Health Risk'] || 0).toFixed(1);
-    sheet.getCell(rowNum, 20).value = (cm.category_scores['Market/Business Risk'] || 0).toFixed(1);
-    sheet.getCell(rowNum, 21).value = (cm.category_scores['Regulatory/Financial Risk'] || 0).toFixed(1);
+    sheet.getCell(rowNum, 5).value = cm.total_questions_analyzed;
+    sheet.getCell(rowNum, 6).value = cm.total_questions_answered;
+    sheet.getCell(rowNum, 7).value = cm.total_snippets;
+    sheet.getCell(rowNum, 8).value = cm.average_snippets_per_question.toFixed(2);
+    sheet.getCell(rowNum, 9).value = cm.snippets_by_classification.FULL_DISCLOSURE;
+    sheet.getCell(rowNum, 10).value = cm.snippets_by_classification.PARTIAL;
+    sheet.getCell(rowNum, 11).value = cm.snippets_by_classification.UNCLEAR;
+    sheet.getCell(rowNum, 12).value = cm.snippets_by_classification.NO_DISCLOSURE;
+    sheet.getCell(rowNum, 13).value = cm.financial_quantification_rate.toFixed(1);
+    sheet.getCell(rowNum, 14).value = cm.forward_looking_rate.toFixed(1);
+    sheet.getCell(rowNum, 15).value = cm.narrative_balance_rate.toFixed(1);
 
     // Verification data
     if (cm.verification_metadata) {
-      sheet.getCell(rowNum, 22).value = cm.verification_metadata.pass_rate.toFixed(1);
-      sheet.getCell(rowNum, 23).value = cm.verification_metadata.snippets_removed;
-      sheet.getCell(rowNum, 24).value = cm.verification_metadata.snippets_corrected;
+      sheet.getCell(rowNum, 16).value = cm.verification_metadata.pass_rate.toFixed(1);
+      sheet.getCell(rowNum, 17).value = cm.verification_metadata.snippets_removed;
+      sheet.getCell(rowNum, 18).value = cm.verification_metadata.snippets_corrected;
     }
   });
 
@@ -383,7 +354,7 @@ async function createQuestionPerformanceSheet(
     'Question ID',
     'Category',
     'Question Text',
-    'Avg Score',
+    'Avg Evidence Depth',
     'Companies Analyzed',
     'Total Snippets',
     'Full Disclosure Count',
@@ -406,20 +377,11 @@ async function createQuestionPerformanceSheet(
     sheet.getCell(rowNum, 2).value = q.question_id;
     sheet.getCell(rowNum, 3).value = q.category;
     sheet.getCell(rowNum, 4).value = q.question_text;
-    sheet.getCell(rowNum, 5).value = q.average_score_across_companies.toFixed(1);
+    sheet.getCell(rowNum, 5).value = q.average_evidence_depth.toFixed(1);
     sheet.getCell(rowNum, 6).value = q.companies_analyzed;
     sheet.getCell(rowNum, 7).value = q.total_snippets_across_companies;
     sheet.getCell(rowNum, 8).value = q.companies_with_full_disclosure;
     sheet.getCell(rowNum, 9).value = q.average_financial_rate.toFixed(1);
-
-    // Conditional formatting for scores
-    const scoreCell = sheet.getCell(rowNum, 5);
-    const score = q.average_score_across_companies;
-    if (score >= 90) scoreCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF00B050' } };
-    else if (score >= 80) scoreCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF92D050' } };
-    else if (score >= 70) scoreCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFC000' } };
-    else if (score >= 60) scoreCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF6600' } };
-    else scoreCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF0000' } };
   });
 
   // Auto-fit columns
@@ -461,15 +423,13 @@ async function createCategoryAnalysisSheet(
     'Year',
     'Version',
     'Category',
-    'Avg Score',
     'Total Questions',
     'Questions Answered',
     'Total Snippets',
     'Avg Evidence Depth',
     'Financial Rate %',
     'Forward-Looking %',
-    'Narrative Balance %',
-    'Grade'
+    'Narrative Balance %'
   ];
 
   headers.forEach((header, i) => {
@@ -495,24 +455,13 @@ async function createCategoryAnalysisSheet(
       sheet.getCell(rowNum, 2).value = cm.fiscal_year;
       sheet.getCell(rowNum, 3).value = companyData.version;
       sheet.getCell(rowNum, 4).value = categoryName;
-      sheet.getCell(rowNum, 5).value = categoryMetrics.average_question_score.toFixed(1);
-      sheet.getCell(rowNum, 6).value = categoryMetrics.total_questions;
-      sheet.getCell(rowNum, 7).value = categoryMetrics.questions_answered;
-      sheet.getCell(rowNum, 8).value = categoryMetrics.total_snippets;
-      sheet.getCell(rowNum, 9).value = categoryMetrics.average_evidence_depth.toFixed(2);
-      sheet.getCell(rowNum, 10).value = categoryMetrics.average_financial_rate.toFixed(1);
-      sheet.getCell(rowNum, 11).value = categoryMetrics.average_forward_looking_rate.toFixed(1);
-      sheet.getCell(rowNum, 12).value = categoryMetrics.average_narrative_balance_rate.toFixed(1);
-      sheet.getCell(rowNum, 13).value = categoryMetrics.category_grade;
-
-      // Conditional formatting for grades
-      const gradeCell = sheet.getCell(rowNum, 13);
-      if (categoryMetrics.category_grade === 'A') gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF00B050' } };
-      else if (categoryMetrics.category_grade === 'B') gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF92D050' } };
-      else if (categoryMetrics.category_grade === 'C') gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFC000' } };
-      else if (categoryMetrics.category_grade === 'D') gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF6600' } };
-      else gradeCell.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFF0000' } };
-      gradeCell.font = { bold: true, color: { argb: 'FFFFFFFF' } };
+      sheet.getCell(rowNum, 5).value = categoryMetrics.total_questions;
+      sheet.getCell(rowNum, 6).value = categoryMetrics.questions_answered;
+      sheet.getCell(rowNum, 7).value = categoryMetrics.total_snippets;
+      sheet.getCell(rowNum, 8).value = categoryMetrics.average_evidence_depth.toFixed(2);
+      sheet.getCell(rowNum, 9).value = categoryMetrics.average_financial_rate.toFixed(1);
+      sheet.getCell(rowNum, 10).value = categoryMetrics.average_forward_looking_rate.toFixed(1);
+      sheet.getCell(rowNum, 11).value = categoryMetrics.average_narrative_balance_rate.toFixed(1);
 
       rowNum++;
     });
@@ -561,10 +510,6 @@ async function createSnippetDataSheet(
     'Financial Justification',
     'Timeframe',
     'Timeframe Justification',
-    'Financial Score (0-3)',
-    'Temporal Score (0-3)',
-    'Narrative Score (1-3)',
-    'Total Score (0-100)',
     'Financial Amounts'
   ];
 
@@ -584,8 +529,6 @@ async function createSnippetDataSheet(
 
     questions.forEach(question => {
       question.disclosures.forEach(snippet => {
-        const scoreComponents = getSnippetScoreComponents(snippet);
-
         sheet.getCell(rowNum, 1).value = companyData.company;
         sheet.getCell(rowNum, 2).value = companyData.year;
         sheet.getCell(rowNum, 3).value = companyData.version;
@@ -603,16 +546,12 @@ async function createSnippetDataSheet(
         sheet.getCell(rowNum, 15).value = snippet.categorization.financial_justification;
         sheet.getCell(rowNum, 16).value = snippet.categorization.timeframe;
         sheet.getCell(rowNum, 17).value = snippet.categorization.timeframe_justification;
-        sheet.getCell(rowNum, 18).value = scoreComponents.financial_score;
-        sheet.getCell(rowNum, 19).value = scoreComponents.temporal_score;
-        sheet.getCell(rowNum, 20).value = scoreComponents.narrative_score;
-        sheet.getCell(rowNum, 21).value = scoreComponents.total_score.toFixed(1);
 
         // Financial amounts (concatenate)
         const amounts = snippet.financial_amounts.map(fa =>
           `${fa.currency} ${fa.amount} (${fa.context})`
         ).join('; ');
-        sheet.getCell(rowNum, 22).value = amounts || 'None';
+        sheet.getCell(rowNum, 18).value = amounts || 'None';
 
         rowNum++;
       });
@@ -638,11 +577,7 @@ async function createSnippetDataSheet(
     { key: 'O', width: 60 }, // Financial Justification
     { key: 'P', width: 20 }, // Timeframe
     { key: 'Q', width: 60 }, // Timeframe Justification
-    { key: 'R', width: 18 }, // Financial Score
-    { key: 'S', width: 18 }, // Temporal Score
-    { key: 'T', width: 18 }, // Narrative Score
-    { key: 'U', width: 18 }, // Total Score
-    { key: 'V', width: 40 }  // Financial Amounts
+    { key: 'R', width: 40 }  // Financial Amounts
   ];
 
   // Enable auto-filter
@@ -766,15 +701,12 @@ async function createColumnReferenceSheet(
     ['Executive Summary', 'Total Companies', 'Total number of companies in the analysis', 'Count of unique companies in dataset', '5'],
     ['Executive Summary', 'Total Questions Analyzed', 'Total number of questions analyzed across all companies', 'Sum of questions from all companies', '88'],
     ['Executive Summary', 'Total Snippets', 'Total number of evidence snippets found', 'Sum of all disclosure snippets across companies', '235'],
-    ['Executive Summary', 'Average Disclosure Score', 'Average quality score across all snippets', 'Mean of all snippet scores (0-100%)', '52.6%'],
     ['Executive Summary', 'Average Financial Transparency', 'Percentage of snippets with financial data', 'Snippets with financial amounts / Total snippets', '36.1%'],
     ['Executive Summary', 'Average Forward-Looking Rate', 'Percentage of future-oriented disclosures', 'Forward-looking snippets / Total snippets', '32.8%'],
     ['Executive Summary', 'Classification', 'Type of disclosure quality', 'FULL_DISCLOSURE, PARTIAL, UNCLEAR, or NO_DISCLOSURE', 'PARTIAL'],
     ['Executive Summary', 'Version', 'Schema version used for analysis', 'Extracted from filename (v3, v4, etc.)', 'v4'],
 
     // Company Details
-    ['Company Details', 'Overall Score', 'Company\'s average disclosure quality', 'Average of all snippet scores for this company (0-100%)', '48.0'],
-    ['Company Details', 'Grade', 'Letter grade for overall performance', 'A: 90-100%, B: 80-89%, C: 70-79%, D: 60-69%, F: <60%', 'F'],
     ['Company Details', 'Questions Analyzed', 'Number of questions this company answered', 'Count of questions with at least one snippet', '14'],
     ['Company Details', 'Total Snippets', 'Evidence snippets found for this company', 'Count of all disclosure snippets', '38'],
     ['Company Details', 'Avg Snippets/Question', 'Average evidence depth per question', 'Total snippets / Questions analyzed', '2.71'],
@@ -785,14 +717,13 @@ async function createColumnReferenceSheet(
     ['Company Details', 'Financial Transparency %', 'Percentage with monetary amounts', '(Full + Partial financial) / Total snippets × 100', '43.0%'],
     ['Company Details', 'Forward-Looking %', 'Percentage of future-oriented statements', 'Future timeframe snippets / Total × 100', '25.0%'],
     ['Company Details', 'Narrative Balance %', 'Percentage discussing both risks and opportunities', 'Both framing snippets / Total × 100', '8.0%'],
-    ['Company Details', 'Environmental Score', 'Score for Environmental Risk category', 'Average snippet score for this category', '55.3'],
     ['Company Details', 'Verification Pass Rate %', 'Quality assurance pass rate', '(Original - Removed - Corrected) / Original × 100', '94.7%'],
 
     // Question Performance
-    ['Question Performance', 'Rank', 'Ranking by average score (1 = best)', 'Sorted by average score descending', '1'],
+    ['Question Performance', 'Rank', 'Ranking by average evidence depth (1 = best)', 'Sorted by average evidence depth descending', '1'],
     ['Question Performance', 'Question ID', 'Unique identifier for the question', 'From canonical question set', '99918'],
     ['Question Performance', 'Category', 'Risk category classification', 'Environmental, Human Health, Market/Business, or Regulatory/Financial', 'Environmental Risk'],
-    ['Question Performance', 'Avg Score', 'Average score across all companies', 'Mean of scores from companies that answered this question', '66.7'],
+    ['Question Performance', 'Avg Evidence Depth', 'Average snippets per question across companies', 'Mean of snippet counts from companies that answered this question', '3.2'],
     ['Question Performance', 'Companies Analyzed', 'Number of companies that answered this question', 'Count of companies with evidence for this question', '4'],
     ['Question Performance', 'Total Snippets', 'Total evidence snippets across all companies', 'Sum of snippets from all companies for this question', '12'],
     ['Question Performance', 'Full Disclosure Count', 'Companies with complete evidence', 'Count of companies with at least one FULL_DISCLOSURE snippet', '2'],
@@ -800,7 +731,6 @@ async function createColumnReferenceSheet(
 
     // Category Analysis
     ['Category Analysis', 'Category', 'Risk category name', 'One of four risk categories', 'Environmental Risk'],
-    ['Category Analysis', 'Avg Score', 'Average score for this category', 'Mean of all question scores in category', '58.6'],
     ['Category Analysis', 'Total Questions', 'Questions in this category', 'Count of questions assigned to category', '8'],
     ['Category Analysis', 'Questions Answered', 'Questions with evidence', 'Count of questions with at least one snippet', '7'],
     ['Category Analysis', 'Avg Evidence Depth', 'Average snippets per question', 'Total snippets / Questions in category', '3.2'],
@@ -815,11 +745,7 @@ async function createColumnReferenceSheet(
     ['Snippet Raw Data', 'Classification', 'Quality of evidence', 'FULL_DISCLOSURE, PARTIAL, UNCLEAR, or NO_DISCLOSURE', 'PARTIAL'],
     ['Snippet Raw Data', 'Framing', 'Narrative perspective', 'Risk, Opportunity, Neutral, or Both', 'Risk'],
     ['Snippet Raw Data', 'Financial Type', 'Level of financial detail', 'Full (explicit $), Partial (relative terms), or Non-Financial', 'Partial'],
-    ['Snippet Raw Data', 'Timeframe', 'Temporal orientation', 'Current, Future, Historical, or Multiple/Unclear', 'Forward-looking'],
-    ['Snippet Raw Data', 'Financial Score (0-3)', 'Points for financial transparency', '3=Full, 2=Partial, 1=Non-Financial', '2'],
-    ['Snippet Raw Data', 'Temporal Score (0-3)', 'Points for time specificity', '3=Current, 2=Future, 1=Historical, 0=Unclear', '2'],
-    ['Snippet Raw Data', 'Narrative Score (1-3)', 'Points for framing balance', '3=Both, 2=Risk or Opportunity, 1=Neutral', '2'],
-    ['Snippet Raw Data', 'Total Score (0-100)', 'Composite quality score', '(Financial + Temporal + Narrative) / 9 × 100', '66.7'],
+    ['Snippet Raw Data', 'Timeframe', 'Temporal orientation', 'Present day, Forward-looking, Historical, or Multiple/Unclear', 'Forward-looking'],
     ['Snippet Raw Data', 'Financial Amounts', 'Extracted monetary values', 'Currency, amount, and context', 'USD 10000000 (investment cost)'],
 
     // Verification Report

@@ -1,11 +1,11 @@
 # Verification Dashboard
 
-[![Tests](https://img.shields.io/badge/tests-79%20passing-brightgreen)](tests/)
+[![Tests](https://img.shields.io/badge/tests-62%20passing-brightgreen)](tests/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
 [![Astro](https://img.shields.io/badge/Astro-5.14.5-orange)](https://astro.build/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-An interactive dashboard for analyzing agricultural risk disclosure quality with multi-dimensional snippet-level scoring and cross-company benchmarking.
+An interactive dashboard for analyzing agricultural risk disclosure quality through evidence-based analysis with multi-dimensional categorization and cross-company benchmarking.
 
 ## Table of Contents
 
@@ -24,47 +24,68 @@ An interactive dashboard for analyzing agricultural risk disclosure quality with
 
 ## Overview
 
-The Verification Dashboard provides comprehensive analysis of agricultural risk disclosures across multiple companies. It evaluates disclosure quality using a scientifically-grounded, multi-dimensional scoring system and presents insights through an accessible, performant web interface.
+The Verification Dashboard provides comprehensive analysis of agricultural risk disclosures across multiple companies. It evaluates disclosure quality using an evidence-based approach with multi-dimensional categorization and presents insights through an accessible, performant web interface.
 
 ### Key Capabilities
 
-- **Multi-Dimensional Scoring:** Evaluates disclosures on Financial Transparency (0-3), Temporal Specificity (0-3), and Narrative Framing (1-3)
+- **Evidence-Based Analysis:** Evaluates disclosures on Financial Transparency, Temporal Specificity, and Narrative Framing
+- **Classification System:** Categorizes each disclosure as Full, Partial, Unclear, or No Disclosure
+- **Evidence Depth Metrics:** Measures thoroughness through snippet counts per question
 - **Cross-Company Analytics:** Compare disclosure practices, identify leaders and laggards
 - **Question Benchmarking:** Discover which questions are universally well or poorly disclosed
 - **Category Deep-Dive:** Analyze Environmental, Human Health, Market, and Regulatory risks separately
 - **Verification Support:** Compare original vs. verified results side-by-side
-- **A-F Grading:** Intuitive quality grades for quick assessment
-- **Excel Export:** Comprehensive 6-sheet reports with all metrics, perfect for presentations and further analysis
+- **Distribution Metrics:** Track financial transparency rates, forward-looking rates, and narrative balance
+- **Excel Export:** Comprehensive 7-sheet reports with all metrics, perfect for presentations and further analysis
 - **Version Support:** Track and compare different schema versions (v3, v4, etc.) with separate cards and routes
 
 ## Features
 
-### Scoring System
+### Analysis System
 
-Each disclosure snippet receives a composite score (0-100%) based on:
+The dashboard uses a multi-dimensional categorization system to analyze disclosure quality:
 
-1. **Financial Transparency (0-3 points)**
-   - Full (3): Explicit monetary amounts and specific ranges
-   - Partial (2): Relative terms like "significant" or "material"
-   - Non-Financial (1): Qualitative descriptions only
+#### 1. Classification System
 
-2. **Temporal Specificity (0-3 points)**
-   - Current (3): Present-tense, current year data
-   - Future (2): Forward-looking statements and projections
-   - Historical (1): Past-tense, previous year data
-   - Unclear (0): No temporal indicators
+Each disclosure is classified by completeness:
 
-3. **Narrative Framing (1-3 points)**
-   - Both (3): Discusses risks and opportunities
-   - Risk or Opportunity (2): Single-sided perspective
-   - Neutral (1): Factual statements only
+- **FULL_DISCLOSURE** (Green): Complete, clear evidence addressing the question
+- **PARTIAL** (Yellow): Incomplete or indirect evidence
+- **UNCLEAR** (Orange): Ambiguous or difficult to assess
+- **NO_DISCLOSURE** (Red): No evidence found for this question
 
-**Formula:** `Score = (Financial + Temporal + Narrative) / 9 × 100`
+#### 2. Evidence Depth
+
+Evidence depth measures the number of supporting snippets per question:
+- **Higher evidence depth** = More thorough documentation
+- **Multiple snippets** = Comprehensive coverage
+- **Zero snippets** = Disclosure gap
+
+#### 3. Distribution Metrics
+
+Three key metrics tracked as percentages:
+
+**Financial Transparency Rate**
+- **Full Financial**: Explicit monetary amounts and specific ranges
+- **Partial Financial**: Relative terms like "significant" or "material"
+- **Non-Financial**: Qualitative descriptions only
+
+**Forward-Looking Rate**
+- **Forward-looking**: Future plans and projections
+- **Present day**: Current year data
+- **Historical**: Previous year data
+- **Multiple/Unclear**: No clear temporal indicators
+
+**Narrative Balance Rate**
+- **Both**: Discusses risks and opportunities
+- **Risk only**: Single-sided risk perspective
+- **Opportunity only**: Single-sided opportunity perspective
+- **Neutral**: Factual statements only
 
 ### Pages
 
 1. **Home** - Cross-company overview with company cards, category summaries, and question rankings
-2. **Company-Year Detail** - In-depth analysis with filterable questions and snippet-level scores
+2. **Company-Year Detail** - In-depth analysis with filterable questions and snippet-level categorization
 3. **Analytics** - Cross-company insights with benchmarking, radar comparisons, and trends
 
 ### Accessibility
@@ -143,7 +164,7 @@ npm run preview
 ### Excel Export
 
 ```bash
-# Generate comprehensive Excel report (all data, 6 sheets)
+# Generate comprehensive Excel report (all data, 7 sheets)
 npm run export:excel
 
 # Export specific company
@@ -163,20 +184,21 @@ npm run export:excel -- --output reports/my-report.xlsx
 - Category Analysis breakdowns
 - Snippet Raw Data for custom analysis
 - Verification Reports
+- Column Reference documentation
 
 **📖 See the complete guide:** [Excel Export Guide](docs/EXCEL_EXPORT_GUIDE.md)
 
 ### Testing
 
 ```bash
-# Run all tests (79 tests)
+# Run all tests (62 tests)
 npm test
 
 # Run specific test suites
-npm run test:metrics      # Metrics calculation tests (27 tests)
-npm run test:validation   # Data validation tests (10 tests)
-npm run test:loader       # Data loader tests (22 tests)
-npm run test:smoke        # Component smoke tests (20 tests)
+npm run test:metrics      # Metrics calculation tests
+npm run test:validation   # Data validation tests
+npm run test:loader       # Data loader tests
+npm run test:smoke        # Component smoke tests
 ```
 
 ### Adding New Company Data
@@ -195,28 +217,20 @@ npm run test:smoke        # Component smoke tests (20 tests)
 
 ### Customization
 
-#### Modify Grading Scale
-
-Edit `src/utils/metricsCalculator.ts`:
-
-```typescript
-export function calculateGrade(score: number): Grade {
-  if (score >= 90) return "A";  // Change thresholds here
-  if (score >= 80) return "B";
-  if (score >= 70) return "C";
-  if (score >= 60) return "D";
-  return "F";
-}
-```
-
 #### Add New Risk Categories
 
-Edit `src/types/analysis.ts` to add categories to the Question interface:
+Edit `src/config/categories.json` to add new risk categories:
 
-```typescript
-export interface Question {
-  category: "Environmental Risk" | "Human Health Risk" | "Market/Business Risk" | "Regulatory/Financial Risk" | "Your New Category";
-  // ...
+```json
+{
+  "categories": [
+    {
+      "name": "Your New Category",
+      "icon": "🆕",
+      "color": "#yourcolor",
+      "description": "Description of the category"
+    }
+  ]
 }
 ```
 
@@ -234,7 +248,6 @@ verification-dashboard/
 │   ├── components/
 │   │   ├── shared/              # Reusable components
 │   │   │   ├── ClassificationBadge.astro
-│   │   │   ├── GradeDisplay.astro
 │   │   │   └── LoadingSkeleton.astro
 │   │   ├── layout/              # Layout components
 │   │   │   ├── Header.astro
@@ -254,7 +267,12 @@ verification-dashboard/
 │   │   └── metrics.ts           # Metrics types
 │   ├── utils/
 │   │   ├── dataLoader.ts        # Data loading functions
-│   │   └── metricsCalculator.ts # Scoring functions
+│   │   ├── metricsCalculator.ts # Metrics calculation functions
+│   │   └── excelGenerator.ts    # Excel export functions
+│   ├── scripts/
+│   │   └── generateExcelReport.ts # Excel export CLI
+│   ├── config/
+│   │   └── categories.json      # Risk category configuration
 │   └── styles/
 │       └── global.css           # Global styles
 ├── tests/
@@ -265,6 +283,8 @@ verification-dashboard/
 │   ├── dataLoader.test.ts
 │   ├── components.smoke.test.ts
 │   └── README.md                # Test documentation
+├── docs/
+│   └── EXCEL_EXPORT_GUIDE.md    # Excel export documentation
 ├── public/                       # Static assets
 ├── astro.config.mjs             # Astro configuration
 ├── tailwind.config.mjs          # Tailwind configuration
@@ -284,6 +304,7 @@ verification-dashboard/
 - **Runtime:** Node.js with @astrojs/node adapter
 - **Language:** TypeScript (strict mode)
 - **Testing:** tsx + custom test framework
+- **Excel Export:** ExcelJS 4.4.0
 
 ### Development Workflow
 
@@ -355,7 +376,7 @@ verification-dashboard/
 
 ### Test Coverage
 
-- **Total Tests:** 79
+- **Total Tests:** 62
 - **Pass Rate:** 100%
 - **Coverage:**
   - Metrics calculation: 100%
@@ -368,10 +389,10 @@ verification-dashboard/
 ```
 tests/
 ├── utils/testHelpers.ts          # Shared test utilities
-├── metricsCalculator.test.ts     # 27 unit tests for scoring
-├── dataValidation.test.ts        # 10 validation tests
-├── dataLoader.test.ts            # 22 integration tests
-└── components.smoke.test.ts      # 20 component tests
+├── metricsCalculator.test.ts     # Unit tests for metrics calculation
+├── dataValidation.test.ts        # Validation tests
+├── dataLoader.test.ts            # Integration tests
+└── components.smoke.test.ts      # Component tests
 ```
 
 ### Writing Tests
@@ -461,11 +482,11 @@ No environment variables required for basic deployment. Data is loaded from loca
 
 ## Documentation
 
+- **[USER_GUIDE.md](USER_GUIDE.md)** - End-user guide for navigating and interpreting the dashboard
+- **[docs/EXCEL_EXPORT_GUIDE.md](docs/EXCEL_EXPORT_GUIDE.md)** - Complete Excel export guide with examples and troubleshooting
 - **[DASHBOARD.md](DASHBOARD.md)** - Architecture and design decisions
 - **[tests/README.md](tests/README.md)** - Testing documentation
-- **[USER_GUIDE.md](USER_GUIDE.md)** - End-user guide
 - **[API.md](API.md)** - API and utilities documentation
-- **[docs/EXCEL_EXPORT_GUIDE.md](docs/EXCEL_EXPORT_GUIDE.md)** - Complete Excel export guide with examples and troubleshooting
 
 ## Contributing
 
@@ -505,6 +526,7 @@ MIT License - see [LICENSE](LICENSE) file for details
 - Built with [Astro](https://astro.build/)
 - Styled with [Tailwind CSS](https://tailwindcss.com/)
 - Charts powered by [Chart.js](https://www.chartjs.org/)
+- Excel exports with [ExcelJS](https://github.com/exceljs/exceljs)
 
 ## Support
 
@@ -515,5 +537,6 @@ For questions or issues:
 
 ---
 
-**Version:** 1.0.0
-**Last Updated:** 2025-10-30
+**Version:** 2.0.0
+**Last Updated:** 2025-11-05
+**Major Changes:** Removed scoring/grading system, focused on evidence-based analysis with classification, distribution metrics, and evidence depth.

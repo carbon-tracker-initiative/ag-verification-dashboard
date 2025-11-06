@@ -1,13 +1,13 @@
 # Verification Dashboard User Guide
 
-**Version:** 1.0.0
+**Version:** 2.0.0
 
-Welcome to the Verification Dashboard! This guide will help you navigate the dashboard and understand how to interpret the disclosure quality scores.
+Welcome to the Verification Dashboard! This guide will help you navigate the dashboard and understand how to interpret disclosure quality through evidence-based analysis.
 
 ## Table of Contents
 
 1. [Getting Started](#getting-started)
-2. [Understanding the Scoring System](#understanding-the-scoring-system)
+2. [Understanding the Analysis System](#understanding-the-analysis-system)
 3. [Navigating the Dashboard](#navigating-the-dashboard)
 4. [Home Page](#home-page)
 5. [Company-Year Detail Page](#company-year-detail-page)
@@ -31,67 +31,81 @@ At the top of every page, you'll find:
 - **Analytics** - Cross-company analytics and insights
 - Links to individual company pages
 
-## Understanding the Scoring System
+## Understanding the Analysis System
 
-### How Scores Are Calculated
+### Classification System
 
-Each disclosure snippet (a specific statement from a company document) is evaluated on three dimensions:
+Each disclosure snippet (a specific statement from a company document) is classified by completeness:
 
-#### 1. Financial Transparency (0-3 points)
+- **FULL_DISCLOSURE** (Green) - Complete, detailed disclosure that fully addresses the question
+- **PARTIAL** (Yellow) - Some information provided, but incomplete or indirect
+- **UNCLEAR** (Orange) - Ambiguous, vague, or difficult to assess
+- **NO_DISCLOSURE** (Red) - No meaningful disclosure found
 
-**What it measures:** How specific is the financial information?
+### Evidence Depth
 
-- **Full (3 points):** "We invested $50 million in sustainable agriculture"
-- **Partial (2 points):** "We made significant investments in sustainability"
-- **Non-Financial (1 point):** "We support sustainable farming practices"
+**What it measures:** The number of supporting snippets found for each question.
 
-#### 2. Temporal Specificity (0-3 points)
+- **Higher evidence depth** indicates more thorough documentation
+- **Multiple snippets** per question shows comprehensive coverage
+- **Zero snippets** indicates a disclosure gap
 
-**What it measures:** How current is the information?
+### Distribution Metrics
 
-- **Current (3 points):** "In 2024, we are implementing..."
-- **Future (2 points):** "We plan to reduce emissions by 2030..."
-- **Historical (1 point):** "In 2022, we reduced water use..."
-- **Unclear (0 points):** "We work to minimize environmental impact"
+The dashboard tracks three key distribution metrics as percentages:
 
-#### 3. Narrative Framing (1-3 points)
+#### 1. Financial Transparency Rate
 
-**What it measures:** How balanced is the perspective?
+**What it measures:** Percentage of snippets containing explicit financial quantification.
 
-- **Both (3 points):** Discusses both risks AND opportunities
-- **Risk or Opportunity (2 points):** Focuses on only one perspective
-- **Neutral (1 point):** Purely factual, no risk/opportunity framing
+- **Full Financial:** Specific amounts ("$50 million investment in sustainable agriculture")
+- **Partial Financial:** Qualitative financial references ("significant investments")
+- **Non-Financial:** No monetary detail ("we support sustainable practices")
 
-### Composite Score Formula
+**Higher financial transparency rate** = More quantified, specific disclosures
 
-```
-Score = (Financial + Temporal + Narrative) / 9 × 100%
-```
+#### 2. Forward-Looking Rate
 
-**Example:**
-- Financial: Full (3 points)
-- Temporal: Current (3 points)
-- Narrative: Both (3 points)
-- **Total:** (3 + 3 + 3) / 9 × 100 = **100%** (Grade A)
+**What it measures:** Percentage of snippets with future-oriented timeframes.
 
-### Letter Grades
+- **Present day:** Current information ("In 2024, we are implementing...")
+- **Forward-looking:** Future commitments ("We plan to reduce emissions by 2030")
+- **Historical:** Past information ("In 2022, we reduced water use...")
+- **Multiple/Unclear:** No clear timeframe or mixed references
 
-| Grade | Score Range | Interpretation |
-|-------|-------------|----------------|
-| A | 90-100% | Excellent disclosure quality |
-| B | 80-89% | Good disclosure quality |
-| C | 70-79% | Fair disclosure quality |
-| D | 60-69% | Poor disclosure quality |
-| F | Below 60% | Failing disclosure quality |
+**Higher forward-looking rate** = More future-oriented strategic disclosures
 
-### Classification Badges
+#### 3. Narrative Balance Rate
 
-Snippets are also classified by completeness:
+**What it measures:** Percentage of snippets presenting balanced perspectives.
 
-- **FULL_DISCLOSURE** (Green) - Complete, detailed disclosure
-- **PARTIAL** (Yellow) - Some information provided
-- **UNCLEAR** (Orange) - Ambiguous or vague
-- **NO_DISCLOSURE** (Red) - No meaningful disclosure
+- **Both:** Discusses both risks AND opportunities
+- **Risk only:** Focuses solely on risks or challenges
+- **Opportunity only:** Focuses solely on opportunities or benefits
+- **Neutral:** Purely factual, no risk/opportunity framing
+
+**Higher narrative balance rate** = More balanced, comprehensive risk communication
+
+### Categorization Breakdown
+
+Each snippet is categorized across three dimensions to provide analytical insights (not for scoring):
+
+**Financial Type:**
+- Full - Explicit monetary amounts
+- Partial - Qualitative financial references
+- Non-Financial - No financial information
+
+**Timeframe:**
+- Present day - Current operations and status
+- Forward-looking - Future plans and commitments
+- Historical - Past actions and results
+- Multiple/Unclear - No clear temporal context
+
+**Framing:**
+- Both - Balanced risk and opportunity discussion
+- Risk - Risk-focused narrative
+- Opportunity - Opportunity-focused narrative
+- Neutral - Factual statements without framing
 
 ## Navigating the Dashboard
 
@@ -119,39 +133,44 @@ The home page provides a cross-company comparison with three main sections:
 **What you see:**
 - Company name
 - Fiscal year analyzed
-- Overall grade (A-F)
-- Overall score percentage
+- Total disclosure snippets found
+- Classification distribution (Full/Partial/Unclear/No Disclosure counts)
 - Number of questions analyzed
 - "View Details" button
 
 **How to use:**
 - Click "View Details" to see full analysis for that company
-- Compare grades across companies at a glance
-- Identify top and bottom performers
+- Compare snippet counts across companies
+- Identify companies with high full disclosure rates
+- Note companies with many disclosure gaps (NO_DISCLOSURE)
 
 ### 2. Category Performance
 
-Four risk category cards showing average scores:
+Four risk category cards showing key metrics:
 - Environmental Risk
 - Human Health Risk
 - Market/Business Risk
 - Regulatory/Financial Risk
 
+**What you see per category:**
+- Average evidence depth (snippets per question)
+- Financial transparency rate
+- Forward-looking rate
+
 **Interpretation:**
-- Higher percentages = better disclosure quality
-- Green (>70%) = good category performance
-- Yellow (50-70%) = moderate performance
-- Red (<50%) = poor performance
+- Higher evidence depth = more thorough category coverage
+- Higher financial transparency = more quantified disclosures
+- Higher forward-looking rate = more future-oriented content
 
 ### 3. Question Rankings
 
-**Top Performers:** Questions with highest average scores across all companies
-**Bottom Performers:** Questions with lowest average scores
+**Top Performers:** Questions with highest average evidence depth across all companies
+**Bottom Performers:** Questions with lowest average evidence depth
 
 **What this tells you:**
-- Which topics are well-disclosed industry-wide
-- Which topics need improvement across the board
-- Industry-wide disclosure patterns
+- Which topics are well-documented industry-wide
+- Which topics show consistent disclosure gaps
+- Industry-wide disclosure patterns and priorities
 
 ## Company-Year Detail Page
 
@@ -165,16 +184,19 @@ Four risk category cards showing average scores:
 #### 1. Summary Dashboard
 
 **Key Metrics Displayed:**
-- Overall disclosure score and grade
 - Total questions analyzed
-- Total disclosure snippets
-- Average snippets per question
-- Category breakdowns
+- Total disclosure snippets found
+- Average evidence depth (snippets per question)
+- Classification distribution breakdown
+- Financial transparency rate
+- Forward-looking rate
+- Narrative balance rate
 
 **How to interpret:**
-- Higher overall score = better comprehensive disclosure
-- More snippets per question = more thorough disclosure
-- Category scores show strengths and weaknesses
+- Higher snippet counts = more comprehensive disclosure
+- Higher full disclosure percentage = more complete answers
+- Higher distribution rates = better quality characteristics
+- Category breakdowns show strengths and weaknesses
 
 #### 2. Filters Bar
 
@@ -186,7 +208,7 @@ Four risk category cards showing average scores:
 - Select "All", "Full Disclosure", "Partial", "Unclear", or "No Disclosure"
 - Shows only snippets matching classification
 
-**Tip:** Use filters to focus on specific areas of interest
+**Tip:** Use filters to focus on specific areas of interest or identify gaps
 
 #### 3. Question Accordion
 
@@ -194,14 +216,15 @@ Each question card shows:
 - Question text
 - Category tag
 - Priority level (High/Medium/Low)
-- Average score for this question
-- Grade (A-F)
-- Number of disclosure snippets
+- Classification badge for the question's overall rating
+- Number of disclosure snippets (evidence depth)
+- Distribution metrics for this question
 
 **How to use:**
 - Click to expand and see all disclosure snippets
 - Collapsed by default to reduce clutter
 - Expand multiple questions for comparison
+- Questions with zero snippets show disclosure gaps
 
 #### 4. Snippet Cards
 
@@ -210,15 +233,14 @@ Within each expanded question, you'll see individual snippets:
 **Information shown:**
 - Direct quote from the document
 - Source (document and page number)
-- Classification badge
-- Individual score and grade
+- Classification badge (Full/Partial/Unclear)
 - Financial amounts (if any)
-- Categorization breakdown
+- Categorization breakdown (Financial Type, Timeframe, Framing)
 
 **Understanding the categorization:**
-- **Financial Type:** Full / Partial / Non-Financial
-- **Timeframe:** Current / Future / Historical / Unclear
-- **Framing:** Both / Risk / Opportunity / Neutral
+- **Financial Type:** Shows whether the snippet includes quantified amounts
+- **Timeframe:** Shows temporal orientation (current, future, historical, unclear)
+- **Framing:** Shows risk/opportunity perspective balance
 
 ### Comparison Mode
 
@@ -226,7 +248,7 @@ Within each expanded question, you'll see individual snippets:
 
 - Switch between verified and original analysis
 - Compare how verification changed the results
-- See differences in scoring and classification
+- See differences in classification and snippet counts
 
 ## Analytics Page
 
@@ -239,168 +261,180 @@ Cross-company insights and benchmarking across all analyzed companies.
 #### 1. Key Insights
 
 **Auto-generated findings:**
-- Financial quantification rates
-- Temporal clarity patterns
+- Financial quantification patterns across companies
+- Temporal clarity trends
 - Evidence depth analysis
+- Classification distribution insights
 - Actionable recommendations
 
 **How to use:**
 - Read insights top to bottom
-- Note recommendations for improvement
-- Identify industry-wide trends
+- Note recommendations for improvement areas
+- Identify industry-wide trends and patterns
 
 #### 2. Question Benchmark
 
 **Three sub-tabs:**
 
 **Top Performers:**
-- Questions with highest average scores
-- Industry best practices
-- Topics with strong disclosure
+- Questions with highest average evidence depth
+- Industry best practices in disclosure
+- Topics with strong documentation
 
 **Bottom Performers:**
-- Questions with lowest average scores
-- Improvement opportunities
-- Industry-wide gaps
+- Questions with lowest average evidence depth
+- Common disclosure gaps
+- Industry-wide improvement opportunities
 
 **High Variance:**
-- Questions with inconsistent scores across companies
+- Questions with inconsistent disclosure quality across companies
 - Shows where companies differ most
 - Competitive differentiation opportunities
 
 **How to use:**
-- Identify questions to prioritize for improvement
-- Learn from top-performing disclosures
-- Understand industry baselines
+- Identify high-priority questions for improvement
+- Learn from well-documented disclosures
+- Understand industry baselines and benchmarks
 
 #### 3. Company Comparison
 
-**5-Dimensional Radar Chart:**
+**4-Dimensional Radar Chart:**
 
 Compares companies on:
-1. **Financial Transparency** - Specificity of monetary amounts
-2. **Temporal Clarity** - Time-relevance of disclosures
-3. **Narrative Balance** - Risk/opportunity framing
-4. **Evidence Depth** - Number of supporting snippets
-5. **Disclosure Breadth** - Coverage across question categories
+1. **Financial Transparency** - Percentage of snippets with financial quantification
+2. **Forward-Looking Maturity** - Percentage of future-oriented disclosures
+3. **Narrative Balance** - Percentage of balanced risk/opportunity framing
+4. **Evidence Depth** - Average snippets per question (scaled to 0-100)
 
 **How to interpret:**
-- Larger area = better overall performance
-- Compare shapes to see different strengths
+- Larger area = stronger performance across dimensions
+- Compare shapes to see different strengths and weaknesses
 - Industry average shown for context
 
 **Strengths/Weaknesses:**
 - Listed below each company's radar chart
 - Based on comparison to industry average
-- Actionable insights for improvement
+- Identifies specific areas for improvement
 
 #### 4. Category Deep Dive
 
 **For each risk category:**
 
+**Key Metrics:**
+- Total evidence snippets in this category
+- Average evidence depth per question
+- Ranking across all categories
+
 **Classification Distribution:**
-- Pie chart showing breakdown by classification type
+- Breakdown by classification type
 - Percentages for Full/Partial/Unclear/No Disclosure
 
 **Company Rankings:**
 - Top companies in this category
-- Scores and grades
-- Comparative performance
-
-**Question Performance:**
-- Best and worst questions within category
-- Category-specific insights
+- Comparative evidence depth
+- Financial transparency rates
 
 **How to use:**
 - Focus on categories relevant to your interests
 - Identify category-specific leaders
 - Understand disclosure patterns per risk type
+- Recognize category-wide disclosure gaps
 
 ## Interpreting Results
 
-### What Makes a High-Quality Disclosure?
+### What Makes High-Quality Disclosure?
 
-**Excellent (Grade A: 90-100%):**
-- Specific financial amounts ("$X million")
-- Current timeframe ("in 2024")
+**Excellent Disclosure:**
+- Complete, detailed information (FULL_DISCLOSURE classification)
+- Specific financial amounts ("$50 million investment")
+- Current or forward-looking timeframe ("in 2024" or "by 2030")
 - Balanced risk/opportunity perspective
-- Multiple supporting snippets
+- Multiple supporting snippets per question
 - Clear, unambiguous language
 
-**Good (Grade B: 80-89%):**
+**Good Disclosure:**
+- Reasonable information provided (FULL or PARTIAL classification)
 - Some financial specificity
-- Generally current information
-- Reasonable framing
-- Adequate evidence
+- Generally current or forward-looking information
+- Adequate evidence (2-3 snippets per question)
 
-**Fair (Grade C: 70-79%):**
+**Moderate Disclosure:**
+- Partial information (PARTIAL classification)
 - Limited financial detail
-- Mix of current and unclear timeframes
-- Some one-sided framing
-- Basic evidence
+- Mix of timeframes
+- Minimal evidence (1-2 snippets per question)
 
-**Poor (Grade D: 60-69%):**
-- Vague financial information
-- Mostly unclear or historical
-- Heavily one-sided or neutral
-- Minimal evidence
-
-**Failing (Grade F: Below 60%):**
+**Poor Disclosure:**
+- Vague or unclear information (UNCLEAR classification)
 - No financial quantification
-- No clear timeframe
-- Purely factual or missing information
-- Little to no supporting evidence
+- Unclear or historical timeframes only
+- Very minimal evidence (0-1 snippets per question)
+
+**Disclosure Gaps:**
+- No meaningful disclosure found (NO_DISCLOSURE classification)
+- Zero snippets for the question
+- Clear area for improvement
 
 ### Red Flags
 
 Watch for:
-- **High "No Disclosure" percentages** - Missing information
-- **Low temporal clarity** - Outdated information
-- **Very low snippet counts** - Insufficient evidence
-- **Inconsistent category scores** - Uneven disclosure practices
+- **High NO_DISCLOSURE percentages** - Many missing answers
+- **Low evidence depth** - Insufficient supporting documentation
+- **Low financial transparency rate** - Vague, unquantified information
+- **High historical focus** - Outdated information without current/future context
+- **Unbalanced framing** - One-sided risk or opportunity focus
 
 ### Positive Indicators
 
 Look for:
-- **High full disclosure rates** - Comprehensive reporting
-- **Strong financial transparency** - Specific, quantified data
-- **Current timeframes** - Up-to-date information
+- **High FULL_DISCLOSURE rates** - Comprehensive reporting
+- **Strong evidence depth** - Multiple supporting snippets per question
+- **High financial transparency** - Specific, quantified data
+- **Forward-looking content** - Strategic, future-oriented information
 - **Balanced framing** - Risk and opportunity discussion
-- **High evidence depth** - Multiple supporting statements
 
 ## Frequently Asked Questions
 
 ### Q: What does "verified" mean?
 
-A: Verified results have been reviewed and potentially corrected through a verification process. Original results are the initial analysis before verification.
+A: Verified results have been reviewed and potentially corrected through a verification process. Original results are the initial analysis before verification. Verification may remove low-quality snippets or correct classifications.
 
 ### Q: Why do some questions have no snippets?
 
-A: This indicates no disclosure was found for that question in the analyzed documents. This itself is meaningful - it shows a disclosure gap.
+A: This indicates no disclosure was found for that question in the analyzed documents (NO_DISCLOSURE classification). This itself is meaningful - it shows a disclosure gap that could be addressed.
 
 ### Q: How are categories assigned?
 
 A: Categories are predefined based on risk type:
-- Environmental Risk (climate, water, biodiversity, etc.)
-- Human Health Risk (pesticides, food safety, etc.)
-- Market/Business Risk (market volatility, competition, etc.)
-- Regulatory/Financial Risk (compliance, litigation, etc.)
+- **Environmental Risk** (climate, water, biodiversity, waste, etc.)
+- **Human Health Risk** (pesticides, food safety, product impacts, etc.)
+- **Market/Business Risk** (market volatility, competition, supply chain, etc.)
+- **Regulatory/Financial Risk** (compliance, litigation, regulatory changes, etc.)
 
-### Q: What's the difference between classification and score?
+### Q: What's the difference between classification and evidence depth?
 
-A: **Classification** (Full/Partial/Unclear/None) is a qualitative assessment of disclosure completeness. **Score** (0-100%) is a quantitative measure based on three dimensions. A disclosure can be classified as "Full" but still score low if it lacks financial detail or current timeframes.
+A: **Classification** (Full/Partial/Unclear/None) is a qualitative assessment of how well a disclosure addresses the question. **Evidence depth** is the number of supporting snippets found. Both are important - you want both high-quality (FULL_DISCLOSURE) and sufficient quantity (multiple snippets).
 
 ### Q: Can I export the data?
 
-A: Currently, the dashboard is view-only. For data export, contact your system administrator.
+A: Yes! Use the Excel export feature with `npm run export:excel` to generate comprehensive reports with all metrics and raw data. See the Excel Export Guide for details.
 
-### Q: Why do grades vary within a company?
+### Q: Why does disclosure quality vary within a company?
 
-A: Different questions address different topics. A company may excel at disclosing some risks (e.g., environmental) while underperforming on others (e.g., regulatory). Question-level grades show this variation.
+A: Different questions address different topics. A company may excel at disclosing some risks (e.g., environmental) while underperforming on others (e.g., regulatory). Question-level and category-level metrics show this variation.
 
 ### Q: What does "Multiple or Unclear" timeframe mean?
 
-A: The disclosure mentions multiple time periods without clarity, or provides no temporal context. This receives 0 points for temporal specificity.
+A: The disclosure mentions multiple time periods without clarity, or provides no temporal context. This makes it difficult to assess the current relevance of the information.
+
+### Q: How should I interpret distribution rates?
+
+A: Distribution rates show the *percentage* of snippets with certain characteristics:
+- **Financial Transparency Rate**: % of snippets with financial quantification
+- **Forward-Looking Rate**: % of snippets with future timeframes
+- **Narrative Balance Rate**: % of snippets with balanced risk/opportunity framing
+
+Higher percentages indicate better quality across these dimensions.
 
 ## Tips and Best Practices
 
@@ -408,17 +442,17 @@ A: The disclosure mentions multiple time periods without clarity, or provides no
 
 1. **Start with the Overview**
    - Get a high-level sense from the home page
-   - Identify outliers (best and worst performers)
+   - Identify outliers (high and low performers)
    - Note category-wide patterns
 
-2. **Deep-Dive Strategically**
-   - Focus on relevant companies/categories
-   - Use filters to narrow scope
-   - Compare similar companies
+2. **Focus on Evidence Depth**
+   - Which questions have the most/least evidence?
+   - Which companies provide the most thorough documentation?
+   - Where are the consistent gaps?
 
 3. **Look for Patterns**
-   - Which questions consistently score low?
-   - Which companies lead in specific areas?
+   - Which questions consistently show low disclosure?
+   - Which companies lead in specific categories?
    - Are there industry-wide gaps?
 
 4. **Use Analytics for Context**
@@ -429,50 +463,56 @@ A: The disclosure mentions multiple time periods without clarity, or provides no
 ### For Company Representatives
 
 1. **Identify Improvement Areas**
-   - Focus on low-scoring questions
-   - Note missing disclosures (no snippets)
-   - Compare to top performers
+   - Focus on questions with NO_DISCLOSURE or low evidence depth
+   - Note missing disclosures (zero snippets)
+   - Compare to industry leaders
 
-2. **Learn from Leaders**
-   - What makes top-scoring disclosures effective?
-   - How do they frame risk and opportunity?
-   - What level of detail do they provide?
+2. **Improve Financial Transparency**
+   - Add specific monetary amounts where possible
+   - Quantify impacts, investments, and commitments
+   - Aim for higher financial transparency rate
 
-3. **Track Over Time**
-   - If multiple years available, look for trends
-   - Has disclosure quality improved?
-   - Are gaps being addressed?
+3. **Enhance Forward-Looking Content**
+   - Include future plans and commitments
+   - Set specific timelines and targets
+   - Balance historical achievements with future strategy
 
 4. **Balance Perspectives**
-   - Low narrative framing scores suggest one-sidedness
-   - Aim for balanced risk/opportunity discussion
+   - Address both risks and opportunities
    - Provide context for both positive and negative aspects
+   - Aim for higher narrative balance rate
 
 ### For Researchers
 
-1. **Export Key Findings**
-   - Take screenshots of relevant charts
-   - Note specific snippet examples
-   - Record overall statistics
+1. **Export Data for Analysis**
+   - Use Excel export for comprehensive datasets
+   - Analyze snippet-level data for patterns
+   - Cross-reference with original documents
 
 2. **Document Methodology**
-   - Understand the three-dimensional scoring
-   - Note how aggregation works
-   - Recognize limitations
+   - Understand the classification system
+   - Note how distribution metrics are calculated
+   - Recognize analytical limitations
 
 3. **Cross-Reference**
    - Verify snippets against source documents
    - Check for context not captured in snippets
-   - Consider qualitative factors beyond scores
+   - Consider qualitative factors beyond metrics
+
+4. **Track Trends Over Time**
+   - Compare multiple years if available
+   - Track changes in evidence depth
+   - Monitor improvement in distribution rates
 
 ---
 
 ## Need Help?
 
-- **Technical Issues:** See README.md
-- **Architecture Details:** See DASHBOARD.md
-- **API Documentation:** See API.md
-- **Testing:** See tests/README.md
+- **Technical Issues:** See [README.md](README.md)
+- **Architecture Details:** See [DASHBOARD.md](DASHBOARD.md)
+- **Excel Export:** See [docs/EXCEL_EXPORT_GUIDE.md](docs/EXCEL_EXPORT_GUIDE.md)
+- **Testing:** See [tests/README.md](tests/README.md)
 
-**Version:** 1.0.0
-**Last Updated:** 2025-10-30
+**Version:** 2.0.0
+**Last Updated:** 2025-11-05
+**Major Changes:** Removed scoring/grading system, focused on evidence-based analysis with classification, distribution metrics, and evidence depth.
