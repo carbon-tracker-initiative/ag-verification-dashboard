@@ -139,6 +139,7 @@ The home page provides a cross-company comparison with three main sections:
 - Classification distribution (Full/Partial/Unclear/No Disclosure counts)
 - Number of questions analyzed
 - "View Details" button
+- Merged cards (version `merged`) show additional chips for source versions (v3, v4) and extra statistics (merged snippet count, AI reviews, human flags)
 
 **How to use:**
 - Click "View Details" to see full analysis for that company
@@ -209,6 +210,11 @@ Four risk category cards showing key metrics:
 **Filter by Classification:**
 - Select "All", "Full Disclosure", "Partial", "Unclear", or "No Disclosure"
 - Shows only snippets matching classification
+
+**Merged version notes:**
+- A "Merged Evidence Overview" panel summarizes combined v3/v4 snippet totals, AI reviews, and human flags
+- Source-version chips (e.g., v3, v4) indicate which original analyses are available; missing chips highlight absent inputs
+- Question cards retain verification badges (e.g., "Corrected by verification") when the merged review adjusted a snippet
 
 **Tip:** Use filters to focus on specific areas of interest or identify gaps
 

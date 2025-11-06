@@ -37,7 +37,8 @@ The Verification Dashboard provides comprehensive analysis of agricultural risk 
 - **Verification Support:** Compare original vs. verified results side-by-side
 - **Distribution Metrics:** Track financial transparency, present-day vs. forward-looking temporal balance, and narrative framing rates
 - **Excel Export:** Comprehensive 7-sheet reports with all metrics, perfect for presentations and further analysis
-- **Version Support:** Track and compare different schema versions (v3, v4, etc.) with separate cards and routes
+- **Version Support:** Track and compare different schema versions (v3, v4, merged) with separate cards and routes
+- **Merged Evidence View:** “Merged” cards combine v3/v4 snippets, surface AI review/human flag counts, and preserve verification badges from the source analyses
 
 ## Features
 
