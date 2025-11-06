@@ -42,46 +42,20 @@
           "version_source": "v4",
           "verification_corrected": true,
           "source_versions": [
+            "v3",
             "v4"
           ],
           "merger_metadata": {
-            "pairing_type": "v4_only",
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
             "ai_reviewed": false,
-            "note": "Unique to v4 analysis - not found in v3"
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 verification-corrected (overrides length)."
           },
           "snippet_rank": 1
         },
         {
           "snippet_id": "99903-002",
-          "quote": "Research conducted by national and international scientific authorities has concluded that GMO food crops do not pose additional risks to people, animals or the environment. Learn more about the health and safety of GMOs.",
-          "source": "2024 Nutrien Sustainability Report.pdf, Page 30, Product Development and Manufacturing",
-          "financial_amounts": [],
-          "classification_justification": "[CORRECTED BY VERIFICATION] The classification FULL_DISCLOSURE requires the identification of a business risk and its financial materiality. This snippet does the opposite by explicitly stating there is 'no risk'. Since the topic is acknowledged but not characterized as a business risk (in fact, it's characterized as a non-risk), the correct classification is UNCLEAR.",
-          "classification": "UNCLEAR",
-          "categorization": {
-            "framing_justification": "The statement directly addresses a potential negative perception (risk) associated with GMOs and refutes it with scientific evidence, thus framing the topic as a non-risk or a managed concern.",
-            "framing": "Neutral",
-            "financial_justification": "The disclosure makes a definitive statement about the absence of 'additional risks' but does not provide any financial figures or discuss financial materiality.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The statement refers to research conclusions as an established fact ('has concluded') and implies an ongoing understanding of the product's safety, making it present day in its relevance.",
-            "timeframe": "Present day"
-          },
-          "text": "Research conducted by national and international scientific authorities has concluded that GMO food crops do not pose additional risks to people, animals or the environment. Learn more about the health and safety of GMOs.",
-          "page": "2024 Nutrien Sustainability Report.pdf, Page 30, Product Development and Manufacturing",
-          "version_source": "v4",
-          "verification_corrected": true,
-          "source_versions": [
-            "v4"
-          ],
-          "merger_metadata": {
-            "pairing_type": "v4_only",
-            "ai_reviewed": false,
-            "note": "Unique to v4 analysis - not found in v3"
-          },
-          "snippet_rank": 2
-        },
-        {
-          "snippet_id": "99903-003",
           "quote": "Product use outside of the mandated scope as described on the label, in contravention of regulatory standards or misuse in general, has the potential to cause negative impacts.",
           "source": "2024 Nutrien Sustainability Report.pdf, Page 31, End-Use Application",
           "financial_amounts": [],
@@ -97,6 +71,38 @@
           },
           "text": "Product use outside of the mandated scope as described on the label, in contravention of regulatory standards or misuse in general, has the potential to cause negative impacts.",
           "page": "2024 Nutrien Sustainability Report.pdf, Page 31, End-Use Application",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 verification-corrected (overrides length)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99903-003",
+          "quote": "Research conducted by national and international scientific authorities has concluded that GMO food crops do not pose additional risks to people, animals or the environment. Learn more about the health and safety of GMOs.",
+          "source": "2024 Nutrien Sustainability Report.pdf, Page 30, Product Development and Manufacturing",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification FULL_DISCLOSURE requires the identification of a business risk and its financial materiality. This snippet does the opposite by explicitly stating there is 'no risk'. Since the topic is acknowledged but not characterized as a business risk (in fact, it's characterized as a non-risk), the correct classification is UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The statement directly addresses a potential negative perception (risk) associated with GMOs and refutes it with scientific evidence, thus framing the topic as a non-risk or a managed concern.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure makes a definitive statement about the absence of 'additional risks' but does not provide any financial figures or discuss financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement refers to research conclusions as an established fact ('has concluded') and implies an ongoing understanding of the product's safety, making it present day in its relevance.",
+            "timeframe": "Present day"
+          },
+          "text": "Research conducted by national and international scientific authorities has concluded that GMO food crops do not pose additional risks to people, animals or the environment. Learn more about the health and safety of GMOs.",
+          "page": "2024 Nutrien Sustainability Report.pdf, Page 30, Product Development and Manufacturing",
           "version_source": "v4",
           "verification_corrected": true,
           "source_versions": [
@@ -140,35 +146,6 @@
         },
         {
           "snippet_id": "99903-005",
-          "quote": "Product stewardship is a component of our operational processes and an expectation of our customers, suppliers, governments, regulators, investors, public interest groups, and employees. We strive to provide the information needed to use our products safely and effectively and aim to reduce potential negative impacts from the products we manufacture and sell. We endeavor to procure products and services in an economical, ethical and responsible way. We believe this creates mutual benefit for Nutrien, our customers and the communities where we operate.",
-          "source": "2024 Nutrien Sustainability Report.pdf, Page 29, Product Stewardship",
-          "financial_amounts": [],
-          "classification_justification": "This snippet acknowledges the company's aim to 'reduce potential negative impacts from the products we manufacture and sell' and to ensure products are used 'safely and effectively.' This implicitly recognizes that human health problems from products are a concern that requires management, thus characterizing it as a risk, but without stating financial materiality.",
-          "classification": "PARTIAL",
-          "categorization": {
-            "framing_justification": "The phrases 'aim to reduce potential negative impacts' and 'use our products safely and effectively' indicate an effort to mitigate adverse outcomes, framing the underlying issue as a risk.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure discusses 'potential negative impacts' and 'mutual benefit' but does not provide any specific financial figures or a statement on financial materiality.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The statement 'strive to provide' and 'aim to reduce' indicates ongoing efforts and future-oriented goals regarding product safety.",
-            "timeframe": "Present day"
-          },
-          "text": "Product stewardship is a component of our operational processes and an expectation of our customers, suppliers, governments, regulators, investors, public interest groups, and employees. We strive to provide the information needed to use our products safely and effectively and aim to reduce potential negative impacts from the products we manufacture and sell. We endeavor to procure products and services in an economical, ethical and responsible way. We believe this creates mutual benefit for Nutrien, our customers and the communities where we operate.",
-          "page": "29",
-          "version_source": "v3",
-          "verification_corrected": false,
-          "source_versions": [
-            "v3"
-          ],
-          "merger_metadata": {
-            "pairing_type": "v3_only",
-            "ai_reviewed": false,
-            "note": "Unique to v3 analysis - not found in v4"
-          },
-          "snippet_rank": 5
-        },
-        {
-          "snippet_id": "99903-006",
           "quote": "SDSs contain essential information about the properties of each chemical, including any physical, health and environmental hazards, in addition to safety precautions required for handling, storing and transporting the chemical. SDSs are available at our production facilities, during product transport and at our Retail selling locations, and are accessible on our website or through third-party providers for our customers 24 hours a day. Certain products and safety documents may be regulated by as follows: in US by the U.S. EPA, U.S. Department of Labor’s Occupational Safety and Health Administration (“OSHA”) or other agencies; in Canada by the Canada Pest Management Regulatory Agency (“PMRA”) and Canadian Food Inspection Agency (“CFIA”); in Europe by the European Chemicals Agency (“ECHA”) and the Fertilizer Act and Chemical Labelling and Packaging (“CLP”). Nutrien monitors changes to applicable laws as they impact SDSs and labels.",
           "source": "2024 Nutrien Sustainability Report.pdf, Page 31, Product Stewardship",
           "financial_amounts": [],
@@ -194,44 +171,15 @@
             "ai_reviewed": false,
             "note": "Unique to v3 analysis - not found in v4"
           },
-          "snippet_rank": 6
-        },
-        {
-          "snippet_id": "99903-007",
-          "quote": "Product use outside of the mandated scope as described on the label, in contravention of regulatory standards or misuse in general, has the potential to cause negative impacts. Pesticides are highly regulated products in the markets where we operate, and Nutrien has policies and procedures for the appropriate use of the products we sell.",
-          "source": "2024 Nutrien Sustainability Report.pdf, Page 31, Product Stewardship",
-          "financial_amounts": [],
-          "classification_justification": "This snippet explicitly states that 'Product use outside of the mandated scope... or misuse in general, has the potential to cause negative impacts,' specifically mentioning pesticides. This directly acknowledges the risk of human health problems (among other negative impacts) from product misuse, but does not state financial materiality.",
-          "classification": "PARTIAL",
-          "categorization": {
-            "framing_justification": "The phrase 'potential to cause negative impacts' from product misuse clearly frames this as a risk, emphasizing potential harm if products are not used as intended.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure identifies potential negative impacts but does not provide any financial figures or a statement regarding financial materiality.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The statement describes an ongoing potential for negative impacts from product misuse, indicating a present-day and forward-looking risk.",
-            "timeframe": "Present day"
-          },
-          "text": "Product use outside of the mandated scope as described on the label, in contravention of regulatory standards or misuse in general, has the potential to cause negative impacts. Pesticides are highly regulated products in the markets where we operate, and Nutrien has policies and procedures for the appropriate use of the products we sell.",
-          "page": "31",
-          "version_source": "v3",
-          "verification_corrected": false,
-          "source_versions": [
-            "v3"
-          ],
-          "merger_metadata": {
-            "pairing_type": "v3_only",
-            "ai_reviewed": false,
-            "note": "Unique to v3 analysis - not found in v4"
-          },
-          "snippet_rank": 7
+          "snippet_rank": 5
         }
       ],
       "summary": "MERGED ANALYSIS: Combined best evidence from v3 (4 snippets) and v4 (3 snippets) analyses. Sorted by relevance score.",
       "merger_stats": {
         "v3_snippets": 4,
         "v4_snippets": 3,
-        "merged_snippets": 7,
-        "snippet_pairs": 7,
+        "merged_snippets": 5,
+        "snippet_pairs": 5,
         "ai_reviews_conducted": 0,
         "human_review_flagged": 0
       }
@@ -244,120 +192,6 @@
       "disclosures": [
         {
           "snippet_id": "99904-001",
-          "quote": "Transition risks relate to the risk inherent in changing strategies, policies or investments as society and industry work to reduce the reliance on carbon and its impact on the climate. Impacts from transition risks include, among other things, policy constraints on emissions, carbon pricing mechanisms, water restrictions, land use restrictions or incentives, changing consumer preferences and market demand and supply shifts. ... These and other factors resulting from climate change could adversely impact our operations, financial results or liquidity.",
-          "source": "2024 Nutrien Annual Report.pdf, Page 46, Key enterprise risks",
-          "financial_amounts": [],
-          "classification_justification": "This snippet explicitly identifies 'carbon pricing mechanisms' as an impact from 'transition risks' related to climate change, stating that these factors 'could adversely impact our operations, financial results or liquidity.' This directly links carbon costs to business risk and potential financial impact, but without stating financial materiality.",
-          "classification": "PARTIAL",
-          "categorization": {
-            "framing_justification": "The identification of 'Transition risks' and the phrase 'could adversely impact' clearly frame this as a potential negative consequence or threat to the business.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure mentions 'financial results or liquidity' as potential impacts but does not provide specific financial figures or a definitive statement about financial materiality.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The description of 'Transition risks' and 'could adversely impact' indicates a forward-looking assessment of potential future developments.",
-            "timeframe": "Forward-looking"
-          },
-          "text": "Transition risks relate to the risk inherent in changing strategies, policies or investments as society and industry work to reduce the reliance on carbon and its impact on the climate. Impacts from transition risks include, among other things, policy constraints on emissions, carbon pricing mechanisms, water restrictions, land use restrictions or incentives, changing consumer preferences and market demand and supply shifts. ... These and other factors resulting from climate change could adversely impact our operations, financial results or liquidity.",
-          "page": "46",
-          "version_source": "v3",
-          "verification_corrected": false,
-          "relevance_score": 9,
-          "relevance_explanation": "The snippet directly addresses the question by identifying 'carbon pricing mechanisms' as a 'transition risk' that could adversely impact the company's financial results.",
-          "source_versions": [
-            "v3"
-          ],
-          "merger_metadata": {
-            "pairing_type": "overlapping",
-            "similarity": 0.8690355329949239,
-            "ai_reviewed": true,
-            "ai_decision": "keep_v3",
-            "ai_rationale": "Version 3 is more complete. It contains all the text from Version 4 plus an additional sentence that explicitly links the identified risks, including carbon pricing, to potential adverse impacts on the company's financial results and liquidity.",
-            "merged_classification": "PARTIAL",
-            "classification_rationale": "The company identifies 'carbon pricing mechanisms' as a business risk and states it 'could adversely impact... financial results,' but it does not use explicit financial materiality language (e.g., 'material impact') or provide quantified impacts.",
-            "evidence_quality_flags": {
-              "characterizes_business_risk": true,
-              "product_benefit_framing": false,
-              "financial_materiality_explicit": false,
-              "key_phrases": [
-                "Transition risks",
-                "carbon pricing mechanisms",
-                "could adversely impact our operations, financial results or liquidity"
-              ]
-            },
-            "confidence_assessment": {
-              "evidence_summary": "The company discloses 'transition risks' which include 'carbon pricing mechanisms' and states these factors 'could adversely impact our operations, financial results or liquidity'.",
-              "confidence_explanation": "The evidence directly links carbon pricing to business risk and potential financial impact, making the classification straightforward. The lack of explicit materiality language is also clear.",
-              "confidence_percentage": 95
-            },
-            "relevance_to_question": {
-              "is_relevant": true,
-              "relevance_score": 9,
-              "relevance_explanation": "The snippet directly addresses the question by identifying 'carbon pricing mechanisms' as a 'transition risk' that could adversely impact the company's financial results."
-            },
-            "human_review_recommended": false,
-            "human_review_reason": null
-          },
-          "snippet_rank": 1
-        },
-        {
-          "snippet_id": "99904-002",
-          "quote": "Our current trajectory indicates this target will not be achieved by 2030 and is currently under review. Certain assumptions which supported our emissions intensity reduction target in 2021 have materialized differently than originally projected. At this point, we do not have clarity on regulatory policies or the future of compliance frameworks within the primary locations where we operate and have not seen financially material opportunities develop for products with a lower carbon intensity relative to conventionally produced products. These circumstances have led to greater uncertainty and higher execution and financial risk for the next phase of GHG abatement projects, which has deprioritized prospective investments within our capital allocation framework. We continue to monitor technological advancements, government incentives and tax policies, the emergence of premium markets for products with a lower carbon intensity than conventionally produced products, as well as industry partnerships that may make emissions reduction projects economically viable. We expect to provide a further update in 2026.",
-          "source": "2024 Nutrien Sustainability Report.pdf, Page 10, Our Targets",
-          "financial_amounts": [],
-          "classification_justification": "This snippet discusses the lack of 'clarity on regulatory policies or the future of compliance frameworks' and the absence of 'financially material opportunities' for lower carbon intensity products, leading to 'greater uncertainty and higher execution and financial risk' for GHG abatement projects. This explicitly links regulatory uncertainty and the lack of financially viable opportunities for low-carbon products to financial risk for the business, but does not state financial materiality for carbon costs themselves.",
-          "classification": "PARTIAL",
-          "categorization": {
-            "framing_justification": "The discussion of 'greater uncertainty and higher execution and financial risk' for GHG abatement projects, driven by lack of clarity on regulatory policies and financially material opportunities, clearly frames this as a business challenge or threat.",
-            "framing": "Risk",
-            "financial_justification": "The snippet mentions 'financially material opportunities' and 'financial risk' but does not provide specific financial figures or a definitive statement about the materiality of carbon costs themselves.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The discussion of a 2030 target, current review, and monitoring future developments indicates a forward-looking timeframe, with present-day implications for investment decisions.",
-            "timeframe": "Multiple or Unclear"
-          },
-          "text": "Our current trajectory indicates this target will not be achieved by 2030 and is currently under review. Certain assumptions which supported our emissions intensity reduction target in 2021 have materialized differently than originally projected. At this point, we do not have clarity on regulatory policies or the future of compliance frameworks within the primary locations where we operate and have not seen financially material opportunities develop for products with a lower carbon intensity relative to conventionally produced products. These circumstances have led to greater uncertainty and higher execution and financial risk for the next phase of GHG abatement projects, which has deprioritized prospective investments within our capital allocation framework. We continue to monitor technological advancements, government incentives and tax policies, the emergence of premium markets for products with a lower carbon intensity than conventionally produced products, as well as industry partnerships that may make emissions reduction projects economically viable. We expect to provide a further update in 2026.",
-          "page": "10",
-          "version_source": "v3",
-          "verification_corrected": false,
-          "relevance_score": 9,
-          "relevance_explanation": "The snippet directly addresses the question by linking uncertainty around carbon-related 'regulatory policies' and 'compliance frameworks' to 'higher execution and financial risk' for the business's GHG abatement projects.",
-          "source_versions": [
-            "v3"
-          ],
-          "merger_metadata": {
-            "pairing_type": "overlapping",
-            "similarity": 0.8146186440677966,
-            "ai_reviewed": true,
-            "ai_decision": "keep_v3",
-            "ai_rationale": "Version 3 contains more complete text, including forward-looking statements about monitoring developments and future updates, which provides better context than the subset of text in Version 4.",
-            "merged_classification": "PARTIAL",
-            "classification_rationale": "The company explicitly identifies 'financial risk' arising from uncertainty in carbon-related regulatory and compliance frameworks. However, it does not use explicit financial materiality language (e.g., 'material impact') or quantify the risk, making it a partial disclosure.",
-            "evidence_quality_flags": {
-              "characterizes_business_risk": true,
-              "product_benefit_framing": false,
-              "financial_materiality_explicit": false,
-              "key_phrases": [
-                "greater uncertainty and higher execution and financial risk",
-                "do not have clarity on regulatory policies or the future of compliance frameworks",
-                "deprioritized prospective investments within our capital allocation framework"
-              ]
-            },
-            "confidence_assessment": {
-              "evidence_summary": "The company discloses that uncertainty regarding future carbon-related regulatory policies and compliance frameworks creates 'higher execution and financial risk' for its GHG abatement projects, causing it to deprioritize related investments.",
-              "confidence_explanation": "The evidence is highly confident as it explicitly uses the term 'financial risk' and directly connects it to the uncertainty of future carbon compliance frameworks, which is the core of the question.",
-              "confidence_percentage": 95
-            },
-            "relevance_to_question": {
-              "is_relevant": true,
-              "relevance_score": 9,
-              "relevance_explanation": "The snippet directly addresses the question by linking uncertainty around carbon-related 'regulatory policies' and 'compliance frameworks' to 'higher execution and financial risk' for the business's GHG abatement projects."
-            },
-            "human_review_recommended": false,
-            "human_review_reason": null
-          },
-          "snippet_rank": 2
-        },
-        {
-          "snippet_id": "99904-003",
           "quote": "Preliminary results: Using high-level estimated emissions and criteria aligned with the GHG Protocol’s technical guidance for calculating Scope 3 emissions, we identified eight of the 15 Scope 3 categories as relevant to Nutrien (see table on next page). Based on 2023 preliminary results, we estimate that Category 11 (Use of Sold Products) and Category 1 (Purchased Goods and Services) combined account for approximately 90 percent of the identified value chain Scope 3 emissions. Category 11 is associated with nitrogen fertilizer use on-field and the main driver of Category 1 emissions is associated with purchased nitrogen fertilizer. We intend to enhance the accuracy and precision of our Scope 3 measurement by refining data inputs and calculations.",
           "source": "2024 Nutrien Sustainability Report.pdf, Page 23, Climate Change and GHG Emissions",
           "financial_amounts": [],
@@ -383,10 +217,10 @@
             "ai_reviewed": false,
             "note": "Unique to v3 analysis - not found in v4"
           },
-          "snippet_rank": 3
+          "snippet_rank": 1
         },
         {
-          "snippet_id": "99904-004",
+          "snippet_id": "99904-002",
           "quote": "Changing laws, regulations and government policies, including those relating to the environment, climate change (including regulation of GHG emissions), data privacy, health and safety, and taxes and royalties, could affect our ability to produce or sell certain products, reduce our efficiency and competitive advantage, increase our costs of raw materials, energy, transportation and compliance, or require us to make capital improvements to our operations. These and other factors could impact our strategy, operations, financial results or reputation.",
           "source": "2024 Nutrien Annual Report.pdf, Page 44, Key enterprise risks",
           "financial_amounts": [],
@@ -414,6 +248,70 @@
             "ai_reviewed": false,
             "auto_merge_decision": "v4",
             "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99904-003",
+          "quote": "Transition risks relate to the risk inherent in changing strategies, policies or investments as society and industry work to reduce the reliance on carbon and its impact on the climate. Impacts from transition risks include, among other things, policy constraints on emissions, carbon pricing mechanisms, water restrictions, land use restrictions or incentives, changing consumer preferences and market demand and supply shifts. ... These and other factors resulting from climate change could adversely impact our operations, financial results or liquidity.",
+          "source": "2024 Nutrien Annual Report.pdf, Page 46, Key enterprise risks",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'carbon pricing mechanisms' as an impact from 'transition risks' related to climate change, stating that these factors 'could adversely impact our operations, financial results or liquidity.' This directly links carbon costs to business risk and potential financial impact, but without stating financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The identification of 'Transition risks' and the phrase 'could adversely impact' clearly frame this as a potential negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'financial results or liquidity' as potential impacts but does not provide specific financial figures or a definitive statement about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of 'Transition risks' and 'could adversely impact' indicates a forward-looking assessment of potential future developments.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Transition risks relate to the risk inherent in changing strategies, policies or investments as society and industry work to reduce the reliance on carbon and its impact on the climate. Impacts from transition risks include, among other things, policy constraints on emissions, carbon pricing mechanisms, water restrictions, land use restrictions or incentives, changing consumer preferences and market demand and supply shifts. ... These and other factors resulting from climate change could adversely impact our operations, financial results or liquidity.",
+          "page": "46",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99904-004",
+          "quote": "Our current trajectory indicates this target will not be achieved by 2030 and is currently under review. Certain assumptions which supported our emissions intensity reduction target in 2021 have materialized differently than originally projected. At this point, we do not have clarity on regulatory policies or the future of compliance frameworks within the primary locations where we operate and have not seen financially material opportunities develop for products with a lower carbon intensity relative to conventionally produced products. These circumstances have led to greater uncertainty and higher execution and financial risk for the next phase of GHG abatement projects, which has deprioritized prospective investments within our capital allocation framework. We continue to monitor technological advancements, government incentives and tax policies, the emergence of premium markets for products with a lower carbon intensity than conventionally produced products, as well as industry partnerships that may make emissions reduction projects economically viable. We expect to provide a further update in 2026.",
+          "source": "2024 Nutrien Sustainability Report.pdf, Page 10, Our Targets",
+          "financial_amounts": [],
+          "classification_justification": "This snippet discusses the lack of 'clarity on regulatory policies or the future of compliance frameworks' and the absence of 'financially material opportunities' for lower carbon intensity products, leading to 'greater uncertainty and higher execution and financial risk' for GHG abatement projects. This explicitly links regulatory uncertainty and the lack of financially viable opportunities for low-carbon products to financial risk for the business, but does not state financial materiality for carbon costs themselves.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The discussion of 'greater uncertainty and higher execution and financial risk' for GHG abatement projects, driven by lack of clarity on regulatory policies and financially material opportunities, clearly frames this as a business challenge or threat.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'financially material opportunities' and 'financial risk' but does not provide specific financial figures or a definitive statement about the materiality of carbon costs themselves.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The discussion of a 2030 target, current review, and monitoring future developments indicates a forward-looking timeframe, with present-day implications for investment decisions.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Our current trajectory indicates this target will not be achieved by 2030 and is currently under review. Certain assumptions which supported our emissions intensity reduction target in 2021 have materialized differently than originally projected. At this point, we do not have clarity on regulatory policies or the future of compliance frameworks within the primary locations where we operate and have not seen financially material opportunities develop for products with a lower carbon intensity relative to conventionally produced products. These circumstances have led to greater uncertainty and higher execution and financial risk for the next phase of GHG abatement projects, which has deprioritized prospective investments within our capital allocation framework. We continue to monitor technological advancements, government incentives and tax policies, the emergence of premium markets for products with a lower carbon intensity than conventionally produced products, as well as industry partnerships that may make emissions reduction projects economically viable. We expect to provide a further update in 2026.",
+          "page": "10",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
           },
           "snippet_rank": 4
         },
@@ -546,7 +444,7 @@
         "v4_snippets": 5,
         "merged_snippets": 8,
         "snippet_pairs": 8,
-        "ai_reviews_conducted": 2,
+        "ai_reviews_conducted": 0,
         "human_review_flagged": 0
       }
     },
@@ -575,41 +473,16 @@
           "page": "17",
           "version_source": "v3",
           "verification_corrected": true,
-          "relevance_score": 8,
-          "relevance_explanation": "The snippet directly addresses the topic of 'leaching to ground and surface waters' from applied products, which is the core subject of the question.",
           "source_versions": [
-            "v3"
+            "v3",
+            "v4"
           ],
           "merger_metadata": {
-            "pairing_type": "overlapping",
-            "similarity": 0.7850707850707851,
-            "ai_reviewed": true,
-            "ai_decision": "keep_v3",
-            "ai_rationale": "V3 is 'CORRECTED BY VERIFICATION', which is the highest priority rule for merging. It also contains slightly more contextual text than v4.",
-            "merged_classification": "UNCLEAR",
-            "classification_rationale": "The company acknowledges the environmental issue of leaching but frames it as an opportunity to showcase a product benefit ('aim to improve environmental outcomes, such as reduced leaching'). It does not characterize waterway pollution from leaching as a risk to its business.",
-            "evidence_quality_flags": {
-              "characterizes_business_risk": false,
-              "product_benefit_framing": true,
-              "financial_materiality_explicit": false,
-              "key_phrases": [
-                "aim to improve environmental outcomes",
-                "reduced leaching to ground and surface waters",
-                "Advanced plant nutrition products"
-              ]
-            },
-            "confidence_assessment": {
-              "evidence_summary": "The company states its advanced fertilizer products aim to improve environmental outcomes by reducing leaching into ground and surface waters. This is presented as a product benefit.",
-              "confidence_explanation": "The evidence is a clear example of product benefit framing, not risk disclosure. The 'CORRECTED BY VERIFICATION' status of the chosen snippet strongly supports the UNCLEAR classification.",
-              "confidence_percentage": 95
-            },
-            "relevance_to_question": {
-              "is_relevant": true,
-              "relevance_score": 8,
-              "relevance_explanation": "The snippet directly addresses the topic of 'leaching to ground and surface waters' from applied products, which is the core subject of the question."
-            },
-            "human_review_recommended": false,
-            "human_review_reason": null
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 verification-corrected (overrides length)."
           },
           "snippet_rank": 1
         },
@@ -765,7 +638,7 @@
         "v4_snippets": 2,
         "merged_snippets": 6,
         "snippet_pairs": 6,
-        "ai_reviews_conducted": 1,
+        "ai_reviews_conducted": 0,
         "human_review_flagged": 0
       }
     },
@@ -777,63 +650,6 @@
       "disclosures": [
         {
           "snippet_id": "99908-001",
-          "quote": "New technologies or products that could displace current Nutrien products or services: The advancement and adoption of new technology, and digital innovations in agriculture and across the value chain, have increased and are expected to further accelerate as farmer demographics shift and pressures from consumer preferences, governments and climate change initiatives evolve. The development of seed traits, biological products and/or advancements in precision agriculture that materially improve nutrient use efficiency, have the potential to adversely affect the demand for fertilizer.",
-          "source": "2024 Nutrien Sustainability Report.pdf, Page 27, Climate-related risks and opportunities",
-          "financial_amounts": [],
-          "classification_justification": "This snippet explicitly identifies 'biological products' and 'advancements in precision agriculture' as 'new technologies or products that could displace current Nutrien products or services' and 'have the potential to adversely affect the demand for fertilizer.' This directly addresses the risk of demand destruction from alternatives, which often includes biologicals and precision agriculture in organic or sustainable farming contexts.",
-          "classification": "PARTIAL",
-          "categorization": {
-            "framing_justification": "The statement explicitly identifies 'new technologies or products that could displace current Nutrien products' and 'adversely affect the demand for fertilizer,' clearly framing these developments as a threat to the business.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure mentions 'adversely affect the demand for fertilizer' but does not provide specific monetary values or state the financial materiality of this impact.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The use of 'could displace,' 'expected to further accelerate,' and 'have the potential to adversely affect' indicates a forward-looking perspective on future market and technological developments.",
-            "timeframe": "Forward-looking"
-          },
-          "text": "New technologies or products that could displace current Nutrien products or services: The advancement and adoption of new technology, and digital innovations in agriculture and across the value chain, have increased and are expected to further accelerate as farmer demographics shift and pressures from consumer preferences, governments and climate change initiatives evolve. The development of seed traits, biological products and/or advancements in precision agriculture that materially improve nutrient use efficiency, have the potential to adversely affect the demand for fertilizer.",
-          "page": "2024 Nutrien Sustainability Report.pdf, Page 27, Climate-related risks and opportunities",
-          "version_source": "v4",
-          "verification_corrected": false,
-          "relevance_score": 9,
-          "relevance_explanation": "The snippet directly addresses the risk from alternatives ('biological products', 'precision agriculture') and explicitly states they could 'displace current Nutrien products' and 'adversely affect the demand for fertilizer', which is a form of demand destruction.",
-          "source_versions": [
-            "v4"
-          ],
-          "merger_metadata": {
-            "pairing_type": "overlapping",
-            "similarity": 0.9201101928374655,
-            "ai_reviewed": true,
-            "ai_decision": "keep_v4",
-            "ai_rationale": "Version 4 is more comprehensive as it includes the introductory heading 'New technologies or products that could displace current Nutrien products or services:', which provides crucial context and more clearly frames the disclosure as a business risk.",
-            "merged_classification": "PARTIAL",
-            "classification_rationale": "The company clearly identifies alternatives like 'biological products' as a risk that could 'adversely affect the demand for fertilizer.' However, it does not include an explicit statement about the financial materiality of this risk to the business, making it a partial disclosure.",
-            "evidence_quality_flags": {
-              "characterizes_business_risk": true,
-              "product_benefit_framing": false,
-              "financial_materiality_explicit": false,
-              "key_phrases": [
-                "New technologies or products that could displace current Nutrien products or services",
-                "biological products and/or advancements in precision agriculture",
-                "have the potential to adversely affect the demand for fertilizer"
-              ]
-            },
-            "confidence_assessment": {
-              "evidence_summary": "The company discloses that new technologies, including biological products and precision agriculture, could displace its current products and have the potential to adversely affect the demand for fertilizer.",
-              "confidence_explanation": "The evidence is highly direct, using clear risk-framing language ('displace', 'adversely affect') and naming specific alternatives that are central to the user's question. The context provided in the chosen snippet is unambiguous.",
-              "confidence_percentage": 95
-            },
-            "relevance_to_question": {
-              "is_relevant": true,
-              "relevance_score": 9,
-              "relevance_explanation": "The snippet directly addresses the risk from alternatives ('biological products', 'precision agriculture') and explicitly states they could 'displace current Nutrien products' and 'adversely affect the demand for fertilizer', which is a form of demand destruction."
-            },
-            "human_review_recommended": false,
-            "human_review_reason": null
-          },
-          "snippet_rank": 1
-        },
-        {
-          "snippet_id": "99908-002",
           "quote": "Global macroeconomic conditions and shifting market fundamentals – including trade tariffs and trade restrictions, market volatility, geopolitical conditions, increased price competition or new entrants, and/or a significant change in agriculture production or consumption trends – could lead to a sustained environment of reduced demand for our products, increased costs and/or low or volatile commodity prices, thereby negatively impacting our short- and long-term profitability.",
           "source": "2024 Nutrien Annual Report.pdf, Page 44, Key enterprise risks",
           "financial_amounts": [],
@@ -862,10 +678,10 @@
             "auto_merge_decision": "v4",
             "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
           },
-          "snippet_rank": 2
+          "snippet_rank": 1
         },
         {
-          "snippet_id": "99908-003",
+          "snippet_id": "99908-002",
           "quote": "The agricultural landscape continues to evolve as a result of factors including, but not limited to, farm and industry consolidation, changing farmer demographics, technology developments, sustainability practices, changing government programs and policies, climate change and shifting social trends, many of which vary from jurisdiction to jurisdiction. These factors as well as other factors affecting long-term demand for our products and services could adversely impact our strategy and our financial results.",
           "source": "2024 Nutrien Annual Report.pdf, Page 45, Key enterprise risks",
           "financial_amounts": [],
@@ -893,6 +709,38 @@
             "ai_reviewed": false,
             "auto_merge_decision": "v4",
             "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99908-003",
+          "quote": "New technologies or products that could displace current Nutrien products or services: The advancement and adoption of new technology, and digital innovations in agriculture and across the value chain, have increased and are expected to further accelerate as farmer demographics shift and pressures from consumer preferences, governments and climate change initiatives evolve. The development of seed traits, biological products and/or advancements in precision agriculture that materially improve nutrient use efficiency, have the potential to adversely affect the demand for fertilizer.",
+          "source": "2024 Nutrien Sustainability Report.pdf, Page 27, Climate-related risks and opportunities",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'biological products' and 'advancements in precision agriculture' as 'new technologies or products that could displace current Nutrien products or services' and 'have the potential to adversely affect the demand for fertilizer.' This directly addresses the risk of demand destruction from alternatives, which often includes biologicals and precision agriculture in organic or sustainable farming contexts.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement explicitly identifies 'new technologies or products that could displace current Nutrien products' and 'adversely affect the demand for fertilizer,' clearly framing these developments as a threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'adversely affect the demand for fertilizer' but does not provide specific monetary values or state the financial materiality of this impact.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'could displace,' 'expected to further accelerate,' and 'have the potential to adversely affect' indicates a forward-looking perspective on future market and technological developments.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "New technologies or products that could displace current Nutrien products or services: The advancement and adoption of new technology, and digital innovations in agriculture and across the value chain, have increased and are expected to further accelerate as farmer demographics shift and pressures from consumer preferences, governments and climate change initiatives evolve. The development of seed traits, biological products and/or advancements in precision agriculture that materially improve nutrient use efficiency, have the potential to adversely affect the demand for fertilizer.",
+          "page": "2024 Nutrien Sustainability Report.pdf, Page 27, Climate-related risks and opportunities",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 contains v3 text (longer/more complete)."
           },
           "snippet_rank": 3
         },
@@ -932,7 +780,7 @@
         "v4_snippets": 4,
         "merged_snippets": 4,
         "snippet_pairs": 4,
-        "ai_reviews_conducted": 1,
+        "ai_reviews_conducted": 0,
         "human_review_flagged": 0
       }
     },
@@ -1106,6 +954,63 @@
       "disclosures": [
         {
           "snippet_id": "99910-001",
+          "quote": "The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
+          "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
+          "financial_amounts": [],
+          "classification_justification": "This snippet details an 'ongoing enforcement initiative' by the US EPA related to 'mineral processing wastes' (which includes phosphogypsum/gypstacks) at Nutrien's phosphate facilities. It explicitly mentions 'notices of violation', 'alleged violations', and potential outcomes including 'penalties', 'capital improvement projects', and 'providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system'. While stating penalties are 'currently believed will not be material', the overall context of regulatory enforcement and potential costs for gypstack management constitutes a clear business risk, making it a partial disclosure due to the lack of material financial quantification for penalties but clear financial implications for other aspects.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language describes an 'enforcement initiative', 'notices of violation', 'alleged violations', and potential 'penalties' and 'costs', clearly framing the issue as a regulatory and financial threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions potential 'penalties' and 'capital improvement projects' and 'financial assurance' costs, indicating financial impacts. However, it states penalties are 'currently believe will not be material' and does not quantify the other costs, making it a partial-type financial disclosure.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'ongoing enforcement initiative' and 'continue to be involved in ongoing discussions' indicates a present-day situation, while 'future closure, maintenance and monitoring costs' points to forward-looking impacts.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
+          "page": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "relevance_score": 9,
+          "relevance_explanation": "The snippet directly addresses the risk of gypstack ('phosphogypsum stack system') disposal by detailing an ongoing EPA enforcement initiative, notices of violation, and potential financial consequences.",
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "overlapping",
+            "similarity": 0.7512376237623762,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Version 4 provides more comprehensive text, including details about the resolution of one case (Geismar) and the ongoing nature of others, offering better context than the shorter Version 3 snippet.",
+            "merged_classification": "FULL_DISCLOSURE",
+            "classification_rationale": "The snippet contains explicit financial materiality language ('penalties, which we currently believe will not be material'), which meets the criteria for a FULL_DISCLOSURE.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": true,
+              "key_phrases": [
+                "ongoing enforcement initiative directed at the phosphate industry",
+                "financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system",
+                "penalties, which we currently believe will not be material"
+              ]
+            },
+            "confidence_assessment": {
+              "evidence_summary": "The company discloses an ongoing EPA enforcement initiative related to its phosphate facilities and phosphogypsum stack systems. This is presented as a legal and financial risk, with potential outcomes including penalties (believed to be immaterial), capital projects, and financial assurance for future closure costs.",
+              "confidence_explanation": "The evidence is highly specific, directly mentioning 'phosphogypsum stack system' and framing the issue as a regulatory risk. The inclusion of explicit materiality language ('not be material') makes the classification straightforward.",
+              "confidence_percentage": 95
+            },
+            "relevance_to_question": {
+              "is_relevant": true,
+              "relevance_score": 9,
+              "relevance_explanation": "The snippet directly addresses the risk of gypstack ('phosphogypsum stack system') disposal by detailing an ongoing EPA enforcement initiative, notices of violation, and potential financial consequences."
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99910-002",
           "quote": "We are subject to numerous environmental requirements under federal, provincial, state and local laws in the countries in which we operate. We have gypsum stack capping, and closure and post-closure obligations in White Springs, Florida and Geismar, Louisiana, through our subsidiaries pursuant to the financial assurance regulatory requirements in those states. As at December 31, 2024, we had $499 million in surety bonds and letters of credit outstanding relating to these financial assurance obligations. The recorded provisions may not necessarily reflect our obligations under these financial assurances.",
           "source": "2024 Nutrien Annual Report.pdf, Page 114, Note 22 | Asset retirement obligations and accrued environmental costs",
           "financial_amounts": [
@@ -1125,98 +1030,16 @@
           "page": "114",
           "version_source": "v3",
           "verification_corrected": true,
-          "relevance_score": 9,
-          "relevance_explanation": "The snippet directly addresses the risk associated with 'gypstacks' by detailing the 'gypsum stack capping, and closure and post-closure obligations' and the associated financial assurances.",
           "source_versions": [
-            "v3"
-          ],
-          "merger_metadata": {
-            "pairing_type": "overlapping",
-            "similarity": 0.8703703703703703,
-            "ai_reviewed": true,
-            "ai_decision": "keep_v3",
-            "ai_rationale": "The snippets contain identical text. Version 3 is preferred because it has been 'CORRECTED BY VERIFICATION' and its classification and justification are more aligned with the provided criteria.",
-            "merged_classification": "PARTIAL",
-            "classification_rationale": "The company acknowledges gypsum stack obligations as a risk requiring significant financial assurance ($499 million), but it does not use explicit financial materiality language (e.g., 'material impact'), which is required for a FULL_DISCLOSURE classification.",
-            "evidence_quality_flags": {
-              "characterizes_business_risk": true,
-              "product_benefit_framing": false,
-              "financial_materiality_explicit": false,
-              "key_phrases": [
-                "gypsum stack capping, and closure and post-closure obligations",
-                "financial assurance regulatory requirements",
-                "$499 million in surety bonds and letters of credit"
-              ]
-            },
-            "confidence_assessment": {
-              "evidence_summary": "The company discloses specific 'gypsum stack capping, and closure and post-closure obligations' in Florida and Louisiana, which are backed by $499 million in financial assurances.",
-              "confidence_explanation": "The evidence directly answers the question by naming the specific waste type (gypstacks) and framing it as a financial obligation. The classification is clear based on the provided rules, as a financial amount is given but explicit materiality language is absent.",
-              "confidence_percentage": 95
-            },
-            "relevance_to_question": {
-              "is_relevant": true,
-              "relevance_score": 9,
-              "relevance_explanation": "The snippet directly addresses the risk associated with 'gypstacks' by detailing the 'gypsum stack capping, and closure and post-closure obligations' and the associated financial assurances."
-            },
-            "human_review_recommended": false,
-            "human_review_reason": null
-          },
-          "snippet_rank": 1
-        },
-        {
-          "snippet_id": "99910-002",
-          "quote": "The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
-          "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
-          "financial_amounts": [],
-          "classification_justification": "This snippet details an 'ongoing enforcement initiative' by the US EPA related to 'mineral processing wastes' (which includes phosphogypsum/gypstacks) at Nutrien's phosphate facilities. It explicitly mentions 'notices of violation', 'alleged violations', and potential outcomes including 'penalties', 'capital improvement projects', and 'providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system'. While stating penalties are 'currently believed will not be material', the overall context of regulatory enforcement and potential costs for gypstack management constitutes a clear business risk, making it a partial disclosure due to the lack of material financial quantification for penalties but clear financial implications for other aspects.",
-          "classification": "FULL_DISCLOSURE",
-          "categorization": {
-            "framing_justification": "The language describes an 'enforcement initiative', 'notices of violation', 'alleged violations', and potential 'penalties' and 'costs', clearly framing the issue as a regulatory and financial threat.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure mentions potential 'penalties' and 'capital improvement projects' and 'financial assurance' costs, indicating financial impacts. However, it states penalties are 'currently believe will not be material' and does not quantify the other costs, making it a partial-type financial disclosure.",
-            "financial_type": "Partial-type",
-            "timeframe_justification": "The phrase 'ongoing enforcement initiative' and 'continue to be involved in ongoing discussions' indicates a present-day situation, while 'future closure, maintenance and monitoring costs' points to forward-looking impacts.",
-            "timeframe": "Multiple or Unclear"
-          },
-          "text": "The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
-          "page": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
-          "version_source": "v4",
-          "verification_corrected": false,
-          "relevance_score": 9,
-          "relevance_explanation": "The evidence directly addresses the risk associated with gypstacks by name ('phosphogypsum stack system') in the context of a US EPA enforcement initiative, which is a clear business risk.",
-          "source_versions": [
+            "v3",
             "v4"
           ],
           "merger_metadata": {
-            "pairing_type": "overlapping",
-            "similarity": 0.7512376237623762,
-            "ai_reviewed": true,
-            "ai_decision": "keep_v4",
-            "ai_rationale": "Version 4 contains all the information from Version 3 but adds more context about the sale of the Conda Phosphate operations, retained liabilities, and a specific settlement for the Geismar facility, making it a more comprehensive piece of evidence.",
-            "merged_classification": "FULL_DISCLOSURE",
-            "classification_rationale": "The snippet qualifies as FULL_DISCLOSURE because it contains explicit financial materiality language. Specifically, it states that potential 'penalties, which we currently believe will not be material,' directly addressing the financial impact of one component of the risk.",
-            "evidence_quality_flags": {
-              "characterizes_business_risk": true,
-              "product_benefit_framing": false,
-              "financial_materiality_explicit": true,
-              "key_phrases": [
-                "ongoing enforcement initiative directed at the phosphate industry",
-                "providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system",
-                "penalties, which we currently believe will not be material"
-              ]
-            },
-            "confidence_assessment": {
-              "evidence_summary": "The company discloses an ongoing EPA enforcement initiative related to its phosphate facilities and phosphogypsum stack systems. This regulatory action is described as a risk that could lead to penalties, which the company believes will not be material, as well as other costs like capital projects and financial assurance.",
-              "confidence_explanation": "Confidence is very high because the text explicitly names 'phosphogypsum stack system' (gypstacks), frames the issue as a regulatory risk, and includes a clear statement on the financial materiality of potential penalties, directly answering all parts of the user's question.",
-              "confidence_percentage": 95
-            },
-            "relevance_to_question": {
-              "is_relevant": true,
-              "relevance_score": 9,
-              "relevance_explanation": "The evidence directly addresses the risk associated with gypstacks by name ('phosphogypsum stack system') in the context of a US EPA enforcement initiative, which is a clear business risk."
-            },
-            "human_review_recommended": false,
-            "human_review_reason": ""
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 verification-corrected (overrides length)."
           },
           "snippet_rank": 2
         },
@@ -1343,7 +1166,7 @@
         "v4_snippets": 2,
         "merged_snippets": 6,
         "snippet_pairs": 6,
-        "ai_reviews_conducted": 2,
+        "ai_reviews_conducted": 1,
         "human_review_flagged": 0
       }
     },
@@ -1422,6 +1245,38 @@
         },
         {
           "snippet_id": "99911-003",
+          "quote": "Asset retirement obligations and accrued environmental costs include – reclamation and restoration costs at our potash and phosphate mining operations, including management of materials generated by mining and mineral processing, such as various mine tailings and gypsum; – land reclamation and revegetation programs; – decommissioning of underground and surface operating facilities; – general clean-up activities aimed at returning the areas to an environmentally acceptable condition; and – post-closure care and maintenance. We consider the following factors as we estimate our provisions: – environmental laws and regulations and interpretations by regulatory authorities, including updates on climate change, could change or circumstances affecting our operations could change, either of which could result in significant changes to current plans; – the nature, extent and timing of current and proposed reclamation and closure techniques in view of present environmental laws and regulations; – appropriate technical resources, including outside consultants, assist us in developing specific site closure and post-closure plans in accordance with the jurisdiction requirements; – timing of settlement of the obligations, which is typically correlated with mine life estimates except for certain land reclamation programs; and – changes in the pre-tax risk-free rate used to discount the expected future cash flows associated with these provisions. It is reasonably possible that the ultimate costs could change in the future and that changes to these estimates could have a material effect on our consolidated financial statements.",
+          "source": "2024 Nutrien Annual Report.pdf, Page 123, Note 28 | Accounting policies, estimates and judgments",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly defines 'Asset retirement obligations and accrued environmental costs' to include 'reclamation and restoration costs at our potash and phosphate mining operations'. It further states that 'It is reasonably possible that the ultimate costs could change in the future and that changes to these estimates could have a material effect on our consolidated financial statements.' This clearly identifies restoration of mining sites as a business risk with potential material financial impact, qualifying it as a full disclosure.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The description of 'reclamation and restoration costs' and the explicit statement that 'ultimate costs could change in the future' and 'have a material effect' frames this as a financial burden and uncertainty, thus a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly states that changes in estimates 'could have a material effect on our consolidated financial statements', indicating financial materiality without providing specific figures, thus it is a partial-type financial disclosure.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrases 'future costs', 'change in the future', and 'mine life estimates' indicate a forward-looking timeframe for these obligations and their potential financial impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Asset retirement obligations and accrued environmental costs include – reclamation and restoration costs at our potash and phosphate mining operations, including management of materials generated by mining and mineral processing, such as various mine tailings and gypsum; – land reclamation and revegetation programs; – decommissioning of underground and surface operating facilities; – general clean-up activities aimed at returning the areas to an environmentally acceptable condition; and – post-closure care and maintenance. We consider the following factors as we estimate our provisions: – environmental laws and regulations and interpretations by regulatory authorities, including updates on climate change, could change or circumstances affecting our operations could change, either of which could result in significant changes to current plans; – the nature, extent and timing of current and proposed reclamation and closure techniques in view of present environmental laws and regulations; – appropriate technical resources, including outside consultants, assist us in developing specific site closure and post-closure plans in accordance with the jurisdiction requirements; – timing of settlement of the obligations, which is typically correlated with mine life estimates except for certain land reclamation programs; and – changes in the pre-tax risk-free rate used to discount the expected future cash flows associated with these provisions. It is reasonably possible that the ultimate costs could change in the future and that changes to these estimates could have a material effect on our consolidated financial statements.",
+          "page": "2024 Nutrien Annual Report.pdf, Page 123, Note 28 | Accounting policies, estimates and judgments",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 contains v3 text (longer/more complete)."
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99911-004",
           "quote": "Remediation, which refers to the removal, treatment and/or containment of impacts to soil or groundwater, can occur during operations or at the time of closure. Nutrien has a regulatory obligation to reclaim mined land and return it for beneficial uses. We work with regulatory authorities to develop and implement reclamation and closure plans. Reclamation may include revegetating the area using local and native plant varieties, converting the area to a body of water, establishing wildlife habitats, and other reclamation strategies.",
           "source": "2024 Nutrien Sustainability Report.pdf, Page 33, Biodiversity",
           "financial_amounts": [],
@@ -1447,10 +1302,10 @@
             "ai_reviewed": false,
             "note": "Unique to v3 analysis - not found in v4"
           },
-          "snippet_rank": 3
+          "snippet_rank": 4
         },
         {
-          "snippet_id": "99911-004",
+          "snippet_id": "99911-005",
           "quote": "In Canada, our potash mining and milling activities produce potash tailings consisting of salt, brine (salt water) and clay. Although salt, clay and brine are non-hazardous, spilled brine could reduce soil productivity or impact the salinity levels of fresh surface or groundwater. Nutrien has six active Potash mines with tailings management areas (“TMAs”) in Saskatchewan, and one inactive facility undergoing decommissioning in New Brunswick, Canada. Learn more about our tailings management activities in Nutrien’s Mine Tailings Disclosure, our 2024 Annual Information Form and the Tailings, Gypstacks and Waste section of this report.",
           "source": "2024 Nutrien Sustainability Report.pdf, Page 33, Biodiversity",
           "financial_amounts": [],
@@ -1466,35 +1321,6 @@
           },
           "text": "In Canada, our potash mining and milling activities produce potash tailings consisting of salt, brine (salt water) and clay. Although salt, clay and brine are non-hazardous, spilled brine could reduce soil productivity or impact the salinity levels of fresh surface or groundwater. Nutrien has six active Potash mines with tailings management areas (“TMAs”) in Saskatchewan, and one inactive facility undergoing decommissioning in New Brunswick, Canada. Learn more about our tailings management activities in Nutrien’s Mine Tailings Disclosure, our 2024 Annual Information Form and the Tailings, Gypstacks and Waste section of this report.",
           "page": "33",
-          "version_source": "v3",
-          "verification_corrected": false,
-          "source_versions": [
-            "v3"
-          ],
-          "merger_metadata": {
-            "pairing_type": "v3_only",
-            "ai_reviewed": false,
-            "note": "Unique to v3 analysis - not found in v4"
-          },
-          "snippet_rank": 4
-        },
-        {
-          "snippet_id": "99911-005",
-          "quote": "Asset retirement obligations and accrued environmental costs include – reclamation and restoration costs at our potash and phosphate mining operations, including management of materials generated by mining and mineral processing, such as various mine tailings and gypsum; – land reclamation and revegetation programs; – decommissioning of underground and surface operating facilities; – general clean-up activities aimed at returning the areas to an environmentally acceptable condition; and – post-closure care and maintenance.",
-          "source": "2024 Nutrien Annual Report.pdf, Page 126, Note 22: Asset retirement obligations and accrued environmental costs",
-          "financial_amounts": [],
-          "classification_justification": "This snippet provides a comprehensive definition of what constitutes 'Asset retirement obligations and accrued environmental costs,' explicitly linking them to 'reclamation and restoration costs at our potash and phosphate mining operations' and other related activities. This clearly identifies these as business obligations and thus a risk.",
-          "classification": "PARTIAL",
-          "categorization": {
-            "framing_justification": "The description of 'obligations' and 'costs' associated with environmental activities frames this as a necessary expenditure and a responsibility, thus a risk to the business's resources.",
-            "framing": "Risk",
-            "financial_justification": "This snippet defines the types of costs but does not provide specific financial amounts or a statement of financial materiality within this text.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The activities described, such as 'reclamation and restoration costs' and 'post-closure care and maintenance,' span from present operations to long-term future obligations.",
-            "timeframe": "Multiple or Unclear"
-          },
-          "text": "Asset retirement obligations and accrued environmental costs include – reclamation and restoration costs at our potash and phosphate mining operations, including management of materials generated by mining and mineral processing, such as various mine tailings and gypsum; – land reclamation and revegetation programs; – decommissioning of underground and surface operating facilities; – general clean-up activities aimed at returning the areas to an environmentally acceptable condition; and – post-closure care and maintenance.",
-          "page": "126",
           "version_source": "v3",
           "verification_corrected": false,
           "source_versions": [
@@ -1535,43 +1361,14 @@
             "note": "Unique to v3 analysis - not found in v4"
           },
           "snippet_rank": 6
-        },
-        {
-          "snippet_id": "99911-007",
-          "quote": "Asset retirement obligations and accrued environmental costs include – reclamation and restoration costs at our potash and phosphate mining operations, including management of materials generated by mining and mineral processing, such as various mine tailings and gypsum; – land reclamation and revegetation programs; – decommissioning of underground and surface operating facilities; – general clean-up activities aimed at returning the areas to an environmentally acceptable condition; and – post-closure care and maintenance. We consider the following factors as we estimate our provisions: – environmental laws and regulations and interpretations by regulatory authorities, including updates on climate change, could change or circumstances affecting our operations could change, either of which could result in significant changes to current plans; – the nature, extent and timing of current and proposed reclamation and closure techniques in view of present environmental laws and regulations; – appropriate technical resources, including outside consultants, assist us in developing specific site closure and post-closure plans in accordance with the jurisdiction requirements; – timing of settlement of the obligations, which is typically correlated with mine life estimates except for certain land reclamation programs; and – changes in the pre-tax risk-free rate used to discount the expected future cash flows associated with these provisions. It is reasonably possible that the ultimate costs could change in the future and that changes to these estimates could have a material effect on our consolidated financial statements.",
-          "source": "2024 Nutrien Annual Report.pdf, Page 123, Note 28 | Accounting policies, estimates and judgments",
-          "financial_amounts": [],
-          "classification_justification": "This snippet explicitly defines 'Asset retirement obligations and accrued environmental costs' to include 'reclamation and restoration costs at our potash and phosphate mining operations'. It further states that 'It is reasonably possible that the ultimate costs could change in the future and that changes to these estimates could have a material effect on our consolidated financial statements.' This clearly identifies restoration of mining sites as a business risk with potential material financial impact, qualifying it as a full disclosure.",
-          "classification": "FULL_DISCLOSURE",
-          "categorization": {
-            "framing_justification": "The description of 'reclamation and restoration costs' and the explicit statement that 'ultimate costs could change in the future' and 'have a material effect' frames this as a financial burden and uncertainty, thus a risk.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure explicitly states that changes in estimates 'could have a material effect on our consolidated financial statements', indicating financial materiality without providing specific figures, thus it is a partial-type financial disclosure.",
-            "financial_type": "Partial-type",
-            "timeframe_justification": "The phrases 'future costs', 'change in the future', and 'mine life estimates' indicate a forward-looking timeframe for these obligations and their potential financial impacts.",
-            "timeframe": "Forward-looking"
-          },
-          "text": "Asset retirement obligations and accrued environmental costs include – reclamation and restoration costs at our potash and phosphate mining operations, including management of materials generated by mining and mineral processing, such as various mine tailings and gypsum; – land reclamation and revegetation programs; – decommissioning of underground and surface operating facilities; – general clean-up activities aimed at returning the areas to an environmentally acceptable condition; and – post-closure care and maintenance. We consider the following factors as we estimate our provisions: – environmental laws and regulations and interpretations by regulatory authorities, including updates on climate change, could change or circumstances affecting our operations could change, either of which could result in significant changes to current plans; – the nature, extent and timing of current and proposed reclamation and closure techniques in view of present environmental laws and regulations; – appropriate technical resources, including outside consultants, assist us in developing specific site closure and post-closure plans in accordance with the jurisdiction requirements; – timing of settlement of the obligations, which is typically correlated with mine life estimates except for certain land reclamation programs; and – changes in the pre-tax risk-free rate used to discount the expected future cash flows associated with these provisions. It is reasonably possible that the ultimate costs could change in the future and that changes to these estimates could have a material effect on our consolidated financial statements.",
-          "page": "2024 Nutrien Annual Report.pdf, Page 123, Note 28 | Accounting policies, estimates and judgments",
-          "version_source": "v4",
-          "verification_corrected": false,
-          "source_versions": [
-            "v4"
-          ],
-          "merger_metadata": {
-            "pairing_type": "v4_only",
-            "ai_reviewed": false,
-            "note": "Unique to v4 analysis - not found in v3"
-          },
-          "snippet_rank": 7
         }
       ],
       "summary": "MERGED ANALYSIS: Combined best evidence from v3 (6 snippets) and v4 (2 snippets) analyses. Sorted by relevance score.",
       "merger_stats": {
         "v3_snippets": 6,
         "v4_snippets": 2,
-        "merged_snippets": 7,
-        "snippet_pairs": 7,
+        "merged_snippets": 6,
+        "snippet_pairs": 6,
         "ai_reviews_conducted": 0,
         "human_review_flagged": 0
       }
@@ -1720,63 +1517,6 @@
       "disclosures": [
         {
           "snippet_id": "99913-001",
-          "quote": "Environmental remediation, legal and other matters: We are engaged in ongoing site assessment and/or remediation activities at a number of facilities and sites. Anticipated costs associated with these matters are added to accrued environmental costs in the manner described in Note 22. We have established provisions for environmental site assessment and/or remediation matters to the extent that we consider expenses associated with those matters likely to be incurred. Except for the uncertainties described below, we do not believe that our future obligations with respect to these matters are reasonably likely to have a material adverse effect on our consolidated financial statements. Legal matters with significant uncertainties include the following: – The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
-          "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
-          "financial_amounts": [],
-          "classification_justification": "This snippet explicitly states that Nutrien is 'engaged in ongoing site assessment and/or remediation activities at a number of facilities and sites' and has 'established provisions for environmental site assessment and/or remediation matters'. It details an 'ongoing enforcement initiative' by the US EPA at specific 'phosphoric acid facilities' (manufacturing sites) for alleged environmental violations, which could result in 'penalties', 'capital improvement projects', and 'financial assurance'. While the company states that 'penalties... will not be material' and that 'future obligations... are not reasonably likely to have a material adverse effect' for general matters, the detailed description of regulatory enforcement and potential costs for specific manufacturing sites indicates a clear business risk with financial implications, making it a partial disclosure due to the lack of material financial quantification for penalties but clear financial implications for other aspects.",
-          "classification": "FULL_DISCLOSURE",
-          "categorization": {
-            "framing_justification": "The language describes 'ongoing site assessment and/or remediation activities', 'enforcement initiative', 'notices of violation', and potential 'penalties' and 'costs', clearly framing the issue as a regulatory and financial threat.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure mentions 'anticipated costs', 'provisions', potential 'penalties', 'capital improvement projects', and 'financial assurance', indicating financial impacts. However, it states penalties are 'currently believe will not be material' and does not quantify the other costs, making it a partial-type financial disclosure.",
-            "financial_type": "Partial-type",
-            "timeframe_justification": "The phrases 'ongoing site assessment', 'ongoing enforcement initiative', and 'continue to be involved in ongoing discussions' indicate a present-day situation, while 'future obligations' and 'future closure, maintenance and monitoring costs' point to forward-looking impacts.",
-            "timeframe": "Multiple or Unclear"
-          },
-          "text": "Environmental remediation, legal and other matters: We are engaged in ongoing site assessment and/or remediation activities at a number of facilities and sites. Anticipated costs associated with these matters are added to accrued environmental costs in the manner described in Note 22. We have established provisions for environmental site assessment and/or remediation matters to the extent that we consider expenses associated with those matters likely to be incurred. Except for the uncertainties described below, we do not believe that our future obligations with respect to these matters are reasonably likely to have a material adverse effect on our consolidated financial statements. Legal matters with significant uncertainties include the following: – The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
-          "page": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
-          "version_source": "v4",
-          "verification_corrected": false,
-          "relevance_score": 10,
-          "relevance_explanation": "The snippet directly addresses the risk of restoring contaminated manufacturing sites by detailing 'ongoing site assessment and/or remediation activities' and a specific EPA enforcement action at its 'phosphoric acid facilities'.",
-          "source_versions": [
-            "v4"
-          ],
-          "merger_metadata": {
-            "pairing_type": "overlapping",
-            "similarity": 0.8539420841259776,
-            "ai_reviewed": true,
-            "ai_decision": "keep_v4",
-            "ai_rationale": "Version 4 contains all the text from Version 3 plus an additional introductory paragraph that provides crucial context about the company's engagement in 'ongoing site assessment and/or remediation activities,' making it more comprehensive and directly relevant to the question.",
-            "merged_classification": "FULL_DISCLOSURE",
-            "classification_rationale": "The snippet contains explicit financial materiality language, stating that the company does not believe its future obligations 'are reasonably likely to have a material adverse effect' and that potential penalties 'will not be material'. This meets the criteria for FULL_DISCLOSURE.",
-            "evidence_quality_flags": {
-              "characterizes_business_risk": true,
-              "product_benefit_framing": false,
-              "financial_materiality_explicit": true,
-              "key_phrases": [
-                "ongoing site assessment and/or remediation activities",
-                "not reasonably likely to have a material adverse effect",
-                "penalties, which we currently believe will not be material"
-              ]
-            },
-            "confidence_assessment": {
-              "evidence_summary": "The company details ongoing environmental remediation and a specific EPA enforcement initiative at its manufacturing facilities. It explicitly states that it does not believe these matters will have a material adverse effect, although penalties and capital projects are potential outcomes.",
-              "confidence_explanation": "The evidence is highly direct, addressing both 'remediation' at 'facilities' (manufacturing sites) and providing clear, explicit materiality statements, leaving little room for interpretation.",
-              "confidence_percentage": 95
-            },
-            "relevance_to_question": {
-              "is_relevant": true,
-              "relevance_score": 10,
-              "relevance_explanation": "The snippet directly addresses the risk of restoring contaminated manufacturing sites by detailing 'ongoing site assessment and/or remediation activities' and a specific EPA enforcement action at its 'phosphoric acid facilities'."
-            },
-            "human_review_recommended": false,
-            "human_review_reason": null
-          },
-          "snippet_rank": 1
-        },
-        {
-          "snippet_id": "99913-002",
           "quote": "AROs and ERLs have a high degree of estimation uncertainty for future costs and estimated remediation timelines. The Potash and Phosphate segments have AROs and ERLs associated with their mining operations while the Corporate and Others segment has these liabilities associated with non-operational sites. Refer to note 22 of the consolidated financial statements for sensitivity analysis.",
           "source": "2024 Nutrien Annual Report.pdf, Page 68, Critical accounting estimate description",
           "financial_amounts": [],
@@ -1802,10 +1542,10 @@
             "ai_reviewed": false,
             "note": "Unique to v3 analysis - not found in v4"
           },
-          "snippet_rank": 2
+          "snippet_rank": 1
         },
         {
-          "snippet_id": "99913-003",
+          "snippet_id": "99913-002",
           "quote": "Our Phosphate processing activities in the US produce phosphogypsum, a silt-like byproduct of phosphate fertilizer production primarily composed of hydrated calcium sulfate, and small amounts of trace metals and naturally occurring radioactive materials that were originally in the phosphate rock. At Nutrien, phosphogypsum is primarily stored in engineered stacks referred to as phosphogypsum stacks or gypstacks. To maintain the stability of gypstacks, they are constructed and operated in accordance with applicable engineering standards, codes and regulations. Typically, a third-party engineer develops gypstack construction designs, operating plans and closure plans, guided by applicable laws and regulations.",
           "source": "2024 Nutrien Sustainability Report.pdf, Page 36, Tailings, Gypstacks and Waste",
           "financial_amounts": [],
@@ -1831,24 +1571,56 @@
             "ai_reviewed": false,
             "note": "Unique to v3 analysis - not found in v4"
           },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99913-003",
+          "quote": "Environmental remediation, legal and other matters: We are engaged in ongoing site assessment and/or remediation activities at a number of facilities and sites. Anticipated costs associated with these matters are added to accrued environmental costs in the manner described in Note 22. We have established provisions for environmental site assessment and/or remediation matters to the extent that we consider expenses associated with those matters likely to be incurred. Except for the uncertainties described below, we do not believe that our future obligations with respect to these matters are reasonably likely to have a material adverse effect on our consolidated financial statements. Legal matters with significant uncertainties include the following: – The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
+          "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that Nutrien is 'engaged in ongoing site assessment and/or remediation activities at a number of facilities and sites' and has 'established provisions for environmental site assessment and/or remediation matters'. It details an 'ongoing enforcement initiative' by the US EPA at specific 'phosphoric acid facilities' (manufacturing sites) for alleged environmental violations, which could result in 'penalties', 'capital improvement projects', and 'financial assurance'. While the company states that 'penalties... will not be material' and that 'future obligations... are not reasonably likely to have a material adverse effect' for general matters, the detailed description of regulatory enforcement and potential costs for specific manufacturing sites indicates a clear business risk with financial implications, making it a partial disclosure due to the lack of material financial quantification for penalties but clear financial implications for other aspects.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language describes 'ongoing site assessment and/or remediation activities', 'enforcement initiative', 'notices of violation', and potential 'penalties' and 'costs', clearly framing the issue as a regulatory and financial threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'anticipated costs', 'provisions', potential 'penalties', 'capital improvement projects', and 'financial assurance', indicating financial impacts. However, it states penalties are 'currently believe will not be material' and does not quantify the other costs, making it a partial-type financial disclosure.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrases 'ongoing site assessment', 'ongoing enforcement initiative', and 'continue to be involved in ongoing discussions' indicate a present-day situation, while 'future obligations' and 'future closure, maintenance and monitoring costs' point to forward-looking impacts.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Environmental remediation, legal and other matters: We are engaged in ongoing site assessment and/or remediation activities at a number of facilities and sites. Anticipated costs associated with these matters are added to accrued environmental costs in the manner described in Note 22. We have established provisions for environmental site assessment and/or remediation matters to the extent that we consider expenses associated with those matters likely to be incurred. Except for the uncertainties described below, we do not believe that our future obligations with respect to these matters are reasonably likely to have a material adverse effect on our consolidated financial statements. Legal matters with significant uncertainties include the following: – The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
+          "page": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 contains v3 text (longer/more complete)."
+          },
           "snippet_rank": 3
         },
         {
           "snippet_id": "99913-004",
-          "quote": "We are engaged in ongoing site assessment and/or remediation activities at a number of facilities and sites. Anticipated costs associated with these matters are added to accrued environmental costs in the manner described in Note 22. We have established provisions for environmental site assessment and/or remediation matters to the extent that we consider expenses associated with those matters likely to be incurred. Except for the uncertainties described below, we do not believe that our future obligations with respect to these matters are reasonably likely to have a material adverse effect on our consolidated financial statements.",
+          "quote": "Legal matters with significant uncertainties include the following: – The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
           "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27: Contingencies and other matters",
           "financial_amounts": [],
-          "classification_justification": "This snippet explicitly states that Nutrien is engaged in 'ongoing site assessment and/or remediation activities at a number of facilities and sites' and has 'established provisions for environmental site assessment and/or remediation matters.' It also provides a definitive statement that they 'do not believe that our future obligations... are reasonably likely to have a material adverse effect,' indicating an assessment of financial materiality.",
+          "classification_justification": "This snippet details specific 'legal matters with significant uncertainties' related to environmental enforcement at its 'phosphoric acid facilities' (manufacturing sites). It outlines potential outcomes including 'penalties,' 'capital improvement projects,' and 'financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system,' which are direct financial impacts related to site restoration/remediation. The statement that penalties 'will not be material' is a materiality assessment.",
           "classification": "FULL_DISCLOSURE",
           "categorization": {
-            "framing_justification": "The disclosure of 'remediation activities' and 'provisions' for 'environmental site assessment' indicates a necessary response to existing or potential negative conditions, framing it as a risk. The statement about not expecting a 'material adverse effect' is a risk assessment outcome.",
+            "framing_justification": "The description of 'ongoing enforcement initiative,' 'notices of violation,' and potential 'penalties' and 'capital improvement projects' clearly frames this as a significant threat and challenge for the business.",
             "framing": "Risk",
-            "financial_justification": "The snippet explicitly states that they 'do not believe that our future obligations... are reasonably likely to have a material adverse effect,' which is a definitive statement about financial materiality (or lack thereof) without providing specific figures.",
+            "financial_justification": "The snippet explicitly mentions potential 'penalties' (which they believe 'will not be material') and 'capital improvement projects,' indicating financial impacts. It also mentions 'financial assurance' for future costs, which is a partial financial disclosure.",
             "financial_type": "Partial-type",
-            "timeframe_justification": "The phrase 'ongoing site assessment and/or remediation activities' indicates present-day actions, while 'future obligations' points to a forward-looking timeframe.",
+            "timeframe_justification": "The 'ongoing enforcement initiative' and 'ongoing discussions' indicate present-day legal challenges, while 'future closure, maintenance and monitoring costs' and 'capital improvement projects' point to forward-looking obligations.",
             "timeframe": "Multiple or Unclear"
           },
-          "text": "We are engaged in ongoing site assessment and/or remediation activities at a number of facilities and sites. Anticipated costs associated with these matters are added to accrued environmental costs in the manner described in Note 22. We have established provisions for environmental site assessment and/or remediation matters to the extent that we consider expenses associated with those matters likely to be incurred. Except for the uncertainties described below, we do not believe that our future obligations with respect to these matters are reasonably likely to have a material adverse effect on our consolidated financial statements.",
+          "text": "Legal matters with significant uncertainties include the following: – The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
           "page": "117",
           "version_source": "v3",
           "verification_corrected": false,
@@ -1898,7 +1670,7 @@
         "v4_snippets": 1,
         "merged_snippets": 5,
         "snippet_pairs": 5,
-        "ai_reviews_conducted": 1,
+        "ai_reviews_conducted": 0,
         "human_review_flagged": 0
       }
     },
@@ -2075,63 +1847,6 @@
       "disclosures": [
         {
           "snippet_id": "99916-001",
-          "quote": "Stakeholders remain focused on corporate transparency and accountability. Some investors consider environmental and social principles alongside traditional financial metrics in capital allocation decisions and, along with regulators, are considering those principles in evaluating disclosure enhancements. Beyond climate-related matters, societal concerns include broad ecosystem impacts, as well as the expectation that companies operate in the best interest of stakeholders keeping public health goals in mind. In response to these expectations, governments may impose new regulations or increase the stringency of existing ones. An inability to meet stakeholder expectations for environmental and social performance could increase stakeholder scrutiny, which could, in turn result in increased difficulty for companies as they seek to access cost-efficient capital, retain talent or deliver on their strategic priorities.",
-          "source": "2024 Nutrien Annual Report.pdf, Page 25, Megatrends",
-          "financial_amounts": [],
-          "classification_justification": "This snippet identifies 'societal concerns' and 'stakeholder expectations for environmental and social performance' as factors that could lead to 'increased stakeholder scrutiny' and 'increased difficulty for companies as they seek to access cost-efficient capital, retain talent or deliver on their strategic priorities.' This directly links public perception (societal concerns/stakeholder expectations) to business risks, including financial and operational impacts.",
-          "classification": "PARTIAL",
-          "categorization": {
-            "framing_justification": "The language 'societal concerns,' 'inability to meet stakeholder expectations,' and 'increased difficulty' frames this as a challenge or threat to the business's operations and financial standing.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure mentions 'increased difficulty for companies as they seek to access cost-efficient capital' and impacts on 'strategic priorities' but does not provide specific financial figures or a definitive statement of financial materiality.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The snippet discusses ongoing 'societal concerns' and potential future impacts ('governments may impose new regulations,' 'could increase stakeholder scrutiny'), indicating a present-day and forward-looking timeframe.",
-            "timeframe": "Multiple or Unclear"
-          },
-          "text": "Stakeholders remain focused on corporate transparency and accountability. Some investors consider environmental and social principles alongside traditional financial metrics in capital allocation decisions and, along with regulators, are considering those principles in evaluating disclosure enhancements. Beyond climate-related matters, societal concerns include broad ecosystem impacts, as well as the expectation that companies operate in the best interest of stakeholders keeping public health goals in mind. In response to these expectations, governments may impose new regulations or increase the stringency of existing ones. An inability to meet stakeholder expectations for environmental and social performance could increase stakeholder scrutiny, which could, in turn result in increased difficulty for companies as they seek to access cost-efficient capital, retain talent or deliver on their strategic priorities.",
-          "page": "2024 Nutrien Annual Report.pdf, Page 25, Megatrends",
-          "version_source": "v4",
-          "verification_corrected": false,
-          "relevance_score": 8,
-          "relevance_explanation": "The snippet directly addresses the risk of negative public perception by discussing 'societal concerns' and 'stakeholder expectations' and linking them to specific business risks like difficulty accessing capital and retaining talent.",
-          "source_versions": [
-            "v4"
-          ],
-          "merger_metadata": {
-            "pairing_type": "overlapping",
-            "similarity": 0.8015564202334631,
-            "ai_reviewed": true,
-            "ai_decision": "keep_v4",
-            "ai_rationale": "Version 4 contains the complete text of Version 3 plus additional introductory sentences that provide better context about stakeholder focus on transparency and investor considerations.",
-            "merged_classification": "PARTIAL",
-            "classification_rationale": "The company acknowledges that societal concerns and stakeholder expectations are a risk to the business, potentially leading to difficulty accessing capital, retaining talent, and delivering on strategy. However, it does not include explicit financial materiality language (e.g., 'material impact') or quantified financial impacts.",
-            "evidence_quality_flags": {
-              "characterizes_business_risk": true,
-              "product_benefit_framing": false,
-              "financial_materiality_explicit": false,
-              "key_phrases": [
-                "societal concerns",
-                "inability to meet stakeholder expectations for environmental and social performance could increase stakeholder scrutiny",
-                "increased difficulty for companies as they seek to access cost-efficient capital, retain talent or deliver on their strategic priorities"
-              ]
-            },
-            "confidence_assessment": {
-              "evidence_summary": "The company identifies 'societal concerns' and failure to meet 'stakeholder expectations' as a risk that could lead to increased scrutiny and difficulty in accessing capital, retaining talent, and executing strategic priorities.",
-              "confidence_explanation": "The evidence clearly frames public/stakeholder perception as a business risk with specific potential impacts, making the classification straightforward. The link to the question is direct and unambiguous.",
-              "confidence_percentage": 95
-            },
-            "relevance_to_question": {
-              "is_relevant": true,
-              "relevance_score": 8,
-              "relevance_explanation": "The snippet directly addresses the risk of negative public perception by discussing 'societal concerns' and 'stakeholder expectations' and linking them to specific business risks like difficulty accessing capital and retaining talent."
-            },
-            "human_review_recommended": false,
-            "human_review_reason": null
-          },
-          "snippet_rank": 1
-        },
-        {
-          "snippet_id": "99916-002",
           "quote": "Product stewardship is a component of our operational processes and an expectation of our customers, suppliers, governments, regulators, investors, public interest groups, and employees. We strive to provide the information needed to use our products safely and effectively and aim to reduce potential negative impacts from the products we manufacture and sell.",
           "source": "2024 Nutrien Sustainability Report.pdf, Page 29, Product Stewardship",
           "financial_amounts": [],
@@ -2156,6 +1871,38 @@
             "pairing_type": "v3_only",
             "ai_reviewed": false,
             "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99916-002",
+          "quote": "Stakeholders remain focused on corporate transparency and accountability. Some investors consider environmental and social principles alongside traditional financial metrics in capital allocation decisions and, along with regulators, are considering those principles in evaluating disclosure enhancements. Beyond climate-related matters, societal concerns include broad ecosystem impacts, as well as the expectation that companies operate in the best interest of stakeholders keeping public health goals in mind. In response to these expectations, governments may impose new regulations or increase the stringency of existing ones. An inability to meet stakeholder expectations for environmental and social performance could increase stakeholder scrutiny, which could, in turn result in increased difficulty for companies as they seek to access cost-efficient capital, retain talent or deliver on their strategic priorities.",
+          "source": "2024 Nutrien Annual Report.pdf, Page 25, Megatrends",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'societal concerns' and 'stakeholder expectations for environmental and social performance' as factors that could lead to 'increased stakeholder scrutiny' and 'increased difficulty for companies as they seek to access cost-efficient capital, retain talent or deliver on their strategic priorities.' This directly links public perception (societal concerns/stakeholder expectations) to business risks, including financial and operational impacts.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'societal concerns,' 'inability to meet stakeholder expectations,' and 'increased difficulty' frames this as a challenge or threat to the business's operations and financial standing.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'increased difficulty for companies as they seek to access cost-efficient capital' and impacts on 'strategic priorities' but does not provide specific financial figures or a definitive statement of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet discusses ongoing 'societal concerns' and potential future impacts ('governments may impose new regulations,' 'could increase stakeholder scrutiny'), indicating a present-day and forward-looking timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Stakeholders remain focused on corporate transparency and accountability. Some investors consider environmental and social principles alongside traditional financial metrics in capital allocation decisions and, along with regulators, are considering those principles in evaluating disclosure enhancements. Beyond climate-related matters, societal concerns include broad ecosystem impacts, as well as the expectation that companies operate in the best interest of stakeholders keeping public health goals in mind. In response to these expectations, governments may impose new regulations or increase the stringency of existing ones. An inability to meet stakeholder expectations for environmental and social performance could increase stakeholder scrutiny, which could, in turn result in increased difficulty for companies as they seek to access cost-efficient capital, retain talent or deliver on their strategic priorities.",
+          "page": "2024 Nutrien Annual Report.pdf, Page 25, Megatrends",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 contains v3 text (longer/more complete)."
           },
           "snippet_rank": 2
         },
@@ -2291,7 +2038,7 @@
         "v4_snippets": 5,
         "merged_snippets": 6,
         "snippet_pairs": 6,
-        "ai_reviews_conducted": 1,
+        "ai_reviews_conducted": 0,
         "human_review_flagged": 0
       }
     },
@@ -2303,6 +2050,38 @@
       "disclosures": [
         {
           "snippet_id": "99917-001",
+          "quote": "The following judgments are required to determine our exposure to possible losses and gains related to environmental matters and other various claims and lawsuits pending: – prediction of the outcome of uncertain events (i.e., being virtually certain, probable, remote or undeterminable); – determination of whether recognition or disclosure in the consolidated financial statements is required; and – estimation of potential financial effects. Where no amounts are recognized, such amounts are contingent and disclosure may be appropriate. While the amount disclosed in the consolidated financial statements may not be material, the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements.",
+          "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27: Contingencies and other matters",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly discusses 'environmental matters and other various claims and lawsuits pending' and states that 'the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements.' This is a clear disclosure of legal challenges and their potential financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The discussion of 'possible losses,' 'claims and lawsuits pending,' and 'potential for large liabilities' clearly frames this as a significant threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet explicitly states that 'the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements,' which is a definitive statement about financial materiality without providing specific figures.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The mention of 'claims and lawsuits pending' indicates present-day legal challenges, while 'potential for large liabilities exists' and 'could have a material impact' points to future financial consequences.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "The following judgments are required to determine our exposure to possible losses and gains related to environmental matters and other various claims and lawsuits pending: – prediction of the outcome of uncertain events (i.e., being virtually certain, probable, remote or undeterminable); – determination of whether recognition or disclosure in the consolidated financial statements is required; and – estimation of potential financial effects. Where no amounts are recognized, such amounts are contingent and disclosure may be appropriate. While the amount disclosed in the consolidated financial statements may not be material, the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements.",
+          "page": "117",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99917-002",
           "quote": "The United States Environmental Protection Agency (“US EPA”) has an ongoing enforcement initiative directed at the phosphate industry related to the scope of an exemption for mineral processing wastes under the US Resource Conservation and Recovery Act (“RCRA”). This initiative affects the Conda Phosphate plant previously owned by Nu-West Industries, Inc. (“Nu-West”), a wholly owned subsidiary of Nutrien (Canada) Holdings ULC, and the Nutrien phosphoric acid facilities in Aurora, North Carolina; Geismar, Louisiana; and White Springs, Florida. Nutrien facilities received US EPA notices of violation (“NOVs”) for alleged violations of the RCRA and various other environmental laws. Notwithstanding the sale of the Conda Phosphate operations in January 2018, Nu-West remains responsible for certain environmental liabilities attributable to its historic activities and for resolution of the NOVs. The facilities have been and continue to be involved in ongoing discussions with the US EPA, the US Department of Justice and the related state agencies to resolve these matters, with one such settlement being reached for the Geismar facility. The Geismar consent decree was entered on October 19, 2022, and resolved the allegations associated with the historic phosphoric acid operations at that facility. Due to the nature of the allegations at the other facilities, we are uncertain as to how the matters will be resolved. Based on settlements with other members of the phosphate industry and the Geismar consent decree, we expect that a resolution could involve any or all of the following: 1) penalties, which we currently believe will not be material; 2) modification of certain operating practices; 3) capital improvement projects; 4) providing financial assurance for the future closure, maintenance and monitoring costs for the phosphogypsum stack system; and 5) addressing findings resulting from the RCRA section 3013 site investigations.",
           "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
           "financial_amounts": [],
@@ -2330,35 +2109,6 @@
             "ai_reviewed": false,
             "auto_merge_decision": "v4",
             "auto_merge_rationale": "Exact duplicate (similarity: 98.2%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
-          },
-          "snippet_rank": 1
-        },
-        {
-          "snippet_id": "99917-002",
-          "quote": "The following judgments are required to determine our exposure to possible losses and gains related to environmental matters and other various claims and lawsuits pending: – prediction of the outcome of uncertain events (i.e., being virtually certain, probable, remote or undeterminable); – determination of whether recognition or disclosure in the consolidated financial statements is required; and – estimation of potential financial effects. Where no amounts are recognized, such amounts are contingent and disclosure may be appropriate. While the amount disclosed in the consolidated financial statements may not be material, the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements.",
-          "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27: Contingencies and other matters",
-          "financial_amounts": [],
-          "classification_justification": "This snippet explicitly discusses 'environmental matters and other various claims and lawsuits pending' and states that 'the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements.' This is a clear disclosure of legal challenges and their potential financial materiality.",
-          "classification": "FULL_DISCLOSURE",
-          "categorization": {
-            "framing_justification": "The discussion of 'possible losses,' 'claims and lawsuits pending,' and 'potential for large liabilities' clearly frames this as a significant threat and negative consequence for the business.",
-            "framing": "Risk",
-            "financial_justification": "The snippet explicitly states that 'the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements,' which is a definitive statement about financial materiality without providing specific figures.",
-            "financial_type": "Partial-type",
-            "timeframe_justification": "The mention of 'claims and lawsuits pending' indicates present-day legal challenges, while 'potential for large liabilities exists' and 'could have a material impact' points to future financial consequences.",
-            "timeframe": "Multiple or Unclear"
-          },
-          "text": "The following judgments are required to determine our exposure to possible losses and gains related to environmental matters and other various claims and lawsuits pending: – prediction of the outcome of uncertain events (i.e., being virtually certain, probable, remote or undeterminable); – determination of whether recognition or disclosure in the consolidated financial statements is required; and – estimation of potential financial effects. Where no amounts are recognized, such amounts are contingent and disclosure may be appropriate. While the amount disclosed in the consolidated financial statements may not be material, the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements.",
-          "page": "117",
-          "version_source": "v3",
-          "verification_corrected": false,
-          "source_versions": [
-            "v3"
-          ],
-          "merger_metadata": {
-            "pairing_type": "v3_only",
-            "ai_reviewed": false,
-            "note": "Unique to v3 analysis - not found in v4"
           },
           "snippet_rank": 2
         },
@@ -2390,43 +2140,14 @@
             "note": "Unique to v3 analysis - not found in v4"
           },
           "snippet_rank": 3
-        },
-        {
-          "snippet_id": "99917-004",
-          "quote": "The following judgments are required to determine our exposure to possible losses and gains related to environmental matters and other various claims and lawsuits pending:",
-          "source": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
-          "financial_amounts": [],
-          "classification_justification": "This snippet explicitly states that judgments are required to determine 'our exposure to possible losses and gains related to environmental matters and other various claims and lawsuits pending.' This directly acknowledges the existence of legal challenges and lawsuits related to environmental claims, framing them as potential sources of loss for the business.",
-          "classification": "PARTIAL",
-          "categorization": {
-            "framing_justification": "The phrase 'exposure to possible losses' and 'claims and lawsuits pending' clearly frames this as a potential negative consequence or threat to the business.",
-            "framing": "Risk",
-            "financial_justification": "The disclosure mentions 'possible losses' but does not provide specific quantifiable financial figures or a definitive statement of financial materiality, making it non-financial in type.",
-            "financial_type": "Non-Financial",
-            "timeframe_justification": "The term 'pending' indicates that these claims and lawsuits are active and ongoing as of the reporting date, aligning with a present-day timeframe.",
-            "timeframe": "Present day"
-          },
-          "text": "The following judgments are required to determine our exposure to possible losses and gains related to environmental matters and other various claims and lawsuits pending:",
-          "page": "2024 Nutrien Annual Report.pdf, Page 117, Note 27 | Contingencies and other matters",
-          "version_source": "v4",
-          "verification_corrected": false,
-          "source_versions": [
-            "v4"
-          ],
-          "merger_metadata": {
-            "pairing_type": "v4_only",
-            "ai_reviewed": false,
-            "note": "Unique to v4 analysis - not found in v3"
-          },
-          "snippet_rank": 4
         }
       ],
       "summary": "MERGED ANALYSIS: Combined best evidence from v3 (3 snippets) and v4 (2 snippets) analyses. Sorted by relevance score.",
       "merger_stats": {
         "v3_snippets": 3,
         "v4_snippets": 2,
-        "merged_snippets": 4,
-        "snippet_pairs": 4,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
         "ai_reviews_conducted": 0,
         "human_review_flagged": 0
       }
@@ -2460,7 +2181,7 @@
           "version_source": "v4",
           "verification_corrected": false,
           "relevance_score": 9,
-          "relevance_explanation": "The snippet directly and quantitatively addresses the financial risk of energy input costs (natural gas) on the company's earnings, fully answering the question.",
+          "relevance_explanation": "The evidence directly quantifies the financial risk to EBITDA and EPS resulting from changes in natural gas prices, a key energy input cost for the company's manufacturing processes.",
           "source_versions": [
             "v4"
           ],
@@ -2469,9 +2190,9 @@
             "similarity": 0.7770700636942676,
             "ai_reviewed": true,
             "ai_decision": "keep_v4",
-            "ai_rationale": "Version 4's text is more comprehensive as it explicitly includes the financial metrics ('Adjusted EBITDA', 'Adjusted EPS') being impacted, providing clearer context than Version 3.",
+            "ai_rationale": "v4 is chosen because it provides more explicit context by labeling the financial metrics ('Adjusted EBITDA', 'Adjusted EPS'), making the evidence clearer and more self-contained than v3's table format.",
             "merged_classification": "FULL_DISCLOSURE",
-            "classification_rationale": "The snippet provides a quantified financial impact of changes in energy input costs on key financial metrics (±$190M on Adjusted EBITDA), which meets the criteria for Full Disclosure.",
+            "classification_rationale": "The snippet provides a quantified financial impact ('± 190' million on Adjusted EBITDA, '± 0.30' on Adjusted EPS) linked to a change in energy input costs (natural gas price), which meets the criteria for full disclosure of a financially material risk.",
             "evidence_quality_flags": {
               "characterizes_business_risk": true,
               "product_benefit_framing": false,
@@ -2483,14 +2204,14 @@
               ]
             },
             "confidence_assessment": {
-              "evidence_summary": "The company's '2025 Sensitivities' table quantifies that a $1/MMBtu change in natural gas price results in a ±$190 million impact on Adjusted EBITDA and a ±$0.30 impact on Adjusted EPS.",
-              "confidence_explanation": "The evidence is a direct, quantitative financial disclosure from a sensitivity analysis, which is an unambiguous acknowledgment of a material business risk.",
-              "confidence_percentage": 100
+              "evidence_summary": "The company provides a sensitivity analysis showing that a $1/MMBtu change in the price of natural gas results in a ±$190 million impact on Adjusted EBITDA and a ±$0.30 impact on Adjusted EPS.",
+              "confidence_explanation": "The evidence is a direct, quantitative disclosure from a '2025 Sensitivities' table, which is an unambiguous way for a company to acknowledge and quantify a financial risk. The link between energy input cost and business impact is explicit.",
+              "confidence_percentage": 98
             },
             "relevance_to_question": {
               "is_relevant": true,
               "relevance_score": 9,
-              "relevance_explanation": "The snippet directly and quantitatively addresses the financial risk of energy input costs (natural gas) on the company's earnings, fully answering the question."
+              "relevance_explanation": "The evidence directly quantifies the financial risk to EBITDA and EPS resulting from changes in natural gas prices, a key energy input cost for the company's manufacturing processes."
             },
             "human_review_recommended": false,
             "human_review_reason": null
@@ -2732,13 +2453,13 @@
   ],
   "completeness_summary": {
     "total_questions_analyzed": 14,
-    "total_disclosure_snippets": 75,
+    "total_disclosure_snippets": 71,
     "note": "Summary statistics recalculated from merged results"
   },
   "metadata": {
     "company": "Nutrien",
     "year": "2024",
-    "analysis_date": "2025-11-06T11:42:43.581467",
+    "analysis_date": "2025-11-06T12:19:47.099460",
     "schema_version": "merged-v3-v4",
     "merger_model": "gemini-2.5-pro",
     "source_files": {
@@ -2749,9 +2470,9 @@
   "merger_summary": {
     "total_v3_snippets": 63,
     "total_v4_snippets": 35,
-    "total_merged_snippets": 75,
-    "total_ai_reviews": 9,
+    "total_merged_snippets": 71,
+    "total_ai_reviews": 2,
     "total_human_flags": 0,
-    "merger_timestamp": "06-11-2025_11-42-43"
+    "merger_timestamp": "06-11-2025_12-19-47"
   }
 }

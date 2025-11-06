@@ -446,7 +446,7 @@ function convertMergedSnippet(rawSnippet: any, questionId: string, index: number
       .filter(Boolean)
       .join(' | ');
 
-  return {
+    const snippetResult: Record<string, any> = {
     snippet_id: rawSnippet.snippet_id || `${questionId}-merged-${index + 1}`,
     quote: rawSnippet.quote || rawSnippet.text || '',
     source,
@@ -467,6 +467,55 @@ function convertMergedSnippet(rawSnippet: any, questionId: string, index: number
     source_versions: sourceVersions,
     merger_metadata: rawSnippet.merger_metadata
   };
+
+  let comparisonStatus = rawSnippet.comparison_status as string | undefined;
+
+  if (!comparisonStatus && rawSnippet.verification_corrected) {
+    comparisonStatus = 'classification_corrected';
+  }
+
+  if (
+    !comparisonStatus &&
+    typeof rawSnippet.classification_justification === 'string' &&
+    rawSnippet.classification_justification.toLowerCase().includes('corrected by verification')
+  ) {
+    comparisonStatus = 'classification_corrected';
+  }
+
+  if (!comparisonStatus) {
+    const aiDecision = (rawSnippet.merger_metadata?.ai_decision || '').toLowerCase();
+    if (rawSnippet.merger_metadata?.human_review_recommended || aiDecision.includes('correct')) {
+      comparisonStatus = 'classification_corrected';
+    }
+  }
+
+  snippetResult.comparison_status = comparisonStatus || 'unchanged';
+
+  if (!snippetResult.comparison_change && snippetResult.comparison_status !== 'unchanged') {
+    const originalClassification =
+      rawSnippet.merger_metadata?.original_classification
+      || rawSnippet.original_classification
+      || rawSnippet.previous_classification
+      || 'Original';
+
+    const verifiedClassification =
+      rawSnippet.merger_metadata?.merged_classification
+      || snippetResult.classification;
+
+    const correctionNote =
+      rawSnippet.merger_metadata?.human_review_reason
+      || rawSnippet.classification_justification
+      || 'Corrected during merged verification review';
+
+    snippetResult.comparison_change = {
+      change_type: 'classification_corrected',
+      original_classification: originalClassification,
+      verified_classification: verifiedClassification,
+      note: correctionNote
+    };
+  }
+
+  return snippetResult as Snippet;
 }
 
 function convertMergedQuestion(rawQuestion: any, index: number): Question {
@@ -630,5 +679,6 @@ function getVersionSortWeight(version: string): number {
   const numeric = parseInt(version.replace(/[^0-9]/g, ''), 10);
   return Number.isNaN(numeric) ? 0 : numeric;
 }
+
 
 
