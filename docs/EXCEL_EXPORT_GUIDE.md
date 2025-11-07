@@ -32,6 +32,11 @@ reports/AG_Verification_Summary_YYYY-MM-DD.xlsx
 
 The file contains all companies, all versions (v3, v4, etc.), and all available data across **7 sheets**.
 
+### Console Output
+
+- Every status line now uses `[INFO]`, `[SUCCESS]`, or `[ERROR]` instead of emojis so shells like PowerShell no longer show diamond placeholders.
+- The export summary lists the company names **and** a `Company Count` line so you can confirm how many entities were included at a glance.
+
 ---
 
 ## What Gets Exported
@@ -44,6 +49,7 @@ The file contains all companies, all versions (v3, v4, etc.), and all available 
 - **Questions**: All analyzed questions with cross-company performance
 - **Categories**: Risk category breakdowns (Environmental, Human Health, Market/Business, Regulatory/Financial)
 - **Metrics**: Comprehensive evidence-based analysis across all dimensions
+- **Merged datasets**: Automatic merged-only workbook (`AG_Verification_Merged_YYYY-MM-DD.xlsx`) when merged versions are present
 
 ### Core Metrics
 
@@ -52,7 +58,7 @@ The file contains all companies, all versions (v3, v4, etc.), and all available 
 - **Evidence depth**: Snippets per question across companies
 - **Distribution metrics**: Financial transparency, present-day, forward-looking, and narrative balance rates
 - **Snippets per company**: Company Details sheet
-- **Raw snippet data**: Complete categorization and sourcing
+- **Raw snippet data**: Complete categorization and sourcing (with source versions, verification status, and correction notes)
 
 ### Key Features Included
 
@@ -89,6 +95,8 @@ npm run export:excel -- --company Syngenta --version v4
 # Custom output path
 npm run export:excel -- --output reports/my-custom-report.xlsx
 ```
+
+> **Note:** If merged datasets exist, the tool also writes a merged-only workbook alongside the main export (`AG_Verification_Merged_YYYY-MM-DD.xlsx` by default, or `<output>.merged.xlsx` when a custom filename is provided).
 
 ### Command-Line Options
 
@@ -294,6 +302,18 @@ npm run export:excel -- --output reports/monthly-report-$(date +%Y-%m).xlsx
 - "Companies Analyzed" in Question Performance = "Number of companies that answered this question"
 - "Financial Quantification Rate" = "Percentage of snippets with explicit monetary amounts"
 - "Pass Rate" in Verification = "Percentage of original snippets that passed quality review"
+
+---
+
+### Sheet 8: Merged Overview (auto)
+
+- **Purpose**: Summarise merged evidence performance (v3 + v4) for each company-year
+- **What you see**:
+  - Source versions and files used in the merge
+  - Merged/v3/v4 snippet counts and snippet pairs reviewed
+  - AI review count and human flag count
+  - Questions analysed and completeness note from the merged file
+- **Best For**: Validating merge coverage, confirming source availability, and triaging follow-up reviews
 
 ---
 

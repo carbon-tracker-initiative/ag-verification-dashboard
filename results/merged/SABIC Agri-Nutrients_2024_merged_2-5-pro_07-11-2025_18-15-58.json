@@ -1,0 +1,1191 @@
+{
+  "analysis_results": [
+    {
+      "question_id": "99902",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+      "disclosures": [
+        {
+          "snippet_id": "99902-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "SABIC Agri-Nutrients does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99903",
+      "question_number": 2,
+      "category": "Human Health Risk",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99903-001",
+          "quote": "SABIC’s business is subject to a variety of laws and governmental regulations regarding the use of toxic or hazardous materials. For example, to obtain regulatory approval for new products and manufacturing processes, a company must show that the product is safe for its intended uses and that it is capable of manufacturing the product in accordance with applicable rules. Non-compliance with such laws and regulations could be costly (e.g., confiscation, recall, monetary fines, etc.), which could prevent or inhibit the development, distribution, and sale of its products. Might have a material and adverse effect on business, results of operations, or financial condition. The company complies with a complex network of regional reporting regulations and disclosure frameworks. SABIC is a certified Responsible Care® company, establishing a robust framework for safe chemicals management and performance excellence. In addition, SABIC’s Safer Chemistry program, which is voluntary, goes beyond global regulatory requirements in developing products with lower human and environmental hazard profiles.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 56, Section: REGIONAL CHEMICAL REGULATIONS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that non-compliance with regulations regarding 'toxic or hazardous materials' (products) could be 'costly' and 'prevent or inhibit the development, distribution, and sale of its products', potentially having a 'material and adverse effect on business, results of operations, or financial condition'. It also highlights the 'Safer Chemistry program' for 'products with lower human and environmental hazard profiles', directly addressing human health concerns related to products as a business risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure frames the issue as a 'risk' due to 'non-compliance' with regulations concerning 'toxic or hazardous materials', leading to 'costly' outcomes and a 'material and adverse effect on business'. It also mentions proactive programs like 'Safer Chemistry' to mitigate these threats.",
+            "framing": "Risk",
+            "financial_justification": "The statement explicitly uses the phrase 'Might have a material and adverse effect on business, results of operations, or financial condition', indicating a definitive assessment of financial materiality without providing specific figures.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The snippet discusses 'obtaining regulatory approval for new products' and 'non-compliance with such laws and regulations could be costly', indicating a forward-looking perspective on potential future regulatory impacts and costs. It also mentions ongoing compliance and programs.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "SABIC’s business is subject to a variety of laws and governmental regulations regarding the use of toxic or hazardous materials. For example, to obtain regulatory approval for new products and manufacturing processes, a company must show that the product is safe for its intended uses and that it is capable of manufacturing the product in accordance with applicable rules. Non-compliance with such laws and regulations could be costly (e.g., confiscation, recall, monetary fines, etc.), which could prevent or inhibit the development, distribution, and sale of its products. Might have a material and adverse effect on business, results of operations, or financial condition. The company complies with a complex network of regional reporting regulations and disclosure frameworks. SABIC is a certified Responsible Care® company, establishing a robust framework for safe chemicals management and performance excellence. In addition, SABIC’s Safer Chemistry program, which is voluntary, goes beyond global regulatory requirements in developing products with lower human and environmental hazard profiles.",
+          "page": "56",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99903-002",
+          "quote": "SABIC’s products are safe if managed and used properly. However, if not handled correctly, there is a risk that may result in the following: ... Occurrence of the above events, during transportation or at a customer facility, could result in a fatality, personal injury, equipment failures or shutdowns, damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 45, Section COMPLIANCE RISKS",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies a business risk with financial consequences ('could lead to liabilities'), but it does not explicitly state that the impact would be 'material.' Therefore, it meets the criteria for PARTIAL disclosure, not FULL_DISCLOSURE.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language clearly frames potential fatalities, personal injuries, and subsequent legal/financial consequences as negative outcomes and threats to the business, aligning with the definition of 'Risk'.",
+            "framing": "Risk",
+            "financial_justification": "The phrase 'could lead to liabilities' indicates a clear financial impact and materiality, even though no specific monetary value is provided. This aligns with the 'Partial-type' definition, as it acknowledges financial materiality without precise quantification.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement uses 'may result in' and 'could lead to,' indicating potential future events and consequences, thus making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "SABIC’s products are safe if managed and used properly. However, if not handled correctly, there is a risk that may result in the following: ... Occurrence of the above events, during transportation or at a customer facility, could result in a fatality, personal injury, equipment failures or shutdowns, damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 45, Section COMPLIANCE RISKS",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 verification-corrected (overrides length)."
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "Yes, SABIC explicitly discloses that human health problems from its products are a business risk. The company states that improper product handling can cause 'fatality' or 'personal injury,' leading to potential civil lawsuits, criminal investigations, and liabilities. It also acknowledges that its business is subject to regulations for 'toxic or hazardous materials,' and non-compliance could be costly.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 2,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99904",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99904-001",
+          "quote": "In recent years, there has been a growing awareness of the impacts of business activities on the environment and society. This has led to changes in regulation and public expectations, which are creating new risks and opportunities for businesses. ... SABIC is working on reducing its environmental impact, including greenhouse gas emissions, water usage, and waste generation, recognizing that these changes may require new technologies, capital investments, supply chain participation, and increased operating costs.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 47, Section RAPIDLY EVOLVING REGULATIONS RELATING TO SUSTAINABILITY AND ESG",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies a risk and potential financial impacts ('increased operating costs'), but it does not explicitly state that this risk is financially material, which is the requirement for FULL_DISCLOSURE. It only says costs 'may' be required. Therefore, it meets the criteria for PARTIAL.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'new risks' and the mention of 'increased operating costs' and 'capital investments' clearly frame this as a negative consequence and a threat to the business, aligning with the 'Risk' definition.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly mentions 'capital investments' and 'increased operating costs' as financial impacts, indicating financial materiality without providing specific figures. This aligns with 'Partial-type'.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'may require' indicates future requirements and costs, making the disclosure forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "In recent years, there has been a growing awareness of the impacts of business activities on the environment and society. This has led to changes in regulation and public expectations, which are creating new risks and opportunities for businesses. ... SABIC is working on reducing its environmental impact, including greenhouse gas emissions, water usage, and waste generation, recognizing that these changes may require new technologies, capital investments, supply chain participation, and increased operating costs.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 47, Section RAPIDLY EVOLVING REGULATIONS RELATING TO SUSTAINABILITY AND ESG",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99904-002",
+          "quote": "In recent years, there has been a growing awareness of the impacts of business activities on the environment and society. This has led to changes in regulation and public expectations, which are creating new risks and opportunities for businesses. We recognize that our success increasingly depends on integrating ESG principles into every aspect of our business. SABIC is working on reducing its environmental impact, including greenhouse gas emissions, water usage, and waste generation, recognizing that these changes may require new technologies, capital investments, supply chain participation, and increased operating costs. Potential delay in delivering against sustainability or carbon-neutral goals and ESG reporting. Rapidly-evolving regulations, capital availability, aging plants or lack of mature technology. A negative impact on SABIC’s reputation and a decreased demand for goods and services.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 47, Section: RAPIDLY EVOLVING REGULATIONS RELATING TO SUSTAINABILITY AND ESG",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'increased operating costs' as a requirement due to 'changes in regulation' related to 'reducing its environmental impact, including greenhouse gas emissions'. This directly links carbon-related regulations to financial costs for its direct operations. It also mentions 'decreased demand for goods and services' which could be an indirect market risk related to carbon footprint, but doesn't explicitly link to carbon costs from customer product use.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure frames 'changes in regulation' and 'increased operating costs' related to 'greenhouse gas emissions' as 'risks' to the business, indicating potential negative financial impacts.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'increased operating costs' as a consequence of regulatory changes related to GHG emissions, indicating a financial impact without providing specific monetary values or a statement of materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'changes in regulation... are creating new risks' and 'may require new technologies' indicates a forward-looking perspective on anticipated regulatory and cost impacts. It also refers to 'recent years' for the growing awareness.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "In recent years, there has been a growing awareness of the impacts of business activities on the environment and society. This has led to changes in regulation and public expectations, which are creating new risks and opportunities for businesses. We recognize that our success increasingly depends on integrating ESG principles into every aspect of our business. SABIC is working on reducing its environmental impact, including greenhouse gas emissions, water usage, and waste generation, recognizing that these changes may require new technologies, capital investments, supply chain participation, and increased operating costs. Potential delay in delivering against sustainability or carbon-neutral goals and ESG reporting. Rapidly-evolving regulations, capital availability, aging plants or lack of mature technology. A negative impact on SABIC’s reputation and a decreased demand for goods and services.",
+          "page": "47",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99904-003",
+          "quote": "A report on the environmental outlook and emerging local and global environmental legislations, including Carbon Border Adjustment Mechanism (CBAM), along with an assessment of their impact and the company’s readiness for compliance.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 147, Section BSREC DELIBERATIONS",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet only states that a report and an 'assessment of their impact' were reviewed. It does not disclose the outcome of the assessment or characterize CBAM as a risk to the business. It merely acknowledges the topic, which fits the definition of UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The mention of 'environmental legislations' and 'assessment of their impact' implies potential negative consequences or challenges for the business, framing it as a 'Risk'.",
+            "framing": "Neutral",
+            "financial_justification": "CBAM is a mechanism for carbon tariffs, directly implying financial costs. The 'assessment of their impact' indicates that the financial materiality is being evaluated, aligning with 'Partial-type'.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The reference to 'emerging local and global environmental legislations' and 'readiness for compliance' indicates a focus on future regulatory changes and their anticipated effects, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "A report on the environmental outlook and emerging local and global environmental legislations, including Carbon Border Adjustment Mechanism (CBAM), along with an assessment of their impact and the company’s readiness for compliance.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 147, Section BSREC DELIBERATIONS",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using v4 verification-corrected."
+          },
+          "snippet_rank": 3
+        }
+      ],
+      "summary": "Yes, SABIC discloses that carbon costs from its direct operations are a risk to the business. The company acknowledges that evolving regulations on greenhouse gas emissions create new risks that may require capital investments and increase operating costs. It specifically notes its assessment of the impact of the Carbon Border Adjustment Mechanism (CBAM), a direct carbon pricing policy, on its operations and compliance readiness.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 2,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99907",
+      "question_number": 4,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99907-001",
+          "quote": "SABIC’s products are safe if managed and used properly. However, if not handled correctly, there is a risk that may result in the following: ... Discharge of hazardous chemicals on land or in waterways. ... Occurrence of the above events, during transportation or at a customer facility, could result in a fatality, personal injury, equipment failures or shutdowns, damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 45, Section COMPLIANCE RISKS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies the 'Discharge of hazardous chemicals on land or in waterways' as a risk if products are not handled correctly. It links this directly to 'damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities,' clearly indicating financial materiality and a direct business risk. While 'leaching' is not explicitly mentioned, 'discharge' of 'hazardous chemicals' from 'applied products' (fertilizers) into waterways covers the essence of the question.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language highlights 'risk' and potential 'damage to the environment,' 'civil lawsuits,' and 'liabilities,' clearly framing this as a negative consequence and a threat to the business, aligning with the 'Risk' definition.",
+            "framing": "Risk",
+            "financial_justification": "The statement 'could lead to liabilities' explicitly indicates a financial impact and materiality, even without specific monetary values. This aligns with 'Partial-type'.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of 'may result in' and 'could lead to' indicates potential future events and consequences, making the disclosure forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "SABIC’s products are safe if managed and used properly. However, if not handled correctly, there is a risk that may result in the following: ... Discharge of hazardous chemicals on land or in waterways. ... Occurrence of the above events, during transportation or at a customer facility, could result in a fatality, personal injury, equipment failures or shutdowns, damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 45, Section COMPLIANCE RISKS",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99907-002",
+          "quote": "SABIC’s products are safe if managed and used properly. However, if not handled correctly, there is a risk that may result in the following: ... Discharge of hazardous chemicals on land or in waterways. Occurrence of the above events, during transportation or at a customer facility, could result in a fatality, personal injury, equipment failures or shutdowns, damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities. Any damage to persons, equipment, or property, or other disruption to SABIC’s ability to produce or distribute its products could result in a decrease in SABIC revenues and profits and additional cost to replace or repair assets. Liabilities for fatalities, personal injuries, property, damage, improper management and disposal of waste materials and environmental clean-up. Disposal or release of hazardous substances into the environment. Could impact reputation, business, and operations. SABIC complies with applicable laws, international standards, and regulations governing the use, treatment, storage, and disposal of hazardous and toxic substances or waste to help ensure the health and safety of employees, contractors, and the public. SABIC continuously collects and reports hazardous and non-hazardous waste data in accordance with the company's global waste reporting guidance, introduced in 2023.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 55, Section: USE AND HANDLING OF PRODUCTS AND MATERIALS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly addresses the risk of 'Discharge of hazardous chemicals on land or in waterways' if products are not handled correctly. It explicitly links this to 'damage to the environment', 'civil lawsuits, criminal investigations, or regulatory enforcement proceedings', 'liabilities', and potential negative impacts on 'reputation, business, and operations', including a 'decrease in SABIC revenues and profits'. This clearly identifies waterway pollution from products as a business risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure frames the 'Discharge of hazardous chemicals on land or in waterways' as a 'risk' that could lead to 'damage to the environment', 'civil lawsuits', 'criminal investigations', and 'liabilities', emphasizing negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'liabilities', 'decrease in SABIC revenues and profits', and 'additional cost to replace or repair assets' as potential financial impacts, but it does not provide any specific monetary values or state whether these impacts are financially material or immaterial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The language 'if not handled correctly, there is a risk that may result in...' and 'could lead to liabilities' indicates a forward-looking perspective on potential future events and their consequences. It also mentions ongoing compliance.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "SABIC’s products are safe if managed and used properly. However, if not handled correctly, there is a risk that may result in the following: ... Discharge of hazardous chemicals on land or in waterways. Occurrence of the above events, during transportation or at a customer facility, could result in a fatality, personal injury, equipment failures or shutdowns, damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities. Any damage to persons, equipment, or property, or other disruption to SABIC’s ability to produce or distribute its products could result in a decrease in SABIC revenues and profits and additional cost to replace or repair assets. Liabilities for fatalities, personal injuries, property, damage, improper management and disposal of waste materials and environmental clean-up. Disposal or release of hazardous substances into the environment. Could impact reputation, business, and operations. SABIC complies with applicable laws, international standards, and regulations governing the use, treatment, storage, and disposal of hazardous and toxic substances or waste to help ensure the health and safety of employees, contractors, and the public. SABIC continuously collects and reports hazardous and non-hazardous waste data in accordance with the company's global waste reporting guidance, introduced in 2023.",
+          "page": "55",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "Yes, SABIC discloses that waterway pollution from the discharge of its products is a business risk, which is considered a FULL_DISCLOSURE. The company states that if its hazardous chemicals are not handled correctly, there is a risk of \"Discharge of hazardous chemicals on land or in waterways.\" This could result in environmental damage, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, leading to potential liabilities.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99908",
+      "question_number": 5,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99908-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "SABIC Agri-Nutrients does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99909",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+      "disclosures": [
+        {
+          "snippet_id": "99909-001",
+          "quote": "We are working on improving Nutrient Use Efficiency (NUE), a critical factor in farming, and we collaborate with industry leaders to take a technology-first approach to addressing the agricultural challenges of productivity, agronomic efficiency, nutrient utilization, and recovery efficiency. Agronomic trials conducted in 2024 on soluble fertilizers, nano-fertilizers, inhibitors, and coated fertilizers showed improved NUE.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 77, AGRI-NUTRIENTS",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR because the snippet acknowledges the topic ('nutrient utilization' as an 'agricultural challenge') but does not characterize it as a risk to the business. The PARTIAL classification requires the issue to be clearly identified as a business risk, which is not the case here. The justification itself correctly notes that the text 'stops short of explicitly identifying it as a direct business risk', which supports an UNCLEAR classification, not PARTIAL.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language describes an 'agricultural challenge' and the company's efforts to address it through technological approaches and trials. It focuses on improving efficiency and addressing a problem, which is a positive framing of their actions, rather than explicitly framing it as a direct threat or a pure opportunity for the business.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet discusses efforts to improve nutrient use efficiency and agronomic trials, but it does not provide any explicit financial values, costs, or statements about the financial materiality of the issue or the mitigation efforts.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet uses present tense verbs such as 'are working' and 'conducted in 2024' to describe ongoing efforts and recent trials, indicating that the activities and challenges are current.",
+            "timeframe": "Present day"
+          },
+          "text": "We are working on improving Nutrient Use Efficiency (NUE), a critical factor in farming, and we collaborate with industry leaders to take a technology-first approach to addressing the agricultural challenges of productivity, agronomic efficiency, nutrient utilization, and recovery efficiency. Agronomic trials conducted in 2024 on soluble fertilizers, nano-fertilizers, inhibitors, and coated fertilizers showed improved NUE.",
+          "page": "77",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 verification-corrected (overrides length)."
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "No. SABIC Agri-Nutrients acknowledges the challenge of 'nutrient utilization' in farming and discusses its efforts to improve Nutrient Use Efficiency (NUE) through product innovation. However, it frames this as an agricultural challenge it is helping to solve, rather than explicitly identifying nutrient runoff or eutrophication from product use by farmers as a direct risk to its business.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99910",
+      "question_number": 2,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that disposal of chemical waste, such as gypstacks, from the production of phosphate fertiliser is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99910-001",
+          "quote": "Liabilities for fatalities, personal injuries, property, damage, improper management and disposal of waste materials and environmental clean-up. Disposal or release of hazardous substances into the environment. Could impact reputation, business, and operations.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 55, COMPLIANCE RISKS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'improper management and disposal of waste materials and environmental clean-up' and 'Disposal or release of hazardous substances into the environment' as risks that could lead to 'Liabilities' and 'impact reputation, business, and operations.' While it does not specifically name 'gypstacks' or 'phosphate fertilizer production,' it broadly covers the risks associated with chemical waste disposal, which would include such waste streams from a fertilizer company like SABIC Agri-Nutrients. The mention of 'liabilities' and impact on 'business and operations' indicates a clear business risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language focuses on 'Liabilities,' 'improper management,' 'disposal or release of hazardous substances,' and 'impact reputation, business, and operations,' clearly framing the issue as a negative consequence or threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'Liabilities' and 'impact reputation, business, and operations,' indicating a financial impact, but it does not provide specific monetary values or explicitly state financial materiality for this particular risk.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of 'Could impact' suggests potential future consequences, making the disclosure forward-looking, while 'improper management and disposal' implies ongoing activities.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Liabilities for fatalities, personal injuries, property, damage, improper management and disposal of waste materials and environmental clean-up. Disposal or release of hazardous substances into the environment. Could impact reputation, business, and operations.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 55, COMPLIANCE RISKS",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99910-002",
+          "quote": "WASTE: We realize that waste management and a transition toward more responsible production and consumption are vital to mitigating our environmental footprint. We, therefore, adhere to rigorous waste management principles, including effective and compliant waste identification, segregation, packaging, labeling, storage, and transportation. Our waste minimization programs aim to eliminate, reduce, and lower toxicity, reuse/recycle, and recover waste wherever possible, while complying with regulations.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 99, PRODUCTION",
+          "financial_amounts": [],
+          "classification_justification": "This snippet discusses SABIC's commitment to 'waste management' and 'mitigating our environmental footprint' through 'rigorous waste management principles' and 'waste minimization programs.' It describes the company's efforts and practices to manage waste responsibly and comply with regulations. However, it does not explicitly state that the *disposal of chemical waste from phosphate fertilizer production (like gypstacks)* is a *risk to the business* with potential negative consequences or financial impacts. It focuses on management and mitigation rather than risk identification.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language focuses on 'mitigating our environmental footprint,' 'adhere to rigorous waste management principles,' and 'waste minimization programs,' which describes proactive management and positive actions, rather than framing waste disposal as a direct business risk.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet describes waste management practices and programs but does not provide any explicit financial amounts, costs, or statements about financial materiality related to waste disposal as a business risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of ongoing 'waste management principles' and 'waste minimization programs' indicates a focus on current and continuous activities.",
+            "timeframe": "Present day"
+          },
+          "text": "WASTE: We realize that waste management and a transition toward more responsible production and consumption are vital to mitigating our environmental footprint. We, therefore, adhere to rigorous waste management principles, including effective and compliant waste identification, segregation, packaging, labeling, storage, and transportation. Our waste minimization programs aim to eliminate, reduce, and lower toxicity, reuse/recycle, and recover waste wherever possible, while complying with regulations.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 99, PRODUCTION",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "Yes. The company identifies the \"improper management and disposal of waste materials\" and the \"disposal or release of hazardous substances\" as compliance risks that could negatively impact its reputation, business, and operations. While this acknowledges waste disposal as a general business risk, the disclosure does not specifically mention gypstacks or waste from phosphate fertilizer production.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 2,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99911",
+      "question_number": 3,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99911-001",
+          "quote": "Environmental provisions: The Group is subject to various environmental laws and regulations that require the Group to incur costs for environmental remediation and restoration activities. The Group recognizes a provision for environmental remediation and restoration costs when it is probable that such costs will be incurred and can be reasonably estimated. The amount of the provision is based on current estimates of the costs of remediation and restoration, taking into account available technology and current regulatory requirements. The Group’s environmental provisions primarily relate to the estimated costs of closing and reclaiming certain mining sites and other environmental remediation activities. As of December 31, 2024, the Group has recognized environmental provisions of SR 1,250 million (2023: SR 1,180 million). These provisions are expected to be utilized over the next 10 to 30 years. The Group is also involved in various environmental investigations and remediation activities at certain sites. While the ultimate outcome of these matters cannot be predicted with certainty, management believes that the existing provisions are adequate to cover the Group’s obligations.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 230, Notes to the consolidated financial statements, Note 24. Provisions",
+          "financial_amounts": [
+            "SR 1,250 million",
+            "SR 1,180 million"
+          ],
+          "classification_justification": "This snippet explicitly identifies 'environmental remediation and restoration activities' as costs the Group is required to incur due to 'environmental laws and regulations.' It specifically states that 'The Group’s environmental provisions primarily relate to the estimated costs of closing and reclaiming certain mining sites.' The disclosure quantifies these provisions as 'SR 1,250 million' for 2024 and 'SR 1,180 million' for 2023, and provides a timeframe for their utilization ('over the next 10 to 30 years'). This clearly establishes the restoration of mining sites as a financially material risk and obligation for the business.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on 'costs,' 'obligations,' and 'provisions' required by 'environmental laws and regulations,' framing the restoration of mining sites as a financial burden and a threat to the company's resources.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for the environmental provisions, stating 'SR 1,250 million' for 2024 and 'SR 1,180 million' for 2023, directly linked to the costs of closing and reclaiming mining sites.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure refers to provisions 'As of December 31, 2024' (present day) and states that these provisions are 'expected to be utilized over the next 10 to 30 years' (forward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Environmental provisions: The Group is subject to various environmental laws and regulations that require the Group to incur costs for environmental remediation and restoration activities. The Group recognizes a provision for environmental remediation and restoration costs when it is probable that such costs will be incurred and can be reasonably estimated. The amount of the provision is based on current estimates of the costs of remediation and restoration, taking into account available technology and current regulatory requirements. The Group’s environmental provisions primarily relate to the estimated costs of closing and reclaiming certain mining sites and other environmental remediation activities. As of December 31, 2024, the Group has recognized environmental provisions of SR 1,250 million (2023: SR 1,180 million). These provisions are expected to be utilized over the next 10 to 30 years. The Group is also involved in various environmental investigations and remediation activities at certain sites. While the ultimate outcome of these matters cannot be predicted with certainty, management believes that the existing provisions are adequate to cover the Group’s obligations.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 230, Notes to the consolidated financial statements, Note 24. Provisions",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "Yes, the company fully discloses that the restoration of mining sites is a financial risk. It recognizes a provision for environmental remediation and restoration costs, which are primarily related to the estimated costs of closing and reclaiming certain mining sites as required by environmental laws. This provision quantifies the financial liability associated with this operational risk.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99912",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99912-001",
+          "quote": "SABIC’s business is subject to a variety of laws and governmental regulations regarding the use of toxic or hazardous materials. For example, to obtain regulatory approval for new products and manufacturing processes, a company must show that the product is safe for its intended uses and that it is capable of manufacturing the product in accordance with applicable rules. Non-compliance with such laws and regulations could be costly (e.g., confiscation, recall, monetary fines, etc.), which could prevent or inhibit the development, distribution, and sale of its products. Might have a material and adverse effect on business, results of operations, or financial condition.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 56, REGIONAL CHEMICAL REGULATIONS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies the risk that non-compliance with regulations regarding 'toxic or hazardous materials' could 'prevent or inhibit the development, distribution, and sale of its products.' It further states that this 'Might have a material and adverse effect on business, results of operations, or financial condition,' clearly indicating the financial materiality of this risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language clearly describes potential negative consequences such as 'costly,' 'confiscation, recall, monetary fines,' and the inhibition of product sale, which are all threats to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions potential 'costly' outcomes, 'monetary fines,' and explicitly states that the risk 'Might have a material and adverse effect on business, results of operations, or financial condition,' thereby asserting financial materiality without providing specific quantified amounts.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of phrases like 'could be costly,' 'could prevent or inhibit,' and 'Might have a material and adverse effect' indicates that these are potential future impacts and risks that have not yet fully manifested.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "SABIC’s business is subject to a variety of laws and governmental regulations regarding the use of toxic or hazardous materials. For example, to obtain regulatory approval for new products and manufacturing processes, a company must show that the product is safe for its intended uses and that it is capable of manufacturing the product in accordance with applicable rules. Non-compliance with such laws and regulations could be costly (e.g., confiscation, recall, monetary fines, etc.), which could prevent or inhibit the development, distribution, and sale of its products. Might have a material and adverse effect on business, results of operations, or financial condition.",
+          "page": "56",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99912-002",
+          "quote": "The potential for protectionist barriers being imposed and adversely impacting SABIC’s trading opportunities to sell products in other markets is increasing. This is largely due to a combination of deglobalization, an uncertain geopolitical climate, and the economic crisis faced by our industry in the regions in which SABIC operates and sells its products. Protectionist barriers may take the form of trade control measures (e.g., export or imports controls, antidumping, and anti-subsidy) and may have a materially adverse effect on SABIC’s ability to trade and sell products in healthy market conditions. May result in financial losses.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 55, INTERNATIONAL TRADE CONTROLS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly discusses the 'potential for protectionist barriers' and 'trade control measures' that could 'adversely impact SABIC’s trading opportunities to sell products in other markets.' It further states that these 'may have a materially adverse effect' and 'May result in financial losses,' directly addressing the risk of products being restricted from sale and indicating financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language clearly describes potential negative consequences such as 'adversely impacting,' 'materially adverse effect,' and 'financial losses,' which are all threats to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions that the risk 'may have a materially adverse effect' and 'May result in financial losses,' thereby asserting financial materiality without providing specific quantified amounts.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of phrases like 'potential for... being imposed,' 'may take the form,' 'may have a materially adverse effect,' and 'May result in financial losses' indicates that these are potential future impacts and risks.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "The potential for protectionist barriers being imposed and adversely impacting SABIC’s trading opportunities to sell products in other markets is increasing. This is largely due to a combination of deglobalization, an uncertain geopolitical climate, and the economic crisis faced by our industry in the regions in which SABIC operates and sells its products. Protectionist barriers may take the form of trade control measures (e.g., export or imports controls, antidumping, and anti-subsidy) and may have a materially adverse effect on SABIC’s ability to trade and sell products in healthy market conditions. May result in financial losses.",
+          "page": "55",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99912-003",
+          "quote": "REGIONAL CHEMICAL REGULATIONS: SABIC’s business is subject to a variety of laws and governmental regulations regarding the use of toxic or hazardous materials. ... Risk(s): Non-compliance with such laws and regulations could be costly (e.g., confiscation, recall, monetary fines, etc.), which could prevent or inhibit the development, distribution, and sale of its products. ... Potential impact: Might have a material and adverse effect on business, results of operations, or financial condition.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 56, COMPLIANCE RISKS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly states that 'Non-compliance with such laws and regulations could be costly (e.g., confiscation, recall, monetary fines, etc.), which could prevent or inhibit the development, distribution, and sale of its products.' This explicitly identifies the risk of products being prevented from being sold or distributed due to regulatory non-compliance, which is a form of ban or restriction. It also links this to 'costly' outcomes and a 'material and adverse effect on business, results of operations, or financial condition,' indicating financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language focuses on 'Non-compliance,' 'costly' consequences like 'confiscation, recall, monetary fines,' and the ability to 'prevent or inhibit the development, distribution, and sale of its products,' clearly framing this as a threat and negative impact.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly mentions 'costly' outcomes including 'monetary fines' and states that the impact 'Might have a material and adverse effect on business, results of operations, or financial condition,' indicating financial materiality without providing specific figures.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The use of 'could be costly' and 'could prevent or inhibit' indicates potential future events and impacts, making the disclosure forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "REGIONAL CHEMICAL REGULATIONS: SABIC’s business is subject to a variety of laws and governmental regulations regarding the use of toxic or hazardous materials. ... Risk(s): Non-compliance with such laws and regulations could be costly (e.g., confiscation, recall, monetary fines, etc.), which could prevent or inhibit the development, distribution, and sale of its products. ... Potential impact: Might have a material and adverse effect on business, results of operations, or financial condition.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 56, COMPLIANCE RISKS",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99912-004",
+          "quote": "RAPIDLY EVOLVING REGULATIONS RELATING TO SUSTAINABILITY AND ESG: In recent years, there has been a growing awareness of the impacts of business activities on the environment and society. This has led to changes in regulation and public expectations, which are creating new risks and opportunities for businesses. We recognize that our success increasingly depends on integrating ESG principles into every aspect of our business. SABIC is working on reducing its environmental impact, including greenhouse gas emissions, water usage, and waste generation, recognizing that these changes may require new technologies, capital investments, supply chain participation, and increased operating costs. Potential impact: A negative impact on SABIC’s reputation and a decreased demand for goods and services. Response plan: SABIC adapts to evolving regulations by regularly reviewing and updating its business model. ... In the coming years, SABIC will continue to analyze emerging legislation, including recent EU regulations, to assess their impact on the company’s business.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 47-48, STRATEGIC RISKS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'rapidly evolving regulations' as creating 'new risks' for businesses, with a potential impact of 'decreased demand for goods and services.' While it doesn't explicitly use the term 'product ban,' a decrease in demand can be a direct consequence of regulatory restrictions or de-facto bans. The mention of 'emerging legislation, including recent EU regulations,' indicates a forward-looking awareness of potential regulatory impacts on the company's products and market access, which could lead to products being banned or restricted.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure highlights 'new risks' and 'negative impact on SABIC’s reputation and a decreased demand for goods and services' due to evolving regulations, clearly framing this as a threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'decreased demand for goods and services' and 'increased operating costs' as potential impacts, indicating financial consequences without providing specific monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrases 'In recent years' (backward-looking), 'is working on reducing' (present day), and 'In the coming years, SABIC will continue to analyze emerging legislation' (forward-looking) indicate a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "RAPIDLY EVOLVING REGULATIONS RELATING TO SUSTAINABILITY AND ESG: In recent years, there has been a growing awareness of the impacts of business activities on the environment and society. This has led to changes in regulation and public expectations, which are creating new risks and opportunities for businesses. We recognize that our success increasingly depends on integrating ESG principles into every aspect of our business. SABIC is working on reducing its environmental impact, including greenhouse gas emissions, water usage, and waste generation, recognizing that these changes may require new technologies, capital investments, supply chain participation, and increased operating costs. Potential impact: A negative impact on SABIC’s reputation and a decreased demand for goods and services. Response plan: SABIC adapts to evolving regulations by regularly reviewing and updating its business model. ... In the coming years, SABIC will continue to analyze emerging legislation, including recent EU regulations, to assess their impact on the company’s business.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 47-48, STRATEGIC RISKS",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99912-005",
+          "quote": "AGRI-NUTRIENTS: ... At the same time, regulatory changes are driving a shift toward investments in low-carbon fertilizer alternatives, highlighting the need for more differentiated solutions.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 77, AGRI-NUTRIENTS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet, specific to the Agri-Nutrients segment, states that 'regulatory changes are driving a shift toward investments in low-carbon fertilizer alternatives.' This implies that traditional fertilizer products may face regulatory pressure, which could lead to restrictions or bans, thus necessitating a shift in product portfolio. While not explicitly stating 'ban,' it acknowledges regulatory changes influencing product viability and market direction for fertilizers, indicating a business risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'regulatory changes are driving a shift toward investments in low-carbon fertilizer alternatives' implies that existing products may become less viable or face restrictions, framing this as a challenge or threat to the current product portfolio.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'investments' in alternatives, implying financial implications for adapting to regulatory changes, but does not provide specific monetary values or explicitly state financial materiality for the risk of product bans.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement 'regulatory changes are driving a shift' indicates an ongoing trend with future implications for product development and investment, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "AGRI-NUTRIENTS: ... At the same time, regulatory changes are driving a shift toward investments in low-carbon fertilizer alternatives, highlighting the need for more differentiated solutions.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 77, AGRI-NUTRIENTS",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        }
+      ],
+      "summary": "Yes, SABIC discloses this as a risk with a high degree of confidence. The company states that non-compliance with regional chemical regulations could \"prevent or inhibit the... sale of its products,\" potentially having a \"material and adverse effect\" on the business. Additionally, it identifies increasing protectionist barriers and trade control measures as a risk that could adversely impact its ability to sell products in certain markets, leading to financial losses.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 3,
+        "merged_snippets": 5,
+        "snippet_pairs": 5,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99913",
+      "question_number": 5,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99913-001",
+          "quote": "Environmental provisions: The Group is subject to various environmental laws and regulations that require the Group to incur costs for environmental remediation and restoration activities. The Group recognizes a provision for environmental remediation and restoration costs when it is probable that such costs will be incurred and can be reasonably estimated. The amount of the provision is based on current estimates of the costs of remediation and restoration, taking into account available technology and current regulatory requirements. The Group’s environmental provisions primarily relate to the estimated costs of closing and reclaiming certain mining sites and other environmental remediation activities. As of December 31, 2024, the Group has recognized environmental provisions of SR 1,250 million (2023: SR 1,180 million). These provisions are expected to be utilized over the next 10 to 30 years. The Group is also involved in various environmental investigations and remediation activities at certain sites. While the ultimate outcome of these matters cannot be predicted with certainty, management believes that the existing provisions are adequate to cover the Group’s obligations.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 230, Notes to the consolidated financial statements, Note 24. Provisions",
+          "financial_amounts": [
+            "SR 1,250 million",
+            "SR 1,180 million"
+          ],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the snippet confirms a financially material risk for environmental remediation, it does not explicitly confirm this risk pertains to 'manufacturing sites' as specified in the question. The disclosure is therefore incomplete with respect to the question's specific terms. It fully discloses a general risk, but only partially answers the specific question asked.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on 'costs,' 'obligations,' and 'provisions' required by 'environmental laws and regulations,' framing the remediation and restoration activities as a financial burden and a threat to the company's resources.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for the environmental provisions, stating 'SR 1,250 million' for 2024 and 'SR 1,180 million' for 2023, directly linked to remediation and restoration costs.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure refers to provisions 'As of December 31, 2024' (present day) and states that these provisions are 'expected to be utilized over the next 10 to 30 years' (forward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Environmental provisions: The Group is subject to various environmental laws and regulations that require the Group to incur costs for environmental remediation and restoration activities. The Group recognizes a provision for environmental remediation and restoration costs when it is probable that such costs will be incurred and can be reasonably estimated. The amount of the provision is based on current estimates of the costs of remediation and restoration, taking into account available technology and current regulatory requirements. The Group’s environmental provisions primarily relate to the estimated costs of closing and reclaiming certain mining sites and other environmental remediation activities. As of December 31, 2024, the Group has recognized environmental provisions of SR 1,250 million (2023: SR 1,180 million). These provisions are expected to be utilized over the next 10 to 30 years. The Group is also involved in various environmental investigations and remediation activities at certain sites. While the ultimate outcome of these matters cannot be predicted with certainty, management believes that the existing provisions are adequate to cover the Group’s obligations.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 230, Notes to the consolidated financial statements, Note 24. Provisions",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99913-002",
+          "quote": "Environmental provisions: The Group is subject to various environmental laws and regulations. Provisions for environmental remediation costs are recognized when a clean-up is probable and the amount can be reliably estimated. The Group’s environmental liabilities are primarily related to the remediation of contaminated sites and the closure and post-closure care of waste disposal facilities. These provisions are based on current technology and environmental laws and regulations, and are subject to change due to future developments.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 230, Note 24: Provisions",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'remediation of contaminated sites' as a primary environmental liability for which provisions are recognized. It clearly states that this is a risk requiring an outflow of resources, thus acknowledging it as a business risk. However, the specific financial amount is presented in a separate table, not directly within this descriptive text.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language explicitly refers to 'environmental liabilities' and 'remediation costs' related to 'contaminated sites,' which are inherently negative consequences or threats to the business, requiring an outflow of resources.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'Provisions for environmental remediation costs' and states that 'an outflow of resources embodying economic benefits will be required to settle the obligation,' indicating a financial impact and materiality, but it does not provide a specific quantified monetary value within this descriptive text.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The text states that 'Provisions for environmental remediation costs are recognized when a clean-up is probable' and that these provisions 'are subject to change due to future developments,' indicating an existing, ongoing obligation with future implications.",
+            "timeframe": "Present day"
+          },
+          "text": "Environmental provisions: The Group is subject to various environmental laws and regulations. Provisions for environmental remediation costs are recognized when a clean-up is probable and the amount can be reliably estimated. The Group’s environmental liabilities are primarily related to the remediation of contaminated sites and the closure and post-closure care of waste disposal facilities. These provisions are based on current technology and environmental laws and regulations, and are subject to change due to future developments.",
+          "page": "230",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "Yes, the company fully discloses that the restoration of contaminated sites is a risk to the business. The company states it is subject to environmental laws and regulations and that its environmental liabilities are \"primarily related to the remediation of contaminated sites.\" It recognizes a provision for these environmental remediation and restoration costs when a clean-up is probable and the amount can be reliably estimated.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99915",
+      "question_number": 1,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99915-001",
+          "quote": "We recognize that our success increasingly depends on integrating ESG principles into every aspect of our business. SABIC is working on reducing its environmental impact, including greenhouse gas emissions, water usage, and waste generation, recognizing that these changes may require new technologies, capital investments, supply chain participation, and increased operating costs.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 47, Rapidly Evolving Regulations Relating to Sustainability and ESG",
+          "financial_amounts": [],
+          "classification_justification": "This snippet acknowledges that 'rapidly evolving regulations relating to sustainability and ESG' may require 'increased operating costs.' This directly identifies rising compliance costs (in the context of ESG regulations) as a risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement frames the evolving regulations as a challenge that 'may require... increased operating costs,' indicating a potential negative impact or risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'increased operating costs' but does not provide specific monetary values or a definitive statement about the financial materiality of these costs.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'may require' indicates a future potential impact, making the disclosure forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "We recognize that our success increasingly depends on integrating ESG principles into every aspect of our business. SABIC is working on reducing its environmental impact, including greenhouse gas emissions, water usage, and waste generation, recognizing that these changes may require new technologies, capital investments, supply chain participation, and increased operating costs.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 47, Rapidly Evolving Regulations Relating to Sustainability and ESG",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99915-002",
+          "quote": "A report on the environmental outlook and emerging local and global environmental legislations, including Carbon Border Adjustment Mechanism (CBAM), along with an assessment of their impact and the company’s readiness for compliance.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 147, Board Sustainability, Risk, and EHSS Committee",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a governance process (assessing impact and readiness) but does not explicitly characterize emerging legislation or compliance costs as a business risk. Per the definitions, when the topic is acknowledged but not framed as a risk, the classification should be UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The mention of 'emerging legislations' and 'assessment of their impact' implies potential challenges and the need for preparedness, framing the topic as a risk.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet mentions CBAM, which is a financial mechanism, and 'assessment of their impact,' indicating a financial dimension without providing specific monetary values.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The reference to 'emerging local and global environmental legislations' and 'readiness for compliance' clearly points to future regulatory developments and their anticipated impacts, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "A report on the environmental outlook and emerging local and global environmental legislations, including Carbon Border Adjustment Mechanism (CBAM), along with an assessment of their impact and the company’s readiness for compliance.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 147, Board Sustainability, Risk, and EHSS Committee",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "{'question_id': 99915, 'analysis_summary': {'text': 'Yes, SABIC Agri-Nutrients discloses that evolving sustainability and ESG regulations pose a risk of increased costs. The company states that integrating ESG principles and reducing its environmental impact may require new technologies, capital investments, and \"increased operating costs.\" Furthermore, the Board assesses the impact of emerging environmental legislation, such as the Carbon Border Adjustment Mechanism (CBAM), indicating an awareness of future compliance-related financial implications.', 'is_risk_disclosed': {'value': 'yes', 'confidence': 'high'}, 'classification': 'PARTIAL'}}",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 2,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99916",
+      "question_number": 2,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99916-001",
+          "quote": "As a significant player in the global fertilizer industry, SABIC Agri-Nutrients Company is facing three critical challenges in the coming decades: food security, climate change, and the energy transition. Meeting the demands of a growing global population will require increased production of traditional nitrogen and phosphate fertilizers, such as urea, monoammonium phosphate (MAP), and diammonium phosphate (DAP). At the same time, regulatory changes are driving a shift toward investments in low-carbon fertilizer alternatives, highlighting the need for more differentiated solutions.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 77, Agri-Nutrients",
+          "financial_amounts": [],
+          "classification_justification": "This snippet, specific to SABIC Agri-Nutrients, identifies 'regulatory changes' as a driver for 'a shift toward investments in low-carbon fertilizer alternatives.' These regulatory changes are often influenced by public perception of environmental impacts of traditional agriculture, thus acknowledging a business risk from external pressures that align with the question.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The snippet frames 'regulatory changes' and the need for 'low-carbon fertilizer alternatives' as 'critical challenges' for the Agri-Nutrients business, indicating a risk that requires adaptation.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'investments in low-carbon fertilizer alternatives,' implying financial implications (costs for new investments) without providing specific monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'in the coming decades' and 'driving a shift toward investments' indicates a forward-looking perspective on challenges and necessary adaptations.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "As a significant player in the global fertilizer industry, SABIC Agri-Nutrients Company is facing three critical challenges in the coming decades: food security, climate change, and the energy transition. Meeting the demands of a growing global population will require increased production of traditional nitrogen and phosphate fertilizers, such as urea, monoammonium phosphate (MAP), and diammonium phosphate (DAP). At the same time, regulatory changes are driving a shift toward investments in low-carbon fertilizer alternatives, highlighting the need for more differentiated solutions.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 77, Agri-Nutrients",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "Yes, the company partially discloses this risk by identifying 'regulatory changes' as a critical challenge driving a shift toward investments in alternatives to traditional fertilizers. While not explicitly mentioning 'negative public perception,' this acknowledgment of regulatory pressure, in the context of the broader challenges of climate change and energy transition, implies an awareness of the risks associated with its conventional products.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99917",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99917-001",
+          "quote": "SABIC’s business operations could be subject to civil and criminal litigation and regulatory authority proceedings related to legal and regulatory compliance misses, if and to the extent that these are not prevented and proactively mitigated. Such risks relate, amongst others, to product liability, competition law, anti-bribery and anti-corruption regulations, trade sanctions and export control regulation, data protection, IP laws, procurement law, tax legislation, and environmental protection regulations. Violations of these legal and regulatory laws may result in civil or criminal penalties, adverse effects on our reputation, and may cause other adverse financial consequences. A potential risk is exposure to civil and criminal litigation and regulatory authority proceedings related to legal and regulatory compliance misses. Lack of adequate governance and processes to prevent and mitigate such risk from materializing and lack of adequate employees’ compliance-and legal-related knowledge. Substantial penalties and adverse branding exposure.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 54, Section: DISPUTES AND/OR LITIGATION",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'civil and criminal litigation and regulatory authority proceedings' as a risk, specifically mentioning 'product liability' and 'environmental protection regulations' as related areas. It states that violations 'may result in civil or criminal penalties, adverse effects on our reputation, and may cause other adverse financial consequences,' and also mentions 'substantial penalties.' This clearly identifies the risk and its potential financial materiality without providing specific figures.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language used, such as 'subject to civil and criminal litigation,' 'violations... may result in civil or criminal penalties,' and 'adverse financial consequences,' clearly frames this as a source of potential harm and negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly states that violations 'may result in civil or criminal penalties' and 'may cause other adverse financial consequences,' and also mentions 'substantial penalties.' This directly indicates financial impacts and materiality, even without specific monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrases 'could be subject to' and 'may result in' indicate potential future events and ongoing exposure to litigation risks.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "SABIC’s business operations could be subject to civil and criminal litigation and regulatory authority proceedings related to legal and regulatory compliance misses, if and to the extent that these are not prevented and proactively mitigated. Such risks relate, amongst others, to product liability, competition law, anti-bribery and anti-corruption regulations, trade sanctions and export control regulation, data protection, IP laws, procurement law, tax legislation, and environmental protection regulations. Violations of these legal and regulatory laws may result in civil or criminal penalties, adverse effects on our reputation, and may cause other adverse financial consequences. A potential risk is exposure to civil and criminal litigation and regulatory authority proceedings related to legal and regulatory compliance misses. Lack of adequate governance and processes to prevent and mitigate such risk from materializing and lack of adequate employees’ compliance-and legal-related knowledge. Substantial penalties and adverse branding exposure.",
+          "page": "54",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99917-002",
+          "quote": "SABIC’s products are safe if managed and used properly. However, if not handled correctly, there is a risk that may result in the following: • Fire/explosions at production or logistics facilities. • Discharges of toxic gases into the atmosphere. • Discharge of hazardous chemicals on land or in waterways. Occurrence of the above events, during transportation or at a customer facility, could result in a fatality, personal injury, equipment failures or shutdowns, damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities. Any damage to persons, equipment, or property, or other disruption to SABIC’s ability to produce or distribute its products could result in a decrease in SABIC revenues and profits and additional cost to replace or repair assets. Liabilities for fatalities, personal injuries, property, damage, improper management and disposal of waste materials and environmental clean-up. Disposal or release of hazardous substances into the environment. Could impact reputation, business, and operations.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 55, Section: USE AND HANDLING OF PRODUCTS AND MATERIALS",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies the risk of 'civil lawsuits' and 'liabilities' arising from 'personal injury' and 'damage to the environment' due to improper handling or disposal of SABIC's products. It further states that such events 'could result in a decrease in SABIC revenues and profits and additional cost to replace or repair assets,' clearly linking the risk to financial materiality without providing specific figures.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language used, such as 'risk that may result in,' 'damage to the environment,' 'civil lawsuits,' 'liabilities,' and 'decrease in SABIC revenues and profits,' clearly frames this as a source of actual or potential harm and negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly mentions 'liabilities for fatalities, personal injuries, property, damage, improper management and disposal of waste materials and environmental clean-up' and 'could result in a decrease in SABIC revenues and profits and additional cost to replace or repair assets.' This directly indicates financial impacts and materiality, even without specific monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrases 'there is a risk that may result in' and 'could result in' indicate potential future events and ongoing exposure to risks related to product use and handling.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "SABIC’s products are safe if managed and used properly. However, if not handled correctly, there is a risk that may result in the following: • Fire/explosions at production or logistics facilities. • Discharges of toxic gases into the atmosphere. • Discharge of hazardous chemicals on land or in waterways. Occurrence of the above events, during transportation or at a customer facility, could result in a fatality, personal injury, equipment failures or shutdowns, damage to the environment, civil lawsuits, criminal investigations, or regulatory enforcement proceedings, any of which could lead to liabilities. Any damage to persons, equipment, or property, or other disruption to SABIC’s ability to produce or distribute its products could result in a decrease in SABIC revenues and profits and additional cost to replace or repair assets. Liabilities for fatalities, personal injuries, property, damage, improper management and disposal of waste materials and environmental clean-up. Disposal or release of hazardous substances into the environment. Could impact reputation, business, and operations.",
+          "page": "55",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "Yes, with high confidence, the company discloses this as a risk, constituting a FULL_DISCLOSURE. SABIC explicitly states its business operations are subject to civil and criminal litigation related to product liability and environmental protection regulations. The company also highlights that improper handling of its products could cause personal injury or environmental damage, leading to civil lawsuits.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 2,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99918",
+      "question_number": 4,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99918-001",
+          "quote": "High corporate borrowing costs weighed on business investment, while structural changes in Europe’s energy supply, exacerbated by the Russia-Ukraine war, drove a sharp rise in energy costs. These factors eroded European competitiveness across sectors.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 58, Section: GLOBAL INDUSTRIAL PRODUCTION",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'structural changes in Europe’s energy supply... drove a sharp rise in energy costs,' which 'eroded European competitiveness across sectors.' This clearly identifies high energy input costs as a business risk that negatively impacts competitiveness, implying financial consequences. This constitutes a full disclosure of the risk's financial materiality without providing specific figures.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The phrases 'sharp rise in energy costs' and 'eroded European competitiveness' clearly present this as a negative consequence or threat to the business's market position and profitability.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly mentions a 'sharp rise in energy costs' and that these factors 'eroded European competitiveness,' which directly implies a negative financial impact on market share and profitability. While no specific monetary value is provided, it affirms financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The snippet describes events that 'drove' a rise in energy costs, referring to past and ongoing structural changes and the Russia-Ukraine war, with the impact ('eroded competitiveness') being present day.",
+            "timeframe": "Present day"
+          },
+          "text": "High corporate borrowing costs weighed on business investment, while structural changes in Europe’s energy supply, exacerbated by the Russia-Ukraine war, drove a sharp rise in energy costs. These factors eroded European competitiveness across sectors.",
+          "page": "58",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99918-002",
+          "quote": "In 2024, petrochemical companies faced intensified supply chain and energy cost risks due to geopolitical uncertainties and a global economic slowdown. Challenges included disruptions to feedstock supply, surging shipping costs, and labor shortages. Rising energy prices and heightened competition for resources further strained production costs.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 45, 2024 Risk Landscape",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly states that 'petrochemical companies faced intensified supply chain and energy cost risks' and that 'Rising energy prices... further strained production costs.' This explicitly identifies high energy input costs as a risk to the business, particularly for manufacturing.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'intensified supply chain and energy cost risks' and 'further strained production costs' clearly frames this as a negative consequence or threat to the business, indicating a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'energy cost risks' and 'strained production costs,' indicating financial impacts without providing specific monetary values.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet describes conditions 'In 2024' and uses past tense verbs like 'faced' and 'strained,' indicating a present-day or backward-looking assessment of an ongoing situation.",
+            "timeframe": "Present day"
+          },
+          "text": "In 2024, petrochemical companies faced intensified supply chain and energy cost risks due to geopolitical uncertainties and a global economic slowdown. Challenges included disruptions to feedstock supply, surging shipping costs, and labor shortages. Rising energy prices and heightened competition for resources further strained production costs.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 45, 2024 Risk Landscape",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99918-003",
+          "quote": "Geopolitical instability in 2024 fueled higher energy costs, reducing consumer purchasing power and increasing production expenses.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 58, Business Environment",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'Geopolitical instability in 2024 fueled higher energy costs... and increasing production expenses.' This directly identifies high energy costs as a factor increasing production expenses, which is a risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'fueled higher energy costs' and 'increasing production expenses' clearly frames this as a negative impact or challenge to the business, indicating a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'higher energy costs' and 'increasing production expenses,' indicating financial impacts without providing specific monetary values.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement refers to events 'in 2024' and their immediate consequences, making it present day.",
+            "timeframe": "Present day"
+          },
+          "text": "Geopolitical instability in 2024 fueled higher energy costs, reducing consumer purchasing power and increasing production expenses.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 58, Business Environment",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99918-004",
+          "quote": "SABIC is exposed to the competitive characteristics of several different geographic markets and industries, which gives rise to exposure of operational and market risks (e.g., higher cost of production and low selling prices).",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 46, Highly Competitive Industries",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that SABIC's exposure to competitive markets gives rise to 'operational and market risks (e.g., higher cost of production).' Higher cost of production directly includes high energy input costs, thus identifying it as a risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'exposure of operational and market risks (e.g., higher cost of production)' clearly frames this as a negative consequence or threat to the business, indicating a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'higher cost of production,' indicating a financial impact, but does not provide specific monetary values or a definitive statement about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes an ongoing exposure ('gives rise to exposure') and a general condition, making it present day.",
+            "timeframe": "Present day"
+          },
+          "text": "SABIC is exposed to the competitive characteristics of several different geographic markets and industries, which gives rise to exposure of operational and market risks (e.g., higher cost of production and low selling prices).",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 46, Highly Competitive Industries",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99918-005",
+          "quote": "Energy reforms and rise in feedstock prices.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 46, Highly Competitive Industries",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'rise in feedstock prices' as a driver for risks in highly competitive industries. Feedstock prices are a major component of energy input costs for petrochemical manufacturing, thus acknowledging this as a risk factor.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'rise in feedstock prices' is listed as a 'Driver' for 'Highly competitive industries' (a strategic risk), indicating a factor that contributes to negative business outcomes.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'rise in feedstock prices,' which directly implies increased costs, but does not provide specific monetary values.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes an ongoing trend ('rise in feedstock prices') that acts as a driver for current and future risks, making it present day/forward-looking.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Energy reforms and rise in feedstock prices.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 46, Highly Competitive Industries",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99918-006",
+          "quote": "In 2024, prices remained stable at relatively low levels despite rising feedstock prices and logistics costs, creating additional pressure on profit margins.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 69, Petrochemicals: Chemicals",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'rising feedstock prices and logistics costs' created 'additional pressure on profit margins' in 2024. This directly identifies high energy input costs (feedstock prices) as a risk impacting the company's profitability.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'rising feedstock prices... creating additional pressure on profit margins' clearly frames this as a negative impact or challenge to the business, indicating a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'rising feedstock prices' and 'pressure on profit margins,' indicating financial impacts without providing specific monetary values.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement refers to events 'In 2024' and their impact, making it present day.",
+            "timeframe": "Present day"
+          },
+          "text": "In 2024, prices remained stable at relatively low levels despite rising feedstock prices and logistics costs, creating additional pressure on profit margins.",
+          "page": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 69, Petrochemicals: Chemicals",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 6
+        },
+        {
+          "snippet_id": "99918-007",
+          "quote": "Feedstock prices edged higher in 2024 despite stable oil prices, driven by tight supply caused by widespread refinery maintenance activities. Additional supply constraints included reduced exports from Russia due to Western sanctions, along with trade route disruptions caused by Red Sea hostilities and Panama Canal delays resulting from drought. New petrochemical capacities in China also contributed to rising feedstock prices by increasing demand. ... In 2025, feedstock prices are projected to rise slightly, despite lower oil prices, due to tight global supply and growing demand, particularly from Asia.",
+          "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 59, Section: FEEDSTOCK MARKETS",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes rising feedstock prices as a market trend but does not explicitly frame this as a risk to the business or state any financial impact on the company. It is a neutral market analysis, not a risk disclosure. The definition of UNCLEAR is 'Topic acknowledged but NOT characterized as a business risk'.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The phrases 'feedstock prices edged higher,' 'rising feedstock prices,' and 'projected to rise' present this as an ongoing and anticipated negative trend that will increase costs for the business.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure explicitly states that 'feedstock prices edged higher' and are 'projected to rise,' which directly implies an increase in input costs and thus a financial impact on the company. While no specific monetary value is provided, it affirms financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet discusses both past trends ('edged higher in 2024') and future projections ('projected to rise in 2025'), making it cover multiple timeframes.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Feedstock prices edged higher in 2024 despite stable oil prices, driven by tight supply caused by widespread refinery maintenance activities. Additional supply constraints included reduced exports from Russia due to Western sanctions, along with trade route disruptions caused by Red Sea hostilities and Panama Canal delays resulting from drought. New petrochemical capacities in China also contributed to rising feedstock prices by increasing demand. ... In 2025, feedstock prices are projected to rise slightly, despite lower oil prices, due to tight global supply and growing demand, particularly from Asia.",
+          "page": "59",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 7
+        }
+      ],
+      "summary": "Yes, SABIC provides a full disclosure that high energy input costs are a significant business risk. The company explicitly identifies 'intensified energy cost risks' and 'rising energy prices,' driven by geopolitical instability and supply constraints, which strain production costs and increase expenses. SABIC directly links rising feedstock prices to 'additional pressure on profit margins' and notes that a 'sharp rise in energy costs' has eroded competitiveness.",
+      "merger_stats": {
+        "v3_snippets": 4,
+        "v4_snippets": 6,
+        "merged_snippets": 7,
+        "snippet_pairs": 7,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    }
+  ],
+  "completeness_summary": {
+    "total_questions_analyzed": 14,
+    "total_disclosure_snippets": 32,
+    "note": "Summary statistics recalculated from merged results"
+  },
+  "metadata": {
+    "company": "SABIC Agri-Nutrients",
+    "year": "2024",
+    "analysis_date": "2025-11-07T18:15:58.292710",
+    "schema_version": "merged-v3-v4",
+    "merger_model": "gemini-2.5-pro",
+    "source_files": {
+      "v3": "SABIC Agri-Nutrients_2024_v3_gemini-2-5-flash_07-11-2025_15-22-38_verified.json",
+      "v4": "SABIC Agri-Nutrients_2024_v4_gemini-2-5-flash_07-11-2025_15-25-15_verified.json"
+    }
+  },
+  "merger_summary": {
+    "total_v3_snippets": 15,
+    "total_v4_snippets": 24,
+    "total_merged_snippets": 32,
+    "total_ai_reviews": 0,
+    "total_human_flags": 0,
+    "merger_timestamp": "07-11-2025_18-15-58"
+  }
+}

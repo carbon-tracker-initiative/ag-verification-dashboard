@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * CLI script to generate Excel reports from AG verification data
  * Usage:
@@ -10,7 +9,7 @@
 
 import { loadAllCompanyData } from '../utils/dataLoader';
 import { generateExcelWorkbook, saveWorkbookToFile } from '../utils/excelGenerator';
-import { join } from 'node:path';
+import { basename, dirname, extname, join } from 'node:path';
 import { mkdir } from 'node:fs/promises';
 
 // ============================================================================
@@ -46,6 +45,13 @@ function parseArgs(): CliOptions {
   }
 
   return options;
+}
+
+function appendSuffixToPath(filePath: string, suffix: string): string {
+  const extension = extname(filePath) || '.xlsx';
+  const baseName = basename(filePath, extension);
+  const directory = dirname(filePath);
+  return join(directory, `${baseName}${suffix}${extension}`);
 }
 
 function printHelp() {
@@ -92,20 +98,20 @@ async function main() {
     process.exit(0);
   }
 
-  console.log('🚀 AG Verification Dashboard - Excel Export Tool\n');
+  console.log('[INFO] AG Verification Dashboard - Excel Export Tool\n');
 
   try {
     // Load all company data
-    console.log('📂 Loading company data from results folder...');
+    console.log('[INFO] Loading company data from results folder...');
     let companyDataArray = await loadAllCompanyData();
 
     if (companyDataArray.length === 0) {
-      console.error('❌ No data found in results folder!');
+      console.error('[ERROR] No data found in results folder!');
       console.error('   Make sure there are verified JSON files in the results/ directory.');
       process.exit(1);
     }
 
-    console.log(`✅ Loaded data for ${companyDataArray.length} company-year-version combinations\n`);
+    console.log(`[INFO] Loaded data for ${companyDataArray.length} company-year-version combinations\n`);
 
     // Apply filters
     if (options.company) {
@@ -113,28 +119,28 @@ async function main() {
       companyDataArray = companyDataArray.filter(cd =>
         cd.company.toLowerCase() === companyLower
       );
-      console.log(`🔍 Filtered by company: ${options.company}`);
+      console.log(`[INFO] Filtered by company: ${options.company}`);
     }
 
     if (options.year) {
       companyDataArray = companyDataArray.filter(cd => cd.year === options.year);
-      console.log(`🔍 Filtered by year: ${options.year}`);
+      console.log(`[INFO] Filtered by year: ${options.year}`);
     }
 
     if (options.version) {
       companyDataArray = companyDataArray.filter(cd => cd.version === options.version);
-      console.log(`🔍 Filtered by version: ${options.version}`);
+      console.log(`[INFO] Filtered by version: ${options.version}`);
     }
 
     if (companyDataArray.length === 0) {
-      console.error('❌ No data matches the specified filters!');
+      console.error('[ERROR] No data matches the specified filters!');
       process.exit(1);
     }
 
-    console.log(`📊 Generating report for ${companyDataArray.length} datasets...\n`);
+    console.log(`[INFO] Generating report for ${companyDataArray.length} datasets...\n`);
 
     // Generate Excel workbook
-    console.log('📝 Creating Excel workbook with 7 sheets...');
+    console.log('[INFO] Creating Excel workbook with 7 sheets...');
     const workbook = await generateExcelWorkbook(companyDataArray);
 
     // Create reports directory if it doesn't exist
@@ -153,19 +159,32 @@ async function main() {
       : join(reportsDir, defaultFilename);
 
     // Save workbook
-    console.log('💾 Saving Excel file...');
+    console.log('[INFO] Saving Excel file...');
     await saveWorkbookToFile(workbook, outputPath);
 
-    console.log(`\n✅ Excel report generated successfully!`);
-    console.log(`📄 File saved to: ${outputPath}`);
-    console.log(`\n📊 Report contains:`);
-    console.log(`   • Executive Summary - High-level statistics`);
-    console.log(`   • Company Details - Full metrics for each company`);
-    console.log(`   • Question Performance - Cross-company question rankings`);
-    console.log(`   • Category Analysis - Category-level breakdown`);
-    console.log(`   • Snippet Raw Data - All snippets with full details`);
-    console.log(`   • Verification Report - Quality assurance metrics`);
-    console.log(`   • Column Reference - Explanation of all columns`);
+    console.log(`\n[SUCCESS] Excel report generated successfully!`);
+    console.log(`[INFO] File saved to: ${outputPath}`);
+
+    const mergedCompanyData = companyDataArray.filter(cd => cd.isMerged);
+    if (mergedCompanyData.length > 0) {
+      console.log('\n[INFO] Generating merged-only workbook...');
+      const mergedWorkbook = await generateExcelWorkbook(mergedCompanyData);
+      const mergedOutputPath = options.output
+        ? appendSuffixToPath(outputPath, '.merged')
+        : join(reportsDir, `AG_Verification_Merged_${timestamp}.xlsx`);
+      await saveWorkbookToFile(mergedWorkbook, mergedOutputPath);
+      console.log(`[INFO] Merged workbook saved to: ${mergedOutputPath}`);
+    }
+
+    console.log(`\n[INFO] Report contains:`);
+    console.log(`   - Executive Summary - High-level statistics`);
+    console.log(`   - Company Details - Full metrics for each company`);
+    console.log(`   - Question Performance - Cross-company question rankings`);
+    console.log(`   - Category Analysis - Category-level breakdown`);
+    console.log(`   - Question Coverage - Sector applicability & disclosure status for every question`);
+    console.log(`   - Snippet Raw Data - All snippets with full details`);
+    console.log(`   - Verification Report - Quality assurance metrics`);
+    console.log(`   - Column Reference - Explanation of all columns`);
 
     // Summary stats
     const companies = Array.from(new Set(companyDataArray.map(cd => cd.company)));
@@ -174,16 +193,17 @@ async function main() {
       return sum + cd.verified.analysis_results.reduce((qsum, q) => qsum + q.disclosures.length, 0);
     }, 0);
 
-    console.log(`\n📈 Summary:`);
-    console.log(`   • Companies: ${companies.join(', ')}`);
-    console.log(`   • Versions: ${versions.join(', ')}`);
-    console.log(`   • Total Snippets: ${totalSnippets}`);
-    console.log(`   • Total Questions: ${companyDataArray.reduce((sum, cd) => sum + cd.verified.analysis_results.length, 0)}`);
+    console.log(`\n[INFO] Summary:`);
+    console.log(`   - Companies: ${companies.join(', ')}`);
+    console.log(`   - Company Count: ${companies.length}`);
+    console.log(`   - Versions: ${versions.join(', ')}`);
+    console.log(`   - Total Snippets: ${totalSnippets}`);
+    console.log(`   - Total Questions: ${companyDataArray.reduce((sum, cd) => sum + cd.verified.analysis_results.length, 0)}`);
 
-    console.log(`\n🎉 Done!\n`);
+    console.log(`\n[INFO] Done!\n`);
 
   } catch (error) {
-    console.error('\n❌ Error generating Excel report:');
+    console.error('\n[ERROR] Error generating Excel report:');
     console.error(error);
     process.exit(1);
   }

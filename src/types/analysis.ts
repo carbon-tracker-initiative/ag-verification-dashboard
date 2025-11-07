@@ -3,6 +3,8 @@
  * Based on v3.0 schema from verified JSON files
  */
 
+import type { SectorCode } from './questions';
+
 // Classification types
 export type Classification =
   | "FULL_DISCLOSURE"
@@ -49,6 +51,9 @@ export interface Snippet {
   financial_amounts: FinancialAmount[];
   source_versions?: string[];
   merger_metadata?: Record<string, any>;
+  verification_corrected?: boolean;
+  comparison_status?: string;
+  comparison_change?: Record<string, any>;
 }
 
 /**
@@ -132,6 +137,7 @@ export interface CompanyYearData {
   year: number;
   version: string; // v3, v4, etc.
   model: string;
+  sector?: SectorCode;
   verified: AnalysisResult;
   original?: AnalysisResult;
   verificationReport?: any; // Will be defined in verification.ts

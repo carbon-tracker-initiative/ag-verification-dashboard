@@ -1,0 +1,1199 @@
+{
+  "analysis_results": [
+    {
+      "question_id": "99902",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+      "disclosures": [
+        {
+          "snippet_id": "99902-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "PhosAgro does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99903",
+      "question_number": 2,
+      "category": "Human Health Risk",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99903-001",
+          "quote": "RISKS SPECIFIC TO THE GROUP’S OPERATIONS INCLUDE: ! Risks associated with chemicals management and regulatory requirements for product safety",
+          "source": "Annual integrated report 2024.pdf, Page 96, CUSTOMERS and product management",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'Risks associated with chemicals management and regulatory requirements for product safety' as specific to the Group’s operations. This directly acknowledges that product safety, which includes human health aspects, is a risk area for the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'RISKS SPECIFIC TO THE GROUP’S OPERATIONS' clearly frames this as a potential negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet identifies a risk but does not provide any specific financial figures or state the financial materiality of this risk, focusing instead on the qualitative aspect of product safety.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement refers to ongoing risks associated with chemicals management and regulatory requirements, indicating a present-day and continuous concern for the company.",
+            "timeframe": "Present day"
+          },
+          "text": "RISKS SPECIFIC TO THE GROUP’S OPERATIONS INCLUDE: ! Risks associated with chemicals management and regulatory requirements for product safety",
+          "page": "Annual integrated report 2024.pdf, Page 96, CUSTOMERS and product management",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9928571428571429,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 99.3%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99903-002",
+          "quote": "PhosAgro Group’s phosphate-based fertilizers4 have cadmium average content (considerably lower than 20 mg per kg of P2O5), making them among the safest in the world. EU Regulation 2019/1009 (Fertilizing Products Regulation, FPR) on fertilizers, establishes rules for CE-marked fertilizers (also known as EU Fertilizing Products). The regulation provides for reducing cadmium content in EU fertilizers, by introducing a single cap at 60 mg per kg of P2O5 and banning inorganic fertilizers in the EU with a cadmium content above that cap starting from 16 July 2022. Going forward, the regulation provides for gradual reduction of cadmium content to no more than 20 mg per kg of P2O5. The plans of cutting the cap to 40 mg per kg of P2O5 have been already announced. At the same time, the French Agency for Food, Environmental and Occupational Health & Safety (ANSES) has already issued recommendations for a cadmium content in inorganic phosphate-based fertilizers of less than 20 mg per kg of P2O5. Thus, PhosAgro Group’s phosphate-based fertilizers have a much lower cadmium content than required in the EU, which is reflected in our product slogan: pure minerals for healthy lives.",
+          "source": "Annual integrated report 2024.pdf, Page 98, CUSTOMERS and product management",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet discusses a human health topic (cadmium content) but frames it as a competitive advantage ('safest in the world') and a point of compliance, rather than explicitly identifying it as a risk to the business. According to the guidelines, if the topic is acknowledged but not characterized as a business risk, the classification should be UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure highlights the company's superior performance in meeting and exceeding regulatory standards for cadmium, framing this as a positive attribute and competitive advantage ('among the safest in the world', 'much lower cadmium content'). However, the underlying context is the management of a potential health hazard, which is a risk.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet discusses regulatory limits and product characteristics but does not provide specific financial figures related to the costs of compliance, potential fines, or market impacts, thus it is non-financial.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The text refers to current product characteristics, existing EU regulations with past and future implementation dates ('starting from 16 July 2022', 'plans of cutting the cap to 40 mg per kg of P2O5 have been already announced'), indicating a present-day and forward-looking relevance.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "PhosAgro Group’s phosphate-based fertilizers4 have cadmium average content (considerably lower than 20 mg per kg of P2O5), making them among the safest in the world. EU Regulation 2019/1009 (Fertilizing Products Regulation, FPR) on fertilizers, establishes rules for CE-marked fertilizers (also known as EU Fertilizing Products). The regulation provides for reducing cadmium content in EU fertilizers, by introducing a single cap at 60 mg per kg of P2O5 and banning inorganic fertilizers in the EU with a cadmium content above that cap starting from 16 July 2022. Going forward, the regulation provides for gradual reduction of cadmium content to no more than 20 mg per kg of P2O5. The plans of cutting the cap to 40 mg per kg of P2O5 have been already announced. At the same time, the French Agency for Food, Environmental and Occupational Health & Safety (ANSES) has already issued recommendations for a cadmium content in inorganic phosphate-based fertilizers of less than 20 mg per kg of P2O5. Thus, PhosAgro Group’s phosphate-based fertilizers have a much lower cadmium content than required in the EU, which is reflected in our product slogan: pure minerals for healthy lives.",
+          "page": "Annual integrated report 2024.pdf, Page 98, CUSTOMERS and product management",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using v4 verification-corrected."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99903-003",
+          "quote": "We are committed to the responsible use of our products making sure they are safe for people and the environment. Product life cycle management at PhosAgro is in full compliance with applicable Russian and international standards and regulatory requirements. We seek to minimise any potential negative impact of our products on safety, health and the environment throughout the value chain, from product development to the end of its life cycle.",
+          "source": "Annual integrated report 2024.pdf, Page 95, Customers and product management",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a commitment to safety and risk management, which acknowledges the topic of human health. However, it does not frame this as a risk *to the business*, which is required for a PARTIAL classification. It is a statement of policy and corporate responsibility, making UNCLEAR more appropriate.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language 'minimise any potential negative impact' and 'safe for people' frames the topic as a potential threat or harm that requires active management and mitigation, aligning with a risk perspective.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure discusses minimizing potential negative impacts and compliance with standards but does not provide any explicit financial figures or a definitive statement about the financial materiality of human health problems from its products.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement 'seek to minimise any potential negative impact' and 'throughout the value chain' indicates ongoing efforts and future-oriented prevention, making it forward-looking, but also covers present-day operations.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "We are committed to the responsible use of our products making sure they are safe for people and the environment. Product life cycle management at PhosAgro is in full compliance with applicable Russian and international standards and regulatory requirements. We seek to minimise any potential negative impact of our products on safety, health and the environment throughout the value chain, from product development to the end of its life cycle.",
+          "page": "95",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99903-004",
+          "quote": "Vitality Leaf, a Russian eco-label standard for mineral fertilizers, is recognised by the Global Ecolabelling Network (GEN) and is included in Standards Map, a global database of sustainable development standards. Its requirements for the content of most heavy metals align with the EU directive enacted on 16 July 2022. This ISO 14024-compliant standard was designed to assess a product’s environmental safety throughout its lifecycle, including mining and processing of raw materials, their delivery to the plant, storage, transportation and use of finished products, and packaging recycling. In 2024, the Company confirmed its right to use the internationally recognised Vitality Leaf eco-label. During the year, a recertification audit was conducted across all Apatit sites... Fertilizers do not contain dangerous levels of heavy metals: cadmium, chromium, mercury, or nickel, which can harm the environment and human health.",
+          "source": "Annual integrated report 2024.pdf, Page 100, Customers and product management",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] Similar to snippet 1, this text discusses a proactive measure (eco-label certification) to ensure product safety. It acknowledges the health topic but frames it as a positive achievement and mark of quality, not as a risk to the business. Therefore, UNCLEAR is the correct classification.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The statement 'Fertilizers do not contain dangerous levels of heavy metals... which can harm the environment and human health' frames the presence of such substances as a potential harm, which the company is actively preventing, thus addressing a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure confirms compliance with standards and the absence of dangerous heavy metals but does not provide any specific financial figures or a statement regarding the financial materiality of this health-related risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet refers to a past EU directive (2022), current recertification in 2024, and ongoing compliance, indicating a present-day and backward-looking perspective on risk management.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Vitality Leaf, a Russian eco-label standard for mineral fertilizers, is recognised by the Global Ecolabelling Network (GEN) and is included in Standards Map, a global database of sustainable development standards. Its requirements for the content of most heavy metals align with the EU directive enacted on 16 July 2022. This ISO 14024-compliant standard was designed to assess a product’s environmental safety throughout its lifecycle, including mining and processing of raw materials, their delivery to the plant, storage, transportation and use of finished products, and packaging recycling. In 2024, the Company confirmed its right to use the internationally recognised Vitality Leaf eco-label. During the year, a recertification audit was conducted across all Apatit sites... Fertilizers do not contain dangerous levels of heavy metals: cadmium, chromium, mercury, or nickel, which can harm the environment and human health.",
+          "page": "100",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 4
+        }
+      ],
+      "summary": "Yes, PhosAgro explicitly discloses 'Risks associated with chemicals management and regulatory requirements for product safety' as a specific operational risk. This acknowledgement is supported by the company's emphasis on its products' safety features, such as having very low cadmium content, which mitigates potential human health impacts and ensures compliance with stringent international regulations.",
+      "merger_stats": {
+        "v3_snippets": 4,
+        "v4_snippets": 2,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99904",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99904-001",
+          "quote": "Risks... R3 — PhosAgro Group’s failure to comply with regulations reducing its negative environmental footprint (following the adoption of the carbon border adjustment mechanism).",
+          "source": "Annual integrated report 2024.pdf, Page 192, Climate",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'failure to comply with regulations' related to the 'carbon border adjustment mechanism (CBAM)' as a specific risk (R3). This directly addresses the regulatory and financial risk of carbon costs to the business.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The direct identification of 'failure to comply with regulations' and the mention of 'carbon border adjustment mechanism' clearly frames this as a regulatory threat and potential negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "While no specific monetary value is given in this snippet, the reference to 'carbon border adjustment mechanism' implies potential financial costs (tariffs, penalties) for non-compliance, thus indicating financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The reference to 'following the adoption of the carbon border adjustment mechanism' implies a forward-looking risk, as the company anticipates and prepares for future regulatory changes.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Risks... R3 — PhosAgro Group’s failure to comply with regulations reducing its negative environmental footprint (following the adoption of the carbon border adjustment mechanism).",
+          "page": "192",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99904-002",
+          "quote": "The Company is currently focused on creating particular metrics reflecting the impact of climate action in production and management processes on financial indicators. To that end, we assessed the impact of the carbon border adjustment mechanism (CBAM) on PhosAgro’s operating expenses. The mechanism covers Russian industrial products, including, most likely, mineral fertilizers. In 2024, a cross-functional working group refined and automated our product carbon footprint assessment mechanism, among other things to ensure alignment with the CBAM requirements. The mechanism underwent evaluation by international consultants, and its methodology was validated. The mechanism helps measure carbon footprint per each tonne of fertilizer based on a transparent calculation methodology for GHG emissions, which covers production processes and semi-product flows fully in line with the CBAM guidelines.",
+          "source": "Annual integrated report 2024.pdf, Page 192, Climate",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that the company assessed the 'impact of the carbon border adjustment mechanism (CBAM) on PhosAgro’s operating expenses', directly linking carbon costs to financial impact. It also details the development of a carbon footprint assessment mechanism to align with CBAM requirements, demonstrating a clear understanding of financial materiality and proactive management.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The assessment of 'impact of the carbon border adjustment mechanism (CBAM) on PhosAgro’s operating expenses' clearly frames this as a potential negative financial consequence or challenge for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly mentions 'operating expenses' and the 'impact' of CBAM on them, directly linking the carbon costs to a financial consequence for the company, thus indicating financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The assessment of CBAM's impact and the refinement of the carbon footprint mechanism in 2024 to align with CBAM requirements indicate a present-day focus on preparing for future regulatory changes, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "The Company is currently focused on creating particular metrics reflecting the impact of climate action in production and management processes on financial indicators. To that end, we assessed the impact of the carbon border adjustment mechanism (CBAM) on PhosAgro’s operating expenses. The mechanism covers Russian industrial products, including, most likely, mineral fertilizers. In 2024, a cross-functional working group refined and automated our product carbon footprint assessment mechanism, among other things to ensure alignment with the CBAM requirements. The mechanism underwent evaluation by international consultants, and its methodology was validated. The mechanism helps measure carbon footprint per each tonne of fertilizer based on a transparent calculation methodology for GHG emissions, which covers production processes and semi-product flows fully in line with the CBAM guidelines.",
+          "page": "192",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99904-003",
+          "quote": "An important task planned for 2025 will consist in integrating the results of biologised fertilizer trials and the data on nitrous oxide emissions into PhosAgro’s Agro Calculator. This metric will be synergised with other parameters to help calculate customised plant nutrition systems. With the Agro Calculator, users will be able to evaluate the carbon footprint of agricultural products and streamline relevant nutrition strategies to minimise emissions, which is of particular importance for products exported to markets with GHG border tariffs.",
+          "source": "Annual integrated report 2024.pdf, Page 116, Research, innovations and education",
+          "financial_amounts": [],
+          "classification_justification": "This snippet discusses plans to integrate carbon footprint evaluation into their Agro Calculator, specifically mentioning its importance for 'products exported to markets with GHG border tariffs'. This clearly identifies a financial risk (tariffs) related to the carbon footprint of their products when used by customers, and outlines a strategy to address it.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The mention of 'GHG border tariffs' and the need to 'minimise emissions' to address this, frames the carbon footprint of products as a potential financial threat or challenge in export markets.",
+            "framing": "Risk",
+            "financial_justification": "The reference to 'GHG border tariffs' implies potential financial costs or impacts on product competitiveness, thus indicating financial materiality, even without specific figures in this snippet.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement 'An important task planned for 2025' and the discussion of 'products exported to markets with GHG border tariffs' clearly indicate a forward-looking timeframe for this risk and mitigation strategy.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "An important task planned for 2025 will consist in integrating the results of biologised fertilizer trials and the data on nitrous oxide emissions into PhosAgro’s Agro Calculator. This metric will be synergised with other parameters to help calculate customised plant nutrition systems. With the Agro Calculator, users will be able to evaluate the carbon footprint of agricultural products and streamline relevant nutrition strategies to minimise emissions, which is of particular importance for products exported to markets with GHG border tariffs.",
+          "page": "116",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99904-004",
+          "quote": "Climate matters feature prominently in PhosAgro’s strategic and investment decisions, as well as in its day-to-day management. In our evaluation of investment projects, we use internal carbon price mechanisms. The Company has identified, assessed, and prioritised climate risks, establishing their short, medium and long term consequences for its production and business processes.",
+          "source": "Annual integrated report 2024.pdf, Page 190, Climate",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that climate risks, including those related to carbon, are identified, assessed, and prioritized, and that the company uses 'internal carbon price mechanisms' in investment decisions. This directly links carbon-related issues to business operations and financial considerations, indicating a clear understanding of financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The mention of 'climate risks' and 'consequences for its production and business processes' clearly frames the topic as a potential source of harm or negative impact, aligning with a risk perspective.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly states the use of 'internal carbon price mechanisms' in investment decisions, which is a direct acknowledgment of financial impact and materiality, even without specific figures in this particular snippet.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The snippet refers to 'short, medium and long term consequences' of climate risks, indicating a forward-looking perspective that spans multiple time horizons.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Climate matters feature prominently in PhosAgro’s strategic and investment decisions, as well as in its day-to-day management. In our evaluation of investment projects, we use internal carbon price mechanisms. The Company has identified, assessed, and prioritised climate risks, establishing their short, medium and long term consequences for its production and business processes.",
+          "page": "190",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99904-005",
+          "quote": "19 Climate risk Risks associated with changes in natural processes or phenomena amid climate change (physical factors) or with political, economic, financial, or other decisions made by governments, multilateral organisations, financial institutions, or producer or consumer associations or other NGOs to curb climate change by reducing GHG emissions through carbon regulations or restrictions on the use of fossil fuels or non-renewable energy (transitional factors).",
+          "source": "Annual integrated report 2024.pdf, Page 66, Strategic risks",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly defines 'Climate risk' to include 'political, economic, financial, or other decisions made by governments... to curb climate change by reducing GHG emissions through carbon regulations'. This directly identifies carbon regulations as a risk to the business, encompassing potential carbon costs.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The description clearly states 'Risks associated with changes' and 'decisions... to curb climate change by reducing GHG emissions through carbon regulations', framing this as a potential negative impact or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'financial' decisions and 'carbon regulations' which imply financial costs, but it does not provide specific monetary values or a definitive statement of financial materiality, thus it is partial-type.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of climate risk refers to 'changes in natural processes or phenomena' and 'decisions made by governments', indicating a forward-looking perspective on potential future impacts and regulations.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "19 Climate risk Risks associated with changes in natural processes or phenomena amid climate change (physical factors) or with political, economic, financial, or other decisions made by governments, multilateral organisations, financial institutions, or producer or consumer associations or other NGOs to curb climate change by reducing GHG emissions through carbon regulations or restrictions on the use of fossil fuels or non-renewable energy (transitional factors).",
+          "page": "Annual integrated report 2024.pdf, Page 66, Strategic risks",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99904-006",
+          "quote": "RISKS SPECIFIC TO THE COMPANY’S OPERATIONS INCLUDE: ! non-compliance of products’ manufacturing process and their use with carbon footprint standards and other environmental requirements;",
+          "source": "Annual integrated report 2024.pdf, Page 110, RESEARCH, INNOVATIONS and education",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states 'non-compliance of products’ manufacturing process and their use with carbon footprint standards' as a specific risk to the company's operations. This directly addresses carbon costs related to both direct operations (manufacturing) and customer use (products' use) through the lens of compliance with carbon footprint standards.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'non-compliance... is a risk' clearly frames this as a potential negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet identifies a risk related to compliance with carbon footprint standards but does not provide any specific financial figures or state the financial materiality of this risk, focusing on the qualitative aspect of non-compliance.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The risk of non-compliance with standards is an ongoing concern, applicable to current manufacturing processes and product use, and extends into the future as standards evolve.",
+            "timeframe": "Present day"
+          },
+          "text": "RISKS SPECIFIC TO THE COMPANY’S OPERATIONS INCLUDE: ! non-compliance of products’ manufacturing process and their use with carbon footprint standards and other environmental requirements;",
+          "page": "Annual integrated report 2024.pdf, Page 110, RESEARCH, INNOVATIONS and education",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 6
+        },
+        {
+          "snippet_id": "99904-007",
+          "quote": "A new parameter was introduced to refine calculations of our internal carbon price. To complement our existing approach to carbon balance assessment of investment projects, we incorporated the price per tonne of CO2-eq. as a parameter, aligned with the EU ETS. The cost of carbon units was calculated at PhosAgro’s carbon farm in the Vologda region. The estimated cost of carbon units obtained from forest sites is RUB 658 per carbon unit.",
+          "source": "Annual integrated report 2024.pdf, Page 194, Climate",
+          "financial_amounts": [
+            "RUB 658"
+          ],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes an internal carbon price and provides a cost per unit, but it does not explicitly frame this cost as a risk to the business. It is a neutral description of a metric. According to the definitions, when a topic is acknowledged but not characterized as a business risk, the classification should be UNCLEAR. The existing 'Neutral' framing categorization supports this change.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The calculation of 'internal carbon price' and 'cost of carbon units' is a neutral, factual disclosure of a financial metric used for internal assessment, rather than framing it as a direct threat or opportunity in this context.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure provides an explicit monetary value of 'RUB 658 per carbon unit' for the cost of carbon units, which is a direct quantification of a financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The calculation of the 'cost of carbon units' and the incorporation of a 'price per tonne of CO2-eq.' as a parameter for investment projects indicate an ongoing and forward-looking financial assessment.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "A new parameter was introduced to refine calculations of our internal carbon price. To complement our existing approach to carbon balance assessment of investment projects, we incorporated the price per tonne of CO2-eq. as a parameter, aligned with the EU ETS. The cost of carbon units was calculated at PhosAgro’s carbon farm in the Vologda region. The estimated cost of carbon units obtained from forest sites is RUB 658 per carbon unit.",
+          "page": "194",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 verification-corrected (overrides length)."
+          },
+          "snippet_rank": 7
+        }
+      ],
+      "summary": "{'question_id': 99904, 'analysis_summary': {'text': \"Yes, PhosAgro provides a full disclosure, identifying carbon costs as a risk from both its direct operations and the use of its products by customers. The company explicitly assesses the financial impact of regulations like the Carbon Border Adjustment Mechanism (CBAM) on its operating expenses, lists non-compliance as a specific risk (R3), and uses an internal carbon price for investment decisions. Furthermore, it acknowledges the risk of its products' use failing to meet carbon footprint standards, particularly for exports to markets with 'GHG border tariffs', and is developing tools to help customers mitigate this.\", 'classification': 'FULL_DISCLOSURE', 'confidence': 'High'}}",
+      "merger_stats": {
+        "v3_snippets": 5,
+        "v4_snippets": 6,
+        "merged_snippets": 7,
+        "snippet_pairs": 7,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99907",
+      "question_number": 4,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99907-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "PhosAgro does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99908",
+      "question_number": 5,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99908-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "PhosAgro does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99909",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+      "disclosures": [
+        {
+          "snippet_id": "99909-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "PhosAgro does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99910",
+      "question_number": 2,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that disposal of chemical waste, such as gypstacks, from the production of phosphate fertiliser is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99910-001",
+          "quote": "The reduction in the Company's environmental impact payments was associated with decreased phosphogypsum disposal in waste facilities, achieved through its expanded application as a construction material at both the Cherepovets and Balakovo sites. In 2024, over-limit payments accounted for 0.036% of total environmental impact payments (vs 0.86% in 2023). They resulted from exceeding the permissible emission limit for nitrogen oxides by one of the emission sources at the Cherepovets facility.",
+          "source": "Annual integrated report 2024.pdf, Page 186, Environmental Review",
+          "financial_amounts": [
+            "0.036%",
+            "0.86%"
+          ],
+          "classification_justification": "This snippet clearly identifies 'phosphogypsum disposal' as incurring 'environmental impact payments,' which are financial costs. The company's efforts to reduce disposal are directly linked to reducing these payments, indicating that disposal is a recognized financial risk to the business. The mention of 'over-limit payments' further solidifies the financial implication of non-compliance or exceeding limits related to environmental impact.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language focuses on 'environmental impact payments' and 'over-limit payments' associated with disposal, framing it as a negative consequence and a threat to the business's financial performance.",
+            "framing": "Risk",
+            "financial_justification": "The snippet explicitly mentions 'environmental impact payments' and 'over-limit payments' as financial consequences, even providing percentages of total payments, indicating a financial impact without providing a specific total monetary value for the risk itself.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The snippet discusses 'reduction in... payments' in 2024 and compares it to 2023, indicating an ongoing situation and current efforts to mitigate a present-day issue.",
+            "timeframe": "Present day"
+          },
+          "text": "The reduction in the Company's environmental impact payments was associated with decreased phosphogypsum disposal in waste facilities, achieved through its expanded application as a construction material at both the Cherepovets and Balakovo sites. In 2024, over-limit payments accounted for 0.036% of total environmental impact payments (vs 0.86% in 2023). They resulted from exceeding the permissible emission limit for nitrogen oxides by one of the emission sources at the Cherepovets facility.",
+          "page": "186",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99910-002",
+          "quote": "Total waste landfilled: 93,400,262.0 (2022), 65,294,928.0 (2023), 80,586,785.7 (2024)... Promoting phosphogypsum utilisation: In 2024, PhosAgro expanded the use of phosphogypsum as a construction material at Apatit’s Cherepovets and Balakovo sites. This helped reduce the volume of phosphogypsum sent to waste disposal facilities.",
+          "source": "Annual integrated report 2024.pdf, Page 206, Environmental review",
+          "financial_amounts": [],
+          "classification_justification": "This snippet provides quantitative data on the large volumes of waste landfilled, including phosphogypsum, and explicitly states efforts to 'reduce the volume of phosphogypsum sent to waste disposal facilities'. The act of reducing this volume implies that the disposal itself is a managed issue, likely due to associated costs, environmental concerns, or capacity limitations, thus representing a business risk or liability. However, it does not state the financial materiality of the risk of disposal.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The focus is on 'reducing the volume' of waste sent to disposal facilities, indicating a management effort to mitigate a negative aspect of operations.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides quantitative data on waste volume in tonnes but does not include any specific monetary figures related to the risk of disposal.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet presents data for multiple past years (2022, 2023, 2024) and describes ongoing efforts ('expanded the use', 'helped reduce'), indicating a multiple or unclear timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Total waste landfilled: 93,400,262.0 (2022), 65,294,928.0 (2023), 80,586,785.7 (2024)... Promoting phosphogypsum utilisation: In 2024, PhosAgro expanded the use of phosphogypsum as a construction material at Apatit’s Cherepovets and Balakovo sites. This helped reduce the volume of phosphogypsum sent to waste disposal facilities.",
+          "page": "Annual integrated report 2024.pdf, Page 206, Environmental review",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99910-003",
+          "quote": "Land disturbance resulting from the Company's operations occurs due to mineral extraction, construction of waste disposal facilities, and other construction activities... Increasing the share of waste diverted for recycling reduces pressure on these disposal sites and extends their operational lifespan.",
+          "source": "Annual integrated report 2024.pdf, Page 218, Environmental review",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly links 'construction of waste disposal facilities' to 'land disturbance' and states that increasing waste recycling 'reduces pressure on these disposal sites and extends their operational lifespan'. This indicates that managing waste disposal facilities and their lifespan is a business concern, implying a risk related to capacity, environmental impact, or future liabilities. However, it does not quantify the financial materiality of this risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language highlights 'land disturbance' and 'pressure on disposal sites', framing waste disposal as a negative consequence or challenge that the company is actively managing to reduce.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes physical impacts ('land disturbance', 'pressure on disposal sites') and operational aspects ('operational lifespan') but does not provide any specific monetary figures.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes ongoing conditions ('occurs due to', 'is managed') and current efforts ('reduces pressure', 'extends their operational lifespan'), indicating a present-day focus.",
+            "timeframe": "Present day"
+          },
+          "text": "Land disturbance resulting from the Company's operations occurs due to mineral extraction, construction of waste disposal facilities, and other construction activities... Increasing the share of waste diverted for recycling reduces pressure on these disposal sites and extends their operational lifespan.",
+          "page": "Annual integrated report 2024.pdf, Page 218, Environmental review",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99910-004",
+          "quote": "In 2024, the increase in disturbed land area was attributed to the expansion of the phosphogypsum tailings disposal facility at the Balakovo branch of Apatit.",
+          "source": "Annual integrated report 2024.pdf, Page 218, Environmental Review",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet makes a factual statement linking the disposal facility to 'disturbed land area' but does not characterize this as a risk to the business. The current justification makes an inference about potential costs and scrutiny that is not present in the quoted text.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The statement describes an 'increase in disturbed land area' due to disposal, which is an undesirable environmental outcome and therefore framed as a negative impact or risk.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet describes an environmental impact ('disturbed land area') resulting from operations but does not provide any explicit financial figures or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'In 2024, the increase...' clearly places the described event and its impact in the present reporting period.",
+            "timeframe": "Present day"
+          },
+          "text": "In 2024, the increase in disturbed land area was attributed to the expansion of the phosphogypsum tailings disposal facility at the Balakovo branch of Apatit.",
+          "page": "218",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99910-005",
+          "quote": "Waste generation by hazard class, t: I: 4.22 (2022), 3.82 (2023), 3.12 (2024) II: 0.39 (2022), 3.23 (2023), 2.11 (2024) III: 1,436.71 (2022), 1,278.12 (2023), 1,848.45 (2024) IV: 195,057.45 (2022), 253,064.94 (2023), 247,706.29 (2024) V: 120,229,531.00 (2022), 94,372,377.65 (2023), 99,274,182.20 (2024) Total: 120,426,029.77 (2022), 94,626,727.75 (2023), 99,523,742.16 (2024) Waste by type and disposal method2, t: Total waste landfilled: 93,400,262.0 (2022), 65,294,928.0 (2023), 80,586,785.7 (2024)",
+          "source": "Annual integrated report 2024.pdf, Page 206, Environmental Review",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet is a data table without any narrative text. It discloses waste volumes but does not frame this information as a business risk. The classification requires the risk to be 'clearly identified', which is not the case here.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure presents factual data on waste generation and landfilling, which, in the context of environmental review and waste reduction targets, is implicitly framed as a challenge or negative aspect requiring management, thus a risk.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet provides quantitative data on waste volumes in tonnes but does not include any explicit financial figures or statements about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The data covers multiple years (2022, 2023, 2024), indicating an ongoing situation and present-day relevance of waste generation and disposal.",
+            "timeframe": "Present day"
+          },
+          "text": "Waste generation by hazard class, t: I: 4.22 (2022), 3.82 (2023), 3.12 (2024) II: 0.39 (2022), 3.23 (2023), 2.11 (2024) III: 1,436.71 (2022), 1,278.12 (2023), 1,848.45 (2024) IV: 195,057.45 (2022), 253,064.94 (2023), 247,706.29 (2024) V: 120,229,531.00 (2022), 94,372,377.65 (2023), 99,274,182.20 (2024) Total: 120,426,029.77 (2022), 94,626,727.75 (2023), 99,523,742.16 (2024) Waste by type and disposal method2, t: Total waste landfilled: 93,400,262.0 (2022), 65,294,928.0 (2023), 80,586,785.7 (2024)",
+          "page": "206",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 5
+        }
+      ],
+      "summary": "Yes, PhosAgro discloses that the disposal of chemical waste, specifically phosphogypsum, is a business concern with financial and environmental implications. The company directly links phosphogypsum disposal to costs via \"environmental impact payments\" and to environmental pressures such as increased \"disturbed land area.\" PhosAgro's active efforts to reduce the large volumes of landfilled waste by increasing its utilization demonstrate its management of these impacts.",
+      "merger_stats": {
+        "v3_snippets": 3,
+        "v4_snippets": 3,
+        "merged_snippets": 5,
+        "snippet_pairs": 5,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99911",
+      "question_number": 3,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99911-001",
+          "quote": "Land disturbance resulting from the Company's operations occurs due to mineral extraction, construction of waste disposal facilities, and other construction activities. Mineral extraction is one of the Company’s core activities. The expansion of open-pit and underground mining operations within permitted licence areas drives production growth and ensures stable product supply. Mining activities are conducted safely and with maximum efficiency. Reclamation for these sites is best to be implemented following resource depletion. The Company’s mining assets currently have operational lifespans extending beyond 2030.",
+          "source": "Annual integrated report 2024.pdf, Page 218, Environmental Review",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The text describes future reclamation as a planned activity but does not frame it as a risk to the business. Per the definitions, acknowledging the topic without characterizing it as a risk is UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure identifies 'Land disturbance' as a consequence of mining operations and 'Reclamation' as a future necessity, framing it as an environmental challenge and a future obligation, thus a risk.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet describes a future obligation ('Reclamation') and its long-term nature ('operational lifespans extending beyond 2030') which implies future financial costs, but it does not provide any explicit monetary values or state financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement refers to 'Reclamation for these sites is best to be implemented following resource depletion' and 'operational lifespans extending beyond 2030,' clearly indicating a forward-looking timeframe for the restoration obligation.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Land disturbance resulting from the Company's operations occurs due to mineral extraction, construction of waste disposal facilities, and other construction activities. Mineral extraction is one of the Company’s core activities. The expansion of open-pit and underground mining operations within permitted licence areas drives production growth and ensures stable product supply. Mining activities are conducted safely and with maximum efficiency. Reclamation for these sites is best to be implemented following resource depletion. The Company’s mining assets currently have operational lifespans extending beyond 2030.",
+          "page": "218",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "relevance_score": 9,
+          "relevance_explanation": "The snippet directly discusses the restoration of mining sites (reclamation) but does not frame it as a risk, which directly answers the question.",
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "overlapping",
+            "similarity": 0.7859237536656891,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Both snippets were corrected by verification to the same classification. Version 3 is chosen as it contains slightly more text, providing better context, and has a more complete source citation.",
+            "merged_classification": "UNCLEAR",
+            "classification_rationale": "The company acknowledges the need for future site reclamation as a consequence of its operations but does not characterize this as a risk to the business. It is presented as a planned, future activity without any discussion of potential negative impacts.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": false,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "Land disturbance resulting from the Company's operations",
+                "Reclamation for these sites is best to be implemented following resource depletion",
+                "operational lifespans extending beyond 2030"
+              ]
+            },
+            "confidence_assessment": {
+              "evidence_summary": "The company acknowledges land disturbance from its mining operations and states that reclamation will be implemented after resource depletion, with operational lifespans extending beyond 2030.",
+              "confidence_explanation": "The evidence is clear and directly addresses the topic. The absence of any risk-related language makes the UNCLEAR classification straightforward and certain, as confirmed by the verification corrections.",
+              "confidence_percentage": 95
+            },
+            "relevance_to_question": {
+              "is_relevant": true,
+              "relevance_score": 9,
+              "relevance_explanation": "The snippet directly discusses the restoration of mining sites (reclamation) but does not frame it as a risk, which directly answers the question."
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99911-002",
+          "quote": "Area of disturbed and reclaimed land, ha: Disturbed land: 188.39 (2022), 184.49 (2023), 306.30 (2024). Reclaimed land: 0 (2022), 0 (2023), 0 (2024).",
+          "source": "Annual integrated report 2024.pdf, Page 218, Environmental Review",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet provides only raw data on disturbed and reclaimed land. It does not contain any narrative or framing that characterizes this data as a business risk. This is an acknowledgement of the topic, making the classification UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The presentation of increasing 'Disturbed land' with zero 'Reclaimed land' highlights an accumulating negative environmental impact and future liability, framing it as a risk.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet provides quantitative metrics (hectares of land) but does not include any explicit financial figures or statements about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The data covers multiple years (2022, 2023, 2024), indicating an ongoing situation and present-day relevance of land disturbance, with the implication of future reclamation needs.",
+            "timeframe": "Present day"
+          },
+          "text": "Area of disturbed and reclaimed land, ha: Disturbed land: 188.39 (2022), 184.49 (2023), 306.30 (2024). Reclaimed land: 0 (2022), 0 (2023), 0 (2024).",
+          "page": "218",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "PhosAgro discloses the restoration of mining sites as a risk by acknowledging a future obligation for \"reclamation\" due to \"land disturbance\" from its core mineral extraction activities. While the term \"risk\" is not explicitly used, the company's data shows a significant and increasing area of disturbed land (306.30 ha in 2024) with zero hectares reclaimed, indicating an accumulating future liability.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 1,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 1,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99912",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99912-001",
+          "quote": "In 2024, countervailing duties and the export quota system remained in force. The restrictions caused by international sanctions and supply chain disruptions still made it difficult for the Company to deliver its products to its traditional markets. The expected introduction of additional tariffs on mineral fertilizers supplied to the EU in 2025 will present another challenge for PhosAgro Group, requiring that we adopt new management techniques, approaches, and solutions.",
+          "source": "Annual integrated report 2024.pdf, Page 64, Strategic Report",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'countervailing duties,' 'export quota system,' 'restrictions caused by international sanctions,' and 'additional tariffs' as factors that make it 'difficult for the Company to deliver its products' and will 'present another challenge for PhosAgro Group.' These are direct forms of restrictions on sales and production, clearly framed as risks to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language uses terms like 'restrictions,' 'sanctions,' 'difficult,' and 'challenge,' clearly framing these external factors as threats and negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses 'duties,' 'quotas,' 'sanctions,' and 'tariffs' which inherently have financial implications (e.g., increased costs, reduced revenue), but it does not provide specific monetary values or state financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet refers to conditions 'remained in force' (present), 'still made it difficult' (present/ongoing), and 'expected introduction... in 2025' (forward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "In 2024, countervailing duties and the export quota system remained in force. The restrictions caused by international sanctions and supply chain disruptions still made it difficult for the Company to deliver its products to its traditional markets. The expected introduction of additional tariffs on mineral fertilizers supplied to the EU in 2025 will present another challenge for PhosAgro Group, requiring that we adopt new management techniques, approaches, and solutions.",
+          "page": "64",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99912-002",
+          "quote": "Regulatory risk: Untimely receipt/extension of licences; legislative changes that might bring about higher cost of doing business, restrictive policies by regulators, weaker equity story of the Company and/or adverse transformation of the competitive landscape. Has an impact on sustainable development through interaction with the regulatory environment. ... Key indicators / risks materialised: Deviations related to regulatory compliance. No material risk events occurred.",
+          "source": "Annual integrated report 2024.pdf, Page 68, Strategic risks",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly lists 'restrictive policies by regulators' and 'legislative changes that might bring about higher cost of doing business' as components of 'Regulatory risk'. These directly encompass the possibility of products being banned or severely restricted, which would significantly impact the business. The statement 'No material risk events occurred' refers to materialized risks, not the existence of the potential risk itself.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The description focuses on 'restrictive policies' and 'higher cost of doing business', clearly framing these as potential negative impacts or threats to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes potential financial impacts ('higher cost of doing business') but does not provide any specific monetary figures or a definitive statement of financial materiality for the risk of product bans.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The language uses 'might bring about' and refers to 'legislative changes', indicating a focus on potential future events and their consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Regulatory risk: Untimely receipt/extension of licences; legislative changes that might bring about higher cost of doing business, restrictive policies by regulators, weaker equity story of the Company and/or adverse transformation of the competitive landscape. Has an impact on sustainable development through interaction with the regulatory environment. ... Key indicators / risks materialised: Deviations related to regulatory compliance. No material risk events occurred.",
+          "page": "Annual integrated report 2024.pdf, Page 68, Strategic risks",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 contains v3 text (longer/more complete)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99912-003",
+          "quote": "EU imposed tariffs on agricultural imports from Russia... Once enacted, all Russian agricultural imports would be subject to EU tariffs.",
+          "source": "Annual integrated report 2024.pdf, Page 42, Business environment",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet is a factual statement about tariffs from the 'Business environment' section. It does not contain any language from the company that explicitly frames this event as a risk, threat, or challenge. Therefore, it only acknowledges the topic without characterizing it as a business risk, which fits the definition of UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The statement describes an external regulatory action ('EU imposed tariffs') that creates an obstacle for the company's exports, thus framing it as a risk or challenge.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet mentions 'tariffs' which are a form of financial cost or barrier, but it does not provide specific monetary values for these tariffs or their financial impact on the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'EU imposed tariffs' refers to a past action, but 'Once enacted, all Russian agricultural imports would be subject to EU tariffs' indicates an ongoing and future impact.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "EU imposed tariffs on agricultural imports from Russia... Once enacted, all Russian agricultural imports would be subject to EU tariffs.",
+          "page": "42",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 3
+        }
+      ],
+      "summary": "Yes, PhosAgro discloses that restrictions on the sale of its products are a risk to the business. The company identifies 'restrictive policies by regulators' as a key component of its 'Regulatory risk' and points to specific challenges like 'countervailing duties,' 'sanctions,' and 'additional tariffs' that make it difficult to deliver products to key markets like the EU. While acknowledging these risks, the company also notes that no material risk events related to regulatory compliance occurred during the reporting period.",
+      "merger_stats": {
+        "v3_snippets": 3,
+        "v4_snippets": 2,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99913",
+      "question_number": 5,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99913-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "PhosAgro does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99915",
+      "question_number": 1,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99915-001",
+          "quote": "Untimely receipt/extension of licences; legislative changes that might bring about higher cost of doing business, restrictive policies by regulators, weaker equity story of the Company and/or adverse transformation of the competitive landscape.",
+          "source": "Annual integrated report 2024.pdf, Page 72, Strategic risks",
+          "financial_amounts": [],
+          "classification_justification": "The snippet explicitly identifies 'legislative changes that might bring about higher cost of doing business' and 'restrictive policies by regulators' as a risk. This directly links regulatory changes to increased costs, which are a financial impact on the business, thus acknowledging the topic as a business risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'legislative changes that might bring about higher cost of doing business, restrictive policies by regulators' clearly frames this as a potential negative consequence or threat to the business, emphasizing adverse impacts.",
+            "framing": "Risk",
+            "financial_justification": "The phrase 'higher cost of doing business' indicates a financial impact without providing a specific quantifiable monetary value. It acknowledges financial significance but does not quantify it.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'might bring about' suggests a future potential impact or development that has not yet manifested, making the disclosure forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Untimely receipt/extension of licences; legislative changes that might bring about higher cost of doing business, restrictive policies by regulators, weaker equity story of the Company and/or adverse transformation of the competitive landscape.",
+          "page": "72",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99915-002",
+          "quote": "RISKS SPECIFIC TO THE GROUP’S OPERATIONS INCLUDE: Risks associated with chemicals management and regulatory requirements for product safety",
+          "source": "Annual integrated report 2024.pdf, Page 96, Customers and product management",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'Risks associated with chemicals management and regulatory requirements for product safety' as a specific risk to the Group's operations. Meeting these regulatory requirements inherently involves compliance, testing, and registration, and the framing as a 'risk' implies potential for rising costs or challenges in meeting them, directly addressing the core of the question.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'RISKS SPECIFIC TO THE GROUP’S OPERATIONS INCLUDE: Risks associated with...' clearly frames this as a potential negative impact or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet identifies a risk related to regulatory requirements and chemicals management, which implies costs, but it does not provide any explicit financial figures or a statement about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes an ongoing category of risks that are specific to the Group's current operations, indicating a present-day relevance.",
+            "timeframe": "Present day"
+          },
+          "text": "RISKS SPECIFIC TO THE GROUP’S OPERATIONS INCLUDE: Risks associated with chemicals management and regulatory requirements for product safety",
+          "page": "Annual integrated report 2024.pdf, Page 96, Customers and product management",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "Yes, the company discloses this as a risk by identifying 'Risks associated with... regulatory requirements for product safety' as a specific operational risk. It also states that legislative changes and restrictive policies by regulators could lead to a 'higher cost of doing business,' which encompasses rising compliance, testing, and registration costs.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99916",
+      "question_number": 2,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99916-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "PhosAgro does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99917",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99917-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "PhosAgro does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99918",
+      "question_number": 4,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99918-001",
+          "quote": "Commodity risk: Losses associated with unfavourable changes in the market prices for mineral fertilizers and other products or a hike in prices for key feedstock and equipment sourced by the Company.",
+          "source": "Annual integrated report 2024.pdf, Page 72, Strategic risks",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'Commodity risk' as a strategic risk, specifically mentioning 'a hike in prices for key feedstock' as a source of 'Losses.' Natural gas is a primary energy input (feedstock) for fertilizer manufacturing (e.g., ammonia production), directly addressing the risk of high energy input costs due to product manufacture.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The risk is explicitly named 'Commodity risk' and describes 'Losses associated with unfavourable changes' and 'a hike in prices,' clearly framing it as a threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes a qualitative risk of price hikes for key feedstock, which implies financial impact, but it does not provide any explicit financial figures or a statement about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of 'Commodity risk' is a general, ongoing strategic risk that the company faces. The 'Key indicators / risks materialised' section for this risk states 'No material risk events occurred,' suggesting it is a present or forward-looking general risk, thus 'Multiple or Unclear' is appropriate.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Commodity risk: Losses associated with unfavourable changes in the market prices for mineral fertilizers and other products or a hike in prices for key feedstock and equipment sourced by the Company.",
+          "page": "Annual integrated report 2024.pdf, Page 72, Strategic risks",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 contains v3 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99918-002",
+          "quote": "Risk of Scope 2 GHG emissions being included in carbon regulation in the EU and other jurisdictions. The Company’s energy efficiency directly affects Scope 2 GHG emissions, which poses a potential risk, for example after full-scale implementation of carbon border adjustment mechanisms.",
+          "source": "Annual integrated report 2024.pdf, Page 202, Energy efficiency",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies a 'Risk of Scope 2 GHG emissions being included in carbon regulation' and states that this 'poses a potential risk' due to its effect on energy efficiency. Increased carbon regulation on Scope 2 emissions (indirect emissions from purchased energy) would directly translate into higher energy input costs for manufacturing, thus addressing the question.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement explicitly uses the phrase 'poses a potential risk,' clearly framing the carbon regulation and its impact on energy costs as a threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes a potential risk that could lead to higher energy costs, but it does not provide any explicit financial figures or a statement about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The disclosure refers to a future event ('being included in carbon regulation' and 'after full-scale implementation') that has not yet manifested, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Risk of Scope 2 GHG emissions being included in carbon regulation in the EU and other jurisdictions. The Company’s energy efficiency directly affects Scope 2 GHG emissions, which poses a potential risk, for example after full-scale implementation of carbon border adjustment mechanisms.",
+          "page": "Annual integrated report 2024.pdf, Page 202, Energy efficiency",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99918-003",
+          "quote": "Raw materials: ... Natural gas: 14,226 (2022), 15,033 (2023), 16,948 (2024) ... Electricity: 6,754 (2022), 7,317 (2023), 8,340 (2024) ... Fuel: 6,459 (2022), 5,754 (2023), 7,215 (2024)",
+          "source": "Annual integrated report 2024.pdf, Page 81, Financial performance",
+          "financial_amounts": [
+            "RUB 14,226 mln",
+            "RUB 15,033 mln",
+            "RUB 16,948 mln",
+            "RUB 6,754 mln",
+            "RUB 7,317 mln",
+            "RUB 8,340 mln",
+            "RUB 6,459 mln",
+            "RUB 5,754 mln",
+            "RUB 7,215 mln"
+          ],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification is incorrect. 'PARTIAL' requires the topic to be clearly identified as a business risk. This snippet is a neutral presentation of financial data and does not frame the rising costs as a risk. The correct classification is 'UNCLEAR' because the topic (energy costs) is acknowledged but not characterized as a risk within this snippet.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "This disclosure presents factual financial data about operating costs without explicitly framing it as a risk or an opportunity. It is a neutral presentation of financial performance.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet provides explicit, quantifiable monetary values (RUB millions) for natural gas, electricity, and fuel, which are direct energy input costs.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The data presented is for the years 2022, 2023, and 2024, describing past and current costs, making it primarily present day in the context of the reporting period.",
+            "timeframe": "Present day"
+          },
+          "text": "Raw materials: ... Natural gas: 14,226 (2022), 15,033 (2023), 16,948 (2024) ... Electricity: 6,754 (2022), 7,317 (2023), 8,340 (2024) ... Fuel: 6,459 (2022), 5,754 (2023), 7,215 (2024)",
+          "page": "81",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99918-004",
+          "quote": "Internal use of electricity: 8,291,723 (2022), 8,626,491 (2023), 9,377,112 (2024) ... Internal use of heat energy: 38,050,823 (2022), 39,977,375 (2023), 41,577,704 (2024)",
+          "source": "Annual integrated report 2024.pdf, Page 203, Environmental review",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification is incorrect. 'PARTIAL' requires the topic to be clearly identified as a business risk. This snippet is a neutral presentation of energy consumption data from an environmental review and does not mention costs or characterize energy use as a risk. The correct classification is 'UNCLEAR' as the topic of energy inputs is acknowledged but not framed as a risk.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "This disclosure presents factual data about energy consumption in physical units without explicitly framing it as a risk or an opportunity. It is a neutral presentation of operational metrics.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet provides quantifiable operational metrics (energy consumption in GJ) but no explicit monetary values or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The data presented is for the years 2022, 2023, and 2024, describing past and current consumption, making it primarily present day in the context of the reporting period.",
+            "timeframe": "Present day"
+          },
+          "text": "Internal use of electricity: 8,291,723 (2022), 8,626,491 (2023), 9,377,112 (2024) ... Internal use of heat energy: 38,050,823 (2022), 39,977,375 (2023), 41,577,704 (2024)",
+          "page": "203",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 4
+        }
+      ],
+      "summary": "{'question_id': 99918, 'analysis_summary': {'text': 'Yes, the company partially discloses that high energy input costs are a risk to the business. It identifies \"Commodity risk\" as a strategic risk, which includes \"a hike in prices for key feedstock\" such as natural gas. Additionally, it acknowledges a potential risk of increased energy-related costs from future carbon regulations on its Scope 2 GHG emissions.', 'is_risk_disclosed': {'value': 'Yes', 'confidence': 'High'}, 'classification': 'PARTIAL'}}",
+      "merger_stats": {
+        "v3_snippets": 3,
+        "v4_snippets": 2,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    }
+  ],
+  "completeness_summary": {
+    "total_questions_analyzed": 14,
+    "total_disclosure_snippets": 34,
+    "note": "Summary statistics recalculated from merged results"
+  },
+  "metadata": {
+    "company": "PhosAgro",
+    "year": "2024",
+    "analysis_date": "2025-11-07T18:13:20.696319",
+    "schema_version": "merged-v3-v4",
+    "merger_model": "gemini-2.5-pro",
+    "source_files": {
+      "v3": "PhosAgro_2024_v3_gemini-2-5-flash_06-11-2025_14-32-21_verified.json",
+      "v4": "PhosAgro_2024_v4_gemini-2-5-flash_06-11-2025_14-35-07_verified.json"
+    }
+  },
+  "merger_summary": {
+    "total_v3_snippets": 21,
+    "total_v4_snippets": 17,
+    "total_merged_snippets": 34,
+    "total_ai_reviews": 1,
+    "total_human_flags": 0,
+    "merger_timestamp": "07-11-2025_18-13-20"
+  }
+}

@@ -10,8 +10,10 @@ import type {
   ParsedFilename,
   Question,
   SummaryStatistics,
-  Snippet
+  Snippet,
+  Classification
 } from '../types/analysis';
+import { normalizeSectorCode } from '../types/questions';
 
 // Re-export Question type for backward compatibility
 export type { Question };
@@ -139,6 +141,9 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
       normalizedVerified.fiscal_year = parsed.year;
       normalizedVerified.version = parsed.version;
       normalizedVerified.model_used = parsed.model;
+      const sector = normalizeSectorCode(
+        normalizedVerified.metadata?.company_sector as string | undefined
+      );
 
       const normalizedOriginal = original ? normalizeAnalysisResult(original) : undefined;
       if (normalizedOriginal) {
@@ -154,6 +159,7 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
         year: parsed.year,
         version: parsed.version,
         model: parsed.model,
+        sector,
         verified: normalizedVerified,
         original: normalizedOriginal,
         verificationReport,
@@ -313,6 +319,8 @@ export function normalizeAnalysisResult(result: any): AnalysisResult {
         s.financial_amounts = [];
       }
 
+      s.classification = normalizeClassification(s.classification);
+
       // Ensure categorization exists with defaults
       if (!s.categorization) {
         s.categorization = {
@@ -337,6 +345,28 @@ export function normalizeAnalysisResult(result: any): AnalysisResult {
   });
 
   return result as AnalysisResult;
+}
+
+const classificationMap: Record<string, Classification> = {
+  FULL_DISCLOSURE: 'FULL_DISCLOSURE',
+  FULL: 'FULL_DISCLOSURE',
+  'FULL DISCLOSURE': 'FULL_DISCLOSURE',
+  PARTIAL: 'PARTIAL',
+  PARTIAL_DISCLOSURE: 'PARTIAL',
+  'PARTIAL DISCLOSURE': 'PARTIAL',
+  UNCLEAR: 'UNCLEAR',
+  NO_DISCLOSURE: 'NO_DISCLOSURE',
+  NONE: 'NO_DISCLOSURE'
+};
+
+function normalizeClassification(value: unknown): Classification {
+  if (typeof value === 'string') {
+    const normalized = value.trim().toUpperCase();
+    if (normalized in classificationMap) {
+      return classificationMap[normalized];
+    }
+  }
+  return 'UNCLEAR';
 }
 
 function mapMergedFinancialType(value: string | undefined): "Full" | "Partial" | "Non-Financial" {
@@ -649,6 +679,9 @@ async function loadMergedCompanyData(resultsPath: string): Promise<CompanyYearDa
         year,
         version: 'merged',
         model: metadata.merger_model || 'merged-model',
+        sector: normalizeSectorCode(
+          analysisResult.metadata?.company_sector as string | undefined
+        ),
         verified: analysisResult,
         hasComparison: false,
         isMerged: true,

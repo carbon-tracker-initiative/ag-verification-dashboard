@@ -3,6 +3,18 @@
  */
 
 import type { Classification } from './analysis';
+import type { SectorApplicability } from './questions';
+
+export type QuestionCoverageStatus = 'DISCLOSED' | 'NO_DISCLOSURE' | 'NOT_APPLICABLE';
+
+export interface QuestionCoverage {
+  question_id: string;
+  question_text: string;
+  category: string;
+  applicability: SectorApplicability;
+  status: QuestionCoverageStatus;
+  snippet_count: number;
+}
 
 /**
  * Question-level metrics calculated from snippets
@@ -99,6 +111,11 @@ export interface CompanyMetrics {
   // Totals
   total_questions_analyzed: number;
   total_questions_answered: number;
+  canonical_questions_total: number;
+  canonical_questions_applicable: number;
+  canonical_questions_not_applicable: number;
+  canonical_questions_with_disclosure: number;
+  canonical_questions_without_disclosure: number;
   total_snippets: number;
   average_snippets_per_question: number;
 
@@ -153,6 +170,9 @@ export interface CompanyMetrics {
     snippets_corrected: number;
     questions_modified: string[];
   };
+
+  // Question coverage snapshot
+  question_coverage: QuestionCoverage[];
 }
 
 /**

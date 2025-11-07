@@ -15,8 +15,11 @@ import type {
   CategoryMetrics,
   CompanyMetrics,
   CrossCompanyMetrics,
-  RadarMetrics
+  RadarMetrics,
+  QuestionCoverage
 } from '../types/metrics';
+import { CANONICAL_QUESTIONS, isQuestionApplicableToSector } from '../data/canonicalQuestions';
+import { normalizeSectorCode } from '../types/questions';
 
 // ============================================================================
 // Normalization Functions (Categorical Only)
@@ -260,6 +263,12 @@ export function calculateCategoryMetrics(
  */
 export function calculateCompanyMetrics(analysisResult: AnalysisResult): CompanyMetrics {
   const questions = analysisResult.analysis_results;
+  const sector = normalizeSectorCode(
+    analysisResult.metadata?.company_sector as string | undefined
+  );
+  const questionLookup = new Map<string, Question>(
+    questions.map(question => [question.question_id, question])
+  );
 
   // Calculate question metrics first to properly capture NO_DISCLOSURE questions
   const questionMetrics = questions.map(q => calculateQuestionMetrics(q));
@@ -348,6 +357,57 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
     ? (snippets_balanced / total_snippets) * 100
     : 0;
 
+  // Canonical question coverage
+  const questionCoverage: QuestionCoverage[] = CANONICAL_QUESTIONS.map((canonical) => {
+    const applicable = isQuestionApplicableToSector(canonical, sector);
+
+    if (!applicable) {
+      return {
+        question_id: canonical.id,
+        question_text: canonical.question_text,
+        category: canonical.category,
+        applicability: canonical.applicability,
+        status: 'NOT_APPLICABLE',
+        snippet_count: 0
+      };
+    }
+
+    const matchingQuestion = questionLookup.get(canonical.id);
+    if (!matchingQuestion) {
+      return {
+        question_id: canonical.id,
+        question_text: canonical.question_text,
+        category: canonical.category,
+        applicability: canonical.applicability,
+        status: 'NO_DISCLOSURE',
+        snippet_count: 0
+      };
+    }
+
+    const snippetCount = matchingQuestion.disclosures.length;
+    return {
+      question_id: canonical.id,
+      question_text: canonical.question_text,
+      category: canonical.category,
+      applicability: canonical.applicability,
+      status: snippetCount > 0 ? 'DISCLOSED' : 'NO_DISCLOSURE',
+      snippet_count: snippetCount
+    };
+  });
+
+  const canonical_questions_total = CANONICAL_QUESTIONS.length;
+  const canonical_questions_not_applicable = questionCoverage.filter(
+    coverage => coverage.status === 'NOT_APPLICABLE'
+  ).length;
+  const canonical_questions_with_disclosure = questionCoverage.filter(
+    coverage => coverage.status === 'DISCLOSED'
+  ).length;
+  const canonical_questions_without_disclosure = questionCoverage.filter(
+    coverage => coverage.status === 'NO_DISCLOSURE'
+  ).length;
+  const canonical_questions_applicable =
+    canonical_questions_total - canonical_questions_not_applicable;
+
   // Radar metrics (4 dimensions - removed disclosure_quality)
   const radar_metrics: RadarMetrics = {
     evidence_depth: Math.min(average_snippets_per_question, 10) * 10, // Normalize to 100
@@ -398,6 +458,11 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
     model_used: analysisResult.model_used,
     total_questions_analyzed,
     total_questions_answered,
+    canonical_questions_total,
+    canonical_questions_applicable,
+    canonical_questions_not_applicable,
+    canonical_questions_with_disclosure,
+    canonical_questions_without_disclosure,
     total_snippets,
     average_snippets_per_question,
     snippets_by_classification,
@@ -420,7 +485,8 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
     radar_metrics,
     top_questions,
     bottom_questions,
-    verification_metadata
+    verification_metadata,
+    question_coverage: questionCoverage
   };
 }
 
