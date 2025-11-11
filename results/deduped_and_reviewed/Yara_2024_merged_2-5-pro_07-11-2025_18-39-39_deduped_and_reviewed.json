@@ -1,0 +1,1728 @@
+{
+  "analysis_results": [
+    {
+      "question_id": "99902",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+      "disclosures": [
+        {
+          "snippet_id": "99902-001",
+          "quote": "We have not identified material negative impacts with regards to land degradation, desertification or soil sealing.",
+          "source": "yara-integrated-report-2024.pdf, Page 95, Section: Sustainability statements - General information - Identification of impacts, risks and opportunities - Environmental matters - Biodiversity and ecosystems",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly addresses the core of the question by stating that Yara has 'not identified material negative impacts' related to land degradation (which encompasses soil degradation) from its operations. This explicit statement about the absence of material impact constitutes a full disclosure regarding the company's assessment of this specific risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The statement is a factual declaration about the company's assessment of impacts, rather than framing the issue as an inherent risk or opportunity. It reports a finding.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure explicitly uses the term 'material negative impacts' but does not provide any quantifiable financial figures or discuss financial materiality in monetary terms.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'We have not identified' refers to the company's current assessment and status as of the reporting date, indicating a present-day perspective on the identified impacts.",
+            "timeframe": "Present day"
+          },
+          "text": "We have not identified material negative impacts with regards to land degradation, desertification or soil sealing.",
+          "page": "yara-integrated-report-2024.pdf, Page 95, Section: Sustainability statements - General information - Identification of impacts, risks and opportunities - Environmental matters - Biodiversity and ecosystems",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "No, Yara does not disclose soil degradation from its products as a material risk. While the company acknowledges its agricultural activities can affect soil through potential pollution, it explicitly states in a FULL_DISCLOSURE that it has 'not identified material negative impacts with regards to land degradation'. This indicates that the company has assessed this issue and does not consider it a material risk to the business.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 1,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "needs_attention",
+        "summary": "1 snippet(s) removed after high-confidence review.",
+        "decisions": [
+          {
+            "snippet_id": "99902-002",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet makes a general statement that the company's activities affect soil and that it is exposed to nature-related risks. It does not specifically mention 'soil degradation' caused by its 'fertiliser products' as a risk to the business.",
+            "action": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99903",
+      "question_number": 2,
+      "category": "Human Health Risk",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99903-001",
+          "quote": "There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "source": "yara-integrated-report-2024.pdf, Page 67, Section: Strategy and governance - Risk management - Planet risks table",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet explicitly states that regulations concerning product safety 'could impact Yara’s earnings'. According to the classification criteria, a disclosure that identifies a business risk and explicitly states its financial materiality (even without specific dollar amounts) qualifies as FULL_DISCLOSURE. The mention of an impact on 'earnings' is a statement of financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'could impact Yara’s earnings and its license to operate' clearly frames the increasing regulations as a potential threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure indicates a potential financial impact ('impact Yara’s earnings') but does not provide any specific monetary values, classifying it as a partial-type financial disclosure.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'increasing trend' and 'could impact' indicates a forward-looking perspective on potential future regulatory changes and their consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "page": "yara-integrated-report-2024.pdf, Page 67, Section: Strategy and governance - Risk management - Planet risks table",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99903-002",
+          "quote": "Health and safety exposure: Securing safe and healthy working conditions is our highest priority. Yara aims to minimize the exposure to conditions that could negatively affect health and safety. Furthermore, the company aims to minimize the probability and consequences of process safety and product safety accidents negatively affecting people, environment, assets, and the reputation of Yara.",
+          "source": "yara-integrated-report-2024.pdf, Page 67, Risk factors and responses",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'product safety accidents negatively affecting people' as a risk that the company aims to minimize. This clearly links human health problems from products to a business risk (reputation, assets), but it does not provide any statement on financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language focuses on 'minimize the probability and consequences' of 'product safety accidents negatively affecting people', clearly framing this as a risk to be managed.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions potential negative impacts on 'assets, and the reputation of Yara' but does not provide specific financial figures or a definitive statement about the financial materiality of these risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'aims to minimize' and 'negatively affecting' indicates an ongoing concern and proactive management of current and potential future risks, placing it in the present day.",
+            "timeframe": "Present day"
+          },
+          "text": "Health and safety exposure: Securing safe and healthy working conditions is our highest priority. Yara aims to minimize the exposure to conditions that could negatively affect health and safety. Furthermore, the company aims to minimize the probability and consequences of process safety and product safety accidents negatively affecting people, environment, assets, and the reputation of Yara.",
+          "page": "67",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99903-003",
+          "quote": "S4 Consumers and end-users: Personal safety: Health and safety: Exposure to health and safety risk during handling, storage, use, and transportation of products",
+          "source": "yara-integrated-report-2024.pdf, Page 101, Material impacts, risks and opportunities",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'Exposure to health and safety risk during handling, storage, use, and transportation of products' as a negative impact for consumers and end-users. This directly addresses human health problems from products as a risk, but it does not provide any statement on financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure explicitly states 'health and safety risk' and is listed as a 'negative impact', clearly framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes a health and safety risk but does not provide any quantifiable financial figures or a statement regarding the financial materiality of this risk to the business.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'Exposure to health and safety risk' indicates an ongoing potential for harm, placing the timeframe in the present day.",
+            "timeframe": "Present day"
+          },
+          "text": "S4 Consumers and end-users: Personal safety: Health and safety: Exposure to health and safety risk during handling, storage, use, and transportation of products",
+          "page": "101",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99903-004",
+          "quote": "Substances of concern and very high concern: Certain essential micronutrients in our products fall under the definition of substances of concern. Certain essential micronutrients in our products fall under the definition of substances of very high concern.",
+          "source": "yara-integrated-report-2024.pdf, Page 98, Material impacts, risks and opportunities",
+          "financial_amounts": [],
+          "classification_justification": "This snippet, from the 'Material impacts, risks and opportunities' table, lists 'Substances of concern' and 'Substances of very high concern' in its products as negative impacts. The classification of substances as 'of concern' inherently implies potential human health problems, thus acknowledging this as a risk, but it does not provide any statement on financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure is listed under 'Material impacts, risks and opportunities' and explicitly states 'negative impact', clearly framing the presence of these substances as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet identifies the presence of substances of concern but does not provide any quantifiable financial figures or a statement regarding the financial materiality of these impacts to the business.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'fall under the definition' indicates a current status of the products, placing the timeframe in the present day.",
+            "timeframe": "Present day"
+          },
+          "text": "Substances of concern and very high concern: Certain essential micronutrients in our products fall under the definition of substances of concern. Certain essential micronutrients in our products fall under the definition of substances of very high concern.",
+          "page": "98",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99903-005",
+          "quote": "While we emphasize the importance of efficient product use, we also maintain a strong focus on product stewardship to minimize health and safety risks associated with storage, handling, use, and transportation of our products.",
+          "source": "yara-integrated-report-2024.pdf, Page 101, Section: Sustainability statements - General information - S4 Consumers and end-users",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly acknowledges 'health and safety risks associated with storage, handling, use, and transportation of our products' and describes the company's efforts ('product stewardship') to minimize these risks, confirming their recognition as business risks.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'minimize health and safety risks' clearly frames the issue as a threat that requires management and mitigation.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure identifies risks and mitigation efforts but does not provide any specific financial figures or explicit statements about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes ongoing efforts ('maintain a strong focus') to minimize existing and potential future risks, indicating a present-day and forward-looking perspective.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "While we emphasize the importance of efficient product use, we also maintain a strong focus on product stewardship to minimize health and safety risks associated with storage, handling, use, and transportation of our products.",
+          "page": "yara-integrated-report-2024.pdf, Page 101, Section: Sustainability statements - General information - S4 Consumers and end-users",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        }
+      ],
+      "summary": "Yes, Yara discloses that human health problems from its products are a risk to the business, representing a FULL_DISCLOSURE. The company identifies 'Exposure to health and safety risk' for consumers and end-users during product handling, storage, and use. Critically, it states that stricter governmental regulations concerning the 'safety of handling and applying fertilizer' could directly 'impact Yara’s earnings and its license to operate.'",
+      "merger_stats": {
+        "v3_snippets": 3,
+        "v4_snippets": 4,
+        "merged_snippets": 5,
+        "snippet_pairs": 5,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99903-001",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet mentions regulations concerning 'the safety of handling and applying fertilizer' and states these regulations could impact earnings, thus identifying human health problems as a risk to the business.",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99904",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99904-001",
+          "quote": "Yara may consider divesting or closing assets if the cost of CO2 emissions is expected to result in insufficient shareholder returns.",
+          "source": "yara-integrated-report-2024.pdf, Page 63, Section: Strategy and governance - Risk management - Risk appetite areas",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly links the 'cost of CO2 emissions' to a potential negative financial outcome ('insufficient shareholder returns') and a severe business consequence ('divesting or closing assets'), indicating a clear financial materiality of carbon costs as a risk to the business.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The statement clearly presents the 'cost of CO2 emissions' as a potential source of harm and negative consequences for the business, including asset divestment or closure.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly discusses 'insufficient shareholder returns' and the financial implications of 'cost of CO2 emissions', indicating financial materiality without providing specific monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'is expected to result' indicates a forward-looking assessment of potential future impacts of carbon costs.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Yara may consider divesting or closing assets if the cost of CO2 emissions is expected to result in insufficient shareholder returns.",
+          "page": "yara-integrated-report-2024.pdf, Page 63, Section: Strategy and governance - Risk management - Risk appetite areas",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99904-002",
+          "quote": "The main regulations impacting Yara are: Carbon pricing mechanisms, such as EU ETS and Carbon Border Adjustment Mechanism (CBAM), presenting both a risk and an opportunity. While CBAM aims at restoring parity on carbon costs between domestic production subject to EU ETS and imports, it may, in isolation increase production cost resulting from the free allocation phase out for CBAM sectors.",
+          "source": "yara-integrated-report-2024.pdf, Page 94, Section: Sustainability statements - General information - Identification of impacts, risks and opportunities - Transitional climate risks",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies EU ETS and CBAM as 'Carbon pricing mechanisms' that are 'presenting both a risk and an opportunity' and specifically notes that CBAM 'may, in isolation increase production cost', directly linking these carbon costs to a financial risk for the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement explicitly identifies 'risk' and 'increase production cost' associated with carbon pricing mechanisms, clearly framing it as a threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'increase production cost' indicating a financial impact, but it does not provide any specific monetary values, classifying it as a partial-type financial disclosure.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The discussion of 'main regulations impacting Yara' and 'may, in isolation increase production cost' refers to current and anticipated future regulatory impacts, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "The main regulations impacting Yara are: Carbon pricing mechanisms, such as EU ETS and Carbon Border Adjustment Mechanism (CBAM), presenting both a risk and an opportunity. While CBAM aims at restoring parity on carbon costs between domestic production subject to EU ETS and imports, it may, in isolation increase production cost resulting from the free allocation phase out for CBAM sectors.",
+          "page": "yara-integrated-report-2024.pdf, Page 94, Section: Sustainability statements - General information - Identification of impacts, risks and opportunities - Transitional climate risks",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 contains v3 text (longer/more complete)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99904-003",
+          "quote": "Carbon pricing (transition risk): Policy and regulatory risk with potential to drive direct carbon costs",
+          "source": "yara-integrated-report-2024.pdf, Page 97, Section: Sustainability statements - General information - Material impacts, risks and opportunities - E1 Climate change table",
+          "financial_amounts": [],
+          "classification_justification": "This entry in the material impacts table directly identifies 'Carbon pricing' as a 'Policy and regulatory risk' that has the 'potential to drive direct carbon costs', explicitly linking it to a business risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The classification as 'transition risk' and 'potential to drive direct carbon costs' clearly frames this as a threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'direct carbon costs' indicating a financial impact, but it does not provide any specific monetary values, classifying it as a partial-type financial disclosure.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'potential to drive' indicates a forward-looking assessment of future impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Carbon pricing (transition risk): Policy and regulatory risk with potential to drive direct carbon costs",
+          "page": "yara-integrated-report-2024.pdf, Page 97, Section: Sustainability statements - General information - Material impacts, risks and opportunities - E1 Climate change table",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99904-004",
+          "quote": "Our business model is based on the production and delivery of mineral nitrogen fertilizers, which lead to significant GHG emission during their production and farmer infield application. Efforts to mitigate emissions, and support the decarbonization of crop production, are core elements of our strategy, driven by policy and regulatory developments, stakeholder expectations and our pursuit of market opportunities related to global climate action.",
+          "source": "yara-integrated-report-2024.pdf, Page 116, Section: Sustainability statements - Environmental information - E1 Climate change",
+          "financial_amounts": [],
+          "classification_justification": "This snippet acknowledges 'significant GHG emission during... farmer infield application' of its products and links mitigation efforts to 'policy and regulatory developments' and 'stakeholder expectations'. While not explicitly stating 'carbon costs' for customers as a direct business risk, it implies that unaddressed emissions from product use could lead to future regulatory or market pressures impacting the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement acknowledges 'significant GHG emission' from product use and links mitigation to 'policy and regulatory developments' and 'stakeholder expectations', implying a potential future threat if these emissions are not addressed.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure discusses GHG emissions and strategic responses driven by policy, but it does not provide any specific financial figures or explicit statements about financial materiality related to customer-use carbon costs.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The mention of 'policy and regulatory developments' and 'pursuit of market opportunities' related to global climate action indicates a forward-looking perspective on potential future impacts and strategic responses.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Our business model is based on the production and delivery of mineral nitrogen fertilizers, which lead to significant GHG emission during their production and farmer infield application. Efforts to mitigate emissions, and support the decarbonization of crop production, are core elements of our strategy, driven by policy and regulatory developments, stakeholder expectations and our pursuit of market opportunities related to global climate action.",
+          "page": "yara-integrated-report-2024.pdf, Page 116, Section: Sustainability statements - Environmental information - E1 Climate change",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99904-005",
+          "quote": "Yara makes use of an internal carbon price of USD 50 per tonne of CO2 in business case calculations where no carbon tax or carbon emission schemes are in place. The internal carbon price is embedded in Yara’s CVP. For projects executed in production sites subject to the EU emissions trading scheme (EU ETS), carbon price forecasts based on EU Allowances (EUAs) are utilized in business cases. For projects in Yara Pilbara and Yara Belle Plaine, carbon price forecasts from the carbon emission schemes in Australia and Canada, respectively, are used in business case calculations. Yara’s scope 1 emissions are 69 percent covered by regulated emission schemes. For scope 2, the majority of Yara’s emissions are also covered because the purchased electricity incorporates the carbon cost passed on by the electricity provider. For scope 3, no internal carbon price is applied.",
+          "source": "yara-integrated-report-2024.pdf, Page 132, Carbon Pricing Scheme",
+          "financial_amounts": [
+            "USD 50"
+          ],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes the company's internal carbon pricing mechanism factually. It acknowledges the topic of carbon costs but does not characterize them as a risk to the business. According to the definitions, this should be classified as 'UNCLEAR'.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure describes the company's current practices and policies regarding carbon pricing mechanisms and internal carbon pricing, presenting factual information without framing it as a clear risk or opportunity.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet provides a specific monetary value ('USD 50 per tonne of CO2') for its internal carbon price and discusses carbon costs for scope 1 and 2 emissions, indicating a financial impact. It also explicitly states the absence of an internal carbon price for scope 3, which is a financial-type statement, but it does not provide an overall financial materiality statement for the business.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The language describes current practices and policies ('Yara makes use', 'is embedded', 'are utilized', 'is applied'), indicating a present-day timeframe.",
+            "timeframe": "Present day"
+          },
+          "text": "Yara makes use of an internal carbon price of USD 50 per tonne of CO2 in business case calculations where no carbon tax or carbon emission schemes are in place. The internal carbon price is embedded in Yara’s CVP. For projects executed in production sites subject to the EU emissions trading scheme (EU ETS), carbon price forecasts based on EU Allowances (EUAs) are utilized in business cases. For projects in Yara Pilbara and Yara Belle Plaine, carbon price forecasts from the carbon emission schemes in Australia and Canada, respectively, are used in business case calculations. Yara’s scope 1 emissions are 69 percent covered by regulated emission schemes. For scope 2, the majority of Yara’s emissions are also covered because the purchased electricity incorporates the carbon cost passed on by the electricity provider. For scope 3, no internal carbon price is applied.",
+          "page": "132",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99904-006",
+          "quote": "For scope 3, no internal carbon price is applied.",
+          "source": "yara-integrated-report-2024.pdf, Page 132, Section: Sustainability statements - Environmental information - E1 Climate change - Carbon Pricing Scheme",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states a fact ('no internal carbon price is applied') but does not characterize whether Scope 3 emissions are considered a risk or not. The company is silent on the risk framing. Therefore, the classification should be UNCLEAR, as the topic is acknowledged but not characterized as a business risk.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "This is a factual statement about the company's current financial accounting practices regarding Scope 3 emissions, indicating a neutral framing of this specific aspect.",
+            "framing": "Neutral",
+            "financial_justification": "The statement explicitly refers to 'carbon price' and its non-application, which is a financial concept, but it does not provide any monetary values, making it a non-financial disclosure about a financial type of risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes the company's current policy and practice ('no internal carbon price is applied') as of the reporting date, indicating a present-day timeframe.",
+            "timeframe": "Present day"
+          },
+          "text": "For scope 3, no internal carbon price is applied.",
+          "page": "yara-integrated-report-2024.pdf, Page 132, Section: Sustainability statements - Environmental information - E1 Climate change - Carbon Pricing Scheme",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 6
+        }
+      ],
+      "summary": "Yes, Yara explicitly discloses that carbon costs from its direct operations are a significant business risk, stating it may \"divest or close assets if the cost of CO2 emissions is expected to result in insufficient shareholder returns.\" The company identifies carbon pricing mechanisms like EU ETS and CBAM as policy risks that can \"increase production cost.\" However, for carbon costs arising from the use of its products by customers (Scope 3), Yara states that \"no internal carbon price is applied,\" indicating this is not currently treated as a direct financial risk to the business.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 6,
+        "merged_snippets": 6,
+        "snippet_pairs": 6,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99907",
+      "question_number": 4,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99907-001",
+          "quote": "There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "source": "yara-integrated-report-2024.pdf, Page 67, Section: Strategy and governance - Risk management - Planet risks table",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states that regulations concerning fertilizer application 'could impact Yara’s earnings'. A direct link to 'earnings' is an explicit statement of financial materiality, even without a specific dollar amount. According to the definitions, this warrants a FULL_DISCLOSURE classification, not PARTIAL.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'could impact Yara’s earnings and its license to operate' clearly frames the increasing regulations as a potential threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure indicates a potential financial impact ('impact Yara’s earnings') but does not provide any specific monetary values, classifying it as a partial-type financial disclosure.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'increasing trend' and 'could impact' indicates a forward-looking perspective on potential future regulatory changes and their consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "page": "yara-integrated-report-2024.pdf, Page 67, Section: Strategy and governance - Risk management - Planet risks table",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99907-002",
+          "quote": "E2 Pollution: Pollution of water: Emissions of nitrogen to water in use of products: Emission and leaching of nitrogen from fertilizer storage and application in the field",
+          "source": "yara-integrated-report-2024.pdf, Page 98, Material impacts, risks and opportunities",
+          "financial_amounts": [],
+          "classification_justification": "This snippet, from the 'Material impacts, risks and opportunities' table, explicitly identifies 'Emission and leaching of nitrogen from fertilizer storage and application in the field' as a negative impact under 'Pollution of water'. This directly addresses waterway pollution and contamination from leaching of applied products as a negative impact (risk), but it does not provide any statement on financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure is listed under 'Material impacts, risks and opportunities' and explicitly states 'negative impact', clearly framing the issue as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes a negative environmental impact but does not provide any quantifiable financial figures or a statement regarding the financial materiality of this impact to the business.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The impact is described as an ongoing consequence of 'fertilizer storage and application in the field', indicating a present-day timeframe.",
+            "timeframe": "Present day"
+          },
+          "text": "E2 Pollution: Pollution of water: Emissions of nitrogen to water in use of products: Emission and leaching of nitrogen from fertilizer storage and application in the field",
+          "page": "98",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99907-003",
+          "quote": "Impacts from nutrient pollution: Impacts from nutrient pollution due to overapplication of fertilizer in agricultural systems",
+          "source": "yara-integrated-report-2024.pdf, Page 98, Section: Sustainability statements - General information - Material impacts, risks and opportunities - E4 Biodiversity and ecosystems table",
+          "financial_amounts": [],
+          "classification_justification": "This entry identifies 'Impacts from nutrient pollution due to overapplication of fertilizer' as a 'Potential negative impact', which includes waterway contamination from leaching, thus recognizing it as an environmental risk associated with product use.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The classification as a 'Potential negative impact' clearly frames nutrient pollution from fertilizer overapplication as a source of harm and negative consequences.",
+            "framing": "Risk",
+            "financial_justification": "This is a qualitative identification of a potential negative impact without any explicit financial figures or statements about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The term 'Potential negative impact' indicates a forward-looking perspective on possible future environmental consequences.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Impacts from nutrient pollution: Impacts from nutrient pollution due to overapplication of fertilizer in agricultural systems",
+          "page": "yara-integrated-report-2024.pdf, Page 98, Section: Sustainability statements - General information - Material impacts, risks and opportunities - E4 Biodiversity and ecosystems table",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        }
+      ],
+      "summary": "Yes, Yara discloses that waterway pollution and contamination from the leaching of applied products is a risk to the business, representing a FULL_DISCLOSURE. The company identifies \"Emission and leaching of nitrogen\" into water and \"nutrient pollution due to overapplication of fertilizer\" as material negative impacts. Furthermore, Yara acknowledges that stricter environmental regulations concerning fertilizer application could negatively impact its earnings and license to operate.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 3,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99907-001",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet discloses that regulations addressing 'environmental (non-GHG) aspects' of fertilizer application are a risk to the business. This directly relates to waterway pollution and contamination from leaching, which are primary environmental impacts of fertilizer.",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99908",
+      "question_number": 5,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99908-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Yara does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99909",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+      "disclosures": [
+        {
+          "snippet_id": "99909-001",
+          "quote": "Regulatory framework for production, handling and application of products: There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "source": "yara-integrated-report-2024.pdf, Page 67, Risk factors and responses, Planet risks",
+          "financial_amounts": [],
+          "classification_justification": "This snippet clearly identifies 'stricter governmental regulations affecting the entire value chain, including the... application of fertilizer' as a risk. It explicitly states that 'Such regulations could impact Yara’s earnings and its license to operate', directly linking potential regulatory changes related to fertilizer application (which would include nutrient runoff) to business consequences. However, it does not provide specific financial figures or a definitive statement of financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'increasing trend of stricter governmental regulations' and 'could impact Yara’s earnings and its license to operate' clearly frames this as a potential negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'earnings' and 'license to operate' as potential impacts, which are financial in nature, but it does not provide any specific monetary values or state whether the risk is financially material or immaterial.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'increasing trend' and 'could impact' indicates that the risk and its consequences are anticipated future events or developments.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Regulatory framework for production, handling and application of products: There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "page": "67",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99909-002",
+          "quote": "Emissions of nitrogen to water in use of products",
+          "source": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution table",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'Emissions of nitrogen to water in use of products' as an 'Actual negative impact' in the downstream value chain. An actual negative impact is a clear form of business risk, indicating that the company acknowledges this issue as a current concern.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure frames 'Emissions of nitrogen to water in use of products' as an 'Actual negative impact', which inherently presents it as a negative consequence or threat to the environment and, by extension, the business's license to operate and reputation.",
+            "framing": "Risk",
+            "financial_justification": "The snippet identifies an actual negative impact but does not provide any explicit financial figures or a statement about its financial materiality to the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The classification as 'Actual negative impact' and the associated time horizon of '0-1 year' indicate that this is a current, ongoing issue impacting the company at the time of reporting.",
+            "timeframe": "Present day"
+          },
+          "text": "Emissions of nitrogen to water in use of products",
+          "page": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution table",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99909-003",
+          "quote": "Impacts from nutrient pollution",
+          "source": "yara-integrated-report-2024.pdf, Page 98, E4 Biodiversity and ecosystems table",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'Impacts from nutrient pollution' as an 'Actual negative impact' in the downstream value chain. This directly relates to the question of eutrophication from nutrient runoff and acknowledges it as a current business concern.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure frames 'Impacts from nutrient pollution' as an 'Actual negative impact', clearly presenting it as a negative consequence or threat to biodiversity and ecosystems, which can lead to business risks.",
+            "framing": "Risk",
+            "financial_justification": "The snippet identifies an actual negative impact but does not provide any explicit financial figures or a statement about its financial materiality to the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The classification as 'Actual negative impact' and the associated time horizon of '0-1 year' indicate that this is a current, ongoing issue impacting the company at the time of reporting.",
+            "timeframe": "Present day"
+          },
+          "text": "Impacts from nutrient pollution",
+          "page": "yara-integrated-report-2024.pdf, Page 98, E4 Biodiversity and ecosystems table",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99909-005",
+          "quote": "Nitrogen use efficiency (NUE) is a key metric to describe how effectively crops utilize nitrogen from fertilizers. Improved NUE is achievable with existing fertilizers, farming technologies and knowledge, and can support higher yields, lower crop carbon footprints and reduced pressure on land-use change. Reducing the nitrogen surplus is also in line with the EU Green Deal and the Kunming Montreal Global Biodiversity Framework.",
+          "source": "yara-integrated-report-2024.pdf, Page 125, E1 Climate change, Nitrogen use efficiency",
+          "financial_amounts": [],
+          "classification_justification": "This snippet discusses 'Reducing the nitrogen surplus' as being 'in line with the EU Green Deal and the Kunming Montreal Global Biodiversity Framework', implying that a nitrogen surplus (which contributes to eutrophication) is an issue that needs to be addressed due to regulatory and environmental frameworks. This acknowledges the underlying problem that poses a risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement frames 'Reducing the nitrogen surplus' as a positive action aligned with environmental frameworks, implying that the surplus itself is a negative issue or risk that needs to be mitigated.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure discusses an environmental issue and its alignment with regulatory frameworks but does not provide any explicit financial figures or a statement about its financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The discussion of 'reducing the nitrogen surplus' and its alignment with current environmental frameworks indicates an ongoing and forward-looking effort to address a present-day issue.",
+            "timeframe": "Present day"
+          },
+          "text": "Nitrogen use efficiency (NUE) is a key metric to describe how effectively crops utilize nitrogen from fertilizers. Improved NUE is achievable with existing fertilizers, farming technologies and knowledge, and can support higher yields, lower crop carbon footprints and reduced pressure on land-use change. Reducing the nitrogen surplus is also in line with the EU Green Deal and the Kunming Montreal Global Biodiversity Framework.",
+          "page": "yara-integrated-report-2024.pdf, Page 125, E1 Climate change, Nitrogen use efficiency",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99909-006",
+          "quote": "IRO: Emissions of nitrogen to water in use of products. Emission and leaching of nitrogen from fertilizer storage and application in the field.",
+          "source": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution, Material impacts, risks and opportunities table",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies a negative environmental impact from product use but does not state or imply that this impact constitutes a risk to the business itself. It only describes an external environmental consequence. According to the definitions, this should be classified as UNCLEAR (topic acknowledged but not characterized as a business risk).",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The IRO table explicitly labels this as a 'Negative impact', indicating a detrimental effect on the environment, which aligns with a risk framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes an environmental impact without providing any explicit financial figures or making a statement about its financial materiality to the business.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of 'Emission and leaching' uses present tense, indicating an ongoing process or condition related to the current use of products.",
+            "timeframe": "Present day"
+          },
+          "text": "IRO: Emissions of nitrogen to water in use of products. Emission and leaching of nitrogen from fertilizer storage and application in the field.",
+          "page": "98",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 6
+        },
+        {
+          "snippet_id": "99909-007",
+          "quote": "IRO: Impacts from nutrient pollution. Impacts from nutrient pollution due to overapplication of fertilizer in agricultural systems.",
+          "source": "yara-integrated-report-2024.pdf, Page 98, E4 Biodiversity and ecosystems, Material impacts, risks and opportunities table",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] Similar to the previous snippet, this one identifies a negative environmental impact ('Impacts from nutrient pollution') but does not characterize it as a risk to the business. It describes an external impact without linking it to potential consequences for the company. This fits the definition of UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The IRO table explicitly labels this as a 'Negative impact', indicating a detrimental effect on the environment, which aligns with a risk framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes an environmental impact without providing any explicit financial figures or making a statement about its financial materiality to the business.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of 'Impacts from nutrient pollution due to overapplication' refers to ongoing effects from current agricultural practices.",
+            "timeframe": "Present day"
+          },
+          "text": "IRO: Impacts from nutrient pollution. Impacts from nutrient pollution due to overapplication of fertilizer in agricultural systems.",
+          "page": "98",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 7
+        },
+        {
+          "snippet_id": "99909-008",
+          "quote": "Release of different pollutants into air, water and soil occurs throughout our value chain, from mining of minerals and extraction of natural gas, via the production and distribution of fertilizer and chemicals, to final application.",
+          "source": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet acknowledges pollution from product application but does not characterize it as a business risk. It is a neutral, factual statement. This fits the definition of UNCLEAR: 'Topic acknowledged but NOT characterized as a business risk'.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The statement describes the 'release of different pollutants' as occurring throughout the value chain, which is a factual description of a negative environmental impact, thus framing it as a risk.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure describes a source of pollution but does not provide any explicit financial figures or a statement about its financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'occurs' in the present tense indicates that this is an ongoing condition or activity at the time of reporting.",
+            "timeframe": "Present day"
+          },
+          "text": "Release of different pollutants into air, water and soil occurs throughout our value chain, from mining of minerals and extraction of natural gas, via the production and distribution of fertilizer and chemicals, to final application.",
+          "page": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 8
+        }
+      ],
+      "summary": "Yes, with high confidence. Yara acknowledges that nutrient runoff from the use of its products is a business risk, identifying 'Emissions of nitrogen to water in use of products' and 'Impacts from nutrient pollution' as material issues. The company explicitly states that stricter governmental regulations on fertilizer application could negatively impact its earnings and license to operate, framing this as a key 'nature and ecosystem-related risk.'",
+      "merger_stats": {
+        "v3_snippets": 3,
+        "v4_snippets": 5,
+        "merged_snippets": 8,
+        "snippet_pairs": 8,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "needs_attention",
+        "summary": "1 snippet(s) removed after high-confidence review.",
+        "decisions": [
+          {
+            "snippet_id": "99909-001",
+            "belongs": true,
+            "confidence": 0.9,
+            "rationale": "The snippet discusses the risk from stricter regulations on the \"application of fertilizer\" due to \"environmental (non-GHG) aspects\", which is the mechanism through which nutrient runoff becomes a business risk.",
+            "action": "kept"
+          },
+          {
+            "snippet_id": "99909-004",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet makes a general statement that the company's agricultural activities affect water through potential pollution. It does not specifically mention 'eutrophication' or 'nutrient runoff' from product application by farmers as a risk to the business.",
+            "action": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99910",
+      "question_number": 2,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that disposal of chemical waste, such as gypstacks, from the production of phosphate fertiliser is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99910-001",
+          "quote": "In 2024, Yara generated 1,000 thousand tonnes of non-hazardous waste and 100 thousand tonnes of hazardous waste. The majority of non-hazardous waste consists of construction and demolition materials, while hazardous waste includes catalysts, sludges, and other chemical residues from production processes. We are exploring opportunities to valorize by-products and secondary materials, such as gypsum from phosphate production, to reduce waste and promote circularity. For example, we are investigating the potential to use gypsum in construction materials or as a soil amendment. These initiatives are part of our broader commitment to resource efficiency and circular economy principles.",
+          "source": "yara-integrated-report-2024.pdf, Page 153, E5 Resource use and circular economy, Waste management",
+          "financial_amounts": [],
+          "classification_justification": "The snippet acknowledges the generation of 'hazardous waste' including 'chemical residues from production processes' and specifically mentions 'gypsum from phosphate production'. It discusses 'exploring opportunities to valorize by-products' and 'reduce waste and promote circularity'. While this demonstrates awareness of the waste and efforts to manage it, it does not explicitly characterize the *disposal* of this specific waste (like gypstacks) as a *risk to the business*. The focus is on management and opportunity rather than explicit risk disclosure.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language is descriptive, providing factual information about waste generation and management. It also highlights 'exploring opportunities to valorize by-products' and 'promote circularity', which leans towards an opportunity framing rather than a direct risk.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet provides quantitative data on waste volumes but does not include any explicit financial figures or statements of financial materiality related to the disposal of this waste as a business risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet refers to waste generated 'in 2024' and ongoing activities like 'exploring opportunities' and 'investigating the potential', indicating a present-day and forward-looking perspective.",
+            "timeframe": "Present day"
+          },
+          "text": "In 2024, Yara generated 1,000 thousand tonnes of non-hazardous waste and 100 thousand tonnes of hazardous waste. The majority of non-hazardous waste consists of construction and demolition materials, while hazardous waste includes catalysts, sludges, and other chemical residues from production processes. We are exploring opportunities to valorize by-products and secondary materials, such as gypsum from phosphate production, to reduce waste and promote circularity. For example, we are investigating the potential to use gypsum in construction materials or as a soil amendment. These initiatives are part of our broader commitment to resource efficiency and circular economy principles.",
+          "page": "153",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "No. Based on the provided text, Yara discloses the generation of hazardous waste, including chemical residues and gypsum from phosphate production, but does not explicitly identify the disposal of this waste as a business risk. The company frames its efforts in the context of waste management and exploring opportunities for circularity.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99911",
+      "question_number": 3,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99911-001",
+          "quote": "Yara has provisions for environmental restoration and remediation costs related to its production sites and mining operations. These provisions are recognized when there is a present legal or constructive obligation as a result of past events, it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation, and a reliable estimate can be made of the amount of the obligation. The provisions are measured at the present value of the expenditures expected to be required to settle the obligation, using a pre-tax rate that reflects current market assessments of the time value of money and the risks specific to the obligation. The carrying amount of environmental provisions was USD 180 million as of 31 December 2024 (2023: USD 175 million).",
+          "source": "yara-integrated-report-2024.pdf, Page 223, Note 1.3 Environmental impacts and dependencies",
+          "financial_amounts": [
+            "USD 180 million",
+            "USD 175 million"
+          ],
+          "classification_justification": "This snippet explicitly states that Yara has 'provisions for environmental restoration and remediation costs related to its production sites and mining operations' and provides a specific, quantifiable financial amount of 'USD 180 million' for these provisions. This clearly identifies the restoration of mining sites as a financially material risk to the business.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'provisions for environmental restoration and remediation costs' and 'outflow of resources embodying economic benefits will be required to settle the obligation' clearly frames this as a negative financial obligation and a business risk.",
+            "framing": "Risk",
+            "financial_justification": "An explicit, quantifiable financial value of 'USD 180 million' is provided for the provisions related to environmental restoration and remediation costs, directly addressing the financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement 'The carrying amount of environmental provisions was USD 180 million as of 31 December 2024' indicates a current, present-day financial obligation, even though the actual restoration work may extend into the future.",
+            "timeframe": "Present day"
+          },
+          "text": "Yara has provisions for environmental restoration and remediation costs related to its production sites and mining operations. These provisions are recognized when there is a present legal or constructive obligation as a result of past events, it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation, and a reliable estimate can be made of the amount of the obligation. The provisions are measured at the present value of the expenditures expected to be required to settle the obligation, using a pre-tax rate that reflects current market assessments of the time value of money and the risks specific to the obligation. The carrying amount of environmental provisions was USD 180 million as of 31 December 2024 (2023: USD 175 million).",
+          "page": "223",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 2,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "needs_attention",
+        "summary": "2 snippet(s) removed after high-confidence review.",
+        "decisions": [
+          {
+            "snippet_id": "99911-001",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet explicitly discloses provisions for 'environmental restoration and remediation costs related to its... mining operations,' which acknowledges a financial obligation and therefore a risk to the business.",
+            "action": "kept"
+          },
+          {
+            "snippet_id": "99911-002",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet discloses a provision for general environmental clean-up and restoration costs, but does not specify that these relate to 'mining sites' nor does it frame them as a 'risk to the business'.",
+            "action": "removed"
+          },
+          {
+            "snippet_id": "99911-003",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet discusses obligations to restore sites where operations have been conducted, but it does not specify that these are mining sites.",
+            "action": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99912",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99912-001",
+          "quote": "Product portfolio exposure to regulatory changes: Yara has a moderate appetite for exposure to incompliance with regulatory requirements impacting the product portfolio in our value chain, and proactively seeks to reduce exposure to operational, commercial and financial consequences. Yara will liaise with regulatory bodies and industry associations to adapt and adhere to stricter regulations.",
+          "source": "yara-integrated-report-2024.pdf, Page 64, Risk management, Risk appetite areas",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'regulatory requirements impacting the product portfolio' as a risk, stating that Yara 'proactively seeks to reduce exposure to operational, commercial and financial consequences'. This directly addresses the potential for product bans or restrictions and their business impact, but it does not provide specific financial figures or a definitive statement of financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'exposure to incompliance with regulatory requirements impacting the product portfolio' and the mention of 'operational, commercial and financial consequences' clearly frames this as a potential negative impact or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'financial consequences' but does not provide any specific monetary values or state whether the risk is financially material or immaterial.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement refers to 'regulatory changes' and 'stricter regulations' that Yara 'proactively seeks to reduce exposure to', indicating a forward-looking perspective on potential future developments.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Product portfolio exposure to regulatory changes: Yara has a moderate appetite for exposure to incompliance with regulatory requirements impacting the product portfolio in our value chain, and proactively seeks to reduce exposure to operational, commercial and financial consequences. Yara will liaise with regulatory bodies and industry associations to adapt and adhere to stricter regulations.",
+          "page": "64",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99912-002",
+          "quote": "Regulatory framework for production, handling and application of products: There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "source": "yara-integrated-report-2024.pdf, Page 67, Risk factors and responses, Planet risks",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies an 'increasing trend of stricter governmental regulations affecting the entire value chain, including the production... of fertilizer'. It explicitly states that 'Such regulations could impact Yara’s earnings and its license to operate', which encompasses the risk of products being banned or restricted. However, it does not provide specific financial figures or a definitive statement of financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'increasing trend of stricter governmental regulations' and 'could impact Yara’s earnings and its license to operate' frames this as a potential negative business outcome or threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'earnings' and 'license to operate' as potential impacts, which are financial in nature, but it does not provide any specific monetary values or state whether the risk is financially material or immaterial.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'increasing trend' and 'could impact' indicates that the risk and its consequences are anticipated future events or developments.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Regulatory framework for production, handling and application of products: There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "page": "67",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99912-003",
+          "quote": "Substances of concern: Certain essential micronutrients in our products fall under the definition of substances of concern",
+          "source": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution table",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet makes a factual statement that products contain 'substances of concern'. It acknowledges the topic but does not explicitly characterize it as a business risk within the quoted text. The risk is implied, which fits the definition of UNCLEAR, not PARTIAL.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure frames the presence of 'substances of concern' in products as an 'Actual negative impact', which inherently presents it as a negative characteristic that could lead to regulatory challenges and business risks.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet identifies an actual negative impact but does not provide any explicit financial figures or a statement about its financial materiality to the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The classification as 'Actual negative impact' and the associated time horizon of '0-1 year' indicate that this is a current, ongoing issue impacting the company at the time of reporting.",
+            "timeframe": "Present day"
+          },
+          "text": "Substances of concern: Certain essential micronutrients in our products fall under the definition of substances of concern",
+          "page": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution table",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99912-004",
+          "quote": "Substances of very high concern: Certain essential micronutrients in our products fall under the definition of substances of very high concern",
+          "source": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution table",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] Similar to the previous snippet, this is a factual statement acknowledging the presence of 'substances of very high concern'. While the risk is strongly implied, the snippet itself does not explicitly frame it as a business risk, which is the definition of an UNCLEAR disclosure.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure frames the presence of 'substances of very high concern' in products as an 'Actual negative impact', which inherently presents it as a negative characteristic that could lead to severe regulatory challenges and business risks.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet identifies an actual negative impact but does not provide any explicit financial figures or a statement about its financial materiality to the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The classification as 'Actual negative impact' and the associated time horizon of '0-1 year' indicate that this is a current, ongoing issue impacting the company at the time of reporting.",
+            "timeframe": "Present day"
+          },
+          "text": "Substances of very high concern: Certain essential micronutrients in our products fall under the definition of substances of very high concern",
+          "page": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution table",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        }
+      ],
+      "summary": "Yes, Yara explicitly discloses that stricter governmental regulations could impact its \"license to operate,\" directly acknowledging the risk of its products being banned from production or sale. The company links this risk to its product portfolio, which contains \"substances of concern\" and \"substances of very high concern,\" and states it has a moderate appetite for exposure to incompliance with regulations that could have operational, commercial, and financial consequences.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 4,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99912-002",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet explicitly states that stricter regulations could impact the company's \"license to operate\", which directly addresses the risk of being banned from producing or selling products.",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99913",
+      "question_number": 5,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99913-002",
+          "quote": "Yara has provisions for environmental restoration and remediation costs related to its production sites and mining operations. These provisions are recognized when there is a present legal or constructive obligation as a result of past events, it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation, and a reliable estimate can be made of the amount of the obligation. The provisions are measured at the present value of the expenditures expected to be required to settle the obligation, using a pre-tax rate that reflects current market assessments of the time value of money and the risks specific to the obligation. The carrying amount of environmental provisions was USD 180 million as of 31 December 2024 (2023: USD 175 million).",
+          "source": "yara-integrated-report-2024.pdf, Page 223, Note 1.3 Environmental impacts and dependencies",
+          "financial_amounts": [
+            "USD 180 million",
+            "USD 175 million"
+          ],
+          "classification_justification": "This snippet explicitly states that Yara has 'provisions for environmental restoration and remediation costs related to its production sites' and provides a specific, quantifiable financial amount of 'USD 180 million' for these provisions. This clearly identifies the restoration of contaminated manufacturing sites as a financially material risk to the business.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'provisions for environmental restoration and remediation costs' and 'outflow of resources embodying economic benefits will be required to settle the obligation' clearly frames this as a negative financial obligation and a business risk.",
+            "framing": "Risk",
+            "financial_justification": "An explicit, quantifiable financial value of 'USD 180 million' is provided for the provisions related to environmental restoration and remediation costs, directly addressing the financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement 'The carrying amount of environmental provisions was USD 180 million as of 31 December 2024' indicates a current, present-day financial obligation, even though the actual restoration work may extend into the future.",
+            "timeframe": "Present day"
+          },
+          "text": "Yara has provisions for environmental restoration and remediation costs related to its production sites and mining operations. These provisions are recognized when there is a present legal or constructive obligation as a result of past events, it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation, and a reliable estimate can be made of the amount of the obligation. The provisions are measured at the present value of the expenditures expected to be required to settle the obligation, using a pre-tax rate that reflects current market assessments of the time value of money and the risks specific to the obligation. The carrying amount of environmental provisions was USD 180 million as of 31 December 2024 (2023: USD 175 million).",
+          "page": "223",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99913-004",
+          "quote": "Yara aims to prevent soil pollution from its operations and to remediate any contaminated sites. We manage soil pollution risks through our HESQ management system, which includes regular inspections, risk assessments, and emergency response plans. We also invest in infrastructure upgrades and process improvements to minimize the risk of spills and leaks. In 2024, there were no significant soil contamination incidents reported at Yara’s production sites. We have identified several historical contaminated sites that require remediation, and we have established provisions for these costs. The remediation efforts are ongoing, and we continuously monitor the progress and effectiveness of these activities. Our long-term goal is to achieve zero soil contamination from our operations.",
+          "source": "yara-integrated-report-2024.pdf, Page 140, E2 Pollution, Soil pollution",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that Yara 'aims to... remediate any contaminated sites' and has 'identified several historical contaminated sites that require remediation, and we have established provisions for these costs'. This clearly identifies the restoration of contaminated manufacturing sites as a business obligation with associated costs, indicating it as a risk. However, it does not provide specific financial figures for these provisions within this snippet.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'prevent soil pollution', 'remediate any contaminated sites', 'manage soil pollution risks', and 'established provisions for these costs' frames this as a challenge and an obligation to mitigate negative impacts, aligning with a risk framing.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'established provisions for these costs', indicating a financial impact, but it does not provide the actual monetary value in this specific snippet.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The snippet refers to 'historical contaminated sites' (backward-looking), 'remediation efforts are ongoing' (present day), and a 'long-term goal' (forward-looking), thus covering multiple timeframes.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Yara aims to prevent soil pollution from its operations and to remediate any contaminated sites. We manage soil pollution risks through our HESQ management system, which includes regular inspections, risk assessments, and emergency response plans. We also invest in infrastructure upgrades and process improvements to minimize the risk of spills and leaks. In 2024, there were no significant soil contamination incidents reported at Yara’s production sites. We have identified several historical contaminated sites that require remediation, and we have established provisions for these costs. The remediation efforts are ongoing, and we continuously monitor the progress and effectiveness of these activities. Our long-term goal is to achieve zero soil contamination from our operations.",
+          "page": "140",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99913-005",
+          "quote": "Pollution of soil: Soil contamination in production",
+          "source": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution table",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'Soil contamination in production' as an 'Actual negative impact'. This is a direct risk related to manufacturing sites, as 'production' activities can lead to soil contamination requiring restoration.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure frames 'Soil contamination in production' as an 'Actual negative impact', which inherently presents it as a negative consequence or threat to the environment and, by extension, the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet identifies an actual negative impact but does not provide any explicit financial figures or a statement about its financial materiality to the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The classification as 'Actual negative impact' and the associated time horizon of '0-1 year' indicate that this is a current, ongoing issue impacting the company at the time of reporting.",
+            "timeframe": "Present day"
+          },
+          "text": "Pollution of soil: Soil contamination in production",
+          "page": "yara-integrated-report-2024.pdf, Page 98, E2 Pollution table",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        }
+      ],
+      "summary": "Yes, Yara fully discloses the restoration of contaminated manufacturing sites as a risk, acknowledging its legal and policy obligations to clean up and restore sites where it has operated. The company quantifies this risk by recognizing a financial provision of USD 180 million for environmental clean-up and restoration costs for sites with identified contamination, and also lists 'Soil contamination in production' as a pollution issue.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 3,
+        "merged_snippets": 5,
+        "snippet_pairs": 5,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "needs_attention",
+        "summary": "2 snippet(s) removed after high-confidence review.",
+        "decisions": [
+          {
+            "snippet_id": "99913-001",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet discusses obligations to restore contaminated sites, but it does not specify that these are manufacturing sites.",
+            "action": "removed"
+          },
+          {
+            "snippet_id": "99913-002",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet discloses provisions for 'environmental restoration and remediation costs related to its production sites,' which are synonymous with manufacturing sites, thereby acknowledging the financial risk of their restoration.",
+            "action": "kept"
+          },
+          {
+            "snippet_id": "99913-003",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet discloses a provision for general environmental clean-up and restoration costs, but does not specify that these relate to 'manufacturing sites' nor does it frame them as a 'risk to the business'.",
+            "action": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99915",
+      "question_number": 1,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99915-001",
+          "quote": "Regulatory framework for production, handling and application of products There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "source": "yara-integrated-report-2024.pdf, Page 67, Risk management",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'stricter governmental regulations' could 'impact Yara’s earnings and its license to operate.' This clearly identifies the topic as a risk to the business and mentions 'earnings' which implies financial significance, but it does not provide a definitive statement about its financial materiality (e.g., 'material risk' or 'immaterial'). It describes a potential impact on earnings without quantifying it or explicitly stating its materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language emphasizes 'stricter governmental regulations' and 'could impact Yara’s earnings and its license to operate,' clearly framing this as a potential negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'impact Yara's earnings' which indicates a financial impact, but it does not provide any specific quantifiable financial figures or explicitly state financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'increasing trend of stricter governmental regulations' and 'could impact Yara's earnings' indicates an ongoing trend and potential future impacts, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Regulatory framework for production, handling and application of products There is an increasing trend of stricter governmental regulations affecting the entire value chain, including the production, distribution, storage, and application of fertilizer. These regulations address both environmental (non-GHG) aspects and the safety of handling and applying fertilizer. Such regulations could impact Yara’s earnings and its license to operate.",
+          "page": "67",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99915-002",
+          "quote": "Product portfolio exposure to regulatory changes Yara has a moderate appetite for exposure to incompliance with regulatory requirements impacting the product portfolio in our value chain, and proactively seeks to reduce exposure to operational, commercial and financial consequences. Yara will liaise with regulatory bodies and industry associations to adapt and adhere to stricter regulations.",
+          "source": "yara-integrated-report-2024.pdf, Page 64, Risk management",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'regulatory changes' as a risk ('exposure to incompliance') and explicitly mentions 'financial consequences,' indicating a clear link to business impact. However, it does not provide a definitive statement about the financial materiality of this risk (e.g., 'material risk' or 'immaterial'), only that it seeks to reduce exposure to such consequences.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'exposure to incompliance with regulatory requirements' and 'reduce exposure to operational, commercial and financial consequences' clearly frames this as a potential negative consequence or threat.",
+            "framing": "Risk",
+            "financial_justification": "The snippet explicitly mentions 'financial consequences' but does not provide any specific monetary values or state whether the risk is financially material or immaterial.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'regulatory changes' and 'adapt and adhere to stricter regulations' implies an ongoing and future-oriented nature of these changes and the company's response.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Product portfolio exposure to regulatory changes Yara has a moderate appetite for exposure to incompliance with regulatory requirements impacting the product portfolio in our value chain, and proactively seeks to reduce exposure to operational, commercial and financial consequences. Yara will liaise with regulatory bodies and industry associations to adapt and adhere to stricter regulations.",
+          "page": "64",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99915-003",
+          "quote": "The main impacts arise from different climate regulations which, while imposing additional costs, can trigger demand for low-carbon products.",
+          "source": "yara-integrated-report-2024.pdf, Page 94, Transitional climate risks",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly states that 'different climate regulations' are 'imposing additional costs,' which is a form of rising compliance cost. While specific to climate regulations, it confirms the company's awareness of increasing regulatory costs as a business impact.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'imposing additional costs' frames this as a negative consequence or burden on the business, indicating a risk framing.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'additional costs,' which is a financial impact, but it does not provide any specific monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement refers to impacts that 'arise from different climate regulations,' implying an ongoing or future effect of these regulations.",
+            "timeframe": "Present day"
+          },
+          "text": "The main impacts arise from different climate regulations which, while imposing additional costs, can trigger demand for low-carbon products.",
+          "page": "yara-integrated-report-2024.pdf, Page 94, Transitional climate risks",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        }
+      ],
+      "summary": "Yes, Yara discloses that rising costs from stricter governmental regulations are a risk to its business. The company notes an increasing trend of regulations, including climate-related ones, which impose 'additional costs' and could have 'financial consequences' that impact earnings. While acknowledging these costs, Yara does not quantify them and also notes that climate regulations can trigger demand for its low-carbon products.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 2,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99916",
+      "question_number": 2,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99916-001",
+          "quote": "Detecting and monitoring direct or indirect protests against Yara and/or Yara value chains",
+          "source": "yara-integrated-report-2024.pdf, Page 68, Geopolitical risk and competitive position",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly mentions 'protests against Yara and/or Yara value chains' as something the company detects and monitors. Protests are a direct manifestation of negative public perception, indicating that the company views such perception as a risk requiring monitoring.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The act of 'Detecting and monitoring direct or indirect protests' implies that these events are considered negative or threatening to the company's operations or reputation, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet does not contain any explicit financial amounts or statements of financial materiality, focusing on the qualitative aspect of monitoring protests.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'Detecting and monitoring' implies an ongoing activity in the present day, addressing current and potential future events.",
+            "timeframe": "Present day"
+          },
+          "text": "Detecting and monitoring direct or indirect protests against Yara and/or Yara value chains",
+          "page": "yara-integrated-report-2024.pdf, Page 68, Geopolitical risk and competitive position",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "Yes, Yara acknowledges risks related to public perception by disclosing that it monitors \"direct or indirect protests against Yara and/or Yara value chains.\" This monitoring activity indicates that the company views organized negative public sentiment as a potential threat requiring management, which is a direct manifestation of the risk in question.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99917",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99917-001",
+          "quote": "Health and safety: Exposure to health and safety risk during handling, storage, use, and transportation of products",
+          "source": "yara-integrated-report-2024.pdf, Page 101, S4 Consumers and end-users",
+          "financial_amounts": [],
+          "classification_justification": "This snippet from the IRO table explicitly identifies 'Exposure to health and safety risk during handling, storage, use, and transportation of products' as a potential negative impact. This is the direct underlying risk that could lead to health claims and subsequent lawsuits.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'Exposure to health and safety risk' clearly frames this as a potential negative consequence or threat to consumers and end-users, which in turn poses a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "This snippet describes a non-financial risk (health and safety exposure) without providing any monetary values or explicit statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The IRO table indicates a '0-1 year' time horizon for this potential negative impact, making it present day/short-term forward-looking.",
+            "timeframe": "Present day"
+          },
+          "text": "Health and safety: Exposure to health and safety risk during handling, storage, use, and transportation of products",
+          "page": "yara-integrated-report-2024.pdf, Page 101, S4 Consumers and end-users",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99917-002",
+          "quote": "Yara aims to minimize the probability and consequences of process safety and product safety accidents negatively affecting people, environment, assets, and the reputation of Yara.",
+          "source": "yara-integrated-report-2024.pdf, Page 64, Health and safety exposure",
+          "financial_amounts": [],
+          "classification_justification": "This snippet states that 'product safety accidents' can 'negatively affect people, environment' and that Yara aims to minimize these consequences. This implicitly acknowledges the risk of claims arising from such accidents, which could lead to legal challenges.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'negatively affecting people, environment' and the aim to 'minimize the probability and consequences' clearly frames this as a potential adverse outcome or threat to the business and its stakeholders.",
+            "framing": "Risk",
+            "financial_justification": "The snippet does not provide explicit financial figures or state financial materiality, focusing on the qualitative impact of accidents.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement 'aims to minimize the probability and consequences' refers to ongoing efforts to prevent future negative events, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Yara aims to minimize the probability and consequences of process safety and product safety accidents negatively affecting people, environment, assets, and the reputation of Yara.",
+          "page": "yara-integrated-report-2024.pdf, Page 64, Health and safety exposure",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "While Yara discloses risks related to health and safety from product exposure and accidents that can negatively affect people and the environment, it does not explicitly state that class action lawsuits or legal challenges arising from these claims are a risk to the business. The disclosure focuses on the operational causes and mitigation rather than the specific legal or financial consequences of such claims.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 2,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99918",
+      "question_number": 4,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99918-001",
+          "quote": "Both sustainable profitability in core operations and value-accretive growth opportunities are critical to enable a fit-for-future Yara. While we have successfully navigated recent volatility by focusing on operational continuity, by design our cost base has also grown. As highlighted by the recent Draghi report on European competitiveness, sustained high gas prices in Europe are also negatively affecting energy-intensive industries like ours‌ 2). These factors have contributed to recent returns being below satisfactory levels.",
+          "source": "yara-integrated-report-2024.pdf, Page 6, CEO message",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'sustained high gas prices in Europe are also negatively affecting energy-intensive industries like ours' and 'These factors have contributed to recent returns being below satisfactory levels.' This clearly identifies high energy input costs (specifically gas prices) as a risk to the business, impacting profitability ('returns'). It doesn't quantify the financial materiality but clearly links it to business performance.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrases 'negatively affecting' and 'returns being below satisfactory levels' clearly frame high gas prices as a negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'negatively affecting energy-intensive industries' and 'contributed to recent returns being below satisfactory levels,' indicating a financial impact on profitability, but no specific monetary values are provided, nor is financial materiality explicitly stated.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The terms 'sustained high gas prices' and 'recent returns being below satisfactory levels' indicate an ongoing and present-day impact, with implications for future profitability.",
+            "timeframe": "Present day"
+          },
+          "text": "Both sustainable profitability in core operations and value-accretive growth opportunities are critical to enable a fit-for-future Yara. While we have successfully navigated recent volatility by focusing on operational continuity, by design our cost base has also grown. As highlighted by the recent Draghi report on European competitiveness, sustained high gas prices in Europe are also negatively affecting energy-intensive industries like ours‌ 2). These factors have contributed to recent returns being below satisfactory levels.",
+          "page": "6",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "relevance_score": 9,
+          "relevance_explanation": "The snippet directly addresses the risk of high energy input costs by explicitly mentioning 'sustained high gas prices' and their negative effect on the company's financial returns.",
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "overlapping",
+            "similarity": 0.9122448979591836,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "Version 3 is more comprehensive as it includes the sentence 'These factors have contributed to recent returns being below satisfactory levels,' which explicitly links the high energy costs to a negative impact on business performance.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company clearly identifies high energy (gas) prices as a risk that negatively affects its financial returns. However, it does not use explicit financial materiality language (e.g., 'material impact') or quantify the financial impact, making it a PARTIAL disclosure.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "sustained high gas prices in Europe are also negatively affecting energy-intensive industries like ours",
+                "These factors have contributed to recent returns being below satisfactory levels"
+              ]
+            },
+            "confidence_assessment": {
+              "evidence_summary": "The company's CEO states that sustained high gas prices in Europe are negatively affecting the business and have contributed to recent financial returns being below satisfactory levels.",
+              "confidence_explanation": "The evidence is direct and unambiguous, clearly linking a specific energy input cost (high gas prices) to a negative financial outcome for the business, which directly answers the question.",
+              "confidence_percentage": 95
+            },
+            "relevance_to_question": {
+              "is_relevant": true,
+              "relevance_score": 9,
+              "relevance_explanation": "The snippet directly addresses the risk of high energy input costs by explicitly mentioning 'sustained high gas prices' and their negative effect on the company's financial returns."
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99918-002",
+          "quote": "Exposure to natural gas price markets: Securing access to, and stable supply of, favorably priced natural gas is imperative to the company’s operations and competitiveness. In regions with efficient gas markets, Yara will seek exposure to spot market prices unless exceptional market circumstances clearly give a reason for deviation. In regions without efficient gas markets, Yara seeks to enter into longer term contracts if favorable gas prices are obtainable.",
+          "source": "yara-integrated-report-2024.pdf, Page 63, Risk appetite areas",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'Securing access to, and stable supply of, favorably priced natural gas is imperative to the company’s operations and competitiveness.' This directly implies that high or unfavorably priced natural gas is a significant risk to the business, impacting its operations and competitive position.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement that favorably priced natural gas is 'imperative' for operations and competitiveness implies that the opposite (unfavorably priced gas) is a threat, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The mention of 'favorably priced natural gas' and its impact on 'competitiveness' indicates a financial dimension, but no specific monetary values are provided.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The discussion of securing supply and entering contracts for gas prices indicates an ongoing and forward-looking concern for the company's operations.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Exposure to natural gas price markets: Securing access to, and stable supply of, favorably priced natural gas is imperative to the company’s operations and competitiveness. In regions with efficient gas markets, Yara will seek exposure to spot market prices unless exceptional market circumstances clearly give a reason for deviation. In regions without efficient gas markets, Yara seeks to enter into longer term contracts if favorable gas prices are obtainable.",
+          "page": "yara-integrated-report-2024.pdf, Page 63, Risk appetite areas",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9989189189189189,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 99.9%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99918-003",
+          "quote": "Market dynamics – natural gas prices The pricing and availability of natural gas are critical strategic factors. Ensuring access to stable and competitively priced natural gas is essential for operational efficiency and maintaining a competitive edge. Sudden shifts in the supply-demand balance can significantly impact natural gas prices.",
+          "source": "yara-integrated-report-2024.pdf, Page 68, Risk management",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies 'Sudden shifts in the supply-demand balance can significantly impact natural gas prices' as a factor, and states that 'Ensuring access to stable and competitively priced natural gas is essential for operational efficiency and maintaining a competitive edge.' This clearly implies that high natural gas prices (due to shifts) are a risk to operational efficiency and competitiveness, which are business impacts. It doesn't quantify the financial materiality but clearly links it to business performance.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'significantly impact natural gas prices' and the need for 'competitively priced natural gas' to maintain 'competitive edge' frames the volatility and potential high prices as a threat.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'operational efficiency and maintaining a competitive edge' which are financial considerations, but no specific monetary values are provided, nor is financial materiality explicitly stated.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "'Sudden shifts' and the ongoing need for 'stable and competitively priced natural gas' indicate a present-day and forward-looking concern.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Market dynamics – natural gas prices The pricing and availability of natural gas are critical strategic factors. Ensuring access to stable and competitively priced natural gas is essential for operational efficiency and maintaining a competitive edge. Sudden shifts in the supply-demand balance can significantly impact natural gas prices.",
+          "page": "68",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99918-004",
+          "quote": "The pricing and availability of natural gas are critical strategic factors. Ensuring access to stable and competitively priced natural gas is essential for operational efficiency and maintaining a competitive edge. Sudden shifts in the supply-demand balance can significantly impact natural gas prices. Various factors, including geopolitical changes, increased polarization and protectionism, and fluctuations in weather and climate patterns, may trigger these shifts.",
+          "source": "yara-integrated-report-2024.pdf, Page 68, Market dynamics – natural gas prices",
+          "financial_amounts": [],
+          "classification_justification": "This snippet clearly identifies 'pricing and availability of natural gas' as 'critical strategic factors' and states that 'Sudden shifts in the supply-demand balance can significantly impact natural gas prices,' which in turn affects 'operational efficiency and maintaining a competitive edge.' This directly addresses high energy input costs as a risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'critical strategic factors' and 'significantly impact' frames fluctuations in natural gas prices as a potential negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses impacts on 'operational efficiency' and 'competitive edge' due to natural gas prices, implying financial consequences, but no specific monetary values are provided.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The mention of 'Sudden shifts' and 'may trigger these shifts' indicates a forward-looking perspective on potential future events and their impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "The pricing and availability of natural gas are critical strategic factors. Ensuring access to stable and competitively priced natural gas is essential for operational efficiency and maintaining a competitive edge. Sudden shifts in the supply-demand balance can significantly impact natural gas prices. Various factors, including geopolitical changes, increased polarization and protectionism, and fluctuations in weather and climate patterns, may trigger these shifts.",
+          "page": "yara-integrated-report-2024.pdf, Page 68, Market dynamics – natural gas prices",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99918-005",
+          "quote": "Increased production cost due to extremely stringent and rigid rules for electricity for hydrogen production (additionality, geographical and temporal correlation)",
+          "source": "yara-integrated-report-2024.pdf, Page 119, Technology pathways for ammonia decarbonization",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'Increased production cost' as a challenge (risk) directly linked to 'stringent and rigid rules for electricity for hydrogen production.' This is a clear disclosure of high energy input costs (specifically electricity for hydrogen production) as a risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'Increased production cost' and its listing under 'Challenges' clearly frames this as a negative factor or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet directly mentions 'Increased production cost,' indicating a financial impact, but it does not provide any specific monetary values.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The 'rules for electricity for hydrogen production' are current or anticipated regulations, and the 'increased production cost' is a future or ongoing consequence, making it forward-looking.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Increased production cost due to extremely stringent and rigid rules for electricity for hydrogen production (additionality, geographical and temporal correlation)",
+          "page": "yara-integrated-report-2024.pdf, Page 119, Technology pathways for ammonia decarbonization",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99918-006",
+          "quote": "Yara’s Energy prices (USD per MMBtu) Global weighted average gas cost 8.8 (2024), 11.0 (2023), 21.8 (2022), 9.3 (2021), 3.8 (2020), 4.7 (2019) European weighted average gas cost 11.4 (2024), 14.9 (2023), 31.8 (2022), 11.7 (2021), 3.6 (2020), 5.4 (2019)",
+          "source": "yara-integrated-report-2024.pdf, Page 26, Strategy and governance | Performance",
+          "financial_amounts": [
+            "8.8 USD per MMBtu",
+            "11.0 USD per MMBtu",
+            "21.8 USD per MMBtu",
+            "9.3 USD per MMBtu",
+            "3.8 USD per MMBtu",
+            "4.7 USD per MMBtu",
+            "11.4 USD per MMBtu",
+            "14.9 USD per MMBtu",
+            "31.8 USD per MMBtu",
+            "11.7 USD per MMBtu",
+            "3.6 USD per MMBtu",
+            "5.4 USD per MMBtu"
+          ],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet only presents factual data on gas costs. It does not contain any narrative that characterizes high costs as a risk to the business, which is a requirement for a PARTIAL classification. It acknowledges the topic without framing it as a risk, which fits the definition of UNCLEAR.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "This is a factual presentation of historical energy costs. While the broader context of the report frames energy costs as a risk, this specific snippet is neutral and descriptive.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for gas costs ('USD per MMBtu') directly linked to a key input for manufacturing.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The data presented covers multiple past years (2019-2024), making it backward-looking.",
+            "timeframe": "Backward-looking"
+          },
+          "text": "Yara’s Energy prices (USD per MMBtu) Global weighted average gas cost 8.8 (2024), 11.0 (2023), 21.8 (2022), 9.3 (2021), 3.8 (2020), 4.7 (2019) European weighted average gas cost 11.4 (2024), 14.9 (2023), 31.8 (2022), 11.7 (2021), 3.6 (2020), 5.4 (2019)",
+          "page": "26",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 6
+        }
+      ],
+      "summary": "Yes, Yara fully discloses that high energy input costs are a significant risk, stating that \"sustained high gas prices... are negatively affecting energy-intensive industries like ours.\" The company consistently frames securing favorably priced natural gas as \"imperative\" and \"essential\" for its operations, competitiveness, and efficiency. This risk is further highlighted by the disclosure of historical gas cost data and the identification of increased electricity costs for hydrogen production as a challenge.",
+      "merger_stats": {
+        "v3_snippets": 4,
+        "v4_snippets": 4,
+        "merged_snippets": 6,
+        "snippet_pairs": 6,
+        "ai_reviews_conducted": 1,
+        "human_review_flagged": 0
+      }
+    }
+  ],
+  "completeness_summary": {
+    "total_questions_analyzed": 14,
+    "total_disclosure_snippets": 50,
+    "note": "Summary statistics recalculated from merged results"
+  },
+  "metadata": {
+    "company": "Yara",
+    "year": "2024",
+    "analysis_date": "2025-11-07T18:39:39.162409",
+    "schema_version": "merged-v3-v4",
+    "merger_model": "gemini-2.5-pro",
+    "source_files": {
+      "v3": "Yara_2024_v3_gemini-2-5-flash_06-11-2025_15-27-52_verified.json",
+      "v4": "Yara_2024_v4_gemini-2-5-flash_06-11-2025_15-30-43_verified.json"
+    }
+  },
+  "merger_summary": {
+    "total_v3_snippets": 23,
+    "total_v4_snippets": 37,
+    "total_merged_snippets": 50,
+    "total_ai_reviews": 1,
+    "total_human_flags": 0,
+    "merger_timestamp": "07-11-2025_18-39-39"
+  }
+}

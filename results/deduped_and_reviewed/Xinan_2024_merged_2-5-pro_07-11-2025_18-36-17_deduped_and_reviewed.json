@@ -1,0 +1,1646 @@
+{
+  "analysis_results": [
+    {
+      "question_id": "99901",
+      "question_number": 1,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that agricultural crops developing resistance to its pesticides, which are applied by the company's customers to cropland, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99901-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Xinan does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99902",
+      "question_number": 2,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+      "disclosures": [
+        {
+          "snippet_id": "99902-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Xinan does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99903",
+      "question_number": 3,
+      "category": "Human Health Risk",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99903-001",
+          "quote": "新安按照相关法律法规要求认真落实化学品标识标签和化学品安全技术说明（MSDS）责任，在产品外包装、标签上明确标注产品性质、安全措施和警示信息；新安为客户提供详细的化学品安全技术说明书，描述化学品物理和化学性质，以及这些化学品可能对环境和健康造成影响与风险，并为客户提供关于正确保存、运输和使用产品的详细指导；新安在产品推广和客户培训中，将化学品安全技术规范作为必选内容向客户和使用者做全面详尽讲解，以尽可能避免/降低相关产品的环境和健康影响与风险。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 21, 化学品管理",
+          "financial_amounts": [],
+          "classification_justification": "This snippet acknowledges that the company's products 'may cause environmental and health impacts and risks' and describes efforts to 'minimize/reduce' these. This clearly identifies human health problems as a potential negative consequence associated with its products, thus characterizing it as a risk to the business. However, it does not provide any statement about the financial materiality of this risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language explicitly mentions 'environmental and health impacts and risks' and the company's efforts to 'minimize/reduce' them, indicating a focus on potential negative consequences and the need for mitigation.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure discusses potential 'impacts and risks' and mitigation efforts but does not provide any explicit financial figures or statements about the financial materiality of these health problems to the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet uses present tense ('may cause,' 'minimize/reduce') to describe ongoing responsibilities and efforts to manage potential future impacts, indicating a forward-looking perspective on risk management.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "新安按照相关法律法规要求认真落实化学品标识标签和化学品安全技术说明（MSDS）责任，在产品外包装、标签上明确标注产品性质、安全措施和警示信息；新安为客户提供详细的化学品安全技术说明书，描述化学品物理和化学性质，以及这些化学品可能对环境和健康造成影响与风险，并为客户提供关于正确保存、运输和使用产品的详细指导；新安在产品推广和客户培训中，将化学品安全技术规范作为必选内容向客户和使用者做全面详尽讲解，以尽可能避免/降低相关产品的环境和健康影响与风险。",
+          "page": "21",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "relevance_score": 9,
+          "relevance_explanation": "The evidence directly addresses the question by stating the company's actions to 'avoid/reduce' the 'health impacts and risks' from its chemical products, showing it is a recognized risk.",
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "overlapping",
+            "similarity": 0.9241379310344827,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "The snippets are nearly identical, describing the same company policy on chemical safety. Version 3 is chosen as its text is slightly more explicit in describing 'environmental and health impacts and risks', providing marginally better context.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company explicitly acknowledges that its products have potential 'health impacts and risks' and describes its mitigation efforts (MSDS, labeling, training). This confirms it views the issue as a risk, but it does not provide any language about the financial materiality of this risk.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "可能对环境和健康造成影响与风险 (may cause environmental and health impacts and risks)",
+                "避免/降低相关产品的环境和健康影响与风险 (avoid/reduce the environmental and health impacts and risks of related products)",
+                "安全措施和警示信息 (safety measures and warning information)"
+              ]
+            },
+            "confidence_assessment": {
+              "evidence_summary": "The company details its chemical management system, which includes providing safety data sheets and training to customers with the explicit goal of mitigating the 'environmental and health impacts and risks' of its products.",
+              "confidence_explanation": "The evidence directly and explicitly mentions managing 'health impacts and risks' from its products, making it a clear acknowledgment of the topic as a risk. The lack of financial language makes the 'PARTIAL' classification certain.",
+              "confidence_percentage": 95
+            },
+            "relevance_to_question": {
+              "is_relevant": true,
+              "relevance_score": 9,
+              "relevance_explanation": "The evidence directly addresses the question by stating the company's actions to 'avoid/reduce' the 'health impacts and risks' from its chemical products, showing it is a recognized risk."
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99903-002",
+          "quote": "新安严格遵守联合国《全球化学品统一分类和标签制度（GHS）》《关于在国际贸易中对某些危险化学品和农药采 用事先知情同意程序的鹿特丹公约》、国际劳工组织《作业场所安全使用化学品公约》和《中华人民共和国环境保 护法》《中华人民共和国安全生产法》《危险化学品安全管理条例》等法律法规以及运营所在地法规，建立健全公 司化学品管理制度体系和管控机制，在生产管理、研究开发、品质控制、物资采购、仓储运输、产品销售等关键环 节设置专职岗位并聘用有专业资质的人员对化学品管理实施监督与检查，并通过开展风险识别与评估、全员培训等 工作全面推进化学品综合治理。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 40, 化学品管理",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies that the company manages risks related to 'dangerous chemicals and pesticides' across its value chain, from production to sales, and conducts 'risk identification and assessment' and 'comprehensive chemical management'. This indicates an acknowledgment of potential human health problems from its products and the associated business risk, as it requires a robust management system and compliance with various health and safety regulations.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language emphasizes compliance with regulations, risk identification, and comprehensive management for 'dangerous chemicals and pesticides', framing the topic as a threat that requires mitigation and control.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure describes management systems and compliance efforts but does not provide any explicit financial figures or statements about the financial materiality of human health problems from products.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet describes ongoing compliance, management systems, and risk assessment activities that are currently in place and continuously applied.",
+            "timeframe": "Present day"
+          },
+          "text": "新安严格遵守联合国《全球化学品统一分类和标签制度（GHS）》《关于在国际贸易中对某些危险化学品和农药采 用事先知情同意程序的鹿特丹公约》、国际劳工组织《作业场所安全使用化学品公约》和《中华人民共和国环境保 护法》《中华人民共和国安全生产法》《危险化学品安全管理条例》等法律法规以及运营所在地法规，建立健全公 司化学品管理制度体系和管控机制，在生产管理、研究开发、品质控制、物资采购、仓储运输、产品销售等关键环 节设置专职岗位并聘用有专业资质的人员对化学品管理实施监督与检查，并通过开展风险识别与评估、全员培训等 工作全面推进化学品综合治理。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 40, 化学品管理",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99903-003",
+          "quote": "随着对人类健康和环境保护更加关注，总体上全球农药登记门槛和成本在逐年提高。",
+          "source": "Xinan Annual Report 2024.pdf, Page 13, (3).全球农药市场准入门槛抬高，产品登记成本逐年提高",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly links 'increased attention to human health and environmental protection' to 'rising pesticide registration thresholds and costs'. This frames human health concerns as a driver of increased regulatory burden and costs, which is a clear risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement highlights 'increased attention to human health' as a factor leading to 'rising pesticide registration thresholds and costs', framing this as a challenge or threat to the business due to increased regulatory burden.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'costs' ('登记门槛和成本在逐年提高' - registration thresholds and costs are increasing annually) but does not provide specific quantifiable financial figures for these costs, making it a partial-type financial disclosure.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase '逐年提高' (increasing annually) indicates an ongoing trend that has been happening and is expected to continue, making it a present-day and forward-looking concern.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "随着对人类健康和环境保护更加关注，总体上全球农药登记门槛和成本在逐年提高。",
+          "page": "Xinan Annual Report 2024.pdf, Page 13, (3).全球农药市场准入门槛抬高，产品登记成本逐年提高",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        }
+      ],
+      "summary": "Yes, the company discloses that human health problems from its products are a business risk (PARTIAL). It acknowledges the potential health impacts of its chemicals and mitigates them through comprehensive management systems, regulatory compliance, and providing safety information like MSDS and training. The company explicitly links increased global concern for human health to rising pesticide registration thresholds and costs, identifying this as a direct financial and regulatory risk.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 3,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 1,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99903-003",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet states that increased attention to 'human health' (人类健康) is a reason why pesticide registration thresholds and costs are increasing, which is a direct business risk.",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99904",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99904-001",
+          "quote": "新安抢抓数字化转型机遇，融合大数据技术、机器学 习、控制理论等建设热电厂锅炉智能优化系统，形成大 数据分析、模型在线优化、自动控制等整体解决方案， 提升锅炉系统的控制水平和自动化水平，实现提高锅炉 效率，降低煤耗，全年可节约原煤1,500吨，降低碳排 放成本22.83万元，减少温室气体排放3,000余吨。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 27, 风险与机遇管理",
+          "financial_amounts": [
+            "22.83万元",
+            "1,500吨",
+            "3,000余吨"
+          ],
+          "classification_justification": "This snippet quantifies the financial impact of carbon costs by stating that optimizing boiler systems can 'reduce carbon emission costs by 228,300 RMB' and 'reduce greenhouse gas emissions by over 3,000 tons' annually. This directly demonstrates that carbon costs from direct operations are a financially material risk that the company is actively managing to reduce.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on '降低碳排放成本' (reducing carbon emission costs) and '减少温室气体排放' (reducing greenhouse gas emissions) through efficiency improvements, framing this as a positive outcome of managing a recognized cost/risk.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet provides an explicit, quantifiable financial value of '22.83万元' (228,300 RMB) for the reduction in carbon emission costs, directly linking it to the risk.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement '全年可节约...降低碳排放成本' (can save... reduce carbon emission costs annually) refers to the current reporting period's achievements and ongoing benefits.",
+            "timeframe": "Present day"
+          },
+          "text": "新安抢抓数字化转型机遇，融合大数据技术、机器学 习、控制理论等建设热电厂锅炉智能优化系统，形成大 数据分析、模型在线优化、自动控制等整体解决方案， 提升锅炉系统的控制水平和自动化水平，实现提高锅炉 效率，降低煤耗，全年可节约原煤1,500吨，降低碳排 放成本22.83万元，减少温室气体排放3,000余吨。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 27, 风险与机遇管理",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9833887043189369,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 98.3%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99904-002",
+          "quote": "新安积极开展温室气体碳排放核查和履约，按时完成了 2019-2023年度热电行业的碳排放履约工作，累计实现 碳配额盈余14万吨。自2021年7月全国碳市场运营以 来，新安实施两次碳资产交易已实现收益851万元。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 27, 风险与机遇管理",
+          "financial_amounts": [
+            "14万吨",
+            "851万元"
+          ],
+          "classification_justification": "This snippet details the company's participation in the national carbon market, including 'carbon emission verification and compliance' and 'carbon asset transactions' that have generated '8.51 million RMB in revenue'. This clearly indicates that carbon costs (and related trading opportunities) arising from its direct operations are a financially material risk/opportunity to the business, requiring compliance and active management.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure highlights '碳配额盈余' (carbon allowance surplus) and '实现收益851万元' (generated 8.51 million RMB in revenue) from carbon asset transactions, framing the carbon market as an opportunity for financial gain through effective management.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet provides an explicit, quantifiable financial value of '851万元' (8.51 million RMB) as revenue from carbon asset transactions, directly linked to carbon costs/trading.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure covers '2019-2023年度' (2019-2023 period) for compliance and '自2021年7月...以来' (since July 2021) for transactions, indicating both backward-looking and present-day activities.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "新安积极开展温室气体碳排放核查和履约，按时完成了 2019-2023年度热电行业的碳排放履约工作，累计实现 碳配额盈余14万吨。自2021年7月全国碳市场运营以 来，新安实施两次碳资产交易已实现收益851万元。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 27, 风险与机遇管理",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9855072463768116,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 98.6%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99904-003",
+          "quote": "风险类型 序号 风险描述 发生概率 影响程度 脆弱性 紧迫性 转型 风险 4 向高排放产品征收碳税、规定企业碳排放配额等 中 低 低 中",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 29, 气候相关风险优先级分析矩阵",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly identifies 'imposing carbon taxes on high-emission products, stipulating corporate carbon emission allowances' as a 'transition risk' with a 'medium' likelihood and 'low' impact. This is an explicit statement that carbon costs are a recognized risk to the business, covering both direct operations (emission allowances) and product use (carbon tax on high-emission products).",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The snippet explicitly lists '向高排放产品征收碳税、规定企业碳排放配额等' (imposing carbon taxes on high-emission products, stipulating corporate carbon emission allowances) as a '转型风险' (transition risk), clearly framing it as a potential negative consequence.",
+            "framing": "Risk",
+            "financial_justification": "The mention of '碳税' (carbon tax) and '碳排放配额' (carbon emission allowances) directly implies financial costs, even without specific monetary values. The company assesses its '影响程度' (impact level) as '低' (low), which is a definitive statement about its financial relevance.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The risk description uses future-oriented language ('征收', '规定' - impose, stipulate) and is categorized as a 'transition risk', indicating a forward-looking perspective on potential future costs.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "风险类型 序号 风险描述 发生概率 影响程度 脆弱性 紧迫性 转型 风险 4 向高排放产品征收碳税、规定企业碳排放配额等 中 低 低 中",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 29, 气候相关风险优先级分析矩阵",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99904-004",
+          "quote": "新安积极因应欧盟碳关税等政策，针对国际和欧盟客户 需求，开展了含氢硅油、D4等产品的碳足迹建模和产 品生命周期研究等工作，形成LCA（生命周期研究）报 告和PCF（产品碳足迹）报告并通过第三方审查认证。 我们已计划开展涉及公司整个产业领域包括金属硅生 产、硅粉加工、热电生产、有机硅生产、产品运输等一 系列的碳足迹建模及认证工作。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 26, 产品碳排放报告",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The definition of FULL_DISCLOSURE requires that financial materiality is explicitly stated. While the snippet discusses responding to EU carbon tariffs (an inherently financial risk), it does not explicitly state that this risk is financially material to the business. It only describes the actions taken in response. Therefore, it meets the criteria for PARTIAL (clearly identified as a business risk) but not FULL.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure frames the 'EU carbon tariffs and other policies' as something the company is 'actively responding to' ('积极因应'), indicating a challenge or threat that requires strategic action.",
+            "framing": "Risk",
+            "financial_justification": "The mention of '欧盟碳关税等政策' (EU carbon tariffs and other policies) directly implies potential financial costs, even if no specific figures are provided in this snippet. The company is taking action to understand and manage these implied costs.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The company 'has conducted' (开展了) studies and 'has planned to conduct' (已计划开展) further work, indicating both present-day activities and forward-looking plans in response to existing and anticipated policies.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "新安积极因应欧盟碳关税等政策，针对国际和欧盟客户 需求，开展了含氢硅油、D4等产品的碳足迹建模和产 品生命周期研究等工作，形成LCA（生命周期研究）报 告和PCF（产品碳足迹）报告并通过第三方审查认证。 我们已计划开展涉及公司整个产业领域包括金属硅生 产、硅粉加工、热电生产、有机硅生产、产品运输等一 系列的碳足迹建模及认证工作。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 26, 产品碳排放报告",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9814814814814815,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 98.1%). Auto-merged using v4 verification-corrected."
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99904-005",
+          "quote": "新安积极响应国家“双碳”战略，全面落实“1361”战略，编制并实施了《浙江新安化工集团股份有限公司碳达峰·碳中和行动方案（2021~2025）》，提出了“到2025年，新安规模以上工业总产值能耗较2020年下降15%以上，工业总产值碳排放量较2020年下降20%以上；确保新安二氧化碳排放量在2030年前达峰”的目标。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 27, 应对气候变化",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The definition of FULL_DISCLOSURE requires that financial materiality is explicitly stated. While the snippet discusses responding to EU carbon tariffs (an inherently financial risk), it does not explicitly state that this risk is financially material to the business. It only describes the actions taken in response. Therefore, it meets the criteria for PARTIAL (clearly identified as a business risk) but not FULL.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language focuses on 'responding to the national 'dual carbon' strategy' and 'implementing an action plan' with 'goals' for reduction, which presents the topic as a strategic imperative and a challenge to be met, rather than a direct threat or a clear opportunity.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet mentions targets for reducing energy consumption and carbon emissions but does not provide any explicit financial figures or statements about the financial materiality of carbon costs.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The disclosure refers to a '2021-2025 action plan' and targets 'by 2025' and 'before 2030,' indicating a forward-looking perspective on climate change and carbon management.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "新安积极响应国家“双碳”战略，全面落实“1361”战略，编制并实施了《浙江新安化工集团股份有限公司碳达峰·碳中和行动方案（2021~2025）》，提出了“到2025年，新安规模以上工业总产值能耗较2020年下降15%以上，工业总产值碳排放量较2020年下降20%以上；确保新安二氧化碳排放量在2030年前达峰”的目标。",
+          "page": "27",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99904-006",
+          "quote": "新安引入夹点技术对现有草甘膦、有机硅等装置用能系统合理性进行评估，关注重点用热、用冷环节，对重点用能工序能源系统优化研发关键技术，实现用能系统精细化、高效化。我们整合热耦合等节能新技术，研发低能耗绿色低碳技术，为降低草甘膦碳排放强度提供技术支撑。2023年4月，草甘膦生产节能减排项目一次性投产成功，每年可节约标煤29,000吨，单位产品碳排放强度下降22.52%。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 29, 应对气候变化",
+          "financial_amounts": [
+            "29,000吨",
+            "22.52%"
+          ],
+          "classification_justification": "This snippet describes a project that 'successfully started operation' and 'can save 29,000 tons of standard coal annually' and 'reduce carbon emission intensity by 22.52%.' This demonstrates a clear effort to reduce carbon emissions, which implies managing associated costs, thus classifying it as a partial disclosure of a business risk. However, it does not explicitly state the financial materiality of carbon costs, only the reduction in coal consumption and carbon intensity.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The focus is on 'energy saving and emission reduction' and 'reducing carbon emission intensity,' indicating efforts to mitigate negative environmental impacts and associated costs, thus framing it as a risk management activity.",
+            "framing": "Risk",
+            "financial_justification": "The snippet quantifies the reduction in 'standard coal' and 'carbon emission intensity' but does not provide explicit financial figures for carbon costs or state their financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The project 'successfully started operation in April 2023' and 'can save annually,' indicating a present-day and ongoing impact from a past investment.",
+            "timeframe": "Present day"
+          },
+          "text": "新安引入夹点技术对现有草甘膦、有机硅等装置用能系统合理性进行评估，关注重点用热、用冷环节，对重点用能工序能源系统优化研发关键技术，实现用能系统精细化、高效化。我们整合热耦合等节能新技术，研发低能耗绿色低碳技术，为降低草甘膦碳排放强度提供技术支撑。2023年4月，草甘膦生产节能减排项目一次性投产成功，每年可节约标煤29,000吨，单位产品碳排放强度下降22.52%。",
+          "page": "29",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 6
+        },
+        {
+          "snippet_id": "99904-007",
+          "quote": "风险类型 序号 风险描述 发生概率 影响程度 脆弱性 紧迫性 转型风险 1 气候变化信息披露要求趋严 很高 中 较高 较高 2 加强产品全生命周期环境影响的监管 高 中 中 中 3 全面转向可再生能源使用 很高 中 较高 中 4 向高排放产品征收碳税、规定企业碳排放配额等 中 低 低 中 5 低碳经济转型的技术升级或创新 高 中 低 中 6 客户和消费者倾向于使用环境友好的产品 高 中 较高 较高 7 供应商或受减碳政策影响导致运营成本增加，抬高产品售价 中 高 较高 中 8 利益相关方对企业应对气候变化的行动及进展失望 低 中 中 低 9 上下游合作伙伴未能有效应对气候变化引发连带负面影响 低 中 中 低 10 气候变化或造成突发环境事件，企业如未有效应对而造成负面影响 极低 极低 低 极低 实体风险 11 台风、暴雨等极端天气频发及严重性增加 高 低 低 低 12 气温异常变化导致高温干旱或低温寒潮 中 低 低 低 13 海平面上升 低 极低 中 极低 14 水资源压力 低 低 较高 低",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 29, 风险与机遇管理",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly lists 'levying carbon taxes on high-emission products, stipulating corporate carbon emission quotas' as a 'transition risk' with a 'medium' probability and 'low' impact/vulnerability, but 'medium' urgency. This clearly identifies carbon costs as a risk to the business. However, it does not provide any statement about the financial materiality of this risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure explicitly lists 'levying carbon taxes' and 'carbon emission quotas' under 'Transition Risk,' clearly framing these as potential negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet mentions 'carbon taxes' and 'carbon emission quotas,' which are inherently financial, but it does not provide specific monetary values or state the financial materiality of these costs.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The risk description refers to 'levying carbon taxes' and 'stipulating carbon emission quotas,' which are future or ongoing regulatory actions, indicating a forward-looking perspective on potential impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "风险类型 序号 风险描述 发生概率 影响程度 脆弱性 紧迫性 转型风险 1 气候变化信息披露要求趋严 很高 中 较高 较高 2 加强产品全生命周期环境影响的监管 高 中 中 中 3 全面转向可再生能源使用 很高 中 较高 中 4 向高排放产品征收碳税、规定企业碳排放配额等 中 低 低 中 5 低碳经济转型的技术升级或创新 高 中 低 中 6 客户和消费者倾向于使用环境友好的产品 高 中 较高 较高 7 供应商或受减碳政策影响导致运营成本增加，抬高产品售价 中 高 较高 中 8 利益相关方对企业应对气候变化的行动及进展失望 低 中 中 低 9 上下游合作伙伴未能有效应对气候变化引发连带负面影响 低 中 中 低 10 气候变化或造成突发环境事件，企业如未有效应对而造成负面影响 极低 极低 低 极低 实体风险 11 台风、暴雨等极端天气频发及严重性增加 高 低 低 低 12 气温异常变化导致高温干旱或低温寒潮 中 低 低 低 13 海平面上升 低 极低 中 极低 14 水资源压力 低 低 较高 低",
+          "page": "29",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 7
+        },
+        {
+          "snippet_id": "99904-008",
+          "quote": "新安通过加强能源管理、制定并实施节能减排方案、推广使用光伏等可再生能源以及发掘碳抵消 机会等，将各种减排计划纳入气候变化应对策略中，以缓解气候变化造成的影响和风险。同时， 我们持续加强与客户和供应商等合作伙伴的沟通，基于价值链提升和产品全生命周期管理的目 标，携手合作伙伴共同探索温室气体减排路径，以期通过提高“协同效应”在价值链层面缓解气候 变化的风险和影响。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 31, 应对气候变化风险和机遇的战略措施",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes strategic measures to 'mitigate the impacts and risks of climate change' through energy management, emission reduction plans, and exploring 'greenhouse gas reduction pathways at the value chain level' with partners. This explicitly acknowledges climate change (and thus carbon costs) as a risk to the business, and that these risks extend to the value chain, which includes the use of its products by customers.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure explicitly states the goal to '缓解气候变化造成的影响和风险' (mitigate the impacts and risks of climate change), clearly framing the topic as a threat that requires management and reduction efforts.",
+            "framing": "Risk",
+            "financial_justification": "The snippet discusses mitigation strategies for '影响和风险' (impacts and risks) but does not provide explicit financial figures or state the financial materiality of these risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The disclosure describes ongoing strategies and continuous efforts ('持续加强', '共同探索') to address climate change risks, indicating a present-day and forward-looking timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "新安通过加强能源管理、制定并实施节能减排方案、推广使用光伏等可再生能源以及发掘碳抵消 机会等，将各种减排计划纳入气候变化应对策略中，以缓解气候变化造成的影响和风险。同时， 我们持续加强与客户和供应商等合作伙伴的沟通，基于价值链提升和产品全生命周期管理的目 标，携手合作伙伴共同探索温室气体减排路径，以期通过提高“协同效应”在价值链层面缓解气候 变化的风险和影响。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 31, 应对气候变化风险和机遇的战略措施",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 8
+        },
+        {
+          "snippet_id": "99904-009",
+          "quote": "新安建立碳减排激励机制，将运营层面及价值链层面碳减排情况与高管薪酬挂钩，进一步激励管理层应对气候变化并推动碳减排实践。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 27, 应对气候变化",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes an internal incentive mechanism linking carbon reduction to executive compensation, which implies that carbon reduction is a significant business concern. However, it still does not explicitly state that carbon costs are a 'risk to the business' or discuss their financial materiality, keeping the classification at 'Unclear' regarding the risk framing.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The establishment of an 'incentive mechanism' for carbon reduction suggests a proactive approach to a significant issue, which is framed as a management objective rather than a direct risk or opportunity.",
+            "framing": "Neutral",
+            "financial_justification": "The snippet mentions linking carbon reduction to 'executive compensation' but does not provide any explicit financial figures for carbon costs or state their financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The establishment of an ongoing 'incentive mechanism' and the continuous 'promotion of carbon reduction practices' indicate a present-day and ongoing commitment to managing carbon-related issues.",
+            "timeframe": "Present day"
+          },
+          "text": "新安建立碳减排激励机制，将运营层面及价值链层面碳减排情况与高管薪酬挂钩，进一步激励管理层应对气候变化并推动碳减排实践。",
+          "page": "27",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 9
+        }
+      ],
+      "summary": "Yes, the company discloses carbon costs as a risk from both direct operations and product use, explicitly identifying 'imposing carbon taxes on high-emission products' and 'stipulating corporate carbon emission allowances' as a transition risk. The company quantifies related financial impacts, such as 8.51 million RMB in revenue from carbon trading, and responds to customer-facing risks like EU carbon tariffs by conducting product lifecycle studies. Notably, the company assesses the impact of this risk as 'low' in its risk matrix.",
+      "merger_stats": {
+        "v3_snippets": 7,
+        "v4_snippets": 5,
+        "merged_snippets": 9,
+        "snippet_pairs": 9,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99905",
+      "question_number": 5,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that reduced soil fertility caused by its pesticides is a risk to the business? For instance, the increase in toxicity of the soil impacting human health, or the potentially declining yield experienced by farmers applying the pesticide.",
+      "disclosures": [
+        {
+          "snippet_id": "99905-001",
+          "quote": "新安按照相关法律法规要求认真落实化学品标 识标签和化学品安全技术说明（MSDS）责任， 在产品外包装、标签上明确标注产品性质、安 全措施和警示信息；新安为客户提供详细的化 学品安全技术说明书，描述化学品物理和化学 风险，并为客户提供关于正确保存、运 输和使用产品的详细指导；新安在产品推广和 客户培训中，将化学品安全技术规范作为必选 内容向客户和使用者做全面详尽讲解，以尽可 能避免/降低相关产品的环境和健康影响与风 险。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 41, 化学品管理",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that the company provides information to customers and users to 'minimize/reduce environmental and health impacts and risks' associated with its chemical products. This directly acknowledges the potential for environmental problems, including soil toxicity, from its products and the company's efforts to mitigate this risk, indicating it is a recognized business concern.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on providing safety information and training to 'minimize/reduce environmental and health impacts and risks', clearly framing the potential for negative consequences as a risk that needs to be managed.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes qualitative actions and impacts ('environmental and health impacts and risks') but does not provide any specific financial figures or explicitly state the financial materiality of these risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The activities described, such as providing MSDS, labeling, and customer training, are ongoing and pertain to the current and future use of products.",
+            "timeframe": "Present day"
+          },
+          "text": "新安按照相关法律法规要求认真落实化学品标 识标签和化学品安全技术说明（MSDS）责任， 在产品外包装、标签上明确标注产品性质、安 全措施和警示信息；新安为客户提供详细的化 学品安全技术说明书，描述化学品物理和化学 风险，并为客户提供关于正确保存、运 输和使用产品的详细指导；新安在产品推广和 客户培训中，将化学品安全技术规范作为必选 内容向客户和使用者做全面详尽讲解，以尽可 能避免/降低相关产品的环境和健康影响与风 险。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 41, 化学品管理",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99905-003",
+          "quote": "农药。调整产品结构，逐步淘汰高残留 以及对环境或农产品质量安全影响大的农药，加快发展高效、安全、环境友好型农药及中间体， 以及水基化、超低容量、缓释等制剂剂型。",
+          "source": "Xinan Annual Report 2024.pdf, Page 26, 化工行业经营性信息分析",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes the company's strategy to 'gradually phase out high-residue pesticides and those with significant impact on environment or agricultural product quality and safety' and 'accelerate the development of efficient, safe, and environmentally friendly pesticides'. This directly acknowledges that pesticides can have a 'significant impact on the environment' (which includes soil fertility/toxicity) and that this impact is a business risk requiring product adjustment and innovation.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure describes the need to 'adjust product structure' and 'gradually phase out' certain pesticides due to their 'impact on the environment', clearly framing this as a challenge or threat that requires strategic adaptation.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure discusses product adjustments and development in response to environmental impacts but does not provide explicit financial figures or state the financial materiality of these risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrases '逐步淘汰' (gradually phase out) and '加快发展' (accelerate development) indicate ongoing and forward-looking actions in response to existing and anticipated environmental concerns.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "农药。调整产品结构，逐步淘汰高残留 以及对环境或农产品质量安全影响大的农药，加快发展高效、安全、环境友好型农药及中间体， 以及水基化、超低容量、缓释等制剂剂型。",
+          "page": "Xinan Annual Report 2024.pdf, Page 26, 化工行业经营性信息分析",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        }
+      ],
+      "summary": "Yes, the company discloses the environmental impact of its pesticides as a business risk, which implicitly covers soil fertility. The company acknowledges that rising environmental protection concerns increase registration costs and explicitly states a strategy to \"gradually phase out high-residue pesticides and those with significant impact on the environment.\" This strategic shift to develop environmentally friendly alternatives demonstrates the company recognizes the business risks posed by its products' negative environmental effects.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 3,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "needs_attention",
+        "summary": "1 snippet(s) removed after high-confidence review.",
+        "decisions": [
+          {
+            "snippet_id": "99905-002",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet mentions 'environmental protection' (环境保护) in general but does not specifically discuss the risk of 'reduced soil fertility' or related impacts.",
+            "action": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99906",
+      "question_number": 6,
+      "category": "Human Health Risk",
+      "question_text": "Does the company disclose whether it thinks that factory workplace hazards including chemical exposure during production of pesticides is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99906-001",
+          "quote": "新安开展全员性职业健康安全规范及流程培训教育（包括但不限于日常班前会、安全常识教育、安全操作技能培 训、专项安全知识培训以及特种作业培训等），为员工提供安全、健康的工作和生活环境，按要求配备劳动防护用 品，最大限度地防止劳动过程中的事故，减少职业病危害。报告期内，公司员工参与职业健康与安全主题培训的覆 盖率为100%。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 71, 职业健康安全",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that the company provides training and PPE to 'minimize accidents in the labor process and reduce occupational disease hazards'. This directly addresses the risk of workplace hazards and chemical exposure during production, indicating it is a recognized business risk that requires proactive measures and employee education.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on '最大限度地防止劳动过程中的事故，减少职业病危害' (minimizing accidents in the labor process and reducing occupational disease hazards), clearly framing these as negative outcomes that need to be prevented.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes qualitative actions and impacts ('减少职业病危害' - reducing occupational disease hazards) but does not provide any specific financial figures or explicitly state the financial materiality of these risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The activities described, such as training and providing PPE, are ongoing and pertain to present-day operations.",
+            "timeframe": "Present day"
+          },
+          "text": "新安开展全员性职业健康安全规范及流程培训教育（包括但不限于日常班前会、安全常识教育、安全操作技能培 训、专项安全知识培训以及特种作业培训等），为员工提供安全、健康的工作和生活环境，按要求配备劳动防护用 品，最大限度地防止劳动过程中的事故，减少职业病危害。报告期内，公司员工参与职业健康与安全主题培训的覆 盖率为100%。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 71, 职业健康安全",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "relevance_score": 8,
+          "relevance_explanation": "The snippet directly addresses the management of workplace hazards by describing measures to prevent accidents and reduce occupational disease hazards. While it doesn't explicitly mention 'pesticides' or 'chemical exposure', 'occupational disease hazards' is a strong proxy for a chemical company, making the evidence highly relevant.",
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "overlapping",
+            "similarity": 0.9358974358974359,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v4",
+            "ai_rationale": "Both snippets are nearly identical, but the final sentence of v4 is more contextually relevant. V4 mentions 'occupational health and safety themed training', which aligns perfectly with the paragraph's topic, whereas v3 mentions 'environmental protection training', which is slightly less relevant to the immediate context of workplace hazards.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company discloses extensive measures (training, PPE) to 'prevent accidents' and 'reduce occupational disease hazards'. This demonstrates an acknowledgment of these issues as business concerns that require active mitigation, which qualifies as a risk. However, it lacks an explicit statement characterizing it as a 'risk to the business' or any discussion of financial materiality, thus making the classification PARTIAL.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "最大限度地防止劳动过程中的事故",
+                "减少职业病危害",
+                "提供安全、健康的工作和生活环境"
+              ]
+            },
+            "confidence_assessment": {
+              "evidence_summary": "The company describes providing comprehensive occupational health and safety training and protective equipment to all employees with the stated goal of preventing accidents and reducing occupational disease hazards.",
+              "confidence_explanation": "The evidence clearly indicates the company acknowledges and actively mitigates workplace hazards, which strongly implies they are treated as a business risk. The lack of explicit 'risk to the business' terminology is the only factor preventing 100% confidence.",
+              "confidence_percentage": 90
+            },
+            "relevance_to_question": {
+              "is_relevant": true,
+              "relevance_score": 8,
+              "relevance_explanation": "The snippet directly addresses the management of workplace hazards by describing measures to prevent accidents and reduce occupational disease hazards. While it doesn't explicitly mention 'pesticides' or 'chemical exposure', 'occupational disease hazards' is a strong proxy for a chemical company, making the evidence highly relevant."
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99906-002",
+          "quote": "新安建立完善了员工上报职业健康与安全事件、风险和问题的投诉流程：■ 对于在日常安全检查和风险隐患排查中发现的问题，通过公司内网OA平台发布隐患报表，定项目、定时间、定部门（人员）限期整改。对查出的重大隐患暂时难以立即整改的，在采取有效可靠防范措施的基础上，提交书面报告并制定计划，限期解决或停产整改。■ 设置了举报电话，接受员工对健康与安全事件、风险和问题的投诉和举报。要求各单位（员工）实时报告发生的工伤、事故和未遂事件，任何单位和个人不得瞒报、谎报或拖延不报。按照“四不放过”原则，对事故实施全过程的跟踪督办，建立健全事故台账与档案，及时进行事故分析并进行整改，避免再次发生同类事故。■ 新安按照新安《承包商安全管理制度》对承包商的资质审查、过程控制、绩效评价等进行管理，各生产单位安全环保部门每季度进行绩效评价，形成季度绩效评分汇总并反馈至承包商，督促其持续改进，不断加强委外施工安全管理。报告期内，所有委外施工承包商均签署施工安全协议/承诺，承包商参与安全培训的覆盖率为100%，新安对所有承包商的特种作业人员资格均进行审核验证。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 73, 职业健康安全",
+          "financial_amounts": [
+            "100%"
+          ],
+          "classification_justification": "This snippet details comprehensive processes for reporting, investigating, and rectifying occupational health and safety incidents, including 'work-related injuries, accidents, and near misses.' This clearly identifies factory workplace hazards as a risk to the business, as it outlines extensive management efforts to prevent and respond to such events. However, it does not provide any statement about the financial materiality of this risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure describes processes for 'reporting occupational health and safety incidents, risks, and problems,' 'rectifying major hidden dangers,' and 'preventing similar accidents,' clearly indicating a focus on threats and mitigation.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes management processes and compliance requirements but does not provide any explicit financial figures or statements about the financial materiality of workplace hazards.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The processes described, such as 'daily safety inspections,' 'real-time reporting,' and 'quarterly performance evaluations,' indicate ongoing and present-day activities to manage risks.",
+            "timeframe": "Present day"
+          },
+          "text": "新安建立完善了员工上报职业健康与安全事件、风险和问题的投诉流程：■ 对于在日常安全检查和风险隐患排查中发现的问题，通过公司内网OA平台发布隐患报表，定项目、定时间、定部门（人员）限期整改。对查出的重大隐患暂时难以立即整改的，在采取有效可靠防范措施的基础上，提交书面报告并制定计划，限期解决或停产整改。■ 设置了举报电话，接受员工对健康与安全事件、风险和问题的投诉和举报。要求各单位（员工）实时报告发生的工伤、事故和未遂事件，任何单位和个人不得瞒报、谎报或拖延不报。按照“四不放过”原则，对事故实施全过程的跟踪督办，建立健全事故台账与档案，及时进行事故分析并进行整改，避免再次发生同类事故。■ 新安按照新安《承包商安全管理制度》对承包商的资质审查、过程控制、绩效评价等进行管理，各生产单位安全环保部门每季度进行绩效评价，形成季度绩效评分汇总并反馈至承包商，督促其持续改进，不断加强委外施工安全管理。报告期内，所有委外施工承包商均签署施工安全协议/承诺，承包商参与安全培训的覆盖率为100%，新安对所有承包商的特种作业人员资格均进行审核验证。",
+          "page": "73",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "relevance_score": 8,
+          "relevance_explanation": "The evidence directly addresses the management of factory workplace hazards as a risk, detailing comprehensive systems for reporting, investigation, and remediation. While it doesn't explicitly mention 'chemical exposure', this is strongly implied within the context of 'occupational health and safety' for a pesticide manufacturer.",
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "overlapping",
+            "similarity": 0.764629388816645,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "v3 contains all the information from v4 plus an additional paragraph detailing contractor safety management, making it more comprehensive.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company describes a comprehensive system for managing 'occupational health and safety incidents, risks, and problems,' including 'major hidden dangers' and 'accidents.' This acknowledges workplace hazards as a business risk that requires systematic management, but it lacks an explicit statement on financial materiality.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "上报职业健康与安全事件、风险和问题 (reporting occupational health and safety incidents, risks, and problems)",
+                "风险隐患排查 (risk and hazard investigation)",
+                "重大隐患 (major hidden dangers)"
+              ]
+            },
+            "confidence_assessment": {
+              "evidence_summary": "The company discloses a detailed management system for identifying, reporting, and rectifying occupational health and safety risks, hazards, and incidents, including for contractors. This demonstrates a clear recognition of workplace hazards as a risk to the business.",
+              "confidence_explanation": "The evidence is strong and directly describes the management of 'risks' and 'hazards'. The only minor ambiguity is the lack of the specific term 'chemical exposure', but this is a reasonable inference given the company's industry and the broad scope of 'occupational health and safety'.",
+              "confidence_percentage": 95
+            },
+            "relevance_to_question": {
+              "is_relevant": true,
+              "relevance_score": 8,
+              "relevance_explanation": "The evidence directly addresses the management of factory workplace hazards as a risk, detailing comprehensive systems for reporting, investigation, and remediation. While it doesn't explicitly mention 'chemical exposure', this is strongly implied within the context of 'occupational health and safety' for a pesticide manufacturer."
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99906-003",
+          "quote": "新安严格遵守《中华人民共和国安全生产法》《中华人民共和国职业病防治法》等法律法规，秉持“一切事都是可以预防的”安全理念，按照ISO 45001标准要求建立健全职业健康安全管理体系。新安设置专门的SHE职能机构并配备有资质的专业人员以指导、协调公司SHE管理工作。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 71, 职业健康安全",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the snippet provides a financial figure for mitigation efforts (over 100 million RMB), it does not explicitly state that the risk itself is financially material to the business, which is required for a FULL_DISCLOSURE classification.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language focuses on 'strict compliance' with laws and 'establishing a management system,' which presents the topic as a regulatory and operational requirement to be met, rather than a direct threat or a clear opportunity.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure mentions compliance and management systems but does not provide any explicit financial figures or statements about the financial materiality of workplace hazards.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet describes the establishment of an ongoing management system and continuous compliance with laws, indicating a present-day and ongoing commitment to managing workplace safety.",
+            "timeframe": "Present day"
+          },
+          "text": "新安严格遵守《中华人民共和国安全生产法》《中华人民共和国职业病防治法》等法律法规，秉持“一切事都是可以预防的”安全理念，按照ISO 45001标准要求建立健全职业健康安全管理体系。新安设置专门的SHE职能机构并配备有资质的专业人员以指导、协调公司SHE管理工作。",
+          "page": "71",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9924242424242424,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Exact duplicate (similarity: 99.2%). Auto-merged using v3 verification-corrected."
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99906-004",
+          "quote": "新安在行业内率先引进全球先进的杜邦SHE管理体系，秉持“一切事故都是可以预防的”安全理念，每年安全生产投 入超亿元，纵向到边、横向到底，持续推动安全管理体系化、规范化、智能化，不断强化行为安全和工艺安全管 理，有效落实全员安全生产责任制，提升本质安全水平。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 31, 强化环境风险管控",
+          "financial_amounts": [
+            "超亿元"
+          ],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the snippet provides a financial figure for mitigation efforts (over 100 million RMB), it does not explicitly state that the risk itself is financially material to the business, which is required for a FULL_DISCLOSURE classification.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure emphasizes '安全理念' (safety philosophy) and '强化行为安全和工艺安全管理' (strengthening behavioral safety and process safety management), clearly framing workplace hazards as a threat that requires proactive management and mitigation.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides an explicit, quantifiable financial figure of '超亿元' (over 100 million RMB) for annual safety production investment, directly linking financial resources to managing this risk.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement '每年安全生产投入超亿元' (invests over 100 million RMB annually in safety production) indicates an ongoing, present-day commitment and investment.",
+            "timeframe": "Present day"
+          },
+          "text": "新安在行业内率先引进全球先进的杜邦SHE管理体系，秉持“一切事故都是可以预防的”安全理念，每年安全生产投 入超亿元，纵向到边、横向到底，持续推动安全管理体系化、规范化、智能化，不断强化行为安全和工艺安全管 理，有效落实全员安全生产责任制，提升本质安全水平。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 31, 强化环境风险管控",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99906-005",
+          "quote": "近三年安全生产管理绩效 指标 单位 2022年 2023年 2024年 安全生产投入 万元 11,097 11,582 9,389 自有员工（集团） 人 6,347 8,174 8,499 总工时 万小时 1,320.53 1,707.36 1,794.99 自有员工工亡人数 人 0 0 0 损失工时伤害事件 件 8 3 5 工伤损失工作日数 天 7,586 8,033 1,375 在岗人员安全培训累计人次 人次 29,748 38,568 39,662 在岗人员人均接受安全培训时数 小时 56 57 57",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 72, 职业健康安全",
+          "financial_amounts": [
+            "11,097万元",
+            "11,582万元",
+            "9,389万元",
+            "8件",
+            "3件",
+            "5件",
+            "7,586天",
+            "8,033天",
+            "1,375天",
+            "29,748人次",
+            "38,568人次",
+            "39,662人次",
+            "56小时",
+            "57小时",
+            "57小时"
+          ],
+          "classification_justification": "This snippet provides quantitative metrics on 'safety production investment,' 'lost-time injury incidents,' and 'lost workdays due to work-related injuries' over three years. These metrics directly relate to the impact of workplace hazards on the business, including financial investment and operational disruption. While it doesn't explicitly state financial materiality, the quantification of investment and losses indicates a significant business concern.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The data presented, such as 'lost-time injury incidents' and 'lost workdays due to work-related injuries,' clearly indicates negative consequences that the company is tracking and managing, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit financial figures for 'safety production investment' and quantifiable non-financial metrics like 'lost-time injury incidents' and 'lost workdays due to work-related injuries,' which represent a financial impact without precise monetary values for the losses themselves.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The data covers '2022, 2023, and 2024,' indicating a backward-looking review of past performance and present-day status.",
+            "timeframe": "Backward-looking"
+          },
+          "text": "近三年安全生产管理绩效 指标 单位 2022年 2023年 2024年 安全生产投入 万元 11,097 11,582 9,389 自有员工（集团） 人 6,347 8,174 8,499 总工时 万小时 1,320.53 1,707.36 1,794.99 自有员工工亡人数 人 0 0 0 损失工时伤害事件 件 8 3 5 工伤损失工作日数 天 7,586 8,033 1,375 在岗人员安全培训累计人次 人次 29,748 38,568 39,662 在岗人员人均接受安全培训时数 小时 56 57 57",
+          "page": "72",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99906-006",
+          "quote": "近三年职业健康管理绩效 指标 单位 2022 年 2023 年 2024 年 职业病体检人数 人 4,231 4,449 4,234 职业病检出人数 人 0 0 0 职业禁忌症检出人数 人 0 0 0 职业健康体检覆盖率（职业危害岗位） 人 100% 100% 100%",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 73, 职业健康安全",
+          "financial_amounts": [
+            "4,231人",
+            "4,449人",
+            "4,234人",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "100%",
+            "100%",
+            "100%"
+          ],
+          "classification_justification": "This snippet provides quantitative metrics on 'occupational health examination numbers' and 'number of occupational diseases detected,' showing zero detected occupational diseases. This indicates that the company is actively monitoring and managing occupational health, which implies that occupational health problems are a business concern. The absence of detected cases suggests successful management, but the monitoring itself confirms the underlying concern.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The data tracks 'occupational disease examination numbers' and 'occupational diseases detected,' indicating a focus on potential negative health outcomes and their prevention, thus framing it as a risk management activity.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides quantifiable non-financial metrics related to occupational health, such as 'occupational health examination numbers' and 'occupational disease detection numbers,' which represent a business impact without explicit financial figures.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The data covers '2022, 2023, and 2024,' indicating a backward-looking review of past performance and present-day status.",
+            "timeframe": "Backward-looking"
+          },
+          "text": "近三年职业健康管理绩效 指标 单位 2022 年 2023 年 2024 年 职业病体检人数 人 4,231 4,449 4,234 职业病检出人数 人 0 0 0 职业禁忌症检出人数 人 0 0 0 职业健康体检覆盖率（职业危害岗位） 人 100% 100% 100%",
+          "page": "73",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 6
+        },
+        {
+          "snippet_id": "99906-007",
+          "quote": "新安通过定期开展职业病危害因素检测，对岗位职业病危害程度进行分析，按照员工实际接触有害因素的水平采取相应的职业病危害因素控制措施，防止员工暴露在有害物质环境中。新安为员工提供符合职业健康安全防护标准的劳动保护用品和防护装置，并对其使用情况实施常态化检查，以督促员工正确使用防护装备，保证员工职业健康安全防护的有效性。新安为所有员工建立了职业健康监护档案，记录员工个人信息及岗位职业病危害因素检测结果和历次职业健康检查结果等资料。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 73, 职业健康安全",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes proactive measures such as 'regular detection of occupational disease hazard factors,' 'control measures,' and 'provision of labor protection equipment' to prevent 'employee exposure to harmful substances.' This clearly identifies chemical exposure and other workplace hazards as a risk to the business, as it outlines extensive management efforts to prevent and mitigate such events. However, it does not provide any statement about the financial materiality of this risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on 'preventing employee exposure to harmful substances' and 'ensuring the effectiveness of occupational health and safety protection,' indicating efforts to mitigate potential negative health outcomes, thus framing it as a risk management activity.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes management processes and protective measures but does not provide any explicit financial figures or statements about the financial materiality of workplace hazards.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The activities described, such as 'regular detection,' 'control measures,' and 'constant checks,' indicate ongoing and present-day efforts to manage risks.",
+            "timeframe": "Present day"
+          },
+          "text": "新安通过定期开展职业病危害因素检测，对岗位职业病危害程度进行分析，按照员工实际接触有害因素的水平采取相应的职业病危害因素控制措施，防止员工暴露在有害物质环境中。新安为员工提供符合职业健康安全防护标准的劳动保护用品和防护装置，并对其使用情况实施常态化检查，以督促员工正确使用防护装备，保证员工职业健康安全防护的有效性。新安为所有员工建立了职业健康监护档案，记录员工个人信息及岗位职业病危害因素检测结果和历次职业健康检查结果等资料。",
+          "page": "73",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 7
+        },
+        {
+          "snippet_id": "99906-008",
+          "quote": "新安建立了完善的环境风险应急管理体系并配置充足的应急物资资源，在建德马目智能园区设立了杭州市级环保应 急物资库。我们根据生产过程中的潜在环境风险，制定了详细的应急预案，并定期进行应急演练，以确保在突发环 境事件发生时能够迅速有效地应对。同时，我们定期组织相关的环境风险防控和应急处理培训，确保每位员工都能 够熟练掌握应急处理流程，保障在任何环境突发事件发生时，能够第一时间做出反应并采取措施。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 32, 强化环境风险管控",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes the establishment of an 'environmental risk emergency management system' and 'emergency response plans' for 'potential environmental risks in the production process', including regular drills and training. This implicitly covers chemical exposure incidents during production, acknowledging them as a risk requiring preparedness and employee training.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on '环境风险应急管理体系' (environmental risk emergency management system) and '应急预案' (emergency response plans) for '潜在环境风险' (potential environmental risks) in production, framing these as threats that require preparedness and rapid response.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes the establishment of systems and training but does not provide explicit financial figures or state the financial materiality of these risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The activities described, such as establishing systems, developing plans, and conducting regular drills and training, are ongoing and pertain to present-day and future preparedness.",
+            "timeframe": "Present day"
+          },
+          "text": "新安建立了完善的环境风险应急管理体系并配置充足的应急物资资源，在建德马目智能园区设立了杭州市级环保应 急物资库。我们根据生产过程中的潜在环境风险，制定了详细的应急预案，并定期进行应急演练，以确保在突发环 境事件发生时能够迅速有效地应对。同时，我们定期组织相关的环境风险防控和应急处理培训，确保每位员工都能 够熟练掌握应急处理流程，保障在任何环境突发事件发生时，能够第一时间做出反应并采取措施。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 32, 强化环境风险管控",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 8
+        },
+        {
+          "snippet_id": "99906-009",
+          "quote": "近三年安全生产管理绩效 指标 单位 2022年 2023年 2024年 损失工时伤害事件 件 8 3 5 工伤损失工作日数 天 7,586 8,033 1,375",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 72, 守护安全",
+          "financial_amounts": [
+            "8",
+            "3",
+            "5",
+            "7,586",
+            "8,033",
+            "1,375"
+          ],
+          "classification_justification": "This snippet provides quantitative metrics for 'lost-time injury incidents' and 'lost workdays due to work-related injuries' over three years. These are direct indicators of the occurrence and impact of workplace hazards, including potential chemical exposure incidents, clearly demonstrating that these are recognized and measured risks to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The presentation of '损失工时伤害事件' (lost-time injury incidents) and '工伤损失工作日数' (lost workdays due to work-related injuries) as performance indicators implies that these are negative outcomes that the company tracks and aims to reduce, framing them as risks.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides quantitative metrics ('件' for incidents, '天' for lost workdays) that indicate the scale of impact, but it does not provide explicit monetary values for these impacts, making it a non-financial disclosure.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The data covers '近三年' (the past three years), making it backward-looking, but the inclusion in a current report implies ongoing relevance and monitoring.",
+            "timeframe": "Backward-looking"
+          },
+          "text": "近三年安全生产管理绩效 指标 单位 2022年 2023年 2024年 损失工时伤害事件 件 8 3 5 工伤损失工作日数 天 7,586 8,033 1,375",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 72, 守护安全",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 9
+        },
+        {
+          "snippet_id": "99906-010",
+          "quote": "新安通过定期开展职业病危害因素检测，对岗位职业病危害程度进行分析，按照员工实际接触有害因素的水平采取 相应的职业病危害因素控制措施，防止员工暴露在有害物质环境中。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 73, 保障健康",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that the company conducts 'occupational disease hazard factor detection' and implements 'control measures to prevent employee exposure to harmful substances'. This directly addresses the risk of chemical exposure during production, indicating it is a recognized business risk that requires specific monitoring and control actions.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on '职业病危害因素检测' (occupational disease hazard factor detection) and '防止员工暴露在有害物质环境中' (preventing employee exposure to harmful substances), clearly framing these as threats that need to be identified and controlled.",
+            "framing": "Risk",
+            "financial_justification": "The snippet describes monitoring and control measures but does not provide explicit financial figures or state the financial materiality of these risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The activities described, such as regular detection and control measures, are ongoing and pertain to present-day operations.",
+            "timeframe": "Present day"
+          },
+          "text": "新安通过定期开展职业病危害因素检测，对岗位职业病危害程度进行分析，按照员工实际接触有害因素的水平采取 相应的职业病危害因素控制措施，防止员工暴露在有害物质环境中。",
+          "page": "Wynca group 2024 sustainability report.pdf, Page 73, 保障健康",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 10
+        },
+        {
+          "snippet_id": "99906-011",
+          "quote": "公司属于化工生产企业，部分原料、半成品或产成品为易燃、易爆、腐蚀性或有毒物质，在 生产过程中还会产生一定量的废水、废弃排放物。同时由于化工企业固有的特性，如高温高压的 工艺过程，连续不间断的作业，部分原材料的不稳定性，公司在生产作业环节及运输过程存在一 定的安全风险。公司重视安全环保风险，不断加强环境制度管理、规范生产操作规程，提高干部 员工环境保护意识、自觉承担节能减排义务，积极推进 SHE 管理模式，坚持\"生态、健康、可持续 \"的发展理念，坚持走资源节约型、环境友好型的发展道路。",
+          "source": "Xinan Annual Report 2024.pdf, Page 39, 1.安全环保风险",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly states that as a chemical production enterprise, the company handles 'flammable, explosive, corrosive, or toxic substances' and that 'certain safety risks exist in the production and transportation processes'. This is a clear and explicit identification of factory workplace hazards, including chemical exposure, as a risk to the business.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The disclosure explicitly identifies '易燃、易爆、腐蚀性或有毒物质' (flammable, explosive, corrosive, or toxic substances) and '一定的安全风险' (certain safety risks) in production, clearly framing these as threats to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet identifies safety risks and toxic substances but does not provide explicit financial figures or state the financial materiality of these risks.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of the company's nature as a chemical production enterprise and the inherent risks in its production process indicates an ongoing, present-day risk.",
+            "timeframe": "Present day"
+          },
+          "text": "公司属于化工生产企业，部分原料、半成品或产成品为易燃、易爆、腐蚀性或有毒物质，在 生产过程中还会产生一定量的废水、废弃排放物。同时由于化工企业固有的特性，如高温高压的 工艺过程，连续不间断的作业，部分原材料的不稳定性，公司在生产作业环节及运输过程存在一 定的安全风险。公司重视安全环保风险，不断加强环境制度管理、规范生产操作规程，提高干部 员工环境保护意识、自觉承担节能减排义务，积极推进 SHE 管理模式，坚持\"生态、健康、可持续 \"的发展理念，坚持走资源节约型、环境友好型的发展道路。",
+          "page": "Xinan Annual Report 2024.pdf, Page 39, 1.安全环保风险",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 11
+        },
+        {
+          "snippet_id": "99906-012",
+          "quote": "新安始终高度重视安全生产工作，秉持“生命至上、安全第一”的理念，落实安全第一责任，严格按照安全环保法律法规的要求进行管理，确保生产合法合规，引入杜邦SHE管理体系咨询，融合全球先进安全管理理念，同时建立安委会及安全领导力提升、安全文化、培训、承包商四大分委会，由综合管理部（SHE部）负责整体SHE工作推进。目前，新安已培养SHE专家60余名，并常态化实施SHE审核机制，形成以安全领导力建设为核心的新安特色安全管理体系。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 72, 职业健康安全",
+          "financial_amounts": [
+            "60余名"
+          ],
+          "classification_justification": "This snippet emphasizes the company's 'high importance' on safety production, its 'life first, safety first' philosophy, and the implementation of advanced SHE management systems. This clearly indicates that workplace hazards are a significant business concern. However, it does not explicitly characterize these as a 'risk to the business' or discuss their financial materiality.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language highlights 'high importance,' 'life first, safety first' philosophy, and 'ensuring legal and compliant production,' indicating a strong commitment to managing potential negative outcomes, thus framing it as a risk management activity.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure describes management systems and personnel but does not provide any explicit financial figures or statements about the financial materiality of workplace hazards.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet describes an ongoing management system, continuous implementation of SHE work, and regular audits, indicating a present-day and continuous commitment.",
+            "timeframe": "Present day"
+          },
+          "text": "新安始终高度重视安全生产工作，秉持“生命至上、安全第一”的理念，落实安全第一责任，严格按照安全环保法律法规的要求进行管理，确保生产合法合规，引入杜邦SHE管理体系咨询，融合全球先进安全管理理念，同时建立安委会及安全领导力提升、安全文化、培训、承包商四大分委会，由综合管理部（SHE部）负责整体SHE工作推进。目前，新安已培养SHE专家60余名，并常态化实施SHE审核机制，形成以安全领导力建设为核心的新安特色安全管理体系。",
+          "page": "72",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 12
+        }
+      ],
+      "summary": "Yes, the company provides a full disclosure, explicitly stating that as a chemical producer handling \"toxic substances,\" its operations have inherent \"safety risks.\" It details a comprehensive management system (ISO 45001, DuPont SHE), significant annual safety investments (93.89 million RMB in 2024), and specific actions like detecting \"occupational disease hazard factors\" to prevent employee exposure. The company's extensive mitigation efforts and reporting of metrics like lost-time incidents confirm it views these workplace hazards as a significant business risk.",
+      "merger_stats": {
+        "v3_snippets": 7,
+        "v4_snippets": 8,
+        "merged_snippets": 12,
+        "snippet_pairs": 12,
+        "ai_reviews_conducted": 2,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99907",
+      "question_number": 7,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99907-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Xinan does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99908",
+      "question_number": 8,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99908-001",
+          "quote": "全球农药中除草剂的市场份额最大，草甘膦仍然是全球销量和销售额最大的农药品种，全球年需求量约在 80-85 万吨。2024 年全球草甘膦装置总产能约 121 万吨（海外产能 40 万吨，中国 81 万吨），产量预计约 83 万吨。随着转基因作物种植面积增加以及百草枯等除草剂逐渐退出市场，草甘膦市场需求仍有增长空间。根据有关部门测算，如果我国全面推广耐除草剂转基因作物，预计将新增 8-10 万吨草甘膦需求。",
+          "source": "Xinan Annual Report 2024.pdf, Page 27, 行业基本情况及公司行业地位",
+          "financial_amounts": [
+            "80-85万吨",
+            "121万吨",
+            "40万吨",
+            "81万吨",
+            "83万吨",
+            "8-10万吨"
+          ],
+          "classification_justification": "This snippet discusses the market for glyphosate, noting that 'demand still has room for growth' due to 'increased genetically modified crop planting area' and the 'gradual withdrawal of herbicides like paraquat.' This frames market shifts as an opportunity for increased demand for its products, rather than a risk of demand destruction from alternatives like organic farming.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language emphasizes 'room for growth' and 'additional demand' for glyphosate due to market changes, clearly framing these as beneficial outcomes for the business, thus an opportunity.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet provides quantifiable non-financial metrics ('80-85 tons,' '8-10 tons') related to market demand but does not provide explicit financial figures or state the financial materiality of these market shifts.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The discussion of 'current global demand' and 'expected additional demand' indicates a present-day and forward-looking perspective on market trends.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "全球农药中除草剂的市场份额最大，草甘膦仍然是全球销量和销售额最大的农药品种，全球年需求量约在 80-85 万吨。2024 年全球草甘膦装置总产能约 121 万吨（海外产能 40 万吨，中国 81 万吨），产量预计约 83 万吨。随着转基因作物种植面积增加以及百草枯等除草剂逐渐退出市场，草甘膦市场需求仍有增长空间。根据有关部门测算，如果我国全面推广耐除草剂转基因作物，预计将新增 8-10 万吨草甘膦需求。",
+          "page": "27",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "No, the company does not disclose demand destruction from organic farming and alternatives as a risk. Instead, the disclosure presents a positive outlook for its key product, glyphosate, anticipating that demand will grow due to the expansion of genetically modified crops and the phasing out of competing herbicides.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99909",
+      "question_number": 9,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+      "disclosures": [
+        {
+          "snippet_id": "99909-001",
+          "quote": "新安依托自身产业和产品优势，视服务种植户为己任，大力开展产品下乡、走进田间地头等工作，助力乡村振兴建设。农飞客 服务田间地头 在浙江、海南、湖南等地，新安农服人化身“农田卫士”，针对农作物生长周期的各类病虫害问题，形成综合植保解决方案，利用现代化农业装备植保无人机，为农户提供精准的药肥喷洒服务，不仅有效解决了农村地区劳动力短缺、人工作业效率低下、药肥施用过量等难题，而且确保了作物生长所需的营养和防病虫效果，为作物的丰产增收奠定了坚实基础。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 90, 社会贡献",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes the company's agricultural services, including 'precise spraying of pesticides and fertilizers' to 'effectively solve problems such as excessive application of pesticides and fertilizers.' While this acknowledges the issue of 'excessive application' which could lead to runoff, it frames the company's role as a solution provider and does not explicitly characterize eutrophication from nutrient runoff as a 'risk to the business.'",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The disclosure focuses on 'solving problems' and 'ensuring crop growth' through its services, indicating a positive and beneficial role for the business, thus framing it as an opportunity.",
+            "framing": "Opportunity",
+            "financial_justification": "The snippet describes services and problem-solving but does not provide any explicit financial figures or statements about the financial materiality of eutrophication.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of ongoing agricultural services and problem-solving indicates present-day activities.",
+            "timeframe": "Present day"
+          },
+          "text": "新安依托自身产业和产品优势，视服务种植户为己任，大力开展产品下乡、走进田间地头等工作，助力乡村振兴建设。农飞客 服务田间地头 在浙江、海南、湖南等地，新安农服人化身“农田卫士”，针对农作物生长周期的各类病虫害问题，形成综合植保解决方案，利用现代化农业装备植保无人机，为农户提供精准的药肥喷洒服务，不仅有效解决了农村地区劳动力短缺、人工作业效率低下、药肥施用过量等难题，而且确保了作物生长所需的营养和防病虫效果，为作物的丰产增收奠定了坚实基础。",
+          "page": "90",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "No, the company does not disclose eutrophication from nutrient runoff when its products are applied by farmers as a risk to the business. The company discusses providing services like \"precise pesticide and fertilizer spraying\" to address the problem of \"excessive application\" by farmers. However, this is framed as a solution and a service opportunity for the company, not as an explicit risk to its business.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99910",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that disposal of chemical waste, such as gypstacks, from the production of phosphate fertiliser is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99910-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Xinan does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99911",
+      "question_number": 2,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99911-001",
+          "quote": "生态系统和生物多样性 新安深知生物多样性对于维持生态平衡、促进物种繁衍以及保障人类福祉的重要性，致力于最大程度地保护生物多样性... 退出 ■ 根据环境影响评价结果，开展针对性的生态修复工作，确保项目退出后，相关区域的生态系统能够及时有效恢复，实现生态系统的可持续。",
+          "source": "Wynca group 2024 sustainability report.pdf, Page 47, 生态系统和生物多样性",
+          "financial_amounts": [],
+          "classification_justification": "This snippet indicates the company's involvement in silicon ore mining and mentions '生态修复' (ecological restoration) during the '退出' (exit) phase of projects, which would apply to mining sites. It frames this as a commitment to ecological protection and sustainability, acknowledging the activity and the need for restoration. However, it does not explicitly characterize the restoration of mining sites as a direct 'risk to the business', but rather as a strategic measure for environmental management.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language emphasizes the company's commitment to '生态保护' (ecological protection) and '生态修复' (ecological restoration) to achieve '生态系统的可持续' (ecosystem sustainability). This framing presents the activity as a responsible practice rather than a threat or negative consequence for the business.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure discusses ecological restoration efforts but does not provide any specific financial figures, costs, or statements about the financial materiality of these activities.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The mention of '项目退出后' (after project exit) for restoration work indicates a forward-looking perspective, addressing future obligations rather than past or present events.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "生态系统和生物多样性 新安深知生物多样性对于维持生态平衡、促进物种繁衍以及保障人类福祉的重要性，致力于最大程度地保护生物多样性... 退出 ■ 根据环境影响评价结果，开展针对性的生态修复工作，确保项目退出后，相关区域的生态系统能够及时有效恢复，实现生态系统的可持续。",
+          "page": "47",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "The company does not disclose the restoration of mining sites as a risk to the business. It acknowledges its responsibility to carry out targeted ecological restoration work after a project's exit to ensure the ecosystem recovers, framing this as a planned sustainability measure rather than a potential liability or risk.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99912",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99912-001",
+          "quote": "2024 年 7 月，工业和信息化部等九部门印发关于《精细化工产业创新发展实施方案（2024—2027 年）》的通知...农药。调整产品结构，逐步淘汰高残留以及对环境或农产品质量安全影响大的农药，加快发展高效、安全，环境友好型农药及中间体，以及水基化、超低容量、缓释等制剂剂型。",
+          "source": "Xinan Annual Report 2024.pdf, Page 25, 1、行业基本情况",
+          "financial_amounts": [],
+          "classification_justification": "This snippet from the annual report directly references a government policy that mandates the '逐步淘汰高残留以及对环境或农产品质量安全影响大的农药' (gradual elimination of high-residue pesticides and those with significant impact on environment or agricultural product quality and safety). This policy creates a clear regulatory risk where certain products could be banned from production or sale, directly impacting the company's business. The company acknowledges this external regulatory pressure.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language '逐步淘汰高残留以及对环境或农产品质量安全影响大的农药' (gradually eliminate high-residue pesticides and those with significant impact on environment or agricultural product quality and safety) clearly presents a negative consequence for the business if its products fall into these categories, framing it as a threat.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure identifies a regulatory risk that could lead to product bans, which would have a financial impact. However, it does not provide any specific financial figures or state the financial materiality of this risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The policy is for '2024—2027 年', indicating a future-oriented risk that has not yet fully manifested but is anticipated.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "2024 年 7 月，工业和信息化部等九部门印发关于《精细化工产业创新发展实施方案（2024—2027 年）》的通知...农药。调整产品结构，逐步淘汰高残留以及对环境或农产品质量安全影响大的农药，加快发展高效、安全，环境友好型农药及中间体，以及水基化、超低容量、缓释等制剂剂型。",
+          "page": "25",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99912-003",
+          "quote": "2024 年 7 月，工业和信息化部等九部门印发关于《精细化工产业创新发展实施方案（2024—2027 年）》的通知：“将大力发展精细化工作为产业延链补链强链、转型升级的主攻方向，坚持需求牵引和创新驱动，以增强高端产品供给能力培育发展新动能”。推动传统产业延链。推动传统产业以产业链高端化延伸为重点发展精细化工，打造专业化、精细化、特色化、新颖化的产品体系，提升产品附加值，增强核心竞争力。重点加强氟、硅、磷等矿产资源的高值利用，发展新型有机硅单体以及高性能硅油、硅橡胶、硅树脂等先进硅材料，磷系新能源材料，高性能含磷阻燃剂、增塑剂、净水剂、医药农药中间体、黑磷基材料等高附加值含磷化学品。加快关键产品攻关。围绕新能源、新材料、生物技术、工业母机、医疗装备需求，提升高端聚烯烃、合成树脂与工程塑料、聚氨酯、氟硅材料及制品、特种橡胶、高性能纤维、高性能膜材料、电子化学品、高效低毒低残留农药、高端染料、特种涂料、特种胶黏剂、专用助剂和油剂、新型催化剂、高端试剂等领域关键产品供给能力。促进优势产品提质。推动涂料、染料、氟硅有机材料等具有比较优势行业实施“三品”行动，大力发展服务型制造。农药。调整产品结构，逐步淘汰高残留以及对环境或农产品质量安全影响大的农药，加快发展高效、安全、环境友好型农药及中间体，以及水基化、超低容量、缓释等制剂剂型。",
+          "source": "Xinan Annual Report 2024.pdf, Page 25, 行业政策",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that national policy aims to 'gradually eliminate high-residue pesticides and those with significant environmental or agricultural product quality and safety impacts.' This directly identifies a regulatory risk that could lead to the banning or restriction of certain products, clearly impacting the business. The disclosure is qualitative but unambiguous about the potential for product elimination.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'gradually eliminate' and 'significant environmental or agricultural product quality and safety impacts' frames this as a negative consequence or threat to the business's product portfolio due to regulatory changes.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure describes a qualitative impact (product elimination) without providing any specific monetary figures or stating financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet refers to an 'Implementation Plan (2024-2027)' and a policy direction to 'gradually eliminate' certain products, indicating a future-oriented risk that is currently being addressed.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "2024 年 7 月，工业和信息化部等九部门印发关于《精细化工产业创新发展实施方案（2024—2027 年）》的通知：“将大力发展精细化工作为产业延链补链强链、转型升级的主攻方向，坚持需求牵引和创新驱动，以增强高端产品供给能力培育发展新动能”。推动传统产业延链。推动传统产业以产业链高端化延伸为重点发展精细化工，打造专业化、精细化、特色化、新颖化的产品体系，提升产品附加值，增强核心竞争力。重点加强氟、硅、磷等矿产资源的高值利用，发展新型有机硅单体以及高性能硅油、硅橡胶、硅树脂等先进硅材料，磷系新能源材料，高性能含磷阻燃剂、增塑剂、净水剂、医药农药中间体、黑磷基材料等高附加值含磷化学品。加快关键产品攻关。围绕新能源、新材料、生物技术、工业母机、医疗装备需求，提升高端聚烯烃、合成树脂与工程塑料、聚氨酯、氟硅材料及制品、特种橡胶、高性能纤维、高性能膜材料、电子化学品、高效低毒低残留农药、高端染料、特种涂料、特种胶黏剂、专用助剂和油剂、新型催化剂、高端试剂等领域关键产品供给能力。促进优势产品提质。推动涂料、染料、氟硅有机材料等具有比较优势行业实施“三品”行动，大力发展服务型制造。农药。调整产品结构，逐步淘汰高残留以及对环境或农产品质量安全影响大的农药，加快发展高效、安全、环境友好型农药及中间体，以及水基化、超低容量、缓释等制剂剂型。",
+          "page": "Xinan Annual Report 2024.pdf, Page 25, 行业政策",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99912-004",
+          "quote": "2、作物保护产业 ... (1)全球市场温和增长，新技术孕育新发展。贸易摩擦与地区冲突的升级使各国都更重视粮食生产的安全和自主可控，驱动作物保护市场需求上升。南美受益于大豆、玉米种植面积的增加需求持续保持增长；东南亚地区因人口增长和出口需求，市场潜力依然巨大；中国批准转基因大豆和玉米种植，带动草甘膦等除草剂需求增长。而环保政策趋严，高毒农药逐步淘汰，推动低毒、生物农药占比进一步提升，生物农药和纳米农药成为发展重点；无人机、AI 监测等精准农业工具应用加速，RNA 干扰、基因编辑等新技术进入商业化阶段，都将为作物保护产业带来新的发展机会。",
+          "source": "Xinan Annual Report 2024.pdf, Page 36, 行业格局和趋势",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'stricter environmental policies' leading to the 'gradual elimination of highly toxic pesticides' as a trend in the crop protection industry. This is a clear disclosure of a regulatory risk that could result in the company's products being banned or restricted, directly impacting its business operations.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'gradual elimination of highly toxic pesticides' clearly presents a negative consequence or threat to the business's product lines due to evolving environmental regulations.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure describes a qualitative impact (product elimination) without providing any specific monetary figures or stating financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet discusses 'stricter environmental policies' and 'gradual elimination' as ongoing trends and future developments, indicating a forward-looking risk that is currently influencing the industry.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "2、作物保护产业 ... (1)全球市场温和增长，新技术孕育新发展。贸易摩擦与地区冲突的升级使各国都更重视粮食生产的安全和自主可控，驱动作物保护市场需求上升。南美受益于大豆、玉米种植面积的增加需求持续保持增长；东南亚地区因人口增长和出口需求，市场潜力依然巨大；中国批准转基因大豆和玉米种植，带动草甘膦等除草剂需求增长。而环保政策趋严，高毒农药逐步淘汰，推动低毒、生物农药占比进一步提升，生物农药和纳米农药成为发展重点；无人机、AI 监测等精准农业工具应用加速，RNA 干扰、基因编辑等新技术进入商业化阶段，都将为作物保护产业带来新的发展机会。",
+          "page": "Xinan Annual Report 2024.pdf, Page 36, 行业格局和趋势",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        }
+      ],
+      "summary": "Yes, the company discloses the risk of its products being banned or restricted, which is classified as a PARTIAL disclosure. It highlights government policies aimed at 'gradually eliminating' high-residue and environmentally impactful pesticides, as well as a global trend of phasing out highly toxic products due to stricter environmental rules. The company also identifies rising registration costs and stricter market access requirements as significant barriers that could prevent products from being sold.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 2,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "needs_attention",
+        "summary": "1 snippet(s) removed after high-confidence review.",
+        "decisions": [
+          {
+            "snippet_id": "99912-002",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet discusses the rising costs and difficulty of initial product registration, but it does not mention the risk of already-marketed products being banned from production or sale.",
+            "action": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99913",
+      "question_number": 4,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99913-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Xinan does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99914",
+      "question_number": 5,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that loss of pollinators and beneficial insects, such as bees, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99914-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Xinan does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99915",
+      "question_number": 6,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99915-001",
+          "quote": "(3)全球农药市场准入门槛抬高，产品登记成本逐年提高 随着对人类健康和环境保护更加关注，总体上全球农药登记门槛和成本在逐年提高。一方面全球不同国家的相关政策法规调整频繁且日趋严格，相关的登记过程更为繁琐；另一方面，农药登记试验资料要求大幅提高，例如要求登记资料需要 GLP 实验室完成、需要开展多种当地药效试验，以及审核时间长等，致使农药登记证获取成本大幅提升。",
+          "source": "Xinan Annual Report 2024.pdf, Page 26, 2、产品与生产",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly states that '全球农药登记门槛和成本在逐年提高' (global pesticide registration thresholds and costs are increasing year by year) and '致使农药登记证获取成本大幅提升' (leading to a significant increase in the cost of obtaining pesticide registration certificates). This explicitly identifies rising registration costs as a risk to the business, impacting its ability to sell products.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrases '准入门槛抬高' (market access thresholds are increasing) and '登记证获取成本大幅提升' (registration certificate acquisition costs are significantly increasing) clearly present a negative financial challenge for the business, framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly mentions '产品登记成本逐年提高' (product registration costs are increasing year by year) and '登记证获取成本大幅提升' (registration certificate acquisition costs are significantly increasing), indicating a financial impact. However, it does not provide specific monetary values for these costs or state their overall financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of '逐年提高' (increasing year by year) and '调整频繁且日趋严格' (frequently adjusted and becoming stricter) indicates an ongoing and forward-looking trend.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "(3)全球农药市场准入门槛抬高，产品登记成本逐年提高 随着对人类健康和环境保护更加关注，总体上全球农药登记门槛和成本在逐年提高。一方面全球不同国家的相关政策法规调整频繁且日趋严格，相关的登记过程更为繁琐；另一方面，农药登记试验资料要求大幅提高，例如要求登记资料需要 GLP 实验室完成、需要开展多种当地药效试验，以及审核时间长等，致使农药登记证获取成本大幅提升。",
+          "page": "26",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "relevance_score": 9,
+          "relevance_explanation": "The evidence directly addresses the question by stating that product registration costs are increasing year by year and that the cost to obtain registration certificates has significantly increased.",
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "overlapping",
+            "similarity": 0.9144542772861357,
+            "ai_reviewed": true,
+            "ai_decision": "keep_v3",
+            "ai_rationale": "The snippets are nearly identical, but Version 3 includes a heading that explicitly frames the disclosure as a risk related to rising market access thresholds and registration costs, providing better context than Version 4.",
+            "merged_classification": "PARTIAL",
+            "classification_rationale": "The company explicitly identifies rising registration costs as a business challenge ('产品登记成本逐年提高' - product registration costs are increasing year by year), but it does not provide a quantitative financial impact or an explicit statement on the financial materiality of this risk.",
+            "evidence_quality_flags": {
+              "characterizes_business_risk": true,
+              "product_benefit_framing": false,
+              "financial_materiality_explicit": false,
+              "key_phrases": [
+                "产品登记成本逐年提高",
+                "全球农药登记门槛和成本在逐年提高",
+                "致使农药登记证获取成本大幅提升"
+              ]
+            },
+            "confidence_assessment": {
+              "evidence_summary": "The company discloses that global pesticide registration thresholds and costs are increasing annually due to stricter regulations, leading to a significant rise in the cost of obtaining product registration certificates.",
+              "confidence_explanation": "The evidence directly and explicitly discusses rising registration costs as a business issue, using clear language that aligns perfectly with the user's question. There is no ambiguity.",
+              "confidence_percentage": 95
+            },
+            "relevance_to_question": {
+              "is_relevant": true,
+              "relevance_score": 9,
+              "relevance_explanation": "The evidence directly addresses the question by stating that product registration costs are increasing year by year and that the cost to obtain registration certificates has significantly increased."
+            },
+            "human_review_recommended": false,
+            "human_review_reason": null
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "Yes, the company discloses that rising compliance, testing, and registration costs for its products are a risk. It explains that due to increased focus on human health and environmental protection, global pesticide registration thresholds and costs are rising annually, with stricter regulations and more demanding testing requirements leading to a substantial increase in the cost of obtaining registration certificates.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 1,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99915-001",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet explicitly states that 'product registration costs are increasing year by year' (产品登记成本逐年提高) and that these costs have 'substantially increased' (成本大幅提升) due to stricter regulations, more complex processes, and higher testing requirements.",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99916",
+      "question_number": 7,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99916-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Xinan does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99917",
+      "question_number": 8,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99917-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Xinan does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99918",
+      "question_number": 9,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99918-001",
+          "quote": "公司外购的主要原材料有甘氨酸、黄磷、多聚甲醛、甲醇、液氨、金属硅等，动力供应中用到煤、电，这些产品的供应和价格一定程度上受能源、交通运输以及国家政策等因素影响，其价格可能会出现异常波动情况，这将一定程度上影响公司经济效益。公司将加强对原料供应商的管理，高度关注国家政策等一些影响原料价格的因素，做好原料市场的跟踪分析，把握好采购和库存量，努力降低原料采购成本。",
+          "source": "Xinan Annual Report 2024.pdf, Page 39, Section 四、可能面对的风险",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies that the prices of '煤、电' (coal, electricity) used in power supply are subject to '异常波动情况' (abnormal fluctuations) due to various factors, and that this '将一定程度上影响公司经济效益' (will affect the company's economic efficiency to some extent). This directly characterizes high energy input costs as a business risk with financial implications.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language '价格可能会出现异常波动情况' (prices may experience abnormal fluctuations) and '影响公司经济效益' (affect the company's economic efficiency) clearly frames this as a potential negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet states that price fluctuations '将一定程度上影响公司经济效益' (will affect the company's economic efficiency to some extent), indicating a financial impact without providing specific quantifiable figures.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase '可能会出现异常波动情况' (may experience abnormal fluctuations) indicates a forward-looking assessment of potential future events, while '一定程度上影响公司经济效益' (affect the company's economic efficiency to some extent) implies a present or future impact.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "公司外购的主要原材料有甘氨酸、黄磷、多聚甲醛、甲醇、液氨、金属硅等，动力供应中用到煤、电，这些产品的供应和价格一定程度上受能源、交通运输以及国家政策等因素影响，其价格可能会出现异常波动情况，这将一定程度上影响公司经济效益。公司将加强对原料供应商的管理，高度关注国家政策等一些影响原料价格的因素，做好原料市场的跟踪分析，把握好采购和库存量，努力降低原料采购成本。",
+          "page": "Xinan Annual Report 2024.pdf, Page 39, Section 四、可能面对的风险",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9621621621621622,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 96.2%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "Yes, the company discloses that high energy input costs are a risk to its business. It explicitly states that coal and electricity are used in its power supply and that their prices are subject to abnormal fluctuations due to factors like energy and national policies, which will in turn affect the company's economic benefits. This disclosure is classified as PARTIAL.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    }
+  ],
+  "completeness_summary": {
+    "total_questions_analyzed": 18,
+    "total_disclosure_snippets": 44,
+    "note": "Summary statistics recalculated from merged results"
+  },
+  "metadata": {
+    "company": "Xinan",
+    "year": "2024",
+    "analysis_date": "2025-11-07T18:36:17.174938",
+    "schema_version": "merged-v3-v4",
+    "merger_model": "gemini-2.5-pro",
+    "source_files": {
+      "v3": "Xinan_2024_v3_gemini-2-5-flash_30-10-2025_16-32-32_verified.json",
+      "v4": "Xinan_2024_v4_gemini-2-5-flash_05-11-2025_16-18-29_verified.json"
+    }
+  },
+  "merger_summary": {
+    "total_v3_snippets": 22,
+    "total_v4_snippets": 23,
+    "total_merged_snippets": 44,
+    "total_ai_reviews": 4,
+    "total_human_flags": 0,
+    "merger_timestamp": "07-11-2025_18-36-17"
+  }
+}

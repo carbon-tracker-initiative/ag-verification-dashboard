@@ -1,0 +1,1870 @@
+{
+  "analysis_results": [
+    {
+      "question_id": "99902",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+      "disclosures": [
+        {
+          "snippet_id": "99902-001",
+          "quote": "Both excess and insufficient fertilizer use have negative effects on ecosystems and the balance of natural habitats, as they put some form of pressure on the agriculture and food systems:\n•\tUnderuse of fertilizers has many negative implications for biodiversity, climate and food preservation: Nutrient-depleted soils trigger a degradation process, marked by accelerated erosion and lack of water retention, depletion of soil organic carbon, poor root and plant development, and reduced crop production, which drives important biodiversity loss and leads to more land conversion for agricultural purposes.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 55, Environmental (Biodiversity)",
+          "financial_amounts": [],
+          "classification_justification": "This snippet acknowledges that 'excess and insufficient fertilizer use' can have negative effects on ecosystems. It specifically details how 'underuse' leads to 'nutrient-depleted soils trigger a degradation process, marked by accelerated erosion and lack of water retention'. While it focuses on underuse, the initial statement about 'excess' use having negative effects implies a risk, even if not fully elaborated in this specific paragraph. It identifies a potential negative impact related to fertilizer use and soil degradation, but doesn't explicitly link it as a direct business risk from *their products* causing degradation.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language describes 'negative effects on ecosystems' and 'degradation process', indicating a potential negative outcome. While it also mentions 'responsibly managed, fertilizers contribute to the biodiversity of soils', the focus here is on the adverse impacts of improper use.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure describes qualitative environmental impacts ('degradation process', 'accelerated erosion', 'lack of water retention') without providing any specific financial figures or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet describes ongoing conditions and potential processes ('trigger a degradation process', 'leads to more land conversion') that are currently relevant and can manifest over time.",
+            "timeframe": "Present day"
+          },
+          "text": "Both excess and insufficient fertilizer use have negative effects on ecosystems and the balance of natural habitats, as they put some form of pressure on the agriculture and food systems:\n•\tUnderuse of fertilizers has many negative implications for biodiversity, climate and food preservation: Nutrient-depleted soils trigger a degradation process, marked by accelerated erosion and lack of water retention, depletion of soil organic carbon, poor root and plant development, and reduced crop production, which drives important biodiversity loss and leads to more land conversion for agricultural purposes.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 55, Environmental (Biodiversity)",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99902-002",
+          "quote": "When responsibly managed, fertilizers contribute to the biodiversity of soils, because they increase soil organic matter, soil fertility and the life of soil microorganisms. Additionally, they offer numerous advantages, including the growth of nutritious plants and food crops, benefiting both humans and animals. In areas where arable land soils are depleted, fertilizers play a crucial role in restoring equilibrium to these ecosystems.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 55, Environmental (Biodiversity)",
+          "financial_amounts": [],
+          "classification_justification": "This snippet discusses the positive impacts of responsibly managed fertilizers on soil health. It does not acknowledge soil degradation caused by its products as a risk to the business, but rather frames fertilizers as beneficial when used correctly. It indirectly addresses the topic by promoting responsible use to avoid negative impacts, but does not explicitly state the risk itself.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language emphasizes positive outcomes ('contribute to the biodiversity of soils', 'increase soil organic matter', 'offer numerous advantages', 'restoring equilibrium'), framing the topic as beneficial when managed correctly.",
+            "framing": "Opportunity",
+            "financial_justification": "The disclosure is qualitative, describing benefits to soil health and ecosystems without providing any specific financial figures or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement describes the general and ongoing benefits of fertilizers when responsibly managed, implying a present-day and continuous relevance.",
+            "timeframe": "Present day"
+          },
+          "text": "When responsibly managed, fertilizers contribute to the biodiversity of soils, because they increase soil organic matter, soil fertility and the life of soil microorganisms. Additionally, they offer numerous advantages, including the growth of nutritious plants and food crops, benefiting both humans and animals. In areas where arable land soils are depleted, fertilizers play a crucial role in restoring equilibrium to these ecosystems.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 55, Environmental (Biodiversity)",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 2
+        }
+      ],
+      "summary": "No, the company does not disclose that soil degradation caused by its fertilizer products is a business risk. While it acknowledges that \"excess\" fertilizer use has negative effects on ecosystems, it primarily frames its products as beneficial for soil health when \"responsibly managed\" and highlights that the *underuse* of fertilizers leads to soil degradation, erosion, and lack of water retention. The company does not identify its products as a direct cause of soil degradation that poses a risk to its business.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 2,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99903",
+      "question_number": 2,
+      "category": "Human Health Risk",
+      "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99903-001",
+          "quote": "We believe that, when handled and used as intended, based on the available data, crop nutrient materials do not pose harm to human health or the environment and that any additional standards or regulatory requirements relating to product requirements and impacts will not have a material adverse effect on our business or financial condition.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 29, Product Requirements and Impacts",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The company implicitly acknowledges a risk (from improper use) and explicitly states its assessment of financial materiality ('will not have a material adverse effect'). According to the definitions, identifying a risk and stating its materiality constitutes a FULL_DISCLOSURE, even if the statement is that the risk is not material.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "While the statement asserts no harm 'when handled and used as intended', the qualification itself, and the mention of 'additional standards or regulatory requirements', indicates an awareness of potential negative impacts or challenges, framing it as a managed risk.",
+            "framing": "Risk",
+            "financial_justification": "The statement explicitly mentions 'material adverse effect on our business or financial condition', indicating an assessment of financial materiality, but without providing specific figures.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement refers to the current belief about product safety and future regulatory requirements, indicating both present-day conditions and forward-looking considerations.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "We believe that, when handled and used as intended, based on the available data, crop nutrient materials do not pose harm to human health or the environment and that any additional standards or regulatory requirements relating to product requirements and impacts will not have a material adverse effect on our business or financial condition.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 29, Product Requirements and Impacts",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 verification-corrected (overrides length)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99903-002",
+          "quote": "In 2024, approximately 47 percent of Mosaic’s products, representing approximately $5.4 billion in revenue, are classified as Category 1 or 2 hazardous substances by the Globally Harmonized System of Classification and Labeling of Chemicals (GHS). This figure includes revenue from the sale of crop nutrient, animal feed and industrial products, as well as coproducts and materials that are sold as part of supply agreements. It excludes blends from the Mosaic Fertilizantes business, some of which might be categorized as GHS Category 1 or 2.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 106, Customer Health and Safety",
+          "financial_amounts": [
+            "$5.4 billion"
+          ],
+          "classification_justification": "This snippet explicitly states that a significant portion of Mosaic's products are classified as 'Category 1 or 2 hazardous substances' by GHS. This classification inherently acknowledges that these products pose hazards, which are a direct precursor to human health problems if not managed, thus identifying a risk to the business. The financial value associated with these products ($5.4 billion in revenue) indicates the potential materiality of this risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The classification of products as 'hazardous substances' inherently frames the topic as a potential source of harm or negative consequences, indicating a risk.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides a specific financial figure ('$5.4 billion in revenue') directly linked to the volume of products classified as hazardous, indicating a financial dimension to the disclosure without quantifying the risk itself.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement refers to the current classification of products and associated revenue in 2024, indicating a present-day condition and ongoing relevance.",
+            "timeframe": "Present day"
+          },
+          "text": "In 2024, approximately 47 percent of Mosaic’s products, representing approximately $5.4 billion in revenue, are classified as Category 1 or 2 hazardous substances by the Globally Harmonized System of Classification and Labeling of Chemicals (GHS). This figure includes revenue from the sale of crop nutrient, animal feed and industrial products, as well as coproducts and materials that are sold as part of supply agreements. It excludes blends from the Mosaic Fertilizantes business, some of which might be categorized as GHS Category 1 or 2.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 106, Customer Health and Safety",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99903-003",
+          "quote": "We do not report incidents of non-compliance concerning the health and safety impacts of products and services as an individual line item due to availability of data. We comply with safety, environmental, labeling, and registration required by country and local governments where we sell and distribute fertilizer, animal feed and industrial products.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 19, General Standard Disclosures (GRI 416-2)",
+          "financial_amounts": [],
+          "classification_justification": "This snippet states that the company does not report incidents of non-compliance regarding health and safety impacts of products due to data availability, but asserts compliance with all relevant regulations. While it doesn't explicitly state a risk of human health problems, the mention of 'non-compliance concerning the health and safety impacts of products' implies that such impacts are a recognized concern that could lead to business risk if non-compliance occurred. The lack of specific reporting due to data availability makes the disclosure less robust but still acknowledges the underlying issue.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The mention of 'incidents of non-compliance concerning the health and safety impacts of products' and the need to 'comply with safety, environmental, labeling, and registration' indicates an awareness of potential negative consequences if these standards are not met, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure is qualitative, focusing on compliance and data availability, without providing any specific financial figures or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement refers to current reporting practices and ongoing compliance requirements, indicating a present-day timeframe.",
+            "timeframe": "Present day"
+          },
+          "text": "We do not report incidents of non-compliance concerning the health and safety impacts of products and services as an individual line item due to availability of data. We comply with safety, environmental, labeling, and registration required by country and local governments where we sell and distribute fertilizer, animal feed and industrial products.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 19, General Standard Disclosures (GRI 416-2)",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        }
+      ],
+      "summary": "Yes, Mosaic provides a full disclosure of its assessment, concluding this is not a material risk to the business. The company explicitly states its belief that when products are handled and used as intended, they do not pose a harm to human health and that related regulations will not have a material adverse effect. This assessment is provided alongside the disclosure that 47% of its products, representing $5.4 billion in revenue, are classified as hazardous substances by the GHS, acknowledging an inherent hazard while framing the ultimate business risk as immaterial.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 3,
+        "merged_snippets": 3,
+        "snippet_pairs": 3,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99904",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99904-001",
+          "quote": "Climate Change Regulation. Various governmental initiatives to limit greenhouse gas emissions are under way or under consideration around the world. These initiatives could restrict our operating activities, require us to make changes in our operating activities that would increase our operating costs, reduce our efficiency or limit our output, require us to make capital improvements to our facilities, increase our energy, raw material and transportation costs or limit their availability, or otherwise adversely affect our results of operations, liquidity or capital resources, and these effects could be material to us.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 25, Climate Change",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies climate change regulation as a risk that could 'adversely affect our results of operations' and explicitly states that 'these effects could be material to us.' According to the classification criteria, a snippet that identifies a business risk AND explicitly states financial materiality is a FULL_DISCLOSURE.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language used, such as 'restrict our operating activities,' 'increase our operating costs,' 'adversely affect,' and 'could be material,' clearly frames governmental GHG initiatives as a source of potential harm and negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure states that the effects 'could be material' and mentions 'significant capital costs or increases in operating costs,' indicating a financial impact without providing specific quantifiable figures for these costs.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The disclosure refers to initiatives 'under way or under consideration' and potential future impacts ('could restrict,' 'would increase,' 'could be material'), indicating a forward-looking perspective.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Climate Change Regulation. Various governmental initiatives to limit greenhouse gas emissions are under way or under consideration around the world. These initiatives could restrict our operating activities, require us to make changes in our operating activities that would increase our operating costs, reduce our efficiency or limit our output, require us to make capital improvements to our facilities, increase our energy, raw material and transportation costs or limit their availability, or otherwise adversely affect our results of operations, liquidity or capital resources, and these effects could be material to us.",
+          "page": "25",
+          "version_source": "v3",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using v3 verification-corrected."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99904-002",
+          "quote": "Canada’s intended NDC aims to achieve significant greenhouse gas emission reductions. In 2016, the Canadian federal government announced plans for a comprehensive tax on carbon emissions, under which provinces opting out of the tax would have the option of adopting a cap-and-trade system. In the plans, the federal government also committed to implementing a federal carbon pricing backstop system that will apply in any province or territory that does not have a carbon pricing system in place by 2018. As of April 1, 2024 a carbon tax of $80 per tonne now applies in Canada for any emitter not covered under the federal backstop program or approved provincial program. Our Saskatchewan Potash facilities are subject to the Saskatchewan climate change plan regarding emissions at our facilities; however, indirect costs from the carbon tax associated with electricity, natural gas consumption and transportation are currently passed through to Mosaic. More stringent laws and regulations may be enacted to accomplish the goals set out in Canada’s NDC.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 27, Climate Change Regulation",
+          "financial_amounts": [
+            "$80 per tonne"
+          ],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies a specific carbon cost ($80/tonne tax) but does not explicitly state that this cost is financially material to the business as a whole. The definition of FULL_DISCLOSURE requires an explicit statement of financial materiality, which is absent here. Therefore, it should be classified as PARTIAL.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The description of a 'carbon tax' and 'indirect costs' being 'passed through to Mosaic' clearly frames this as a negative financial consequence and a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "A specific monetary value ('$80 per tonne') for the carbon tax is provided, directly quantifying a carbon cost. The mention of 'indirect costs' being 'passed through' also indicates a financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The snippet states that a carbon tax 'now applies' as of April 1, 2024, indicating a present-day impact, and also mentions that 'More stringent laws and regulations may be enacted', indicating a forward-looking aspect.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Canada’s intended NDC aims to achieve significant greenhouse gas emission reductions. In 2016, the Canadian federal government announced plans for a comprehensive tax on carbon emissions, under which provinces opting out of the tax would have the option of adopting a cap-and-trade system. In the plans, the federal government also committed to implementing a federal carbon pricing backstop system that will apply in any province or territory that does not have a carbon pricing system in place by 2018. As of April 1, 2024 a carbon tax of $80 per tonne now applies in Canada for any emitter not covered under the federal backstop program or approved provincial program. Our Saskatchewan Potash facilities are subject to the Saskatchewan climate change plan regarding emissions at our facilities; however, indirect costs from the carbon tax associated with electricity, natural gas consumption and transportation are currently passed through to Mosaic. More stringent laws and regulations may be enacted to accomplish the goals set out in Canada’s NDC.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 27, Climate Change Regulation",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 verification-corrected (overrides length)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99904-003",
+          "quote": "In addition, to the extent climate change restrictions imposed in countries where our competitors operate, such as China, India, former Soviet Union countries or Morocco, are less stringent than in our production regions, our competitors could gain cost or other competitive advantages over us.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 28, Climate Change Regulation",
+          "financial_amounts": [],
+          "classification_justification": "This snippet identifies a competitive risk arising from climate change restrictions, specifically if competitors face less stringent regulations. This could lead to 'cost or other competitive advantages' for competitors, which is a clear business risk. While not directly a 'carbon cost' to Mosaic, it's a direct consequence of carbon regulations and their differential application, impacting Mosaic's financial position.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement highlights that competitors 'could gain cost or other competitive advantages over us' due to climate change restrictions, framing this as a threat to Mosaic's market position and profitability.",
+            "framing": "Risk",
+            "financial_justification": "The mention of 'cost or other competitive advantages' indicates a potential financial impact, but no specific monetary values are provided.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'could gain' indicates a potential future outcome, making this a forward-looking statement.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "In addition, to the extent climate change restrictions imposed in countries where our competitors operate, such as China, India, former Soviet Union countries or Morocco, are less stringent than in our production regions, our competitors could gain cost or other competitive advantages over us.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 28, Climate Change Regulation",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99904-004",
+          "quote": "We are still assessing the extent to which we can influence emissions from fertilizer use and are not well positioned to issue a Category 11 target at this time. However, we recognize the importance of reducing emissions from agriculture in the context of global climate goals; we are also aware of our customers’ and other members of the value chain’s demands for solutions and new technology to meet their own stewardship aspirations.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 71, Environmental (305-5 Reduction of Greenhouse Gas (GHG) emissions)",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that Mosaic is 'not well positioned to issue a Category 11 target at this time' for emissions from fertilizer use, but acknowledges 'the importance of reducing emissions from agriculture' and 'customers’ and other members of the value chain’s demands for solutions'. This indicates an awareness of a potential future regulatory or market-driven pressure (carbon costs) related to product use emissions, which could become a business risk if not addressed. The inability to set a target highlights the challenge and implicit risk.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement acknowledges 'the importance of reducing emissions' and 'demands for solutions' from customers, indicating a challenge or potential negative consequence if these demands are not met, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure is qualitative, discussing the challenges of setting targets and stakeholder demands, without providing specific financial figures or explicit statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The phrase 'at this time' and 'future sustainability reports' indicates a forward-looking perspective on potential future targets and actions.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "We are still assessing the extent to which we can influence emissions from fertilizer use and are not well positioned to issue a Category 11 target at this time. However, we recognize the importance of reducing emissions from agriculture in the context of global climate goals; we are also aware of our customers’ and other members of the value chain’s demands for solutions and new technology to meet their own stewardship aspirations.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 71, Environmental (305-5 Reduction of Greenhouse Gas (GHG) emissions)",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99904-005",
+          "quote": "The GHG impacts associated with the downstream application of our products—primarily potash and phosphate crop nutrient products—are relatively minimal compared to nitrogen-based fertilizer products, but relevant nonetheless. We report those emissions (Scope 3, Category 11) in 305-3 using an Intergovernmental Panel on Climate Change (IPCC) Tier 1 emissions factor for N2O emissions from managed soils. We have plans to improve our approach to align to an IPCC Tier 2 methodology, which will allow us to pinpoint emissions by geography with more precision. Mosaic understands we have a role to play in reducing the environmental impact of fertilizers on the global food supply, and we are engaged with agricultural stakeholders on multiple fronts.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 70, Environmental (305-5 Reduction of Greenhouse Gas (GHG) emissions)",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet acknowledges and reports on Scope 3 emissions but explicitly states the impacts are 'relatively minimal'. It does not frame this as a risk to the business. The classification should be UNCLEAR, as the topic is mentioned but not characterized as a risk.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The discussion of 'GHG impacts' and the company's 'role to play in reducing the environmental impact' indicates an awareness of negative externalities that could become a business challenge or risk, even if framed as a responsibility.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure is qualitative, discussing emissions and reporting methodologies without providing specific financial figures or explicit statements of financial materiality related to these product-use emissions.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet discusses current reporting practices ('We report those emissions') and future plans ('We have plans to improve our approach'), indicating both present-day and forward-looking aspects.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "The GHG impacts associated with the downstream application of our products—primarily potash and phosphate crop nutrient products—are relatively minimal compared to nitrogen-based fertilizer products, but relevant nonetheless. We report those emissions (Scope 3, Category 11) in 305-3 using an Intergovernmental Panel on Climate Change (IPCC) Tier 1 emissions factor for N2O emissions from managed soils. We have plans to improve our approach to align to an IPCC Tier 2 methodology, which will allow us to pinpoint emissions by geography with more precision. Mosaic understands we have a role to play in reducing the environmental impact of fertilizers on the global food supply, and we are engaged with agricultural stakeholders on multiple fronts.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 70, Environmental (305-5 Reduction of Greenhouse Gas (GHG) emissions)",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using v4 verification-corrected."
+          },
+          "snippet_rank": 5
+        }
+      ],
+      "summary": "Yes, Mosaic provides a full disclosure that carbon costs are a risk to its business from both direct operations and customer product use. The company explicitly states that governmental initiatives to limit GHG emissions could materially increase operating costs and create a competitive disadvantage, citing the Canadian carbon tax as a specific example. While it considers the GHG impacts from customer product use \"relatively minimal,\" it acknowledges these emissions are \"relevant nonetheless\" and recognizes customer demand for solutions, indicating an awareness of indirect risks from its value chain.",
+      "merger_stats": {
+        "v3_snippets": 3,
+        "v4_snippets": 5,
+        "merged_snippets": 5,
+        "snippet_pairs": 5,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99904-001",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet states that governmental initiatives to limit greenhouse gas emissions could 'increase our operating costs' and 'increase our energy, raw material and transportation costs', which are forms of 'carbon costs arising from its direct operations'.",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99907",
+      "question_number": 4,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99907-001",
+          "quote": "Water Quality Regulations for Nutrient Discharges. New nutrient regulatory initiatives could have a material effect on either us or our customers. For example, the Mississippi River/Gulf of America Hypoxia Task Force was established by The Environmental Protection Agency in 1997 to coordinate activities with twelve states within the Mississippi River Basin to reduce nutrient loading in streams and tributaries through regulatory and voluntary actions. The strategy calls for, among other matters, reduction of the flow of excess nutrients into the Gulf of America through state nutrient reduction frameworks, new nutrient reduction approaches and reduction of agricultural and urban sources of excess nutrients. Implementation of the strategy will require legislative or regulatory action at the state level. Through these heightened actions by the states, some are also leveraging groundwater protection initiatives to mandate nutrient use restrictions for fall applications in specific agricultural regions to limit nutrient losses. While some of the legislative actions have changed application timing of nutrient use, we cannot overall predict what the requirements of any such legislative or regulatory action could be or whether or how it would affect us or our customers.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 25-26, Operating Requirements and Impacts",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly identifies 'New nutrient regulatory initiatives' as a risk that 'could have a material effect on either us or our customers'. It details how these initiatives aim to 'reduce nutrient loading in streams and tributaries' and 'mandate nutrient use restrictions', which directly addresses waterway pollution from applied products. The potential for 'material effect' indicates financial materiality, making this a full disclosure of a business risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'New nutrient regulatory initiatives could have a material effect on either us or our customers' and the description of 'nutrient use restrictions' clearly frames this as a potential threat and negative consequence for the business.",
+            "framing": "Risk",
+            "financial_justification": "The statement explicitly mentions 'material effect' on the business, indicating financial materiality, even without providing specific monetary figures.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The discussion of 'New nutrient regulatory initiatives' and what 'could be' required in the future indicates a forward-looking timeframe.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Water Quality Regulations for Nutrient Discharges. New nutrient regulatory initiatives could have a material effect on either us or our customers. For example, the Mississippi River/Gulf of America Hypoxia Task Force was established by The Environmental Protection Agency in 1997 to coordinate activities with twelve states within the Mississippi River Basin to reduce nutrient loading in streams and tributaries through regulatory and voluntary actions. The strategy calls for, among other matters, reduction of the flow of excess nutrients into the Gulf of America through state nutrient reduction frameworks, new nutrient reduction approaches and reduction of agricultural and urban sources of excess nutrients. Implementation of the strategy will require legislative or regulatory action at the state level. Through these heightened actions by the states, some are also leveraging groundwater protection initiatives to mandate nutrient use restrictions for fall applications in specific agricultural regions to limit nutrient losses. While some of the legislative actions have changed application timing of nutrient use, we cannot overall predict what the requirements of any such legislative or regulatory action could be or whether or how it would affect us or our customers.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 25-26, Operating Requirements and Impacts",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99907-002",
+          "quote": "Water: We recognize that water is a critical natural resource that is essential to the sustainability of our operations, as well as to the communities and ecosystems in which we operate. As it relates to the use of our products, crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality. We manage this priority by: ... Promoting agricultural best practices and 4R Nutrient Stewardship to minimize runoff of fertilizers into waterways ... By preserving the quality of water resources, addressing our water risks at a site-level, minimizing our own water use, and promoting agricultural practices that preserve and protect water resources, we reduce the environmental impact of fertilizers on the global food supply.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, Page 53, Water, Energy, Emissions, Biodiversity, Effluents and Waste, and Environmental Compliance",
+          "financial_amounts": [],
+          "classification_justification": "This snippet clearly identifies that crop nutrient products 'have the potential to run off farmland and into waterways, which can contribute to impaired water quality.' It frames this as a 'priority' that Mosaic manages to 'reduce the environmental impact of fertilizers on the global food supply' and mentions 'addressing our water risks at a site-level.' While it acknowledges the environmental impact and the need for management, it does not explicitly state whether this specific issue (waterway pollution from applied products) is considered financially material to the business, focusing more on environmental impact and management efforts.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language acknowledges the 'potential to run off farmland and into waterways, which can contribute to impaired water quality,' and frames this as a 'priority' they manage, indicating a negative environmental impact that requires mitigation and is a concern for the 'sustainability of our business.'",
+            "framing": "Risk",
+            "financial_justification": "The disclosure discusses environmental impacts and management strategies, but it does not provide any explicit financial figures or state whether the waterway pollution from applied products is financially material or immaterial to the company's business.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The disclosure describes an ongoing potential for runoff and current management practices ('have the potential to run off,' 'We manage this priority'), indicating a present-day focus.",
+            "timeframe": "Present day"
+          },
+          "text": "Water: We recognize that water is a critical natural resource that is essential to the sustainability of our operations, as well as to the communities and ecosystems in which we operate. As it relates to the use of our products, crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality. We manage this priority by: ... Promoting agricultural best practices and 4R Nutrient Stewardship to minimize runoff of fertilizers into waterways ... By preserving the quality of water resources, addressing our water risks at a site-level, minimizing our own water use, and promoting agricultural practices that preserve and protect water resources, we reduce the environmental impact of fertilizers on the global food supply.",
+          "page": "53",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99907-003",
+          "quote": "Water. We recognize that water is a critical natural resource that is essential to the sustainability of our operations, as well as to the communities and ecosystems in which we operate. As it relates to the use of our products, crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality. We manage this priority by:\n•\tReducing companywide freshwater use\n•\tMinimizing tailings management area storage and phosphogypsum pond water inventories\n•\tMaintaining the quality of the water we use in the communities where we operate\n•\tPromoting agricultural best practices and 4R Nutrient Stewardship to minimize runoff of fertilizers into waterways\n•\tPartnering with organizations that address habitat conservation, nutrient stewardship and watershed restoration",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 53, Environmental (Water)",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality'. This directly identifies waterway pollution from applied products as a potential negative impact, which by extension is a risk to the business, especially given the subsequent mention of management strategies. The company clearly acknowledges the issue.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'have the potential to run off farmland and into waterways, which can contribute to impaired water quality' clearly frames this as a potential negative consequence or threat, thus a risk. The subsequent list of management actions reinforces this framing.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure is qualitative, describing potential environmental impacts and management strategies without providing any specific financial figures or statements of financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'have the potential to run off' indicates an ongoing and future-oriented concern, making it a present-day and forward-looking issue.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Water. We recognize that water is a critical natural resource that is essential to the sustainability of our operations, as well as to the communities and ecosystems in which we operate. As it relates to the use of our products, crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality. We manage this priority by:\n•\tReducing companywide freshwater use\n•\tMinimizing tailings management area storage and phosphogypsum pond water inventories\n•\tMaintaining the quality of the water we use in the communities where we operate\n•\tPromoting agricultural best practices and 4R Nutrient Stewardship to minimize runoff of fertilizers into waterways\n•\tPartnering with organizations that address habitat conservation, nutrient stewardship and watershed restoration",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 53, Environmental (Water)",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99907-004",
+          "quote": "Another potential impact relates to downstream use of crop nutrient products, which if used improperly, can run into waterways and contribute to impaired water quality and can also nourish algal blooms. Mosaic supports and promotes the 4R Nutrient Stewardship framework to achieve the agricultural benefits of fertilizer and reduce nutrient loss to the environment. Since 2004, Mosaic has invested over $34.5 million with more than 150 organizations on water-related initiatives, including nutrient stewardship. In 2020, we issued a target to empower farmers in key growing areas in North America to reduce the impact of crop nutrient products on the environment by facilitating the implementation of 4R Nutrient Stewardship on 25 million acres by 2025. As of the end of 2024, 4R Nutrient Stewardship practices have been implemented on approximately 15.8 million acres.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 82, Supplier Environmental Assessment",
+          "financial_amounts": [
+            "$34.5 million"
+          ],
+          "classification_justification": "This snippet explicitly identifies 'downstream use of crop nutrient products, which if used improperly, can run into waterways and contribute to impaired water quality and can also nourish algal blooms' as a 'potential impact'. This is a clear acknowledgement of waterway pollution from applied products as a risk. The disclosure of significant investments to mitigate this risk further underscores its recognition as a business concern.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'potential impact relates to downstream use... which if used improperly, can run into waterways and contribute to impaired water quality and can also nourish algal blooms' clearly frames this as a negative consequence or threat, thus a risk. The investment in mitigation reinforces this framing.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides a specific financial figure ('over $34.5 million') for investments in water-related initiatives, directly linking financial resources to the management of this environmental impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The snippet discusses past investments ('Since 2004'), current support ('supports and promotes'), and a forward-looking target ('target to empower farmers... by 2025'), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Another potential impact relates to downstream use of crop nutrient products, which if used improperly, can run into waterways and contribute to impaired water quality and can also nourish algal blooms. Mosaic supports and promotes the 4R Nutrient Stewardship framework to achieve the agricultural benefits of fertilizer and reduce nutrient loss to the environment. Since 2004, Mosaic has invested over $34.5 million with more than 150 organizations on water-related initiatives, including nutrient stewardship. In 2020, we issued a target to empower farmers in key growing areas in North America to reduce the impact of crop nutrient products on the environment by facilitating the implementation of 4R Nutrient Stewardship on 25 million acres by 2025. As of the end of 2024, 4R Nutrient Stewardship practices have been implemented on approximately 15.8 million acres.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 82, Supplier Environmental Assessment",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        }
+      ],
+      "summary": "Yes, Mosaic discloses that waterway pollution from its applied products is a risk to the business, supported by a FULL_DISCLOSURE. The company acknowledges its products can run off farmland into waterways, contributing to impaired water quality, and explicitly states that resulting \"New nutrient regulatory initiatives\" could have a \"material effect\" on its business or its customers. Mosaic also details its mitigation efforts, such as promoting 4R Nutrient Stewardship and investing over $34.5 million in water-related initiatives.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 3,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99907-001",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet explicitly discusses regulations aimed at reducing 'nutrient loading in streams and tributaries' and limiting 'nutrient losses' from agricultural applications, which directly relates to waterway pollution from leaching. It acknowledges this as a risk by stating these initiatives 'could have a material effect on either us or our customers.'",
+            "action": "kept"
+          },
+          {
+            "snippet_id": "99907-004",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet acknowledges that its products, when used improperly, can \"run into waterways and contribute to impaired water quality.\" The company's disclosure of significant mitigation efforts (investing over $34.5 million and setting a 25 million acre target) implies it views this as a risk to the business.",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99908",
+      "question_number": 5,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99908-001",
+          "quote": "Factors that could cause reported results to differ materially from those expressed or implied by the forward-looking statements include, but are not limited to, the following:\n•\tchanges in farmers’ application rates for crop nutrients;",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 28, Cautionary Statement Regarding Forward Looking Information",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet is from a list of 'Factors that could cause reported results to differ materially,' which explicitly frames it as a business risk with potential material impact. This meets the definition of PARTIAL, not UNCLEAR (which is for topics not characterized as a business risk).",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'could cause reported results to differ materially' frames this as a potential negative impact or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The statement mentions 'reported results to differ materially', indicating a potential financial impact, but without providing specific figures or further details on materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'changes in farmers’ application rates' refers to potential future shifts in behavior, indicating a forward-looking timeframe.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Factors that could cause reported results to differ materially from those expressed or implied by the forward-looking statements include, but are not limited to, the following:\n•\tchanges in farmers’ application rates for crop nutrients;",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 28, Cautionary Statement Regarding Forward Looking Information",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "No, Mosaic does not disclose demand destruction from organic farming and alternatives as a specific risk to its business. The company identifies \"changes in farmers’ application rates for crop nutrients\" as a general risk factor that could materially affect its results. However, this disclosure does not explicitly link potential changes in application rates to the rise of organic farming or alternative products.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99909",
+      "question_number": 1,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+      "disclosures": [
+        {
+          "snippet_id": "99909-001",
+          "quote": "New nutrient regulatory initiatives could have a material effect on either us or our customers. For example, the Mississippi River/Gulf of America Hypoxia Task Force was established by The Environmental Protection Agency in 1997 to coordinate activities with twelve states within the Mississippi River Basin to reduce nutrient loading in streams and tributaries through regulatory and voluntary actions. The strategy calls for, among other matters, reduction of the flow of excess nutrients into the Gulf of America through state nutrient reduction frameworks, new nutrient reduction approaches and reduction of agricultural and urban sources of excess nutrients. Implementation of the strategy will require legislative or regulatory action at the state level. Through these heightened actions by the states, some are also leveraging groundwater protection initiatives to mandate nutrient use restrictions for fall applications in specific agricultural regions to limit nutrient losses. While some of the legislative actions have changed application timing of nutrient use, we cannot overall predict what the requirements of any such legislative or regulatory action could be or whether or how it would affect us or our customers.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 26, Water Quality Regulations for Nutrient Discharges",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'New nutrient regulatory initiatives could have a material effect on either us or our customers,' directly linking nutrient runoff issues (eutrophication) to potential financial materiality for the business. While it doesn't provide a specific dollar amount, it clearly asserts materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The phrase 'could have a material effect' and the discussion of 'nutrient use restrictions' and 'legislative or regulatory action' clearly frame this as a potential negative consequence or threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly states that regulatory initiatives 'could have a material effect,' indicating financial materiality without providing a specific quantifiable amount.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The discussion of 'New nutrient regulatory initiatives' and 'will require legislative or regulatory action' indicates a focus on future events and potential impacts.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "New nutrient regulatory initiatives could have a material effect on either us or our customers. For example, the Mississippi River/Gulf of America Hypoxia Task Force was established by The Environmental Protection Agency in 1997 to coordinate activities with twelve states within the Mississippi River Basin to reduce nutrient loading in streams and tributaries through regulatory and voluntary actions. The strategy calls for, among other matters, reduction of the flow of excess nutrients into the Gulf of America through state nutrient reduction frameworks, new nutrient reduction approaches and reduction of agricultural and urban sources of excess nutrients. Implementation of the strategy will require legislative or regulatory action at the state level. Through these heightened actions by the states, some are also leveraging groundwater protection initiatives to mandate nutrient use restrictions for fall applications in specific agricultural regions to limit nutrient losses. While some of the legislative actions have changed application timing of nutrient use, we cannot overall predict what the requirements of any such legislative or regulatory action could be or whether or how it would affect us or our customers.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 26, Water Quality Regulations for Nutrient Discharges",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9796893667861409,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 98.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99909-002",
+          "quote": "As it relates to the use of our products, crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality. We manage this priority by: ... Promoting agricultural best practices and 4R Nutrient Stewardship to minimize runoff of fertilizers into waterways ... By preserving the quality of water resources, addressing our water risks at a site-level, minimizing our own water use, and promoting agricultural practices that preserve and protect water resources, we reduce the environmental impact of fertilizers on the global food supply.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, Page 53, Water",
+          "financial_amounts": [],
+          "classification_justification": "This snippet clearly identifies that nutrient runoff from the company's products can lead to impaired water quality, which is framed as an 'environmental impact of fertilizers on the global food supply' that the company actively manages. This directly links the issue to business relevance and acknowledges it as a concern, but does not quantify financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'potential to run off farmland and into waterways, which can contribute to impaired water quality' and 'reduce the environmental impact' frames the issue as a negative consequence or threat that requires management and mitigation.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure describes the environmental impact and the company's management efforts but does not provide any specific financial figures or explicitly state the financial materiality of this risk to the business.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The snippet uses present tense verbs like 'have the potential to run off' and 'contribute to impaired water quality,' indicating an ongoing or currently relevant condition, while also implying future impacts if not managed.",
+            "timeframe": "Present day"
+          },
+          "text": "As it relates to the use of our products, crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality. We manage this priority by: ... Promoting agricultural best practices and 4R Nutrient Stewardship to minimize runoff of fertilizers into waterways ... By preserving the quality of water resources, addressing our water risks at a site-level, minimizing our own water use, and promoting agricultural practices that preserve and protect water resources, we reduce the environmental impact of fertilizers on the global food supply.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, Page 53, Water",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99909-003",
+          "quote": "Another potential impact relates to downstream use of crop nutrient products, which if used improperly, can run into waterways and contribute to impaired water quality and can also nourish algal blooms. Mosaic supports and promotes the 4R Nutrient Stewardship framework to achieve the agricultural benefits of fertilizer and reduce nutrient loss to the environment. Since 2004, Mosaic has invested over $34.5 million with more than 150 organizations on water-related initiatives, including nutrient stewardship. In 2020, we issued a target to empower farmers in key growing areas in North America to reduce the impact of crop nutrient products on the environment by facilitating the implementation of 4R Nutrient Stewardship on 25 million acres by 2025. As of the end of 2024, 4R Nutrient Stewardship practices have been implemented on approximately 15.8 million acres.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, Page 82, Supplier Environmental Assessment",
+          "financial_amounts": [
+            "$34.5 million",
+            "25 million acres",
+            "15.8 million acres"
+          ],
+          "classification_justification": "This snippet explicitly links improper product use to 'impaired water quality' and 'algal blooms' (a direct consequence of eutrophication), framing it as a 'potential impact.' The disclosure of significant investments ($34.5 million) and a specific target to reduce this impact demonstrates that the company considers this a material issue requiring substantial resources and strategic action, even without explicitly stating 'financial materiality' in those words.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The language 'potential impact,' 'impaired water quality,' and 'algal blooms' clearly frames the issue as a negative consequence or threat associated with the company's products. The company's investment in mitigation further supports a risk framing.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides a specific, quantifiable financial investment ($34.5 million) and quantitative targets (25 million acres, 15.8 million acres) related to mitigating the environmental impact of product use, indicating a financial commitment without explicitly stating financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The mention of 'potential impact,' a target for 2025, and past investments ('since 2004') indicates a concern that spans past, present, and future, making the timeframe multiple.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Another potential impact relates to downstream use of crop nutrient products, which if used improperly, can run into waterways and contribute to impaired water quality and can also nourish algal blooms. Mosaic supports and promotes the 4R Nutrient Stewardship framework to achieve the agricultural benefits of fertilizer and reduce nutrient loss to the environment. Since 2004, Mosaic has invested over $34.5 million with more than 150 organizations on water-related initiatives, including nutrient stewardship. In 2020, we issued a target to empower farmers in key growing areas in North America to reduce the impact of crop nutrient products on the environment by facilitating the implementation of 4R Nutrient Stewardship on 25 million acres by 2025. As of the end of 2024, 4R Nutrient Stewardship practices have been implemented on approximately 15.8 million acres.",
+          "page": "82",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99909-004",
+          "quote": "Overuse or inefficient use of fertilizers can have severe environmental implications for adjacent waterways, groundwater and the pollution of marine systems through eutrophication, aggravated through high temperatures and climate change. It can also lead to higher losses of nutrients such as nitrogen to the atmosphere, and greater redeposition on natural ecosystems, which may reduce biodiversity there.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, Page 55, Biodiversity",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes eutrophication as a 'severe environmental implication' but does so in general terms. It does not explicitly frame this as a risk to the business, which is a requirement for a PARTIAL classification. It only acknowledges the topic without characterizing it as a business risk.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The phrase 'severe environmental implications' clearly frames the overuse or inefficient use of fertilizers as a negative consequence or threat, aligning with a risk perspective.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure describes environmental implications qualitatively ('severe environmental implications') but does not include any specific financial amounts or an explicit statement about the financial materiality of these implications for the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The use of 'can have' suggests potential and ongoing effects, indicating that the issue is currently relevant and its impacts could manifest in the future.",
+            "timeframe": "Present day"
+          },
+          "text": "Overuse or inefficient use of fertilizers can have severe environmental implications for adjacent waterways, groundwater and the pollution of marine systems through eutrophication, aggravated through high temperatures and climate change. It can also lead to higher losses of nutrients such as nitrogen to the atmosphere, and greater redeposition on natural ecosystems, which may reduce biodiversity there.",
+          "page": "0-2024-Sustainability-Disclosure-and-GRI.pdf, Page 55, Biodiversity",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using both verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 4
+        }
+      ],
+      "summary": "Yes, Mosaic discloses that eutrophication from nutrient runoff when its products are applied by farmers is a risk to its business. The company acknowledges its products can impair water quality and contribute to algal blooms if used improperly, and explicitly states that new regulatory initiatives aimed at reducing nutrient loading \"could have a material effect\" on the business or its customers. Mosaic manages this risk by promoting 4R Nutrient Stewardship and has invested over $34.5 million in related water initiatives.",
+      "merger_stats": {
+        "v3_snippets": 4,
+        "v4_snippets": 4,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99909-003",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet explicitly states that nutrient runoff from its products can \"nourish algal blooms,\" which is a direct reference to eutrophication. The context is the downstream application by farmers, and the disclosure of mitigation efforts indicates the company considers this a risk to the business.",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99910",
+      "question_number": 2,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that disposal of chemical waste, such as gypstacks, from the production of phosphate fertiliser is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99910-001",
+          "quote": "We primarily incur liabilities for reclamation activities in our Florida operations and for phosphogypsum management system (“Gypstack” or “Gypstacks”) closure in our Florida and Louisiana operations where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. ... We are subject to financial assurance requirements related to the closure and post-closure care of our Gypstacks in Florida and Louisiana. These requirements include Florida and Louisiana state financial assurance regulations, and financial assurance requirements under the terms of consent decrees that we have entered into with respect to our facilities in Florida and Louisiana. ... For financial reporting purposes, we recognize the AROs based on the estimated future closure and post-closure costs of Gypstacks, the undiscounted value of our North America Gypstacks is approximately $3.0 billion. The value of the AROs for closure and post-closure care of our North America Gypstacks, discounted to the present value, based on a credit-adjusted, risk-free rate, is reflected on our Consolidated Balance Sheets in the amount of approximately $1.5 billion as of December 31, 2024. Compliance with the financial assurance requirements in Florida and Louisiana is generally based on the undiscounted Gypstack closure estimates.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 18, Other Commercial Commitments",
+          "financial_amounts": [
+            "$3.0 billion",
+            "$1.5 billion"
+          ],
+          "classification_justification": "This snippet explicitly identifies gypstack closure as incurring 'liabilities' and being subject to 'financial assurance requirements' and 'consent decrees.' It provides specific, quantifiable financial values for the undiscounted ($3.0 billion) and discounted ($1.5 billion) Asset Retirement Obligations (AROs) related to gypstack closure costs. This clearly demonstrates that the company considers gypstack disposal a financially material risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The terms 'liabilities,' 'financial assurance requirements,' and 'consent decrees' frame the disposal of gypstacks as a significant financial and regulatory burden, indicating a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides explicit, quantifiable financial values for the undiscounted ($3.0 billion) and discounted ($1.5 billion) AROs related to gypstack closure costs, directly linking the risk to financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The AROs represent 'estimated future closure and post-closure costs,' indicating a forward-looking timeframe, while the current recognition of these liabilities and ongoing compliance with financial assurance requirements also points to a present-day impact.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "We primarily incur liabilities for reclamation activities in our Florida operations and for phosphogypsum management system (“Gypstack” or “Gypstacks”) closure in our Florida and Louisiana operations where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. ... We are subject to financial assurance requirements related to the closure and post-closure care of our Gypstacks in Florida and Louisiana. These requirements include Florida and Louisiana state financial assurance regulations, and financial assurance requirements under the terms of consent decrees that we have entered into with respect to our facilities in Florida and Louisiana. ... For financial reporting purposes, we recognize the AROs based on the estimated future closure and post-closure costs of Gypstacks, the undiscounted value of our North America Gypstacks is approximately $3.0 billion. The value of the AROs for closure and post-closure care of our North America Gypstacks, discounted to the present value, based on a credit-adjusted, risk-free rate, is reflected on our Consolidated Balance Sheets in the amount of approximately $1.5 billion as of December 31, 2024. Compliance with the financial assurance requirements in Florida and Louisiana is generally based on the undiscounted Gypstack closure estimates.",
+          "page": "18",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99910-002",
+          "quote": "In 2025, excluding capital expenditures arising out of the consent decrees referred to under “EPA RCRA Initiative” in Note 14 of our Notes to Consolidated Financial Statements, we expect environmental capital expenditures to total approximately $480 million, primarily related to: ... (ii) construction and modification projects associated with Gypstacks and clay settling ponds at our Phosphates facilities and tailings management areas for our Potash mining and processing facilities; ... Additional expenditures for land reclamation, Gypstack closure and water treatment activities are expected to total approximately $275 million in 2025. In 2026, we estimate environmental capital expenditures will be approximately $465 million and expenditures for land reclamation activities, Gypstack closure and water treatment activities are expected to be approximately $215 million. We spent approximately $545 million and $470 million for the years ended December 31, 2024 and 2023, respectively, for environmental capital expenditures, land reclamation activities, Gypstack closure and water treatment activities. No assurance can be given that greater-than-anticipated EHS capital expenditures or land reclamation, Gypstack closure or water treatment expenditures will not be required in 2025 or in the future.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 25, Environmental, Health, Safety and Security Matters",
+          "financial_amounts": [
+            "$480 million",
+            "$275 million",
+            "$465 million",
+            "$215 million",
+            "$545 million",
+            "$470 million"
+          ],
+          "classification_justification": "This snippet provides explicit, quantifiable financial figures for expected and past 'environmental capital expenditures' and 'additional expenditures' specifically for 'Gypstack closure and water treatment activities.' The statement 'No assurance can be given that greater-than-anticipated EHS capital expenditures... will not be required in 2025 or in the future' clearly frames these as ongoing and future financial risks, demonstrating financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure of significant 'environmental capital expenditures' and 'additional expenditures' for gypstack closure, coupled with the warning of 'greater-than-anticipated' future requirements, frames this as an ongoing and future financial burden and threat.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for past and future expenditures related to gypstack closure and water treatment, directly linking the risk to financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure includes expenditures for '2025,' '2026' (forward-looking) and '2024 and 2023' (backward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "In 2025, excluding capital expenditures arising out of the consent decrees referred to under “EPA RCRA Initiative” in Note 14 of our Notes to Consolidated Financial Statements, we expect environmental capital expenditures to total approximately $480 million, primarily related to: ... (ii) construction and modification projects associated with Gypstacks and clay settling ponds at our Phosphates facilities and tailings management areas for our Potash mining and processing facilities; ... Additional expenditures for land reclamation, Gypstack closure and water treatment activities are expected to total approximately $275 million in 2025. In 2026, we estimate environmental capital expenditures will be approximately $465 million and expenditures for land reclamation activities, Gypstack closure and water treatment activities are expected to be approximately $215 million. We spent approximately $545 million and $470 million for the years ended December 31, 2024 and 2023, respectively, for environmental capital expenditures, land reclamation activities, Gypstack closure and water treatment activities. No assurance can be given that greater-than-anticipated EHS capital expenditures or land reclamation, Gypstack closure or water treatment expenditures will not be required in 2025 or in the future.",
+          "page": "25",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99910-003",
+          "quote": "We primarily incur liabilities for reclamation activities in our Florida operations and for phosphogypsum management system (“Gypstack” or “Gypstacks”) closure in our Florida and Louisiana operations where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. As of December 31, 2024, we had $411.8 million in surety bonds and a $50 million letter of credit included in the total amount above. These bonds and letters of credit are outstanding for reclamation obligations, primarily related to mining in Florida.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 18, Other Commercial Commitments",
+          "financial_amounts": [
+            "$411.8 million",
+            "$50 million"
+          ],
+          "classification_justification": "This snippet clearly identifies 'liabilities' for gypstack closure and details the financial assurance mechanisms (surety bonds, letters of credit) with specific monetary values required for permitting. This demonstrates a clear financial risk associated with gypstack disposal.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'incur liabilities' and the need to 'provide credit support' frames gypstack closure as a financial burden and obligation, which is a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides explicit, quantifiable financial values for surety bonds ('$411.8 million') and a letter of credit ('$50 million') directly linked to gypstack closure obligations.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The statement 'As of December 31, 2024, we had...' indicates a present-day status of these financial commitments, although the underlying closure obligations extend into the future.",
+            "timeframe": "Present day"
+          },
+          "text": "We primarily incur liabilities for reclamation activities in our Florida operations and for phosphogypsum management system (“Gypstack” or “Gypstacks”) closure in our Florida and Louisiana operations where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. As of December 31, 2024, we had $411.8 million in surety bonds and a $50 million letter of credit included in the total amount above. These bonds and letters of credit are outstanding for reclamation obligations, primarily related to mining in Florida.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 18, Other Commercial Commitments",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99910-004",
+          "quote": "Two consent decrees that became effective in 2016 resolved claims under RCRA and state hazardous waste laws relating to our management of certain waste materials onsite at certain fertilizer manufacturing facilities in Florida and Louisiana. Under these consent decrees, in 2016, we deposited $630 million in cash into two trust funds to provide additional financial assurance for the estimated costs of closure and post-closure care of our phosphogypsum management systems.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 24, Financial Assurance",
+          "financial_amounts": [
+            "$630 million"
+          ],
+          "classification_justification": "This snippet explicitly states that the company deposited '$630 million in cash into two trust funds to provide additional financial assurance for the estimated costs of closure and post-closure care of our phosphogypsum management systems' due to consent decrees. This is a clear quantification of financial risk related to gypstack disposal.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The mention of 'consent decrees' and 'claims under RCRA and state hazardous waste laws' leading to 'financial assurance for the estimated costs of closure and post-closure care' frames gypstack management as a regulatory and financial burden, which is a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides a specific, quantifiable financial value of '$630 million' deposited into trust funds for gypstack closure and post-closure care.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The deposit was made 'in 2016' (backward-looking), but it is for 'estimated costs of closure and post-closure care' which are future obligations, making the overall timeframe multiple.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Two consent decrees that became effective in 2016 resolved claims under RCRA and state hazardous waste laws relating to our management of certain waste materials onsite at certain fertilizer manufacturing facilities in Florida and Louisiana. Under these consent decrees, in 2016, we deposited $630 million in cash into two trust funds to provide additional financial assurance for the estimated costs of closure and post-closure care of our phosphogypsum management systems.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 24, Financial Assurance",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99910-005",
+          "quote": "The amount of the Plant City Bond is $327.1 million, which reflects our closure cost estimates as of December 31, 2024. ... Under our current approach to satisfying applicable requirements, additional financial assurance would be required in the future if increases in cost estimates exceed the face amount of the Plant City Bond or the amount supported by the Bonnie Financial Test.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 21, Plant City and Bonnie Facilities",
+          "financial_amounts": [
+            "$327.1 million"
+          ],
+          "classification_justification": "This snippet provides a specific financial amount for a bond related to gypstack closure ('$327.1 million') and explicitly states that 'additional financial assurance would be required in the future if increases in cost estimates exceed' this amount. This clearly identifies a financial risk and its potential future increase.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The discussion of a 'bond' for 'closure cost estimates' and the potential for 'additional financial assurance' if costs increase frames gypstack closure as a financial obligation and a forward-looking risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides a specific financial amount for the Plant City Bond ('$327.1 million') and discusses the financial implications of potential cost increases, indicating financial materiality.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The bond amount is stated 'as of December 31, 2024' (present day), but the potential for 'additional financial assurance would be required in the future' clearly indicates a forward-looking risk.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "The amount of the Plant City Bond is $327.1 million, which reflects our closure cost estimates as of December 31, 2024. ... Under our current approach to satisfying applicable requirements, additional financial assurance would be required in the future if increases in cost estimates exceed the face amount of the Plant City Bond or the amount supported by the Bonnie Financial Test.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 21, Plant City and Bonnie Facilities",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99910-006",
+          "quote": "Management of Residual Materials and Closure of Management Areas. Mining and processing of potash and phosphate generate residual materials that must be managed both during the operation of the facility and after facility closure. Potash tailings, consisting primarily of salt and clay, are stored in surface disposal sites. Phosphate clay residuals from mining are deposited in clay storage areas (“CSAs”). Processing of phosphate rock with sulfuric acid generates phosphogypsum that currently is stored in Gypstacks. During the life of the tailings management areas, CSAs and Gypstacks, we have incurred and will continue to incur significant costs to manage residual materials in accordance with environmental laws and regulations and with permit requirements. Additional legal and permit requirements will take effect when these facilities are closed. Our AROs are further discussed in Note 14 of our Notes to Consolidated Financial Statements.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 24, Operating Requirements and Impacts",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that the company 'will continue to incur significant costs to manage residual materials' including phosphogypsum in gypstacks, and that 'additional legal and permit requirements will take effect when these facilities are closed.' This clearly identifies the disposal of gypstacks as a business risk due to ongoing and future costs and regulatory burdens, even without specific financial figures in this particular snippet.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrases 'significant costs to manage residual materials' and 'additional legal and permit requirements' frame the management and closure of gypstacks as a financial and regulatory burden, indicating a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'significant costs' and 'additional legal and permit requirements' but does not provide explicit monetary values in this snippet, nor does it make a definitive statement about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement refers to costs 'during the operation of the facility and after facility closure' and 'will continue to incur,' indicating both present-day and forward-looking aspects.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Management of Residual Materials and Closure of Management Areas. Mining and processing of potash and phosphate generate residual materials that must be managed both during the operation of the facility and after facility closure. Potash tailings, consisting primarily of salt and clay, are stored in surface disposal sites. Phosphate clay residuals from mining are deposited in clay storage areas (“CSAs”). Processing of phosphate rock with sulfuric acid generates phosphogypsum that currently is stored in Gypstacks. During the life of the tailings management areas, CSAs and Gypstacks, we have incurred and will continue to incur significant costs to manage residual materials in accordance with environmental laws and regulations and with permit requirements. Additional legal and permit requirements will take effect when these facilities are closed. Our AROs are further discussed in Note 14 of our Notes to Consolidated Financial Statements.",
+          "page": "24",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 6
+        },
+        {
+          "snippet_id": "99910-007",
+          "quote": "In August 2016, a sinkhole developed under one of the two cells of the Phase II Gypstack at our New Wales facility in Polk County, Florida, resulting in process water from the stack draining into the sinkhole. The incident was reported to the FDEP and EPA. In connection with the incident, our subsidiary, Mosaic Fertilizer, LLC (“Mosaic Fertilizer”), entered into a consent order (“Order”) with the FDEP in October 2016. Pursuant to the Order, Mosaic Fertilizer agreed to, among other things, implement an approved repair plan to close the sinkhole; perform additional water monitoring and if necessary, assessment and rehabilitation activities in the event of identified offsite impacts; provide financial assurance; and evaluate the risk of potential future sinkhole formation at our active Florida Gypstack operations.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 24, New Wales Water Loss Incident",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes a past incident (sinkhole at a gypstack) that led to a consent order requiring specific actions, including providing financial assurance and evaluating the 'risk of potential future sinkhole formation.' This clearly identifies gypstack stability as a business risk, even though it doesn't quantify the financial impact in this specific text.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The description of a 'sinkhole developed' and the requirement to 'evaluate the risk of potential future sinkhole formation' clearly frames gypstack stability as a threat and a source of uncertainty.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions the requirement to 'provide financial assurance' but does not specify a monetary value in this snippet, nor does it explicitly state the financial materiality of the incident or future risk.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The incident 'In August 2016' is backward-looking, while the requirement to 'evaluate the risk of potential future sinkhole formation' is forward-looking, and the consent order is an ongoing obligation.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "In August 2016, a sinkhole developed under one of the two cells of the Phase II Gypstack at our New Wales facility in Polk County, Florida, resulting in process water from the stack draining into the sinkhole. The incident was reported to the FDEP and EPA. In connection with the incident, our subsidiary, Mosaic Fertilizer, LLC (“Mosaic Fertilizer”), entered into a consent order (“Order”) with the FDEP in October 2016. Pursuant to the Order, Mosaic Fertilizer agreed to, among other things, implement an approved repair plan to close the sinkhole; perform additional water monitoring and if necessary, assessment and rehabilitation activities in the event of identified offsite impacts; provide financial assurance; and evaluate the risk of potential future sinkhole formation at our active Florida Gypstack operations.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 24, New Wales Water Loss Incident",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9814925373134329,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 98.1%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 7
+        }
+      ],
+      "summary": "Yes, with high confidence, Mosaic discloses that managing and closing phosphogypsum gypstacks is a significant financial and regulatory risk (FULL_DISCLOSURE). This is evidenced by substantial liabilities for closure requiring hundreds of millions in financial assurance, including a $630 million trust fund deposit, and projected environmental capital expenditures of approximately $480 million for 2025. Past incidents like a sinkhole have led to regulatory consent orders, and the company explicitly notes that future financial assurance requirements may increase if cost estimates rise.",
+      "merger_stats": {
+        "v3_snippets": 4,
+        "v4_snippets": 6,
+        "merged_snippets": 7,
+        "snippet_pairs": 7,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99911",
+      "question_number": 3,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99911-001",
+          "quote": "Other Long-Term Obligations... ARO(a) $ 4,484.5 $ 295.7 $ 398.4 $ 320.9 $ 3,469.5 ... (a) Represents the undiscounted estimated cash outflows required to settle the AROs. For the Potash segment, this excludes the subsequent years of tailings area management for activities such as dissolution and reclamation of land, which are estimated to require an additional 161 to 391 years until completion. The corresponding present value of all future expenditures is $2.6 billion as of December 31, 2024 and is reflected in our accrued liabilities and other noncurrent liabilities in our Consolidated Balance Sheets.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 19, Other Long-Term Obligations",
+          "financial_amounts": [
+            "$4,484.5",
+            "$295.7",
+            "$398.4",
+            "$320.9",
+            "$3,469.5",
+            "$2.6 billion"
+          ],
+          "classification_justification": "This snippet provides explicit, quantifiable financial values for Asset Retirement Obligations (AROs), which include 'reclamation of land' at mining sites. It states these are 'undiscounted estimated cash outflows required to settle the AROs' and provides the 'corresponding present value' of $2.6 billion. This clearly demonstrates that the company considers restoration of mining sites a financially material risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure of 'estimated cash outflows required to settle the AROs' and the classification as 'Other Long-Term Obligations' frames reclamation as a significant financial burden and a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for AROs, including the undiscounted total ($4,484.5 million) and the present value ($2.6 billion), directly linking the risk to financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The AROs represent 'estimated cash outflows required to settle' obligations over a long period ('161 to 391 years until completion'), indicating a forward-looking timeframe, while the current recognition of these liabilities also points to a present-day impact.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Other Long-Term Obligations... ARO(a) $ 4,484.5 $ 295.7 $ 398.4 $ 320.9 $ 3,469.5 ... (a) Represents the undiscounted estimated cash outflows required to settle the AROs. For the Potash segment, this excludes the subsequent years of tailings area management for activities such as dissolution and reclamation of land, which are estimated to require an additional 161 to 391 years until completion. The corresponding present value of all future expenditures is $2.6 billion as of December 31, 2024 and is reflected in our accrued liabilities and other noncurrent liabilities in our Consolidated Balance Sheets.",
+          "page": "19",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99911-002",
+          "quote": "Additional expenditures for land reclamation, Gypstack closure and water treatment activities are expected to total approximately $275 million in 2025. In 2026, we estimate environmental capital expenditures will be approximately $465 million and expenditures for land reclamation activities, Gypstack closure and water treatment activities are expected to be approximately $215 million. We spent approximately $545 million and $470 million for the years ended December 31, 2024 and 2023, respectively, for environmental capital expenditures, land reclamation activities, Gypstack closure and water treatment activities. No assurance can be given that greater-than-anticipated EHS capital expenditures or land reclamation, Gypstack closure or water treatment expenditures will not be required in 2025 or in the future.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 25, Environmental, Health, Safety and Security Matters",
+          "financial_amounts": [
+            "$275 million",
+            "$465 million",
+            "$215 million",
+            "$545 million",
+            "$470 million"
+          ],
+          "classification_justification": "This snippet provides explicit, quantifiable financial figures for expected and past 'expenditures for land reclamation activities.' The statement 'No assurance can be given that greater-than-anticipated EHS capital expenditures... will not be required in 2025 or in the future' clearly frames these as ongoing and future financial risks, demonstrating financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure of significant 'expenditures for land reclamation activities,' coupled with the warning of 'greater-than-anticipated' future requirements, frames this as an ongoing and future financial burden and threat.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for past and future expenditures related to land reclamation, directly linking the risk to financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure includes expenditures for '2025,' '2026' (forward-looking) and '2024 and 2023' (backward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Additional expenditures for land reclamation, Gypstack closure and water treatment activities are expected to total approximately $275 million in 2025. In 2026, we estimate environmental capital expenditures will be approximately $465 million and expenditures for land reclamation activities, Gypstack closure and water treatment activities are expected to be approximately $215 million. We spent approximately $545 million and $470 million for the years ended December 31, 2024 and 2023, respectively, for environmental capital expenditures, land reclamation activities, Gypstack closure and water treatment activities. No assurance can be given that greater-than-anticipated EHS capital expenditures or land reclamation, Gypstack closure or water treatment expenditures will not be required in 2025 or in the future.",
+          "page": "25",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99911-003",
+          "quote": "We record accrued liabilities for various environmental and reclamation matters, including the demolition of former operating facilities, and AROs. ... As of December 31, 2024 and 2023, $2.6 billion and $2.2 billion, respectively, was accrued for AROs (including both current and noncurrent amounts) in North and South America.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 13, Environmental Liabilities and Asset Retirement Obligations",
+          "financial_amounts": [
+            "$2.6 billion",
+            "$2.2 billion"
+          ],
+          "classification_justification": "This snippet explicitly states that the company records 'accrued liabilities for various environmental and reclamation matters' and provides specific financial amounts for these Asset Retirement Obligations (AROs) as of the reporting date. This clearly identifies restoration of mining sites as a financial risk to the business.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The mention of 'accrued liabilities' and 'AROs' for 'reclamation matters' frames these obligations as a financial burden and a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides explicit, quantifiable financial values of '$2.6 billion' and '$2.2 billion' for accrued AROs related to reclamation, demonstrating financial materiality.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The accrual amounts are stated 'As of December 31, 2024 and 2023,' indicating a present-day financial obligation, although the actual restoration activities will occur in the future.",
+            "timeframe": "Present day"
+          },
+          "text": "We record accrued liabilities for various environmental and reclamation matters, including the demolition of former operating facilities, and AROs. ... As of December 31, 2024 and 2023, $2.6 billion and $2.2 billion, respectively, was accrued for AROs (including both current and noncurrent amounts) in North and South America.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 13, Environmental Liabilities and Asset Retirement Obligations",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99911-004",
+          "quote": "We primarily incur liabilities for reclamation activities in our Florida operations... where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. As of December 31, 2024, we had $411.8 million in surety bonds and a $50 million letter of credit included in the total amount above. These bonds and letters of credit are outstanding for reclamation obligations, primarily related to mining in Florida.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 18, Other Commercial Commitments",
+          "financial_amounts": [
+            "$411.8 million",
+            "$50 million"
+          ],
+          "classification_justification": "This snippet explicitly states that the company 'incur[s] liabilities for reclamation activities' and must provide financial assurance, detailing specific amounts for surety bonds ($411.8 million) and a letter of credit ($50 million) for these obligations. This clearly identifies restoration of mining sites as a financial risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'incur liabilities for reclamation activities' and the requirement to 'provide credit support' frames these obligations as a financial burden and a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides explicit, quantifiable financial values for surety bonds ('$411.8 million') and a letter of credit ('$50 million') directly linked to reclamation obligations.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The financial instruments are reported 'As of December 31, 2024' (present day), indicating current financial commitments for ongoing and future reclamation obligations.",
+            "timeframe": "Present day"
+          },
+          "text": "We primarily incur liabilities for reclamation activities in our Florida operations... where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. As of December 31, 2024, we had $411.8 million in surety bonds and a $50 million letter of credit included in the total amount above. These bonds and letters of credit are outstanding for reclamation obligations, primarily related to mining in Florida.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 18, Other Commercial Commitments",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99911-005",
+          "quote": "We have fully funded a trust valued at $25 million (Canadian dollars) in satisfaction of financial assurance requirements for closure of our Saskatchewan Potash facilities.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 27, Financial Assurance",
+          "financial_amounts": [
+            "$25 million"
+          ],
+          "classification_justification": "This snippet explicitly states that the company 'fully funded a trust valued at $25 million (Canadian dollars)' for financial assurance related to the closure of potash facilities, which includes reclamation. This is a clear quantification of financial risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The mention of 'fully funded a trust' for 'financial assurance requirements for closure' frames this as a financial obligation and a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides a specific, quantifiable financial value of '$25 million (Canadian dollars)' for a trust fund related to facility closure, demonstrating financial materiality.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The trust was 'fully funded' (backward-looking event) but is for 'closure' requirements, which are future obligations, making the overall timeframe multiple.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "We have fully funded a trust valued at $25 million (Canadian dollars) in satisfaction of financial assurance requirements for closure of our Saskatchewan Potash facilities.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 27, Financial Assurance",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99911-006",
+          "quote": "In 2020, we executed and thereafter have maintained a surety bond in the amount of approximately $82 million to establish financial assurance for closure of our Carlsbad, New Mexico potash facility with the U.S. Department of the Interior, Bureau of Land Management and the New Mexico Environment Department.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 27, Financial Assurance",
+          "financial_amounts": [
+            "$82 million"
+          ],
+          "classification_justification": "This snippet explicitly states that the company 'executed and thereafter have maintained a surety bond in the amount of approximately $82 million to establish financial assurance for closure' of a potash facility, which includes reclamation. This is a clear quantification of financial risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The mention of 'executed and thereafter have maintained a surety bond' for 'financial assurance for closure' frames this as a financial obligation and a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides a specific, quantifiable financial value of 'approximately $82 million' for a surety bond related to facility closure, demonstrating financial materiality.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The bond was 'executed in 2020' (backward-looking) and 'maintained' thereafter (present day) for 'closure' requirements, which are future obligations, making the overall timeframe multiple.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "In 2020, we executed and thereafter have maintained a surety bond in the amount of approximately $82 million to establish financial assurance for closure of our Carlsbad, New Mexico potash facility with the U.S. Department of the Interior, Bureau of Land Management and the New Mexico Environment Department.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 27, Financial Assurance",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 6
+        },
+        {
+          "snippet_id": "99911-007",
+          "quote": "Reclamation Obligations. During phosphate mining we remove overburden to retrieve phosphate rock reserves. Once we have finished mining in an area, we use the overburden and sand tailings produced by the beneficiation process to reclaim the area in accordance with approved reclamation plans and applicable laws. We have incurred and will continue to incur significant costs to fulfill our reclamation obligations.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 24, Operating Requirements and Impacts",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states, 'We have incurred and will continue to incur significant costs to fulfill our reclamation obligations.' This clearly identifies the restoration of mining sites (reclamation) as a business risk due to the associated significant and ongoing costs.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The phrase 'significant costs to fulfill our reclamation obligations' frames reclamation as a financial burden, indicating a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'significant costs' but does not provide explicit monetary values in this snippet, nor does it make a definitive statement about financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement 'have incurred and will continue to incur' indicates both backward-looking (past costs) and forward-looking (future costs) aspects, making the timeframe multiple.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Reclamation Obligations. During phosphate mining we remove overburden to retrieve phosphate rock reserves. Once we have finished mining in an area, we use the overburden and sand tailings produced by the beneficiation process to reclaim the area in accordance with approved reclamation plans and applicable laws. We have incurred and will continue to incur significant costs to fulfill our reclamation obligations.",
+          "page": "24",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 7
+        },
+        {
+          "snippet_id": "99911-008",
+          "quote": "We primarily incur liabilities for reclamation activities in our Florida operations and for phosphogypsum management system (“Gypstack” or “Gypstacks”) closure in our Florida and Louisiana operations where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. ... We are subject to financial assurance requirements related to the closure and post-closure care of our Gypstacks in Florida and Louisiana. These requirements include Florida and Louisiana state financial assurance regulations, and financial assurance requirements under the terms of consent decrees that we have entered into with respect to our facilities in Florida and Louisiana.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 18, Other Commercial Commitments",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that the company 'incur liabilities for reclamation activities' and is subject to 'financial assurance requirements' for these activities. This clearly identifies restoration of mining sites (reclamation) as a business risk due to the associated financial and regulatory obligations.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The terms 'liabilities' and 'financial assurance requirements' frame reclamation as a financial and regulatory burden, indicating a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'liabilities' and 'financial assurance requirements' but does not provide explicit monetary values for these obligations in this specific snippet, nor does it make a definitive statement about financial materiality.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The statement refers to liabilities that are 'incurred' (present day) and requirements for 'reclamation activities' and 'closure' (forward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "We primarily incur liabilities for reclamation activities in our Florida operations and for phosphogypsum management system (“Gypstack” or “Gypstacks”) closure in our Florida and Louisiana operations where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. ... We are subject to financial assurance requirements related to the closure and post-closure care of our Gypstacks in Florida and Louisiana. These requirements include Florida and Louisiana state financial assurance regulations, and financial assurance requirements under the terms of consent decrees that we have entered into with respect to our facilities in Florida and Louisiana.",
+          "page": "18",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 8
+        },
+        {
+          "snippet_id": "99911-009",
+          "quote": "LAND RECLAMATION & COMPENSATION In Florida, we reclaim every acre of phosphate-mined land, creating high-quality habitats and wildlife corridors for fish, birds, and other animals, and land suitable for agriculture and other diverse beneficial uses. In Brazil, reclamation efforts include resloping and revegetating the mined area. Additionally, we set aside a portion of a mining site—approximately 20 percent of the project footprint—as a part of our efforts to preserve and protect unmined land.",
+          "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, Page 24, Activities and workers",
+          "financial_amounts": [],
+          "classification_justification": "This snippet describes the company's land reclamation and compensation activities as a standard practice, highlighting positive outcomes like creating habitats and land suitable for agriculture. While it indicates an ongoing activity, it does not frame these activities as a 'risk' to the business, nor does it provide any financial implications or challenges associated with them.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The language focuses on the positive outcomes of reclamation ('creating high-quality habitats,' 'suitable for agriculture') and describes it as a standard practice, without any indication of threats, challenges, or negative consequences for the business.",
+            "framing": "Opportunity",
+            "financial_justification": "The disclosure describes the nature of reclamation activities but does not provide any explicit financial figures or a definitive statement about the financial materiality of these activities for the company.",
+            "financial_type": "Non-Financial",
+            "timeframe_justification": "The description of ongoing 'reclamation efforts' and setting aside land indicates a present-day activity, with the benefits extending into the future.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "LAND RECLAMATION & COMPENSATION In Florida, we reclaim every acre of phosphate-mined land, creating high-quality habitats and wildlife corridors for fish, birds, and other animals, and land suitable for agriculture and other diverse beneficial uses. In Brazil, reclamation efforts include resloping and revegetating the mined area. Additionally, we set aside a portion of a mining site—approximately 20 percent of the project footprint—as a part of our efforts to preserve and protect unmined land.",
+          "page": "24",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 9
+        }
+      ],
+      "summary": "Yes, Mosaic clearly discloses the restoration of mining sites as a significant financial and regulatory risk, representing a FULL_DISCLOSURE. The company quantifies this risk with a $2.6 billion accrued liability for Asset Retirement Obligations (AROs), reports annual expenditures in the hundreds of millions, and states it will 'continue to incur significant costs.' This material risk is further evidenced by the substantial financial assurances required by regulators, including over $400 million in surety bonds for its Florida operations alone.",
+      "merger_stats": {
+        "v3_snippets": 5,
+        "v4_snippets": 7,
+        "merged_snippets": 9,
+        "snippet_pairs": 9,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99912",
+      "question_number": 4,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99912-001",
+          "quote": "Product Requirements and Impacts. International, federal, state and provincial standards require us to register many of our products before these products can be sold. The standards also impose labeling requirements on these products and require us to manufacture the products to formulations set forth on the labels. We believe that, when handled and used as intended, based on the available data, crop nutrient materials do not pose harm to human health or the environment and that any additional standards or regulatory requirements relating to product requirements and impacts will not have a material adverse effect on our business or financial condition.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 29, Product Requirements and Impacts",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly addresses 'product requirements and impacts' and acknowledges the existence of 'additional standards or regulatory requirements.' Crucially, it then provides a definitive statement about financial materiality by asserting that these 'will not have a material adverse effect on our business or financial condition.' This constitutes a full disclosure of the company's assessment of the financial impact (or lack thereof) of such regulations, which could include product bans or restrictions.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The discussion of 'standards' and 'regulatory requirements' that 'do not pose harm' and 'will not have a material adverse effect' presents the topic in a neutral to slightly positive light, indicating that while regulations exist, they are not currently perceived as a significant threat.",
+            "framing": "Neutral",
+            "financial_justification": "The disclosure explicitly states that additional standards or regulatory requirements 'will not have a material adverse effect on our business or financial condition,' providing a definitive statement about financial materiality (or immateriality).",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The statement refers to existing 'standards' and 'regulatory requirements' (present day) and 'any additional standards or regulatory requirements' (forward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Product Requirements and Impacts. International, federal, state and provincial standards require us to register many of our products before these products can be sold. The standards also impose labeling requirements on these products and require us to manufacture the products to formulations set forth on the labels. We believe that, when handled and used as intended, based on the available data, crop nutrient materials do not pose harm to human health or the environment and that any additional standards or regulatory requirements relating to product requirements and impacts will not have a material adverse effect on our business or financial condition.",
+          "page": "29",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "Yes, Mosaic discloses that new regulations restricting its products could pose a risk to the business, representing a FULL_DISCLOSURE. The company states that \"New nutrient regulatory initiatives could have a material effect\" on its business or customers, citing efforts to reduce nutrient loading as an example that could lead to use restrictions. While Mosaic believes its products are safe when used as intended and complies with existing registration standards, it acknowledges this potential for future regulatory impact.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 1,
+        "merged_snippets": 2,
+        "snippet_pairs": 2,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "needs_attention",
+        "summary": "1 snippet(s) removed after high-confidence review.",
+        "decisions": [
+          {
+            "snippet_id": "99912-002",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet discusses 'nutrient use restrictions for fall applications' and changes to 'application timing,' which are restrictions on use, but it does not mention the risk of products being 'banned from being produced or sold.'",
+            "action": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99913",
+      "question_number": 5,
+      "category": "Environmental Risk",
+      "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99913-001",
+          "quote": "In 2025, excluding capital expenditures arising out of the consent decrees referred to under “EPA RCRA Initiative” in Note 14 of our Notes to Consolidated Financial Statements, we expect environmental capital expenditures to total approximately $480 million, primarily related to: ... (iv) capital projects associated with remediation of contamination at current or former operations. Additional expenditures for land reclamation, Gypstack closure and water treatment activities are expected to total approximately $275 million in 2025. In 2026, we estimate environmental capital expenditures will be approximately $465 million and expenditures for land reclamation activities, Gypstack closure and water treatment activities are expected to be approximately $215 million. We spent approximately $545 million and $470 million for the years ended December 31, 2024 and 2023, respectively, for environmental capital expenditures, land reclamation activities, Gypstack closure and water treatment activities. No assurance can be given that greater-than-anticipated EHS capital expenditures or land reclamation, Gypstack closure or water treatment expenditures will not be required in 2025 or in the future.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 25, Environmental, Health, Safety and Security Matters",
+          "financial_amounts": [
+            "$480 million",
+            "$275 million",
+            "$465 million",
+            "$215 million",
+            "$545 million",
+            "$470 million"
+          ],
+          "classification_justification": "This snippet provides explicit, quantifiable financial figures for expected and past 'environmental capital expenditures' specifically for 'remediation of contamination at current or former operations.' The statement 'No assurance can be given that greater-than-anticipated EHS capital expenditures... will not be required in 2025 or in the future' clearly frames these as ongoing and future financial risks, demonstrating financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The disclosure of significant 'environmental capital expenditures' for 'remediation of contamination,' coupled with the warning of 'greater-than-anticipated' future requirements, frames this as an ongoing and future financial burden and threat.",
+            "framing": "Risk",
+            "financial_justification": "The snippet provides explicit, quantifiable financial values for past and future expenditures related to remediation of contamination, directly linking the risk to financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The disclosure includes expenditures for '2025,' '2026' (forward-looking) and '2024 and 2023' (backward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "In 2025, excluding capital expenditures arising out of the consent decrees referred to under “EPA RCRA Initiative” in Note 14 of our Notes to Consolidated Financial Statements, we expect environmental capital expenditures to total approximately $480 million, primarily related to: ... (iv) capital projects associated with remediation of contamination at current or former operations. Additional expenditures for land reclamation, Gypstack closure and water treatment activities are expected to total approximately $275 million in 2025. In 2026, we estimate environmental capital expenditures will be approximately $465 million and expenditures for land reclamation activities, Gypstack closure and water treatment activities are expected to be approximately $215 million. We spent approximately $545 million and $470 million for the years ended December 31, 2024 and 2023, respectively, for environmental capital expenditures, land reclamation activities, Gypstack closure and water treatment activities. No assurance can be given that greater-than-anticipated EHS capital expenditures or land reclamation, Gypstack closure or water treatment expenditures will not be required in 2025 or in the future.",
+          "page": "25",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v3_contains_v4",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v3",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v3 contains v4 text (longer/more complete)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99913-002",
+          "quote": "Many of our formerly owned or current facilities have been in operation for decades. The historical use and handling of regulated chemical substances, crop and animal nutrients and additives as well as by-product or process tailings at these facilities by us and predecessor operators have resulted in soil, surface water and groundwater impacts. At many of these facilities, spills or other releases of regulated substances have occurred previously and potentially could occur in the future, possibly requiring us to undertake or fund cleanup efforts under Superfund or otherwise. In some instances we have agreed, pursuant to consent orders or agreements with the appropriate governmental agencies, to undertake certain investigations, which currently are in progress, to determine whether remedial action may be required to address site impacts. At other locations, we have entered into consent orders or agreements with appropriate governmental agencies to perform required remedial activities that will address identified site conditions. Taking into account established accruals, future expenditures for these known conditions currently are not expected, individually or in the aggregate, to have a material adverse effect on our business or financial condition. However, material expenditures by us could be required in the future to remediate the environmental impacts at these or at other current or former sites.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 28, Remediation at Our Facilities",
+          "financial_amounts": [],
+          "classification_justification": "This snippet provides a detailed description of 'soil, surface water and groundwater impacts' at 'formerly owned or current facilities' (manufacturing sites) due to historical operations, and the potential for 'cleanup efforts' or 'remedial action.' It explicitly states that 'material expenditures by us could be required in the future' to remediate these impacts, indicating financial materiality and thus a full disclosure of the risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The description of 'soil, surface water and groundwater impacts,' the potential for 'cleanup efforts,' and the warning that 'material expenditures by us could be required in the future' clearly frames this as a significant negative consequence and a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly states that 'material expenditures by us could be required in the future,' indicating financial materiality without providing specific quantifiable amounts in this particular passage.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The snippet discusses past occurrences ('occurred previously'), ongoing investigations ('currently are in progress'), and future potential ('potentially could occur in the future,' 'could be required in the future'), covering multiple timeframes.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Many of our formerly owned or current facilities have been in operation for decades. The historical use and handling of regulated chemical substances, crop and animal nutrients and additives as well as by-product or process tailings at these facilities by us and predecessor operators have resulted in soil, surface water and groundwater impacts. At many of these facilities, spills or other releases of regulated substances have occurred previously and potentially could occur in the future, possibly requiring us to undertake or fund cleanup efforts under Superfund or otherwise. In some instances we have agreed, pursuant to consent orders or agreements with the appropriate governmental agencies, to undertake certain investigations, which currently are in progress, to determine whether remedial action may be required to address site impacts. At other locations, we have entered into consent orders or agreements with appropriate governmental agencies to perform required remedial activities that will address identified site conditions. Taking into account established accruals, future expenditures for these known conditions currently are not expected, individually or in the aggregate, to have a material adverse effect on our business or financial condition. However, material expenditures by us could be required in the future to remediate the environmental impacts at these or at other current or former sites.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 28, Remediation at Our Facilities",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 0.9892173913043478,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 98.9%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99913-003",
+          "quote": "We record accrued liabilities for various environmental and reclamation matters, including the demolition of former operating facilities, and AROs. Contingent environmental liabilities are described in Note 23 of our Notes to Consolidated Financial Statements. Accruals for environmental matters are based primarily on third-party estimates for the cost of remediation at previously operated sites and estimates of legal costs for ongoing environmental litigation. We regularly assess the likelihood of material adverse judgments or outcomes and the effects of potential indemnification, as well as potential ranges or probability of losses. We determine the amount of accruals required, if any, for contingencies after carefully analyzing each individual matter. Estimating the ultimate settlement of environmental matters requires us to develop complex and interrelated assumptions based on experience with similar matters, our history, precedents, evidence and facts specific to each matter. Actual costs incurred in future periods may vary from the estimates, given the inherent uncertainties in evaluating environmental exposures. As of December 31, 2024 and 2023, we had accrued $197.5 million and $203.2 million, respectively, for environmental matters.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 13, Environmental Liabilities and Asset Retirement Obligations",
+          "financial_amounts": [
+            "$197.5 million",
+            "$203.2 million"
+          ],
+          "classification_justification": "This snippet explicitly states that the company records 'accrued liabilities for various environmental and reclamation matters, including the demolition of former operating facilities' and 'cost of remediation at previously operated sites.' It provides specific financial figures for these accruals ($197.5 million as of December 31, 2024), demonstrating that the company considers the restoration of contaminated sites a financially material risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The terms 'accrued liabilities,' 'contingent environmental liabilities,' and 'cost of remediation' clearly frame the restoration of contaminated sites as a financial burden and a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides explicit, quantifiable financial values for accrued environmental liabilities ($197.5 million), directly linking the risk to financial impact.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The accruals are for existing liabilities ('As of December 31, 2024') but relate to 'previously operated sites' and 'future periods,' indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "We record accrued liabilities for various environmental and reclamation matters, including the demolition of former operating facilities, and AROs. Contingent environmental liabilities are described in Note 23 of our Notes to Consolidated Financial Statements. Accruals for environmental matters are based primarily on third-party estimates for the cost of remediation at previously operated sites and estimates of legal costs for ongoing environmental litigation. We regularly assess the likelihood of material adverse judgments or outcomes and the effects of potential indemnification, as well as potential ranges or probability of losses. We determine the amount of accruals required, if any, for contingencies after carefully analyzing each individual matter. Estimating the ultimate settlement of environmental matters requires us to develop complex and interrelated assumptions based on experience with similar matters, our history, precedents, evidence and facts specific to each matter. Actual costs incurred in future periods may vary from the estimates, given the inherent uncertainties in evaluating environmental exposures. As of December 31, 2024 and 2023, we had accrued $197.5 million and $203.2 million, respectively, for environmental matters.",
+          "page": "13",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99913-004",
+          "quote": "Remedial Activities... Comprehensive Environmental Response, Compensation and Liability Act (“CERCLA”) (aka Superfund) and state analogues impose liability, without regard to fault or to the legality of a party’s conduct, on certain categories of persons, including those who have disposed of “hazardous substances” at a location. Under Superfund, or its various state analogues, one party may be responsible for the entire site, regardless of fault or the locality of its disposal activity. We have contingent environmental remedial liabilities that arise principally from three sources which are further discussed below: (i) facilities currently or formerly owned by our subsidiaries or their predecessors; (ii) facilities adjacent to currently or formerly owned facilities; and (iii) third-party Superfund or state equivalent sites where we are alleged to have disposed of hazardous materials. Taking into consideration established accruals for environmental remedial matters of approximately $197.5 million as of December 31, 2024, expenditures for these known conditions currently are not expected, individually or in the aggregate, to have a material effect on our business or financial condition. However, material expenditures could be required in the future to remediate the contamination at known sites or at other current or former sites.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 28, Remedial Activities",
+          "financial_amounts": [
+            "$197.5 million"
+          ],
+          "classification_justification": "This snippet explicitly identifies 'contingent environmental remedial liabilities' arising from 'facilities currently or formerly owned' and 'third-party Superfund or state equivalent sites.' It provides a specific financial accrual of '$197.5 million' for these matters. While it states current expenditures are 'not expected... to have a material effect,' it immediately qualifies this by stating 'material expenditures could be required in the future,' which is a definitive statement about potential future financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The terms 'contingent environmental remedial liabilities,' 'Superfund,' and the acknowledgment that 'material expenditures could be required in the future' clearly frame the restoration of contaminated sites as a significant and ongoing threat to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides a specific financial accrual ($197.5 million) and explicitly states that 'material expenditures could be required in the future,' providing a definitive statement about potential future financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The accruals are 'as of December 31, 2024' (present day), but the liabilities arise from 'formerly owned' sites (backward-looking) and 'material expenditures could be required in the future' (forward-looking), indicating a multiple timeframe.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "Remedial Activities... Comprehensive Environmental Response, Compensation and Liability Act (“CERCLA”) (aka Superfund) and state analogues impose liability, without regard to fault or to the legality of a party’s conduct, on certain categories of persons, including those who have disposed of “hazardous substances” at a location. Under Superfund, or its various state analogues, one party may be responsible for the entire site, regardless of fault or the locality of its disposal activity. We have contingent environmental remedial liabilities that arise principally from three sources which are further discussed below: (i) facilities currently or formerly owned by our subsidiaries or their predecessors; (ii) facilities adjacent to currently or formerly owned facilities; and (iii) third-party Superfund or state equivalent sites where we are alleged to have disposed of hazardous materials. Taking into consideration established accruals for environmental remedial matters of approximately $197.5 million as of December 31, 2024, expenditures for these known conditions currently are not expected, individually or in the aggregate, to have a material effect on our business or financial condition. However, material expenditures could be required in the future to remediate the contamination at known sites or at other current or former sites.",
+          "page": "28",
+          "version_source": "v3",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v3_only",
+            "ai_reviewed": false,
+            "note": "Unique to v3 analysis - not found in v4"
+          },
+          "snippet_rank": 4
+        },
+        {
+          "snippet_id": "99913-005",
+          "quote": "We record accrued liabilities for various environmental and reclamation matters, including the demolition of former operating facilities, and AROs. ... As of December 31, 2024 and 2023, we had accrued $197.5 million and $203.2 million, respectively, for environmental matters.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 13, Environmental Liabilities and Asset Retirement Obligations",
+          "financial_amounts": [
+            "$197.5 million",
+            "$203.2 million"
+          ],
+          "classification_justification": "This snippet explicitly states the company records 'accrued liabilities for various environmental and reclamation matters,' which would include contaminated manufacturing sites, and provides specific financial amounts for these accruals. This clearly identifies the financial materiality of environmental liabilities, including restoration, as a risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The mention of 'accrued liabilities' for 'environmental and reclamation matters' frames these obligations as a financial burden and a risk to the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides explicit, quantifiable financial values of '$197.5 million' and '$203.2 million' for accrued environmental matters, demonstrating financial materiality.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The accrual amounts are stated 'As of December 31, 2024 and 2023,' indicating a present-day financial obligation, although the actual remediation activities may occur in the future.",
+            "timeframe": "Present day"
+          },
+          "text": "We record accrued liabilities for various environmental and reclamation matters, including the demolition of former operating facilities, and AROs. ... As of December 31, 2024 and 2023, we had accrued $197.5 million and $203.2 million, respectively, for environmental matters.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 13, Environmental Liabilities and Asset Retirement Obligations",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 5
+        },
+        {
+          "snippet_id": "99913-006",
+          "quote": "We have contingent environmental remedial liabilities that arise principally from three sources which are further discussed below: (i) facilities currently or formerly owned by our subsidiaries or their predecessors; ... Taking into consideration established accruals for environmental remedial matters of approximately $197.5 million as of December 31, 2024, expenditures for these known conditions currently are not expected, individually or in the aggregate, to have a material effect on our business or financial condition. However, material expenditures could be required in the future to remediate the contamination at known sites or at other current or former sites.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 28, Remedial Activities",
+          "financial_amounts": [
+            "$197.5 million"
+          ],
+          "classification_justification": "This snippet explicitly identifies 'contingent environmental remedial liabilities' arising from 'facilities currently or formerly owned' (manufacturing sites). It states an accrual of '$197.5 million' and, while noting current expectations of no material effect, explicitly warns that 'material expenditures could be required in the future.' This is a clear statement of financial materiality and risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The phrases 'contingent environmental remedial liabilities' and 'material expenditures could be required in the future to remediate the contamination' clearly frame this as a potential negative financial consequence and a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure provides a specific financial amount for accruals ('$197.5 million') and explicitly states that 'material expenditures could be required in the future,' indicating financial materiality.",
+            "financial_type": "Financial",
+            "timeframe_justification": "The accrual is 'as of December 31, 2024' (present day), but the potential for 'material expenditures could be required in the future' makes it forward-looking.",
+            "timeframe": "Multiple or Unclear"
+          },
+          "text": "We have contingent environmental remedial liabilities that arise principally from three sources which are further discussed below: (i) facilities currently or formerly owned by our subsidiaries or their predecessors; ... Taking into consideration established accruals for environmental remedial matters of approximately $197.5 million as of December 31, 2024, expenditures for these known conditions currently are not expected, individually or in the aggregate, to have a material effect on our business or financial condition. However, material expenditures could be required in the future to remediate the contamination at known sites or at other current or former sites.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 28, Remedial Activities",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 6
+        }
+      ],
+      "summary": "Yes, Mosaic clearly discloses the restoration of contaminated manufacturing sites as a financial risk, classifying it as a FULL_DISCLOSURE. The company quantifies this risk with accrued liabilities of $197.5 million for environmental matters and projected 2025 capital expenditures of approximately $480 million for remediation. While currently known conditions are not expected to be materially adverse, Mosaic acknowledges that contingent liabilities exist and future material expenditures could be required.",
+      "merger_stats": {
+        "v3_snippets": 4,
+        "v4_snippets": 4,
+        "merged_snippets": 6,
+        "snippet_pairs": 6,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99915",
+      "question_number": 1,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99915-001",
+          "quote": "International, federal, state and provincial standards require us to register many of our products before these products can be sold. The standards also impose labeling requirements on these products and require us to manufacture the products to formulations set forth on the labels. We believe that, when handled and used as intended, based on the available data, crop nutrient materials do not pose harm to human health or the environment and that any additional standards or regulatory requirements relating to product requirements and impacts will not have a material adverse effect on our business or financial condition.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 29, Product Requirements and Impacts",
+          "financial_amounts": [],
+          "classification_justification": "This snippet directly addresses the impact of 'additional standards or regulatory requirements' (which would include compliance, testing, registration costs) and explicitly states the company's belief that these 'will not have a material adverse effect on our business or financial condition'. This is a definitive statement about the financial materiality (or lack thereof) of this risk.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The statement addresses potential negative impacts ('material adverse effect') from regulatory requirements, framing it as a potential threat that the company assesses as not material.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly states that additional standards 'will not have a material adverse effect', providing a definitive statement about financial materiality without quantifying it.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The phrase 'any additional standards or regulatory requirements' refers to future or potential regulations, making this a forward-looking statement.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "International, federal, state and provincial standards require us to register many of our products before these products can be sold. The standards also impose labeling requirements on these products and require us to manufacture the products to formulations set forth on the labels. We believe that, when handled and used as intended, based on the available data, crop nutrient materials do not pose harm to human health or the environment and that any additional standards or regulatory requirements relating to product requirements and impacts will not have a material adverse effect on our business or financial condition.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 29, Product Requirements and Impacts",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 1
+        }
+      ],
+      "summary": "Yes, Mosaic provides a full disclosure regarding its assessment of this risk. The company acknowledges that its products are subject to registration and labeling standards but explicitly states its belief that any additional requirements in this area will not have a material adverse effect on its business or financial condition.",
+      "merger_stats": {
+        "v3_snippets": 1,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99915-001",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet directly addresses the risk of compliance costs by stating the company's belief that 'any additional standards or regulatory requirements... will not have a material adverse effect on our business or financial condition.'",
+            "action": "kept"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99916",
+      "question_number": 2,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99916-001",
+          "snippet_rank": 1,
+          "classification": "NO_DISCLOSURE",
+          "text": "No disclosure found in the document.",
+          "page": "N/A",
+          "source_versions": [],
+          "merger_metadata": {
+            "note": "No snippets found in v3 or v4 analysis"
+          }
+        }
+      ],
+      "summary": "Mosaic does not disclose information addressing this question in the analyzed documents.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 0,
+        "merged_snippets": 1,
+        "snippet_pairs": 0,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      }
+    },
+    {
+      "question_id": "99917",
+      "question_number": 3,
+      "category": "Regulatory/Financial Risk",
+      "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+      "disclosures": [],
+      "summary": "No, the company does not disclose legal challenges from health or environmental claims due to product exposure as a risk. Instead, Mosaic provides a full disclosure of its position, stating its belief that its crop nutrient materials \"do not pose harm to human health or the environment\" when handled and used as intended.",
+      "merger_stats": {
+        "v3_snippets": 0,
+        "v4_snippets": 1,
+        "merged_snippets": 1,
+        "snippet_pairs": 1,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "needs_attention",
+        "summary": "1 snippet(s) removed after high-confidence review.",
+        "decisions": [
+          {
+            "snippet_id": "99917-001",
+            "belongs": false,
+            "confidence": 1.0,
+            "rationale": "The snippet discusses the company's belief that its products do not pose harm to human health or the environment, but it does not mention any risk from class action lawsuits or legal challenges.",
+            "action": "removed"
+          }
+        ]
+      }
+    },
+    {
+      "question_id": "99918",
+      "question_number": 4,
+      "category": "Market/Business Risk",
+      "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+      "disclosures": [
+        {
+          "snippet_id": "99918-001",
+          "quote": "Factors that could cause reported results to differ materially from those expressed or implied by the forward-looking statements include, but are not limited to, the following: ... changes in the costs, or constraints on supplies, of raw materials or energy used in manufacturing our products, or in the costs or availability of transportation for our products;",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 28, Cautionary Statement Regarding Forward Looking Information",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The snippet explicitly states that these factors 'could cause reported results to differ materially'. This direct statement of potential financial materiality meets the criteria for FULL_DISCLOSURE, not PARTIAL.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'changes in the costs... of raw materials or energy' and 'could cause reported results to differ materially' clearly frames this as a source of potential harm and negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'changes in the costs' and that these 'could cause reported results to differ materially', indicating a financial impact and potential materiality, but without providing specific figures or a definitive statement of materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "This is a forward-looking statement, listing factors that 'could cause reported results to differ materially' in the future.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Factors that could cause reported results to differ materially from those expressed or implied by the forward-looking statements include, but are not limited to, the following: ... changes in the costs, or constraints on supplies, of raw materials or energy used in manufacturing our products, or in the costs or availability of transportation for our products;",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 28, Cautionary Statement Regarding Forward Looking Information",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "substring_auto_merged",
+            "substring_direction": "v4_contains_v3",
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Substring duplicate detected. Auto-merged using v4 verification-corrected (overrides length)."
+          },
+          "snippet_rank": 1
+        },
+        {
+          "snippet_id": "99918-002",
+          "quote": "Climate Change Regulation. Various governmental initiatives to limit greenhouse gas emissions are under way or under consideration around the world. These initiatives could restrict our operating activities, require us to make changes in our operating activities that would increase our operating costs, reduce our efficiency or limit our output, require us to make capital improvements to our facilities, increase our energy, raw material and transportation costs or limit their availability, or otherwise adversely affect our results of operations, liquidity or capital resources, and these effects could be material to us.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 27, Climate Change",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that climate change regulations could 'increase our energy, raw material and transportation costs' and 'adversely affect our results of operations, liquidity or capital resources, and these effects could be material to us'. This clearly identifies high energy input costs (driven by regulation) as a risk to the business and explicitly states its potential financial materiality.",
+          "classification": "FULL_DISCLOSURE",
+          "categorization": {
+            "framing_justification": "The language 'increase our operating costs', 'adversely affect our results of operations', and 'these effects could be material to us' clearly frames this as a source of potential harm and negative consequences for the business.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure explicitly states that the effects 'could be material to us', providing a definitive statement about the financial materiality of increased energy costs, without quantifying the exact amount.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "The snippet discusses 'governmental initiatives... under way or under consideration' and effects that 'could' happen, indicating a forward-looking perspective.",
+            "timeframe": "Forward-looking"
+          },
+          "text": "Climate Change Regulation. Various governmental initiatives to limit greenhouse gas emissions are under way or under consideration around the world. These initiatives could restrict our operating activities, require us to make changes in our operating activities that would increase our operating costs, reduce our efficiency or limit our output, require us to make capital improvements to our facilities, increase our energy, raw material and transportation costs or limit their availability, or otherwise adversely affect our results of operations, liquidity or capital resources, and these effects could be material to us.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 27, Climate Change",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v3",
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "exact_auto_merged",
+            "similarity": 1.0,
+            "ai_reviewed": false,
+            "auto_merge_decision": "v4",
+            "auto_merge_rationale": "Exact duplicate (similarity: 100.0%). Auto-merged using neither verification-corrected, prefer v4 (more recent)."
+          },
+          "snippet_rank": 2
+        },
+        {
+          "snippet_id": "99918-003",
+          "quote": "In addition, cost of goods sold is affected by a number of factors, including: fluctuations in the Canadian dollar; the level of periodic inflationary pressures on resources in western Canada, where we produce most of our potash; and natural gas costs for operating our potash solution mine at Belle Plaine, Saskatchewan.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 4, Key Factors That Can Affect Results of Operations and Financial Condition",
+          "financial_amounts": [],
+          "classification_justification": "This snippet explicitly states that 'natural gas costs for operating our potash solution mine' affect the cost of goods sold. This directly identifies a specific energy input cost as a factor impacting the business's profitability, thus characterizing it as a risk, but without a statement on its financial materiality.",
+          "classification": "PARTIAL",
+          "categorization": {
+            "framing_justification": "The statement identifies 'natural gas costs' as a factor affecting 'cost of goods sold', implying a negative impact on profitability, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure refers to 'natural gas costs' affecting 'cost of goods sold', indicating a financial impact, but does not provide specific monetary values or a definitive statement of financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "This statement describes an ongoing condition that 'is affected by' natural gas costs, indicating a present-day relevance.",
+            "timeframe": "Present day"
+          },
+          "text": "In addition, cost of goods sold is affected by a number of factors, including: fluctuations in the Canadian dollar; the level of periodic inflationary pressures on resources in western Canada, where we produce most of our potash; and natural gas costs for operating our potash solution mine at Belle Plaine, Saskatchewan.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 4, Key Factors That Can Affect Results of Operations and Financial Condition",
+          "version_source": "v4",
+          "verification_corrected": false,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 3
+        },
+        {
+          "snippet_id": "99918-004",
+          "quote": "The primary feedstock for producing ammonia is natural gas. The product price for ammonia is generally highly dependent on the supply and demand balance for ammonia.",
+          "source": "FINAL-2024_Annual_Report.pdf, Page 4, Key Factors That Can Affect Results of Operations and Financial Condition",
+          "financial_amounts": [],
+          "classification_justification": "[CORRECTED BY VERIFICATION] The text is a neutral, factual statement about the production process. It does not frame the cost of natural gas as a risk to the business, which is required for a PARTIAL classification. It only acknowledges the topic.",
+          "classification": "UNCLEAR",
+          "categorization": {
+            "framing_justification": "The statement describes a dependency ('highly dependent') of product price on natural gas, implying that fluctuations could negatively impact the business, thus framing it as a risk.",
+            "framing": "Risk",
+            "financial_justification": "The disclosure mentions 'product price for ammonia' and its dependency on natural gas, indicating a financial impact, but does not provide specific monetary values or a definitive statement of financial materiality.",
+            "financial_type": "Partial-type",
+            "timeframe_justification": "This statement describes a general, ongoing dependency and price behavior, indicating a present-day and continuous relevance.",
+            "timeframe": "Present day"
+          },
+          "text": "The primary feedstock for producing ammonia is natural gas. The product price for ammonia is generally highly dependent on the supply and demand balance for ammonia.",
+          "page": "FINAL-2024_Annual_Report.pdf, Page 4, Key Factors That Can Affect Results of Operations and Financial Condition",
+          "version_source": "v4",
+          "verification_corrected": true,
+          "source_versions": [
+            "v4"
+          ],
+          "merger_metadata": {
+            "pairing_type": "v4_only",
+            "ai_reviewed": false,
+            "note": "Unique to v4 analysis - not found in v3"
+          },
+          "snippet_rank": 4
+        }
+      ],
+      "summary": "Yes, Mosaic provides a full disclosure that high energy input costs are a risk to its business. The company explicitly lists \"changes in the costs... of... energy used in manufacturing our products\" as a factor that could materially affect results. It also identifies climate change regulations as a potential driver that could \"increase our energy... costs\" and provides specific examples, such as natural gas costs impacting potash operations.",
+      "merger_stats": {
+        "v3_snippets": 2,
+        "v4_snippets": 4,
+        "merged_snippets": 4,
+        "snippet_pairs": 4,
+        "ai_reviews_conducted": 0,
+        "human_review_flagged": 0
+      },
+      "cross_question_review": {
+        "status": "clean",
+        "summary": "All reviewed snippets retained.",
+        "decisions": [
+          {
+            "snippet_id": "99918-002",
+            "belongs": true,
+            "confidence": 1.0,
+            "rationale": "The snippet explicitly discloses that governmental initiatives to limit greenhouse gas emissions could 'increase our energy...costs', which directly addresses the risk of 'high energy input costs'.",
+            "action": "kept"
+          }
+        ]
+      }
+    }
+  ],
+  "completeness_summary": {
+    "total_questions_analyzed": 14,
+    "total_disclosure_snippets": 50,
+    "note": "Summary statistics recalculated from merged results"
+  },
+  "metadata": {
+    "company": "Mosaic",
+    "year": "2024",
+    "analysis_date": "2025-11-07T18:07:58.062480",
+    "schema_version": "merged-v3-v4",
+    "merger_model": "gemini-2.5-pro",
+    "source_files": {
+      "v3": "Mosaic_2024_v3_gemini-2-5-flash_06-11-2025_15-09-35_verified.json",
+      "v4": "Mosaic_2024_v4_gemini-2-5-flash_06-11-2025_15-12-42_verified.json"
+    }
+  },
+  "merger_summary": {
+    "total_v3_snippets": 29,
+    "total_v4_snippets": 42,
+    "total_merged_snippets": 50,
+    "total_ai_reviews": 0,
+    "total_human_flags": 0,
+    "merger_timestamp": "07-11-2025_18-07-58"
+  }
+}
