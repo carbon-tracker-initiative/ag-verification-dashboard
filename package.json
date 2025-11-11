@@ -12,6 +12,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "export:excel": "node --import tsx src/scripts/generateExcelReport.ts",
+    "export:excel-merged-reviewed-v2": "python workflows/excel_merged_reviewed_v2/export_comprehensive.py",
     "test": "node --import tsx tests/metricsCalculator.test.ts && node --import tsx tests/dataValidation.test.ts && node --import tsx tests/dataLoader.test.ts && node --import tsx tests/components.smoke.test.ts",
     "test:metrics": "node --import tsx tests/metricsCalculator.test.ts",
     "test:validation": "node --import tsx tests/dataValidation.test.ts",
