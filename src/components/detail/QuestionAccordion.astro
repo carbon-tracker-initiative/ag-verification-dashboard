@@ -16,9 +16,20 @@ interface Props {
   categoryIcon: string;
   categoryColor: string;
   categoryId: string;
+  companyName: string;
+  year: number;
 }
 
-const { question, metrics, category, categoryIcon, categoryColor, categoryId } = Astro.props;
+const {
+  question,
+  metrics,
+  category,
+  categoryIcon,
+  categoryColor,
+  categoryId,
+  companyName,
+  year
+} = Astro.props;
 
 const bestClassification = question.disclosures.length > 0
   ? question.disclosures[0].classification
@@ -175,7 +186,12 @@ if (!framings.length) framings.push('none');
           </div>
 
           {question.disclosures.map((snippet, index) => (
-            <SnippetCard snippet={snippet} index={index + 1} />
+            <SnippetCard
+              snippet={snippet}
+              index={index + 1}
+              company={companyName}
+              year={year}
+            />
           ))}
         </div>
       </div>

@@ -17,9 +17,11 @@ import {
 interface Props {
   snippet: Snippet;
   index: number;
+  company: string;
+  year: number;
 }
 
-const { snippet, index } = Astro.props;
+const { snippet, index, company, year } = Astro.props;
 
 const financialDisclosureType = normalizeFinancialDisclosureType(snippet.categorization.financial_type);
 const timeframeDisplay = normalizeTimeframeCategory(snippet.categorization.timeframe);
@@ -172,7 +174,7 @@ const shouldShowComparisonSummary =
       </div>
 
       <div>
-        <SourceLink source={snippet.source} />
+        <SourceLink source={snippet.source || ''} company={company} year={year} />
       </div>
 
       <div class="grid md:grid-cols-2 gap-4">
