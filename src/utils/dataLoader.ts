@@ -564,7 +564,8 @@ function convertMergedQuestion(rawQuestion: any, index: number): Question {
     question_text: rawQuestion.question_text || '',
     disclosures,
     summary: rawQuestion.summary || '',
-    merger_stats: rawQuestion.merger_stats
+    merger_stats: rawQuestion.merger_stats,
+    cross_question_review: rawQuestion.cross_question_review
   };
 }
 
@@ -703,6 +704,73 @@ async function loadMergedCompanyData(resultsPath: string): Promise<CompanyYearDa
   return mergedData;
 }
 
+async function loadMergedReviewedData(resultsPath: string): Promise<CompanyYearData[]> {
+  const reviewedDir = join(resultsPath, 'deduped_and_reviewed');
+
+  let files: string[];
+  try {
+    files = await readdir(reviewedDir);
+  } catch {
+    console.log('No deduped_and_reviewed results directory found');
+    return [];
+  }
+
+  const reviewedData: CompanyYearData[] = [];
+
+  for (const file of files) {
+    if (!file.endsWith('.json')) {
+      continue;
+    }
+
+    try {
+      const raw = await loadJsonFile(join(reviewedDir, file));
+      const metadata = raw?.metadata;
+      if (!metadata || !metadata.company || metadata.year === undefined) {
+        console.warn(`Reviewed file missing metadata: ${file}`);
+        continue;
+      }
+
+      const company = metadata.company;
+      const year = safeNumber(metadata.year);
+      if (!Number.isFinite(year) || Number.isNaN(year)) {
+        console.warn(`Reviewed file has invalid year: ${file}`);
+        continue;
+      }
+
+      const analysisResult = createAnalysisResultFromMerged(raw, file);
+      analysisResult.version = 'merged-reviewed';
+      analysisResult.metadata = {
+        ...analysisResult.metadata,
+        reviewed_filename: file
+      };
+
+      const sourceMergedFilename = file.replace('_deduped_and_reviewed.json', '.json');
+
+      reviewedData.push({
+        company,
+        year,
+        version: 'merged-reviewed',
+        model: metadata.merger_model || 'merged-model',
+        sector: normalizeSectorCode(
+          analysisResult.metadata?.company_sector as string | undefined
+        ),
+        verified: analysisResult,
+        hasComparison: false,
+        isMergedReviewed: true,
+        reviewMetadata: {
+          reviewedFilename: file,
+          sourceMergedFilename,
+          reviewAppliedAt: metadata.analysis_date
+        }
+      });
+    } catch (error) {
+      console.error(`Failed to load reviewed file ${file}:`, error);
+    }
+  }
+
+  return reviewedData;
+}
+
 function getVersionSortWeight(version: string): number {
   const lower = (version || '').toLowerCase();
   if (lower.startsWith('merged')) {
@@ -711,6 +779,11 @@ function getVersionSortWeight(version: string): number {
 
   const numeric = parseInt(version.replace(/[^0-9]/g, ''), 10);
   return Number.isNaN(numeric) ? 0 : numeric;
+}
+
+export async function loadMergedReviewedCompanyData(): Promise<CompanyYearData[]> {
+  const resultsPath = join(process.cwd(), 'results');
+  return loadMergedReviewedData(resultsPath);
 }
 
 

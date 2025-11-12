@@ -56,6 +56,20 @@ export interface Snippet {
   comparison_change?: Record<string, any>;
 }
 
+export interface CrossQuestionReviewDecision {
+  snippet_id: string;
+  belongs: boolean;
+  confidence?: number;
+  rationale?: string;
+  action?: string;
+}
+
+export interface CrossQuestionReview {
+  status: string;
+  summary?: string;
+  decisions: CrossQuestionReviewDecision[];
+}
+
 /**
  * Question with all its disclosure snippets
  */
@@ -68,6 +82,7 @@ export interface Question {
   disclosures: Snippet[];
   summary: string;
   merger_stats?: Record<string, any>;
+  cross_question_review?: CrossQuestionReview;
 }
 
 /**
@@ -151,5 +166,12 @@ export interface CompanyYearData {
     schemaVersion?: string;
     mergerTimestamp?: string;
     mergedFilename?: string;
+  };
+  isMergedReviewed?: boolean;
+  reviewMetadata?: {
+    reviewedFilename: string;
+    sourceMergedFilename?: string;
+    reviewLogPath?: string;
+    reviewAppliedAt?: string;
   };
 }

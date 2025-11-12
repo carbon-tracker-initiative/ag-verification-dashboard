@@ -180,6 +180,18 @@ npm run export:excel -- --version v4
 npm run export:excel -- --output reports/my-report.xlsx
 ```
 
+#### Deduped & Reviewed Workflow
+
+```bash
+npm run export:excel-merged-reviewed-v1
+```
+
+Outputs:
+- `AG_Verification_Deduped_Reviewed_YYYY-MM-DD.xlsx` – standard 7-sheet workbook sourced from `results/deduped_and_reviewed/`.
+- `AG_Verification_Merged_vs_Reviewed_YYYY-MM-DD.xlsx` – comparison pack with removal metrics, snippet-level removals, and the full review decision log.
+
+Flags `--company`, `--year`, `--version`, `--output`, and `--review <path>` are supported for scoping and custom destinations.
+
 **📊 What gets exported:**
 - Executive Summary with high-level statistics
 - Company Details with full metrics

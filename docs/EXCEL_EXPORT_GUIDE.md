@@ -32,6 +32,19 @@ reports/AG_Verification_Summary_YYYY-MM-DD.xlsx
 
 The file contains all companies, all versions (v3, v4, etc.), and all available data across **7 sheets**.
 
+### Generate Deduped & Reviewed Reports
+
+```bash
+npm run export:excel-merged-reviewed-v1
+```
+
+This command produces two workbooks:
+
+- `AG_Verification_Deduped_Reviewed_YYYY-MM-DD.xlsx` — the standard 7-sheet summary built from the `results/deduped_and_reviewed/` JSON files only.
+- `AG_Verification_Merged_vs_Reviewed_YYYY-MM-DD.xlsx` — a comparison pack with company-level removal stats, a removed-snippet detail table, and a full decision log sourced from `review_latest.jsonl`.
+
+Use the optional flags `--company`, `--year`, `--version`, or `--review <path>` to narrow the scope or point at a different JSONL decision log.
+
 ### Console Output
 
 - Every status line now uses `[INFO]`, `[SUCCESS]`, or `[ERROR]` instead of emojis so shells like PowerShell no longer show diamond placeholders.
