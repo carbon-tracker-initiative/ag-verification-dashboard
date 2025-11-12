@@ -70,6 +70,19 @@ const categoryMetrics = Array.from(allCategories).map(categoryName => {
 
   return calculateCategoryMetrics(allQuestionsInCategory, categoryName);
 });
+
+const normalizedBaseUrl = (import.meta.env.BASE_URL || '').replace(/\/$/, '');
+const companyOptions = enrichedCompanyData
+  .slice()
+  .sort((a, b) => {
+    const nameCompare = a.data.company.localeCompare(b.data.company);
+    if (nameCompare !== 0) return nameCompare;
+    return b.data.year - a.data.year;
+  })
+  .map(item => ({
+    label: `${item.data.company} – ${item.data.year} (${item.data.version})`,
+    href: `${normalizedBaseUrl}/${item.data.company.toLowerCase()}/${item.data.year}/${item.data.version}`
+  }));
 ---
 
 <Layout title="Verification Dashboard - Home">
@@ -83,6 +96,21 @@ const categoryMetrics = Array.from(allCategories).map(categoryName => {
       <!-- Company Cards -->
       <section class="mb-12">
         <h2 class="text-2xl font-bold text-slate-900 mb-6">Companies Analyzed</h2>
+        <div class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center">
+          <label for="company-selector" class="text-sm font-medium text-slate-700">
+            Jump to a company analysis
+          </label>
+          <select
+            id="company-selector"
+            class="w-full sm:w-auto rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+            onchange="if (this.value) window.location.href = this.value;"
+          >
+            <option value="">Select a company...</option>
+            {companyOptions.map(option => (
+              <option value={option.href}>{option.label}</option>
+            ))}
+          </select>
+        </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {enrichedCompanyData
             .sort((a, b) => b.metrics.total_snippets - a.metrics.total_snippets)
