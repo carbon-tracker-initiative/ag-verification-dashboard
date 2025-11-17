@@ -18,6 +18,10 @@ const { source, company, year, showIcon = true, className = '' } = Astro.props;
 
 const baseUrl = import.meta.env.BASE_URL || '';
 const normalizedBase = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
+
+function encodeSegment(value: string): string {
+  return encodeURIComponent(value).replace(/%2C/g, ',');
+}
 const parsed = parseSource(source);
 const displayText = getSourceDisplayText(source);
 const filename = (parsed.filename || '').trim();
@@ -31,9 +35,9 @@ if (hasPathInputs) {
   const pathSegments = [
     '',
     'source_documents',
-    encodeURIComponent(companyName),
-    encodeURIComponent(String(numericYear)),
-    encodeURIComponent(filename)
+    encodeSegment(companyName),
+    encodeSegment(String(numericYear)),
+    encodeSegment(filename)
   ];
   rawPdfPath = pathSegments.join('/');
   if (parsed.page > 0) {

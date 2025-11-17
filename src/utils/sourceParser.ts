@@ -30,22 +30,45 @@ export function parseSource(source: string): ParsedSource {
   }
 
   try {
-    // Split by comma to separate filename and page info
-    const parts = source.split(',');
+    let filename = '';
+    let pageInfo = '';
 
-    if (parts.length < 2) {
+    const normalizedSource = source.trim();
+    const pdfIndex = normalizedSource.toLowerCase().indexOf('.pdf');
+
+    if (pdfIndex >= 0) {
+      // Capture everything from the start through ".pdf"
+      const endIndex = pdfIndex + 4;
+      filename = normalizedSource.slice(0, endIndex).trim();
+      pageInfo = normalizedSource.slice(endIndex).trim();
+    } else {
+      // Fallback to the legacy comma-based split
+      const parts = normalizedSource.split(',');
+      filename = parts[0]?.trim() ?? '';
+      pageInfo = parts.slice(1).join(',').trim();
+
+      if (!pageInfo && parts.length < 2) {
+        return {
+          company: '',
+          year: 0,
+          filename: source.trim(),
+          page: 0,
+          isValid: false,
+          error: 'Missing page information'
+        };
+      }
+    }
+
+    if (!filename) {
       return {
         company: '',
         year: 0,
-        filename: source.trim(),
+        filename: '',
         page: 0,
         isValid: false,
-        error: 'Missing page information'
+        error: 'Could not extract filename'
       };
     }
-
-    const filename = parts[0].trim();
-    const pageInfo = parts[1].trim();
 
     // Extract page number (handle "Page 49" or "pages 49-51" or "p. 49")
     const pageMatch = pageInfo.match(/(\d+)/);
