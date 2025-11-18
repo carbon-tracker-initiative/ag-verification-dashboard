@@ -317,7 +317,11 @@ function writeJsonFiles(bundles: CompanyBundle[]) {
   );
 }
 
-async function writeExcel(bundles: CompanyBundle[], rawRows: SnippetRow[]) {
+async function writeExcel(
+  bundles: CompanyBundle[],
+  rawRows: SnippetRow[],
+  reclassStats: ReturnType<typeof computeReclassStats>
+) {
   // Prepare data for the multi-sheet generator
   const companyDataArray = bundles.map(b => ({
     company: b.company,
@@ -443,6 +447,8 @@ async function writeExcel(bundles: CompanyBundle[], rawRows: SnippetRow[]) {
     });
   });
 
+  addReclassSheet(workbook, reclassStats);
+
   await saveWorkbookToFile(workbook, OUTPUT_EXCEL_FILE);
 }
 
@@ -458,12 +464,132 @@ function filteredQuestionsFromRaw(rawRows: SnippetRow[]): Map<string, Set<string
   return map;
 }
 
+type TransitionBucket = {
+  orig: ClassificationLabel;
+  final: ClassificationLabel;
+  count: number;
+};
+
+function deriveFinalClassification(row: SnippetRow): { orig: ClassificationLabel; final: ClassificationLabel } {
+  const original = normalizeClassification(String(row["Classification"] || ""));
+  const reviewerRaw = String(row["Correct Classification?"] || "").trim();
+  const reviewer = reviewerRaw ? normalizeClassification(reviewerRaw) : "";
+  return {
+    orig: original,
+    final: (reviewer || original) as ClassificationLabel
+  };
+}
+
+function computeReclassStats(rawRows: SnippetRow[]) {
+  const kept = rawRows.filter(
+    row => String(row["Remove from Analysis?"] || "").trim().toUpperCase() !== "YES"
+  );
+
+  const origTotals = new Map<ClassificationLabel, number>();
+  const changeTotals = new Map<ClassificationLabel, number>();
+  const transitions = new Map<string, number>();
+  const categoryChanges = new Map<string, number>();
+  const framingChanges = new Map<string, number>();
+  const timeframeChanges = new Map<string, number>();
+  const collapsedCounts = new Map<string, number>();
+
+  kept.forEach(row => {
+    const { orig, final } = deriveFinalClassification(row);
+    const cat = String(row["Category"] || "Unknown").trim() || "Unknown";
+    const framing = String(row["Framing"] || "Unknown").trim() || "Unknown";
+    const timeframe = String(row["Timeframe"] || "Unknown").trim() || "Unknown";
+
+    origTotals.set(orig, (origTotals.get(orig) || 0) + 1);
+    const transKey = `${orig}__${final}`;
+    transitions.set(transKey, (transitions.get(transKey) || 0) + 1);
+    collapsedCounts.set(collapseClassification(final), (collapsedCounts.get(collapseClassification(final)) || 0) + 1);
+
+    if (orig !== final) {
+      changeTotals.set(orig, (changeTotals.get(orig) || 0) + 1);
+      categoryChanges.set(cat, (categoryChanges.get(cat) || 0) + 1);
+      framingChanges.set(framing, (framingChanges.get(framing) || 0) + 1);
+      timeframeChanges.set(timeframe, (timeframeChanges.get(timeframe) || 0) + 1);
+    }
+  });
+
+  const totalRemoved = rawRows.length - kept.length;
+
+  const transitionBuckets: TransitionBucket[] = [];
+  transitions.forEach((count, key) => {
+    const [orig, final] = key.split("__") as [ClassificationLabel, ClassificationLabel];
+    transitionBuckets.push({ orig, final, count });
+  });
+
+  return {
+    keptCount: kept.length,
+    removedCount: totalRemoved,
+    origTotals,
+    changeTotals,
+    transitionBuckets,
+    categoryChanges,
+    framingChanges,
+    timeframeChanges,
+    collapsedCounts
+  };
+}
+
+function addReclassSheet(workbook: any, stats: ReturnType<typeof computeReclassStats>) {
+  const sheet = workbook.addWorksheet("Reclassification Stats", {
+    views: [{ showGridLines: true, state: "frozen", ySplit: 1 }]
+  });
+
+  sheet.addRow(["Total rows (kept)", stats.keptCount]);
+  sheet.addRow(["Rows removed", stats.removedCount]);
+  stats.collapsedCounts.forEach((v, k) => sheet.addRow([`Final ${k}`, v]));
+  sheet.addRow([]);
+
+  const classOrder: ClassificationLabel[] = ["FULL_DISCLOSURE", "PARTIAL", "UNCLEAR", "NO_DISCLOSURE"];
+  const matrixHeader = ["orig/final", ...classOrder];
+  sheet.addRow(matrixHeader);
+  classOrder.forEach(orig => {
+    const row: (string | number)[] = [orig];
+    classOrder.forEach(final => {
+      const found = stats.transitionBuckets.find(t => t.orig === orig && t.final === final);
+      row.push(found ? found.count : 0);
+    });
+    sheet.addRow(row);
+  });
+  sheet.addRow([]);
+
+  sheet.addRow(["Orig bucket", "Total", "Changed", "% Changed"]);
+  classOrder.forEach(orig => {
+    const total = stats.origTotals.get(orig) || 0;
+    const changed = stats.changeTotals.get(orig) || 0;
+    const pct = total ? (changed / total) * 100 : 0;
+    sheet.addRow([orig, total, changed, Number(pct.toFixed(1))]);
+  });
+  sheet.addRow([]);
+
+  sheet.addRow(["Changes by Category", "Count"]);
+  Array.from(stats.categoryChanges.entries())
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([cat, count]) => sheet.addRow([cat, count]));
+  sheet.addRow([]);
+
+  sheet.addRow(["Changes by Framing", "Count"]);
+  Array.from(stats.framingChanges.entries())
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([framing, count]) => sheet.addRow([framing, count]));
+  sheet.addRow([]);
+
+  sheet.addRow(["Changes by Timeframe", "Count"]);
+  Array.from(stats.timeframeChanges.entries())
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([time, count]) => sheet.addRow([time, count]));
+}
+
 function main() {
   console.log("[INFO] Team-reviewed ingest starting...");
   const rawRows = readRaw();
   const bundles = buildCompanyBundles(rawRows);
   writeJsonFiles(bundles);
-  writeExcel(bundles, rawRows);
+  const reclassStats = computeReclassStats(rawRows);
+  writeExcel(bundles, rawRows, reclassStats);
   console.log("[SUCCESS] Outputs written to:");
   console.log(` - JSON dir: ${OUTPUT_JSON_DIR}`);
   console.log(` - Excel: ${OUTPUT_EXCEL_FILE}`);
