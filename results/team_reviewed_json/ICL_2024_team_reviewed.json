@@ -1,0 +1,1862 @@
+{
+  "company": "ICL",
+  "year": 2024,
+  "version": "team-reviewed",
+  "verified": {
+    "company_name": "ICL",
+    "fiscal_year": 2024,
+    "version": "team-reviewed",
+    "model_used": "team-reviewed",
+    "analysis_date": "2025-11-17T18:34:19.473Z",
+    "schema_version": "team-reviewed-v1",
+    "analysis_results": [
+      {
+        "question_id": "99902",
+        "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99902-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "NO_DISCLOSURE",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": true,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": ""
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99903",
+        "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+        "category": "Human Health Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99903-001",
+            "quote": "As part of our commitment to sustainable development, we integrate environmental, health and safety criteria with commercial and operational considerations when developing our new products. Potential products undergo comprehensive and rigorous testing using an internal Sustainability Index for product development. These criteria form the basis of the ICL Sustainability Index which assesses and grades each proposed product during its development process according to defined parameters. According to our procedures, products are characterized by their potential hazard to humans and potential impact on the environment and are rated by defined parameters. Based on the results, changes are incorporated into the development process. The objective is to develop the most sustainable products for their specific intended use. Products categorized as “no go” are discontinued during the development stage and are not commercialized.",
+            "source": "ESG report 2024.pdf, Page 166, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet clearly identifies that products are assessed for their 'potential hazard to humans' during development, and products deemed 'no go' are discontinued. This demonstrates an acknowledgment of human health problems as a potential issue that could impact the business if not managed, leading to product discontinuation or failure to commercialize, thus posing a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on identifying and mitigating 'potential hazard to humans' and discontinuing 'no go' products, which frames the issue as a threat to be managed and avoided, aligning with a 'Risk' framing.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions product discontinuation and failure to commercialize, which implies financial impact (lost revenue, R&D costs) but does not provide specific monetary values or explicitly state financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The process described is for 'new products' and 'development process,' indicating a forward-looking approach to prevent future health problems and associated business risks."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99903-002",
+            "quote": "ICL allocates resources to investigate and gather sufficient data on its products to comprehensively assess their safety for human health and the environment. ICL is careful to ensure that the chemical substances it produces and sells are handled in accordance with all applicable rules and regulations throughout their life cycle. ICL prepares documentation containing information about products and provides proper guidance to its employees, contractors, customers and the public on the safe use of its chemicals and products. ICL implements the European regulation for Registration, Evaluation, Authorization and Restriction of Chemicals (REACH) at all its operations and registers its chemicals as required by law. ICL has submitted registration applications for all the chemicals relevant for its businesses in the EU (production and sale). Several substances are under evaluation by the authorities (European Chemicals Agency (ECHA) and Member State regulators), some of which have been listed as Substances of Very High Concern. ICL has volunteered to lead and prepare joint dossiers for dozens of substances (acting as a Lead Registrant). ICL utilizes data from toxicology, environmental fate, environmental toxicity studies and other relevant sources to classify chemicals and products according to the UN Global Harmonization System (GHS), a globally adopted classification and labeling system. All of ICL’s relevant chemicals are classified in line with respective classification and labeling regulations. All (100%) of ICL products undergo hazard assessments and regulatory screening. ICL performs detailed identification of all products and their constituents. As part of our Safety Data Sheets (SDS) procedure as well as the SDS creation process, the entire composition of a product is identified, reviewed, and assessed for hazards. This periodic assessment applies to all existing as well as new products and those under development. ICL monitors all regulatory requirements in regard to respective chemical laws globally to comply in all countries in which ICL operates (in addition to REACH), such as TSCA regulations and requirements in the US or specific registration requirements in South Korea. ICL provides its customers with SDS’ for all relevant products which are available in dozens of languages and beyond compliance requirements for most countries. Moreover, we provide tailored safety training and resources to our employees and other stakeholders who are logistics personnel and distributors, emphasizing the critical importance of safe handling practices for hazardous substances. The SDS lists regulatory information about each product and is periodically updated to remain in compliance with regulatory developments. In addition, product-specific regulatory information about registration/notification status is communicated to our relevant business segments and to our customers on a regular basis and upon request.In addition to REACH and the various chemical- specific limitations, the European Commission has introduced the Chemicals Strategy for Sustainability (CSS). CSS was launched in October 2020 to provide a new long-term strategy for chemical-related policies, in line with the aims of the EU Green Deal. We are carefully monitoring developments related to CSS to prepare for upcoming regulatory requirements which may affect many of our products. We disclose all regulatory registrations and uses of our substances with the recognition that some uses by our customers may not always be fully known to us. This includes both product and chemical registrations, with uses defined either by us or our clients, and publicly available as required for example by REACH and biocidal registrations under BPR.",
+            "source": "ESG report 2024.pdf, Page 167, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This extensive snippet details ICL's comprehensive efforts to assess 'safety for human health,' manage 'hazardous chemicals,' comply with regulations like REACH (including 'Substances of Very High Concern'), conduct 'hazard assessments,' and provide 'safety training' for product handling. The monitoring of regulatory developments that 'may affect many of our products' further indicates that human health problems from products are a recognized business risk that requires significant ongoing management.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on 'safety for human health,' 'hazardous chemicals,' 'Substances of Very High Concern,' and 'safe handling practices,' clearly framing human health problems as a threat that requires extensive regulatory compliance and mitigation efforts.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes extensive regulatory compliance and risk management activities but does not provide explicit financial figures or a definitive statement about the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The activities described are ongoing ('allocates resources,' 'ensures,' 'prepares,' 'implements,' 'monitors') and involve preparing for 'upcoming regulatory requirements,' indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99903-003",
+            "quote": "Chemical Safety Assessment (CSA) is a vital tool to evaluate the intrinsic hazards of substances, and it is essential for global registration processes. It draws upon comprehensive physical, chemical, toxicological, and environmental data generated by ICL’s scientific group. Quantitative values like Occupational Exposure Limits (OELs) or Derived No-Effect Levels (DNELs) are established based on toxicological insights, aiming to prevent overexposure to hazardous chemicals for both employees and the public. These values have been established to prevent employees and the general public from overexposure to hazardous chemicals. Specifically, regulations of food additives are based on positive lists of proven safe substances. If a substance is not provided for, it cannot be used in food. Adherence to food regulations involves rigorous scrutiny, ensuring that substances meet positive lists of proven safe materials. ICL has responded to evolving regulations, such as the 2019 prohibition of aluminum-based additives in certain food categories. Consequently, we have reviewed product specifications, modifying indications for use to align with regulatory standards. Furthermore, ongoing studies are conducted to identify and mitigate risks associated with substances, demonstrating our commitment to regulatory compliance and proactive risk management. This includes discontinuation of certain products or restricting their use to specific applications. For example, DECA has been discontinued, and methyl bromide is produced on a limited scale, solely for container disinfection rather than as a soil treatment. As methyl bromide (used for soil fumigation) has been included in the list of controlled substances, ICL has significantly reduced its production (for soil fumigation applications) and has shut down one of its production facilities.",
+            "source": "ESG report 2024.pdf, Page 169, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet provides strong evidence by detailing the use of Chemical Safety Assessments to evaluate 'intrinsic hazards of substances' and prevent 'overexposure to hazardous chemicals for both employees and the public.' It cites specific examples of regulatory responses, such as the 'prohibition of aluminum-based additives' leading to product specification changes, and the 'discontinuation of certain products' like DECA and the significant reduction in 'methyl bromide' production due to its inclusion in 'controlled substances.' These actions demonstrate a clear recognition of human health problems from products as a material business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on 'intrinsic hazards,' 'hazardous chemicals,' 'prohibition,' 'discontinuation,' and 'controlled substances,' clearly framing human health problems as a significant threat or negative consequence that the business must actively manage and mitigate through regulatory compliance and product changes.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes product discontinuations and production reductions due to health concerns and regulations, implying financial impacts, but does not provide specific monetary values or a definitive statement about the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The examples provided include past regulatory changes ('2019 prohibition') and ongoing actions ('discontinuation,' 'reduced its production'), indicating a backward-looking, present-day, and forward-looking relevance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99903-004",
+            "quote": "Identification of products with toxicological/environmental concerns is an ongoing process at ICL, in which regulatory inputs are communicated internally to take required measures and identify safer alternatives. ICL’s innovation infrastructure is an integral part of discovering new alternatives and phasing out substances of concern. ICL closely monitors regulatory developments related to its products and is compliant with all relevant regulatory decisions in each region, including restrictions and bans. We have a long-term plan to phase out all chemicals of concern, guided by regulatory requirements.",
+            "source": "ESG report 2024.pdf, Page 168, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states an 'ongoing process' to identify 'products with toxicological/environmental concerns' and a 'long-term plan to phase out all chemicals of concern.' This directly addresses human health problems from products as a business risk, as failure to phase out these chemicals could lead to regulatory restrictions/bans and reputational damage.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'toxicological/environmental concerns,' 'substances of concern,' and 'restrictions and bans' clearly frames this as a 'Risk' that requires proactive management and mitigation.",
+              "financial_type": "Partial",
+              "financial_justification": "The 'long-term plan to phase out' and compliance with 'restrictions and bans' imply significant financial implications (e.g., R&D costs for alternatives, lost sales from discontinued products) but no specific monetary values are provided.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The 'ongoing process' and 'long-term plan' indicate a 'Present day' and 'Forward-looking' timeframe for managing these risks."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99903-005",
+            "quote": "This includes discontinuation of certain products or restricting their use to specific applications. For example, DECA has been discontinued, and methyl bromide is produced on a limited scale, solely for container disinfection rather than as a soil treatment. As methyl bromide (used for soil fumigation) has been included in the list of controlled substances, ICL has significantly reduced its production (for soil fumigation applications) and has shut down one of its production facilities.",
+            "source": "ESG report 2024.pdf, Page 169, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet provides concrete examples of product discontinuation (DECA) and significant production reduction/facility shutdown (methyl bromide) due to their inclusion in 'controlled substances' lists. This directly demonstrates that human health (and environmental) concerns from products lead to business impacts, thus confirming it as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The discontinuation and reduction of products due to being 'controlled substances' clearly frames this as a 'Risk' that has already materialized and required business changes.",
+              "financial_type": "Partial",
+              "financial_justification": "The discontinuation of products and shutdown of a production facility imply significant financial impacts (lost revenue, asset write-downs) but no specific monetary values are provided.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The actions described (discontinuation, reduction, shutdown) are past events ('Backward-looking') but also reflect ongoing operational changes ('Present day') due to past regulatory decisions."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99903-006",
+            "quote": "CareMag® is a series of products that give manufacturers the freedom to formulate aluminum-free deodorants, heavy metal-free face masks and lead-free diaper rash relief cream. Our CareMag® product line is an innovative, natural-based magnesium derived from Dead Sea minerals. Hypoallergenic, sustainable and highly reliable, CareMag® products help deodorant, face mask and diaper rash cream manufacturers adopt the natural way. The products are 100% naturally based and approved by COSMOS, the Cosmetic Organic and Natural Standard which establishes certification requirements for cosmetic products in Europe and is the standard recognized globally by the cosmetics industry.",
+            "source": "ESG report 2024.pdf, Page 171, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet describes a product line (CareMag®) designed to be 'aluminum-free,' 'heavy metal-free,' and 'lead-free,' and is 'approved by COSMOS.' This indicates that the presence of such substances in products is a concern (human health problem) that the company addresses to meet market demand and regulatory standards, implying that products *with* these substances would pose a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The product is presented as a solution to avoid harmful substances, framing the underlying issue of health concerns from product ingredients as a 'Risk' that needs to be mitigated for market acceptance and compliance.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The development and certification of such products imply R&D and compliance costs, and market advantage, but no specific financial figures are provided.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The product is currently offered and certified, addressing ongoing market and regulatory demands, making it 'Present day' and 'Forward-looking'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "Not relevant to pesticides/fertilisers",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99903-007",
+            "quote": "Our product stewardship strategy and related policies and procedures ensure our production and use of safer products, while minimizing their environmental impact. We are aligned with industry best practices and adhere to Responsible Care® principles to ensure responsible chemical management. We are also dedicated to providing guidelines and thorough training to our customers to encourage the safe, efficient and sustainable use of our products. We comply with regulations, engaging with relevant regulators to register chemicals as required by law, and exploring safer alternatives utilizing ICL’s innovation capabilities to phase out substances of concern. Guided by prevailing global sustainability trends and the framework of the UN's SDGs, we systematically integrate environmental factors into our product development process using a 'Sustainability Index' framework that we developed internally to assess the environmental and health impacts of our products, as well as to establish tangible and measurable sustainability objectives.",
+            "source": "ESG report 2024.pdf, Page 164, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet indicates that ICL's product stewardship strategy aims for 'safer products' and involves assessing 'environmental and health impacts' of products. The explicit mention of 'phasing out substances of concern' directly implies that some products could pose health risks, which the company actively manages, thus identifying human health problems from products as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on ensuring 'safer products' and 'phasing out substances of concern,' which frames human health problems as a threat or negative consequence that the business must mitigate.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses assessing impacts and phasing out substances but does not provide explicit financial figures or a definitive statement about the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet describes an ongoing strategy ('ensure,' 'minimize,' 'comply,' 'exploring,' 'integrate') and continuous processes ('phase out substances of concern,' 'assess impacts'), indicating a present-day and forward-looking relevance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99903-008",
+            "quote": "Testing of Chemicals... data must be submitted regarding the properties of registered substances and their effect on human health and the environment. Most of this data is collected through studies, including animal testing, and conclusions are then extrapolated to humans. Such studies and tests are conducted only when no alternative in vitro testing methods are available, and in certified laboratories which are subject to certain industry and regulatory accepted guidelines (as the OECD guidelines), ensuring the welfare of the animals as per any applicable legal requirements. Due to increasing global awareness of animal welfare, the use of animals has been limited, at least for purposes of product development and licensing. As a result, methods are constantly being developed around the world, including the use of computerized models for prediction, as well as experimental models in tissue cultures. Some of these models are even accepted by authorities as substitutes for studies on animals. Over the years, ICL has worked to identify the most reliable and appropriate models that can provide data on the properties of substances under development. These models have replaced some animal testing, at least in the initial stages of product development. To date, we have succeeded in identifying alternative methods relating to several properties, such as the immediate toxicity of substances and skin and eye irritations. We are currently examining methods that could provide data on endocrine (hormonal) system disruption effects.",
+            "source": "ESG report 2024.pdf, Page 168, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly discusses the need to submit data on the 'effect on human health' for product licensing and the company's efforts to test for properties like 'immediate toxicity of substances and skin and eye irritations' and 'endocrine (hormonal) system disruption effects.' This demonstrates a clear recognition of potential human health problems from products as a risk that requires extensive testing and data submission.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'effect on human health,' 'toxicity,' and 'endocrine disruption effects' frames these as potential harms or negative consequences that the company must understand and manage.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes testing and research efforts but does not provide explicit financial figures or a definitive statement about the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The activities described are ongoing ('data must be submitted,' 'methods are constantly being developed,' 'currently examining') and relate to both existing and 'substances under development,' indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99903-009",
+            "quote": "Phasing out substances and developing alternatives Identification of products with toxicological/ environmental concerns is an ongoing process at ICL, in which regulatory inputs are communicated internally to take required measures and identify safer alternatives. ICL closely monitors regulatory developments related to its products and is compliant with all relevant regulatory decisions in each region, including restrictions and bans. We have a long- term plan to phase out all chemicals of concern, guided by regulatory requirements. ICL identifies relevant substances that are being phased out over time due to regulatory requirements and is developing sustainable alternatives to these substances. As an example of our transition to sustainable alternatives, ICL’s VeriQuel R100 and VeriQuel F100 products will replace conventional flame retardants such as TCPP and TDCP. These products offer reduced persistence, lower toxicity and potentially improved biodegradability. Additionally, they meet stringent regulatory standards, demonstrating our commitment to a safer and greener chemical landscape.",
+            "source": "ESG report 2024.pdf, Page 168, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet directly addresses the 'Identification of products with toxicological/environmental concerns' and the company's 'long-term plan to phase out all chemicals of concern' due to 'regulatory requirements' and 'restrictions and bans.' This clearly indicates that human health problems from products are a recognized business risk that necessitates proactive management and product reformulation.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'toxicological/environmental concerns,' 'chemicals of concern,' 'restrictions and bans,' and the need to 'phase out' substances frames human health problems as a threat or negative consequence that the business must mitigate.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes efforts to phase out substances and develop alternatives but does not provide explicit financial figures or a definitive statement about the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The process described is 'ongoing' and involves a 'long-term plan to phase out' substances, indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99903-010",
+            "quote": "We continuously strive to improve by embracing evolving standards and technologies to ensure that we comply with the highest standards of safety and care across all aspects of our operations, recognizing the inherent risks of industrial production, particularly in our specialty minerals industry. We implement precautionary measures and engage in meticulous evaluations at each stage of our production process of products carrying potential environmental and health risks. We take action to enhance positive impacts while minimizing negative effects.",
+            "source": "ESG report 2024.pdf, Page 177, Environment, Health and Safety",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that ICL recognizes 'the inherent risks of industrial production' and that they evaluate 'products carrying potential environmental and health risks.' This directly confirms that potential human health problems from their products are considered a risk to the business that requires precautionary measures and evaluations.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language emphasizes 'inherent risks,' 'potential environmental and health risks,' and 'precautionary measures,' clearly framing human health problems as a threat or negative consequence that the business must manage.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies potential risks and mitigation efforts but does not provide explicit financial figures or a definitive statement about the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The statement describes continuous efforts ('continuously strive,' 'implement,' 'engage') and 'evolving standards,' indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99904",
+        "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99904-001",
+            "quote": "Carbon Pricing Mechanisms Carbon taxes and cap-and-trade-emissions schemes are increasingly viewed in global jurisdictions as a way of pricing carbon – a key policy driver to reduce GHG emissions. Currently, one of ICL Europe’s sites, ICL Iberia, is covered by the EU-ETS Emissions Trading System, and in the UK, ICL Boulby is subject to the UK Emissions Trading Scheme. Approximately 1.4% of ICL’s Scope 1 emissions are covered under emissions-limiting regulations. In Israel, a new carbon tax on fossil fuels, including natural gas, has been imposed which will come into effect in 2025. It is expected to increase the emissions covered under the emissions-limiting regulations. Additionally, under the European Green Deal, the EU adopted a Carbon Border Adjustment Mechanism (CBAM) regulation in 2023 which was created to halt carbon leakage from the EU and which will apply in the future to some of our operations. Other carbon mechanisms may be implemented in the future. We are subject to laws and regulations that will require us to disclose information related to climate risks.",
+            "source": "ESG report 2024.pdf, Page 116, Climate Change & GHG Emissions",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides a comprehensive disclosure of carbon costs as a regulatory and financial risk. It explicitly mentions 'carbon taxes,' 'cap-and-trade-emissions schemes,' and specific regulatory frameworks like EU-ETS, UK ETS, and the upcoming Israel carbon tax, all of which represent direct costs to the company's operations. The mention of CBAM, which 'will apply in the future to some of our operations,' also indicates a future financial risk related to the carbon footprint of their products. The statement 'We are subject to laws and regulations that will require us to disclose information related to climate risks' further solidifies the recognition of these as business risks.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly discusses 'carbon taxes,' 'emissions trading systems,' and 'CBAM regulation' as mechanisms for 'pricing carbon' and states that they 'will apply in the future to some of our operations,' clearly framing these as regulatory and financial threats or negative consequences.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet explicitly identifies various carbon pricing mechanisms (taxes, ETS, CBAM) that 'will apply in the future to some of our operations,' directly linking these regulatory requirements to financial costs and relevance for the company.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure covers existing schemes ('Currently'), an upcoming tax ('will come into effect in 2025'), and future regulations ('will apply in the future'), indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "No mention of financial risk",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99904-002",
+            "quote": "Our climate risk analysis has been further strengthened by assessing the financial and operational impacts, including carbon pricing, supply chain disruptions and extreme weather events. These climate-related risks and opportunities are integrated into ICL’s business strategy, helping us align our operations with a sustainable and resilient future.",
+            "source": "ESG report 2024.pdf, Page 109, Climate Change & GHG Emissions",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the company identifies 'carbon pricing' as a financial impact it assesses, it does not explicitly state that this risk is financially material, which is the requirement for FULL_DISCLOSURE. It only states that the impacts are assessed.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly mentions 'financial and operational impacts' and 'climate-related risks,' framing carbon pricing as a threat or negative consequence to the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet explicitly states 'financial and operational impacts, including carbon pricing,' directly linking carbon costs to financial relevance for the company.",
+              "timeframe": "Current",
+              "timeframe_justification": "The analysis is described as having been 'further strengthened' and integrated into the business strategy, indicating a present-day assessment with implications for the future."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the company identifies 'carbon pricing' as a financial impact it assesses, it does not explicitly state that this risk is financially material, which is the requirement for FULL_DISCLOSURE. It only states that the impacts are assessed.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99904-003",
+            "quote": "In Israel, a new carbon tax on fossil fuels, including natural gas, has been imposed which will come into effect in 2025. It is expected to increase the emissions covered under the emissions-limiting regulations.",
+            "source": "ESG report 2024.pdf, Page 116, Climate Change & GHG Emissions",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet discloses a 'new carbon tax' in Israel coming into effect in 2025, which 'is expected to increase the emissions covered under the emissions-limiting regulations.' This is a clear disclosure of future carbon costs impacting its direct operations, thus a risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The imposition of a 'new carbon tax' and the expectation of increased covered emissions frames this as a 'Risk' to the business's future operational costs.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The mention of a 'carbon tax' implies financial costs, but no specific monetary values are provided in this snippet.",
+              "timeframe": "Future",
+              "timeframe_justification": "The carbon tax 'will come into effect in 2025,' making this a 'Forward-looking' disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99904-004",
+            "quote": "Additionally, under the European Green Deal, the EU adopted a Carbon Border Adjustment Mechanism (CBAM) regulation in 2023 which was created to halt carbon leakage from the EU and which will apply in the future to some of our operations. Other carbon mechanisms may be implemented in the future. We are subject to laws and regulations that will require us to disclose information related to climate risks.",
+            "source": "ESG report 2024.pdf, Page 116, Climate Change & GHG Emissions",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that the CBAM regulation 'will apply in the future to some of our operations' and that 'other carbon mechanisms may be implemented in the future.' This is a clear disclosure of future carbon costs and regulatory risks impacting its direct operations, confirming it as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The adoption of CBAM and the potential for 'other carbon mechanisms' to apply to operations frames this as a 'Risk' due to increased regulatory burden and potential costs.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The CBAM regulation implies future financial costs for operations, but no specific monetary values are provided in this snippet.",
+              "timeframe": "Future",
+              "timeframe_justification": "The regulation 'will apply in the future' and 'other carbon mechanisms may be implemented in the future,' making this a 'Forward-looking' disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99904-005",
+            "quote": "Our Polysulphate product has one of the lowest carbon footprints when compared to alternatives, providing a simple way to reduce farming’s impact on the environment. Crop productivity and crop quality are the most well-known benefits of applying Polysulphate. Now the added benefit of low carbon footprint is set to make Polysulphate a fertilizer of choice for those farmers accounting for greenhouse gas emissions on their enterprise and aiming to lower their carbon footprint.",
+            "source": "ESG report 2024.pdf, Page 173, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The snippet frames the low carbon footprint of a product as a market 'opportunity' and a 'benefit' for customers. It does not identify carbon costs as a risk to its own business, which is a requirement for the PARTIAL classification.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The disclosure frames the low carbon footprint of Polysulphate as an 'added benefit' and a reason for it to be a 'fertilizer of choice,' indicating an opportunity to gain market share by addressing customer concerns about carbon footprints.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet implies a market advantage and potential impact on sales due to customer carbon accounting, but it does not provide explicit financial figures or a definitive statement about the financial materiality of this market dynamic to ICL.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The statement refers to current product benefits and market positioning ('is set to make Polysulphate a fertilizer of choice'), indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The snippet frames the low carbon footprint of a product as a market 'opportunity' and a 'benefit' for customers. It does not identify carbon costs as a risk to its own business, which is a requirement for the PARTIAL classification.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99904-006",
+            "quote": "ICL considers sustainable finance an essential tool to support our transition to a low-carbon and environmentally sustainable economy. With the proper infrastructure in place, we have effectively leveraged financial opportunities. For example, in 2021, we initiated a $250M Sustainability-Linked Loan (SLL) with targets to reduce our absolute Scope 1 and 2 GHG emissions. This commitment was reinforced in 2023 with a $1.55B Sustainability-Linked Revolving Credit Facility (Sustainability-Linked RCF) which includes KPIs aligned with reducing our absolute Scope 1 and 2 GHG emissions.",
+            "source": "ESG report 2024.pdf, Page 110, Climate Change & GHG Governance",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The snippet frames the topic as a financial 'opportunity' and a 'tool to support our transition,' not as a business risk. The definition of PARTIAL requires the topic to be 'Clearly identified as business risk,' which is not the case here.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The disclosure frames sustainable finance as an 'essential tool to support our transition' and 'leveraged financial opportunities,' indicating an opportunity-driven approach to managing carbon-related financial aspects, but the underlying driver is the risk of not transitioning.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides explicit monetary values for the Sustainability-Linked Loan ($250M) and Revolving Credit Facility ($1.55B), which are directly tied to GHG emissions reduction targets, indicating a financial impact related to carbon costs.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The loan was initiated in '2021' and the credit facility in '2023,' with ongoing KPIs, indicating a present-day and backward-looking context for financial arrangements, but with forward-looking targets."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The snippet frames the topic as a financial 'opportunity' and a 'tool to support our transition,' not as a business risk. The definition of PARTIAL requires the topic to be 'Clearly identified as business risk,' which is not the case here.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99904-007",
+            "quote": "Scope 3 Category... 11. Use of sold products 1,073 (2022) / 1,088 (2023) (in tonnes CO2e)... Our focus on value chain emissions (Scope 3 GHG emissions) over the course of 2024 includes collaboration with both our suppliers and our clients to identify opportunities to reduce emissions. As part of the Together for Sustainability (TfS) initiative, we conduct extensive training to raise awareness among our suppliers regarding sustainability, transparency, and carbon emissions reduction. This collaboration includes education, training, and monitoring aligned with industry-wide goals, and supports our broader efforts to evaluate and reduce our Scope 3 emissions.",
+            "source": "ESG report 2024.pdf, Page 114, Climate Change & GHG Emissions",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The snippet describes actions to 'identify opportunities to reduce emissions' with clients but does not mention associated costs or frame the issue as a risk to the business, which is required for a PARTIAL classification.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'reducing emissions' and 'carbon emissions reduction' through collaboration with clients and suppliers frames the issue as a challenge or negative consequence that requires mitigation across the value chain.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses efforts to reduce Scope 3 emissions but does not provide explicit financial figures or a definitive statement about the financial materiality of these emissions to ICL.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The data provided is for '2022' and '2023,' and the efforts are 'over the course of 2024,' indicating a backward-looking and present-day timeframe with forward-looking implications."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The snippet describes actions to 'identify opportunities to reduce emissions' with clients but does not mention associated costs or frame the issue as a risk to the business, which is required for a PARTIAL classification.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99907",
+        "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99907-002",
+            "quote": "ICL’s Nova product line is designed for use in fertigation systems, offering a range of water soluble fertilizers that support precise nutrient delivery and efficient resource use. These formulations are tailored to meet specific crop requirements and growing conditions′ contributing to improved nutrient uptake and reduced environmental losses. By enabling targeted application through irrigation systems, Nova products help minimize nutrient runoff and leaching, thereby protecting groundwater quality. Additionally, they support soil health and enhance plant resilience under various stress conditions.",
+            "source": "ESG report 2024.pdf, Page 42, Food Security",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a product's positive environmental impact but does not frame nutrient runoff or leaching as a risk to the business. The 'PARTIAL' classification requires the company to identify the topic as a business risk. As this is absent, the correct classification is 'UNCLEAR'.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure highlights how Nova products 'minimize nutrient runoff and leaching' and 'protect groundwater quality,' framing the issue as a negative environmental impact that their products help to mitigate, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The development and promotion of these products imply R&D costs and market advantage, but no specific financial figures or explicit statements of financial materiality are provided.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The Nova product line is currently offered and designed for ongoing use, addressing present and future environmental challenges, indicating a 'Present day' and 'Forward-looking' timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes a product's positive environmental impact but does not frame nutrient runoff or leaching as a risk to the business. The 'PARTIAL' classification requires the company to identify the topic as a business risk. As this is absent, the correct classification is 'UNCLEAR'.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99908",
+        "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99908-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "NO_DISCLOSURE",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": true,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": ""
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99909",
+        "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99909-003",
+            "quote": "Our CRF technology supports comparable or improved crop yields with lower fertilizer application rates, contributing to reduced nitrate leaching into groundwater and lower emissions of nitrogen-based gases. Notably, eqo.x is the first CRF coating for urea that biodegrades rapidly, addressing concerns about microplastic accumulation in soils.",
+            "source": "ESG report 2024.pdf, Page 38, CROP NUTRITION SOLUTIONS",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet highlights a product feature that 'addresses concerns' about nitrate leaching. It does not, however, state or imply that this concern constitutes a risk to the business.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The phrase 'contributing to reduced nitrate leaching into groundwater' and 'addressing concerns about microplastic accumulation' frames these environmental impacts as negative issues or threats that the product helps to alleviate.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure focuses on environmental benefits and product features without providing any specific financial figures or a statement regarding the financial materiality of the risk.",
+              "timeframe": "Current",
+              "timeframe_justification": "The text describes the current capabilities and benefits of their existing CRF technology, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet highlights a product feature that 'addresses concerns' about nitrate leaching. It does not, however, state or imply that this concern constitutes a risk to the business.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99909-004",
+            "quote": "These formulations are tailored to meet specific crop requirements and growing conditions′ contributing to improved nutrient uptake and reduced environmental losses. By enabling targeted application through irrigation systems, Nova products help minimize nutrient runoff and leaching, thereby protecting groundwater quality. Additionally, they support soil health and enhance plant resilience under various stress conditions.",
+            "source": "ESG report 2024.pdf, Page 42, Advanced Fertigation Solutions: A Sustainable Approach",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The text describes how the company's products 'help minimize nutrient runoff'. This is a statement about product capabilities, not an acknowledgment that nutrient runoff is a risk to the business.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The language emphasizes 'reduced environmental losses' and the need to 'minimize nutrient runoff and leaching, thereby protecting groundwater quality,' framing these as negative impacts or threats that require mitigation.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes product benefits and environmental protection without providing any explicit financial figures or a statement about the financial materiality of the risk.",
+              "timeframe": "Current",
+              "timeframe_justification": "The text describes the current functionality and benefits of Nova products, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The text describes how the company's products 'help minimize nutrient runoff'. This is a statement about product capabilities, not an acknowledgment that nutrient runoff is a risk to the business.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99909-005",
+            "quote": "Nova Complex Optima minimizes nitrate leaching and enhances crop productivity with its nitrification inhibitor (DMPP)′ a key component in this water-soluble fertilizer. By improving soil fertility, reducing greenhouse gas emissions, and preventing water pollution, it supports sustainable agricultural practices.",
+            "source": "ESG report 2024.pdf, Page 42, Nova Complex Optima: Protecting Groundwater, Enhancing Yield",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a product's function in 'preventing water pollution'. This is a marketing or product-feature statement, not a disclosure of a business risk.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The phrases 'minimizes nitrate leaching' and 'preventing water pollution' frame these environmental issues as negative impacts or threats that the product helps to mitigate.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure focuses on product features and environmental benefits without providing any specific financial figures or a statement regarding the financial materiality of the risk.",
+              "timeframe": "Current",
+              "timeframe_justification": "The text describes the current capabilities and benefits of the Nova Complex Optima product, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes a product's function in 'preventing water pollution'. This is a marketing or product-feature statement, not a disclosure of a business risk.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Implication that nutrient runoff is a concern through mitigation but not through disclosure",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99910",
+        "question_text": "Does the company disclose whether it thinks that disposal of chemical waste, such as gypstacks, from the production of phosphate fertiliser is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99910-001",
+            "quote": "One of ICL Rotem’s largest infrastructure projects is the construction of operational phosphogypsum ponds (No. 4 and 5) used to retain acidic phosphogypsum fluid. The phosphogypsum component settles at the bottom of these ponds, while the remaining water is circulated back for reuse in ICL Rotem's production processes. The new ponds were constructed using leading, high-standard technology based on the Florida standard. This technology offers significant advantages, including exceptional pond strength and stability, as well as unprecedented water reuse efficiency. Under the 2021 plan, Pond 5, which has been operational since 2018, is permitted for use until the end of its expected operational life (currently expected in 2026). The District Committee for Planning and Construction (the Committee) has approved the submission of a plan to reuse Pond 4 under certain conditions as a replacement for Pond 5 upon the end of its operational life. However, objections were filed and the Committee requested for additional information before proceeding with the approval of the plan. For further information, see D. RISK FACTORS in Note 18 to ICL`s Audited Financial Statements.",
+            "source": "ESG report 2024.pdf, Page 92, ICL Rotem | Israel",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet discusses the construction and operational life of phosphogypsum ponds, noting that 'objections were filed' regarding future plans and explicitly refers to 'D. RISK FACTORS in Note 18 to ICL`s Audited Financial Statements.' This clearly indicates that the management and disposal of phosphogypsum is a recognized business risk, particularly from a regulatory and operational continuity perspective, but the snippet itself does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The mention of 'objections were filed' and the explicit reference to 'RISK FACTORS' frames the management of phosphogypsum ponds as a source of potential negative consequences and challenges for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "While the snippet refers to 'RISK FACTORS' in the financial statements, it does not provide any specific monetary values or a direct statement about the financial materiality of the phosphogypsum disposal risk within the quoted text.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet describes current operational ponds, ongoing plans for their replacement, and past objections, indicating a present-day focus with implications for the near future."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99910-003",
+            "quote": "As part of an ecological restoration initiative in Xishan District, Kunming, Sinochem and YPH have committed to utilizing phosphogypsum to rehabilitate historical legacy mine pits at Shuangshao and Taoshu. In line with government requirements for phosphogypsum utilization and considering operational needs, phosphogypsum from the YPH gypsum pond and discharged material will undergo safe treatment before being used as filling material in the mine pits’ restoration. The combined capacity of the two pits is approximately 21 million cubic meters, accommodating around 32 million tons of phosphogypsum, with an annual output of 7 million tons from YPH and Sinochem. Materials for Shuangshao Mine Pit are recovered from YPH’s storage and transported by truck, while those for Taoshu Mine Pit are transported via pipeline. In 2024, approximately 4 million tonnes of phosphogypsum were utilized under this project. This project not only restores historical mining areas but also provides an effective solution for phosphogypsum disposal. By repurposing this industrial by-product, it reduces land use for long-term storage, mitigates risks of soil and water pollution, and improves the surrounding ecological environment. In doing so, the initiative strengthens regional ecosystem stability, supports biodiversity, and contributes to long-term environmental sustainability—while advancing Circular Economy principles through the responsible reuse of secondary materials.",
+            "source": "ESG report 2024.pdf, Page 103, Resource Management",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet describes a project utilizing 'phosphogypsum' for 'ecological restoration' and as an 'effective solution for phosphogypsum disposal.' It explicitly states that this 'mitigates risks of soil and water pollution.' By framing phosphogypsum disposal as an issue requiring an 'effective solution' to 'mitigate risks,' the company implicitly acknowledges that its disposal is a business risk.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The project is presented as an 'ecological restoration initiative' and an 'effective solution' that 'mitigates risks of soil and water pollution,' framing it as both an 'Opportunity' (for restoration and circular economy) and a response to 'Risk' (of pollution).",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions '21 million cubic meters' capacity and '32 million tons of phosphogypsum' and '4 million tonnes utilized in 2024,' which are quantitative operational metrics, but no specific financial costs or benefits are provided.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The project involves rehabilitating 'historical legacy mine pits' and 'in 2024, approximately 4 million tonnes... were utilized,' indicating a 'Backward-looking' problem being addressed in the 'Present day' and 'Forward-looking' for future utilization."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99910-004",
+            "quote": "Over the past three decades, ICL’s acid process for phosphoric acid production has resulted in the accumulation of phosphogypsum at our Rotem site, estimated at 80 million tonnes. Annually, approximately 1.9 million tons of dry gypsum and 1.5 million tonnes of wet-based gypsum are added to this growing pile. Recognizing the importance of sustainable waste management, ICL is diligently exploring technological solutions to utilize phosphogypsum, focusing on its potential applications in agriculture, infrastructure and construction. With an eye toward forthcoming regulations that may expand permissible uses of phosphogypsum, ICL is committed to optimizing the utilization of this valuable byproduct, contributing to both environmental stewardship and innovative resource management. As part of its proactive approach, ICL initiated a conference bringing together government representatives to discuss regulatory changes needed to promote the secondary use of phosphogypsum in various infrastructure and industrial applications in Israel. The proposed steps were based on similar regulations adopted in the EU.",
+            "source": "ESG report 2024.pdf, Page 153, Maximizing the Use of Byproducts",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet highlights the massive accumulation of 80 million tonnes of phosphogypsum and the ongoing annual additions, indicating a significant waste management challenge. It also mentions 'forthcoming regulations' and the need for 'regulatory changes' to promote secondary uses, clearly identifying regulatory and environmental risks associated with this waste, but without stating financial materiality in this snippet.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on the 'accumulation' of a large volume of waste and the challenges posed by 'forthcoming regulations' and the need for 'regulatory changes' frames this as a significant problem or threat that requires management and mitigation.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet quantifies the amount of phosphogypsum but does not provide explicit financial figures or a direct statement about the financial materiality of the disposal risk.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The text describes past accumulation ('Over the past three decades'), present efforts ('is diligently exploring'), and future regulatory developments ('forthcoming regulations'), indicating a multiple or unclear timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99911",
+        "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99911-001",
+            "quote": "In compliance with government requirements, YPH commissioned a third party to prepare the 'Haikou Phosphate Mine Geological Environment Protection and Land Reclamation Plan,’ which was completed and recorded in February 2023. As per the plan, YPH has reserved 102 million yuan (approximately $14.2 million) for land reclamation costs and 7.9 million yuan (approximately $1.1 million) for restoration and management funds for the Haikou phosphate mine.",
+            "source": "ESG report 2024.pdf, Page 104, Reclamation",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that YPH 'has reserved 102 million yuan (approximately $14.2 million) for land reclamation costs and 7.9 million yuan (approximately $1.1 million) for restoration and management funds.' This provides a definitive statement about the financial materiality of mining site restoration, directly linking it to a quantifiable financial impact on the company.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The reservation of funds for 'land reclamation costs' and 'restoration and management funds' indicates a financial obligation and potential liability associated with past and future mining activities, framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides explicit, quantifiable financial values for land reclamation and restoration funds, directly demonstrating financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The text describes current financial reserves ('has reserved') for ongoing and future reclamation and restoration activities, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Subsidiary of ICL",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99911-002",
+            "quote": "Reclamation holds significant importance to our mining operations at ICL. In our approach to reclamation, we consider relevant environmental aspects such as water, soil, habitats and vegetation for our site-specific reclamation processes. ICL has a legal obligation to reclaim land used for operations and return it to beneficial use. We collaborate with environmental authorities to ensure that land is appropriately rehabilitated post-mining, often using local and native plant varieties, which can contribute to enhancing biodiversity.",
+            "source": "ESG report 2024.pdf, Page 94, Reclamation and Remediation",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states, 'ICL has a legal obligation to reclaim land used for operations.' This directly identifies mining site restoration as a legal obligation, which inherently constitutes a business risk if not fulfilled, but the snippet does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The explicit mention of a 'legal obligation' frames reclamation as a compliance requirement and potential liability, indicating a risk if not met.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies a legal obligation but does not provide any explicit financial figures or a statement about the financial materiality of this obligation.",
+              "timeframe": "Current",
+              "timeframe_justification": "The text describes a current 'legal obligation' and ongoing collaboration, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99911-004",
+            "quote": "Over the past several decades, ICL Dead Sea has carried out various earthworks in open areas that are a part of the Company’s concession area to support its production facilities. These resulted in various environmental disruptions and hazards which in recent years ICL Dead Sea has resolved to address by restoration, in collaboration with the Ministry of Environmental Protection and the Israel Nature and Parks Authority. ICL is working to reduce its impact and restore disturbed areas.",
+            "source": "ESG report 2024.pdf, Page 88, Restoring Natural Resources",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet acknowledges that past activities resulted in 'environmental disruptions and hazards' that ICL 'resolved to address by restoration.' This indicates a recognized environmental issue and a commitment to address it, implying an underlying obligation or risk, but it does not explicitly frame it as a *risk* to the business or state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The text describes past negative impacts ('environmental disruptions and hazards') and current efforts to 'reduce its impact and restore disturbed areas,' presenting it as a responsibility and ongoing management rather than a direct risk or opportunity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses past impacts and current restoration efforts qualitatively, without providing any explicit monetary values or statements about financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The text refers to activities 'Over the past several decades' and actions 'in recent years' that the company 'has resolved to address,' indicating a multiple or unclear timeframe spanning past and present."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99911-005",
+            "quote": "ICL conducts its mining activities under concessions granted by the Spanish government. In 2015, ICL Iberia submitted a multi-year restoration program to the Catalonian government for its production sites in Suria and Sallent. These restoration efforts, scheduled until 2094 for Suria and 2070 for Sallent, address not only salt deposit restoration but also other environmental aspects and concerns such as wastewater drainage and sludge treatment.",
+            "source": "ESG report 2024.pdf, Page 97, Restoration of the Salt Deposits",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet describes a 'multi-year restoration program' with very long-term schedules (until 2094 and 2070), indicating a significant, long-term operational and financial commitment. This extended timeframe and the need to 'address environmental aspects and concerns' imply a substantial ongoing business risk and liability, but the snippet does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The description of a long-term, multi-year program to 'address environmental aspects and concerns' implies an ongoing challenge and potential liability, framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet details a long-term program but does not provide any explicit financial figures or a statement about the financial materiality of the restoration efforts.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The text describes a program initiated in 2015 with completion dates extending to 2094 and 2070, covering past, present, and future, thus indicating a multiple or unclear timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99911-006",
+            "quote": "Our operations span diverse ecosystems worldwide, including the unique landscape of the Dead Sea. Our extraction processes prioritize responsible practices to minimize their environmental impact. Guided by the principle of balancing protection and development, we aim to promote environmental conservation alongside our operational activities. This includes reclaiming depleted mine blocks and continuously enhancing environmental aspects across all our operations.",
+            "source": "ESG report 2024.pdf, Page 77, OUR APPROACH",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes reclamation as a 'responsible practice' and part of 'environmental conservation'. It does not frame this activity as a risk, threat, or obligation to the business. According to the definitions, acknowledging the topic without characterizing it as a business risk should be classified as UNCLEAR.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language focuses on 'responsible practices' and 'environmental conservation' as part of operational activities, presenting it as a standard business practice rather than a specific risk or opportunity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses operational practices and environmental impact qualitatively, without providing any explicit monetary values or statements about financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The text describes ongoing activities ('prioritize,' 'aim to promote,' 'includes reclaiming,' 'continuously enhancing'), indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes reclamation as a 'responsible practice' and part of 'environmental conservation'. It does not frame this activity as a risk, threat, or obligation to the business. According to the definitions, acknowledging the topic without characterizing it as a business risk should be classified as UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99911-007",
+            "quote": "engage in comprehensive reclamation and land rehabilitation initiatives, including restoring ecosystems and achieving ecological balance in areas impacted by our mining activities.",
+            "source": "ESG report 2024.pdf, Page 78, OUR GOALS",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states a company goal to engage in reclamation. This is a forward-looking, neutral statement of intent and does not characterize restoration as a current risk, liability, or obligation for the business. Per the definitions, this should be classified as UNCLEAR.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The statement presents reclamation and rehabilitation as a 'goal' and 'initiatives,' which is a neutral framing of a planned activity rather than a direct risk or opportunity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet outlines a goal without providing any explicit financial figures or a statement about the financial materiality of the restoration efforts.",
+              "timeframe": "Future",
+              "timeframe_justification": "The text describes future-oriented goals and initiatives ('engage in,' 'achieving'), indicating a forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet states a company goal to engage in reclamation. This is a forward-looking, neutral statement of intent and does not characterize restoration as a current risk, liability, or obligation for the business. Per the definitions, this should be classified as UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99912",
+        "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99912-002",
+            "quote": "Adherence to food regulations involves rigorous scrutiny, ensuring that substances meet positive lists of proven safe materials. ICL has responded to evolving regulations, such as the 2019 prohibition of aluminum-based additives in certain food categories. Consequently, we have reviewed product specifications, modifying indications for use to align with regulatory standards. Furthermore, ongoing studies are conducted to identify and mitigate risks associated with substances, demonstrating our commitment to regulatory compliance and proactive risk management. This includes discontinuation of certain products or restricting their use to specific applications. For example, DECA has been discontinued, and methyl bromide is produced on a limited scale, solely for container disinfection rather than as a soil treatment. As methyl bromide (used for soil fumigation) has been included in the list of controlled substances, ICL has significantly reduced its production (for soil fumigation applications) and has shut down one of its production facilities.",
+            "source": "ESG report 2024.pdf, Page 169, Chemical Safety Assessment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides concrete examples of regulatory actions, including the '2019 prohibition of aluminum-based additives,' 'discontinuation of certain products or restricting their use,' and the 'significantly reduced' production of methyl bromide due to its status as a 'controlled substance.' These examples directly demonstrate that products being banned or restricted is a recognized business risk, leading to changes in production and sales, but the snippet does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The description of 'prohibition,' 'discontinuation,' and 'significantly reduced production' due to regulatory changes clearly indicates negative business impacts and challenges, framing these as risks.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides examples of product changes due to regulations but does not include explicit financial figures for lost revenue, costs of discontinuation, or other financial impacts.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The text refers to a '2019 prohibition,' past discontinuation, and current 'limited scale' production, indicating a multiple or unclear timeframe spanning past and present events."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99912-003",
+            "quote": "ICL implements the European regulation for Registration, Evaluation, Authorization and Restriction of Chemicals (REACH) at all its operations and registers its chemicals as required by law. ... Several substances are under evaluation by the authorities (European Chemicals Agency (ECHA) and Member State regulators), some of which have been listed as Substances of Very High Concern.",
+            "source": "ESG report 2024.pdf, Page 167, Global Chemical Regulations and Sustainability Initiatives",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet indicates that ICL's products are subject to stringent regulations like REACH, and some substances are 'under evaluation' or 'listed as Substances of Very High Concern.' This regulatory scrutiny implies a risk of future restrictions or bans, which would impact the business's ability to produce or sell these products. While not explicitly stating 'banned,' the 'restriction' and 'evaluation' aspects clearly point to this risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The mention of 'Restriction of Chemicals' and substances 'under evaluation' or 'listed as Substances of Very High Concern' frames this as a potential threat to the business's operations and product portfolio, indicating a risk.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet describes regulatory processes that could lead to restrictions or bans, which would have financial implications for the business, but it does not provide any explicit monetary values or a definitive statement of financial materiality within the text.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The substances are 'under evaluation' and 'listed' now, implying a present-day regulatory status that could lead to future restrictions, thus covering both present and forward-looking aspects."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99912-004",
+            "quote": "ICL implements the European regulation for Registration, Evaluation, Authorization and Restriction of Chemicals (REACH) at all its operations and registers its chemicals as required by law. ICL has submitted registration applications for all the chemicals relevant for its businesses in the EU (production and sale). Several substances are under evaluation by the authorities (European Chemicals Agency (ECHA) and Member State regulators), some of which have been listed as Substances of Very High Concern. ... In addition to REACH and the various chemical- specific limitations, the European Commission has introduced the Chemicals Strategy for Sustainability (CSS). CSS was launched in October 2020 to provide a new long-term strategy for chemical-related policies, in line with the aims of the EU Green Deal. We are carefully monitoring developments related to CSS to prepare for upcoming regulatory requirements which may affect many of our products.",
+            "source": "ESG report 2024.pdf, Page 167, Global Chemical Regulations and Sustainability Initiatives",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly mentions 'Restriction of Chemicals (REACH)' and 'Substances of Very High Concern' under evaluation, and states that the 'Chemicals Strategy for Sustainability (CSS)' 'may affect many of our products.' This clearly identifies the risk of product restrictions or bans due to regulatory developments, but it does not state the financial materiality of this risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'Restriction of Chemicals,' 'Substances of Very High Concern,' and regulatory developments that 'may affect many of our products' frames these as potential threats or negative consequences for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses regulatory impacts on products qualitatively, without providing any explicit monetary values or statements about financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The text refers to 'upcoming regulatory requirements' and substances 'under evaluation' that 'may affect' future products, indicating a forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99913",
+        "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99913-001",
+            "quote": "ICL Rotem uses evaporation ponds to manage effluents as part of its operation. A task force established in 2022 for managing the effluents found alternative solutions for the acidic effluents, as well as for decreasing their quantities and allowing restoration of the landscape surrounding the ponds. By mid-2023, ICL Rotem successfully eliminated the discharge of acidic effluents into the onsite evaporation ponds. Solutions included integrating fluorosilicic acid (FSA) effluents into a solidification process using marl to allow for their treatment and utilizing landscape restoration efforts.",
+            "source": "ESG report 2024.pdf, Page 93, ICL Rotem | Israel",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet describes ICL Rotem's efforts to manage 'acidic effluents' and the 'restoration of the landscape surrounding the ponds,' indicating that these effluents from its manufacturing operations caused environmental issues requiring restoration. This identifies a business risk related to site contamination and restoration, but it does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The discussion of managing 'acidic effluents' and the need for 'restoration of the landscape' implies past or present environmental damage that requires corrective action, framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes operational efforts and environmental outcomes qualitatively, without providing any explicit monetary values or statements about financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The text describes a task force established in 2022, elimination of discharge by mid-2023, and ongoing restoration efforts, indicating a multiple or unclear timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99913-002",
+            "quote": "Currently, ICL Rotem is remediating its historical phosphogypsum ponds (No. 1-3) according to an approved engineering remediation plan based on the ‘Florida Standard’. The first phase of the restoration has been initiated by ICL following receipt of a building permit and reaching an agreement with the authorities on landscape restoration.",
+            "source": "ESG report 2024.pdf, Page 94, Reclamation and Remediation",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that ICL Rotem is 'remediating its historical phosphogypsum ponds' according to an 'approved engineering remediation plan' and has reached an 'agreement with the authorities.' This clearly identifies the restoration of contaminated manufacturing sites (phosphogypsum ponds are waste from manufacturing) as an ongoing business obligation and risk, driven by regulatory and environmental requirements. The need for an 'agreement with the authorities' implies a material impact.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The terms 'remediating its historical phosphogypsum ponds' and 'approved engineering remediation plan' indicate a past problem requiring current and future corrective action, framing this as a business challenge and risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes an ongoing remediation effort and an agreement with authorities, which implies significant costs, but it does not provide explicit monetary values or a definitive statement of financial materiality within the text.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The remediation is 'currently' ongoing for 'historical' ponds, with the 'first phase... initiated,' indicating a present-day activity addressing past contamination with future implications."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99913-003",
+            "quote": "As part of an ecological restoration initiative in Xishan District, Kunming, Sinochem and YPH have committed to utilizing phosphogypsum to rehabilitate historical legacy mine pits at Shuangshao and Taoshu. In line with government requirements for phosphogypsum utilization and considering operational needs, phosphogypsum from the YPH gypsum pond and discharged material will undergo safe treatment before being used as filling material in the mine pits’ restoration.",
+            "source": "ESG report 2024.pdf, Page 103, Using Phosphogypsum",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet describes YPH's commitment to 'rehabilitate historical legacy mine pits' using phosphogypsum from its 'gypsum pond' (a byproduct of manufacturing), 'in line with government requirements.' This clearly links the restoration of sites impacted by industrial waste to a business obligation and risk. The 'government requirements' imply a material impact if not addressed, even without specific financial figures.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The commitment to 'rehabilitate historical legacy mine pits' and the mention of 'government requirements' frame this as a necessary and challenging undertaking for the business, indicating a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a significant restoration initiative driven by government requirements, implying substantial costs, but it does not provide explicit monetary values or a definitive statement of financial materiality within the text.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The initiative aims to rehabilitate 'historical legacy mine pits' using current phosphogypsum, indicating a present-day activity addressing past issues with long-term environmental benefits."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99913-004",
+            "quote": "In 2018, an application for certification of a claim as a class action was filed against the Company claiming it allegedly caused continuous, severe and extreme environmental hazards through pollution of the “Judea group – Zafit formation\" groundwater aquifer and the Ein Bokek spring with industrial wastewater. In April 2022, the Be’er Sheva District Court dismissed the application due to the statute of limitations and property rights. In October 2023, Israel’s Supreme Court ruled that the application for certification is approved regarding a limited class constituting visitors to the Bokek stream. In accordance therewith, the application for certification limited to such group will be reviewed by the District Court. With the renewal of the proceedings in the District Court, the plaintiffs filed a request for interim relief regarding the restoration of the Bokek stream to which the Court ordered the State to respond. In September 2024, the parties reached a deliberative arrangement by which the parties will pursue an agreed mechanism for the improvement of the water flow in the reserve. In addition, it was determined that evidentiary hearings will be held from May to July 2025. For further information, see Note 18 to our Audited Financial Statements.",
+            "source": "ESG report 2024.pdf, Page 90, Ein Bokek Stream Restoration Project",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet describes a class action lawsuit alleging 'environmental hazards through pollution... with industrial wastewater' from ICL's industrial operations, and a request for 'restoration of the Bokek stream.' This clearly identifies contamination from manufacturing sites as a legal and environmental risk requiring restoration, but it does not state financial materiality in this snippet, only referring to 'Note 18 to our Audited Financial Statements.'",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on a 'class action,' 'environmental hazards through pollution,' and the demand for 'restoration' frames this as a significant legal and environmental threat with potential negative consequences for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "While the snippet mentions a class action and refers to financial statements, it does not provide specific monetary values for the alleged damages, restoration costs, or legal liabilities within the quoted text.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The text describes a lawsuit filed in 2018, court rulings in 2022/2023, and future hearings in 2025, indicating a multiple or unclear timeframe spanning past, present, and future events."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Even during litigation, the company refuses to acknowledge contamination as a financial risk",
+              "remove_from_analysis": "",
+              "highlight": "YES",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99913-006",
+            "quote": "ICL Rotem is implementing a master plan for wastewater treatment with the principal goal of reducing quantities of effluents. This involves converting some effluents into products, recycling wastewater, reducing water consumption, treating and neutralizing wastewater and restoring wastewater ponds. ... The neutralized effluents are used via a Circular Economy process as a raw material in the formulation used for the acidic pond restoration.",
+            "source": "ESG report 2024.pdf, Page 133, Wastewater & Effluent Treatment at ICL Rotem",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet details ICL Rotem's 'master plan for wastewater treatment' which includes 'restoring wastewater ponds' and using neutralized effluents for 'acidic pond restoration.' This indicates that contamination of these ponds from manufacturing effluents is a recognized environmental issue requiring restoration, which is a business risk, but it does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'wastewater treatment,' 'reducing quantities of effluents,' and 'restoring wastewater ponds' implies past or present contamination issues that require corrective action, framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes an operational plan and its objectives qualitatively, without providing any explicit monetary values or statements about financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The text describes an ongoing 'master plan' and current use of effluents for restoration, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99915",
+        "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99915-001",
+            "quote": "ICL implements the European regulation for Registration, Evaluation, Authorization and Restriction of Chemicals (REACH) at all its operations and registers its chemicals as required by law. ... ICL has submitted registration applications for all the chemicals relevant for its businesses in the EU (production and sale). Several substances are under evaluation by the authorities (European Chemicals Agency (ECHA) and Member State regulators), some of which have been listed as Substances of Very High Concern.",
+            "source": "ESG report 2024.pdf, Page 167, Global Chemical Regulations and Sustainability Initiatives",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR because the snippet only describes compliance activities in a factual manner. It does not characterize these activities or any associated costs as a risk to the business, which is a requirement for a PARTIAL classification.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The description of mandatory 'registration applications' and substances 'under evaluation' or 'listed as Substances of Very High Concern' frames this as a regulatory challenge and an ongoing obligation for the business, indicating a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet details extensive regulatory requirements for product registration and evaluation, which are inherently costly, but it does not provide explicit monetary values or a definitive statement of financial materiality within the text.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The company 'implements' regulations and 'has submitted' applications, with substances 'under evaluation,' indicating ongoing present-day compliance activities with future implications for product status."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR because the snippet only describes compliance activities in a factual manner. It does not characterize these activities or any associated costs as a risk to the business, which is a requirement for a PARTIAL classification.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99915-002",
+            "quote": "As part of product licensing requirements in various countries, data must be submitted regarding the properties of registered substances and their effect on human health and the environment. Most of this data is collected through studies, including animal testing, and conclusions are then extrapolated to humans. Such studies and tests are conducted only when no alternative in vitro testing methods are available, and in certified laboratories which are subject to certain industry and regulatory accepted guidelines (as the OECD guidelines), ensuring the welfare of the animals as per any applicable legal requirements.",
+            "source": "ESG report 2024.pdf, Page 168, Testing of Chemicals",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The text describes testing requirements factually but does not frame them as a risk to the business. A PARTIAL classification requires a clear identification of risk.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The description of mandatory 'product licensing requirements' and the need for extensive 'studies, including animal testing,' frames this as a significant and costly obligation for the business, indicating a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet details costly 'studies' and 'testing' required for product licensing, indicating a financial impact, but it does not provide explicit monetary values or a definitive statement of financial materiality within the text.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The 'product licensing requirements' and the ongoing nature of 'studies and tests' indicate a present-day and forward-looking timeframe for these compliance activities."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be UNCLEAR. The text describes testing requirements factually but does not frame them as a risk to the business. A PARTIAL classification requires a clear identification of risk.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99916",
+        "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99916-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "NO_DISCLOSURE",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": true,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": ""
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99917",
+        "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99917-001",
+            "quote": "In 2018, an application for certification of a claim as a class action was filed against the Company claiming it allegedly caused continuous, severe and extreme environmental hazards through pollution of the “Judea group – Zafit formation\" groundwater aquifer and the Ein Bokek spring with industrial wastewater. In April 2022, the Be’er Sheva District Court dismissed the application due to the statute of limitations and property rights. In October 2023, Israel’s Supreme Court ruled that the application for certification is approved regarding a limited class constituting visitors to the Bokek stream. In accordance therewith, the application for certification limited to such group will be reviewed by the District Court. With the renewal of the proceedings in the District Court, the plaintiffs filed a request for interim relief regarding the restoration of the Bokek stream to which the Court ordered the State to respond. In September 2024, the parties reached a deliberative arrangement by which the parties will pursue an agreed mechanism for the improvement of the water flow in the reserve. In addition, it was determined that evidentiary hearings will be held from May to July 2025. For further information, see Note 18 to our Audited Financial Statements.",
+            "source": "ESG report 2024.pdf, Page 90, Resource Management",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly details an ongoing class action lawsuit against the company for alleged environmental hazards caused by its industrial wastewater. The mention of court rulings, ongoing proceedings, and future hearings clearly identifies this as a significant legal and financial risk to the business. The reference to 'Note 18 to our Audited Financial Statements' indicates that the financial implications are considered material.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes a \"claim,\" \"allegedly caused,\" \"environmental hazards,\" and \"class action,\" clearly framing it as a negative event and threat.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet describes a legal claim with potential financial implications, including a \"deliberative arrangement\" and future hearings, but does not provide a specific quantified financial outcome or provision for this particular case within the snippet itself. However, the reference to 'Note 18 to our Audited Financial Statements' implies financial materiality is addressed elsewhere.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The lawsuit was filed in 2018, had rulings in 2022 and 2023, and has ongoing proceedings and future hearings in 2024 and 2025, spanning past, present, and future."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99917-002",
+            "quote": "Mining activity at Zin was discontinued in mid-2020 although restoration of the site continues. Following the discontinuation of the Zin mine, the remaining inventory of Phosphate rock was transported to ICL Rotem for further processing. In 2020, an application for a class action was filed against the Company according to which, discharge, leakage, and seepage of wastewater from ICL Rotem's Zin site allegedly resulted in various environmental hazards and damage to the Zin stream. In November 2022, the parties signed a procedural arrangement to resort to a mediation process in an attempt to settle the dispute outside of court. As part of the procedural arrangement, the Company transferred approximately 3 million NIS to Israel's National Park Authority (NPA) to fund NPA's rescue operations of palm trees at Neot Zin and Akrabim. For further information, see Note 18 to ICL`s Audited Financial Statements.",
+            "source": "ESG report 2024.pdf, Page 93, ICL Rotem | Israel",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly discloses a 'class action' lawsuit filed against the company for 'environmental hazards and damage' from wastewater. The company entered a 'procedural arrangement' and 'transferred approximately 3 million NIS' as part of efforts to settle the dispute. This direct mention of a lawsuit and a specific financial payment clearly identifies this as a financially material business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The explicit mention of a 'class action' lawsuit and allegations of 'environmental hazards and damage' frames this as a direct threat and negative consequence for the business, indicating a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides an explicit, quantifiable financial value of 'approximately 3 million NIS' transferred as part of a procedural arrangement related to the lawsuit, directly linking the risk to a monetary impact.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The lawsuit was filed in '2020,' the arrangement was signed in 'November 2022,' and the transfer occurred, indicating past events with present-day financial implications."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99918",
+        "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99918-001",
+            "quote": "Our energy efficiency plan significantly decreased ICL`s energy expenses by approximately $230 million between 2005 and 2024, excluding savings from our transition to natural gas. Our ACE program proved instrumental in delivering substantial operational and maintenance savings, while also facilitating quality enhancements beyond its core environmental objectives of reducing fuel and electricity consumption and greenhouse gas emissions. Our energy initiatives encompass not only cost-saving measures, but also direct actions aimed at reducing our energy consumption.",
+            "source": "ESG report 2024.pdf, Page 126, Energy Efficiency Initiatives and Programs",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that ICL's 'energy efficiency plan significantly decreased ICL`s energy expenses by approximately $230 million.' The focus on 'cost-saving measures' and 'reducing fuel and electricity consumption' directly implies that high energy input costs are a significant business concern or risk that the company actively manages to mitigate financial impact. The quantification of savings demonstrates the materiality of these costs.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The emphasis on 'significantly decreased energy expenses' and 'cost-saving measures' frames high energy costs as a challenge or threat to profitability that the business actively works to mitigate, indicating a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides an explicit, quantifiable financial value of 'approximately $230 million' in decreased energy expenses, directly linking energy costs to a monetary impact on the business.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The savings occurred 'between 2005 and 2024,' indicating a backward-looking timeframe for the achieved reductions in energy expenses."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99918-002",
+            "quote": "In 2024, we established and achieved a saving target of $12 million through efficiency programs (ACE program). Looking ahead to 2025, we set a goal to achieve an additional $10 million of savings through our efficiency programs and our reduction of 15,000 tonnes of CO2.",
+            "source": "ESG report 2024.pdf, Page 120, OUR GOALS",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet details specific financial 'saving target[s]' of '$12 million' achieved in 2024 and an 'additional $10 million' targeted for 2025 through 'efficiency programs.' These programs are aimed at reducing energy consumption and CO2, directly implying that high energy input costs are a material business risk that the company actively seeks to reduce through quantifiable financial goals.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The establishment and achievement of 'saving target[s]' through 'efficiency programs' frames high energy costs as a financial challenge that the business is actively addressing to improve performance, indicating a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides explicit, quantifiable financial values for 'saving target[s]' of '$12 million' and '$10 million,' directly linking energy efficiency to monetary impacts.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The targets were 'achieved' in '2024' and a 'goal' is set for '2025,' indicating both present-day achievements and forward-looking objectives."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99918-003",
+            "quote": "In Israel, a new carbon tax on fossil fuels, including natural gas, has been imposed which will come into effect in 2025. It is expected to increase the emissions covered under the emissions-limiting regulations.",
+            "source": "ESG report 2024.pdf, Page 116, Climate Change & GHG Emissions",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet acknowledges a topic that could increase energy costs (a carbon tax) but does not characterize it as a business risk or state its financial materiality. Therefore, it meets the definition of UNCLEAR, not FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The phrase \"carbon tax... is expected to increase\" costs clearly frames this as a negative financial impact or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet states that costs \"will come into effect\" and \"is expected to increase\" but does not provide a specific monetary value for the expected increase, thus it is a partial financial disclosure.",
+              "timeframe": "Future",
+              "timeframe_justification": "The tax \"will come into effect in 2025\" and \"is expected to increase\" costs in the future, making it a forward-looking disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet acknowledges a topic that could increase energy costs (a carbon tax) but does not characterize it as a business risk or state its financial materiality. Therefore, it meets the definition of UNCLEAR, not FULL_DISCLOSURE.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      }
+    ],
+    "summary_statistics": {
+      "total_questions_analyzed": 14,
+      "total_disclosure_snippets": 48,
+      "classification_distribution": {
+        "FULL_DISCLOSURE": 4,
+        "PARTIAL": 10,
+        "UNCLEAR": 31,
+        "NO_DISCLOSURE": 3
+      },
+      "categories_covered": [
+        "Environmental Risk",
+        "Human Health Risk",
+        "Regulatory/Financial Risk",
+        "Market/Business Risk"
+      ]
+    },
+    "metadata": {
+      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+    }
+  }
+}

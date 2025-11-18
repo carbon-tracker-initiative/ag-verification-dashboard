@@ -1,0 +1,1180 @@
+{
+  "company": "BASF",
+  "year": 2024,
+  "version": "team-reviewed",
+  "verified": {
+    "company_name": "BASF",
+    "fiscal_year": 2024,
+    "version": "team-reviewed",
+    "model_used": "team-reviewed",
+    "analysis_date": "2025-11-17T18:34:19.473Z",
+    "schema_version": "team-reviewed-v1",
+    "analysis_results": [
+      {
+        "question_id": "99903",
+        "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+        "category": "Human Health Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99903-003",
+            "quote": "Substances of concern or of very high concern - Negative, potential - Long-term - Downstream value chain - Impact on human health and the environment of substances of (very high) concern - Due to the sale of products containing substances of concern or of very high concern, irresponsible and improper handling of these products in the downstream value chain may result in water or soil pollution or to an adverse impact on the environment or human health.",
+            "source": "BASF ESG Report 2024.pdf, Page 171, Double Materiality Assessment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies a 'potential' 'adverse impact on the environment or human health' from products containing 'substances of concern or of very high concern' in the downstream value chain. It clearly links products to potential human health problems as a negative impact, but does not provide any statement on financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'Negative, potential' and 'adverse impact' clearly frames this as a potential harm or threat to human health, which is a business risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes potential impacts qualitatively ('adverse impact on... human health') without providing any explicit financial amounts or stating whether the risk is financially material.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet explicitly states 'Long-term' as the time horizon for this potential impact."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99903-004",
+            "quote": "Other social and economic rights - Negative, potential - Short-, medium-, long-term - BASF’s own operations, upstream and downstream value chain - Potential adverse effects on health associated with the production and use of chemicals - The production and use of chemicals in our own operations and in our value chain could potentially impair the health of people and communities.",
+            "source": "BASF ESG Report 2024.pdf, Page 175, Double Materiality Assessment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies 'Potential adverse effects on health associated with the production and use of chemicals' in both own operations and the value chain as a negative impact. It clearly links chemical products and processes to potential human health problems, but does not provide any statement on financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'Potential adverse effects on health' and 'could potentially impair the health' clearly presents this as a source of harm or negative consequences, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes potential health impacts qualitatively without providing any explicit financial amounts or stating whether the risk is financially material.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet explicitly states 'Short-, medium-, long-term' as the time horizon, which falls under 'Multiple or Unclear'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99903-005",
+            "quote": "Initially, we review all products to identify any current or possible future negative impacts on sustainability topics. We consider minimum standards such as the BASF Code of Conduct, hazards and chemical exposure over the entire life cycle, expected regulatory trends and reputational risks for BASF. If our portfolio assessment identifies products with sustainability concerns, we classify them either as Monitored, or in case of significant concerns, as Challenged.",
+            "source": "BASF ESG Report 2024.pdf, Page 161, Sustainable steering of our product portfolio",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet details the TripleS method, which explicitly considers 'hazards and chemical exposure over the entire life cycle' when reviewing products for 'negative impacts on sustainability topics.' Products with 'sustainability concerns' are classified as 'Monitored' or 'Challenged,' indicating that potential human health problems from products are identified and managed as business concerns.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The process of identifying 'negative impacts,' 'hazards,' and 'sustainability concerns' for products clearly frames these issues as potential threats or problems that need to be managed, aligning with a risk perspective.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes a process for identifying and classifying product-related concerns but does not provide any explicit financial figures or statements about financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The process identifies 'current or possible future negative impacts' and considers 'expected regulatory trends,' indicating a focus on both present-day and forward-looking risks."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "They are describing their actions. Doesn't mention a risk to the business",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99903-006",
+            "quote": "In the case of Challenged products, we develop action plans. These include research projects and reformulations to optimize products or replace them with alternatives. We are generally phasing out all Challenged products within five years of their initial classification. BASF has implemented global processes to ensure that products are only sold in markets where they have been approved. If a product is affected by a marketing ban or loses its approval in a particular market, the product is immediately reviewed and withdrawn from the market in accordance with local legal requirements. In general, products are phased out based on our voluntary commitments before they are impacted by bans. No products of significance for BASF were impacted by bans in the 2024 business year.",
+            "source": "BASF ESG Report 2024.pdf, Page 162, Sustainable steering of our product portfolio",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet describes concrete 'action plans' for 'Challenged products,' which are identified due to 'significant concerns' (including human health hazards as per the TripleS method). The actions, such as 'research projects and reformulations to optimize products or replace them with alternatives' and 'phasing out' products, demonstrate that the company views these health-related concerns as business risks requiring active management and mitigation, thus acknowledging them as risks to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The development of 'action plans' to 'optimize products or replace them' and 'phasing out' 'Challenged products' clearly indicates a response to threats or negative consequences, framing this as a risk management activity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure outlines actions and processes for managing product risks but does not provide specific financial figures or explicitly state the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The actions described, such as 'phasing out... within five years' and 'global processes to ensure products are only sold in markets where they have been approved,' indicate both present-day management and forward-looking strategies."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "I would argue this as a FULL disclosure even though the statement doesn’t explicitly mention human health issues. \r\n\r\nInteresting for the report as it classifies \"Challenged Products\" which is an interesting concept, and they describe why they remove these products from market after an event has happened.",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99903-007",
+            "quote": "BASF’s product portfolio includes substances of concern (SC) and substances of very high concern (SVHC). These are substances that may have adverse effects on human health or the environment. We are committed to continuously reducing the risks associated with these substances and to replacing them with more sustainable alternatives where possible. We manage these substances in accordance with our Responsible Care Management System and our global standards for product safety. We also apply our TripleS method (Sustainable Solution Steering) to assess the sustainability performance of our product portfolio and to identify products with sustainability concerns (see page 161). In 2024, products containing SVHCs that are used in the end consumer market accounted for 1.3% of BASF’s sales (2023: 1.3%). We aim to reduce this share to less than 1% by 2030. We also aim to reduce the total volume of SVHCs in our product portfolio by 20% by 2030 compared with 2022 (2022: 1.2 million metric tons, 2024: 1.1 million metric tons). We are on track to achieve this target.",
+            "source": "BASF ESG Report 2024.pdf, Page 218, E2 Pollution Prevention, E2-5 Substances of concern and substances of very high concern",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that 'substances of concern (SC) and substances of very high concern (SVHC)' 'may have adverse effects on human health' and that BASF is 'committed to continuously reducing the risks associated with these substances.' It further provides quantitative targets to reduce the share of sales from products containing SVHCs and the total volume of SVHCs in its portfolio by 2030. This clear identification of health impacts as risks, coupled with specific, measurable targets and management systems, constitutes a partial disclosure of financial significance through the commitment to reduce sales and volume of these products, which implies a business impact.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'adverse effects on human health,' 'reducing the risks,' and setting targets for reduction clearly frames this as a threat or negative consequence that the company is actively managing, indicating a risk.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure provides quantitative metrics related to sales percentage and total volume of SVHCs, and sets targets for their reduction. While not explicit monetary values, these are quantifiable business metrics directly linked to the risk, indicating a partial financial type.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The commitment to 'continuously reducing the risks' and setting targets for 'by 2030' indicates a forward-looking timeframe, while current sales percentages and volumes are present day."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "I'm tempted to put this as a full disclosure as it mentions targets for reducing substance of very high concern even though it doesn't mention financial materiality explictly, but it does say they account for 1.3% of sales\r\n\r\nInteresting information to include in the report. Do other companies categorise their products in this way? Is it misleading in any way?",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99903-008",
+            "quote": "Aqueous film-forming foam (AFFF) – class settlement with drinking water suppliers in the United States",
+            "source": "BASF ESG Report 2024.pdf, Page 132, Corporate Governance",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet acknowledges a 'class settlement' related to AFFF, which implies human health problems (specifically drinking water contamination) from a product. While it doesn't provide financial figures, it clearly identifies the issue as a negative event that was handled by the Board and Audit Committee, indicating it's a recognized risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The mention of a 'class settlement' implies a negative outcome or liability for the company, framing the issue as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions a 'class settlement' but does not provide any explicit financial amounts or state the financial materiality of this settlement.",
+              "timeframe": "Current",
+              "timeframe_justification": "The context of this snippet within the 'List of significant impacts, risks and opportunities with which the management, control and supervisory bodies, or their responsible committees, dealt with during the reporting period' indicates it was an active or recently addressed issue during the reporting period."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Can't find the original document",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          }
+        ]
+      },
+      {
+        "question_id": "99904",
+        "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99904-001",
+            "quote": "Rising energy costs due to climate-related regulations - For BASF as an energy-intensive company, risks arise particularly from regulatory changes such as in carbon pricing on emissions trading systems, in taxes and in energy legislation.",
+            "source": "BASF ESG Report 2024.pdf, Page 176, Double Materiality Assessment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that 'risks arise particularly from regulatory changes such as in carbon pricing on emissions trading systems, in taxes and in energy legislation' for BASF, an 'energy-intensive company'. This directly addresses carbon costs from direct operations as a business risk. However, it does not provide a definitive statement about the financial materiality of these costs.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'risks arise particularly from regulatory changes' and 'rising energy costs' clearly frames this as a threat or negative consequence for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'carbon pricing', 'emissions trading systems', 'taxes', and 'energy legislation' as sources of costs but does not provide specific monetary values or explicitly state the financial materiality of these costs.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The table's general timeframe for this impact is 'Short-, medium-, long-term', which falls under 'Multiple or Unclear'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99904-002",
+            "quote": "As BASF is an energy-intensive company, climate-related risks arise in a physical sense and from regulatory changes, such as in CO2 prices through emissions trading systems, taxes or energy legislation. In addition, BASF’s emissions footprint and intensity could lead to a negative perception and reduced appeal among external stakeholders such as customers, investors and skilled workers. We counter these risks with our carbon management measures and by transparently disclosing our positions on climate protection and progress in the implementation of our climate strategy, in publicly accessible sources such as this annual report or on the BASF website, and in direct dialog with political decision-makers and external stakeholders (for more information, see page 94).",
+            "source": "BASF ESG Report 2024.pdf, Page 101, Opportunities and Risks, Climate",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that 'climate-related risks' for BASF, an 'energy-intensive company,' arise from 'CO2 prices through emissions trading systems, taxes or energy legislation.' This directly identifies carbon costs from its direct operations as a business risk. It also mentions 'carbon management measures' to counter these risks, indicating active management.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'climate-related risks arise... from regulatory changes, such as in CO2 prices' clearly presents carbon costs as a threat or negative consequence for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'CO2 prices' and 'taxes' as financial mechanisms but does not provide specific monetary values or explicitly state the financial materiality of these risks.",
+              "timeframe": "Future",
+              "timeframe_justification": "The discussion of 'climate-related risks' and 'regulatory changes' implies ongoing and future impacts, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99904-004",
+            "quote": "We also consider the financial implications of carbon pricing and emissions trading systems in our investment decisions and business planning. We aim to pass on increased carbon costs to our customers where possible, but we also recognize the risk of losing competitiveness if we are unable to do so. We regularly review our transition plan and adjust it as necessary to reflect new technological developments, market conditions and regulatory changes.",
+            "source": "BASF ESG Report 2024.pdf, Page 185, E1 Climate Change, E1-1 Transition plan for climate change mitigation",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet reiterates BASF's consideration of the 'financial implications of carbon pricing and emissions trading systems' in its planning and the 'risk of losing competitiveness' if these 'increased carbon costs' cannot be passed to customers. This confirms that carbon costs, both from direct operations and indirectly from product use by customers, are recognized as a business risk with financial implications.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The explicit mention of 'financial implications' and the 'risk of losing competitiveness' clearly frames carbon costs as a threat to the business's financial viability and market standing.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure references 'financial implications' and 'increased carbon costs' but does not provide specific monetary values, indicating a partial financial type.",
+              "timeframe": "Future",
+              "timeframe_justification": "The statement refers to 'investment decisions and business planning' and 'regularly review our transition plan,' which are inherently forward-looking activities, addressing future impacts."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Keep this entry and remove row 54.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
+      },
+      {
+        "question_id": "99906",
+        "question_text": "Does the company disclose whether it thinks that factory workplace hazards including chemical exposure during production of pesticides is a risk to the business?",
+        "category": "Human Health Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99906-001",
+            "quote": "Occupational health and safety - Negative, potential - Short-term - BASF’s own operations - Possible health and safety risk due to handling hazardous chemicals - Our employees are exposed to a potential health and safety risk because they work in laboratories and production plants and handle chemicals, including hazardous substances.",
+            "source": "BASF ESG Report 2024.pdf, Page 174, Double Materiality Assessment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies a 'Possible health and safety risk' and 'potential health and safety risk' for employees due to 'handling hazardous chemicals' in 'production plants'. This directly addresses factory workplace hazards and chemical exposure as a business risk. However, it does not provide a definitive statement about the financial materiality of this risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrases 'Possible health and safety risk' and 'potential health and safety risk' clearly frame this as a threat or negative consequence for the business and its employees.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes potential health and safety risks qualitatively without providing any explicit financial amounts or stating whether the risk is financially material.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet explicitly states 'Short-term' as the time horizon for this potential impact, which aligns with 'Present day'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Can we expect much more disclosure than this on workplace hazards?",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-002",
+            "quote": "Occupational health and safety - Negative, potential - Short-term - BASF’s own operations - Risk to health and safety if rules are not followed or are ineffective - There is a potential risk to our employees’ health and safety if instructions on occupational safety and health protection and rules in our production processes are not followed.",
+            "source": "BASF ESG Report 2024.pdf, Page 174, Double Materiality Assessment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies a 'potential risk to our employees’ health and safety' if safety rules are not followed in 'production processes'. This directly addresses factory workplace hazards as a business risk. However, it does not provide a definitive statement about the financial materiality of this risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'potential risk to our employees’ health and safety' clearly frames this as a threat or negative consequence for the business and its employees.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes potential health and safety risks qualitatively without providing any explicit financial amounts or stating whether the risk is financially material.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet explicitly states 'Short-term' as the time horizon for this potential impact, which aligns with 'Present day'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-003",
+            "quote": "In production, we want to further improve safety and focus on reducing high-severity work-related accidents and process incidents. By 2030, we aim to achieve a rate of no more than 0.10 High Severity Process Safety Incidents (hsPSI) per 200,000 working hours. The global rate of hsPSI in 2024 was 0.03 (2023: 0.05 hsPSI). For the period up to 2030, we are also committed to a maximum rate of 0.05 High Severity Work Process Related Injuries (HSI) per 200,000 working hours. In the 2024 business year, this figure stood at 0.02 HSI (2023: 0.03 HSI).",
+            "source": "BASF ESG Report 2024.pdf, Page 32, Targets and Target Achievement",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies 'high-severity work-related accidents and process incidents' as issues the company aims to reduce, implying they are recognized hazards and risks. It provides quantitative targets for reduction and reports current rates, but does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'reducing high-severity work-related accidents and process incidents' and setting targets for these metrics clearly frames these as negative outcomes or threats, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides quantitative metrics (rates of incidents and injuries) but does not include any explicit monetary values or state the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet includes both present-day data (2024 rates) and forward-looking targets (by 2030), making the timeframe 'Multiple or Unclear'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-004",
+            "quote": "BASF’s Responsible Care Management System consists of several policies that regulate health, safety and environmental protection in accordance with the Responsible Care® Global Charter.",
+            "source": "BASF ESG Report 2024.pdf, Page 152, General disclosures on key policies",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet describes the 'Responsible Care Management System' which 'regulate[s] health, safety and environmental protection' in 'Own production.' This indicates a systemic approach to managing factory workplace hazards and chemical exposure, acknowledging these as areas requiring active management and thus as business risks.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The existence of a 'Management System' to 'regulate health, safety and environmental protection' implies the need to control potential negative outcomes, framing these as risks.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes a management system but does not provide any specific financial figures or explicitly state the financial materiality of the risks it addresses.",
+              "timeframe": "Current",
+              "timeframe_justification": "The 'Responsible Care Management System' is an ongoing system, indicating a present-day and continuous approach to risk management."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Doesn't mention a risk to the business",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          }
+        ]
+      },
+      {
+        "question_id": "99907",
+        "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99907-001",
+            "quote": "Due to the sale of products containing substances of concern or of very high concern, irresponsible and improper handling of these products in the downstream value chain may result in water or soil pollution or to an adverse impact on the environment or human health.",
+            "source": "BASF ESG Report 2024.pdf, Page 171, E2 Pollution Prevention",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. The snippet uses risk language ('may result in') to identify water pollution as a potential negative outcome, which qualifies as a business risk. However, it does not state the financial materiality of this risk, which is a requirement for the 'FULL_DISCLOSURE' classification.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'may result in water or soil pollution or to an adverse impact' clearly presents this as a potential negative consequence or threat, fitting the 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes potential environmental and health impacts qualitatively without providing any specific financial figures or asserting financial materiality, classifying it as 'Non-Financial'.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The use of 'may result' and the mention of 'long-term' impacts indicate a forward-looking perspective, but also implies that the risk exists in the present due to current product sales, making the timeframe 'Multiple or Unclear'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. The snippet uses risk language ('may result in') to identify water pollution as a potential negative outcome, which qualifies as a business risk. However, it does not state the financial materiality of this risk, which is a requirement for the 'FULL_DISCLOSURE' classification.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Passing the liability on to its customers",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99907-002",
+            "quote": "We aim to minimize emissions to water from our production sites and from the use of our products.",
+            "source": "BASF ESG Report 2024.pdf, Page 211, Section: E2-2 Actions and resources related to pollution",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet acknowledges 'emissions to water from... the use of our products' and states an aim to 'minimize' them. This implies that these emissions are recognized as a negative aspect or a business concern that requires management, thus identifying it as a risk. However, it stops short of discussing financial significance or materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'aim to minimize emissions' clearly indicates that the company views these emissions as a negative factor or threat that needs to be reduced, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses an aim to reduce emissions but does not provide any explicit financial figures or make a statement about the financial materiality of this risk.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement describes an ongoing objective and action ('We aim to minimize'), indicating a present-day and continuous effort."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99907-004",
+            "quote": "Emissions to water from the use of our products by customers are mainly caused by the application of crop protection products in agriculture.",
+            "source": "BASF ESG Report 2024.pdf, Page 216, Section: E2-4 Pollution of air, water and soil",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides a factual statement about the source of emissions to water, specifically linking it to the application of crop protection products in agriculture. However, it does not explicitly characterize this as a 'risk to the business' or discuss its financial implications, leaving the direct business impact unclear.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language used is descriptive and factual, stating a cause-and-effect relationship without explicitly framing it as a positive or negative consequence for BASF's business. While the broader context is 'Pollution Prevention', this specific sentence is neutral in its framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a source of environmental emissions but does not provide any quantifiable financial values, nor does it make a statement about financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement uses present tense ('are mainly caused by'), indicating an ongoing and currently relevant phenomenon."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          }
+        ]
+      },
+      {
+        "question_id": "99912",
+        "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99912-002",
+            "quote": "If a product is affected by a marketing ban or loses its approval in a particular market, the product is immediately reviewed and withdrawn from the market in accordance with local legal requirements. In general, products are phased out based on our voluntary commitments before they are impacted by bans. No products of significance for BASF were impacted by bans in the 2024 business year.",
+            "source": "BASF ESG Report 2024.pdf, Page 161, Sustainable steering of our product portfolio",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet directly addresses the scenario of a 'marketing ban' or a product losing 'its approval', explicitly stating the company's response to such events. This confirms that the company considers product bans and loss of approval as a risk, even noting that no significant products were impacted in 2024, which is a statement about the risk's realization.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The text describes the company's response to 'marketing ban' or 'loses its approval', which are negative events, thus framing it as a 'Risk'.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure discusses the impact of bans and withdrawals without providing specific financial figures, although it implies potential financial consequences through product withdrawal. The statement 'No products of significance for BASF were impacted by bans in the 2024 business year' is a non-financial statement about the absence of impact, thus it is 'Non-Financial'.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet discusses both the company's general processes for handling future bans ('If a product is affected...') and a specific backward-looking statement ('No products... in the 2024 business year'), making the timeframe 'Multiple or Unclear'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "This is captured in another question too",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99912-003",
+            "quote": "Regulations with respect to substances of (very high) concern may have a negative impact on the market, for procurement, BASF’s own production or sales. Regulatory changes on substances of concern or of very high concern, such as their restriction, may limit the availability of relevant raw materials and negatively impact market behavior and customer acceptance.",
+            "source": "BASF ESG Report 2024.pdf, Page 176, E2 Pollution Prevention",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies a risk with a 'negative impact', but it lacks an explicit statement of financial materiality (e.g., 'significant', 'material'). This meets the definition of PARTIAL_DISCLOSURE (risk identified, materiality not stated), not FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrases 'may have a negative impact' and 'negatively impact market behavior' clearly present potential adverse effects and challenges, aligning with the 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes potential market and operational impacts qualitatively without providing specific monetary values, thus it is 'Non-Financial'.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The use of 'may have' and 'may limit' indicates potential future impacts, but the regulatory changes are an ongoing concern, making the timeframe 'Multiple or Unclear'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet identifies a risk with a 'negative impact', but it lacks an explicit statement of financial materiality (e.g., 'significant', 'material'). This meets the definition of PARTIAL_DISCLOSURE (risk identified, materiality not stated), not FULL_DISCLOSURE.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
+      },
+      {
+        "question_id": "99913",
+        "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99913-001",
+            "quote": "The increase of €199 million in other provisions was mainly due to increased provisions for restoration obligations and for contract liabilities, particularly in connection with the planned closure of the glufosinate-ammonium production plants in Germany.",
+            "source": "BASF ESG Report 2024.pdf, Page 54, Other provisions",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states an 'increase of €199 million in other provisions' specifically for 'restoration obligations' linked to the 'planned closure of the glufosinate-ammonium production plants in Germany'. This directly identifies the financial impact of restoration at manufacturing sites, confirming it as a financially material risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The mention of 'increased provisions' and 'restoration obligations' clearly frames this as a financial burden and a liability, indicating a 'Risk' to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides an explicit monetary value of '€199 million' for provisions related to restoration obligations, directly quantifying a financial impact, thus classifying it as 'Financial'.",
+              "timeframe": "Current",
+              "timeframe_justification": "The 'increase' in provisions is a present-day financial event, even though the 'restoration obligations' are for a 'planned closure', indicating a current financial impact for a future activity. This makes the timeframe 'Present day'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "The cost of restoration obligations (AROs)",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
+      },
+      {
+        "question_id": "99914",
+        "question_text": "Does the company disclose whether it thinks that loss of pollinators and beneficial insects, such as bees, is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99914-001",
+            "quote": "The loss of biodiversity may be facilitated by the use of crop protection products",
+            "source": "BASF ESG Report 2024.pdf, Page 173, Table \"Results of the double materiality assessment for the 2024 business year: Material impacts\", E4 Biodiversity and Ecosystems, Population size of species, global extinction risk of species.",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The source explicitly states this is a 'Material impact' from a 'double materiality assessment'. A direct statement of materiality meets the criteria for FULL_DISCLOSURE, which is defined as a risk being identified AND financial materiality being explicitly stated.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'loss of biodiversity may be facilitated by the use of crop protection products' highlights a potential negative consequence, framing the topic as a risk.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure describes a potential negative impact but does not provide any explicit quantifiable financial values or state whether the risk is financially material or immaterial.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The use of 'may be facilitated' suggests a potential or ongoing impact, making the timeframe multiple or unclear as it could refer to past, present, or future facilitation."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The source explicitly states this is a 'Material impact' from a 'double materiality assessment'. A direct statement of materiality meets the criteria for FULL_DISCLOSURE, which is defined as a risk being identified AND financial materiality being explicitly stated.",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Mentions the topic but not as a risk",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99914-002",
+            "quote": "In the downstream value chain, the use of crop protection products in agriculture can have a negative impact on biodiversity, for example, through effects on non-target organisms such as pollinators.",
+            "source": "BASF ESG Report 2024.pdf, Page 233, Section E4-1 Transition plan and consideration of biodiversity and ecosystems in strategy and business model",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly identifies that the company's crop protection products can have a negative impact on biodiversity, specifically mentioning pollinators. This clearly characterizes the topic as a risk to the business, even without quantifying financial impact.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'negative impact on biodiversity' and 'effects on non-target organisms' frames the topic as a source of potential harm or negative consequences for the environment, which in turn poses a risk to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes a potential negative impact but does not provide any explicit quantifiable financial values or state whether the risk is financially material or immaterial.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrase 'can have a negative impact' indicates a potential future or ongoing effect, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Mentions the topic but not as a risk",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99914-003",
+            "quote": "By 2030, we aim to reduce the impact of our crop protection products on biodiversity by 20% compared with 2020 (baseline). This target is measured by a biodiversity impact indicator that considers the toxicity of our products to non-target organisms, including pollinators, and their exposure in the environment.",
+            "source": "BASF ESG Report 2024.pdf, Page 243, Section E4-4 Targets related to biodiversity and ecosystems",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet sets a specific, measurable target to reduce the impact of crop protection products on biodiversity, explicitly including pollinators. The existence of such a target confirms that the company views this impact as a business risk that requires management and reduction, without stating financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on reducing a negative 'impact' and mentions 'toxicity' of products, clearly framing the topic as a risk that requires mitigation and management.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides a quantitative, non-financial target (20% reduction) and a metric (biodiversity impact indicator) but does not include any explicit monetary values or a statement of financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The target 'By 2030' and the comparison to a '2020 (baseline)' clearly indicate a forward-looking timeframe for the target, with ongoing measurement."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Includes targets so tempted to categorise it as partial, but it only mentions the topic but not as a risk\r\n\r\nInteresting for the report as the company is mentioning a target for reduction, hence acknowledging a problem.",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99914-004",
+            "quote": "In 2024, our biodiversity impact indicator for crop protection products was 15% below the 2020 baseline (2023: 10% below baseline). This indicates progress toward our 2030 target.",
+            "source": "BASF ESG Report 2024.pdf, Page 245, Section E4-5 Impact metrics related to biodiversity and ecosystems change",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides a quantitative metric showing the company's current performance against its biodiversity impact reduction target, which explicitly includes pollinators. This demonstrates ongoing monitoring and management of a recognized business risk, without stating financial materiality.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The statement reports on 'progress toward our 2030 target' to reduce negative impacts, indicating a neutral reporting of ongoing efforts to manage a recognized risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides a quantitative, non-financial metric (15% below baseline) but does not include any explicit monetary values or a statement of financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The data refers to 'In 2024' and '2023', indicating a present day and backward-looking assessment of performance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Mentions the topic but not as a risk\r\n\r\nWhat does this actually mean? Is this linked to the biodiversity metric mentioned above or is it different?",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          }
+        ]
+      },
+      {
+        "question_id": "99915",
+        "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99915-001",
+            "quote": "However, particularly in Europe, we expect measures with a continuously high level of detailed and complex regulation, including changes to chemical and industry-related regulations that have the potential to significantly impact the competitiveness of BASF’s operations and product portfolio as well as those of our customers.",
+            "source": "BASF ESG Report 2024.pdf, Page 99, Section Regulation/policy under Strategic opportunities and risks.",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet identifies 'detailed and complex regulation' and 'changes to chemical and industry-related regulations' as having the 'potential to significantly impact the competitiveness of BASF’s operations and product portfolio'. This clearly indicates a business risk related to regulatory changes, which would inherently involve rising compliance costs, even if not explicitly stated as 'costs'.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement highlights 'potential to significantly impact the competitiveness' of operations and product portfolio, framing the regulatory environment as a risk to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure implies a financial impact through 'significantly impact the competitiveness' but does not provide explicit financial amounts or state financial materiality, thus it is non-financial.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrases 'we expect measures' and 'potential to significantly impact' indicate a future-oriented assessment of risks."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99915-002",
+            "quote": "Political regulations designed to mitigate climate change, such as those set out in the EU Green Deal, could represent a competitive risk for us due to higher costs, for example as a result of administrative effort, and a high level of volatility.",
+            "source": "BASF ESG Report 2024.pdf, Page 176, Table \"Results of the double materiality assessment for the 2024 business year: Material impacts\", E1 Climate change adaptation, Regulatory volatility leading to competitive risks.",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'higher costs' and 'administrative effort' resulting from political regulations as a 'competitive risk'. This directly addresses rising compliance costs as a business risk, although it does not provide a specific monetary value.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'competitive risk' and 'higher costs' clearly frames the topic as a source of potential harm or negative consequences for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'higher costs' and 'administrative effort' indicating a financial impact, but it does not provide an exact monetary value, classifying it as partial-type financial disclosure.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrase 'could represent a competitive risk' indicates a potential future impact, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
+      },
+      {
+        "question_id": "99917",
+        "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99917-001",
+            "quote": "In the United States, BASF is a defendant in multidistrict litigation (MDL) concerning aqueous film-forming foams (AFFF). The plaintiffs are primarily public water systems that allege contamination of drinking water with per- and polyfluoroalkyl substances (PFAS) and seek to recover costs for investigation, monitoring and remediation. In 2024, BASF reached a class settlement with public water systems in the United States. The settlement, which does not constitute any admission of liability, provides for a payment of $316.5 million (equivalent to €301 million) to resolve current and future claims related to AFFF. The settlement was approved by the court in 2024. The payment was made in 2024. BASF has recognized a provision for this amount. In addition, BASF is a defendant in other AFFF-related lawsuits, including personal injury claims, property damage claims and claims by states and other governmental entities. BASF is also involved in other legal proceedings and investigations, including environmental, antitrust, product liability and patent infringement matters. The outcome of these proceedings and investigations is subject to considerable uncertainty. Provisions are recognized for all identifiable risks from legal proceedings and investigations if, based on the best estimate, it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation and a reliable estimate of the amount of the obligation can be made.",
+            "source": "BASF ESG Report 2024.pdf, Page 411, Note 25 Provisions",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet provides a definitive statement about a specific class action lawsuit (AFFF multidistrict litigation) related to product exposure (PFAS contamination of drinking water), explicitly identifies it as a risk, and provides a precise financial amount for the settlement ($316.5 million / €301 million). It also mentions other ongoing AFFF-related lawsuits and general legal proceedings (environmental, product liability) for which provisions are recognized, indicating a clear assessment of financial materiality for these types of risks.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure describes BASF as a 'defendant in multidistrict litigation' and mentions 'personal injury claims, property damage claims and claims by states and other governmental entities,' clearly framing these as actual and potential negative consequences or threats to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides explicit, quantifiable financial values for a class settlement: '$316.5 million (equivalent to €301 million).' It also states that 'Provisions are recognized for all identifiable risks from legal proceedings and investigations if... it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation and a reliable estimate of the amount of the obligation can be made,' indicating financial materiality for other legal risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to a settlement that 'was approved by the court in 2024' and 'payment was made in 2024,' indicating a backward-looking event. However, it also mentions 'resolve current and future claims related to AFFF' and 'other AFFF-related lawsuits, including personal injury claims, property damage claims and claims by states and other governmental entities,' and 'other legal proceedings and investigations' for which provisions are recognized, indicating ongoing and forward-looking aspects. Therefore, 'Multiple or Unclear' is the most appropriate timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-002",
+            "quote": "Special charges from other charges and income in the amount of €500 million included, in particular, charges in the amount of €301 million for the class settlement, which does not constitute any admission of liability, in connection with the aqueous film-forming foam (AFFF) multidistrict litigation in the United States.",
+            "source": "BASF ESG Report 2024.pdf, Page 47, Section Results of Operations.",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly discloses a specific financial charge (€301 million) for a 'class settlement' related to 'multidistrict litigation' concerning 'aqueous film-forming foam (AFFF)'. This is a clear identification of a class action lawsuit resulting from environmental/health claims, with a quantified financial impact, thus meeting the criteria for full disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure describes 'special charges' and a 'class settlement' in connection with 'litigation', clearly framing the event as a negative financial consequence or risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides explicit, quantifiable financial values for the charges (€500 million) and the class settlement (€301 million), directly linked to the legal risk, classifying it as financial.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The phrase 'charges... arose' indicates that these are past events that have been accounted for in the current reporting period, making it backward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-003",
+            "quote": "Compared with the previous year, other liabilities rose by €424 million, in particular due to the liability relating to the class settlement in connection with the AFFF multidistrict litigation in the United States.",
+            "source": "BASF ESG Report 2024.pdf, Page 55, Section Financial Position.",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states an increase in 'other liabilities' by a specific amount (€424 million) directly 'due to the liability relating to the class settlement in connection with the AFFF multidistrict litigation'. This confirms a financial impact from a class action lawsuit, meeting the criteria for full disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure mentions 'other liabilities' and 'class settlement' in connection with 'litigation', clearly framing the event as a negative financial consequence or risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides an explicit, quantifiable financial value (€424 million) for a liability directly linked to the legal risk, classifying it as financial.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement refers to 'other liabilities rose' and 'liability relating to the class settlement', indicating an existing financial obligation as of the reporting date, making it present day."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-004",
+            "quote": "We constantly monitor current and potential legal disputes and proceedings, and regularly report on these to the Board of Executive Directors and the Supervisory Board. In order to assess the risks from current legal disputes and proceedings and any potential need to recognize provisions, we prepare our own analyses and assessments of the circumstances and claims considered. ... If sufficient probability of occurrence is identified, we recognize a provision for the proceeding concerned.",
+            "source": "BASF ESG Report 2024.pdf, Page 96, Section Compliance/legal under Operational opportunities and risks.",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet describes the company's process for monitoring 'current and potential legal disputes and proceedings' and recognizing 'provisions' for them. While it identifies legal challenges as a risk and mentions financial provisions, it does not provide specific financial amounts for any particular ongoing or potential legal challenge, thus it is a partial disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly mentions 'risks from current legal disputes and proceedings' and the need to 'recognize a provision', clearly framing the topic as a risk that requires management.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'provisions' which are financial in nature, but it does not provide specific monetary values for any particular legal dispute, classifying it as partial-type financial.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The phrases 'constantly monitor current and potential legal disputes' and 'if sufficient probability of occurrence is identified' indicate an ongoing process for both present and future risks, making the timeframe multiple or unclear."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Risk management procedure disclosed",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
+      }
+    ],
+    "summary_statistics": {
+      "total_questions_analyzed": 9,
+      "total_disclosure_snippets": 29,
+      "classification_distribution": {
+        "FULL_DISCLOSURE": 7,
+        "PARTIAL": 12,
+        "UNCLEAR": 10,
+        "NO_DISCLOSURE": 0
+      },
+      "categories_covered": [
+        "Human Health Risk",
+        "Regulatory/Financial Risk",
+        "Environmental Risk"
+      ]
+    },
+    "metadata": {
+      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+    }
+  }
+}

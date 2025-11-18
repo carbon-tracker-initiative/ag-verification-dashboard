@@ -1,0 +1,1358 @@
+{
+  "company": "Grupa Azoty",
+  "year": 2024,
+  "version": "team-reviewed",
+  "verified": {
+    "company_name": "Grupa Azoty",
+    "fiscal_year": 2024,
+    "version": "team-reviewed",
+    "model_used": "team-reviewed",
+    "analysis_date": "2025-11-17T18:34:19.473Z",
+    "schema_version": "team-reviewed-v1",
+    "analysis_results": [
+      {
+        "question_id": "99902",
+        "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99902-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "NO_DISCLOSURE",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": true,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": ""
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99903",
+        "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+        "category": "Human Health Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99903-001",
+            "quote": "Among the risks that continue to be monitored is the risk of tightening of EU regulations on heavy metal content in fertilizer products and changes in the measurement methodology for classifying titanium white as a carcinogen.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 95, Section 6.1",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies a specific regulatory risk related to product classification ('classifying titanium white as a carcinogen') and 'heavy metal content in fertilizer products'. While not explicitly stating that its products *cause* human health problems, the monitoring of these risks directly implies potential human health concerns that could impact the business through regulatory changes or product reclassification. It identifies the topic as a risk to the business, but stops short of detailing financial significance or direct impact from actual health problems.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'risk of tightening of EU regulations' and 'classifying titanium white as a carcinogen' clearly frames this as a potential negative consequence or threat to the business, primarily through regulatory action and product perception.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'risk of tightening of EU regulations' and 'changes in the measurement methodology' which are qualitative impacts. It does not provide explicit financial values or state the financial materiality of this risk, focusing instead on the regulatory aspect.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrase 'risks that continue to be monitored' and 'tightening of EU regulations' indicates an ongoing and future-oriented concern, suggesting that the risk is currently relevant and may manifest or intensify in the future."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99904",
+        "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99904-001",
+            "quote": "Prices of CO2 emission allowances have been falling since February 2025. At the beginning of April 2025, the prices in the European market were at their lowest level in 12 months, reaching EUR 60/tonne, compared to EUR 78/tonne at the start of February this year. The reason for the price drop is the decline in the oil and natural gas markets, linked to the CO2 market. This may also be attributed to the anticipated lower demand for emission allowances in view of the deteriorating global economic outlook driven by the US tariffs, signals of shifting climate policy directions in Europe following the change in the US administration and, among other factors, the US withdrawal from the Paris Agreement. The Group companies proactively manage their purchases of CO2 emission allowances. Due to significant cyclical changes with resulting revisions to the companies’ production plans, including CO2 emissions, there is a strong need to adjust the volume of allowances to redeem the CO2 emissions for 2024. The companies are also selling their existing allowances repurchasing predefined volumes to secure additional financing for day-to-day operations. According to Refinitiv’s forecasts of 23 January 2025, the average price of CO₂ emission allowances is expected to be EUR 73.5 in 2025, down from EUR 76.9 in the previous forecast. Prices are projected to rise to EUR 91.9 in 2026 and exceed EUR 103 from 2027 onward. The emission allowance market remains a regulated market and the regulator’s intention is to achieve a sustainable increase in EUA prices in line with the growing climate ambitions of the Fit for 55 package. However, the economic downturn in 2025 in the euro area and the effects of high energy prices should stabilise the EUA prices in the medium term due to a decline in industrial demand. Transitory price declines may be brought about by the REPowerEU plan for energy savings, diversification of energy supplies, and accelerated roll-out of renewable energy, as well as lower production of electricity from coal. The ETS market may consolidate in the price range of EUR 70-95.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 102, Prices of CO2 emission allowances",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The definition of FULL_DISCLOSURE requires that financial materiality is explicitly stated. While this snippet provides extensive financial data (e.g., EUR/tonne prices) and implies risk through its detailed analysis, it does not contain an explicit statement from the company that this risk is financially material. Therefore, it should be classified as PARTIAL.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The discussion focuses on price fluctuations, market dynamics, and regulatory intentions that could lead to increased costs ('sustainable increase in EUA prices'), framing this as a 'Risk' to the business's financial performance.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides multiple explicit, quantifiable financial values for CO2 emission allowances (e.g., 'EUR 60/tonne', 'EUR 73.5 in 2025', 'EUR 91.9 in 2026'), directly linking these costs to the company's operations, thus it is 'Financial'.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet discusses past price movements ('falling since February 2025'), present market conditions ('currently at their lowest level'), and extensive future forecasts ('projected to rise to EUR 91.9 in 2026 and exceed EUR 103 from 2027 onward'), covering multiple timeframes."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The definition of FULL_DISCLOSURE requires that financial materiality is explicitly stated. While this snippet provides extensive financial data (e.g., EUR/tonne prices) and implies risk through its detailed analysis, it does not contain an explicit statement from the company that this risk is financially material. Therefore, it should be classified as PARTIAL.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99904-002",
+            "quote": "European producers also face an additional burden from high emissions charges under the EU ETS programme.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 74, Section 5.2",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that 'high emissions charges under the EU ETS programme' are an 'additional burden' for European producers, which includes Grupa Azoty. This directly identifies carbon costs as a financial risk (burden) to the business, even without providing specific figures for the company itself.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The term 'additional burden' clearly frames the emissions charges as a negative impact or threat to the business, increasing operational costs.",
+              "financial_type": "Partial",
+              "financial_justification": "The phrase 'high emissions charges' indicates a financial impact (cost) but does not provide a specific monetary value. It acknowledges the financial nature of the burden without quantification.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement 'European producers also face an additional burden' uses the present tense, indicating that this is an ongoing challenge and currently impacting the business."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99904-003",
+            "quote": "Risk of inability to conform to the requirements of a low-carbon economy and achieve decarbonisation targets within the set time frame Group, Parent – medium risk with low probability Risk of the occurrence of technological process-related, organisational or economic factors hindering the reduction of CO2 emissions to the extent mandated by regulations",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 96, Section 6.1",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies the 'Risk of inability to conform to the requirements of a low-carbon economy and achieve decarbonisation targets' as a business risk, directly linking it to 'CO2 emissions to the extent mandated by regulations'. This clearly states that regulatory requirements related to carbon emissions pose a risk to the business, although it doesn't quantify the financial impact.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement 'Risk of inability to conform to the requirements' and 'hindering the reduction of CO2 emissions' clearly frames this as a potential negative consequence or threat to the business operations and strategic goals.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies a risk related to CO2 emissions and regulatory mandates but does not provide any explicit financial figures or state the financial materiality of this risk. It focuses on the qualitative aspect of compliance and reduction.",
+              "timeframe": "Future",
+              "timeframe_justification": "The risk is framed around 'achieve decarbonisation targets within the set time frame' and 'mandated by regulations', indicating a forward-looking perspective on future compliance and targets."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99907",
+        "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99907-001",
+            "quote": "Directive concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive)\r\nIn the first quarter of 2024, the EC launched an evaluation of Directive of 12 December 1991 concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive) and Directive of 14 December 2016 on the reduction of national emissions of certain atmospheric pollutants (NEC directive). The evaluation is a fitness check against adopted objectives and compliance with the EU’s objectives for the protection of human health and the environment. It also aims to identify the potential for simplifications and reducing administrative burden. Additionally, in the second quarter of 2024, the European Commission held public consultations on a draft amendment to the Nitrate Directive aimed at excluding RENURE products (processed manure with a simultaneous increase in nitrogen content relative to the starting material) from the application limit for natural fertilizers – the application of animal manure is currently limited to 170 kg of nitrogen (N) per hectare annually.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 106, Directive concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive)",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a relevant regulation but does not characterize it as a business risk. It is a factual update on a regulatory evaluation. Per the definitions, if the topic is acknowledged but not framed as a risk, the classification should be UNCLEAR, not PARTIAL.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The discussion revolves around a 'Directive concerning the protection of waters against pollution' and 'application limit for natural fertilizers,' which implies potential restrictions or negative impacts on the company's products and sales, framing it as a 'Risk'.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions a quantitative limit ('170 kg of nitrogen (N) per hectare annually') which has direct financial implications for product application and sales, but it does not provide a monetary value for the risk itself, making it 'Partial-type'.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet describes an ongoing 'evaluation' of a directive and 'public consultations on a draft amendment,' indicating that the issue is currently active and has future implications for regulations and product use."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes a relevant regulation but does not characterize it as a business risk. It is a factual update on a regulatory evaluation. Per the definitions, if the topic is acknowledged but not framed as a risk, the classification should be UNCLEAR, not PARTIAL.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99907-002",
+            "quote": "Directive concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive) and Directive of 14 December 2016 on the reduction of national emissions of certain atmospheric pollutants (NEC directive). The evaluation is a fitness check against adopted objectives and compliance with the EU’s objectives for the protection of human health and the environment. It also aims to identify the potential for simplifications and reducing administrative burden. Additionally, in the second quarter of 2024, the European Commission held public consultations on a draft amendment to the Nitrate Directive aimed at excluding RENURE products (processed manure with a simultaneous increase in nitrogen content relative to the starting material) from the application limit for natural fertilizers – the application of animal manure is currently limited to 170 kg of nitrogen (N) per hectare annually.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 106, Section 6.2",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes the existence and review of a directive related to water pollution from agricultural sources. However, it does not explicitly frame this as a risk to the business. It is a neutral, factual description of the regulatory landscape. Per the definitions, when the topic is acknowledged but not characterized as a business risk, the correct classification is UNCLEAR.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The discussion of a 'Directive concerning the protection of waters against pollution' and 'application limit for natural fertilizers' frames this as a regulatory challenge and a potential constraint on business operations, indicating a negative impact or threat.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes regulatory measures and limits ('application limit') but does not provide explicit financial figures for compliance costs, penalties, or other financial impacts. It focuses on the qualitative regulatory aspect.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet discusses an ongoing 'evaluation' of the Directive and 'public consultations on a draft amendment', indicating that this is a present-day and forward-looking issue with potential future regulatory changes."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes the existence and review of a directive related to water pollution from agricultural sources. However, it does not explicitly frame this as a risk to the business. It is a neutral, factual description of the regulatory landscape. Per the definitions, when the topic is acknowledged but not characterized as a business risk, the correct classification is UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99908",
+        "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99908-001",
+            "quote": "Risk related to supply and demand in the area of nitrogen and compound fertilizers Group, Parent – high risk with high probability Risk related to the imbalance in demand and supply caused by factors such as reduced demand or increased supply of nitrogen and compound fertilizers due to rising imports, limitations on fertilizer use, loss of key customers, deferring of purchasing decisions, decreased purchasing power of farmers, shifts in dietary preferences and consumers’ environmental consciousness, as well as expansions in competitive production capacities. These conditions may lead to intensified price competition among manufacturers, resulting in narrower profit margins and failure to achieve targeted revenues and profits from fertilizer sales.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 98, Section 6.1",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet explicitly states the financial materiality of the risk, noting it may lead to 'narrower profit margins and failure to achieve targeted revenues and profits'. Per the classification criteria, identifying a business risk and explicitly stating its financial materiality (even without dollar amounts) qualifies as FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement explicitly labels this as a 'Risk' and describes negative consequences such as 'reduced demand', 'intensified price competition', 'narrower profit margins', and 'failure to achieve targeted revenues and profits', clearly framing it as a threat to the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'narrower profit margins' and 'failure to achieve targeted revenues and profits', which are clear indicators of financial impact. However, it does not provide specific monetary values or quantify the extent of these financial impacts.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The risk is described as an ongoing 'imbalance in demand and supply' and factors like 'shifts in dietary preferences' are long-term trends, indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet explicitly states the financial materiality of the risk, noting it may lead to 'narrower profit margins and failure to achieve targeted revenues and profits'. Per the classification criteria, identifying a business risk and explicitly stating its financial materiality (even without dollar amounts) qualifies as FULL_DISCLOSURE.",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99909",
+        "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99909-001",
+            "quote": "In the first quarter of 2024, the EC launched an evaluation of Directive of 12 December 1991 concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive) and Directive of 14 December 2016 on the reduction of national emissions of certain atmospheric pollutants (NEC directive). The evaluation is a fitness check against adopted objectives and compliance with the EU’s objectives for the protection of human health and the environment. It also aims to identify the potential for simplifications and reducing administrative burden. Additionally, in the second quarter of 2024, the European Commission held public consultations on a draft amendment to the Nitrate Directive aimed at excluding RENURE products (processed manure with a simultaneous increase in nitrogen content relative to the starting material) from the application limit for natural fertilizers – the application of animal manure is currently limited to 170 kg of nitrogen (N) per hectare annually.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 106, Section: Directive concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive)",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes regulatory developments (an evaluation of the Nitrates Directive) but does not explicitly frame this as a business risk. It acknowledges the topic but does not characterize it as a risk, which fits the definition of UNCLEAR. The PARTIAL classification requires the risk to be 'clearly identified'.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language emphasizes 'protection of waters against pollution' and 'application limit', implying potential negative consequences for business operations if limits are tightened, thus framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses regulatory developments and potential impacts on product application but does not provide any explicit financial figures or statements of financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet refers to an evaluation launched in Q1 2024 and public consultations in Q2 2024, indicating ongoing regulatory work with future implications for product application."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes regulatory developments (an evaluation of the Nitrates Directive) but does not explicitly frame this as a business risk. It acknowledges the topic but does not characterize it as a risk, which fits the definition of UNCLEAR. The PARTIAL classification requires the risk to be 'clearly identified'.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99910",
+        "question_text": "Does the company disclose whether it thinks that disposal of chemical waste, such as gypstacks, from the production of phosphate fertiliser is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99910-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "NO_DISCLOSURE",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": true,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": ""
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99911",
+        "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99911-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "NO_DISCLOSURE",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": true,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": ""
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99912",
+        "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99912-001",
+            "quote": "Regulatory risk arising from the climate transition occurring through implementation of the European Green Deal reforms Group, Parent – high risk with high probability ... Amendments to EU Directives and Regulations applicable to the Group’s principal manufacturing and trading activities give rise to a potential risk that the use of the Group’s products by customers in the EU countries may be restricted as a consequence of tightening of legal regulations. The Grupa Azoty Group is particularly focused on monitoring risks and opportunities associated with the implementation of regulatory packages arising from the European Green Deal, including those associated with the Fit for 55 package and the circular economy concept. Among the risks that continue to be monitored is the risk of tightening of EU regulations on heavy metal content in fertilizer products and changes in the measurement methodology for classifying titanium white as a carcinogen.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 95, Section: Regulatory risk arising from the climate transition occurring through implementation of the European Green Deal reforms",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'Regulatory risk' as 'high risk with high probability' for the Group and Parent. It directly states a 'potential risk that the use of the Group’s products by customers in the EU countries may be restricted as a consequence of tightening of legal regulations.' It further specifies concerns about 'heavy metal content in fertilizer products' and 'classifying titanium white as a carcinogen,' both of which could lead to bans or severe restrictions on production or sale. This clearly links regulatory changes to a business risk of product bans/restrictions.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly labels this as 'Regulatory risk' and uses terms like 'potential risk,' 'restricted,' and 'tightening of legal regulations,' clearly indicating a threat or negative consequence for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies a high-probability business risk and describes potential impacts like product restrictions but does not provide any explicit financial figures or statements of financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet discusses 'potential risk' and 'tightening of legal regulations' that 'continue to be monitored,' indicating future events and ongoing vigilance regarding regulatory changes."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99912-002",
+            "quote": "Risk related to the imbalance in demand and supply caused by factors such as reduced demand or increased supply of nitrogen and compound fertilizers due to rising imports, limitations on fertilizer use, loss of key customers, deferring of purchasing decisions, decreased purchasing power of farmers, shifts in dietary preferences and consumers’ environmental consciousness, as well as expansions in competitive production capacities. These conditions may lead to intensified price competition among manufacturers, resulting in narrower profit margins and failure to achieve targeted revenues and profits from fertilizer sales.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 98, Section 6.1",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet identifies 'limitations on fertilizer use' as a factor contributing to a business risk, explicitly linking it to negative financial outcomes such as 'narrower profit margins and failure to achieve targeted revenues and profits.' This clearly identifies the topic as a business risk with financial implications. However, it does not provide specific monetary values for these impacts.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly uses 'Risk related to' and describes negative consequences like 'reduced demand,' 'narrower profit margins,' and 'failure to achieve targeted revenues and profits,' clearly framing the situation as a threat to the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet indicates a financial impact ('narrower profit margins,' 'failure to achieve targeted revenues and profits') but does not supply an exact monetary value for the risk, only qualitative descriptions of financial consequences.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The risk is described as an ongoing condition ('imbalance in demand and supply') with potential future consequences ('may lead to intensified price competition'). The 'limitations on fertilizer use' could be present or future."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99913",
+        "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99913-001",
+            "quote": "On 23 September 2024, Colonnade Insurance Societe Anonyme, Branch in Poland, issued an environmental liability insurance policy, confirming the extension of the existing insurance cover for the period from 16 September 2024 to 15 September 2025, in favour of the key Grupa Azoty Group companies: the Parent, Grupa Azoty KĘDZIERZYN, Grupa Azoty POLICE and Grupa Azoty PUŁAWY.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 34, Section: Insurance of environmental risks",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that the company obtained an 'environmental liability insurance policy' for its key companies. This demonstrates that the company acknowledges and manages environmental liabilities, which would include potential costs for the restoration of contaminated manufacturing sites. The act of insuring against such liabilities indicates that the company perceives these as a business risk requiring mitigation.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The purchase of an 'environmental liability insurance policy' implies a proactive measure against potential negative financial consequences from environmental issues, thus framing it as a risk management activity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions the existence of an insurance policy for environmental liabilities but does not provide explicit financial figures for the risk itself or state its financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The policy was issued in September 2024 and covers an ongoing period until September 2025, indicating a present-day and near-term relevance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99915",
+        "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99915-001",
+            "quote": "The Group analyses the risks associated with regulatory trends and draft amendments or planned new regulations. Each regulatory development is examined by the Group to gain an understanding of its potential impact on the Group’s operations and the products it brings to the market. Amendments to EU Directives and Regulations applicable to the Group’s principal manufacturing and trading activities give rise to a potential risk that the use of the Group’s products by customers in the EU countries may be restricted as a consequence of tightening of legal regulations. The Grupa Azoty Group is particularly focused on monitoring risks and opportunities associated with the implementation of regulatory packages arising from the European Green Deal, including those associated with the Fit for 55 package and the circular economy concept. Among the risks that continue to be monitored is the risk of tightening of EU regulations on heavy metal content in fertilizer products and changes in the measurement methodology for classifying titanium white as a carcinogen.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 95, Section 6.1 Significant risk factors and threats",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet clearly identifies tightening EU regulations, specifically on heavy metal content in fertilizers and the classification of titanium white as a carcinogen, as a 'potential risk' that could restrict product use and impact operations. This directly relates to rising compliance, testing, and re-registration costs, even if not explicitly quantified as 'costs'. The company acknowledges these regulatory developments as business risks.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language explicitly uses 'potential risk' and 'tightening of legal regulations' which could 'restrict the use of the Group’s products', indicating a negative consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies regulatory risks that could lead to increased costs or restricted product use, but it does not provide any specific financial figures or state whether these impacts are financially material or immaterial. It focuses on qualitative aspects of the risk.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet discusses 'upcoming changes in legislation', 'draft amendments or planned new regulations', and 'risks that continue to be monitored', indicating a focus on future and ongoing regulatory developments."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99915-002",
+            "quote": "The Group analyses the risks associated with regulatory trends and draft amendments or planned new regulations. Each regulatory development is examined by the Group to gain an understanding of its potential impact on the Group’s operations and the products it brings to the market.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 95, Section 6.1 Significant risk factors and threats",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that the Group 'analyses the risks associated with regulatory trends and draft amendments or planned new regulations' to understand their 'potential impact on the Group’s operations and the products it brings to the market'. This is a clear acknowledgement of regulatory changes as a business risk, which would inherently include compliance, testing, and registration costs.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'analyses the risks associated with regulatory trends' and 'potential impact' indicates a proactive approach to identifying and understanding threats to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses the 'potential impact' of regulatory developments but does not provide any specific financial figures or state whether these impacts are financially material or immaterial. It remains qualitative.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrase 'draft amendments or planned new regulations' clearly points to future regulatory changes and their anticipated impact."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99915-003",
+            "quote": "Among the risks that continue to be monitored is the risk of tightening of EU regulations on heavy metal content in fertilizer products and changes in the measurement methodology for classifying titanium white as a carcinogen.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 95, Section 6.1 Significant risk factors and threats",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet specifically identifies 'tightening of EU regulations on heavy metal content in fertilizer products' and 'changes in the measurement methodology for classifying titanium white as a carcinogen' as risks being monitored. These directly imply potential increases in compliance, testing, and re-registration costs for the company's products.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'Among the risks that continue to be monitored' explicitly frames these regulatory developments as threats or negative possibilities for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies specific regulatory risks but does not provide any financial figures or state whether these impacts are financially material or immaterial. It focuses on the qualitative nature of the risk.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrase 'continue to be monitored' indicates an ongoing assessment of future or currently developing regulatory changes."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "YES",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99915-004",
+            "quote": "Regulation of the Minister of Agriculture and Rural Development on the implementation of certain provisions of the Act on Fertilizers and Fertilization: On 21 August 2024, following public consultations, the amended Regulation of the Minister of Agriculture and Rural Development on the implementation of certain provisions of the Fertilizers and Fertilization Act was published in the Official Journal. The existing provisions on impurities in fertilizer products were retained in the Regulation, and the introduction of additional parameters was abandoned. The Regulation specifies the competent organisations for testing fertilizers and plant growth enhancers, the detailed scope of testing and documentation for fertilizers and plant growth enhancers, requirements to be met by instructions for using and storing fertilizers, plant growth enhancers and growth stimulators, minimum quality requirements for certain fertilizers, and permitted types and levels of contaminants in fertilizers, plant growth enhancers, and digestate products.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 107, Section Polish Regulatory Area",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a regulation factually but does not frame it as a risk. It even states that 'the introduction of additional parameters was abandoned,' which mitigates a potential cost increase. The classification should be UNCLEAR because the topic is acknowledged but not characterized as a business risk.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The disclosure is factual and descriptive, outlining regulatory changes and requirements without explicitly framing them as either a threat or an opportunity. It describes the status of regulations.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet details regulatory requirements for testing and documentation but does not provide any financial figures or discuss the financial materiality of these compliance activities.",
+              "timeframe": "Current",
+              "timeframe_justification": "The regulation was published on '21 August 2024' and describes 'existing provisions' and 'requirements to be met', indicating a present-day and ongoing impact of the regulation."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes a regulation factually but does not frame it as a risk. It even states that 'the introduction of additional parameters was abandoned,' which mitigates a potential cost increase. The classification should be UNCLEAR because the topic is acknowledged but not characterized as a business risk.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99915-005",
+            "quote": "In 2024, work of a draft regulation establishing a framework for the setting of ecodesign requirements for sustainable products was completed. Ecodesign is a design approach that focuses on minimising the environmental impact of a product throughout its entire lifecycle. Certain product groups, such as chemicals, are prioritised in the development of relevant guidance.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 105, Section 6.2",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a new ecodesign regulation but does not characterize it as a risk. It is a neutral, factual statement about a regulatory development. Therefore, it should be classified as UNCLEAR.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The disclosure is factual about a new regulation. While the regulation itself is framed positively (sustainable products, minimizing environmental impact), its implementation for \"chemicals\" implies new requirements and associated costs, which are a challenge for the business. Given the question's focus on \"rising costs... is a risk\", the implication of increased costs for compliance makes it a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a new regulation that will impose ecodesign requirements on products, including chemicals, which will lead to new costs for product development, testing, and compliance. However, no specific financial amounts or statements of materiality are provided.",
+              "timeframe": "Current",
+              "timeframe_justification": "The \"draft regulation... was completed\" in 2024 and \"published in the Official Journal of the European Union on 28 June 2024,\" indicating a present-day and forward-looking impact as the company adapts to these new requirements."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes a new ecodesign regulation but does not characterize it as a risk. It is a neutral, factual statement about a regulatory development. Therefore, it should be classified as UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99915-006",
+            "quote": "In 2024, the European Parliament and the Council worked on a draft regulation on preventing plastic pellet losses to reduce microplastics pollution. The draft aims to address market and regulatory imperfections to reduce the release of microplastics into the environment. This will be achieved through labelling, standardisation, certification and regulatory measures for the main sources of these plastics. Interinstitutional negotiations on the draft regulation are underway.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 106, Section 6.2",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a draft regulation involving certification and standardization but does not frame it as a risk. It is a neutral update on a legislative process. The classification should be UNCLEAR.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The disclosure is factual about a new draft regulation. While the regulation aims to reduce pollution, the imposition of \"labelling, standardisation, certification and regulatory measures\" implies new requirements and associated costs, which are a challenge for the business. Given the question's focus on \"rising costs... is a risk\", the implication of increased costs for compliance makes it a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a draft regulation that will impose new measures on plastic products, including labelling and certification, which will lead to new costs for compliance. However, no specific financial amounts or statements of materiality are provided.",
+              "timeframe": "Future",
+              "timeframe_justification": "The work on the \"draft regulation\" was conducted in \"2024\" and \"negotiations are underway,\" indicating a forward-looking timeframe for its implementation and impact."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes a draft regulation involving certification and standardization but does not frame it as a risk. It is a neutral update on a legislative process. The classification should be UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99916",
+        "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99916-001",
+            "quote": "Risk related to supply and demand in the area of nitrogen and compound fertilizers: Risk related to the imbalance in demand and supply caused by factors such as reduced demand or increased supply of nitrogen and compound fertilizers due to rising imports, limitations on fertilizer use, loss of key customers, deferring of purchasing decisions, decreased purchasing power of farmers, shifts in dietary preferences and consumers’ environmental consciousness, as well as expansions in competitive production capacities. These conditions may lead to intensified price competition among manufacturers, resulting in narrower profit margins and failure to achieve targeted revenues and profits from fertilizer sales.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 98, Section 6.1 Significant risk factors and threats",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the snippet clearly identifies a business risk and its financial consequences (e.g., 'narrower profit margins'), it does not explicitly state that the financial impact is or would be 'material', which is required for a FULL_DISCLOSURE classification.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'Risk related to the imbalance in demand and supply' and 'reduced demand' due to 'shifts in dietary preferences and consumers’ environmental consciousness' clearly frames this as a threat or negative consequence for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure states that these conditions may lead to 'narrower profit margins and failure to achieve targeted revenues and profits from fertilizer sales', explicitly linking the risk to financial outcomes, thus indicating financial materiality without providing specific figures.",
+              "timeframe": "Future",
+              "timeframe_justification": "The discussion of 'shifts in dietary preferences and consumers’ environmental consciousness' implies an ongoing and evolving trend that will impact future demand and sales."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. While the snippet clearly identifies a business risk and its financial consequences (e.g., 'narrower profit margins'), it does not explicitly state that the financial impact is or would be 'material', which is required for a FULL_DISCLOSURE classification.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99916-002",
+            "quote": "According to the Company’s Management Board, key areas such as decarbonisation and the greening of production – both essential for the successful implementation of the Strategy – have lacked the necessary momentum in recent years. The market clearly signals the need to accelerate such activities in order to meet both regulatory requirements and customer demands.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 49, Section 4.1 Strategy and growth directions",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet states that 'The market clearly signals the need to accelerate such activities in order to meet both regulatory requirements and customer demands' regarding 'decarbonisation and the greening of production'. 'Customer demands' for 'greening of production' is a strong indicator of public perception influencing market behavior, which if not met, poses a risk to the business. This implicitly acknowledges the risk of not aligning with public perception.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement 'The market clearly signals the need to accelerate such activities' implies that failing to meet these demands would be a negative outcome, thus framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'customer demands' and the need to accelerate activities, which would involve costs, but does not provide specific financial figures or explicitly state the financial materiality of failing to meet these demands.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet discusses 'recent years' and the 'need to accelerate such activities', indicating an ongoing and forward-looking challenge."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99916-003",
+            "quote": "The challenges of climate and energy transition are the fundamental components of the Grupa Azoty Group’s business strategy. However, since the Strategy was approved and published in 2021, the macroeconomic climate and overall business conditions have changed in a way which reaffirmed the validity of the Strategy’s objectives regarding energy transition and decarbonisation. In 2024, Grupa Azoty signed a letter of intent with the Łukasiewicz Research Network to collaborate on green projects in three key areas, namely energy transition, circular economy and decarbonisation of industrial production.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 49, Section 4.1 Strategy and growth directions",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet highlights the company's strategic focus on 'climate and energy transition', 'decarbonisation', and 'green projects'. While not directly stating 'negative public perception' as a risk, these strategic initiatives are often driven by stakeholder pressure and public perception regarding environmental impact. The company's proactive engagement in 'green projects' can be seen as a response to such concerns, implicitly acknowledging the business relevance of environmental consciousness.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The company frames these initiatives as 'fundamental components of the Grupa Azoty Group’s business strategy' and 'collaborate on green projects', indicating a positive or beneficial approach to addressing environmental concerns.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes strategic initiatives and collaborations but does not provide any financial figures or discuss the financial materiality of these efforts in relation to public perception or sales.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet refers to the 'Strategy for 2021–2030' and actions taken 'In 2024', as well as ongoing 'green projects', indicating a present-day and forward-looking perspective."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99918",
+        "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99918-001",
+            "quote": "Risk related to the prices and availability of natural gas: Group, Parent – high risk with medium probability. The risk related to prices and operational disruptions caused by a lower-than-expected or restricted supply of adequate volumes of natural gas of the right quality required for production. In the search for competitive sources of gas in order to diversify both the geographical regions and suppliers of gas, the Grupa Azoty Group companies provide details of executed contracts and their terms and conditions in press releases and reports. Requests for proposals are made and negotiations with gas suppliers are conducted at the Group level to leverage the Group’s stronger bargaining position. The Grupa Azoty Group takes steps to satisfy its overall gas demand through a combination of a long-term contract with its strategic supplier, annual or shorter contracts with a number of other suppliers, and transactions on energy exchanges and the OTC market to meet short-term demand of the companies, secure gas supplies and lower cost of gas.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 98, Section 6.1 Significant risk factors and threats",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly identifies 'Risk related to the prices and availability of natural gas' as a 'high risk' for both the Group and Parent, directly linking it to 'operational disruptions' and the 'quality required for production'. The company's strategies to diversify sources and lower costs demonstrate its recognition of this as a significant business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The explicit labeling of 'Risk related to the prices and availability of natural gas' as a 'high risk' clearly frames this as a threat or negative consequence for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure discusses 'lower cost of gas' as an objective of risk management, indicating a financial impact, but does not provide specific financial figures or explicitly state the financial materiality of high energy costs.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The discussion of ongoing strategies ('search for competitive sources', 'diversify', 'long-term contract') and the nature of price volatility indicates a present-day and forward-looking risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99918-002",
+            "quote": "European gas remained considerably more expensive than in the US and Russia. This disparity undermines the competitiveness of European companies, for which gas is a crucial cost driver. Global gas demand increased by 2% year on year in 2024.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 72, Section 5.2 Market overview",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that the high price of European gas 'undermines the competitiveness of European companies, for which gas is a crucial cost driver'. This directly links high energy input costs to a negative business impact (competitiveness), confirming it as a risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement that high gas prices 'undermines the competitiveness' clearly frames this as a threat or negative consequence for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure identifies gas as a 'crucial cost driver' and mentions its impact on 'competitiveness', indicating financial materiality without providing specific figures for the company's costs.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet describes the situation 'in 2024' and the ongoing 'disparity' in prices, indicating a present-day and continuing risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-003",
+            "quote": "Electricity prices and the share of different energy generation sources in Poland in 2025 will depend on several factors, especially weather conditions. The operation of fossil fuel-based power plants will be conditioned by the level of renewable energy generation. Temperature fluctuations, in turn, will directly impact energy demand for heating, leading to increased power generation (primarily from gas-fired sources). Under current conditions, this could result in steep price hikes. Turmoil in the LNG market – including the escalation of conflict in the Middle East, the discontinuation of Russian gas transit through Ukraine, competition for transport services from Asian countries, and a gradual pick-up in industrial demand – is also likely to put upward pressure on gas prices, and consequently, the cost of gas-generated electricity. Donald Trump’s roll-back of environmental restrictions and withdrawal from the Paris Agreement could force European producers to compete with US companies benefiting from significantly cheaper raw materials.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 73, Section 5.2 Market overview",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that 'Electricity prices... in 2025 will depend on several factors' and that 'Under current conditions, this could result in steep price hikes'. It also links 'Turmoil in the LNG market' to 'upward pressure on gas prices, and consequently, the cost of gas-generated electricity'. This clearly identifies high electricity and gas costs as a forward-looking business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrases 'steep price hikes' and 'upward pressure on gas prices, and consequently, the cost of gas-generated electricity' clearly frame these anticipated developments as threats or negative consequences for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure discusses 'steep price hikes' and 'upward pressure on gas prices' which are financial impacts, but it does not provide specific monetary values for the company's potential costs.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet explicitly refers to 'in 2025' and 'will depend on', indicating a forward-looking perspective on energy costs."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-004",
+            "quote": "The average annual price in 2024 was two times lower than the previous year but still higher by a half compared with 2017–2019. It was also characterised by strong volatility. The reasons included geopolitical factors as well as maintenance and emergency shutdown on Norwegian gas production, liquefaction, and transmission infrastructure, and weather conditions, which affect gas demand for power generation due to temperatures and renewable energy output.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 98, Section 6.1 Significant risk factors and threats",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes market conditions (high, volatile prices) which are a risk factor, but it does not contain a statement of financial materiality from the company, such as calling it a 'high risk' or describing its impact. Therefore, it only meets the criteria for PARTIAL, not FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The description of 'strong volatility' and prices being 'higher by a half compared with 2017–2019' highlights the negative and uncertain nature of energy costs, framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides comparative financial information about gas prices ('two times lower', 'higher by a half') but does not quantify the specific financial impact on the company's operations.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet refers to '2024' and compares it to 'previous year' and '2017–2019', indicating a backward-looking analysis of a present-day and ongoing issue."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes market conditions (high, volatile prices) which are a risk factor, but it does not contain a statement of financial materiality from the company, such as calling it a 'high risk' or describing its impact. Therefore, it only meets the criteria for PARTIAL, not FULL_DISCLOSURE.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99918-005",
+            "quote": "In 2024, energy prices in Poland (IEDN) were 21% lower year on year. Compared to other European countries, Poland remains among those with high energy costs. The lowest energy prices are observed in France, Spain, and the Scandinavian countries, while the highest are in the Balkan region. The average wholesale Day-Ahead Market (DAM) electricity price in the EU fell by 16% year on year.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 73, Section 5.2 Market overview",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies a risk factor ('Poland remains among those with high energy costs') but does not state the financial materiality or impact of this risk on the business. This meets the definition of PARTIAL, not FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement that 'Poland remains among those with high energy costs' implies a disadvantage or threat to businesses operating in Poland, framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides quantifiable financial information in percentages ('21% lower', '16% year on year') regarding energy price changes, indicating financial relevance, but not specific costs for the company.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet refers to 'In 2024' and describes an ongoing situation ('Poland remains among those with high energy costs'), indicating a present-day and backward-looking analysis of a continuing risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet identifies a risk factor ('Poland remains among those with high energy costs') but does not state the financial materiality or impact of this risk on the business. This meets the definition of PARTIAL, not FULL_DISCLOSURE.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99918-006",
+            "quote": "In 2024, TTF gas prices fell by around 15% year on year. However, European gas remained considerably more expensive than in the US and Russia. This disparity undermines the competitiveness of European companies, for which gas is a crucial cost driver.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 72, Section 5.2",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that the \"disparity\" in gas prices (European gas being more expensive) \"undermines the competitiveness of European companies, for which gas is a crucial cost driver.\" This directly identifies high gas prices (an energy input cost) as a risk to the business's competitiveness.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase \"undermines the competitiveness\" clearly frames the high cost of European gas as a negative impact or threat to the business's market position.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses high gas prices undermining competitiveness, which is a financial impact on the business. However, it does not provide specific monetary figures or explicitly state the financial materiality of this impact.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement refers to gas prices \"in 2024\" and the ongoing \"disparity\" that \"undermines\" competitiveness, indicating a present-day and ongoing risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-007",
+            "quote": "The Group companies proactively manage their purchases of CO2 emission allowances. Due to significant cyclical changes with resulting revisions to the companies’ production plans, including CO2 emissions, there is a strong need to adjust the volume of allowances to redeem the CO2 emissions for 2024. The companies are also selling their existing allowances repurchasing predefined volumes to secure additional financing for day-to-day operations.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 102, Section 6.2 Significant external and internal growth factors",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "While not directly about energy input costs, CO2 emission allowances are a significant cost component for energy-intensive industries like Grupa Azoty, directly impacting the overall cost of production. The proactive management and the need to 'adjust the volume of allowances' due to 'cyclical changes' and 'revisions to the companies’ production plans' indicate that these costs are a material business concern, which can be considered an indirect energy input cost.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The discussion of 'proactively manage' and 'strong need to adjust' implies a challenge or threat that requires active management to mitigate negative impacts on operations and financing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'CO2 emission allowances' and 'additional financing for day-to-day operations', indicating financial implications, but does not provide specific monetary values for these costs.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet refers to 'CO2 emissions for 2024' and ongoing management activities, indicating a present-day and continuous concern."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99918-008",
+            "quote": "At the same time, the Group is faced with additional strategic roadblocks posed by today’s unstable macroeconomic conditions and volatile business climate, as well as high costs of chemical production in Europe and inflated feedstock prices.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 49, Section 4.1",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that \"high costs of chemical production in Europe and inflated feedstock prices\" are \"strategic roadblocks.\" Given that energy is a primary feedstock and cost driver for chemical production, this directly identifies high energy input costs as a significant risk (roadblock) to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The term \"strategic roadblocks\" clearly frames high costs and inflated feedstock prices as significant challenges or threats hindering the Group's strategic objectives and growth.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure identifies \"high costs of chemical production\" and \"inflated feedstock prices\" as strategic roadblocks, which are inherently financial impacts. However, it does not provide specific monetary values or explicitly state the financial materiality of these costs.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The phrase \"today’s unstable macroeconomic conditions\" and \"volatile business climate\" indicates a present-day context, while \"strategic roadblocks\" implies ongoing and future challenges."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          },
+          {
+            "snippet_id": "99918-009",
+            "quote": "Faced with gas market volatility, many producers decided to revise their strategies, primarily by reducing the operating rates for their production units or completely halting production until the prices of the ‘blue fuel’ stabilise again.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 59, Section 5.2",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet describes how \"gas market volatility\" (implying high and unpredictable costs) leads producers to \"reducing the operating rates for their production units or completely halting production.\" This directly demonstrates that high energy input costs are a risk to business operations and production continuity.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The description of producers \"reducing operating rates\" or \"halting production\" due to \"gas market volatility\" clearly frames this as a negative operational and business consequence.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes operational impacts (reduced or halted production) due to gas market volatility, which directly affects revenue and profitability. However, it does not provide specific monetary figures or explicitly state the financial materiality of these production curtailments.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The statement describes past decisions (\"many producers decided\") and ongoing market conditions (\"gas market volatility\") that influence current and future production strategies, making it a multiple or unclear timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-011",
+            "quote": "This may result in the need to purchase gas in summer at significantly higher prices, which would significantly raise the cost of energy generated from gas-fired power plants, Putting European manufacturers at a disadvantage compared to US and Chinese producers, who have access to much cheaper energy sources.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 74, Section 5.2",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly warns of \"significantly higher prices\" for gas, which \"would significantly raise the cost of energy generated from gas-fired power plants,\" leading to \"European manufacturers at a disadvantage.\" This directly identifies rising energy input costs as a future risk to competitiveness.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language \"may result in,\" \"significantly higher prices,\" \"raise the cost,\" and \"at a disadvantage\" clearly frames this as a potential negative future outcome or threat.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses \"significantly higher prices\" and \"raise the cost of energy,\" indicating a financial impact. However, it does not provide specific monetary figures or explicitly state the financial materiality of this potential cost increase.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of \"may result in\" and \"would significantly raise\" indicates a forward-looking assessment of potential future events and their consequences."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-012",
+            "quote": "Forecasts indicate a slowdown in demand growth in 2025. The key growth drivers will be the industrial and energy sectors. Rising LNG demand from China and India will be offset by declining demand from Japan, South Korea, and Taiwan. Europe, with consumption close to last year’s level, will require higher LNG volumes due to lower post-winter stock levels and reduced deliveries from Russia. Geopolitical factors will play a significant role in the gas market, including developments in the Middle East, as well as the escalation or de-escalation of the Russia-Ukraine conflict. The new US tariffs announced on 2 April (suspended for 90 days, with the exception of China) are unlikely to cause major disruptions on the LNG market as global demand for LNG has become more inflexible over the past three years. The key buyers of US LNG, such as the EU, Japan, and South Korea, may consider retaliatory duties in response to the new US trade policy; however, it is unlikely that LNG will be included. Middle Eastern producers may seek European customers as Asian buyers shift their focus to imports from the USA.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 72, Section 5.2 Market overview",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet is a neutral market forecast from the 'Market overview' section. It describes external factors but does not frame them as a risk to the company itself. This fits the definition of UNCLEAR, as the topic is acknowledged but not characterized as a business risk. FULL_DISCLOSURE is incorrect as there is no risk framing or statement of materiality.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The discussion of 'higher LNG volumes' and 'geopolitical factors' influencing the gas market, which is a 'high risk' for the company, frames these as potential threats to stable and affordable energy supply.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses market dynamics and geopolitical factors that will influence gas prices but does not provide specific financial figures or explicitly state the financial materiality of these future impacts on the company.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet explicitly uses 'Forecasts indicate', 'in 2025', and 'will require', clearly indicating a forward-looking perspective on energy costs."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet is a neutral market forecast from the 'Market overview' section. It describes external factors but does not frame them as a risk to the company itself. This fits the definition of UNCLEAR, as the topic is acknowledged but not characterized as a business risk. FULL_DISCLOSURE is incorrect as there is no risk framing or statement of materiality.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      }
+    ],
+    "summary_statistics": {
+      "total_questions_analyzed": 13,
+      "total_disclosure_snippets": 34,
+      "classification_distribution": {
+        "FULL_DISCLOSURE": 3,
+        "PARTIAL": 11,
+        "UNCLEAR": 17,
+        "NO_DISCLOSURE": 3
+      },
+      "categories_covered": [
+        "Environmental Risk",
+        "Human Health Risk",
+        "Regulatory/Financial Risk",
+        "Market/Business Risk"
+      ]
+    },
+    "metadata": {
+      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+    }
+  }
+}

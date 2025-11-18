@@ -1,0 +1,931 @@
+{
+  "company": "SQM",
+  "year": 2024,
+  "version": "team-reviewed",
+  "verified": {
+    "company_name": "SQM",
+    "fiscal_year": 2024,
+    "version": "team-reviewed",
+    "model_used": "team-reviewed",
+    "analysis_date": "2025-11-17T18:34:19.473Z",
+    "schema_version": "team-reviewed-v1",
+    "analysis_results": [
+      {
+        "question_id": "99902",
+        "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99902-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "UNCLEAR",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99903",
+        "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+        "category": "Human Health Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99903-002",
+            "quote": "Our iodine product presents the following environmental hazards per the Globally Harmonized System of Classification and Labeling of Chemicals (GHS): • Category 4 acute toxicity, • Category 2 eye irritation, • Category 2 skin irritation, • STOT SE category 3, STOT RE-1, • Category 1 water toxicity. We also note that products classified as hazardous are subjected to a chemical safety assessment. In some cases, depending on the product, the assessment is performed on its components. Products classified as not hazardous are not subject to chemical safety assessments.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 148, Specialty Plant Nutrition, Iodine, Potassium and Industrial Chemicals",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet lists product hazards as per GHS classification and mentions that hazardous products undergo safety assessments. This is an acknowledgment of the topic, but it is not framed as a risk to the business. Therefore, the classification should be UNCLEAR, not PARTIAL.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The disclosure provides a factual list of hazards and describes the assessment process for hazardous products, presenting the information in a neutral, descriptive manner.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet details specific product hazards and the assessment process, but it does not include any explicit financial figures or statements regarding the financial materiality of these human health problems to the business.",
+              "timeframe": "Current",
+              "timeframe_justification": "The disclosure describes current characteristics of the iodine product and ongoing assessment practices ('presents the following hazards,' 'are subjected to a chemical safety assessment')."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet lists product hazards as per GHS classification and mentions that hazardous products undergo safety assessments. This is an acknowledgment of the topic, but it is not framed as a risk to the business. Therefore, the classification should be UNCLEAR, not PARTIAL.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99903-003",
+            "quote": "All our products are labeled in accordance with local and international regulations. The labels provide infor-mation such as the product’s place of origin, contents, safe use and disposal, and other aspects per relevant regulations. The company also follows the standards of the Globally Harmonized System of Classification and Labeling of Chemicals (GHS) and monitors regulatory developments to identify substances of high concern to help the customer make an informed decision.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 140, Environmentally Responsible Products",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes compliance and information disclosure procedures (labeling, monitoring substances). It acknowledges potential hazards ('substances of high concern') but does not frame them as a risk to the business, which is a requirement for a PARTIAL classification. The correct classification is UNCLEAR, as the topic is acknowledged but not characterized as a business risk.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language focuses on compliance with regulations and providing information to customers, indicating a neutral, factual approach to managing product characteristics.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses regulatory compliance and informing customers about product hazards, but does not provide any explicit financial figures or statements about financial materiality related to human health problems from products.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet describes ongoing practices ('are labeled,' 'monitors regulatory developments') that are currently in effect."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes compliance and information disclosure procedures (labeling, monitoring substances). It acknowledges potential hazards ('substances of high concern') but does not frame them as a risk to the business, which is a requirement for a PARTIAL classification. The correct classification is UNCLEAR, as the topic is acknowledged but not characterized as a business risk.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99903-004",
+            "quote": "Given the nature and use of the products we sell, we do not have a hazardous substances management procedure focused on generating alternatives that have a lower impact on human beings or the environment. However, we do take steps to keep information regarding product hazards and risks up to date, and provide updated communications on hazards through safety data sheets and labeling.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 146, Product Health and Safety Assessment and Labeling",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet acknowledges 'product hazards and risks' to humans but does not frame this as a risk to the business itself (e.g., financial, reputational, or operational risk). It describes product stewardship actions, which fits the 'UNCLEAR' definition: topic acknowledged but not characterized as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'product hazards and risks' and the need to 'keep information... up to date' and provide 'communications on hazards' frames this as a potential negative consequence or threat associated with their products.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses product hazards and communication efforts but does not provide any explicit financial values or statements about financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement refers to ongoing efforts to keep information up-to-date and provide communications, indicating a present-day and continuous relevance of product hazards."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet acknowledges 'product hazards and risks' to humans but does not frame this as a risk to the business itself (e.g., financial, reputational, or operational risk). It describes product stewardship actions, which fits the 'UNCLEAR' definition: topic acknowledged but not characterized as a business risk.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99904",
+        "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99904-001",
+            "quote": "c. Carbon tax: The risk stems from increased costs due to carbon taxes on our fertilizers, such as the green tax in Chile or the Carbon Border Adjustment Mechanism (CBAM). Optimistic scenario - Net Zero 2050: Forecasts the highest prices, US$ 129/tCO2e in 2030, and reaching US$ 1,665/tCO2e in 2060, reflecting rapid and deep decarbonization, with strong pressure on carbon-inten-sive industries. Conservative scenario - Nationally Determined Contributions: Carbon prices are significantly lower, reaching only US$ 69/tCO2e in 2060, reflecting more moderate national commitments, similar to the current situation. Pessimistic Scenario - Current Policies: No carbon price is projected, implying that current policies will not drive meaningful carbon regulation in this scenario. Mitigation measures: As this risk could begin to impact in 2027, the first thing we did was to implement a methodology to quantify the CBAM footprint for the transitional reporting period between 2023 and 2025. In addition, this risk can be transformed into an opportunity, as we are evaluating investments in more efficient equipment to reduce our carbon footprint. These types of initiatives are being evaluated in our Decarbonization Plan.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 187, Scenario Analysis",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'increased costs due to carbon taxes' (green tax in Chile, CBAM for fertilizers) as a risk. It provides quantified future carbon prices under different scenarios (US$129/tCO2e in 2030, US$1,665/tCO2e in 2060), demonstrating a clear assessment of financial materiality. It also outlines mitigation measures and frames the risk as a potential opportunity, fulfilling the criteria for full disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly states 'The risk stems from increased costs due to carbon taxes' and discusses 'mitigation measures,' clearly framing it as a risk. It also mentions the risk 'can be transformed into an opportunity,' indicating a dual perspective.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides explicit, quantified financial values for potential future carbon prices ('US$ 129/tCO2e in 2030,' 'US$ 1,665/tCO2e in 2060,' 'US$ 69/tCO2e in 2060'), directly linking the risk to specific monetary impacts.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet discusses future carbon prices for 2030 and 2060 ('Forecasts the highest prices,' 'reaching'), indicating a forward-looking timeframe. It also mentions the risk 'could begin to impact in 2027' and mitigation efforts for '2023 and 2025,' covering multiple time horizons."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99904-002",
+            "quote": "Climate change transition risks mainly impact our Plant Nutrition area, especially in the fertilizer market. Regulatory changes coming from the European Union, as well as the payment of carbon taxes in Chile, have a direct impact on these products. The Carbon Border Adjustment Mechanism (CBAM) requires us to declare the carbon footprint of our fertilizer products for tax purposes in the European Union in the coming years. In addition, Chilean green tax regulations impose a tax on stationary (fixed) sources such as boilers and/or turbines that, individually or as a whole, emit: • 100 or more metric tons per year of particulate matter (PM), • o 25,000 or more metric tons per year of carbon dioxide (CO2). The latter regulation requires us to pay a green tax on Coya Sur's nitrate produc-tion. To adapt to these changes, we have developed a methodology for measuring our carbon footprint more accurately and then implement technologies to reduce emissions. Complying with these regulations not only helps us avoid penalties, but also strengthens our competitiveness in the fertilizer industry. It can also attract customers and partners who value responsible and sustainable practices.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly identifies carbon costs as a business risk, detailing both the EU's Carbon Border Adjustment Mechanism (CBAM) impacting fertilizer products (customer use) and Chile's green tax on direct operations. It states these 'have a direct impact on these products' and mentions avoiding 'penalties' and strengthening 'competitiveness,' clearly linking carbon costs to financial materiality and business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language clearly identifies 'transition risks' and 'regulatory changes' that 'have a direct impact' and can lead to 'increased costs' and 'penalties,' framing carbon costs as a significant business threat.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure explicitly mentions 'increased costs due to carbon taxes,' 'tax purposes,' and avoiding 'penalties,' directly linking the risk to financial consequences, even without specific monetary values in this particular sentence.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet discusses 'regulatory changes coming' and CBAM requirements 'in the coming years' (forward-looking), alongside existing Chilean green tax regulations ('requires us to pay') and ongoing adaptation efforts ('have developed a methodology,' 'implement technologies') (present day)."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "The source text for both snippets is 'N/A', and there is a conflict between v3's original classification ('FULL_DISCLOSURE') and its supporting justification, which better aligns with a 'PARTIAL' classification. Review of the original source document is needed to confirm.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "YES",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99904-003",
+            "quote": "Our emissions are not covered by a tax or cap & trade. However, there is a carbon tax in Chile for stationary sources (turbines and/or boilers) of US$ 5/tCO2. We are already seeing changes following the adjustment of the tax threshold for facilities with equipment with more than 50 thermal MW of installed capacity. Based on this criterion, SQM Iodine Plant Nutrition paid approximately ThUS$ 410 in 2024 for emissions from the Coya Sur boiler. Monitoring GHG activity allows us to anticipate and mitigate risks in the event of possible increases in the scope of the carbon tax.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 210, Greenhouse Gases",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. The snippet identifies a cost paid and frames it as a risk, but it does not explicitly state that this risk is financially material to the business. The presence of a dollar amount alone does not meet the criteria for FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The mention of 'carbon tax' and 'paid approximately ThUS$ 410' clearly frames this as a negative financial consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "Explicit monetary values ('US$ 5/tCO2' and 'ThUS$ 410') are provided, directly quantifying the financial impact of the carbon tax.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The payment 'in 2024' indicates a backward-looking and present-day impact, while 'possible increases in the scope of the carbon tax' points to a forward-looking aspect."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification should be PARTIAL. The snippet identifies a cost paid and frames it as a risk, but it does not explicitly state that this risk is financially material to the business. The presence of a dollar amount alone does not meet the criteria for FULL_DISCLOSURE.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99904-005",
+            "quote": "The main risks related to climate change that we identified fall into two categories: physical risks and transition risks. Physical climate change risks are derived from acute or chronic climate impacts on production activities. Transition risks arise from the need to adapt business models to a decarbonized economy. These include regulatory, market, technological or reputational risks arising from failure to adapt to this new environment.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 183, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies 'transition risks' as a main category of climate change risks, explicitly including 'regulatory, market, technological or reputational risks arising from failure to adapt to this new environment.' This clearly frames carbon costs (as a regulatory risk) as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The text explicitly labels 'transition risks' and lists 'regulatory, market, technological or reputational risks' as potential negative consequences for the business, clearly framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "While it identifies regulatory risks, it does not provide specific financial figures or a definitive statement of financial materiality in this particular snippet.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The description of 'transition risks' implies future adaptation needs and ongoing challenges, making it forward-looking, but also present-day as the need to adapt is current."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99907",
+        "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99907-001",
+            "quote": "Our iodine product presents the following environmental hazards per the Globally Harmonized System of Classification and Labeling of Chemicals (GHS): • Category 4 acute toxicity, • Category 2 eye irritation, • Category 2 skin irritation, • STOT SE category 3, STOT RE-1, • Category 1 water toxicity.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 148, Specialty Plant Nutrition, Iodine, Potassium and Industrial Chemicals",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that the company's iodine product has 'Category 1 water toxicity' according to GHS. This acknowledges a hazard related to water contamination from its product. However, it does not explicitly link this to 'leaching of applied products' or frame it as a specific 'risk to the business' in terms of financial or material impact, leaving the business implication unclear.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The disclosure provides a factual list of environmental hazards for its iodine product, presenting the information in a neutral, descriptive manner without explicitly framing it as a business risk or opportunity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet details a product hazard related to water toxicity but does not include any explicit financial figures or statements about the financial materiality of this hazard to the business.",
+              "timeframe": "Current",
+              "timeframe_justification": "The disclosure describes current characteristics of the iodine product ('presents the following environmental hazards'), indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99908",
+        "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99908-001",
+            "quote": "Organic potassium chloride is marketed as Allganic® maKro 60. The product is granulated, has 60% potas-sium and is certified by the Organic Materials Review Institute (OMRI) as meeting the standards required for organic agriculture.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 163, Potassium",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that one of the company's products, Allganic® maKro 60, is 'certified by the Organic Materials Review Institute (OMRI) as meeting the standards required for organic agriculture.' This indicates that the company views organic farming as a market segment it serves and participates in, rather than a source of 'demand destruction' or a risk to its business. The disclosure does not frame organic farming as a threat.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The language highlights the company's product's suitability for 'organic agriculture,' framing organic farming as a market segment and an opportunity for its products, rather than a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes a product's certification for organic agriculture but does not provide any explicit financial figures or statements about financial materiality related to demand destruction from organic farming.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet describes an existing product and its current certification ('is marketed,' 'is certified'), indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99909",
+        "question_text": "Does the company disclose whether it thinks that eutrophication from nutrient runoff when the company's products are applied by farmers is a risk to the business? Do not consider factory sources of pollution.",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99909-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "UNCLEAR",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99910",
+        "question_text": "Does the company disclose whether it thinks that disposal of chemical waste, such as gypstacks, from the production of phosphate fertiliser is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99910-001",
+            "quote": "No disclosure found in the document.",
+            "source": "Merged evidence",
+            "source_versions": [],
+            "classification": "UNCLEAR",
+            "classification_justification": "",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "",
+              "financial_type": "Non-Financial",
+              "financial_justification": "",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": ""
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99911",
+        "question_text": "Does the company disclose whether it thinks that restoration of mining sites is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99911-003",
+            "quote": "All SQM production facilities have closure plans that have been approved by the respective authorities. These plans are based on criteria and measures that meet current regulations.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 193, Oversight, Compliance Programs and Environmental Fines",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states that the company has approved closure plans, which is a neutral statement of compliance. It does not characterize site closure as a risk to the business, which is a requirement for a PARTIAL classification. The analyst incorrectly inferred risk where none was stated.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The mention of 'closure plans' and adherence to 'current regulations' implies a necessary obligation and a potential challenge if not managed, thus framing it as a risk that needs to be addressed.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses the existence of closure plans and regulatory compliance but does not provide any specific financial figures or a statement regarding the financial materiality of these plans.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "Closure plans are typically developed in the present for future execution, indicating a forward-looking timeframe for the actual restoration activities, while the planning and approval are present day."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet states that the company has approved closure plans, which is a neutral statement of compliance. It does not characterize site closure as a risk to the business, which is a requirement for a PARTIAL classification. The analyst incorrectly inferred risk where none was stated.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99912",
+        "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99912-004",
+            "quote": "In general, chemical products sold in Europe are subject to Regulation (CE) 1907/2006 on registration, evaluation, authorization and restriction of chemical substances and blends and Regulation (CE) 1272/2008 on classification, labeling and packaging of substances and blends.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 147, Specialty Plant Nutrition, Iodine, Potassium and Industrial Chemicals",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet is a neutral statement of fact about the regulatory environment. It acknowledges the topic of product restrictions but does not frame it as a risk to the business, which fits the definition of UNCLEAR.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The mention of 'restriction of chemical substances' within regulatory frameworks clearly frames this as a potential negative consequence or threat to the business, thus a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet identifies a regulatory risk related to product restrictions but does not provide any explicit financial amounts or a statement about the financial materiality of this risk.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The regulation is current ('are subject to'), but the 'restriction' is a potential future event or ongoing condition, making the timeframe forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet is a neutral statement of fact about the regulatory environment. It acknowledges the topic of product restrictions but does not frame it as a risk to the business, which fits the definition of UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99915",
+        "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99915-003",
+            "quote": "Legal Risks... More time needed to approve mandatory climate change/environmental reports, especially for new projects. Exposure to litigation and/or penalties due to legal non-compliance, or failure to adapt on time to new legal requirements in this area.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet identifies 'Legal Risks' including 'More time needed to approve mandatory climate change/environmental reports' and 'Exposure to litigation and/or penalties due to legal non-compliance, or failure to adapt on time to new legal requirements.' The need for approvals and adaptation to new legal requirements implies associated compliance costs, and the mention of 'penalties' highlights potential financial consequences of non-compliance, directly addressing rising compliance costs as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly labels this as 'Legal Risks' and uses terms like 'Exposure to litigation and/or penalties,' clearly framing it as a negative consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet explicitly mentions 'penalties' as a potential financial impact, but does not provide specific monetary values for these potential penalties or the costs of compliance.",
+              "timeframe": "Future",
+              "timeframe_justification": "The mention of 'new projects' and 'new legal requirements' indicates a forward-looking perspective on potential future costs and challenges."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99915-004",
+            "quote": "Transition Risks\r\nRegulatory Risks\r\nShort- and Medium-\r\nTerm\r\n• \r\nIncreased costs due to new carbon pricing mechanisms such as the EU's Carbon Border Adjustment \r\nMechanism for the fertilizer industry or the green tax in Chile. \r\n• \r\nGreater requirements to achieve greenhouse gas emission neutrality by 2050 and adapt to meet the \r\ninternational commitments assumed by the State of Chile, as stipulated in the Framework Law on Climate \r\nChange. \r\n• \r\nGreater difficulty in obtaining operating permits due to more stringent requirements in new regulations \r\nassociated with climate change.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'Increased costs due to new carbon pricing mechanisms' and 'Greater difficulty in obtaining operating permits due to more stringent requirements in new regulations' as regulatory risks. These directly relate to rising compliance costs and regulatory hurdles, clearly characterizing them as risks to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'Increased costs' and 'Greater difficulty' clearly frames these as negative consequences or threats to the business, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions 'Increased costs' and 'green tax' but does not provide specific quantifiable financial values for these rising costs, only qualitative statements of financial impact.",
+              "timeframe": "Future",
+              "timeframe_justification": "The risks are explicitly categorized as 'Short- and Medium-Term', indicating future or ongoing potential impacts."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99916",
+        "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99916-001",
+            "quote": "Reputational Risks... Stigmatization of the sector... Increased concerns among stakeholders or negative comments from stakeholders.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet directly identifies 'Reputational Risks' including 'Stigmatization of the sector' and 'Increased concerns among stakeholders or negative comments from stakeholders.' This directly aligns with the concept of negative public perception, which could arise from issues like chemical-intensive agriculture, and explicitly frames it as a risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly labels these as 'Reputational Risks' and uses terms like 'Stigmatization' and 'negative comments,' clearly framing them as negative consequences or threats to the business's image and relationships.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "While reputational risks can lead to financial impacts (e.g., decreased sales), the snippet does not provide any explicit financial figures or statements about the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The risks described ('Stigmatization,' 'Increased concerns') are ongoing and can manifest in the present day, but also have forward-looking implications for the company's long-term reputation and market standing."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99917",
+        "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99917-001",
+            "quote": "Legal Risks... Exposure to litigation and/or penalties due to legal non-compliance, or failure to adapt on time to new legal requirements in this area.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly identifies 'Exposure to litigation and/or penalties due to legal non-compliance' as a 'Legal Risk.' While presented in the context of climate change/environmental reports, the general mention of 'litigation' covers the essence of class action lawsuits and legal challenges, and 'penalties' indicates potential financial consequences, thus acknowledging this as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly labels this as 'Legal Risks' and uses terms like 'Exposure to litigation and/or penalties,' clearly framing it as a negative consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet explicitly mentions 'penalties' as a potential financial impact, but does not provide specific monetary values for these potential penalties or the costs of litigation.",
+              "timeframe": "Future",
+              "timeframe_justification": "The mention of 'new legal requirements' and 'failure to adapt on time' indicates a forward-looking perspective on potential future legal challenges."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99917-003",
+            "quote": "No breach of regulations or voluntary codes has been identified with regard to the impacts of products and services on health and safety.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 148, Specialty Plant Nutrition, Iodine, Potassium and Industrial Chemicals",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet states that 'No breach of regulations or voluntary codes has been identified with regard to the impacts of products and services on health and safety.' While this is a positive backward-looking statement about current compliance, it does not explicitly address the *risk* of future class action lawsuits or legal challenges from health/environmental claims. It reports on past performance rather than future potential risks.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The statement is factual and reports on a positive outcome (no identified breaches), thus framing it in a neutral light regarding current product safety performance.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet explicitly states 'No breach' and does not mention any financial amounts or discuss financial materiality.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The statement refers to past identification efforts ('has been identified'), making it a backward-looking disclosure about past performance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "NO_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99918",
+        "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99918-001",
+            "quote": "Transition Risks... Increased energy transition costs.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly identifies 'Increased energy transition costs' as a 'Transition Risk.' This directly addresses the concern of rising energy input costs, framing it as a negative consequence or threat to the business in the context of transitioning to a decarbonized economy.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly labels this as a 'Transition Risk' and uses the term 'Increased costs,' clearly framing it as a negative consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet explicitly mentions 'Increased energy transition costs' as a financial impact, but does not provide specific monetary values for these potential increases.",
+              "timeframe": "Future",
+              "timeframe_justification": "The term 'energy transition costs' implies future investments and changes, making this a forward-looking risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99918-002",
+            "quote": "Market Risks... Increased production costs due to greater costs of resources such as energy and/or water.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet directly identifies 'Increased production costs due to greater costs of resources such as energy and/or water' as a 'Market Risk.' This is a clear and explicit disclosure that high energy input costs are considered a risk to the business, directly linking resource costs to production costs.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly labels this as a 'Market Risk' and uses the term 'Increased production costs,' clearly framing it as a negative consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet explicitly mentions 'Increased production costs' due to 'greater costs of resources such as energy,' indicating a financial impact, but does not provide specific monetary values for these potential increases.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The risk of 'Increased production costs' due to 'greater costs of resources' is an ongoing concern that can manifest in the present day and continue into the future, making it relevant for multiple timeframes."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99918-003",
+            "quote": "Transition Risks\r\nMarket Risks\r\nMedium- and Long-\r\nTerm\r\n• \r\nIncrease in our customers’ ESG expectations \r\n• \r\nIncreased production costs due to greater costs of resources such as energy and/or water.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet directly identifies 'Increased production costs due to greater costs of resources such as energy and/or water' as a market risk. This explicitly states that high energy input costs are a risk to the business due to their impact on production costs.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'Increased production costs' clearly frames this as a negative consequence or threat to the business's financial performance, aligning with a 'Risk' framing.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions 'Increased production costs' which indicates a financial impact, but it does not provide any specific monetary values or explicit statements of financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The risk is explicitly categorized as 'Medium- and Long-Term,' indicating potential future impacts."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      }
+    ],
+    "summary_statistics": {
+      "total_questions_analyzed": 13,
+      "total_disclosure_snippets": 22,
+      "classification_distribution": {
+        "FULL_DISCLOSURE": 1,
+        "PARTIAL": 4,
+        "UNCLEAR": 17,
+        "NO_DISCLOSURE": 0
+      },
+      "categories_covered": [
+        "Environmental Risk",
+        "Human Health Risk",
+        "Regulatory/Financial Risk",
+        "Market/Business Risk"
+      ]
+    },
+    "metadata": {
+      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+    }
+  }
+}

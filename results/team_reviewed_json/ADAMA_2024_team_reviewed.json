@@ -1,0 +1,1384 @@
+{
+  "company": "ADAMA",
+  "year": 2024,
+  "version": "team-reviewed",
+  "verified": {
+    "company_name": "ADAMA",
+    "fiscal_year": 2024,
+    "version": "team-reviewed",
+    "model_used": "team-reviewed",
+    "analysis_date": "2025-11-17T18:34:19.473Z",
+    "schema_version": "team-reviewed-v1",
+    "analysis_results": [
+      {
+        "question_id": "99901",
+        "question_text": "Does the company disclose whether it thinks that agricultural crops developing resistance to its pesticides, which are applied by the company's customers to cropland, is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99901-001",
+            "quote": "Fungicide project A AI Production to achieve pipeline increase and resistance management Commercial Phase Process improvement To increase the Company’s pipeline and expand future portfolio",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 29, Section IV. Main Business Analysis, 4. R&D Investment",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet describes an R&D project focused on 'resistance management', indicating that the company recognizes crop resistance as an issue requiring active mitigation and investment. While it doesn't explicitly state it as a 'risk to the business' or discuss financial materiality, the commitment to 'resistance management' in R&D implies it is a business concern that needs to be addressed to maintain product efficacy and market position.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The mention of 'resistance management' within an R&D project implies an effort to mitigate a potential negative impact (resistance), thus framing it as a 'Risk' that needs to be addressed to secure future business opportunities.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes an R&D project and its objectives but does not include any specific financial amounts or statements regarding the financial materiality of resistance management.",
+              "timeframe": "Future",
+              "timeframe_justification": "The project aims 'to increase the Company’s pipeline and expand future portfolio', clearly indicating a focus on future developments and anticipated challenges, making it 'Forward-looking'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "R&D program that is using AI to help with pesticide resistance management",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99901-002",
+            "quote": "These innovative products are designed to provide farmers with better solutions to the challenges they face, including weeds, insects and disease, increasing resistance and insufficient pest control related to the use of genetically modified seeds.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 38, Section XI (II) Development strategy of the Company",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet acknowledges 'increasing resistance' as a challenge for farmers, but it does not characterize this as a risk to the company's business. Instead, it is framed as a market driver for the company's 'innovative products'. This fits the definition of UNCLEAR (topic acknowledged but not characterized as a business risk), not PARTIAL.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The language emphasizes 'challenges they face' and the need for 'better solutions', framing increasing resistance as a negative condition that the business must address through its product offerings.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a challenge and the company's strategic response (innovative products) but does not provide any specific financial figures, costs, or a statement about the financial materiality of this risk.",
+              "timeframe": "Current",
+              "timeframe_justification": "The disclosure uses present tense ('are designed to provide', 'challenges they face', 'increasing resistance'), indicating an ongoing situation and current strategic focus."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet acknowledges 'increasing resistance' as a challenge for farmers, but it does not characterize this as a risk to the company's business. Instead, it is framed as a market driver for the company's 'innovative products'. This fits the definition of UNCLEAR (topic acknowledged but not characterized as a business risk), not PARTIAL.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99903",
+        "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+        "category": "Human Health Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99903-001",
+            "quote": "Product liability Product and producer liability are a risk for the Group. Regardless of their prospects or actual results, product liability lawsuits might involve considerable costs as well as tarnish the Group's reputation, thus potentially impacting its profits. The Group has a third-party and defective product liability insurance cover. However, there is no certainty that the scope of insurance cover is sufficient. Any future product liability lawsuit or series of lawsuits could materially affect the Group’s operations and results, should the Group lose the lawsuit or should its insurance cover not suffice or apply in a particular instance.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. Outlook of the Company’s future development, (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states that a product liability lawsuit 'could materially affect the Group’s operations and results.' According to the classification criteria, an explicit statement of financial materiality, even without specific dollar amounts, qualifies for FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement 'Product and producer liability are a risk for the Group' and the description of 'considerable costs' and 'tarnish the Group's reputation' clearly present the topic as a source of potential harm, aligning with a 'Risk' framing.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure states that lawsuits 'might involve considerable costs' and 'could materially affect the Group’s operations and results', acknowledging financial impact and materiality without providing specific monetary values. This fits the 'Partial-type' definition.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrases 'might involve considerable costs' and 'Any future product liability lawsuit' indicate potential future events and ongoing exposure, making the timeframe 'Forward-looking'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet states that a product liability lawsuit 'could materially affect the Group’s operations and results.' According to the classification criteria, an explicit statement of financial materiality, even without specific dollar amounts, qualifies for FULL_DISCLOSURE.",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99903-002",
+            "quote": "Furthermore, the Group may be the target of bodily injury claims and property damage claims caused by exposure to hazardous materials, which are largely covered under the Group’s insurance policies.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet directly states that the Group 'may be the target of bodily injury claims' caused by 'hazardous materials' (which include its products), clearly identifying this as a risk. The mention of 'insurance policies' implies financial implications, but no specific amounts or materiality statement are provided.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrasing 'may be the target of bodily injury claims' presents this as a potential negative event or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'bodily injury claims' and that these are 'largely covered under the Group’s insurance policies', indicating financial exposure and mitigation without providing specific monetary values.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of 'may be the target' indicates a potential future event or ongoing exposure, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99903-003",
+            "quote": "Environmental, health and safety legislation, standards, regulation and exposure Many aspects of the Group's operations are strictly regulated, including in relation to production and trading, and particularly in relation to the storage, treatment, manufacturing, transport, usage and disposal of its products, their ingredients and byproducts, some of which are considered hazardous. The Group's activities involve hazardous materials. Defective storage or handling of hazardous materials may cause harm to human life or to the environment in which the Group operates.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 43, Section XI. Outlook of the Company’s future development, (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that 'Defective storage or handling of hazardous materials may cause harm to human life' within the context of the Group's operations. This directly links the company's activities and products (hazardous materials) to potential human health problems, identifying it as a risk, although it does not specify financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'may cause harm to human life' clearly presents the topic as a potential negative consequence or threat arising from the company's operations, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies a potential for 'harm to human life' but does not provide any explicit financial figures or statements about the financial materiality of such harm.",
+              "timeframe": "Future",
+              "timeframe_justification": "The statement 'may cause harm' indicates a potential future event or ongoing exposure, making the timeframe 'Forward-looking'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Doesn't mention a risk to the business",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99904",
+        "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99904-001",
+            "quote": "The Group is evaluating both transition and physical risks related to climate change. Physical chronic and acute risks to ADAMA production assets, activities and products are being evaluated with the PCRAM methodology. The Company has been assessing the transition risks, including the carbon taxes. Additional transition risks include the adaptation of novel technologies aimed at reducing carbon emissions.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that the company 'has been assessing the transition risks, including the carbon taxes', directly identifying carbon costs as a risk. It also links these risks to 'ADAMA production assets, activities and products', covering both direct operations and product-related impacts. However, it does not provide specific financial figures or a statement of financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly uses the term 'transition risks' and lists 'carbon taxes' as part of these risks, clearly framing it as a potential negative impact or threat.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions 'carbon taxes' as a risk being assessed but does not provide any specific financial amounts, costs, or an explicit statement about the financial materiality of these taxes.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrases 'is evaluating' and 'has been assessing' indicate that this is an ongoing activity and a current concern for the company."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99904-002",
+            "quote": "In addition, regarding products that are exported to Europe, the Group may be subject to the EU Carbon Border Adjustment Mechanism (CBAM). As of this date, the Group’s products are not subject to the first phase of the CBAM.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies the 'EU Carbon Border Adjustment Mechanism (CBAM)' as a potential future regulatory cost for its 'products that are exported to Europe'. This directly links carbon costs from product-related activities (export) to a business risk. It notes that products are not currently subject to the first phase, but the potential for future subjection is a risk. No financial figures or materiality statement are provided.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement that the Group 'may be subject to' CBAM presents this as a potential negative regulatory development or threat that could impose costs.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions the 'EU Carbon Border Adjustment Mechanism (CBAM)' as a potential future cost mechanism but does not provide any specific financial amounts or an explicit statement about its financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of 'may be subject to' indicates a potential future event or condition, making this disclosure forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99906",
+        "question_text": "Does the company disclose whether it thinks that factory workplace hazards including chemical exposure during production of pesticides is a risk to the business?",
+        "category": "Human Health Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99906-001",
+            "quote": "Environmental, health and safety legislation, standards, regulation and exposure Many aspects of the Group's operations are strictly regulated, including in relation to production and trading, and particularly in relation to the storage, treatment, manufacturing, transport, usage and disposal of its products, their ingredients and byproducts, some of which are considered hazardous. The Group's activities involve hazardous materials. Defective storage or handling of hazardous materials may cause harm to human life or to the environment in which the Group operates.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 43, Section XI. Outlook of the Company’s future development, (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that 'Defective storage or handling of hazardous materials may cause harm to human life' within the context of the Group's operations. This directly identifies a human health risk arising from factory workplace hazards, including chemical exposure during production, although it does not specify financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'may cause harm to human life' due to 'hazardous materials' in 'Group's activities' clearly presents the topic as a potential negative consequence or threat, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies a potential for 'harm to human life' but does not provide any explicit financial figures or statements about the financial materiality of such harm.",
+              "timeframe": "Future",
+              "timeframe_justification": "The statement 'may cause harm' indicates a potential future event or ongoing exposure, making the timeframe 'Forward-looking'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Mentions the topic but not as a risk",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99906-002",
+            "quote": "The Company’s safety performance has been maintained at a sound level with no material casualty occurred during the reporting period.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 89, Section V - Environment and Social Responsibilities, II. Social Responsibilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet reports on the company's 'safety performance' and states 'no material casualty occurred during the reporting period'. This implies that casualties are a recognized risk that the company actively manages and monitors, thus acknowledging factory workplace hazards as a business concern. It does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "Reporting on 'safety performance' and the absence of 'material casualty' indicates an effort to manage and mitigate potential negative outcomes, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides a qualitative statement about safety performance ('no material casualty') but does not include any specific financial figures or statements about financial materiality.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The phrase 'during the reporting period' refers to events and performance within the current reporting year, making the timeframe 'Present day'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "\"No material casualty\" should mean full disclosure, no?",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99906-003",
+            "quote": "The Company and each of its production subsidiaries have established a full production safety responsibility system in accordance with the requirements of the Work Safety Law, based on the structure and functions of each department and various subsidiary. A safety management grid was constructed with sufficient full-time production safety personnel assigned. With production safety rules and regulations formulated, the Company has guaranteed investment in production safety funds, materials, technology and personnel and continuously improved production safety conditions through inherent safe processes.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 89, Section V - Environment and Social Responsibilities, II. Social Responsibilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet describes the establishment of a 'full production safety responsibility system' and 'guaranteed investment in production safety funds, materials, technology and personnel'. This demonstrates a clear recognition of production safety risks, including workplace hazards and chemical exposure, and a commitment to managing them, indicating it is a business risk. It does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The establishment of a 'production safety responsibility system' and 'investment in production safety funds' are proactive measures to prevent harm, indicating a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'investment in production safety funds, materials, technology and personnel' but does not provide specific financial amounts for these investments, nor does it state their financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The description of established systems and continuous improvement indicates ongoing activities and future-oriented efforts, making the timeframe 'Present day'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Mentions the topic but not as a risk",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99906-004",
+            "quote": "To strengthen risk prevention and control, it has also built a dual prevention mechanism for safety risk classification and hidden risk detection and treatment. And smart HSE application systems were configured for major hazardous source monitoring, personnel positioning, five-in-one management, electronic work permits and on-site inspection so as to improve the quality of safety production and ensure the sound performance.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 90, Section V - Environment and Social Responsibilities, II. Social Responsibilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet details specific mechanisms like 'safety risk classification', 'hidden risk detection and treatment', and 'major hazardous source monitoring'. These are direct measures to address and mitigate factory workplace hazards, including chemical exposure, clearly indicating that the company views these as business risks requiring active management. It does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'risk prevention and control', 'safety risk classification', and 'hazardous source monitoring' clearly frames the topic as a threat that needs to be managed, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes management systems and applications but does not include any specific financial figures or statements about the financial materiality of these efforts.",
+              "timeframe": "Current",
+              "timeframe_justification": "The description of 'built' mechanisms and 'configured' systems indicates ongoing operational activities, making the timeframe 'Present day'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99906-005",
+            "quote": "In terms of production processes, chemicals of less hazards replaced more hazardous ones, continuous reactions replaced the batch-based ones, and the principle of safety fundamentals were given priority by buying intermediates directly instead of operating some high-risk reactions, adopting vacuum feeding machine (PTS) and automatic feeding silo instead of manual operation, etc, which all displays an effective and efficient practice of prioritizing inherent safe. In terms of hardware, the company continuously improves and perfects the application of automation and implements a number of safety initiatives while being equipped with automatic control, alarms, interlocks, safety instrumentation systems, emergency pressure relief and other safety devices and instruments, which provide multiple protections for safe production.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 90, Section V - Environment and Social Responsibilities, II. Social Responsibilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet provides detailed examples of how the company is 'prioritizing inherent safe' practices in 'production processes' and 'hardware' to reduce 'hazards' and ensure 'safe production'. This directly addresses the mitigation of factory workplace hazards, including chemical exposure, demonstrating a clear recognition of these as business risks. It does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The detailed description of replacing 'more hazardous' chemicals, implementing 'safety initiatives', and providing 'multiple protections for safe production' clearly frames the topic as a threat requiring mitigation, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes operational and hardware improvements but does not include any specific financial figures for the costs or benefits of these initiatives, nor does it state their financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrases 'replaced more hazardous ones', 'continuously improves and perfects', and 'implements a number of safety initiatives' indicate ongoing and past actions with continuous relevance, making the timeframe 'Present day'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99906-006",
+            "quote": "In terms of safe production education and training, the Company has formulated a comprehensive annual training plan. A training network with clear focus and resources from both internal and external was formed up to cover the entire work-force. It has invested sufficient funds and manpower to continuously improve the production safety capacity of the entire workforce.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 90, Section V - Environment and Social Responsibilities, II. Social Responsibilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet highlights the company's 'safe production education and training' and investment in 'sufficient funds and manpower' to improve 'production safety capacity'. This demonstrates a proactive approach to managing workplace hazards and chemical exposure, indicating a recognized business risk. It does not state financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'safe production education and training' and 'improving the production safety capacity' is a proactive measure to prevent negative outcomes, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'invested sufficient funds and manpower' but does not provide specific financial amounts for these investments, nor does it state their financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The formulation of an 'annual training plan' and continuous improvement efforts indicate ongoing and forward-looking activities, making the timeframe 'Present day'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "A lot of these disclosures are not related to chemicals or the company's products, but this is due to the loose wording of the question.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99906-007",
+            "quote": "Administrative punishment for environmental problems during the reporting period... Adama Huifeng (Jiangsu) Ltd. Laboratories were not equipped with exhaust gas treatment facilities. Administrative Violation Fine of 30,600 RMB None Impact on the Production and Business of the Listed Company Rectification Measures Treatment facilities newly installed",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 88, Section V - Environment and Social Responsibilities, I. Major Environmental Protection Issues",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet discloses an 'Administrative punishment' and a 'Fine of 30,600 RMB' for 'Laboratories were not equipped with exhaust gas treatment facilities'. While framed as an environmental problem, the lack of exhaust gas treatment in a laboratory setting directly implies a risk of chemical exposure to workers, which is a factory workplace hazard. The fine represents a concrete financial impact, indicating materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure of an 'Administrative punishment' and a 'Fine' for a violation related to safety facilities clearly presents the topic as a negative consequence or threat to the business, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet explicitly states a 'Fine of 30,600 RMB', providing a specific monetary value directly linked to the violation, which is a financial impact. This fits the 'Financial' definition.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The 'Administrative punishment' occurred 'during the reporting period' and the 'Fine' was incurred in the past, making the timeframe 'Backward-looking'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "Just mentioning a find it received for poor business practices",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99907",
+        "question_text": "Does the company disclose whether it thinks that waterway pollution and contamination from leaching of applied products is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99907-001",
+            "quote": "Many aspects of the Group's operations are strictly regulated, including in relation to production and trading, and particularly in relation to the storage, treatment, manufacturing, transport, usage and disposal of its products, their ingredients and byproducts, some of which are considered hazardous. The Group's activities involve hazardous materials. Defective storage or handling of hazardous materials may cause harm to human life or to the environment in which the Group operates. The regulatory requirements regarding the environment, health and safety could, inter alia, include soil and groundwater clean-up requirements; as well as restrictions on the volume of the hazardous materials permitted to be stored in the Group’s facilities and type of emissions the Group is permitted to discharge into the air and water.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 43, Section XI. Outlook of the Company’s future development",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies that the 'usage and disposal of its products' can 'cause harm to human life or to the environment' and mentions 'regulatory requirements' and 'restrictions' on emissions into 'water'. This directly links product usage to potential environmental harm and regulatory risk, indicating the topic is clearly identified as a risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language emphasizes potential 'harm to human life or to the environment', 'hazardous materials', 'strictly regulated', and 'restrictions', clearly framing the issue as a threat or negative consequence for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes regulatory requirements and potential harm but does not provide any explicit financial amounts or a definitive statement about financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet discusses ongoing regulatory requirements ('are strictly regulated') and potential future harm ('may cause harm', 'could, inter alia, include'), indicating a mix of present and forward-looking aspects."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99908",
+        "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99908-002",
+            "quote": "In addition, natural and/or biological substances that attack weeds, pests and diseases are potential alternatives for the Company’s products, though as of the date of the report, their efficiency is relatively limited, and they are commercialized in a relatively small volumes.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 46, Section III.V. Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet acknowledges the existence of alternatives but does not explicitly characterize them as a business risk within the quoted text. In fact, it downplays their current impact ('efficiency is relatively limited'). According to the definitions, when a topic is acknowledged but not framed as a risk, the classification should be 'UNCLEAR'.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The snippet identifies 'potential alternatives' which, by their nature, represent a competitive threat or challenge to the company's existing products, thus framing it as a risk. The qualification about limited efficiency and small volumes is a mitigation, but the core framing is still risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'relatively small volumes' but does not provide any explicit quantifiable financial values or state whether the risk is financially material or immaterial. It focuses on qualitative aspects of the alternatives.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The phrase 'as of the date of the report' indicates a present-day assessment, while 'potential alternatives' suggests a forward-looking concern. This blend makes 'Multiple or Unclear' appropriate."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet acknowledges the existence of alternatives but does not explicitly characterize them as a business risk within the quoted text. In fact, it downplays their current impact ('efficiency is relatively limited'). According to the definitions, when a topic is acknowledged but not framed as a risk, the classification should be 'UNCLEAR'.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "I would put this as PARTIAL as using biological pesticides, which you have to assume is for organic ag, or something similar, is stated as a risk to the adoption of their products\r\n\r\nWould include this as an example of where the company doesn't see a risk materialising",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99912",
+        "question_text": "Does the company disclose whether it thinks that their products being banned from being produced or sold is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99912-001",
+            "quote": "The majority of the substances and products marketed by the Group require registration at various stages of their development, production, import, utilization and marketing, and are also subject to strict regulatory supervision by the regulatory authorities in each country. Compliance with the regulatory requirements that vary from country to country and which are becoming more stringent with time, involves significant time and costs, and rigorous compliance with individual registration requirements for each product. Noncompliance with these regulatory requirements might materially adversely affect the Group’s expenses, cost structure and profit margins, as well as penetration of its products in the relevant market, and may even lead to suspension of sales of the relevant product, and recall of those products already sold, or to legal action.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. Outlook of the Company’s future development",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states that non-compliance \"might materially adversely affect the Group’s expenses, cost structure and profit margins\". The use of the word \"materially\" is an explicit statement of financial materiality, which meets the criteria for FULL_DISCLOSURE, not PARTIAL.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language emphasizes 'strict regulatory supervision', 'noncompliance', 'materially adversely affect', 'suspension of sales', 'recall', and 'legal action', clearly framing the issue as a threat and negative consequence for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'significant time and costs' and that non-compliance 'might materially adversely affect the Group’s expenses, cost structure and profit margins', indicating a financial impact without providing specific quantified amounts or a definitive statement of financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of 'might materially adversely affect' and 'may even lead to' indicates potential future events and consequences, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet states that non-compliance \"might materially adversely affect the Group’s expenses, cost structure and profit margins\". The use of the word \"materially\" is an explicit statement of financial materiality, which meets the criteria for FULL_DISCLOSURE, not PARTIAL.",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "This is captured in another question too",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99912-002",
+            "quote": "Moreover, to the extent new regulatory requirements are imposed on existing registered products (requiring additional investment or leading to the existing registration's revocation) and/or the Group is required to compensate another company for its use of the latter's product registration data, these might amount to significant sums, considerably increasing the Group's costs and adversely affecting its results and reputation. In recent years the industry has been suffering from revocation of registration for many products around the world. This trend is particularly evident in European countries as well as in many other countries worldwide.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. Outlook of the Company’s future development",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states that the financial impact \"might amount to significant sums, considerably increasing the Group's costs and adversely affecting its results\". The phrase \"significant sums\" is an explicit statement of financial materiality, which meets the criteria for FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language highlights 'new regulatory requirements', 'registration's revocation', 'suffering from', 'significant sums', 'increasing the Group's costs', and 'adversely affecting', clearly framing the issue as a threat and negative consequence.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions that new requirements 'might amount to significant sums, considerably increasing the Group's costs', indicating a financial impact without providing specific quantified amounts or a definitive statement of financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet refers to past trends ('In recent years the industry has been suffering') and potential future impacts ('to the extent new regulatory requirements are imposed', 'might amount to'), making the timeframe multiple or unclear."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet states that the financial impact \"might amount to significant sums, considerably increasing the Group's costs and adversely affecting its results\". The phrase \"significant sums\" is an explicit statement of financial materiality, which meets the criteria for FULL_DISCLOSURE.",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99913",
+        "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99913-001",
+            "quote": "The positive impact was partially offset by the soil and water cleanup remediation costs incurred at the Company’s sites in Israel and Brazil, which newly occurred in 2024 and amounted to RMB 130 million.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 25, Section III - Performance Discussion and Analysis",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states 'soil and water cleanup remediation costs incurred at the Company’s sites in Israel and Brazil, which newly occurred in 2024 and amounted to RMB 130 million'. This is a direct financial disclosure of costs related to contaminated site restoration, demonstrating financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on 'costs incurred' and 'cleanup remediation', presenting these as negative financial impacts that offset positive effects, clearly framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides a specific monetary value of 'RMB 130 million' for remediation costs, making it a financial disclosure.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The phrase 'costs incurred... in 2024' and 'newly occurred in 2024' refers to events that happened and were completed within the reporting period, making it backward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Would be interesting to find out what this is actually referring to when it says \"positive impact\"",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99913-002",
+            "quote": "The regulatory requirements regarding the environment, health and safety could, inter alia, include soil and groundwater clean-up requirements; as well as restrictions on the volume of the hazardous materials permitted to be stored in the Group’s facilities and type of emissions the Group is permitted to discharge into the air and water. ... While the Group invests material sums in adapting its facilities and in constructing special facilities in accordance with environmental requirements, it is currently unable to assess with any certainty whether these investments (current and future) and their outcomes may satisfy current or future requirements, should these be significantly increased or changed. In addition, the Group is unable to predict with any certainty the extent of future costs and investments it may incur in order to meet the requirements of the environmental authorities in the relevant countries in which it operates since, inter alia, the Group is unable to estimate the extent of potential pollutions, their duration, the extent of the measures required to be taken by the Group in handling them, the division of responsibility among other parties and the amounts recoverable from third parties.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 43-44, Section III.V. Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies 'soil and groundwater clean-up requirements' as a regulatory requirement and explicitly states the Group's inability 'to assess with any certainty' future investments and 'to predict with any certainty the extent of future costs and investments it may incur' for these requirements. This clearly identifies the uncertainty and potential financial burden of site restoration as a risk to the business, even without specific figures.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language uses terms like 'regulatory requirements,' 'unable to assess with any certainty,' 'unable to predict with any certainty the extent of future costs,' and 'potential pollutions,' clearly framing the topic as a source of uncertainty, challenges, and potential negative consequences for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure discusses 'future costs and investments' and 'material sums' but explicitly states the inability to predict or assess these amounts with certainty. It acknowledges financial impact without providing precise quantification, making it partial-type.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet refers to 'current and future' requirements, 'future costs and investments,' and 'potential pollutions,' indicating a strong forward-looking perspective on an ongoing risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "The company states that it invests material sums in upgrading facitlities, but not specifically related to restoration of contaminated. Does this count as full disclosure?\r\n\r\nRow 28 is a duplicate but contains less information. Keep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99913-004",
+            "quote": "ADAMA takes actions to prevent soil and water pollution by these materials and treats them, if revealed. ADAMA’s plants conduct various soil surveys, risk surveys and tests with regard to treatment of the soil or ground water at the plants.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 87, Section V - Environment and Social Responsibilities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes the company's management actions ('takes actions to prevent... and treats them') but does not frame the issue as a business risk. It acknowledges the topic without characterizing it as a risk, which fits the definition of UNCLEAR.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet describes actions taken to 'prevent soil and water pollution' and 'treats them, if revealed', and mentions 'risk surveys', indicating an underlying threat that requires management, thus framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes actions and surveys but does not provide any explicit financial amounts or a definitive statement about financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The use of 'takes actions', 'treats them', and 'conduct various' indicates ongoing activities and conditions actively impacting the company as of the reporting date, making it present day."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes the company's management actions ('takes actions to prevent... and treats them') but does not frame the issue as a business risk. It acknowledges the topic without characterizing it as a risk, which fits the definition of UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99913-005",
+            "quote": "As part of its policy of ecological process improvement, ADAMA also invests in remediation, changes in production processes, establishment of sewage facilities, as well as in byproduct storage and recycling.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 87, Section V - Environment and Social Responsibilities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet mentions 'remediation' in the context of a positive policy ('ecological process improvement'). It acknowledges the topic but does not frame it as a business risk, which is the definition of UNCLEAR. The existing 'Neutral' framing categorization also supports this change.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The snippet describes an action ('invests in remediation') taken as part of a policy for 'ecological process improvement'. While addressing an environmental issue, the framing is descriptive of an activity rather than explicitly highlighting a threat or a clear opportunity, making it neutral.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'invests' but does not provide specific financial figures or a definitive statement about financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The use of 'invests' indicates an ongoing activity, making it present day."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet mentions 'remediation' in the context of a positive policy ('ecological process improvement'). It acknowledges the topic but does not frame it as a business risk, which is the definition of UNCLEAR. The existing 'Neutral' framing categorization also supports this change.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99915",
+        "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99915-001",
+            "quote": "The majority of the substances and products marketed by the Group require registration at various stages of their development, production, import, utilization and marketing, and are also subject to strict regulatory supervision by the regulatory authorities in each country. Compliance with the regulatory requirements that vary from country to country and which are becoming more stringent with time, involves significant time and costs, and rigorous compliance with individual registration requirements for each product. Noncompliance with these regulatory requirements might materially adversely affect the Group’s expenses, cost structure and profit margins, as well as penetration of its products in the relevant market, and may even lead to suspension of sales of the relevant product, and recall of those products already sold, or to legal action. Moreover, to the extent new regulatory requirements are imposed on existing registered products (requiring additional investment or leading to the existing registration's revocation) and/or the Group is required to compensate another company for its use of the latter's product registration data, these might amount to significant sums, considerably increasing the Group's costs and adversely affecting its results and reputation. In recent years the industry has been suffering from revocation of registration for many products around the world. This trend is particularly evident in European countries as well as in many other countries worldwide.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. Outlook of the Company’s future development (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet should be classified as FULL_DISCLOSURE because it explicitly states the potential for financial materiality. The text says that noncompliance 'might materially adversely affect the Group’s expenses, cost structure and profit margins.' The use of the word 'materially' meets the criteria for a FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language emphasizes 'significant time and costs,' 'materially adversely affect the Group’s expenses, cost structure and profit margins,' and 'considerably increasing the Group's costs,' clearly framing this as a negative consequence or threat to the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'significant time and costs,' 'significant sums,' and 'considerably increasing the Group's costs,' indicating a financial impact without providing specific quantifiable monetary values. It also refers to impacts on 'expenses, cost structure and profit margins,' which are financial in nature.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet uses phrases like 'are becoming more stringent with time,' 'new regulatory requirements are imposed,' and 'In recent years the industry has been suffering,' indicating an ongoing trend and future potential impacts, as well as past observations."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet should be classified as FULL_DISCLOSURE because it explicitly states the potential for financial materiality. The text says that noncompliance 'might materially adversely affect the Group’s expenses, cost structure and profit margins.' The use of the word 'materially' meets the criteria for a FULL_DISCLOSURE.",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99915-002",
+            "quote": "Compliance with these legislative and regulatory requirements and protection against such legal actions requires the Group to commit considerable human and financial resources (both in terms of substantial ongoing costs and in terms of material one-time investments) to meet mandatory environmental standards. In some instances, this may result in delaying the introduction of products into new markets or in adverse effects on the Group’s profitability.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 43, Section XI. (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet clearly identifies that compliance with environmental regulations requires 'considerable human and financial resources,' including 'substantial ongoing costs' and 'material one-time investments.' It also explicitly links this to potential 'adverse effects on the Group’s profitability,' indicating a clear business risk with financial implications, but without providing specific monetary values.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language emphasizes the necessity to 'commit considerable human and financial resources' and the potential for 'adverse effects on the Group’s profitability,' clearly framing this as a threat or negative consequence for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions 'considerable human and financial resources,' 'substantial ongoing costs,' and 'material one-time investments,' indicating a financial impact without providing specific quantifiable monetary values. It also refers to 'adverse effects on the Group’s profitability,' acknowledging financial relevance without quantification.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to 'ongoing costs' (present day) and 'material one-time investments' (present/future), as well as potential 'delaying the introduction of products into new markets' and 'adverse effects on the Group’s profitability' (forward-looking). This covers multiple time horizons."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99915-003",
+            "quote": "In addition, the toughening, material alteration or revocation of environmental licenses or permits, or their stipulations, or the inability to obtain such licenses and permits, may significantly affect the Group's ability to operate its production facilities, which in turn may have a material adverse effect on the financial and business results of the Group.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 43, Section XI. (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that changes to or inability to obtain environmental licenses/permits 'may significantly affect' operations and 'may have a material adverse effect on the financial and business results of the Group.' This clearly identifies a regulatory risk with potential financial consequences.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on negative outcomes such as 'toughening,' 'material alteration or revocation,' and 'material adverse effect on the financial and business results,' clearly presenting this as a threat or challenge.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions a 'material adverse effect on the financial and business results' without providing specific monetary values, indicating an acknowledgment of financial materiality without precise quantification.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of 'may significantly affect' and 'may have a material adverse effect' indicates potential future events and impacts, making this a forward-looking disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99915-005",
+            "quote": "Moreover, to the extent new regulatory requirements are imposed on existing registered products (requiring additional investment or leading to the existing registration's revocation) and/or the Group is required to compensate another company for its use of the latter's product registration data, these might amount to significant sums, considerably increasing the Group's costs and adversely affecting its results and reputation. In recent years the industry has been suffering from revocation of registration for many products around the world. This trend is particularly evident in European countries as well as in many other countries worldwide.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that new regulatory requirements or compensation for product data 'might amount to significant sums, considerably increasing the Group's costs and adversely affecting its results and reputation.' It also notes the trend of registration revocation, directly addressing rising costs and their financial impact as a risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language highlights potential negative financial outcomes ('significant sums,' 'considerably increasing the Group's costs,' 'adversely affecting its results') and the negative trend of 'revocation of registration,' clearly framing this as a risk.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions 'significant sums' and 'considerably increasing the Group's costs,' indicating a financial impact without providing specific monetary values. It also refers to 'adversely affecting its results,' acknowledging financial relevance without quantification.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to 'new regulatory requirements' (forward-looking) and a trend 'In recent years' (backward-looking/present day) of 'revocation of registration.' This covers multiple time horizons."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99915-006",
+            "quote": "Nevertheless, the Group believes that, in countries where the Group maintains a competitive edge, any toughening of registration requirements may actually increase this edge, since this will make it difficult for its competitors to penetrate the same market, whereas in countries in which the Group possesses a small market share, if any, such toughening may make further penetration of the Group's products into that market more difficult.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet discusses the dual effect of toughening registration requirements, presenting both a potential opportunity (increasing competitive edge) and a risk (making market penetration more difficult). It acknowledges the 'toughening of registration requirements' as a factor impacting business, which is a form of risk disclosure.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The disclosure presents both potential positive outcomes ('increase this edge') and negative outcomes ('make further penetration... more difficult'), indicating a mixed or balanced perspective on the impact of toughening registration requirements.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses competitive edge and market penetration, which are non-financial aspects. It does not provide any explicit financial amounts, state financial materiality, or refer to costs in monetary terms.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of 'may actually increase' and 'may make further penetration... more difficult' indicates potential future impacts and scenarios, making this a forward-looking disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99915-007",
+            "quote": "The materials and products marketed by the Group require, at various stages of their development production and marketing, registration in every country where the Company intends to market them. ... These capabilities are increasingly important as regulatory requirements continue to increase globally.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 17, Section II",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet acknowledges the increasing importance of capabilities due to rising global regulatory requirements for product registration. While it doesn't explicitly state 'rising costs are a risk,' it strongly implies a growing burden and challenge associated with these requirements, which is a form of risk acknowledgment, but not explicitly characterized as a direct business risk.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language describes a factual trend ('regulatory requirements continue to increase globally') and the resulting 'increasing importance' of the company's capabilities, without explicitly framing it as a negative threat or a positive opportunity for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses increasing regulatory requirements and the importance of capabilities but does not provide any explicit financial amounts, state financial materiality, or refer to costs in monetary terms.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrase 'continue to increase globally' indicates an ongoing trend that is relevant in the present day and is expected to persist into the future."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99916",
+        "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99916-001",
+            "quote": "In recent years, both government authorities and environmental protection organizations have been applying increasing pressure, including through investigations and indictments as well as increasingly stricter legislative proposals and class action suits related to companies and products that may potentially pollute the environment. Compliance with these legislative and regulatory requirements and protection against such legal actions requires the Group to commit considerable human and financial resources (both in terms of substantial ongoing costs and in terms of material one-time investments) to meet mandatory environmental standards.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 43, Section XI. Outlook of the Company’s future development (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet acknowledges 'increasing pressure' from government and environmental organizations, including 'investigations and indictments' and 'stricter legislative proposals and class action suits' related to products that 'may potentially pollute the environment.' This directly addresses regulatory scrutiny and public/environmental concerns, which are drivers of negative public perception. It frames these as requiring 'considerable human and financial resources,' indicating a clear business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes 'increasing pressure,' 'investigations and indictments,' 'stricter legislative proposals,' and 'class action suits,' all of which represent threats and negative consequences for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions the need to 'commit considerable human and financial resources (both in terms of substantial ongoing costs and in terms of material one-time investments)' to address these pressures, indicating a financial impact without providing specific quantifiable monetary values.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The phrase 'In recent years' indicates a backward-looking observation, while 'have been applying increasing pressure' and 'increasingly stricter legislative proposals' suggest an ongoing and forward-looking trend."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Not a fan of this question. I don't think the examples help. I think they confuse the question.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99916-002",
+            "quote": "Product and producer liability are a risk for the Group. Regardless of their prospects or actual results, product liability lawsuits might involve considerable costs as well as tarnish the Group's reputation, thus potentially impacting its profits.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. Outlook of the Company’s future development (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly identifies 'Product and producer liability' as a 'risk for the Group' and directly links it to the potential to 'tarnish the Group's reputation' and 'potentially impacting its profits.' Negative public perception is a key driver of reputational damage and can lead to product liability issues, thus this is a clear disclosure of the risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement explicitly labels 'Product and producer liability' as a 'risk for the Group' and highlights negative outcomes like 'tarnish the Group's reputation' and 'impacting its profits,' clearly framing it as a threat.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'considerable costs' and 'potentially impacting its profits,' indicating a financial impact without providing specific quantifiable monetary values.",
+              "timeframe": "Future",
+              "timeframe_justification": "The statement discusses 'product liability lawsuits' and their potential impact, using 'might involve' and 'potentially impacting,' which refers to future or ongoing potential events."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "\"lawsuits may tarnish our reputation and there impact profits\"",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99916-003",
+            "quote": "Moreover, to the extent new regulatory requirements are imposed on existing registered products (requiring additional investment or leading to the existing registration's revocation) and/or the Group is required to compensate another company for its use of the latter's product registration data, these might amount to significant sums, considerably increasing the Group's costs and adversely affecting its results and reputation.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that new regulatory requirements or compensation for product data could lead to 'adversely affecting its results and reputation.' Reputational damage is a direct outcome of negative public perception, clearly identifying this as a business risk with financial implications.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language highlights potential negative financial outcomes ('significant sums,' 'considerably increasing the Group's costs,' 'adversely affecting its results') and the negative impact on 'reputation,' clearly framing this as a threat or challenge.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions 'significant sums' and 'considerably increasing the Group's costs,' indicating a financial impact without providing specific monetary values. It also refers to 'adversely affecting its results and reputation,' acknowledging financial relevance without quantification.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to 'new regulatory requirements' (forward-looking) and a trend 'In recent years' (backward-looking/present day) of 'revocation of registration.' This covers multiple time horizons."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "See last part of quote",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99917",
+        "question_text": "Does the company disclose whether it thinks that class action lawsuits and legal challenges from health/environmental claims as a result of direct or indirect exposure to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99917-001",
+            "quote": "Product and producer liability are a risk for the Group. Regardless of their prospects or actual results, product liability lawsuits might involve considerable costs as well as tarnish the Group's reputation, thus potentially impacting its profits. The Group has a third-party and defective product liability insurance cover. However, there is no certainty that the scope of insurance cover is sufficient. Any future product liability lawsuit or series of lawsuits could materially affect the Group’s operations and results, should the Group lose the lawsuit or should its insurance cover not suffice or apply in a particular instance.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 45, Section XI. (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states that lawsuits 'could materially affect the Group’s operations and results'. This is an explicit statement of financial materiality, which qualifies the disclosure as FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on negative outcomes such as 'considerable costs,' 'tarnish the Group's reputation,' and 'materially affect the Group’s operations and results,' clearly framing this as a threat or negative consequence.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions 'considerable costs' and the potential to 'materially affect the Group’s operations and results,' indicating a financial impact without providing specific monetary values. This acknowledges financial relevance without precise quantification.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of 'might involve,' 'could materially affect,' and 'future product liability lawsuit' indicates potential future events and consequences, making this a forward-looking disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet states that lawsuits 'could materially affect the Group’s operations and results'. This is an explicit statement of financial materiality, which qualifies the disclosure as FULL_DISCLOSURE.",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99917-002",
+            "quote": "The Group may be required to bear significant civil liabilities (including due to class actions) or criminal liabilities (including high penalties and/or high compensation payments and/or costs of environmental monitoring and rehabilitation), resulting from violation of environmental, health and safety regulations, while some of the existing legislation may impose “strict liability” regime on the Group, i.e. the Group will be held liable, regardless of proof of negligence or malice.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet states the company may bear 'significant civil liabilities'. The term 'significant' is an explicit statement of financial materiality, which meets the criteria for FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on potential negative financial and legal consequences such as 'significant civil liabilities,' 'criminal liabilities,' 'high penalties,' and 'high compensation payments,' clearly framing this as a threat or negative outcome.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions 'high penalties and/or high compensation payments and/or costs of environmental monitoring and rehabilitation,' indicating a financial impact without providing specific monetary values. This acknowledges financial relevance without precise quantification.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of 'may be required to bear' and 'may impose' indicates potential future events and obligations, making this a forward-looking disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet states the company may bear 'significant civil liabilities'. The term 'significant' is an explicit statement of financial materiality, which meets the criteria for FULL_DISCLOSURE.",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99917-003",
+            "quote": "In recent years, both government authorities and environmental protection organizations have been applying increasing pressure, including through investigations and indictments as well as increasingly stricter legislative proposals and class action suits related to companies and products that may potentially pollute the environment. Compliance with these legislative and regulatory requirements and protection against such legal actions requires the Group to commit considerable human and financial resources (both in terms of substantial ongoing costs and in terms of material one-time investments) to meet mandatory environmental standards. In some instances, this may result in delaying the introduction of products into new markets or in adverse effects on the Group’s profitability. In addition, the toughening, material alteration or revocation of environmental licenses or permits, or their stipulations, or the inability to obtain such licenses and permits, may significantly affect the Group's ability to operate its production facilities, which in turn may have a material adverse effect on the financial and business results of the Group. The Group may be required to bear significant civil liabilities (including due to class actions) or criminal liabilities (including high penalties and/or high compensation payments and/or costs of environmental monitoring and rehabilitation), resulting from violation of environmental, health and safety regulations, while some of the existing legislation may impose “strict liability” regime on the Group, i.e. the Group will be held liable, regardless of proof of negligence or malice.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 43, Section XI. Outlook of the Company’s future development (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet provides a comprehensive disclosure. It explicitly identifies 'class action suits related to companies and products that may potentially pollute the environment' as a source of 'significant civil liabilities' and 'criminal liabilities (including high penalties and/or high compensation payments and/or costs of environmental monitoring and rehabilitation).' It also mentions the 'strict liability' regime and the need to commit 'considerable human and financial resources' and 'material one-time investments.' This clearly identifies the topic as a business risk with financial implications, though without specific quantified amounts, thus it is a partial disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on 'increasing pressure,' 'investigations and indictments,' 'stricter legislative proposals,' 'class action suits,' 'significant civil liabilities,' 'criminal liabilities,' and 'high penalties,' all of which clearly frame the issue as a threat and negative consequence for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'considerable human and financial resources,' 'substantial ongoing costs,' 'material one-time investments,' 'significant civil liabilities,' 'high penalties,' and 'high compensation payments,' indicating financial impacts without providing specific monetary values. This aligns with the definition of partial-type financial disclosure.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The phrase 'In recent years' indicates past events, 'have been applying increasing pressure' and 'increasingly stricter legislative proposals' suggest ongoing trends, and 'may be required to bear' and 'may impose' point to future potential impacts."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Snippet states \"...requires the Group to commit considerable human and financial resources…\" plus \"In addition, the toughening, material alteration or revocation of environmental licenses or permits, or their stipulations, or the inability to obtain such licenses and permits, may significantly affect the Group's ability to operate its production facilities, which in turn may have a material adverse effect on the financial and business results of the Group.\"",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99917-004",
+            "quote": "Furthermore, the Group may be the target of bodily injury claims and property damage claims caused by exposure to hazardous materials, which are largely covered under the Group’s insurance policies.",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 44, Section XI. (V) Risk factors and countermeasures",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that the Group 'may be the target of bodily injury claims and property damage claims caused by exposure to hazardous materials.' This directly addresses legal challenges from health/environmental claims due to exposure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on potential negative outcomes such as 'bodily injury claims' and 'property damage claims,' clearly framing this as a threat or negative consequence.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions 'bodily injury claims and property damage claims' but does not provide any explicit financial amounts, state financial materiality, or refer to costs in monetary terms.",
+              "timeframe": "Future",
+              "timeframe_justification": "The use of 'may be the target of' indicates potential future events, making this a forward-looking disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      }
+    ],
+    "summary_statistics": {
+      "total_questions_analyzed": 11,
+      "total_disclosure_snippets": 35,
+      "classification_distribution": {
+        "FULL_DISCLOSURE": 14,
+        "PARTIAL": 12,
+        "UNCLEAR": 9,
+        "NO_DISCLOSURE": 0
+      },
+      "categories_covered": [
+        "Market/Business Risk",
+        "Human Health Risk",
+        "Regulatory/Financial Risk",
+        "Environmental Risk"
+      ]
+    },
+    "metadata": {
+      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+    }
+  }
+}

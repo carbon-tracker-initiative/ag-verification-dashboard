@@ -20,9 +20,9 @@ npm run export:excel-merged-reviewed-v2
 
 ## Requirements
 
-- Merged files in `results/merged/`
-- Deduped and reviewed files in `results/deduped_and_reviewed/`
-- Review decisions file: `results/files_for_dedudped_and_reviewed/review_latest.jsonl`
+- Merged files in `reports/merged/`
+- Deduped and reviewed files in `reports/team_reviewed/`
+- Review decisions file: `reports/files_for_deduped_and_reviewed/review_latest.jsonl`
 
 ## File Structure
 

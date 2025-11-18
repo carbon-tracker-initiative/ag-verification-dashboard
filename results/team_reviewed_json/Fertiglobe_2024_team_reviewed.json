@@ -1,0 +1,1070 @@
+{
+  "company": "Fertiglobe",
+  "year": 2024,
+  "version": "team-reviewed",
+  "verified": {
+    "company_name": "Fertiglobe",
+    "fiscal_year": 2024,
+    "version": "team-reviewed",
+    "model_used": "team-reviewed",
+    "analysis_date": "2025-11-17T18:34:19.473Z",
+    "schema_version": "team-reviewed-v1",
+    "analysis_results": [
+      {
+        "question_id": "99902",
+        "question_text": "Does the company disclose whether it thinks that soil degradation caused by its fertiliser products is a risk to the business? Fertilisers impact soil degradation by worsening the soil structure, thereby reducing water infiltration and retention, which increases erosion.",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99902-001",
+            "quote": "Soil Degradation: Soil degradation affects global food security with significant environmental implications. It is estimated that by 2050 90% of the planet land’s surface could be degraded, primarily due to soil erosion, nutrient depletion, loss of biodiversity, and pollution. With poor farming techniques exacerbating the problem, many farmers are now focusing on soil health and regenerative agriculture by adopting sustainable farming techniques that improve soil structure, increase carbon sequestration, and promote biodiversity.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 17, Our Operating Environment",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet acknowledges soil degradation as a global issue and mentions its environmental implications and impact on food security. It discusses farmers' focus on soil health and regenerative agriculture, but it does not explicitly link soil degradation as a risk to Fertiglobe's business specifically caused by its fertilizer products. The disclosure remains at a high, industry-wide level without direct business impact from its products.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language describes a global environmental and food security issue without framing it as a direct threat or advantage specifically for Fertiglobe's business operations or products. It presents factual information about a megatrend.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses environmental implications and global estimates but provides no explicit financial values, costs, or statements about financial materiality for the company.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet refers to an estimation 'by 2050' for land degradation, indicating a future-oriented perspective on the issue, although it also describes current trends in farming practices."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Statement on farmers issues with soil fertility but doesn't link to buisness risk.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99902-002",
+            "quote": "Through various programs, we work with our customers around the world to maximize yields, strengthen crops, prevent soil degradation, promote sustainable agricultural practices, and accelerate growth to meet the world’s rising food demands.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 71, Product Stewardship",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet states that Fertiglobe works to 'prevent soil degradation' through its programs, positioning its efforts as a solution. While it acknowledges soil degradation as an issue relevant to agriculture, it does not disclose that soil degradation *caused by its fertilizer products* is a risk to its business. Instead, it highlights its positive contributions.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The disclosure frames the company's actions and programs as beneficial, aiming to 'prevent soil degradation' and 'promote sustainable agricultural practices,' which presents the topic as an area of positive contribution and value creation.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes qualitative efforts and positive impacts without providing any explicit financial figures, costs, or statements regarding financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement uses present tense verbs like 'work' and 'promote,' indicating ongoing activities and current commitments to sustainable practices."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Statement on pratises to maintain soil fertility but doesn't link to buisness risk.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99902-003",
+            "quote": "If removals by yields are not adequately replaced, soil health will decline and eventually lead to soil degradation and loss of soil health. Reduction of yields increases the risk of agricultural expansion into previously uncultivated land. To prevent this land encroachment, further loss of biodiversity, and the release of sequestered carbon, it is crucial to supply existing agricultural land with a sufficient amount of nutrients.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 71, Product Stewardship",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet discusses the negative consequences of *not* replacing soil nutrients, which can lead to soil degradation. It then argues that supplying 'sufficient amount of nutrients' (i.e., fertilizers) is 'crucial' to prevent these negative outcomes. This frames fertilizers as a solution to prevent soil degradation, rather than acknowledging them as a cause or a business risk.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The disclosure frames the supply of nutrients (fertilizers) as a crucial solution to prevent negative outcomes like soil degradation and biodiversity loss, thereby presenting it as a beneficial and value-creating aspect of the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes potential ecological and agricultural consequences but does not include any explicit financial figures, costs, or statements about financial materiality for the company.",
+              "timeframe": "Future",
+              "timeframe_justification": "The language discusses future scenarios ('will decline,' 'increases the risk') and the ongoing necessity ('is crucial') to prevent these, indicating a forward-looking perspective on potential impacts and mitigation."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Statement on pratises to maintain soil fertility and farming issues but doesn't link to buisness risk.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99903",
+        "question_text": "Does the company disclose whether it thinks that human health problems from its products is a risk to the business?",
+        "category": "Human Health Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99903-001",
+            "quote": "Product safety: Ensures that our products and their raw materials, additives, and intermediate products are processed, manufactured, handled, stored, distributed, and used in a way that safeguards health, occupational and public safety, and the environment.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 65, Product Stewardship",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that product safety measures are in place to 'safeguard health, occupational and public safety' related to its products. This indicates an acknowledgment of potential human health problems if products are not handled safely, implying that these are risks that need to be managed. However, it does not provide any financial figures or statements about the financial materiality of these risks.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on 'safeguarding health' and 'safety,' which inherently frames the topic as a potential source of harm or negative consequences that the business must mitigate through its product safety measures.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes qualitative commitments and measures related to health and safety but does not provide any explicit financial figures, costs, or statements about the financial materiality of these risks.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement uses present tense verbs ('Ensures,' 'safeguards'), indicating that these are current and ongoing commitments and practices of the company."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Doesn't mention risk explicity\r\n\r\nDuplicated in row 267.\r\n\r\nThis has more relevant context in the quote.\r\n\r\nKeep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99903-003",
+            "quote": "We are committed to our obligations regarding any environmental and health regulatory aspects of the chemicals we handle, and we closely monitor regulatory and safety developments for all our chemicals.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 73, Product Stewardship",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly mentions 'health regulatory aspects of the chemicals we handle' and the company's commitment to monitoring 'regulatory and safety developments.' This directly indicates that the company recognizes potential human health problems from its products as a risk, particularly in the context of regulatory compliance and safety. However, it does not provide financial figures or statements about financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on 'obligations regarding... health regulatory aspects' and 'monitoring regulatory and safety developments,' which frames the topic as a potential source of negative consequences (e.g., non-compliance, safety incidents) that the business must manage.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes qualitative commitments and monitoring activities but does not provide any explicit financial figures, costs, or statements about the financial materiality of these risks.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement uses present tense verbs ('are committed,' 'closely monitor'), indicating that these are current and ongoing activities and obligations."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99903-004",
+            "quote": "We share Safety Data Sheets (SDS) for products and substances with all our clients.. SDSs provide safe handling, storage, disposal, and Personal Protection Equipment (PPE) information and disclosure on potential health and safety effects due to exposure or mishandling.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 73, Product Stewardship",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "The company's practice of providing Safety Data Sheets (SDSs) that disclose 'potential health and safety effects due to exposure or mishandling' of its products is a direct acknowledgment that its products can cause human health problems. This indicates that the company recognizes this as a risk and provides information to mitigate it. However, it does not discuss the financial significance or materiality of this risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on providing information about 'potential health and safety effects' and 'safe handling,' which frames the topic as a source of potential harm that requires mitigation and careful management.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a qualitative practice (providing SDSs) and potential effects but does not provide any explicit financial figures, costs, or statements about the financial materiality of these risks.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement uses present tense verbs ('share,' 'provide'), indicating that this is a current and ongoing practice of the company."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "It's a statement on SDS practice without mentioning risk.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99904",
+        "question_text": "Does the company disclose whether it thinks that carbon costs arising from its direct operations or the use of its products by its customers is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99904-001",
+            "quote": "Potential Impacts: Carbon tax and stricter environmental requirements",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 58, Section Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies 'Carbon tax' as a risk ('Potential Impact') but does not state its financial materiality. This meets the criteria for PARTIAL, not FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'Potential Impacts' clearly frames the carbon tax as a negative consequence or threat to the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The term 'Carbon tax' is inherently financial, indicating a monetary cost, thus implying financial materiality without providing specific figures.",
+              "timeframe": "Future",
+              "timeframe_justification": "The term 'Potential Impacts' refers to future events or conditions that have not yet fully manifested, making this a forward-looking disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet identifies 'Carbon tax' as a risk ('Potential Impact') but does not state its financial materiality. This meets the criteria for PARTIAL, not FULL_DISCLOSURE.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99904-002",
+            "quote": "We believe our decarbonization strategy is a key lever to reduce emissions, carbon taxes, and operating costs...",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 58, Section Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet clearly identifies 'carbon taxes' as a cost/risk the company seeks to reduce, but it does not make any statement about financial materiality. Therefore, it should be classified as PARTIAL.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement frames the decarbonization strategy as a means to 'reduce' negative elements like 'carbon taxes' and 'operating costs,' clearly presenting these as risks that need to be managed.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet explicitly mentions 'carbon taxes' and 'operating costs,' which are direct financial impacts, thus indicating financial materiality without providing specific figures.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The statement describes an ongoing strategy ('decarbonization strategy is a key lever') aimed at future reductions ('to reduce'), indicating both present-day action and forward-looking goals."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet clearly identifies 'carbon taxes' as a cost/risk the company seeks to reduce, but it does not make any statement about financial materiality. Therefore, it should be classified as PARTIAL.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99904-003",
+            "quote": "Transition risks associated with transitioning to a lower-carbon economy are primarily related to (i) changes in carbon-linked regulations and policies, such as the European Carbon Border Adjustment Mechanisms (CBAM), and other potential carbon taxation mechanisms; (ii) costs associated with transitioning to lower emissions technology and resource efficiency; (iii) dietary shifts to more plant-based nutrition; and (iv) failure, real or perceived, to meet GHG reduction expectation.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 58, Section Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet clearly identifies carbon costs as a business risk, but it does not explicitly state their financial materiality, which is a requirement for FULL_DISCLOSURE. Therefore, the correct classification is PARTIAL.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly uses the term 'Transition risks' and lists several factors that could lead to negative consequences for the business, clearly framing these as threats.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions 'carbon taxation mechanisms' and 'costs associated with transitioning to lower emissions technology,' which are inherently financial impacts, thus indicating financial materiality without providing specific figures.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The term 'Transition risks' implies future changes and potential impacts, making this a forward-looking disclosure. It also refers to existing mechanisms like CBAM, suggesting a present-day relevance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet clearly identifies carbon costs as a business risk, but it does not explicitly state their financial materiality, which is a requirement for FULL_DISCLOSURE. Therefore, the correct classification is PARTIAL.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Duplicated in row 275.\r\n\r\nThis quote has more context. Keep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99904-005",
+            "quote": "Marine fuel to lower GHG emissions and other air pollutants in shipping to meet FuelEU Maritime mandates, lower EU’s Emission Trading Scheme exposure, and voluntary Scope 3 reduction.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 29, Our Products",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet directly links the use of Fertiglobe's products (low-carbon ammonia as marine fuel) to 'lower EU’s Emission Trading Scheme exposure' for its customers. The EU ETS represents carbon costs, so this indicates that the company recognizes carbon costs for its customers as a factor, and positions its products as a solution to reduce these costs, implying an underlying business risk/opportunity. However, it does not provide specific financial figures or a statement of financial materiality.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The disclosure frames the company's products as a solution to 'lower EU’s Emission Trading Scheme exposure' for customers, which is a beneficial outcome, thus presenting it as an opportunity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions 'EU’s Emission Trading Scheme exposure,' which has financial implications, but does not provide any explicit financial figures or statements about the financial materiality of these costs.",
+              "timeframe": "Future",
+              "timeframe_justification": "The statement refers to meeting 'FuelEU Maritime mandates' and 'voluntary Scope 3 reduction,' which are future-oriented goals and regulations, indicating a forward-looking perspective."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99904-006",
+            "quote": "Fertilizer and Industrial: The implementation of carbon taxes in Europe, as well as the Renewable Energy Directive III, supports the use of clean energy across all EU sectors, including fertilizer and industrial sectors.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 16, Our Operating Environment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet acknowledges 'carbon taxes' but frames them neutrally as a market factor that 'supports the use of clean energy.' It does not characterize them as a risk to the business, which is required for a PARTIAL classification. The current justification relies on inference ('implies a business risk') rather than the text itself.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The disclosure mentions 'carbon taxes' as a driver for change in the fertilizer sector, which is typically viewed as a cost or threat that businesses must address, thus framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions 'carbon taxes' but does not provide any explicit financial figures, costs, or statements about the financial materiality of these taxes for the company.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement refers to the 'implementation' of carbon taxes and a directive, indicating a present-day regulatory environment that is actively impacting the industry."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet acknowledges 'carbon taxes' but frames them neutrally as a market factor that 'supports the use of clean energy.' It does not characterize them as a risk to the business, which is required for a PARTIAL classification. The current justification relies on inference ('implies a business risk') rather than the text itself.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99904-007",
+            "quote": "Participation in CBAM Public Consultations: The Carbon Border Adjustment Mechanism (CBAM) supports Fertiglobe’s decarbonization efforts by incentivizing low-carbon initiatives and enhancing the business case for these pathways. Fertiglobe actively engaged with national and EU regulators, contributing to CBAM public consultations with key recommendations.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 47, Driving Sustainable Growth",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet discusses the Carbon Border Adjustment Mechanism (CBAM) but frames it positively as something that 'supports', 'incentivizes', and 'enhanc[es] the business case'. It does not characterize CBAM as a risk. The classification should be UNCLEAR as the topic is acknowledged but not framed as a risk.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The disclosure describes the company's engagement with a regulatory mechanism (CBAM) that imposes carbon costs, implying a need to manage potential negative impacts, thus framing it as a risk, even if it also presents opportunities.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions CBAM, a mechanism with financial implications, but does not provide any explicit financial figures, costs, or statements about the financial materiality of these impacts.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement describes ongoing 'engagement' and 'contributing to... consultations,' indicating current activities related to an existing or developing regulatory framework."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet discusses the Carbon Border Adjustment Mechanism (CBAM) but frames it positively as something that 'supports', 'incentivizes', and 'enhanc[es] the business case'. It does not characterize CBAM as a risk. The classification should be UNCLEAR as the topic is acknowledged but not framed as a risk.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99908",
+        "question_text": "Does the company disclose whether it thinks that demand destruction as organic farming and alternatives gain market share is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99908-002",
+            "quote": "Transition Risks: ... (iii) dietary shifts to more plant-based nutrition...",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 18, Our Operating Environment",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly lists 'dietary shifts to more plant-based nutrition' as a 'Transition Risk.' This is a direct acknowledgment of a market trend (related to alternatives and potentially organic farming) that poses a risk to the business by potentially reducing demand for its products. However, it does not provide specific financial figures or a statement of financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly categorizes 'dietary shifts to more plant-based nutrition' as a 'Transition Risk,' clearly framing it as a potential negative consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions 'dietary shifts' but does not provide any explicit financial figures or statements about the financial materiality of this risk.",
+              "timeframe": "Future",
+              "timeframe_justification": "The listing under 'Transition Risks' indicates a forward-looking perspective on anticipated changes and their potential impacts."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Duplicated in row 284.\r\n\r\nThis part of the quote is most relevant. Keep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99913",
+        "question_text": "Does the company disclose whether it thinks that restoration of contaminated manufacturing sites is a risk to the business?",
+        "category": "Environmental Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99913-001",
+            "quote": "With respect to asset retirement obligations, the Group recognizes a provision if the Group has an obligation to restore a leased asset in its original condition at the end of its lease term and in case of legal requirements with respect to clean up of contamination of land, and the estimate can be made reliably. Based on the land lease terms of the Group's production facilities, some entities in the Group have the obligation to restore their site upon decommissioning. The Group has not recorded a liability for this asset retirement obligation, as it does not believe there is currently a reasonable basis for estimating a date or range of dates of cessation of the operations, which is necessary to estimate the fair value of this liability.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 170, Notes to the consolidated Financial Statements, Note 5, Critical accounting judgments, estimates and assumptions - Provisions",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that the Group has an 'obligation to restore a leased asset in its original condition' and 'legal requirements with respect to clean up of contamination of land' for its 'production facilities' upon decommissioning. It also clearly states that 'The Group has not recorded a liability for this asset retirement obligation' due to the inability to reliably estimate the cessation date. This acknowledges the existence of the obligation (risk) and its potential financial nature, but without quantification, making it a partial disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'obligation to restore' and 'legal requirements with respect to clean up of contamination of land' frames this as a potential negative consequence or liability for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The snippet mentions 'recognizes a provision' and 'not recorded a liability' for a financial obligation, indicating an acknowledgment of financial impact without providing a specific monetary value.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The obligation is tied to 'the end of its lease term' and 'upon decommissioning,' which are future events, but the current inability to estimate the cessation date makes the exact timeframe uncertain, hence 'Multiple or Unclear'."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99915",
+        "question_text": "Does the company disclose whether it thinks that rising compliance, testing, registration, or re-registration costs related to their products is a risk to the business?",
+        "category": "Regulatory/Financial Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99915-001",
+            "quote": "Changes in regulatory conditions in the markets in which we operate. Changes in laws, regulations, and the related interpretations may alter the environment in which we do business. This includes changes in governance, health and safety, competition and product-related laws and regulations, as well as changes in accounting standards and taxation requirements. This also includes the impact of proposed climate change-related regulations at both the international and national levels. Failure to comply with these laws may result in substantial fines, penalties, or other sanctions, such as the obligation to invest in newer equipment, permit revocations, or facility shutdowns. Consequently, we may experience delays in obtaining or be unable to obtain required permits, which may delay or interrupt our operations. In addition, global geopolitics have created uncertainty around tariff implementation in key markets, such as the EU and China, which may affect product or feedstock pricing.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 102, Regulatory Risks",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies 'product-related laws and regulations' and the potential for 'delays in obtaining or be unable to obtain required permits' as risks. It also mentions 'obligation to invest in newer equipment' as a consequence of non-compliance, which implies rising costs associated with regulatory changes. While it doesn't explicitly state 'rising compliance, testing, registration, or re-registration costs' as a direct risk, it clearly outlines the regulatory environment and its potential cost implications for the business, thus providing a partial disclosure of the risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language emphasizes potential negative consequences such as 'may alter the environment,' 'may result in substantial fines, penalties,' 'may experience delays,' and 'may interrupt our operations,' clearly framing these as threats to the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'substantial fines, penalties' and 'obligation to invest in newer equipment,' which are financial impacts. However, no specific monetary values are provided, nor is a definitive statement of financial materiality for these specific cost types, qualifying it as partial-type.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet uses phrases like 'may alter,' 'may result in,' and 'may experience delays,' indicating potential future events and impacts, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99916",
+        "question_text": "Does the company disclose whether it thinks that negative public perception of chemical-intensive agriculture, such as negative media articles, regulatory scrutiny or decreasing sales, is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99916-001",
+            "quote": "Changes in customer preferences, societal expectations, and the regulatory environment, resulting in decreased demand for our products and increased operational and environmental costs.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 18, Main Risks Across Our Operating Environment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'Changes in customer preferences, societal expectations' as a risk factor that directly results in 'decreased demand for our products.' This directly addresses the question of negative public perception (societal expectations) leading to market impact (decreasing sales).",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'resulting in decreased demand' and 'increased operational and environmental costs' clearly frames these changes as negative consequences or threats to the business, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'decreased demand' and 'increased operational and environmental costs,' which are financial impacts, but it does not provide specific monetary values or explicitly state the financial materiality of these impacts.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrase 'resulting in' implies an ongoing or present-day impact from changes that have already occurred or are currently happening."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          }
+        ]
+      },
+      {
+        "question_id": "99918",
+        "question_text": "Does the company disclose whether it thinks that high energy input costs due to the manufacture of its products is a risk to the business?",
+        "category": "Market/Business Risk",
+        "status": "",
+        "applicability": "",
+        "sub_category": "",
+        "disclosures": [
+          {
+            "snippet_id": "99918-001",
+            "quote": "One of the Group’s subsidiaries, Sorfert Algérie SPA (\"Sorfert\"), operates under a 20-year natural gas supply contract with Sonatrach. The pricing for the gas was fixed for a period of 10 years and the initial period lapsed at the end of 2023. The new price shall be retrospectively applied from the lapse of the 10-year gas stability period. The Group is at an advanced stage of negotiation of the price with Sonatrach on the natural gas supply contract. The Group has recognised an estimated accrual of USD 182.8 million for the anticipated increase in gas cost as at 31 December 2024 based on the latest developments of the negotiation process and available information. The estimation of this accrual requires management to apply significant judgement including making assumptions and interpretation of the legal documents and correspondences regarding the final outcome of the negotiation. We consider this estimate to be a key audit matter due to the financial significance of the amounts involved and key judgments used by management.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 141, Independent auditor’s report to the shareholders of Fertiglobe plc",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet provides a clear and explicit disclosure about an 'anticipated increase in gas cost' for Sorfert, a key energy input, and states that the Group has 'recognised an estimated accrual of USD 182.8 million' for this. It further emphasizes the 'financial significance of the amounts involved.' This is a full disclosure as it identifies the risk (rising energy input costs) and provides a definitive statement about its financial materiality through a quantified accrual.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'anticipated increase in gas cost' and the recognition of an 'accrual' for this increase clearly frame this as a negative financial event or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "An explicit monetary value ('USD 182.8 million') is provided for the estimated accrual related to the increased gas cost, making it a financial disclosure.",
+              "timeframe": "Current",
+              "timeframe_justification": "The accrual is 'as at 31 December 2024,' reflecting a current financial position, even though the increase is 'anticipated' and 'retrospectively applied.' This makes it present day."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Duplicated in row 300.\r\n\r\nThis quote has more relevant context. Keep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            }
+          },
+          {
+            "snippet_id": "99918-003",
+            "quote": "Geopolitical conflicts, including the war between Ukraine and Russia and in the Middle East, can have a direct and indirect impact on feedstock, fertilizer and food value chain. Over recent years, geopolitics has impacted gas and LNG availability and fertilizer production in key producing hubs, created shipping challenges across major export routes, as well as concerns around food security and grains exports. Such shocks and disruptions can impact the global supply and demand for gas, fertilizer and grains, as well as commodity prices and market sentiment.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 17, Geopolitics",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies geopolitical conflicts as a factor that 'impacted gas and LNG availability' and 'commodity prices' for gas. Since natural gas is a key input for fertilizer production, this implicitly links geopolitical events to the risk of high energy input costs for manufacturing.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'impacted gas and LNG availability' and 'shocks and disruptions can impact the global supply and demand for gas, fertilizer and grains, as well as commodity prices' clearly frames these as negative external factors and threats to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'commodity prices' for gas being impacted, which is a financial effect, but it does not provide specific monetary values or explicitly state the financial materiality of this impact on the company's energy input costs.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The phrase 'Over recent years, geopolitics has impacted' indicates past and ongoing effects, while 'can impact' suggests potential future impacts, making it a 'Multiple or Unclear' timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-004",
+            "quote": "Slow transition from fossil fuels to clean energy sources. A continued dependence on fossil fuels and missed opportunities for investment in clean energy, increasing production cost, and loss of customers.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 18, Main Risks Across Our Operating Environment",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states 'increasing production cost' as a risk resulting from 'continued dependence on fossil fuels.' This directly addresses the question of high energy input costs due to the manufacture of its products. It clearly identifies the risk but does not quantify its financial impact or explicitly state its materiality, thus it is a partial disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'increasing production cost, and loss of customers' clearly frames this as a threat or negative consequence for the business.",
+              "financial_type": "Partial",
+              "financial_justification": "The disclosure mentions 'increasing production cost,' indicating a financial impact without providing specific monetary values or a definitive statement of financial materiality. This aligns with a partial-type financial disclosure.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet describes a 'slow transition' and 'continued dependence' leading to future 'increasing production cost,' indicating a forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-005",
+            "quote": "Our products are global commodities with little or no product differentiation, and supply/demand dynamics can be affected by global trends, such as dietary patterns and population growth affecting demand for food, swings in crop and agricultural prices, global production capacity for our products, and the availability and pricing of the raw materials required to produce our products, particularly natural gas.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 98, Operational Risks - Changes to conditions affecting our markets and commodities",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'the availability and pricing of the raw materials required to produce our products, particularly natural gas,' as a factor that can affect supply/demand dynamics. Given that natural gas is a key energy input for fertilizer manufacturing, this directly acknowledges high energy input costs as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement describes factors that 'can be affected' and 'affect supply/demand dynamics,' implying potential negative impacts or challenges to the business, thus framing it as a 'Risk.'",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'pricing of the raw materials' which is a financial aspect, but it does not provide specific monetary values or explicitly state the financial materiality of these pricing fluctuations.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The phrase 'can be affected' indicates potential future impacts, while the context of 'global trends' suggests ongoing relevance, leading to a 'Multiple or Unclear' timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-006",
+            "quote": "In terms of the availability and cost of our key feedstock (natural gas), we manage our global exposure to natural gas price fluctuations through long-term contracts in the UAE, Egypt, and Algeria.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 98, Operational Risks - Changes to conditions affecting our markets and commodities - Risk Management Approach",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that 'the availability and cost of our key feedstock (natural gas)' is an exposure they 'manage,' confirming that high energy input costs (natural gas price fluctuations) are considered a risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement acknowledges 'global exposure to natural gas price fluctuations' and describes management actions ('we manage'), framing this as a challenge or threat that requires mitigation, thus aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions 'cost' and 'price fluctuations' of natural gas, indicating a financial impact, but it does not provide specific monetary values or explicitly state the financial materiality of these fluctuations.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrase 'we manage our global exposure' implies an ongoing activity to address a present and potentially future risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-008",
+            "quote": "We remain committed to operational efficiency and cost optimization. In 2023, we launched an ambitious initiative to improve our cost structure and reinforce our position as a low-cost producer. As of December 2024, we successfully achieved our annualized cost savings target of $50 million. Additionally, our Manufacturing Improvement Plan (MIP) is now 75% complete and is on track to unlock at least $100 million in incremental annual EBITDA by the end of 2025 by enhancing production and energy efficiency across our facilities.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 14, A Message from Our CEO",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states the company's commitment to 'cost optimization' and 'energy efficiency' to 'unlock at least $100 million in incremental annual EBITDA by the end of 2025.' This clearly indicates that high energy input costs are a recognized business risk that the company is actively working to mitigate through efficiency improvements. The mention of a specific financial target ($100 million EBITDA) linked to energy efficiency demonstrates the financial significance of this area, but it's a target for improvement, not a statement of the risk's financial materiality itself. Thus, it is a partial disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The context of 'cost optimization' and the goal to 'unlock at least $100 million in incremental annual EBITDA' implies that current costs (including energy) are a challenge that needs to be addressed to improve profitability, framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "An explicit monetary value ('$100 million') is provided for the target incremental EBITDA linked to energy efficiency, making it a financial disclosure.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrase 'is on track to unlock... by the end of 2025' indicates future-oriented goals and benefits, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            }
+          },
+          {
+            "snippet_id": "99918-011",
+            "quote": "Our Commitment: We are committed to reducing our carbon footprint, and our Scope 1 and 2 GHG emissions intensity are in line with our majority shareholder’s targets. We aim to achieve these reductions through a comprehensive climate strategy that includes investing in low-carbon technologies and projects and cooperating with all our stakeholders, industry peers, governments, and other institutions in the fight against climate change. In particular, our GHG reduction strategy is based on three pillars: • Operational excellence through a strong focus on energy efficiency and asset reliability, which results in a reduction in energy consumption and therefore reduces our reliance on fossil fuels and purchased energy, consequently reducing the intensity of our GHG emissions. • Transitioning our facilities to renewable energy sources (RES) through power purchase agreements (PPAs) and renewable energy certificates (RECs) for our purchased electricity (Scope 2). • New strategic, low-carbon, and renewable technologies that follow the transition pathway of blue and renewable, capitalizing on both new and established technologies, such as electrolysis, Carbon Capture and Storage (CCS), and purchased blue and renewable hydrogen.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 53, Energy and Climate Change",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet states that the company's GHG reduction strategy includes 'Operational excellence through a strong focus on energy efficiency and asset reliability, which results in a reduction in energy consumption and therefore reduces our reliance on fossil fuels and purchased energy.' This implicitly acknowledges that reliance on fossil fuels and purchased energy (which can lead to high input costs) is a concern that the company is actively trying to reduce. However, it does not explicitly state 'high energy input costs' as a risk or quantify its financial impact, making it unclear.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The focus is on 'reducing our carbon footprint' and 'reducing our reliance on fossil fuels and purchased energy' through strategic initiatives, which is a proactive management approach with environmental benefits, rather than explicitly framing high costs as a direct threat in this context.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "No explicit financial amounts or statements of financial materiality are provided in this snippet.",
+              "timeframe": "Future",
+              "timeframe_justification": "Phrases like 'We aim to achieve,' 'includes investing,' 'Transitioning our facilities,' and 'New strategic, low-carbon, and renewable technologies' all point to future actions and goals, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99918-014",
+            "quote": "Secure, long-term natural gas supply contracts and low-conversion costs further enhance Fertiglobe’s competitive standing on the global cost curve for ammonia and urea production.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 33, Our Facilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet highlights 'Secure, long-term natural gas supply contracts and low-conversion costs' as factors that 'further enhance Fertiglobe’s competitive standing.' By framing these as advantages, it implicitly acknowledges that insecure or high-cost natural gas supply (a key energy input) would be a risk to its competitive position. However, it does not explicitly state 'high energy input costs' as a risk to the business, making it unclear.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The language 'further enhance Fertiglobe’s competitive standing' frames the secure contracts as a positive factor or advantage for the company, thus an opportunity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "No explicit financial amounts or statements of financial materiality are provided in this snippet.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet describes existing contracts and their current benefit, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99918-015",
+            "quote": "Moreover, we have taken concrete steps to limit the potential impact of future external events on our operations. These include the commissioning of a new boiler in Algeria, which will significantly improve our on-site power production through internally generated steam and reduce our reliance on the external power grid. We are also working on a water production improvement project in Egypt to enhance our resilience against potential external water supply issues.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 15, A Message from Our CEO - continued",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet describes 'concrete steps to limit the potential impact of future external events on our operations,' including commissioning a new boiler to 'reduce our reliance on the external power grid.' This implicitly acknowledges that reliance on the external power grid (and its associated costs or supply risks) is a concern for the business. It identifies a mitigation strategy but does not explicitly state 'high energy input costs' as a risk or quantify its financial impact, making it unclear.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'limit the potential impact of future external events' implies that reliance on the external power grid is a vulnerability or threat that the company is addressing, framing it as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "No explicit financial amounts or statements of financial materiality are provided in this snippet.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrases 'limit the potential impact of future external events' and 'will significantly improve' indicate future-oriented actions and benefits, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99918-016",
+            "quote": "Energy Efficiency: • Energy-efficient designs featured by Fertiglobe’s young asset base. • Implemented monitoring tools to continuously improve energy consumption, supported by industry leading monitoring tools. • Reviewing our energy and feedstock purchases with the aim to increase our use of green or renewable sources, including increasing our purchase of renewable power (such as solar and wind energy) and increasing our consumption of biofuels and alternative green feedstocks. • Identify and pursue further efficiency through select value-accretive investments.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 54, Energy and Climate Change - continued",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet details the company's focus on 'Energy Efficiency' as part of its operational excellence program, including efforts to 'continuously improve energy consumption' and 'Reviewing our energy and feedstock purchases.' This implicitly acknowledges that energy consumption and associated costs are a significant operational concern that the company is actively managing. However, it does not explicitly state 'high energy input costs' as a risk or quantify its financial impact, making it unclear.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The focus is on 'Energy Efficiency' and 'continuously improve energy consumption,' which are proactive management strategies aimed at operational improvement, rather than explicitly framing high costs as a direct threat.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "No explicit financial amounts or statements of financial materiality are provided in this snippet.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet describes ongoing efforts and implemented tools ('Implemented monitoring tools,' 'Reviewing our energy and feedstock purchases'), indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          },
+          {
+            "snippet_id": "99918-017",
+            "quote": "The MIP aims to help to enhance operational reliability through capital projects and modernizing practices that minimize energy and water waste, paving the path toward more sustainable and renewable energy sources.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 56, CASE STUDY Manufacturing Improvement Plan",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet states that the MIP aims to 'minimize energy and water waste.' While this is a positive operational goal related to efficiency, it does not explicitly state 'high energy input costs' as a risk to the business. It focuses on waste reduction and sustainability rather than the cost risk itself, making it unclear.",
+            "categorization": {
+              "framing": "Opportunity",
+              "framing_justification": "The language 'paving the path toward more sustainable and renewable energy sources' frames the minimization of waste as a positive development and an opportunity for the company.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "No explicit financial amounts or statements of financial materiality are provided in this snippet.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrases 'aims to help to enhance' and 'paving the path toward' indicate future goals and developments, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            }
+          }
+        ]
+      }
+    ],
+    "summary_statistics": {
+      "total_questions_analyzed": 8,
+      "total_disclosure_snippets": 27,
+      "classification_distribution": {
+        "FULL_DISCLOSURE": 1,
+        "PARTIAL": 12,
+        "UNCLEAR": 14,
+        "NO_DISCLOSURE": 0
+      },
+      "categories_covered": [
+        "Environmental Risk",
+        "Human Health Risk",
+        "Regulatory/Financial Risk",
+        "Market/Business Risk"
+      ]
+    },
+    "metadata": {
+      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+    }
+  }
+}
