@@ -11,12 +11,27 @@ import TrendsInsights from '../components/analytics/TrendsInsights.astro';
 import QuestionBenchmark from '../components/analytics/QuestionBenchmark.astro';
 import RadarComparison from '../components/analytics/RadarComparison.astro';
 import CategoryDeepDive from '../components/analytics/CategoryDeepDive.astro';
+import BinaryDisclosureCharts from '../components/analytics/BinaryDisclosureCharts.astro';
 
 import { loadAllCompanyData } from '../utils/dataLoader';
-import { calculateCompanyMetrics, calculateCrossCompanyMetrics } from '../utils/metricsCalculator';
+import {
+  calculateCompanyMetrics,
+  calculateCrossCompanyMetrics,
+  normalizeTimeframeCategory
+} from '../utils/metricsCalculator';
 
-// Load all company data
-const allCompanyData = await loadAllCompanyData();
+// Load all company data (fallback to team-reviewed combined if no verified files are present)
+let allCompanyData = await loadAllCompanyData();
+if (allCompanyData.length === 0) {
+  try {
+    const teamReviewed = (await import('../../results/team_reviewed_json/team_reviewed_combined_collapsed.json')).default;
+    if (Array.isArray(teamReviewed) && teamReviewed.length > 0) {
+      allCompanyData = teamReviewed as any[];
+    }
+  } catch (error) {
+    console.warn('No verified data and could not load team_reviewed_combined_collapsed.json');
+  }
+}
 
 // Calculate metrics for each company
 const companyMetrics = allCompanyData.map(data =>
@@ -32,6 +47,124 @@ const breadcrumbItems = [
   { label: 'Home', href: baseUrl },
   { label: 'Analytics', href: `${baseUrl}/analytics`, current: true }
 ];
+
+type CountPair = { disclosure: number; noDisclosure: number };
+
+const collapseClassification = (value: string) =>
+  value === 'FULL_DISCLOSURE' || value === 'PARTIAL' ? 'Disclosure' : 'No Disclosure';
+
+function bumpCount(map: Map<string, CountPair>, key: string, isDisclosure: boolean) {
+  const entry = map.get(key) || { disclosure: 0, noDisclosure: 0 };
+  if (isDisclosure) entry.disclosure += 1;
+  else entry.noDisclosure += 1;
+  map.set(key, entry);
+}
+
+const categoryMap = new Map<string, CountPair>();
+const timeframeMap = new Map<string, CountPair>();
+const framingMap = new Map<string, CountPair>();
+const companyMap = new Map<string, CountPair>();
+const questionMap = new Map<string, { question_text: string; category: string; disclosure: number; total: number }>();
+const categoryTimeframeMap = new Map<string, { category: string; timeframe: string; disclosure: number; total: number }>();
+
+let overallDisclosure = 0;
+let overallNoDisclosure = 0;
+
+allCompanyData.forEach(bundle => {
+  const company = bundle.verified.company_name;
+  const year = bundle.verified.fiscal_year;
+  const companyKey = `${company} ${year}`;
+
+  bundle.verified.analysis_results.forEach(question => {
+    const questionKey = question.question_id;
+    const questionEntry =
+      questionMap.get(questionKey) ||
+      {
+        question_text: question.question_text,
+        category: question.category || 'Unknown',
+        disclosure: 0,
+        total: 0
+      };
+
+    const hasDisclosure = question.disclosures.some(
+      snippet => collapseClassification(snippet.classification) === 'Disclosure'
+    );
+    questionEntry.total += 1;
+    if (hasDisclosure) questionEntry.disclosure += 1;
+    questionMap.set(questionKey, questionEntry);
+
+    if (question.disclosures.length === 0) {
+      // If no snippets, treat as a no-disclosure question entry but skip snippet-level charts
+      bumpCount(categoryMap, question.category || 'Unknown', false);
+      bumpCount(companyMap, companyKey, false);
+      const tfKey = normalizeTimeframeCategory('');
+      bumpCount(timeframeMap, tfKey, false);
+      bumpCount(framingMap, 'Unknown', false);
+      const ctKey = `${question.category || 'Unknown'}__${tfKey}`;
+      const ctEntry =
+        categoryTimeframeMap.get(ctKey) || {
+          category: question.category || 'Unknown',
+          timeframe: tfKey,
+          disclosure: 0,
+          total: 0
+        };
+      ctEntry.total += 1;
+      categoryTimeframeMap.set(ctKey, ctEntry);
+      overallNoDisclosure += 1;
+      return;
+    }
+
+    question.disclosures.forEach(snippet => {
+      const collapsed = collapseClassification(snippet.classification);
+      const isDisclosure = collapsed === 'Disclosure';
+      const timeframe = normalizeTimeframeCategory(snippet.categorization.timeframe);
+      const framing = snippet.categorization.framing || 'Unknown';
+      const category = question.category || 'Unknown';
+
+      bumpCount(categoryMap, category, isDisclosure);
+      bumpCount(timeframeMap, timeframe, isDisclosure);
+      bumpCount(framingMap, framing, isDisclosure);
+      bumpCount(companyMap, companyKey, isDisclosure);
+
+      const ctKey = `${category}__${timeframe}`;
+      const existing = categoryTimeframeMap.get(ctKey) || {
+        category,
+        timeframe,
+        disclosure: 0,
+        total: 0
+      };
+      existing.total += 1;
+      if (isDisclosure) existing.disclosure += 1;
+      categoryTimeframeMap.set(ctKey, existing);
+
+      if (isDisclosure) overallDisclosure += 1;
+      else overallNoDisclosure += 1;
+    });
+  });
+});
+
+const categoryRates = Array.from(categoryMap.entries()).map(([label, counts]) => ({ label, ...counts }));
+const timeframeRates = Array.from(timeframeMap.entries()).map(([label, counts]) => ({ label, ...counts }));
+const framingRates = Array.from(framingMap.entries()).map(([label, counts]) => ({ label, ...counts }));
+const companyRates = Array.from(companyMap.entries()).map(([label, counts]) => ({ label, ...counts }));
+const questionRates = Array.from(questionMap.entries()).map(([question_id, entry]) => ({
+  question_id,
+  question_text: entry.question_text,
+  category: entry.category,
+  disclosure: entry.disclosure,
+  total: entry.total
+}));
+const categoryTimeframe = Array.from(categoryTimeframeMap.values());
+
+const binaryDisclosureData = {
+  overall: { disclosure: overallDisclosure, noDisclosure: overallNoDisclosure },
+  categoryRates,
+  timeframeRates,
+  framingRates,
+  companyRates,
+  questionRates,
+  categoryTimeframe
+};
 ---
 
 <Layout title="Analytics - Cross-Company Insights">
@@ -152,6 +285,16 @@ const breadcrumbItems = [
           </button>
           <button
             class="nav-tab flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 border border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
+            data-target="disclosure"
+            aria-pressed="false"
+          >
+            <svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            Disclosure Patterns
+          </button>
+          <button
+            class="nav-tab flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 border border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
             data-target="comparison"
             aria-pressed="false"
           >
@@ -182,6 +325,18 @@ const breadcrumbItems = [
 
         <div id="tab-questions" class="tab-content hidden">
           <QuestionBenchmark crossCompanyMetrics={crossCompanyMetrics} />
+        </div>
+
+        <div id="tab-disclosure" class="tab-content hidden">
+          <BinaryDisclosureCharts
+            overall={binaryDisclosureData.overall}
+            categoryRates={binaryDisclosureData.categoryRates}
+            timeframeRates={binaryDisclosureData.timeframeRates}
+            framingRates={binaryDisclosureData.framingRates}
+            companyRates={binaryDisclosureData.companyRates}
+            questionRates={binaryDisclosureData.questionRates}
+            categoryTimeframe={binaryDisclosureData.categoryTimeframe}
+          />
         </div>
 
         <div id="tab-comparison" class="tab-content hidden">

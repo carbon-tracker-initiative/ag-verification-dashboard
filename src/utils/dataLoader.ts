@@ -174,7 +174,19 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
 
     const mergedData = await loadMergedCompanyData(resultsPath);
 
-    return [...standardData, ...mergedData];
+    const combined = [...standardData, ...mergedData];
+    if (combined.length > 0) {
+      return combined;
+    }
+
+    // Fallback: load team-reviewed collapsed bundle if no verified data found
+    const teamReviewed = await loadTeamReviewedCombined(resultsPath);
+    if (teamReviewed.length > 0) {
+      console.log(`Loaded ${teamReviewed.length} team-reviewed company bundles as fallback`);
+      return teamReviewed;
+    }
+
+    return combined;
 
   } catch (error) {
     console.error('Error loading company data:', error);
@@ -784,6 +796,40 @@ function getVersionSortWeight(version: string): number {
 export async function loadMergedReviewedCompanyData(): Promise<CompanyYearData[]> {
   const resultsPath = join(process.cwd(), 'results');
   return loadMergedReviewedData(resultsPath);
+}
+
+async function loadTeamReviewedCombined(resultsPath: string): Promise<CompanyYearData[]> {
+  const combinedPath = join(resultsPath, 'team_reviewed_json', 'team_reviewed_combined_collapsed.json');
+  try {
+    const raw = await loadJsonFile(combinedPath);
+    if (!Array.isArray(raw)) return [];
+
+    return raw.map((entry: any) => {
+      const verified = normalizeAnalysisResult(entry.verified);
+      verified.company_name = entry.company;
+      verified.fiscal_year = entry.year;
+      verified.version = entry.version || 'team-reviewed';
+      verified.model_used = entry.verified?.model_used || 'team-reviewed';
+
+      const sector = normalizeSectorCode(
+        verified.metadata?.company_sector as string | undefined
+      );
+
+      return {
+        company: entry.company,
+        year: entry.year,
+        version: verified.version,
+        model: verified.model_used,
+        sector,
+        verified,
+        hasComparison: false,
+        isTeamReviewed: true
+      } as CompanyYearData;
+    });
+  } catch (error) {
+    console.log('No team-reviewed combined data found');
+    return [];
+  }
 }
 
 

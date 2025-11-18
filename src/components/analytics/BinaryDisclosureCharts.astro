@@ -1,0 +1,367 @@
+---
+/**
+ * Binary Disclosure Charts
+ * Summaries using collapsed Disclosure vs No-Disclosure across categories, timeframe, framing, companies, and questions.
+ */
+
+interface CountPair {
+  label: string;
+  disclosure: number;
+  noDisclosure: number;
+  category?: string;
+  extra?: string;
+}
+
+interface QuestionRate {
+  question_id: string;
+  question_text: string;
+  category: string;
+  disclosure: number;
+  total: number;
+}
+
+interface Props {
+  overall: { disclosure: number; noDisclosure: number };
+  categoryRates: CountPair[];
+  timeframeRates: CountPair[];
+  framingRates: CountPair[];
+  companyRates: CountPair[];
+  questionRates: QuestionRate[];
+  categoryTimeframe: Array<{ category: string; timeframe: string; disclosure: number; total: number }>;
+}
+
+const {
+  overall,
+  categoryRates,
+  timeframeRates,
+  framingRates,
+  companyRates,
+  questionRates,
+  categoryTimeframe
+} = Astro.props as Props;
+
+const fmtPct = (num: number) => `${num.toFixed(1)}%`;
+
+function calcPct(disclosure: number, total: number) {
+  if (total <= 0) return 0;
+  return (disclosure / total) * 100;
+}
+
+const overallTotal = overall.disclosure + overall.noDisclosure;
+const topCompanies = companyRates
+  .map(c => ({ ...c, total: c.disclosure + c.noDisclosure, pct: calcPct(c.disclosure, c.disclosure + c.noDisclosure) }))
+  .sort((a, b) => b.pct - a.pct)
+  .slice(0, 5);
+
+const categoryMatrix = categoryTimeframe.reduce((acc, row) => {
+  const key = `${row.category}__${row.timeframe}`;
+  acc[key] = calcPct(row.disclosure, row.total || 0);
+  return acc;
+}, {} as Record<string, number>);
+
+const categoryKeys = Array.from(new Set(categoryTimeframe.map(r => r.category)));
+const timeframeKeys = Array.from(new Set(categoryTimeframe.map(r => r.timeframe)));
+
+const sortedQuestions = questionRates
+  .map(q => ({
+    ...q,
+    pct: calcPct(q.disclosure, q.total)
+  }))
+  .sort((a, b) => b.pct - a.pct);
+
+const topQuestions = sortedQuestions.slice(0, 5);
+const bottomQuestions = sortedQuestions.slice(-5).reverse();
+
+const hasData = overallTotal > 0;
+---
+
+{hasData ? (
+<div class="space-y-8">
+  <div class="grid gap-4 md:grid-cols-3">
+    <div class="surface rounded-2xl border border-slate-700/60 p-5">
+      <div class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Overall Disclosure</div>
+      <div class="flex items-baseline gap-2">
+        <div class="text-4xl font-semibold text-emerald-300">
+          {overallTotal ? fmtPct(calcPct(overall.disclosure, overallTotal)) : '—'}
+        </div>
+        <div class="text-xs text-slate-500">of snippets</div>
+      </div>
+      <div class="mt-3 h-2 rounded-full bg-slate-800 overflow-hidden">
+        <div
+          class="h-full bg-gradient-to-r from-emerald-400/80 via-emerald-300/70 to-sky-300/70"
+          style={{ width: `${overallTotal ? calcPct(overall.disclosure, overallTotal) : 0}%` }}
+        />
+      </div>
+      <div class="mt-3 flex gap-4 text-sm text-slate-300">
+        <span class="flex items-center gap-2">
+          <span class="h-2 w-2 rounded-full bg-emerald-400" />
+          Disclosure: {overall.disclosure}
+        </span>
+        <span class="flex items-center gap-2 text-slate-400">
+          <span class="h-2 w-2 rounded-full bg-slate-600" />
+          No Disclosure: {overall.noDisclosure}
+        </span>
+      </div>
+    </div>
+
+    <div class="surface rounded-2xl border border-slate-700/60 p-5">
+      <div class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Best Categories</div>
+      <div class="space-y-3">
+        {categoryRates
+          .map(c => ({ ...c, pct: calcPct(c.disclosure, c.disclosure + c.noDisclosure) }))
+          .sort((a, b) => b.pct - a.pct)
+          .slice(0, 3)
+          .map(cat => (
+            <div class="space-y-1">
+              <div class="flex items-center justify-between text-sm text-slate-200">
+                <span>{cat.label}</span>
+                <span class="font-semibold text-emerald-300">{fmtPct(cat.pct)}</span>
+              </div>
+              <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-sky-400/80 via-emerald-400/80 to-emerald-300/70"
+                  style={{ width: `${cat.pct}%` }}
+                />
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+
+    <div class="surface rounded-2xl border border-slate-700/60 p-5">
+      <div class="text-xs uppercase tracking-[0.2em] text-slate-400 mb-2">Weak Spots</div>
+      <div class="space-y-3">
+        {categoryRates
+          .map(c => ({ ...c, pct: calcPct(c.disclosure, c.disclosure + c.noDisclosure) }))
+          .sort((a, b) => a.pct - b.pct)
+          .slice(0, 3)
+          .map(cat => (
+            <div class="space-y-1">
+              <div class="flex items-center justify-between text-sm text-slate-200">
+                <span>{cat.label}</span>
+                <span class="font-semibold text-rose-300">{fmtPct(cat.pct)}</span>
+              </div>
+              <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-rose-500/70 via-amber-400/80 to-slate-600/70"
+                  style={{ width: `${cat.pct}%` }}
+                />
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-2">
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-400">By Category</div>
+          <div class="text-lg font-semibold text-slate-100">Disclosure vs No Disclosure</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        {categoryRates.map(cat => {
+          const total = cat.disclosure + cat.noDisclosure;
+          const pct = calcPct(cat.disclosure, total);
+          return (
+            <div class="space-y-1">
+              <div class="flex items-center justify-between text-sm text-slate-300">
+                <span>{cat.label}</span>
+                <span class="font-semibold">{fmtPct(pct)}</span>
+              </div>
+              <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-emerald-400/80 via-emerald-300/70 to-sky-300/70"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-400">By Timeframe</div>
+          <div class="text-lg font-semibold text-slate-100">Present vs Forward vs Other</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        {timeframeRates.map(tf => {
+          const total = tf.disclosure + tf.noDisclosure;
+          const pct = calcPct(tf.disclosure, total);
+          return (
+            <div class="space-y-1">
+              <div class="flex items-center justify-between text-sm text-slate-300">
+                <span>{tf.label}</span>
+                <span class="font-semibold">{fmtPct(pct)}</span>
+              </div>
+              <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-amber-300/80 via-sky-300/70 to-emerald-300/70"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-2">
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-400">By Framing</div>
+          <div class="text-lg font-semibold text-slate-100">Risk vs Neutral vs Opportunity</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        {framingRates.map(fr => {
+          const total = fr.disclosure + fr.noDisclosure;
+          const pct = calcPct(fr.disclosure, total);
+          return (
+            <div class="space-y-1">
+              <div class="flex items-center justify-between text-sm text-slate-300">
+                <span>{fr.label}</span>
+                <span class="font-semibold">{fmtPct(pct)}</span>
+              </div>
+              <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-sky-400/70 via-emerald-300/70 to-amber-300/70"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Company Leaderboard</div>
+          <div class="text-lg font-semibold text-slate-100">Top Disclosure Rates</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        {topCompanies.map(comp => (
+          <div class="space-y-1">
+            <div class="flex items-center justify-between text-sm text-slate-300">
+              <span>{comp.label}</span>
+              <span class="font-semibold text-emerald-300">{fmtPct(comp.pct)}</span>
+            </div>
+            <div class="h-2 rounded-full bg-slate-800 overflow-hidden">
+              <div
+                class="h-full bg-gradient-to-r from-emerald-400/80 via-sky-300/70 to-slate-500/60"
+                style={{ width: `${comp.pct}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Category x Timeframe</div>
+        <div class="text-lg font-semibold text-slate-100">Where Disclosure Lands</div>
+      </div>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-slate-200 border-collapse">
+        <thead>
+          <tr class="text-slate-400 text-xs uppercase">
+            <th class="px-3 py-2 text-left">Category</th>
+            {timeframeKeys.map(tf => (
+              <th class="px-3 py-2 text-center">{tf}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {categoryKeys.map(cat => (
+            <tr class="border-t border-slate-800/80">
+              <td class="px-3 py-2 font-semibold text-slate-100">{cat}</td>
+              {timeframeKeys.map(tf => {
+                const pct = categoryMatrix[`${cat}__${tf}`] ?? 0;
+                return (
+                  <td class="px-3 py-2 text-center">
+                    <div class="mx-auto h-2 w-full rounded-full bg-slate-900/80 overflow-hidden">
+                      <div
+                        class="h-full bg-gradient-to-r from-emerald-400/80 via-sky-300/70 to-amber-300/70"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <div class="mt-1 text-xs text-slate-400">{fmtPct(pct)}</div>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-2">
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-4">
+      <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Top Questions</div>
+      <div class="space-y-3">
+        {topQuestions.map(q => (
+          <div class="rounded-xl border border-slate-800/80 bg-slate-950/60 p-4 space-y-1">
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-200">{q.question_text}</span>
+              <span class="text-emerald-300 font-semibold">{fmtPct(q.pct)}</span>
+            </div>
+            <div class="text-xs text-slate-500">{q.category}</div>
+            <div class="h-2 rounded-full bg-slate-900/80 overflow-hidden">
+              <div
+                class="h-full bg-gradient-to-r from-emerald-400/80 via-sky-300/70 to-slate-500/60"
+                style={{ width: `${q.pct}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-4">
+      <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Bottom Questions</div>
+      <div class="space-y-3">
+        {bottomQuestions.map(q => (
+          <div class="rounded-xl border border-slate-800/80 bg-slate-950/60 p-4 space-y-1">
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-slate-200">{q.question_text}</span>
+              <span class="text-rose-300 font-semibold">{fmtPct(q.pct)}</span>
+            </div>
+            <div class="text-xs text-slate-500">{q.category}</div>
+            <div class="h-2 rounded-full bg-slate-900/80 overflow-hidden">
+              <div
+                class="h-full bg-gradient-to-r from-rose-500/70 via-amber-400/70 to-slate-600/60"
+                style={{ width: `${q.pct}%` }}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+)
+:
+(
+  <div class="surface rounded-2xl border border-slate-700/60 p-8 text-center text-slate-300">
+    <p class="text-lg font-semibold text-slate-100 mb-2">No verified disclosure data found</p>
+    <p class="text-sm text-slate-400">
+      Add verified results JSON files to <code class="text-slate-200">results/</code> or ensure team-reviewed data is available, then reload to view Disclosure vs No-Disclosure patterns.
+    </p>
+  </div>
+)}
