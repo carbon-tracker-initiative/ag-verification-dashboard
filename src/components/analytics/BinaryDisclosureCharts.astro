@@ -28,6 +28,8 @@ interface Props {
   companyRates: CountPair[];
   questionRates: QuestionRate[];
   categoryTimeframe: Array<{ category: string; timeframe: string; disclosure: number; total: number }>;
+  categoryFraming: Array<{ category: string; framing: string; disclosure: number; total: number }>;
+  questionVolatility: Array<QuestionRate & { pct: number; volatility: number }>;
 }
 
 const {
@@ -37,7 +39,9 @@ const {
   framingRates,
   companyRates,
   questionRates,
-  categoryTimeframe
+  categoryTimeframe,
+  categoryFraming,
+  questionVolatility
 } = Astro.props as Props;
 
 const fmtPct = (num: number) => `${num.toFixed(1)}%`;
@@ -48,19 +52,30 @@ function calcPct(disclosure: number, total: number) {
 }
 
 const overallTotal = overall.disclosure + overall.noDisclosure;
+const categoryTimeframeSafe = categoryTimeframe || [];
+const categoryFramingSafe = categoryFraming || [];
+const questionVolatilitySafe = questionVolatility || [];
 const topCompanies = companyRates
   .map(c => ({ ...c, total: c.disclosure + c.noDisclosure, pct: calcPct(c.disclosure, c.disclosure + c.noDisclosure) }))
   .sort((a, b) => b.pct - a.pct)
   .slice(0, 5);
 
-const categoryMatrix = categoryTimeframe.reduce((acc, row) => {
+const categoryMatrix = categoryTimeframeSafe.reduce((acc, row) => {
   const key = `${row.category}__${row.timeframe}`;
   acc[key] = calcPct(row.disclosure, row.total || 0);
   return acc;
 }, {} as Record<string, number>);
 
-const categoryKeys = Array.from(new Set(categoryTimeframe.map(r => r.category)));
-const timeframeKeys = Array.from(new Set(categoryTimeframe.map(r => r.timeframe)));
+const categoryKeys = Array.from(new Set(categoryTimeframeSafe.map(r => r.category)));
+const timeframeKeys = Array.from(new Set(categoryTimeframeSafe.map(r => r.timeframe)));
+
+const categoryFramingMatrix = categoryFramingSafe.reduce((acc, row) => {
+  const key = `${row.category}__${row.framing}`;
+  acc[key] = calcPct(row.disclosure, row.total || 0);
+  return acc;
+}, {} as Record<string, number>);
+
+const framingKeys = Array.from(new Set(categoryFramingSafe.map(r => r.framing)));
 
 const sortedQuestions = questionRates
   .map(q => ({
@@ -71,6 +86,9 @@ const sortedQuestions = questionRates
 
 const topQuestions = sortedQuestions.slice(0, 5);
 const bottomQuestions = sortedQuestions.slice(-5).reverse();
+
+const mostVolatile = questionVolatilitySafe.slice(0, 5);
+const mostCovered = [...sortedQuestions].sort((a, b) => b.total - a.total).slice(0, 5);
 
 const hasData = overallTotal > 0;
 ---
@@ -272,6 +290,48 @@ const hasData = overallTotal > 0;
   <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
     <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
       <div>
+        <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Category x Framing</div>
+        <div class="text-lg font-semibold text-slate-100">Neutral & Opportunity Weak Spots</div>
+      </div>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm text-slate-200 border-collapse">
+        <thead>
+          <tr class="text-slate-400 text-xs uppercase">
+            <th class="px-3 py-2 text-left">Category</th>
+            {framingKeys.map(fr => (
+              <th class="px-3 py-2 text-center">{fr}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {categoryKeys.map(cat => (
+            <tr class="border-t border-slate-800/80">
+              <td class="px-3 py-2 font-semibold text-slate-100">{cat}</td>
+              {framingKeys.map(fr => {
+                const pct = categoryFramingMatrix[`${cat}__${fr}`] ?? 0;
+                return (
+                  <td class="px-3 py-2 text-center">
+                    <div class="mx-auto h-2 w-full rounded-full bg-slate-900/80 overflow-hidden">
+                      <div
+                        class="h-full bg-gradient-to-r from-emerald-400/80 via-sky-300/70 to-amber-300/70"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <div class="mt-1 text-xs text-slate-400">{fmtPct(pct)}</div>
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <div>
         <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Category x Timeframe</div>
         <div class="text-lg font-semibold text-slate-100">Where Disclosure Lands</div>
       </div>
@@ -351,6 +411,58 @@ const hasData = overallTotal > 0;
             </div>
           </div>
         ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-2">
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-4">
+      <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Most Volatile Questions</div>
+      <div class="text-sm text-slate-400">Highest mix of Disclosure and No-Disclosure across companies.</div>
+      <div class="space-y-3">
+        {mostVolatile.map(q => {
+          const pct = calcPct(q.disclosure, q.total);
+          return (
+            <div class="rounded-xl border border-slate-800/80 bg-slate-950/60 p-4 space-y-1">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-200">{q.question_text}</span>
+                <span class="text-amber-300 font-semibold">{fmtPct(pct)}</span>
+              </div>
+              <div class="text-xs text-slate-500">{q.category}</div>
+              <div class="h-2 rounded-full bg-slate-900/80 overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-emerald-400/80 via-sky-300/70 to-amber-300/70"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-4">
+      <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Most Covered Questions</div>
+      <div class="text-sm text-slate-400">Questions answered by the most companies; shows Disclosure rate for each.</div>
+      <div class="space-y-3">
+        {mostCovered.map(q => {
+          const pct = calcPct(q.disclosure, q.total);
+          return (
+            <div class="rounded-xl border border-slate-800/80 bg-slate-950/60 p-4 space-y-1">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-slate-200">{q.question_text}</span>
+                <span class="text-emerald-300 font-semibold">{fmtPct(pct)}</span>
+              </div>
+              <div class="text-xs text-slate-500">Coverage: {q.total} company-years · {q.category}</div>
+              <div class="h-2 rounded-full bg-slate-900/80 overflow-hidden">
+                <div
+                  class="h-full bg-gradient-to-r from-emerald-400/80 via-sky-300/70 to-amber-300/70"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   </div>

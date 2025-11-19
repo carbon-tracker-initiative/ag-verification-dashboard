@@ -66,6 +66,7 @@ const framingMap = new Map<string, CountPair>();
 const companyMap = new Map<string, CountPair>();
 const questionMap = new Map<string, { question_text: string; category: string; disclosure: number; total: number }>();
 const categoryTimeframeMap = new Map<string, { category: string; timeframe: string; disclosure: number; total: number }>();
+const categoryFramingMap = new Map<string, { category: string; framing: string; disclosure: number; total: number }>();
 
 let overallDisclosure = 0;
 let overallNoDisclosure = 0;
@@ -137,6 +138,17 @@ allCompanyData.forEach(bundle => {
       if (isDisclosure) existing.disclosure += 1;
       categoryTimeframeMap.set(ctKey, existing);
 
+      const cfKey = `${category}__${framing}`;
+      const cfExisting = categoryFramingMap.get(cfKey) || {
+        category,
+        framing,
+        disclosure: 0,
+        total: 0
+      };
+      cfExisting.total += 1;
+      if (isDisclosure) cfExisting.disclosure += 1;
+      categoryFramingMap.set(cfKey, cfExisting);
+
       if (isDisclosure) overallDisclosure += 1;
       else overallNoDisclosure += 1;
     });
@@ -155,6 +167,15 @@ const questionRates = Array.from(questionMap.entries()).map(([question_id, entry
   total: entry.total
 }));
 const categoryTimeframe = Array.from(categoryTimeframeMap.values());
+const categoryFraming = Array.from(categoryFramingMap.values());
+
+const questionVolatility = questionRates
+  .map(q => {
+    const pct = q.total ? q.disclosure / q.total : 0;
+    const volatility = pct * (1 - pct); // peaks near 0.5, zero at 0 or 1
+    return { ...q, pct, volatility };
+  })
+  .sort((a, b) => b.volatility - a.volatility);
 
 const binaryDisclosureData = {
   overall: { disclosure: overallDisclosure, noDisclosure: overallNoDisclosure },
@@ -163,7 +184,9 @@ const binaryDisclosureData = {
   framingRates,
   companyRates,
   questionRates,
-  categoryTimeframe
+  categoryTimeframe,
+  categoryFraming,
+  questionVolatility
 };
 ---
 
