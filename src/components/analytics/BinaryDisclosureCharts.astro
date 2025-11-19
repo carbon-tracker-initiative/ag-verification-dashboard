@@ -30,6 +30,7 @@ interface Props {
   categoryTimeframe: Array<{ category: string; timeframe: string; disclosure: number; total: number }>;
   categoryFraming: Array<{ category: string; framing: string; disclosure: number; total: number }>;
   questionVolatility: Array<QuestionRate & { pct: number; volatility: number }>;
+  categoryFinancial: Array<{ category: string; full: number; partial: number; non: number; total: number }>;
 }
 
 const {
@@ -41,7 +42,8 @@ const {
   questionRates,
   categoryTimeframe,
   categoryFraming,
-  questionVolatility
+  questionVolatility,
+  categoryFinancial
 } = Astro.props as Props;
 
 const fmtPct = (num: number) => `${num.toFixed(1)}%`;
@@ -55,6 +57,7 @@ const overallTotal = overall.disclosure + overall.noDisclosure;
 const categoryTimeframeSafe = categoryTimeframe || [];
 const categoryFramingSafe = categoryFraming || [];
 const questionVolatilitySafe = questionVolatility || [];
+const categoryFinancialSafe = categoryFinancial || [];
 const topCompanies = companyRates
   .map(c => ({ ...c, total: c.disclosure + c.noDisclosure, pct: calcPct(c.disclosure, c.disclosure + c.noDisclosure) }))
   .sort((a, b) => b.pct - a.pct)
@@ -87,10 +90,24 @@ const sortedQuestions = questionRates
 const topQuestions = sortedQuestions.slice(0, 5);
 const bottomQuestions = sortedQuestions.slice(-5).reverse();
 
-const mostVolatile = questionVolatilitySafe.slice(0, 5);
 const mostCovered = [...sortedQuestions].sort((a, b) => b.total - a.total).slice(0, 5);
 
 const hasData = overallTotal > 0;
+
+const financialMix = categoryFinancialSafe
+  .map(row => {
+    const total = row.total || 1;
+    return {
+      category: row.category,
+      full: row.full,
+      partial: row.partial,
+      non: row.non,
+      pctFull: calcPct(row.full, total),
+      pctPartial: calcPct(row.partial, total),
+      pctNon: calcPct(row.non, total)
+    };
+  })
+  .sort((a, b) => b.pctFull - a.pctFull);
 ---
 
 {hasData ? (
@@ -287,6 +304,80 @@ const hasData = overallTotal > 0;
     </div>
   </div>
 
+  <div class="grid gap-6 lg:grid-cols-2">
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Financial Mix</div>
+          <div class="text-lg font-semibold text-slate-100">Financial vs Partial vs Non-Financial</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        {financialMix.map(row => (
+          <div class="space-y-1">
+            <div class="flex items-center justify-between text-sm text-slate-300">
+              <span>{row.category}</span>
+              <span class="font-semibold text-emerald-300">{fmtPct(row.pctFull)}</span>
+            </div>
+            <div class="h-2 rounded-full bg-slate-800 overflow-hidden flex">
+              <div
+                class="h-full bg-emerald-400/80"
+                style={{ width: `${row.pctFull}%` }}
+                title={`Financial: ${fmtPct(row.pctFull)}`}
+              />
+              <div
+                class="h-full bg-amber-300/80"
+                style={{ width: `${row.pctPartial}%` }}
+                title={`Partial: ${fmtPct(row.pctPartial)}`}
+              />
+              <div
+                class="h-full bg-slate-500/70"
+                style={{ width: `${row.pctNon}%` }}
+                title={`Non-Financial: ${fmtPct(row.pctNon)}`}
+              />
+            </div>
+            <div class="text-xs text-slate-500">Financial {row.full} · Partial {row.partial} · Non-Financial {row.non}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Framing Mix by Category</div>
+          <div class="text-lg font-semibold text-slate-100">Risk vs Neutral vs Opportunity</div>
+        </div>
+      </div>
+      <div class="space-y-3">
+        {categoryKeys.map(cat => {
+          // derive framing mix per category from categoryFramingMatrix
+          const risk = categoryFramingMatrix[`${cat}__Risk`] ?? 0;
+          const neutral = categoryFramingMatrix[`${cat}__Neutral`] ?? 0;
+          const opportunity = categoryFramingMatrix[`${cat}__Opportunity`] ?? 0;
+          const totalPct = risk + neutral + opportunity || 1;
+          const normRisk = (risk / totalPct) * 100;
+          const normNeutral = (neutral / totalPct) * 100;
+          const normOpp = (opportunity / totalPct) * 100;
+          return (
+            <div class="space-y-1">
+              <div class="flex items-center justify-between text-sm text-slate-300">
+                <span>{cat}</span>
+                <span class="font-semibold text-emerald-300">{fmtPct(normRisk)}</span>
+              </div>
+              <div class="h-2 rounded-full bg-slate-800 overflow-hidden flex">
+                <div class="h-full bg-rose-400/80" style={{ width: `${normRisk}%` }} title={`Risk: ${fmtPct(normRisk)}`} />
+                <div class="h-full bg-slate-500/80" style={{ width: `${normNeutral}%` }} title={`Neutral: ${fmtPct(normNeutral)}`} />
+                <div class="h-full bg-amber-300/80" style={{ width: `${normOpp}%` }} title={`Opportunity: ${fmtPct(normOpp)}`} />
+              </div>
+              <div class="text-xs text-slate-500">Risk {fmtPct(normRisk)} · Neutral {fmtPct(normNeutral)} · Opportunity {fmtPct(normOpp)}</div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+
   <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
     <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
       <div>
@@ -416,31 +507,6 @@ const hasData = overallTotal > 0;
   </div>
 
   <div class="grid gap-6 lg:grid-cols-2">
-    <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-4">
-      <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Most Volatile Questions</div>
-      <div class="text-sm text-slate-400">Highest mix of Disclosure and No-Disclosure across companies.</div>
-      <div class="space-y-3">
-        {mostVolatile.map(q => {
-          const pct = calcPct(q.disclosure, q.total);
-          return (
-            <div class="rounded-xl border border-slate-800/80 bg-slate-950/60 p-4 space-y-1">
-              <div class="flex items-center justify-between text-sm">
-                <span class="text-slate-200">{q.question_text}</span>
-                <span class="text-amber-300 font-semibold">{fmtPct(pct)}</span>
-              </div>
-              <div class="text-xs text-slate-500">{q.category}</div>
-              <div class="h-2 rounded-full bg-slate-900/80 overflow-hidden">
-                <div
-                  class="h-full bg-gradient-to-r from-emerald-400/80 via-sky-300/70 to-amber-300/70"
-                  style={{ width: `${pct}%` }}
-                />
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
-
     <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-4">
       <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Most Covered Questions</div>
       <div class="text-sm text-slate-400">Questions answered by the most companies; shows Disclosure rate for each.</div>

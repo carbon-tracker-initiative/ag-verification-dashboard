@@ -17,7 +17,8 @@ import { loadAllCompanyData } from '../utils/dataLoader';
 import {
   calculateCompanyMetrics,
   calculateCrossCompanyMetrics,
-  normalizeTimeframeCategory
+  normalizeTimeframeCategory,
+  normalizeFinancialDisclosureType
 } from '../utils/metricsCalculator';
 
 // Load all company data (fallback to team-reviewed combined if no verified files are present)
@@ -67,6 +68,7 @@ const companyMap = new Map<string, CountPair>();
 const questionMap = new Map<string, { question_text: string; category: string; disclosure: number; total: number }>();
 const categoryTimeframeMap = new Map<string, { category: string; timeframe: string; disclosure: number; total: number }>();
 const categoryFramingMap = new Map<string, { category: string; framing: string; disclosure: number; total: number }>();
+const categoryFinancialMap = new Map<string, { category: string; full: number; partial: number; non: number; total: number }>();
 
 let overallDisclosure = 0;
 let overallNoDisclosure = 0;
@@ -121,6 +123,7 @@ allCompanyData.forEach(bundle => {
       const timeframe = normalizeTimeframeCategory(snippet.categorization.timeframe);
       const framing = snippet.categorization.framing || 'Unknown';
       const category = question.category || 'Unknown';
+      const financialType = normalizeFinancialDisclosureType(snippet.categorization.financial_type);
 
       bumpCount(categoryMap, category, isDisclosure);
       bumpCount(timeframeMap, timeframe, isDisclosure);
@@ -149,6 +152,19 @@ allCompanyData.forEach(bundle => {
       if (isDisclosure) cfExisting.disclosure += 1;
       categoryFramingMap.set(cfKey, cfExisting);
 
+      const finExisting = categoryFinancialMap.get(category) || {
+        category,
+        full: 0,
+        partial: 0,
+        non: 0,
+        total: 0
+      };
+      finExisting.total += 1;
+      if (financialType === 'Financial') finExisting.full += 1;
+      else if (financialType === 'Partial-type') finExisting.partial += 1;
+      else finExisting.non += 1;
+      categoryFinancialMap.set(category, finExisting);
+
       if (isDisclosure) overallDisclosure += 1;
       else overallNoDisclosure += 1;
     });
@@ -168,6 +184,7 @@ const questionRates = Array.from(questionMap.entries()).map(([question_id, entry
 }));
 const categoryTimeframe = Array.from(categoryTimeframeMap.values());
 const categoryFraming = Array.from(categoryFramingMap.values());
+const categoryFinancial = Array.from(categoryFinancialMap.values());
 
 const questionVolatility = questionRates
   .map(q => {
@@ -186,7 +203,8 @@ const binaryDisclosureData = {
   questionRates,
   categoryTimeframe,
   categoryFraming,
-  questionVolatility
+  questionVolatility,
+  categoryFinancial
 };
 ---
 
@@ -359,6 +377,9 @@ const binaryDisclosureData = {
             companyRates={binaryDisclosureData.companyRates}
             questionRates={binaryDisclosureData.questionRates}
             categoryTimeframe={binaryDisclosureData.categoryTimeframe}
+            categoryFraming={binaryDisclosureData.categoryFraming}
+            questionVolatility={binaryDisclosureData.questionVolatility}
+            categoryFinancial={binaryDisclosureData.categoryFinancial}
           />
         </div>
 
