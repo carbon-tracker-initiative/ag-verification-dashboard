@@ -503,6 +503,7 @@ No environment variables required for basic deployment. Data is loaded from loca
 - **[tests/README.md](tests/README.md)** - Testing documentation
 - **[API.md](API.md)** - API and utilities documentation
 - **[docs/DISCLOSURE_PATTERNS.md](docs/DISCLOSURE_PATTERNS.md)** - How Disclosure vs No-Disclosure charts are calculated
+- **[docs/BUGFIX_FINANCIAL_TYPE.md](docs/BUGFIX_FINANCIAL_TYPE.md)** - Notes on fixing financial type/amount export & display
 
 ## Contributing
 
