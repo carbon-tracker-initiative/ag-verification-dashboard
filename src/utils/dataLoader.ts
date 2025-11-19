@@ -381,17 +381,23 @@ function normalizeClassification(value: unknown): Classification {
   return 'UNCLEAR';
 }
 
-function mapMergedFinancialType(value: string | undefined): "Full" | "Partial" | "Non-Financial" {
-  const normalized = (value || '').toLowerCase();
+function mapMergedFinancialType(value: string | undefined): "Financial" | "Partial-type" | "Non-Financial" {
+  const normalized = (value || '').toLowerCase().trim();
 
-  if (normalized.includes('full')) {
-    return "Full";
+  // Honor the explicit financial_type values only; do not mix with classification.
+  if (normalized.includes('non-financial')) {
+    return "Non-Financial";
   }
 
-  if (normalized.includes('partial') || normalized.includes('materiality')) {
-    return "Partial";
+  if (normalized.includes('partial')) {
+    return "Partial-type";
   }
 
+  if (normalized.includes('financial')) {
+    return "Financial";
+  }
+
+  // Unknowns default to Non-Financial rather than dropping Financial to Partial.
   return "Non-Financial";
 }
 
@@ -451,27 +457,39 @@ function convertMergedSnippet(rawSnippet: any, questionId: string, index: number
   const financialAmounts = Array.isArray(rawSnippet.financial_amounts)
     ? rawSnippet.financial_amounts
         .map((amount: any) => {
-          const rawAmount = amount?.amount;
+          let rawValue: any = amount;
           let numericAmount: number | null = null;
+          let currency = '';
+          let context = '';
 
-          if (typeof rawAmount === 'number' && Number.isFinite(rawAmount)) {
-            numericAmount = rawAmount;
-          } else if (typeof rawAmount === 'string') {
-            const parsed = parseFloat(rawAmount.replace(/[^0-9.-]/g, ''));
+          if (amount && typeof amount === 'object') {
+            rawValue = amount.amount ?? amount.value ?? amount;
+            currency = amount.currency || '';
+            context = amount.context || '';
+          }
+
+          if (typeof rawValue === 'number' && Number.isFinite(rawValue)) {
+            numericAmount = rawValue;
+          } else if (typeof rawValue === 'string') {
+            const parsed = parseFloat(rawValue.replace(/[^0-9.-]/g, ''));
             if (!Number.isNaN(parsed)) {
               numericAmount = parsed;
+              if (!context) context = rawValue;
+            } else {
+              // keep as context-only string if no numeric parse
+              context = rawValue;
             }
           }
 
-          if (numericAmount === null) {
+          if (numericAmount === null && !context) {
             return null;
           }
 
           return {
-            amount: numericAmount,
-            currency: amount?.currency || 'USD',
-            context: amount?.context || ''
-          };
+            amount: numericAmount ?? 0,
+            currency: currency || 'USD',
+            context
+          } as FinancialAmount;
         })
         .filter(Boolean) as FinancialAmount[]
     : [];

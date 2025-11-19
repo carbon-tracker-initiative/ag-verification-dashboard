@@ -623,9 +623,30 @@ async function createSnippetDataSheet(
 
     questions.forEach(question => {
       question.disclosures.forEach(snippet => {
-        const amounts = snippet.financial_amounts.map(fa =>
-          `${fa.currency} ${fa.amount} (${fa.context})`
-        ).join('; ');
+        const amountsArray = snippet.financial_amounts || [];
+        const amounts = amountsArray
+          .map(fa => {
+            if (typeof fa === 'string') {
+              return fa;
+            }
+            if (fa && typeof fa === 'object') {
+              const parts = [];
+              if (fa.currency) parts.push(String(fa.currency));
+              if (fa.amount !== undefined) parts.push(String(fa.amount));
+              const main = parts.join(' ').trim();
+              const ctx = fa.context ? ` (${fa.context})` : '';
+              return `${main}${ctx}`.trim();
+            }
+            return '';
+          })
+          .filter(Boolean)
+          .join('; ');
+
+        // If we have any financial amount text, force financial_type to Financial for export visibility
+        let financialTypeForExport = snippet.categorization.financial_type;
+        if (amounts && amounts.trim()) {
+          financialTypeForExport = 'Financial';
+        }
 
         const sourceVersions = Array.isArray(snippet.source_versions)
           ? snippet.source_versions.join(', ')
@@ -656,7 +677,7 @@ async function createSnippetDataSheet(
           snippet.classification_justification,
           snippet.categorization.framing,
           snippet.categorization.framing_justification,
-          snippet.categorization.financial_type,
+          financialTypeForExport,
           snippet.categorization.financial_justification,
           snippet.categorization.timeframe,
           snippet.categorization.timeframe_justification,
