@@ -31,6 +31,8 @@ interface Props {
   categoryFraming: Array<{ category: string; framing: string; disclosure: number; total: number }>;
   questionVolatility: Array<QuestionRate & { pct: number; volatility: number }>;
   categoryFinancial: Array<{ category: string; full: number; partial: number; non: number; total: number }>;
+  categoryFramingFinancial: Array<{ category: string; framing: string; financial: string; count: number; pct: number }>;
+  categoryShare: Array<{ label: string; shareDisclosure: number; disclosure: number }>;
 }
 
 const {
@@ -43,7 +45,9 @@ const {
   categoryTimeframe,
   categoryFraming,
   questionVolatility,
-  categoryFinancial
+  categoryFinancial,
+  categoryFramingFinancial,
+  categoryShare
 } = Astro.props as Props;
 
 const fmtPct = (num: number) => `${num.toFixed(1)}%`;
@@ -58,6 +62,17 @@ const categoryTimeframeSafe = categoryTimeframe || [];
 const categoryFramingSafe = categoryFraming || [];
 const questionVolatilitySafe = questionVolatility || [];
 const categoryFinancialSafe = categoryFinancial || [];
+const categoryFramingFinancialSafe = categoryFramingFinancial || [];
+const derivedCategoryShare =
+  categoryRates && categoryRates.length > 0
+    ? categoryRates.map(c => ({
+        label: c.label,
+        disclosure: c.disclosure,
+        shareDisclosure: calcPct(c.disclosure, Math.max(categoryRates.reduce((sum, r) => sum + r.disclosure, 0), 1))
+      }))
+    : [];
+const categoryShareSafe =
+  (categoryShare && categoryShare.length > 0 ? categoryShare : derivedCategoryShare) || [];
 const topCompanies = companyRates
   .map(c => ({ ...c, total: c.disclosure + c.noDisclosure, pct: calcPct(c.disclosure, c.disclosure + c.noDisclosure) }))
   .sort((a, b) => b.pct - a.pct)
@@ -97,17 +112,32 @@ const hasData = overallTotal > 0;
 const financialMix = categoryFinancialSafe
   .map(row => {
     const total = row.total || 1;
+    const quantCount = row.full + row.partial;
+    const pctQuant = calcPct(quantCount, total);
+    const pctPartial = calcPct(row.partial, total);
+    const pctNon = calcPct(row.non, total);
     return {
       category: row.category,
-      full: row.full,
+      quant: quantCount,
       partial: row.partial,
       non: row.non,
-      pctFull: calcPct(row.full, total),
-      pctPartial: calcPct(row.partial, total),
-      pctNon: calcPct(row.non, total)
+      pctQuant,
+      pctPartial,
+      pctNon
     };
   })
-  .sort((a, b) => b.pctFull - a.pctFull);
+  .sort((a, b) => b.pctQuant - a.pctQuant);
+
+const categoryFramingFinancialPivot = (() => {
+  const cats = Array.from(new Set(categoryFramingFinancialSafe.map(r => r.category)));
+  const framings = Array.from(new Set(categoryFramingFinancialSafe.map(r => r.framing)));
+  const financials = Array.from(new Set(categoryFramingFinancialSafe.map(r => r.financial)));
+  const lookup = new Map<string, number>();
+  categoryFramingFinancialSafe.forEach(r => {
+    lookup.set(`${r.category}__${r.framing}__${r.financial}`, r.pct);
+  });
+  return { cats, framings, financials, lookup };
+})();
 ---
 
 {hasData ? (
@@ -309,36 +339,30 @@ const financialMix = categoryFinancialSafe
       <div class="flex items-center justify-between">
         <div>
           <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Financial Mix</div>
-          <div class="text-lg font-semibold text-slate-100">Financial vs Partial vs Non-Financial</div>
+          <div class="text-lg font-semibold text-slate-100">Quantified (Financial + Partial) vs Non-Financial</div>
         </div>
       </div>
-      <div class="space-y-3">
-        {financialMix.map(row => (
-          <div class="space-y-1">
-            <div class="flex items-center justify-between text-sm text-slate-300">
-              <span>{row.category}</span>
-              <span class="font-semibold text-emerald-300">{fmtPct(row.pctFull)}</span>
-            </div>
-            <div class="h-2 rounded-full bg-slate-800 overflow-hidden flex">
-              <div
-                class="h-full bg-emerald-400/80"
-                style={{ width: `${row.pctFull}%` }}
-                title={`Financial: ${fmtPct(row.pctFull)}`}
-              />
-              <div
-                class="h-full bg-amber-300/80"
-                style={{ width: `${row.pctPartial}%` }}
-                title={`Partial: ${fmtPct(row.pctPartial)}`}
-              />
-              <div
-                class="h-full bg-slate-500/70"
-                style={{ width: `${row.pctNon}%` }}
-                title={`Non-Financial: ${fmtPct(row.pctNon)}`}
-              />
-            </div>
-            <div class="text-xs text-slate-500">Financial {row.full} · Partial {row.partial} · Non-Financial {row.non}</div>
-          </div>
-        ))}
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-slate-200 border-collapse">
+          <thead>
+            <tr class="text-slate-400 text-xs uppercase">
+              <th class="px-3 py-2 text-left">Category</th>
+              <th class="px-3 py-2 text-right text-emerald-300">Quantified</th>
+              <th class="px-3 py-2 text-right text-amber-300">Partial (subset)</th>
+              <th class="px-3 py-2 text-right text-slate-400">Non-Financial</th>
+            </tr>
+          </thead>
+          <tbody>
+            {financialMix.map(row => (
+              <tr class="border-t border-slate-800/80">
+                <td class="px-3 py-2">{row.category}</td>
+                <td class="px-3 py-2 text-right">{fmtPct(row.pctQuant)} <span class="text-xs text-slate-500">({row.quant})</span></td>
+                <td class="px-3 py-2 text-right">{fmtPct(row.pctPartial)} <span class="text-xs text-slate-500">({row.partial})</span></td>
+                <td class="px-3 py-2 text-right">{fmtPct(row.pctNon)} <span class="text-xs text-slate-500">({row.non})</span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -349,32 +373,68 @@ const financialMix = categoryFinancialSafe
           <div class="text-lg font-semibold text-slate-100">Risk vs Neutral vs Opportunity</div>
         </div>
       </div>
-      <div class="space-y-3">
-        {categoryKeys.map(cat => {
-          // derive framing mix per category from categoryFramingMatrix
-          const risk = categoryFramingMatrix[`${cat}__Risk`] ?? 0;
-          const neutral = categoryFramingMatrix[`${cat}__Neutral`] ?? 0;
-          const opportunity = categoryFramingMatrix[`${cat}__Opportunity`] ?? 0;
-          const totalPct = risk + neutral + opportunity || 1;
-          const normRisk = (risk / totalPct) * 100;
-          const normNeutral = (neutral / totalPct) * 100;
-          const normOpp = (opportunity / totalPct) * 100;
-          return (
-            <div class="space-y-1">
-              <div class="flex items-center justify-between text-sm text-slate-300">
-                <span>{cat}</span>
-                <span class="font-semibold text-emerald-300">{fmtPct(normRisk)}</span>
-              </div>
-              <div class="h-2 rounded-full bg-slate-800 overflow-hidden flex">
-                <div class="h-full bg-rose-400/80" style={{ width: `${normRisk}%` }} title={`Risk: ${fmtPct(normRisk)}`} />
-                <div class="h-full bg-slate-500/80" style={{ width: `${normNeutral}%` }} title={`Neutral: ${fmtPct(normNeutral)}`} />
-                <div class="h-full bg-amber-300/80" style={{ width: `${normOpp}%` }} title={`Opportunity: ${fmtPct(normOpp)}`} />
-              </div>
-              <div class="text-xs text-slate-500">Risk {fmtPct(normRisk)} · Neutral {fmtPct(normNeutral)} · Opportunity {fmtPct(normOpp)}</div>
-            </div>
-          );
-        })}
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-slate-200 border-collapse">
+          <thead>
+            <tr class="text-slate-400 text-xs uppercase">
+              <th class="px-3 py-2 text-left">Category</th>
+              <th class="px-3 py-2 text-right text-rose-300">Risk</th>
+              <th class="px-3 py-2 text-right text-slate-300">Neutral</th>
+              <th class="px-3 py-2 text-right text-amber-300">Opportunity</th>
+            </tr>
+          </thead>
+          <tbody>
+            {categoryKeys.map(cat => {
+              const risk = categoryFramingMatrix[`${cat}__Risk`] ?? 0;
+              const neutral = categoryFramingMatrix[`${cat}__Neutral`] ?? 0;
+              const opportunity = categoryFramingMatrix[`${cat}__Opportunity`] ?? 0;
+              return (
+                <tr class="border-t border-slate-800/80">
+                  <td class="px-3 py-2">{cat}</td>
+                  <td class="px-3 py-2 text-right">{fmtPct(risk)}</td>
+                  <td class="px-3 py-2 text-right">{fmtPct(neutral)}</td>
+                  <td class="px-3 py-2 text-right">{fmtPct(opportunity)}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
+    </div>
+  </div>
+
+  <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Disclosure Volume Share</div>
+        <div class="text-lg font-semibold text-slate-100">Share of all Disclosure snippets by category</div>
+      </div>
+    </div>
+    <div class="overflow-x-auto">
+      {categoryShareSafe.length === 0 ? (
+        <div class="text-sm text-slate-400 px-3 py-4">No Disclosure snippets found for any category.</div>
+      ) : (
+        <table class="w-full text-sm text-slate-200 border-collapse">
+          <thead>
+            <tr class="text-slate-400 text-xs uppercase">
+              <th class="px-3 py-2 text-left">Category</th>
+              <th class="px-3 py-2 text-right">Share of Disclosure (%)</th>
+              <th class="px-3 py-2 text-right">Disclosure count</th>
+            </tr>
+          </thead>
+          <tbody>
+            {categoryShareSafe
+              .sort((a, b) => b.shareDisclosure - a.shareDisclosure)
+              .map(cat => (
+                <tr class="border-t border-slate-800/80">
+                  <td class="px-3 py-2">{cat.label}</td>
+                  <td class="px-3 py-2 text-right">{fmtPct(cat.shareDisclosure)}</td>
+                  <td class="px-3 py-2 text-right">{cat.disclosure}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      )}
     </div>
   </div>
 
@@ -417,6 +477,47 @@ const financialMix = categoryFinancialSafe
           ))}
         </tbody>
       </table>
+    </div>
+  </div>
+
+  <div class="surface rounded-2xl border border-slate-700/60 p-6 space-y-5">
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <div class="text-xs uppercase tracking-[0.2em] text-slate-400">Category x Framing x Financial</div>
+        <div class="text-lg font-semibold text-slate-100">Financial/Partial/Non-Financial by framing</div>
+      </div>
+    </div>
+    <div class="space-y-6">
+      <div class="text-xs text-slate-400">Percent of snippets per category that sit in each Framing × Financial type.</div>
+      {categoryFramingFinancialPivot.cats.map(cat => (
+        <div class="space-y-3">
+          <div class="text-sm font-semibold text-slate-200">{cat}</div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {categoryFramingFinancialPivot.framings.map(fr => (
+              <div class="rounded-xl border border-slate-800/80 bg-slate-950/70 p-3 space-y-2">
+                <div class="text-xs uppercase tracking-[0.16em] text-slate-400">{fr}</div>
+                {categoryFramingFinancialPivot.financials.map(fin => {
+                  const pct = categoryFramingFinancialPivot.lookup.get(`${cat}__${fr}__${fin}`) || 0;
+                  return (
+                    <div class="space-y-1">
+                      <div class="flex items-center justify-between text-xs text-slate-300">
+                        <span>{fin}</span>
+                        <span class="font-semibold text-emerald-300">{fmtPct(pct)}</span>
+                      </div>
+                      <div class="h-1.5 rounded-full bg-slate-900/80 overflow-hidden">
+                        <div
+                          class="h-full bg-gradient-to-r from-emerald-400/80 via-sky-300/70 to-amber-300/70"
+                          style={{ width: `${pct}%` }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   </div>
 

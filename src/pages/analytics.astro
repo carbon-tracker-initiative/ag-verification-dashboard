@@ -69,6 +69,8 @@ const questionMap = new Map<string, { question_text: string; category: string; d
 const categoryTimeframeMap = new Map<string, { category: string; timeframe: string; disclosure: number; total: number }>();
 const categoryFramingMap = new Map<string, { category: string; framing: string; disclosure: number; total: number }>();
 const categoryFinancialMap = new Map<string, { category: string; full: number; partial: number; non: number; total: number }>();
+const categoryFramingFinancialMap = new Map<string, { category: string; framing: string; financial: string; count: number }>();
+const categoryTotalsForMix = new Map<string, number>();
 
 let overallDisclosure = 0;
 let overallNoDisclosure = 0;
@@ -165,6 +167,18 @@ allCompanyData.forEach(bundle => {
       else finExisting.non += 1;
       categoryFinancialMap.set(category, finExisting);
 
+      // Category x Framing x FinancialType cube
+      const cffKey = `${category}__${framing}__${financialType}`;
+      const cffExisting = categoryFramingFinancialMap.get(cffKey) || {
+        category,
+        framing,
+        financial: financialType,
+        count: 0
+      };
+      cffExisting.count += 1;
+      categoryFramingFinancialMap.set(cffKey, cffExisting);
+      categoryTotalsForMix.set(category, (categoryTotalsForMix.get(category) || 0) + 1);
+
       if (isDisclosure) overallDisclosure += 1;
       else overallNoDisclosure += 1;
     });
@@ -185,6 +199,19 @@ const questionRates = Array.from(questionMap.entries()).map(([question_id, entry
 const categoryTimeframe = Array.from(categoryTimeframeMap.values());
 const categoryFraming = Array.from(categoryFramingMap.values());
 const categoryFinancial = Array.from(categoryFinancialMap.values());
+const categoryFramingFinancial = Array.from(categoryFramingFinancialMap.values()).map(row => {
+  const totalCat = categoryTotalsForMix.get(row.category) || 1;
+  return {
+    ...row,
+    pct: (row.count / totalCat) * 100
+  };
+});
+const totalDisclosureAcrossCategories = categoryRates.reduce((sum, c) => sum + c.disclosure, 0) || 1;
+const categoryShare = categoryRates.map(c => ({
+  label: c.label,
+  shareDisclosure: (c.disclosure / totalDisclosureAcrossCategories) * 100,
+  disclosure: c.disclosure
+}));
 
 const questionVolatility = questionRates
   .map(q => {
@@ -204,7 +231,9 @@ const binaryDisclosureData = {
   categoryTimeframe,
   categoryFraming,
   questionVolatility,
-  categoryFinancial
+  categoryFinancial,
+  categoryFramingFinancial,
+  categoryShare
 };
 ---
 
