@@ -502,6 +502,7 @@ No environment variables required for basic deployment. Data is loaded from loca
 - **[DASHBOARD.md](DASHBOARD.md)** - Architecture and design decisions
 - **[tests/README.md](tests/README.md)** - Testing documentation
 - **[API.md](API.md)** - API and utilities documentation
+- **[docs/DISCLOSURE_PATTERNS.md](docs/DISCLOSURE_PATTERNS.md)** - How Disclosure vs No-Disclosure charts are calculated
 
 ## Contributing
 
