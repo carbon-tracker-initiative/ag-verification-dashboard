@@ -93,100 +93,8 @@ export async function loadAllCompanyData(): Promise<CompanyYearData[]> {
   const resultsPath = join(process.cwd(), 'results');
 
   try {
-    const files = await readdir(resultsPath);
-
-    // Filter for verified JSON files
-    const verifiedFiles = files.filter(f =>
-      f.endsWith('_verified.json') && !f.includes('_verification_report')
-    );
-
-    console.log(`Found ${verifiedFiles.length} verified files`);
-
-    // Group files by company-year-model
-    const dataMap = new Map<string, CompanyYearData>();
-
-    for (const verifiedFile of verifiedFiles) {
-      const parsed = parseFilename(verifiedFile);
-      if (!parsed) continue;
-
-      const key = `${parsed.company}_${parsed.year}_${parsed.version}_${parsed.model}`;
-
-      // Load verified file
-      const verifiedPath = join(resultsPath, verifiedFile);
-      const verified = await loadJsonFile(verifiedPath);
-
-      // Try to load original file (without _verified suffix)
-      const originalFile = verifiedFile.replace('_verified.json', '.json');
-      let original: AnalysisResult | undefined;
-      try {
-        const originalPath = join(resultsPath, originalFile);
-        original = await loadJsonFile(originalPath);
-      } catch {
-        console.log(`No original file found for ${verifiedFile}`);
-      }
-
-      // Try to load verification report
-      const reportFile = verifiedFile.replace('_verified.json', '_verification_report.json');
-      let verificationReport: any | undefined;
-      try {
-        const reportPath = join(resultsPath, reportFile);
-        verificationReport = await loadJsonFile(reportPath);
-      } catch {
-        console.log(`No verification report found for ${verifiedFile}`);
-      }
-
-      // Normalize and add metadata from filename
-      const normalizedVerified = normalizeAnalysisResult(verified);
-      normalizedVerified.company_name = parsed.company;
-      normalizedVerified.fiscal_year = parsed.year;
-      normalizedVerified.version = parsed.version;
-      normalizedVerified.model_used = parsed.model;
-      const sector = normalizeSectorCode(
-        normalizedVerified.metadata?.company_sector as string | undefined
-      );
-
-      const normalizedOriginal = original ? normalizeAnalysisResult(original) : undefined;
-      if (normalizedOriginal) {
-        normalizedOriginal.company_name = parsed.company;
-        normalizedOriginal.fiscal_year = parsed.year;
-        normalizedOriginal.version = parsed.version;
-        normalizedOriginal.model_used = parsed.model;
-      }
-
-      // Create CompanyYearData
-      const companyData: CompanyYearData = {
-        company: parsed.company,
-        year: parsed.year,
-        version: parsed.version,
-        model: parsed.model,
-        sector,
-        verified: normalizedVerified,
-        original: normalizedOriginal,
-        verificationReport,
-        hasComparison: !!(original && verificationReport)
-      };
-
-      dataMap.set(key, companyData);
-    }
-
-    // Convert map to array
-    const standardData = Array.from(dataMap.values());
-
-    const mergedData = await loadMergedCompanyData(resultsPath);
-
-    const combined = [...standardData, ...mergedData];
-    if (combined.length > 0) {
-      return combined;
-    }
-
-    // Fallback: load team-reviewed collapsed bundle if no verified data found
-    const teamReviewed = await loadTeamReviewedCombined(resultsPath);
-    if (teamReviewed.length > 0) {
-      console.log(`Loaded ${teamReviewed.length} team-reviewed company bundles as fallback`);
-      return teamReviewed;
-    }
-
-    return combined;
+    const teamReviewed = await loadTeamReviewedOnly(resultsPath);
+    return teamReviewed;
 
   } catch (error) {
     console.error('Error loading company data:', error);
@@ -874,32 +782,72 @@ async function loadTeamReviewedCombined(resultsPath: string): Promise<CompanyYea
     const raw = await loadJsonFile(combinedPath);
     if (!Array.isArray(raw)) return [];
 
-    return raw.map((entry: any) => {
-      const verified = normalizeAnalysisResult(entry.verified);
-      verified.company_name = entry.company;
-      verified.fiscal_year = entry.year;
-      verified.version = entry.version || 'team-reviewed';
-      verified.model_used = entry.verified?.model_used || 'team-reviewed';
-
-      const sector = normalizeSectorCode(
-        verified.metadata?.company_sector as string | undefined
-      );
-
-      return {
-        company: entry.company,
-        year: entry.year,
-        version: verified.version,
-        model: verified.model_used,
-        sector,
-        verified,
-        hasComparison: false,
-        isTeamReviewed: true
-      } as CompanyYearData;
-    });
+    return raw.map((entry: any) => buildTeamReviewedCompanyYear(entry));
   } catch (error) {
     console.log('No team-reviewed combined data found');
     return [];
   }
+}
+
+async function loadTeamReviewedFiles(resultsPath: string): Promise<CompanyYearData[]> {
+  const dir = join(resultsPath, 'team_reviewed_json');
+  let files: string[] = [];
+  try {
+    files = await readdir(dir);
+  } catch {
+    console.log('No team-reviewed directory found');
+    return [];
+  }
+
+  const data: CompanyYearData[] = [];
+  for (const file of files) {
+    if (!file.endsWith('.json')) continue;
+    if (file.startsWith('team_reviewed_combined')) continue;
+
+    try {
+      const raw = await loadJsonFile(join(dir, file));
+      if (!raw?.verified || raw.company === undefined || raw.year === undefined) {
+        continue;
+      }
+      data.push(buildTeamReviewedCompanyYear(raw));
+    } catch (error) {
+      console.warn(`Failed to load team-reviewed file ${file}:`, error);
+    }
+  }
+  return data;
+}
+
+function buildTeamReviewedCompanyYear(entry: any): CompanyYearData {
+  const verified = normalizeAnalysisResult(entry.verified);
+  verified.company_name = entry.company;
+  verified.fiscal_year = entry.year;
+  verified.version = entry.version || 'team-reviewed';
+  verified.model_used = verified.model_used || entry.verified?.model_used || 'team-reviewed';
+
+  const sector = normalizeSectorCode(
+    verified.metadata?.company_sector as string | undefined
+  );
+
+  return {
+    company: entry.company,
+    year: entry.year,
+    version: verified.version,
+    model: verified.model_used,
+    sector,
+    verified,
+    hasComparison: false,
+    isTeamReviewed: true
+  };
+}
+
+async function loadTeamReviewedOnly(resultsPath: string): Promise<CompanyYearData[]> {
+  const combined = await loadTeamReviewedCombined(resultsPath);
+  if (combined.length > 0) {
+    return combined;
+  }
+
+  const perFile = await loadTeamReviewedFiles(resultsPath);
+  return perFile;
 }
 
 

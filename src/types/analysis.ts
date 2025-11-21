@@ -157,6 +157,7 @@ export interface CompanyYearData {
   original?: AnalysisResult;
   verificationReport?: any; // Will be defined in verification.ts
   hasComparison: boolean;
+  isTeamReviewed?: boolean;
   isMerged?: boolean;
   mergedMetadata?: {
     sourceVersions: string[];

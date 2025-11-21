@@ -5,41 +5,36 @@
  */
 
 import type { CompanyMetrics } from '../../types/metrics';
-import VersionBadge from '../VersionBadge.astro';
 import { formatNumber, formatPercentage } from '../../utils/formatters';
 
 interface Props {
   company: CompanyMetrics;
-  version: string;
   year: number;
   companyName: string;
-  isMerged?: boolean;
-  mergedMetadata?: {
-    sourceVersions: string[];
-    mergerSummary?: Record<string, any>;
-    completenessSummary?: Record<string, any>;
-  };
-  sourcePresence?: Array<{ version: string; available: boolean }>;
+  version: string;
 }
 
 const {
   company,
-  version,
   year,
   companyName,
-  isMerged = false,
-  mergedMetadata,
-  sourcePresence = []
+  version
 } = Astro.props;
 
-// Determine if this is the latest version (v4 > v3, etc.)
-const versionLower = version.toLowerCase();
-const numericVersion = parseInt(version.replace(/[^0-9]/g, ''), 10);
-const hasNumericVersion = !Number.isNaN(numericVersion);
-const isMergedVersion = isMerged || versionLower.startsWith('merged');
-const isLatest = isMergedVersion || (hasNumericVersion && numericVersion >= 4);
+const totalSnippets = company.total_snippets || 0;
+const disclosureCount =
+  (company.snippets_by_classification.FULL_DISCLOSURE || 0) +
+  (company.snippets_by_classification.PARTIAL || 0);
+const disclosureRate = totalSnippets ? (disclosureCount / totalSnippets) * 100 : 0;
 
-const mergerSummary = mergedMetadata?.mergerSummary ?? {};
+const financialFull = company.snippets_with_financial_full || 0;
+const financialPartial = company.snippets_with_financial_partial || 0;
+const financialTotal = financialFull + financialPartial;
+const financialRate = totalSnippets ? (financialTotal / totalSnippets) * 100 : 0;
+const financialPct = {
+  full: totalSnippets ? (financialFull / totalSnippets) * 100 : 0,
+  partial: totalSnippets ? (financialPartial / totalSnippets) * 100 : 0
+};
 ---
 
 <div class="surface flex flex-col h-full p-6 transition-transform duration-200 hover:-translate-y-1">
@@ -47,35 +42,35 @@ const mergerSummary = mergedMetadata?.mergerSummary ?? {};
     <div>
       <div class="flex items-center gap-2 mb-1">
         <h3 class="text-lg font-semibold text-slate-100">{company.company_name}</h3>
-        <VersionBadge version={version} isLatest={isLatest} size="sm" />
       </div>
       <p class="text-sm text-slate-400">Calendar Year {company.fiscal_year}</p>
+      <p class="text-xs text-slate-500 uppercase tracking-wide">Team-reviewed</p>
     </div>
   </div>
 
   <div class="space-y-3 mb-5">
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-500 w-24 uppercase tracking-wide">Evidence</span>
+      <span class="text-xs text-slate-500 w-28 uppercase tracking-wide">Disclosure</span>
       <div class="flex-1 bg-slate-900 rounded-full h-2">
         <div
           class="bg-sky-400 h-2 rounded-full transition-all"
-          style={`width: ${company.radar_metrics.evidence_depth}%`}
+          style={`width: ${disclosureRate}%`}
         ></div>
       </div>
       <span class="text-xs font-semibold text-slate-200 w-12 text-right">
-        {formatPercentage(company.radar_metrics.evidence_depth, 0)}
+        {formatPercentage(disclosureRate, 0)}
       </span>
     </div>
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-500 w-24 uppercase tracking-wide">Financial</span>
+      <span class="text-xs text-slate-500 w-28 uppercase tracking-wide">Financial mix</span>
       <div class="flex-1 bg-slate-900 rounded-full h-2">
         <div
           class="bg-purple-400 h-2 rounded-full transition-all"
-          style={`width: ${company.radar_metrics.financial_transparency}%`}
+          style={`width: ${financialRate}%`}
         ></div>
       </div>
       <span class="text-xs font-semibold text-slate-200 w-12 text-right">
-        {formatPercentage(company.radar_metrics.financial_transparency, 0)}
+        {formatPercentage(financialRate, 0)}
       </span>
     </div>
   </div>
@@ -83,9 +78,9 @@ const mergerSummary = mergedMetadata?.mergerSummary ?? {};
   <div class="grid grid-cols-3 gap-3 text-center mb-6">
     <div>
       <div class="text-lg font-semibold text-slate-100">
-        {company.snippets_by_classification.FULL_DISCLOSURE}
+        {formatNumber(disclosureCount)}
       </div>
-      <div class="text-[11px] uppercase tracking-wide text-slate-500">Full</div>
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">Disclosure</div>
     </div>
     <div>
       <div class="text-lg font-semibold text-slate-100">
@@ -95,61 +90,24 @@ const mergerSummary = mergedMetadata?.mergerSummary ?? {};
     </div>
     <div>
       <div class="text-lg font-semibold text-slate-100">
-        {formatPercentage(company.financial_quantification_rate, 0)}
+        {formatPercentage(financialRate, 0)}
       </div>
-      <div class="text-[11px] uppercase tracking-wide text-slate-500">Financial</div>
+      <div class="text-[11px] uppercase tracking-wide text-slate-500">Financial share</div>
     </div>
   </div>
 
-  {isMergedVersion && (
-    <div class="mt-4 space-y-3 text-xs text-slate-400">
-      {sourcePresence.length > 0 && (
-        <div class="flex flex-wrap gap-2">
-          {sourcePresence.map(source => (
-            <span
-              class={`px-2 py-1 rounded-full border ${
-                source.available
-                  ? 'border-emerald-400/40 bg-emerald-500/15 text-emerald-100'
-                  : 'border-slate-600 bg-slate-900/70 text-slate-400'
-              }`}
-            >
-              {source.version.toUpperCase()}
-              <span class="ml-2 text-[10px] uppercase tracking-wide">
-                {source.available ? 'Present' : 'Missing'}
-              </span>
-            </span>
-          ))}
-        </div>
-      )}
-
-      <div class="grid grid-cols-2 gap-3">
-        <div class="border border-slate-700 rounded-lg bg-slate-900/60 p-3">
-          <div class="text-[10px] uppercase tracking-wide text-slate-500">Merged Snippets</div>
-          <div class="text-sm font-semibold text-slate-100">
-            {formatNumber(mergerSummary.total_merged_snippets ?? company.total_snippets)}
-          </div>
-        </div>
-        <div class="border border-slate-700 rounded-lg bg-slate-900/60 p-3">
-          <div class="text-[10px] uppercase tracking-wide text-slate-500">AI Reviews</div>
-          <div class="text-sm font-semibold text-slate-100">
-            {formatNumber(mergerSummary.total_ai_reviews ?? 0)}
-          </div>
-        </div>
-        <div class="border border-slate-700 rounded-lg bg-slate-900/60 p-3">
-          <div class="text-[10px] uppercase tracking-wide text-slate-500">Human Flags</div>
-          <div class="text-sm font-semibold text-slate-100">
-            {formatNumber(mergerSummary.total_human_flags ?? 0)}
-          </div>
-        </div>
-        <div class="border border-slate-700 rounded-lg bg-slate-900/60 p-3">
-          <div class="text-[10px] uppercase tracking-wide text-slate-500">Source Snippets</div>
-          <div class="text-sm font-semibold text-slate-100">
-            v3 {formatNumber(mergerSummary.total_v3_snippets ?? 0)} | v4 {formatNumber(mergerSummary.total_v4_snippets ?? 0)}
-          </div>
-        </div>
-      </div>
+  <div class="text-xs text-slate-400 bg-slate-900/60 border border-slate-800 rounded-lg p-3 mb-4">
+    <div class="flex items-center justify-between">
+      <span>Financial split</span>
+      <span class="text-emerald-200 font-semibold">
+        {formatPercentage(financialRate, 0)}
+      </span>
     </div>
-  )}
+    <div class="mt-1 text-slate-300">
+      <span class="mr-3">Financial: {formatPercentage(financialPct.full, 0)}</span>
+      <span>Partial-type: {formatPercentage(financialPct.partial, 0)}</span>
+    </div>
+  </div>
 
   <a
     href={`${import.meta.env.BASE_URL}/${companyName.toLowerCase()}/${year}/${version}`}

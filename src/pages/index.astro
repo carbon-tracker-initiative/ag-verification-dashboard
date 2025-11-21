@@ -28,29 +28,10 @@ const companyMetrics = allCompanyData.map(data =>
 );
 
 // Create enriched data with version info
-const enrichedCompanyData = allCompanyData.map((data, index) => {
-  const versionLower = data.version.toLowerCase();
-  const isMerged = data.isMerged === true || versionLower.startsWith('merged');
-  const sourceVersions = data.mergedMetadata?.sourceVersions ?? [];
-
-  const sourcePresence = isMerged
-    ? sourceVersions.map(versionLabel => ({
-        version: versionLabel,
-        available: allCompanyData.some(entry =>
-          entry.company === data.company &&
-          entry.year === data.year &&
-          entry.version.toLowerCase() === versionLabel.toLowerCase()
-        )
-      }))
-    : [];
-
-  return {
-    data,
-    metrics: companyMetrics[index],
-    isMerged,
-    sourcePresence
-  };
-});
+const enrichedCompanyData = allCompanyData.map((data, index) => ({
+  data,
+  metrics: companyMetrics[index]
+}));
 
 // Calculate cross-company metrics
 const crossCompanyMetrics = calculateCrossCompanyMetrics(companyMetrics, allCompanyData);
@@ -80,7 +61,7 @@ const companyOptions = enrichedCompanyData
     return b.data.year - a.data.year;
   })
   .map(item => ({
-    label: `${item.data.company} – ${item.data.year} (${item.data.version})`,
+    label: `${item.data.company} – ${item.data.year}`,
     href: `${normalizedBaseUrl}/${item.data.company.toLowerCase()}/${item.data.year}/${item.data.version}`
   }));
 ---
@@ -120,9 +101,6 @@ const companyOptions = enrichedCompanyData
                 version={item.data.version}
                 year={item.data.year}
                 companyName={item.data.company}
-                isMerged={item.isMerged}
-                mergedMetadata={item.data.mergedMetadata}
-                sourcePresence={item.sourcePresence}
               />
             ))}
         </div>
