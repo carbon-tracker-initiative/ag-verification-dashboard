@@ -345,11 +345,6 @@ export function normalizeAnalysisResult(result: any): AnalysisResult {
         };
       }
 
-      // Fix financial_type values (remove "-type" suffix if present)
-      if (s.categorization.financial_type) {
-        s.categorization.financial_type = s.categorization.financial_type.replace('-type', '');
-      }
-
       return s;
     });
 
@@ -384,7 +379,6 @@ function normalizeClassification(value: unknown): Classification {
 function mapMergedFinancialType(value: string | undefined): "Financial" | "Partial-type" | "Non-Financial" {
   const normalized = (value || '').toLowerCase().trim();
 
-  // Honor the explicit financial_type values only; do not mix with classification.
   if (normalized.includes('non-financial')) {
     return "Non-Financial";
   }
@@ -397,8 +391,100 @@ function mapMergedFinancialType(value: string | undefined): "Financial" | "Parti
     return "Financial";
   }
 
-  // Unknowns default to Non-Financial rather than dropping Financial to Partial.
   return "Non-Financial";
+}
+
+const currencyTokens = [
+  { token: '$', label: 'USD' },
+  { token: 'usd', label: 'USD' },
+  { token: '€', label: 'EUR' },
+  { token: 'eur', label: 'EUR' },
+  { token: '£', label: 'GBP' },
+  { token: 'gbp', label: 'GBP' },
+  { token: '¥', label: 'CNY' },
+  { token: 'cny', label: 'CNY' },
+  { token: 'rmb', label: 'CNY' },
+  { token: 'jpy', label: 'JPY' },
+  { token: 'cad', label: 'CAD' },
+  { token: 'aud', label: 'AUD' },
+  { token: 'hkd', label: 'HKD' },
+  { token: 'inr', label: 'INR' },
+  { token: '₽', label: 'RUB' },
+  { token: 'rub', label: 'RUB' }
+];
+
+function detectCurrencyFromText(text: string): string | null {
+  const lower = text.toLowerCase();
+  for (const { token, label } of currencyTokens) {
+    if (lower.includes(token) || text.includes(token)) {
+      return label;
+    }
+  }
+  return null;
+}
+
+function parseNumericValue(text: string): number | null {
+  const match = text.match(/[0-9]+(?:[.,][0-9]+)?/);
+  if (!match) {
+    return null;
+  }
+  const normalized = match[0].replace(/,/g, '');
+  let value = parseFloat(normalized);
+  if (Number.isNaN(value)) {
+    return null;
+  }
+
+  const lower = text.toLowerCase();
+  if (lower.includes('billion')) value *= 1_000_000_000;
+  else if (lower.includes('million')) value *= 1_000_000;
+  else if (lower.includes('thousand')) value *= 1_000;
+
+  return value;
+}
+
+function extractFinancialAmount(entry: any): FinancialAmount | null {
+  if (!entry) return null;
+
+  if (typeof entry === 'string') {
+    const currency = detectCurrencyFromText(entry);
+    if (!currency) return null;
+    const amount = parseNumericValue(entry);
+    if (amount === null) return null;
+    return {
+      amount,
+      currency,
+      context: entry
+    };
+  }
+
+  if (typeof entry === 'object') {
+    const rawAmount = entry.amount ?? entry.value ?? entry;
+    let numericAmount: number | null = null;
+    if (typeof rawAmount === 'number' && Number.isFinite(rawAmount)) {
+      numericAmount = rawAmount;
+    } else if (typeof rawAmount === 'string') {
+      numericAmount = parseNumericValue(rawAmount);
+    }
+
+    const context = entry.context || '';
+    let currency = (entry.currency || '').toString().trim();
+    if (!currency && context) {
+      const detected = detectCurrencyFromText(context);
+      if (detected) currency = detected;
+    }
+
+    if (!currency || numericAmount === null) {
+      return null;
+    }
+
+    return {
+      amount: numericAmount,
+      currency,
+      context
+    };
+  }
+
+  return null;
 }
 
 function mapMergedTimeframe(value: string | undefined): "Current" | "Future" | "Historical" | "Multiple or Unclear" {
@@ -455,43 +541,9 @@ function safeNumber(value: any): number {
 
 function convertMergedSnippet(rawSnippet: any, questionId: string, index: number): Snippet {
   const financialAmounts = Array.isArray(rawSnippet.financial_amounts)
-    ? rawSnippet.financial_amounts
-        .map((amount: any) => {
-          let rawValue: any = amount;
-          let numericAmount: number | null = null;
-          let currency = '';
-          let context = '';
-
-          if (amount && typeof amount === 'object') {
-            rawValue = amount.amount ?? amount.value ?? amount;
-            currency = amount.currency || '';
-            context = amount.context || '';
-          }
-
-          if (typeof rawValue === 'number' && Number.isFinite(rawValue)) {
-            numericAmount = rawValue;
-          } else if (typeof rawValue === 'string') {
-            const parsed = parseFloat(rawValue.replace(/[^0-9.-]/g, ''));
-            if (!Number.isNaN(parsed)) {
-              numericAmount = parsed;
-              if (!context) context = rawValue;
-            } else {
-              // keep as context-only string if no numeric parse
-              context = rawValue;
-            }
-          }
-
-          if (numericAmount === null && !context) {
-            return null;
-          }
-
-          return {
-            amount: numericAmount ?? 0,
-            currency: currency || 'USD',
-            context
-          } as FinancialAmount;
-        })
-        .filter(Boolean) as FinancialAmount[]
+    ? (rawSnippet.financial_amounts
+        .map((entry: any) => extractFinancialAmount(entry))
+        .filter(Boolean) as FinancialAmount[])
     : [];
 
   const sourceVersions = Array.isArray(rawSnippet.source_versions)

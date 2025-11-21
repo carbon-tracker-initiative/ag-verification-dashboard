@@ -14,7 +14,7 @@ from openpyxl import load_workbook
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-LATEST_EXPORT = PROJECT_ROOT / "reports" / "AG_Verification_Summary_FIXED4.xlsx"
+LATEST_EXPORT = PROJECT_ROOT / "reports" / "AG_Verification_Summary_FIXED6.merged.xlsx"
 TEAM_REVIEWED_INPUT = PROJECT_ROOT / "reports" / "team_reviewed" / "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
 TEAM_REVIEWED_OUTPUT = PROJECT_ROOT / "reports" / "team_reviewed" / "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
 
