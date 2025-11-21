@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -121,13 +121,19 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The discussion focuses on price fluctuations, market dynamics, and regulatory intentions that could lead to increased costs ('sustainable increase in EUA prices'), framing this as a 'Risk' to the business's financial performance.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides multiple explicit, quantifiable financial values for CO2 emission allowances (e.g., 'EUR 60/tonne', 'EUR 73.5 in 2025', 'EUR 91.9 in 2026'), directly linking these costs to the company's operations, thus it is 'Financial'.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet discusses past price movements ('falling since February 2025'), present market conditions ('currently at their lowest level'), and extensive future forecasts ('projected to rise to EUR 91.9 in 2026 and exceed EUR 103 from 2027 onward'), covering multiple timeframes."
             },
             "financial_amounts": [
-              "None"
+              "EUR 60 (EUR 60/tonne)",
+              "EUR 78 (EUR 78/tonne)",
+              "EUR 73.5 (EUR 73.5)",
+              "EUR 76.9 (EUR 76.9)",
+              "EUR 91.9 (EUR 91.9)",
+              "EUR 103 (EUR 103)",
+              "EUR 70 (EUR 70-95)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -158,7 +164,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The term 'additional burden' clearly frames the emissions charges as a negative impact or threat to the business, increasing operational costs.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The phrase 'high emissions charges' indicates a financial impact (cost) but does not provide a specific monetary value. It acknowledges the financial nature of the burden without quantification.",
               "timeframe": "Current",
               "timeframe_justification": "The statement 'European producers also face an additional burden' uses the present tense, indicating that this is an ongoing challenge and currently impacting the business."
@@ -231,7 +237,7 @@
         "disclosures": [
           {
             "snippet_id": "99907-001",
-            "quote": "Directive concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive)\r\nIn the first quarter of 2024, the EC launched an evaluation of Directive of 12 December 1991 concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive) and Directive of 14 December 2016 on the reduction of national emissions of certain atmospheric pollutants (NEC directive). The evaluation is a fitness check against adopted objectives and compliance with the EU’s objectives for the protection of human health and the environment. It also aims to identify the potential for simplifications and reducing administrative burden. Additionally, in the second quarter of 2024, the European Commission held public consultations on a draft amendment to the Nitrate Directive aimed at excluding RENURE products (processed manure with a simultaneous increase in nitrogen content relative to the starting material) from the application limit for natural fertilizers – the application of animal manure is currently limited to 170 kg of nitrogen (N) per hectare annually.",
+            "quote": "Directive concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive)\nIn the first quarter of 2024, the EC launched an evaluation of Directive of 12 December 1991 concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive) and Directive of 14 December 2016 on the reduction of national emissions of certain atmospheric pollutants (NEC directive). The evaluation is a fitness check against adopted objectives and compliance with the EU’s objectives for the protection of human health and the environment. It also aims to identify the potential for simplifications and reducing administrative burden. Additionally, in the second quarter of 2024, the European Commission held public consultations on a draft amendment to the Nitrate Directive aimed at excluding RENURE products (processed manure with a simultaneous increase in nitrogen content relative to the starting material) from the application limit for natural fertilizers – the application of animal manure is currently limited to 170 kg of nitrogen (N) per hectare annually.",
             "source": "Azoty_Group_Directors_Report_2024.pdf, Page 106, Directive concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive)",
             "source_versions": [
               "v3"
@@ -324,7 +330,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement explicitly labels this as a 'Risk' and describes negative consequences such as 'reduced demand', 'intensified price competition', 'narrower profit margins', and 'failure to achieve targeted revenues and profits', clearly framing it as a threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'narrower profit margins' and 'failure to achieve targeted revenues and profits', which are clear indicators of financial impact. However, it does not provide specific monetary values or quantify the extent of these financial impacts.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The risk is described as an ongoing 'imbalance in demand and supply' and factors like 'shifts in dietary preferences' are long-term trends, indicating a present-day and forward-looking timeframe."
@@ -542,7 +548,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The snippet explicitly uses 'Risk related to' and describes negative consequences like 'reduced demand,' 'narrower profit margins,' and 'failure to achieve targeted revenues and profits,' clearly framing the situation as a threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet indicates a financial impact ('narrower profit margins,' 'failure to achieve targeted revenues and profits') but does not supply an exact monetary value for the risk, only qualitative descriptions of financial consequences.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The risk is described as an ongoing condition ('imbalance in demand and supply') with potential future consequences ('may lead to intensified price competition'). The 'limitations on fertilizer use' could be present or future."
@@ -862,7 +868,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'Risk related to the imbalance in demand and supply' and 'reduced demand' due to 'shifts in dietary preferences and consumers’ environmental consciousness' clearly frames this as a threat or negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states that these conditions may lead to 'narrower profit margins and failure to achieve targeted revenues and profits from fertilizer sales', explicitly linking the risk to financial outcomes, thus indicating financial materiality without providing specific figures.",
               "timeframe": "Future",
               "timeframe_justification": "The discussion of 'shifts in dietary preferences and consumers’ environmental consciousness' implies an ongoing and evolving trend that will impact future demand and sales."
@@ -981,7 +987,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The explicit labeling of 'Risk related to the prices and availability of natural gas' as a 'high risk' clearly frames this as a threat or negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure discusses 'lower cost of gas' as an objective of risk management, indicating a financial impact, but does not provide specific financial figures or explicitly state the financial materiality of high energy costs.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The discussion of ongoing strategies ('search for competitive sources', 'diversify', 'long-term contract') and the nature of price volatility indicates a present-day and forward-looking risk."
@@ -1017,7 +1023,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement that high gas prices 'undermines the competitiveness' clearly frames this as a threat or negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure identifies gas as a 'crucial cost driver' and mentions its impact on 'competitiveness', indicating financial materiality without providing specific figures for the company's costs.",
               "timeframe": "Current",
               "timeframe_justification": "The snippet describes the situation 'in 2024' and the ongoing 'disparity' in prices, indicating a present-day and continuing risk."
@@ -1053,7 +1059,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrases 'steep price hikes' and 'upward pressure on gas prices, and consequently, the cost of gas-generated electricity' clearly frame these anticipated developments as threats or negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure discusses 'steep price hikes' and 'upward pressure on gas prices' which are financial impacts, but it does not provide specific monetary values for the company's potential costs.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet explicitly refers to 'in 2025' and 'will depend on', indicating a forward-looking perspective on energy costs."
@@ -1234,7 +1240,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The term \"strategic roadblocks\" clearly frames high costs and inflated feedstock prices as significant challenges or threats hindering the Group's strategic objectives and growth.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure identifies \"high costs of chemical production\" and \"inflated feedstock prices\" as strategic roadblocks, which are inherently financial impacts. However, it does not provide specific monetary values or explicitly state the financial materiality of these costs.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase \"today’s unstable macroeconomic conditions\" and \"volatile business climate\" indicates a present-day context, while \"strategic roadblocks\" implies ongoing and future challenges."
@@ -1386,7 +1392,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -226,7 +226,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could affect,' 'reduce,' and 'increase our costs' clearly frames changing regulations, including GHG emissions, as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that regulations 'increase our costs' and 'impact our financial results' but does not provide specific monetary values, indicating a partial financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'could affect' and 'could impact' indicates potential future events and their consequences, making the disclosure forward-looking."
@@ -334,7 +334,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The detailed description of 'carbon taxes,' 'emissions intensity reduction requirements,' and 'increased costs' clearly frames carbon pricing mechanisms as a significant threat or negative consequence for the business and its customers.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly mentions 'carbon taxes,' 'additional costs,' and 'increased input costs' but does not provide specific monetary values, indicating a partial financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet discusses both 'Current' (present day) and 'Emerging' (forward-looking) carbon pricing mechanisms, indicating a multiple timeframe relevance."
@@ -370,7 +370,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'increased consumer and societal expectations,' 'increase costs,' and 'negatively impact the reputation' clearly frames the pressure to reduce emissions from fertilizer use as a threat or challenge for the business and its customers.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly mentions 'increase costs' for both customers and the company but does not provide specific monetary values, indicating a partial financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The statement discusses 'increased consumer and societal expectations' and 'transitioning to lower-carbon options,' indicating an ongoing and future-oriented trend, making it forward-looking."
@@ -566,7 +566,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could lead to a sustained environment of reduced demand' and 'negatively impacting our short- and long-term profitability' clearly frames shifting market fundamentals as a threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly mentions 'reduced demand' and 'negatively impacting our short- and long-term profitability' but does not provide specific monetary values, indicating a partial financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'could lead to' and 'short- and long-term profitability' indicates a forward-looking perspective on potential future market conditions."
@@ -602,7 +602,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement highlights factors that 'could adversely impact our strategy and our financial results' by affecting demand, clearly framing these agricultural changes and trends as a threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly mentions 'adversely impact our strategy and our financial results' but does not provide specific monetary values, indicating a partial financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'continues to evolve' and 'long-term demand' indicates an ongoing trend with future implications, making the disclosure forward-looking."
@@ -683,7 +683,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes an 'enforcement initiative', 'notices of violation', 'alleged violations', and potential 'penalties' and 'costs', clearly framing the issue as a regulatory and financial threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions potential 'penalties' and 'capital improvement projects' and 'financial assurance' costs, indicating financial impacts. However, it states penalties are 'currently believe will not be material' and does not quantify the other costs, making it a partial-type financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'ongoing enforcement initiative' and 'continue to be involved in ongoing discussions' indicates a present-day situation, while 'future closure, maintenance and monitoring costs' points to forward-looking impacts."
@@ -719,13 +719,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'obligations' and 'financial assurance regulatory requirements' frames this as a mandatory financial burden or threat related to environmental compliance.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "An explicit dollar amount ('$499 million') is provided for financial assurance obligations directly related to gypsum stack closure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The 'obligations' are present-day, and the 'closure and post-closure' aspects are forward-looking, making the timeframe multiple."
             },
             "financial_amounts": [
-              "None"
+              "USD 499000000 ($499 million)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -835,7 +835,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The description of 'reclamation and restoration costs' and the explicit statement that 'ultimate costs could change in the future' and 'have a material effect' frames this as a financial burden and uncertainty, thus a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that changes in estimates 'could have a material effect on our consolidated financial statements', indicating financial materiality without providing specific figures, thus it is a partial-type financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'future costs', 'change in the future', and 'mine life estimates' indicate a forward-looking timeframe for these obligations and their potential financial impacts."
@@ -870,7 +870,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'reasonably possible that the ultimate costs could change' and 'material effect on our consolidated financial statements' clearly frames this as a potential negative financial outcome and a significant business risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that changes in estimates 'could have a material effect on our consolidated financial statements,' which is a direct assertion of financial materiality without providing a specific figure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'ultimate costs could change in the future' indicates a forward-looking perspective on the potential financial impacts."
@@ -906,7 +906,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'high degree of estimation uncertainty for future costs' and 'liabilities associated with' clearly frames this as a potential negative financial impact and a challenge for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet refers to 'future costs' and 'liabilities' and directs to a sensitivity analysis in the financial statements, indicating that the company considers the financial materiality of these obligations, even if specific figures are not in this snippet.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'estimation uncertainty for future costs and estimated remediation timelines' indicates that the obligations and their financial implications extend into the future."
@@ -941,7 +941,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure presents a financial obligation that the company must meet, which is inherently a burden or cost, thus framing it as a risk to financial resources.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for asset retirement obligations and accrued environmental costs, including a total amount and breakdown by timeframe.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The table breaks down payments due by period, including 'Within 1 year', '1 to 3 years', '3 to 5 years', and 'Over 5 years', indicating both present and forward-looking obligations."
@@ -1207,7 +1207,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The description of 'ongoing enforcement initiative,' 'notices of violation,' and potential 'penalties' and 'capital improvement projects' clearly frames this as a significant threat and challenge for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions potential 'penalties' (which they believe 'will not be material') and 'capital improvement projects,' indicating financial impacts. It also mentions 'financial assurance' for future costs, which is a partial financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The 'ongoing enforcement initiative' and 'ongoing discussions' indicate present-day legal challenges, while 'future closure, maintenance and monitoring costs' and 'capital improvement projects' point to forward-looking obligations."
@@ -1242,7 +1242,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The discussion of 'nominal annual expenditures' and 'shutdown-related costs' for 'shut down' facilities, along with the assessment of their financial impact, frames this as a cost and a risk to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that 'Such costs are not expected to have a material adverse effect on our consolidated financial statements,' which is a definitive statement about financial materiality (or lack thereof) without providing specific figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The mention of 'nominal annual expenditures' indicates present-day and ongoing costs, while 'Should the facilities be dismantled, certain other shutdown-related costs may be incurred' points to future potential costs."
@@ -1278,7 +1278,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'ongoing site assessment and/or remediation activities', 'enforcement initiative', 'notices of violation', and potential 'penalties' and 'costs', clearly framing the issue as a regulatory and financial threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'anticipated costs', 'provisions', potential 'penalties', 'capital improvement projects', and 'financial assurance', indicating financial impacts. However, it states penalties are 'currently believe will not be material' and does not quantify the other costs, making it a partial-type financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrases 'ongoing site assessment', 'ongoing enforcement initiative', and 'continue to be involved in ongoing discussions' indicate a present-day situation, while 'future obligations' and 'future closure, maintenance and monitoring costs' point to forward-looking impacts."
@@ -1699,7 +1699,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The discussion of 'possible losses,' 'claims and lawsuits pending,' and 'potential for large liabilities' clearly frames this as a significant threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that 'the potential for large liabilities exists and, therefore, these estimates could have a material impact on our consolidated financial statements,' which is a definitive statement about financial materiality without providing specific figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The mention of 'claims and lawsuits pending' indicates present-day legal challenges, while 'potential for large liabilities exists' and 'could have a material impact' points to future financial consequences."
@@ -1734,7 +1734,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'claims and lawsuits pending' and the assessment of their potential 'material adverse effect' clearly frames this as a threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that the resolution of these actions is 'not reasonably likely to have a material adverse effect on our consolidated financial statements,' which is a definitive statement about financial materiality (or lack thereof) without providing specific figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'claims and lawsuits are pending' indicates present-day legal challenges, while 'ultimate resolution' points to a future outcome."
@@ -1779,7 +1779,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The sensitivity analysis inherently frames changes in natural gas prices as a factor that can negatively (or positively) impact financial results, thus representing a risk to be managed.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit quantifiable financial values ('± 190' million for Adjusted EBITDA and '± 0.30' for Adjusted EPS) directly linked to the risk of natural gas price changes.",
               "timeframe": "Future",
               "timeframe_justification": "This information is presented in the '2025 Sensitivities' section, clearly indicating a forward-looking timeframe for these potential impacts."
@@ -1886,13 +1886,13 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The discussion of how 'lower natural gas costs' impacted 'adjusted EBITDA' and 'Cost of goods sold' highlights the financial sensitivity to this input, implying that higher costs would be a negative factor, thus a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides a quantifiable financial figure for Adjusted EBITDA ('$1.9 billion') and explicitly links changes in natural gas costs to changes in cost of goods sold and overall profitability.",
               "timeframe": "Historical",
               "timeframe_justification": "The snippet describes financial results and cost drivers for '2024 compared to the prior year,' making it backward-looking."
             },
             "financial_amounts": [
-              "None"
+              "USD 1900000000 ($1.9 billion)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1991,13 +1991,14 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The statement provides an outlook on a key cost driver. While the outlook is positive, the underlying volatility and the need to forecast it implies that adverse price movements would be a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial figures for projected natural gas prices ('$3.25 and $3.50 per MMBtu').",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'projected to average... for the year' clearly indicates a forward-looking timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 3.25 ($3.25)",
+              "USD 3.5 ($3.50)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -2026,7 +2027,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "This table presents factual data on natural gas costs, which are a key operational expense. While neutral in its presentation, the context of other disclosures implies that these costs are a critical factor for business performance, thus a risk if high.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial figures for natural gas costs per MMBtu for both 2024 and 2023.",
               "timeframe": "Historical",
               "timeframe_justification": "The data presented is for '2024' and '2023,' making it backward-looking."
@@ -2069,7 +2070,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

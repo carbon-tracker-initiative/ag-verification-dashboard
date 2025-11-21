@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -189,13 +189,16 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The snippet explicitly states 'The risk stems from increased costs due to carbon taxes' and discusses 'mitigation measures,' clearly framing it as a risk. It also mentions the risk 'can be transformed into an opportunity,' indicating a dual perspective.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit, quantified financial values for potential future carbon prices ('US$ 129/tCO2e in 2030,' 'US$ 1,665/tCO2e in 2060,' 'US$ 69/tCO2e in 2060'), directly linking the risk to specific monetary impacts.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet discusses future carbon prices for 2030 and 2060 ('Forecasts the highest prices,' 'reaching'), indicating a forward-looking timeframe. It also mentions the risk 'could begin to impact in 2027' and mitigation efforts for '2023 and 2025,' covering multiple time horizons."
             },
             "financial_amounts": [
-              "None"
+              "USD 129 (US$ 129/tCO2e)",
+              "USD 1665 (US$ 1",
+              "665/tCO2e)",
+              "USD 69 (US$ 69/tCO2e)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -224,7 +227,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language clearly identifies 'transition risks' and 'regulatory changes' that 'have a direct impact' and can lead to 'increased costs' and 'penalties,' framing carbon costs as a significant business threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly mentions 'increased costs due to carbon taxes,' 'tax purposes,' and avoiding 'penalties,' directly linking the risk to financial consequences, even without specific monetary values in this particular sentence.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet discusses 'regulatory changes coming' and CBAM requirements 'in the coming years' (forward-looking), alongside existing Chilean green tax regulations ('requires us to pay') and ongoing adaptation efforts ('have developed a methodology,' 'implement technologies') (present day)."
@@ -260,13 +263,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'carbon tax' and 'paid approximately ThUS$ 410' clearly frames this as a negative financial consequence or threat to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "Explicit monetary values ('US$ 5/tCO2' and 'ThUS$ 410') are provided, directly quantifying the financial impact of the carbon tax.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The payment 'in 2024' indicates a backward-looking and present-day impact, while 'possible increases in the scope of the carbon tax' points to a forward-looking aspect."
             },
             "financial_amounts": [
-              "None"
+              "USD 5 (US$ 5/tCO2)",
+              "USD 410 (ThUS$ 410)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -632,7 +636,7 @@
           },
           {
             "snippet_id": "99915-004",
-            "quote": "Transition Risks\r\nRegulatory Risks\r\nShort- and Medium-\r\nTerm\r\n• \r\nIncreased costs due to new carbon pricing mechanisms such as the EU's Carbon Border Adjustment \r\nMechanism for the fertilizer industry or the green tax in Chile. \r\n• \r\nGreater requirements to achieve greenhouse gas emission neutrality by 2050 and adapt to meet the \r\ninternational commitments assumed by the State of Chile, as stipulated in the Framework Law on Climate \r\nChange. \r\n• \r\nGreater difficulty in obtaining operating permits due to more stringent requirements in new regulations \r\nassociated with climate change.",
+            "quote": "Transition Risks\nRegulatory Risks\nShort- and Medium-\nTerm\n• \nIncreased costs due to new carbon pricing mechanisms such as the EU's Carbon Border Adjustment \nMechanism for the fertilizer industry or the green tax in Chile. \n• \nGreater requirements to achieve greenhouse gas emission neutrality by 2050 and adapt to meet the \ninternational commitments assumed by the State of Chile, as stipulated in the Framework Law on Climate \nChange. \n• \nGreater difficulty in obtaining operating permits due to more stringent requirements in new regulations \nassociated with climate change.",
             "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
             "source_versions": [
               "v4"
@@ -872,7 +876,7 @@
           },
           {
             "snippet_id": "99918-003",
-            "quote": "Transition Risks\r\nMarket Risks\r\nMedium- and Long-\r\nTerm\r\n• \r\nIncrease in our customers’ ESG expectations \r\n• \r\nIncreased production costs due to greater costs of resources such as energy and/or water.",
+            "quote": "Transition Risks\nMarket Risks\nMedium- and Long-\nTerm\n• \nIncrease in our customers’ ESG expectations \n• \nIncreased production costs due to greater costs of resources such as energy and/or water.",
             "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
             "source_versions": [
               "v4"
@@ -882,7 +886,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'Increased production costs' clearly frames this as a negative consequence or threat to the business's financial performance, aligning with a 'Risk' framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'Increased production costs' which indicates a financial impact, but it does not provide any specific monetary values or explicit statements of financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The risk is explicitly categorized as 'Medium- and Long-Term,' indicating potential future impacts."
@@ -925,7 +929,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

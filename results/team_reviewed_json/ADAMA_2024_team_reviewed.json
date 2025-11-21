@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -112,7 +112,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement 'Product and producer liability are a risk for the Group' and the description of 'considerable costs' and 'tarnish the Group's reputation' clearly present the topic as a source of potential harm, aligning with a 'Risk' framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states that lawsuits 'might involve considerable costs' and 'could materially affect the Group’s operations and results', acknowledging financial impact and materiality without providing specific monetary values. This fits the 'Partial-type' definition.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'might involve considerable costs' and 'Any future product liability lawsuit' indicate potential future events and ongoing exposure, making the timeframe 'Forward-looking'."
@@ -521,13 +521,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure of an 'Administrative punishment' and a 'Fine' for a violation related to safety facilities clearly presents the topic as a negative consequence or threat to the business, aligning with a 'Risk' framing.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet explicitly states a 'Fine of 30,600 RMB', providing a specific monetary value directly linked to the violation, which is a financial impact. This fits the 'Financial' definition.",
               "timeframe": "Historical",
               "timeframe_justification": "The 'Administrative punishment' occurred 'during the reporting period' and the 'Fine' was incurred in the past, making the timeframe 'Backward-looking'."
             },
             "financial_amounts": [
-              "None"
+              "CNY 30600 (30",
+              "600 RMB)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -630,7 +631,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "I would put this as PARTIAL as using biological pesticides, which you have to assume is for organic ag, or something similar, is stated as a risk to the adoption of their products\r\n\r\nWould include this as an example of where the company doesn't see a risk materialising",
+              "notes": "I would put this as PARTIAL as using biological pesticides, which you have to assume is for organic ag, or something similar, is stated as a risk to the adoption of their products\n\nWould include this as an example of where the company doesn't see a risk materialising",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "PARTIAL"
@@ -659,7 +660,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language emphasizes 'strict regulatory supervision', 'noncompliance', 'materially adversely affect', 'suspension of sales', 'recall', and 'legal action', clearly framing the issue as a threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'significant time and costs' and that non-compliance 'might materially adversely affect the Group’s expenses, cost structure and profit margins', indicating a financial impact without providing specific quantified amounts or a definitive statement of financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'might materially adversely affect' and 'may even lead to' indicates potential future events and consequences, making it forward-looking."
@@ -695,7 +696,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language highlights 'new regulatory requirements', 'registration's revocation', 'suffering from', 'significant sums', 'increasing the Group's costs', and 'adversely affecting', clearly framing the issue as a threat and negative consequence.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions that new requirements 'might amount to significant sums, considerably increasing the Group's costs', indicating a financial impact without providing specific quantified amounts or a definitive statement of financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to past trends ('In recent years the industry has been suffering') and potential future impacts ('to the extent new regulatory requirements are imposed', 'might amount to'), making the timeframe multiple or unclear."
@@ -741,13 +742,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on 'costs incurred' and 'cleanup remediation', presenting these as negative financial impacts that offset positive effects, clearly framing it as a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides a specific monetary value of 'RMB 130 million' for remediation costs, making it a financial disclosure.",
               "timeframe": "Historical",
               "timeframe_justification": "The phrase 'costs incurred... in 2024' and 'newly occurred in 2024' refers to events that happened and were completed within the reporting period, making it backward-looking."
             },
             "financial_amounts": [
-              "None"
+              "CNY 130000000 (RMB 130 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -777,7 +778,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language uses terms like 'regulatory requirements,' 'unable to assess with any certainty,' 'unable to predict with any certainty the extent of future costs,' and 'potential pollutions,' clearly framing the topic as a source of uncertainty, challenges, and potential negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure discusses 'future costs and investments' and 'material sums' but explicitly states the inability to predict or assess these amounts with certainty. It acknowledges financial impact without providing precise quantification, making it partial-type.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet refers to 'current and future' requirements, 'future costs and investments,' and 'potential pollutions,' indicating a strong forward-looking perspective on an ongoing risk."
@@ -794,7 +795,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "The company states that it invests material sums in upgrading facitlities, but not specifically related to restoration of contaminated. Does this count as full disclosure?\r\n\r\nRow 28 is a duplicate but contains less information. Keep this row.",
+              "notes": "The company states that it invests material sums in upgrading facitlities, but not specifically related to restoration of contaminated. Does this count as full disclosure?\n\nRow 28 is a duplicate but contains less information. Keep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "PARTIAL"
@@ -893,7 +894,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language emphasizes 'significant time and costs,' 'materially adversely affect the Group’s expenses, cost structure and profit margins,' and 'considerably increasing the Group's costs,' clearly framing this as a negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'significant time and costs,' 'significant sums,' and 'considerably increasing the Group's costs,' indicating a financial impact without providing specific quantifiable monetary values. It also refers to impacts on 'expenses, cost structure and profit margins,' which are financial in nature.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet uses phrases like 'are becoming more stringent with time,' 'new regulatory requirements are imposed,' and 'In recent years the industry has been suffering,' indicating an ongoing trend and future potential impacts, as well as past observations."
@@ -928,7 +929,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language emphasizes the necessity to 'commit considerable human and financial resources' and the potential for 'adverse effects on the Group’s profitability,' clearly framing this as a threat or negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'considerable human and financial resources,' 'substantial ongoing costs,' and 'material one-time investments,' indicating a financial impact without providing specific quantifiable monetary values. It also refers to 'adverse effects on the Group’s profitability,' acknowledging financial relevance without quantification.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to 'ongoing costs' (present day) and 'material one-time investments' (present/future), as well as potential 'delaying the introduction of products into new markets' and 'adverse effects on the Group’s profitability' (forward-looking). This covers multiple time horizons."
@@ -963,7 +964,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on negative outcomes such as 'toughening,' 'material alteration or revocation,' and 'material adverse effect on the financial and business results,' clearly presenting this as a threat or challenge.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions a 'material adverse effect on the financial and business results' without providing specific monetary values, indicating an acknowledgment of financial materiality without precise quantification.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may significantly affect' and 'may have a material adverse effect' indicates potential future events and impacts, making this a forward-looking disclosure."
@@ -998,7 +999,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language highlights potential negative financial outcomes ('significant sums,' 'considerably increasing the Group's costs,' 'adversely affecting its results') and the negative trend of 'revocation of registration,' clearly framing this as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'significant sums' and 'considerably increasing the Group's costs,' indicating a financial impact without providing specific monetary values. It also refers to 'adversely affecting its results,' acknowledging financial relevance without quantification.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to 'new regulatory requirements' (forward-looking) and a trend 'In recent years' (backward-looking/present day) of 'revocation of registration.' This covers multiple time horizons."
@@ -1113,7 +1114,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'increasing pressure,' 'investigations and indictments,' 'stricter legislative proposals,' and 'class action suits,' all of which represent threats and negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions the need to 'commit considerable human and financial resources (both in terms of substantial ongoing costs and in terms of material one-time investments)' to address these pressures, indicating a financial impact without providing specific quantifiable monetary values.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'In recent years' indicates a backward-looking observation, while 'have been applying increasing pressure' and 'increasingly stricter legislative proposals' suggest an ongoing and forward-looking trend."
@@ -1148,7 +1149,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement explicitly labels 'Product and producer liability' as a 'risk for the Group' and highlights negative outcomes like 'tarnish the Group's reputation' and 'impacting its profits,' clearly framing it as a threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'considerable costs' and 'potentially impacting its profits,' indicating a financial impact without providing specific quantifiable monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The statement discusses 'product liability lawsuits' and their potential impact, using 'might involve' and 'potentially impacting,' which refers to future or ongoing potential events."
@@ -1183,7 +1184,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language highlights potential negative financial outcomes ('significant sums,' 'considerably increasing the Group's costs,' 'adversely affecting its results') and the negative impact on 'reputation,' clearly framing this as a threat or challenge.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'significant sums' and 'considerably increasing the Group's costs,' indicating a financial impact without providing specific monetary values. It also refers to 'adversely affecting its results and reputation,' acknowledging financial relevance without quantification.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to 'new regulatory requirements' (forward-looking) and a trend 'In recent years' (backward-looking/present day) of 'revocation of registration.' This covers multiple time horizons."
@@ -1229,7 +1230,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on negative outcomes such as 'considerable costs,' 'tarnish the Group's reputation,' and 'materially affect the Group’s operations and results,' clearly framing this as a threat or negative consequence.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'considerable costs' and the potential to 'materially affect the Group’s operations and results,' indicating a financial impact without providing specific monetary values. This acknowledges financial relevance without precise quantification.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'might involve,' 'could materially affect,' and 'future product liability lawsuit' indicates potential future events and consequences, making this a forward-looking disclosure."
@@ -1264,7 +1265,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on potential negative financial and legal consequences such as 'significant civil liabilities,' 'criminal liabilities,' 'high penalties,' and 'high compensation payments,' clearly framing this as a threat or negative outcome.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'high penalties and/or high compensation payments and/or costs of environmental monitoring and rehabilitation,' indicating a financial impact without providing specific monetary values. This acknowledges financial relevance without precise quantification.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may be required to bear' and 'may impose' indicates potential future events and obligations, making this a forward-looking disclosure."
@@ -1300,7 +1301,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on 'increasing pressure,' 'investigations and indictments,' 'stricter legislative proposals,' 'class action suits,' 'significant civil liabilities,' 'criminal liabilities,' and 'high penalties,' all of which clearly frame the issue as a threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'considerable human and financial resources,' 'substantial ongoing costs,' 'material one-time investments,' 'significant civil liabilities,' 'high penalties,' and 'high compensation payments,' indicating financial impacts without providing specific monetary values. This aligns with the definition of partial-type financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'In recent years' indicates past events, 'have been applying increasing pressure' and 'increasingly stricter legislative proposals' suggest ongoing trends, and 'may be required to bear' and 'may impose' point to future potential impacts."
@@ -1378,7 +1379,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

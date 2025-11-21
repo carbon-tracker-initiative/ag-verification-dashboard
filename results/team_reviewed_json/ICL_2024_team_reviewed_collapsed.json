@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -74,7 +74,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on identifying and mitigating 'potential hazard to humans' and discontinuing 'no go' products, which frames the issue as a threat to be managed and avoided, aligning with a 'Risk' framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions product discontinuation and failure to commercialize, which implies financial impact (lost revenue, R&D costs) but does not provide specific monetary values or explicitly state financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The process described is for 'new products' and 'development process,' indicating a forward-looking approach to prevent future health problems and associated business risks."
@@ -184,7 +184,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The focus on 'toxicological/environmental concerns,' 'substances of concern,' and 'restrictions and bans' clearly frames this as a 'Risk' that requires proactive management and mitigation.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The 'long-term plan to phase out' and compliance with 'restrictions and bans' imply significant financial implications (e.g., R&D costs for alternatives, lost sales from discontinued products) but no specific monetary values are provided.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The 'ongoing process' and 'long-term plan' indicate a 'Present day' and 'Forward-looking' timeframe for managing these risks."
@@ -220,7 +220,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The discontinuation and reduction of products due to being 'controlled substances' clearly frames this as a 'Risk' that has already materialized and required business changes.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The discontinuation of products and shutdown of a production facility imply significant financial impacts (lost revenue, asset write-downs) but no specific monetary values are provided.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The actions described (discontinuation, reduction, shutdown) are past events ('Backward-looking') but also reflect ongoing operational changes ('Present day') due to past regulatory decisions."
@@ -447,7 +447,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure explicitly discusses 'carbon taxes,' 'emissions trading systems,' and 'CBAM regulation' as mechanisms for 'pricing carbon' and states that they 'will apply in the future to some of our operations,' clearly framing these as regulatory and financial threats or negative consequences.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly identifies various carbon pricing mechanisms (taxes, ETS, CBAM) that 'will apply in the future to some of our operations,' directly linking these regulatory requirements to financial costs and relevance for the company.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure covers existing schemes ('Currently'), an upcoming tax ('will come into effect in 2025'), and future regulations ('will apply in the future'), indicating a present-day and forward-looking timeframe."
@@ -484,7 +484,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure explicitly mentions 'financial and operational impacts' and 'climate-related risks,' framing carbon pricing as a threat or negative consequence to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states 'financial and operational impacts, including carbon pricing,' directly linking carbon costs to financial relevance for the company.",
               "timeframe": "Current",
               "timeframe_justification": "The analysis is described as having been 'further strengthened' and integrated into the business strategy, indicating a present-day assessment with implications for the future."
@@ -629,13 +629,14 @@
             "categorization": {
               "framing": "Opportunity",
               "framing_justification": "The disclosure frames sustainable finance as an 'essential tool to support our transition' and 'leveraged financial opportunities,' indicating an opportunity-driven approach to managing carbon-related financial aspects, but the underlying driver is the risk of not transitioning.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit monetary values for the Sustainability-Linked Loan ($250M) and Revolving Credit Facility ($1.55B), which are directly tied to GHG emissions reduction targets, indicating a financial impact related to carbon costs.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The loan was initiated in '2021' and the credit facility in '2023,' with ongoing KPIs, indicating a present-day and backward-looking context for financial arrangements, but with forward-looking targets."
             },
             "financial_amounts": [
-              "None"
+              "USD 250 ($250M)",
+              "USD 1.55 ($1.55B)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -1041,13 +1042,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The reservation of funds for 'land reclamation costs' and 'restoration and management funds' indicates a financial obligation and potential liability associated with past and future mining activities, framing it as a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for land reclamation and restoration funds, directly demonstrating financial materiality.",
               "timeframe": "Current",
               "timeframe_justification": "The text describes current financial reserves ('has reserved') for ongoing and future reclamation and restoration activities, indicating a present-day timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 14200000 ($14.2 million)",
+              "USD 1100000 ($1.1 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1305,7 +1307,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'Restriction of Chemicals' and substances 'under evaluation' or 'listed as Substances of Very High Concern' frames this as a potential threat to the business's operations and product portfolio, indicating a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet describes regulatory processes that could lead to restrictions or bans, which would have financial implications for the business, but it does not provide any explicit monetary values or a definitive statement of financial materiality within the text.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The substances are 'under evaluation' and 'listed' now, implying a present-day regulatory status that could lead to future restrictions, thus covering both present and forward-looking aspects."
@@ -1705,7 +1707,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes a \"claim,\" \"allegedly caused,\" \"environmental hazards,\" and \"class action,\" clearly framing it as a negative event and threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet describes a legal claim with potential financial implications, including a \"deliberative arrangement\" and future hearings, but does not provide a specific quantified financial outcome or provision for this particular case within the snippet itself. However, the reference to 'Note 18 to our Audited Financial Statements' implies financial materiality is addressed elsewhere.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The lawsuit was filed in 2018, had rulings in 2022 and 2023, and has ongoing proceedings and future hearings in 2024 and 2025, spanning past, present, and future."
@@ -1742,7 +1744,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The explicit mention of a 'class action' lawsuit and allegations of 'environmental hazards and damage' frames this as a direct threat and negative consequence for the business, indicating a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value of 'approximately 3 million NIS' transferred as part of a procedural arrangement related to the lawsuit, directly linking the risk to a monetary impact.",
               "timeframe": "Historical",
               "timeframe_justification": "The lawsuit was filed in '2020,' the arrangement was signed in 'November 2022,' and the transfer occurred, indicating past events with present-day financial implications."
@@ -1788,13 +1790,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The emphasis on 'significantly decreased energy expenses' and 'cost-saving measures' frames high energy costs as a challenge or threat to profitability that the business actively works to mitigate, indicating a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value of 'approximately $230 million' in decreased energy expenses, directly linking energy costs to a monetary impact on the business.",
               "timeframe": "Historical",
               "timeframe_justification": "The savings occurred 'between 2005 and 2024,' indicating a backward-looking timeframe for the achieved reductions in energy expenses."
             },
             "financial_amounts": [
-              "None"
+              "USD 230000000 ($230 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1824,13 +1826,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The establishment and achievement of 'saving target[s]' through 'efficiency programs' frames high energy costs as a financial challenge that the business is actively addressing to improve performance, indicating a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for 'saving target[s]' of '$12 million' and '$10 million,' directly linking energy efficiency to monetary impacts.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The targets were 'achieved' in '2024' and a 'goal' is set for '2025,' indicating both present-day achievements and forward-looking objectives."
             },
             "financial_amounts": [
-              "None"
+              "USD 12000000 ($12 million)",
+              "USD 10000000 ($10 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1904,7 +1907,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

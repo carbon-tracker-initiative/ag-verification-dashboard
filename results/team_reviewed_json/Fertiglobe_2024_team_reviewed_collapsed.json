@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -165,7 +165,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Doesn't mention risk explicity\r\n\r\nDuplicated in row 267.\r\n\r\nThis has more relevant context in the quote.\r\n\r\nKeep this row.",
+              "notes": "Doesn't mention risk explicity\n\nDuplicated in row 267.\n\nThis has more relevant context in the quote.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "PARTIAL"
@@ -267,7 +267,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'Potential Impacts' clearly frames the carbon tax as a negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The term 'Carbon tax' is inherently financial, indicating a monetary cost, thus implying financial materiality without providing specific figures.",
               "timeframe": "Future",
               "timeframe_justification": "The term 'Potential Impacts' refers to future events or conditions that have not yet fully manifested, making this a forward-looking disclosure."
@@ -304,7 +304,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement frames the decarbonization strategy as a means to 'reduce' negative elements like 'carbon taxes' and 'operating costs,' clearly presenting these as risks that need to be managed.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'carbon taxes' and 'operating costs,' which are direct financial impacts, thus indicating financial materiality without providing specific figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The statement describes an ongoing strategy ('decarbonization strategy is a key lever') aimed at future reductions ('to reduce'), indicating both present-day action and forward-looking goals."
@@ -340,7 +340,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The snippet explicitly uses the term 'Transition risks' and lists several factors that could lead to negative consequences for the business, clearly framing these as threats.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'carbon taxation mechanisms' and 'costs associated with transitioning to lower emissions technology,' which are inherently financial impacts, thus indicating financial materiality without providing specific figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The term 'Transition risks' implies future changes and potential impacts, making this a forward-looking disclosure. It also refers to existing mechanisms like CBAM, suggesting a present-day relevance."
@@ -357,7 +357,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 275.\r\n\r\nThis quote has more context. Keep this row.",
+              "notes": "Duplicated in row 275.\n\nThis quote has more context. Keep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "PARTIAL"
@@ -513,7 +513,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 284.\r\n\r\nThis part of the quote is most relevant. Keep this row.",
+              "notes": "Duplicated in row 284.\n\nThis part of the quote is most relevant. Keep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "UNCLEAR"
@@ -543,7 +543,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'obligation to restore' and 'legal requirements with respect to clean up of contamination of land' frames this as a potential negative consequence or liability for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'recognizes a provision' and 'not recorded a liability' for a financial obligation, indicating an acknowledgment of financial impact without providing a specific monetary value.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The obligation is tied to 'the end of its lease term' and 'upon decommissioning,' which are future events, but the current inability to estimate the cessation date makes the exact timeframe uncertain, hence 'Multiple or Unclear'."
@@ -590,7 +590,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language emphasizes potential negative consequences such as 'may alter the environment,' 'may result in substantial fines, penalties,' 'may experience delays,' and 'may interrupt our operations,' clearly framing these as threats to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'substantial fines, penalties' and 'obligation to invest in newer equipment,' which are financial impacts. However, no specific monetary values are provided, nor is a definitive statement of financial materiality for these specific cost types, qualifying it as partial-type.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet uses phrases like 'may alter,' 'may result in,' and 'may experience delays,' indicating potential future events and impacts, making it forward-looking."
@@ -683,13 +683,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'anticipated increase in gas cost' and the recognition of an 'accrual' for this increase clearly frame this as a negative financial event or threat to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "An explicit monetary value ('USD 182.8 million') is provided for the estimated accrual related to the increased gas cost, making it a financial disclosure.",
               "timeframe": "Current",
               "timeframe_justification": "The accrual is 'as at 31 December 2024,' reflecting a current financial position, even though the increase is 'anticipated' and 'retrospectively applied.' This makes it present day."
             },
             "financial_amounts": [
-              "None"
+              "USD 182800000 (USD 182.8 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -700,7 +700,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 300.\r\n\r\nThis quote has more relevant context. Keep this row.",
+              "notes": "Duplicated in row 300.\n\nThis quote has more relevant context. Keep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -757,7 +757,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'increasing production cost, and loss of customers' clearly frames this as a threat or negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'increasing production cost,' indicating a financial impact without providing specific monetary values or a definitive statement of financial materiality. This aligns with a partial-type financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet describes a 'slow transition' and 'continued dependence' leading to future 'increasing production cost,' indicating a forward-looking timeframe."
@@ -867,13 +867,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The context of 'cost optimization' and the goal to 'unlock at least $100 million in incremental annual EBITDA' implies that current costs (including energy) are a challenge that needs to be addressed to improve profitability, framing it as a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "An explicit monetary value ('$100 million') is provided for the target incremental EBITDA linked to energy efficiency, making it a financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'is on track to unlock... by the end of 2025' indicates future-oriented goals and benefits, making it forward-looking."
             },
             "financial_amounts": [
-              "None"
+              "USD 50000000 ($50 million)",
+              "USD 100000000 ($100 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1091,7 +1092,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

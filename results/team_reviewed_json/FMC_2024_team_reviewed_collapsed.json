@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -401,13 +401,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure focuses on 'claims pending' and 'settlements,' clearly framing the topic as a source of actual harm and financial loss for the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value of '$230 million' for settlements, directly linked to the human health problems (asbestos claims).",
               "timeframe": "Historical",
               "timeframe_justification": "The disclosure refers to claims 'since the 1980s' and claims that 'have been discharged,' indicating events that occurred and were completed in the past, making it backward-looking."
             },
             "financial_amounts": [
-              "None"
+              "USD 230000000 ($230 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -438,7 +438,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The action of 'phasing out Highly Hazardous Pesticides' frames these products as posing a threat or negative impact that the company is actively working to eliminate.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet provides a quantitative figure ('0.1 percent of our total sales') related to HHPs, indicating a financial aspect of the product portfolio, but does not quantify the financial impact of the health risk itself.",
               "timeframe": "Current",
               "timeframe_justification": "The phrase 'is continuing to phase out' and 'in 2024' indicates an ongoing process with present-day relevance and future implications."
@@ -739,7 +739,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language explicitly frames these governmental policies and mechanisms as potential negative consequences ('could subject... to significant additional costs or limits on operations'), indicating a clear risk to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'significant additional costs' as a potential impact, indicating a financial type of disclosure. However, it does not provide a specific monetary value or state whether these costs are financially material or immaterial, thus qualifying as partial-type.",
               "timeframe": "Future",
               "timeframe_justification": "The use of phrases like 'may result in changes,' 'could subject,' and 'may influence demand' indicates that these are anticipated future events and potential impacts, making it forward-looking."
@@ -775,7 +775,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure uses strong risk-oriented language such as 'could subject... to additional costs or limits,' 'increased costs of energy,' 'additional capital costs,' and 'costs associated with cap and trade or carbon taxes,' clearly framing these as potential negative impacts and threats to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet details various financial impacts like 'additional costs,' 'increased costs of energy,' 'additional capital costs,' and 'costs associated with cap and trade or carbon taxes,' and 'green taxes.' However, it explicitly states that 'the cost of complying...is difficult to estimate at this time,' which means financial impact is acknowledged but not quantified or declared material/immaterial, fitting the partial-type definition.",
               "timeframe": "Future",
               "timeframe_justification": "The language consistently points to future events and potential impacts, using phrases like 'continue to follow,' 'could subject,' 'Future GHG regulatory requirements may result in,' 'may continue to impact,' and 'is difficult to estimate at this time,' indicating a forward-looking timeframe."
@@ -792,7 +792,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 338.\r\n\r\nThis quote includes more context. Keep this row.",
+              "notes": "Duplicated in row 338.\n\nThis quote includes more context. Keep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "PARTIAL"
@@ -821,7 +821,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "Identifying 'Soil/Plant Health' as a 'Priority Topic' in a materiality assessment implies that its degradation or negative status is a concern that could lead to adverse impacts, thus framing it as a risk that requires management and attention.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The concept of 'double materiality' explicitly includes 'financial materiality,' indicating that the topic has financial relevance for the company. However, the snippet does not provide specific monetary values or quantify the financial impact.",
               "timeframe": "Current",
               "timeframe_justification": "The disclosure presents the company's current assessment of material topics for the 2024 report, indicating a present-day timeframe."
@@ -921,7 +921,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 344.\r\n\r\nThis has more relevant context in the quote. Keep this row.",
+              "notes": "Duplicated in row 344.\n\nThis has more relevant context in the quote. Keep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -930,7 +930,7 @@
           },
           {
             "snippet_id": "99906-003",
-            "quote": "FMC 2024 DOUBLE MATERIALITY\r\nImpact Materiality\r\nFinancial Materiality\r\nPriority Topics\r\n› Climate Change Adaptation & Mitigation\r\n› Biodiversity\r\n› Product Stewardship\r\n› Environment, Health, and Safety\r\n› Waste & Water Management*\r\n› Governance\r\n› Pollution\r\n› Community Relations\r\n› Animal Welfare\r\n› Supplier Management\r\n› Corruption and Bribery\r\n› Public Policy and Advocacy\r\n› Employee Well-being\r\n› Food Security",
+            "quote": "FMC 2024 DOUBLE MATERIALITY\nImpact Materiality\nFinancial Materiality\nPriority Topics\n› Climate Change Adaptation & Mitigation\n› Biodiversity\n› Product Stewardship\n› Environment, Health, and Safety\n› Waste & Water Management*\n› Governance\n› Pollution\n› Community Relations\n› Animal Welfare\n› Supplier Management\n› Corruption and Bribery\n› Public Policy and Advocacy\n› Employee Well-being\n› Food Security",
             "source": "FMC 2024 Sustainability Report_5.pdf, Page 61, Governance - DOUBLE MATERIALITY ASSESSMENT",
             "source_versions": [
               "v3"
@@ -940,7 +940,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The disclosure presents a list of 'Priority Topics' identified through a materiality assessment, which inherently includes both risks and opportunities. The listing of 'Environment, Health, and Safety' as a priority topic, without further descriptive language in this snippet, is a neutral, factual presentation of a material issue.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet is part of a 'DOUBLE MATERIALITY ASSESSMENT' that explicitly considers 'Financial Materiality'. By listing 'Environment, Health, and Safety' as a priority topic within this context, it implies financial materiality without providing specific monetary values, making it a partial-type financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The '2024 DOUBLE MATERIALITY' assessment refers to a process completed in the past, but its purpose is to inform ongoing strategy and future reporting, making it relevant for the present and forward-looking."
@@ -1246,7 +1246,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 356.\r\n\r\nThis contains more context in the quote. Keep this row",
+              "notes": "Duplicated in row 356.\n\nThis contains more context in the quote. Keep this row",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "UNCLEAR"
@@ -1276,7 +1276,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language consistently emphasizes potential negative outcomes such as adverse impacts on production/sales, increased costs, reduced profitability, and product cancellation, clearly framing this as a threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'significant additional data costs' and 'reduced profitability' as direct financial consequences of regulatory changes, indicating a clear financial impact without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet uses phrases like 'could adversely impact,' 'may lead to delays,' 'may result in,' and 'will continue to,' indicating potential future events and ongoing processes, making it forward-looking."
@@ -1323,7 +1323,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language consistently highlights potential negative consequences such as inadequate reserves, material adverse impact on results, and substantial liability, clearly framing this as a threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that inadequate reserves 'may have a material adverse impact on our results of operations' and 'Any substantial liability for environmental damage could have a material adverse effect on our financial condition, results of operations and cash flows,' indicating financial materiality without providing specific monetary figures in this particular snippet.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to 'current reserves' and 'ongoing litigation and environmental liabilities' while also discussing potential future impacts ('may ultimately prove to be inadequate,' 'could have a material adverse effect'), indicating a present-day and forward-looking perspective."
@@ -1340,7 +1340,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 364.\r\n\r\n364 has the same question but has less of the surrounding context / info that’s relevant to the question.\r\n\r\nKeep this row.",
+              "notes": "Duplicated in row 364.\n\n364 has the same question but has less of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -1359,7 +1359,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure acknowledges 'potential environmental obligations' and 'liability,' framing it as a concern that needs to be assessed, even if the conclusion is that it's not material.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement 'not likely to have a material adverse effect on our liquidity or financial condition' is an explicit assertion of financial materiality (or immateriality in this case) without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The reference to liabilities being paid 'beyond 2025' and 'potential environmental obligations' indicates a forward-looking time horizon."
@@ -1395,7 +1395,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrases 'may incur OM&M costs in excess' and 'could be significant' clearly frame this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states that additional costs 'could be significant in total,' indicating a financial impact without providing specific quantified monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'Over time we may incur' and 'future annual cost' indicate a forward-looking time horizon for these potential costs."
@@ -1468,13 +1468,14 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The disclosure presents factual 'Projected 2025 spending' for environmental remediation, which is a neutral, descriptive framing of an ongoing financial commitment.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit monetary values ('$35 million to $45 million') for projected environmental remediation spending, making it a financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'Projected 2025 spending' clearly indicates a forward-looking time horizon."
             },
             "financial_amounts": [
-              "None"
+              "USD 35000000 ($35 million)",
+              "USD 45000000 ($45 million)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -1540,13 +1541,17 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The disclosure presents factual 'Projected 2025 spending' and details of a settlement, which is a neutral, descriptive framing of ongoing financial commitments.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit monetary values ('$50 million to $60 million,' '$10 million,' '$85 million to $105 million') for projected environmental remediation spending and a settlement, making it a financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'Projected 2025 spending' and 'until the remediation is complete' clearly indicate a forward-looking time horizon."
             },
             "financial_amounts": [
-              "None"
+              "USD 50000000 ($50 million)",
+              "USD 60000000 ($60 million)",
+              "USD 10000000 ($10 million)",
+              "USD 85000000 ($85 million)",
+              "USD 105000000 ($105 million)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -1622,7 +1627,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "Listing 'Biodiversity' as a 'Priority Topic' in a materiality assessment, which considers both impact and financial aspects, indicates that it is viewed as a significant issue that could present both risks and opportunities, but in the context of the question, it implies a potential negative impact if not managed.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The inclusion of 'Biodiversity' as a 'Priority Topic' in a 'DOUBLE MATERIALITY' assessment, which explicitly considers 'Financial Materiality,' serves as a definitive statement that the topic is financially relevant to the company, even without specific monetary values.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The materiality assessment reflects the company's current understanding of significant topics, but the implications for 'Priority Topics' like biodiversity are ongoing and extend into the future, making the timeframe multiple or unclear."
@@ -1766,7 +1771,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could cause changes in supplies' and 'could lead to possible increased sourcing costs' frames the impact on biodiversity as a potential negative consequence or threat to business operations and costs.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'increased sourcing costs' as a potential financial impact, but it does not provide specific monetary values or a definitive statement about the financial materiality of these costs.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'Long-term' and 'could result in' indicates that the described impacts and risks are anticipated future events or conditions, making it forward-looking."
@@ -1885,7 +1890,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure frames rising re-registration and compliance costs as a 'risk' to the business, emphasizing potential negative consequences such as 'reduced profitability' and 'product cancellation.'",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'significant additional data costs,' 'significant costs or capital expenditures,' and 'reduced profitability,' indicating a financial impact without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may result' and 'could result' indicates a forward-looking perspective on potential future impacts of ongoing regulatory changes."
@@ -1921,7 +1926,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'could adversely impact' and 'could increase the cost' clearly frames regulatory changes as a potential threat or negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'increase the cost' but does not provide specific financial figures or a definitive statement about the financial materiality of these increased costs.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'could adversely impact' and 'could increase' indicates that these are potential future events and their consequences, making the disclosure forward-looking."
@@ -1957,7 +1962,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrases 'may involve significant costs' and 'could result in reduced profitability' clearly present compliance as a potential negative impact or threat to the business's financial performance.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'significant costs or capital expenditures' and 'reduced profitability,' indicating a financial impact, but it does not provide specific monetary values or a definitive statement about the financial materiality of these costs.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'changing laws and regulations' and 'may involve' indicates that these are ongoing or anticipated future conditions and their potential consequences, making the disclosure forward-looking."
@@ -2029,7 +2034,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrases 'may continue to impact FMC' and 'cost of complying... is difficult to estimate' frame these regulatory developments as challenges and potential negative financial consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly mentions 'green taxes,' 'extended producer responsibility requirements,' and 'cost of complying with global regulations,' indicating financial impacts, but states that the cost is 'difficult to estimate,' making it a partial-type financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The use of 'may continue to impact' and 'are in the process of establishing' indicates ongoing and anticipated future regulatory developments and their consequences, making the timeframe multiple or unclear."
@@ -2268,7 +2273,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure frames 'ongoing litigation and environmental liabilities' and potential 'lawsuits or claims' as a 'risk,' emphasizing the 'material adverse impact' on business operations.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'Current reserves' and 'material adverse impact on our results of operations,' indicating a financial impact without providing specific monetary values for future inadequacy.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'Current reserves relating to our ongoing litigation' indicates a present-day concern, while 'may ultimately prove to be inadequate' and 'may still be challenged' point to forward-looking uncertainty."
@@ -2341,13 +2346,13 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The disclosure of 'asbestos claims pending against FMC' and 'settlements' clearly frames this as a 'risk' due to actual and potential negative legal and financial consequences.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value of '$230 million' for past settlements, directly linked to the legal claims.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure mentions claims 'pending' as of December 31, 2024 (present day) and historical 'settlements' since the 1980s (backward-looking), indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 230000000 ($230 million)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -2385,7 +2390,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -31,7 +31,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The statement is a factual declaration about the company's assessment of impacts, rather than framing the issue as an inherent risk or opportunity. It reports a finding.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly uses the term 'material negative impacts' but does not provide any quantifiable financial figures or discuss financial materiality in monetary terms.",
               "timeframe": "Current",
               "timeframe_justification": "The phrase 'We have not identified' refers to the company's current assessment and status as of the reporting date, indicating a present-day perspective on the identified impacts."
@@ -77,7 +77,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could impact Yara’s earnings and its license to operate' clearly frames the increasing regulations as a potential threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure indicates a potential financial impact ('impact Yara’s earnings') but does not provide any specific monetary values, classifying it as a partial-type financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'increasing trend' and 'could impact' indicates a forward-looking perspective on potential future regulatory changes and their consequences."
@@ -269,7 +269,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement clearly presents the 'cost of CO2 emissions' as a potential source of harm and negative consequences for the business, including asset divestment or closure.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly discusses 'insufficient shareholder returns' and the financial implications of 'cost of CO2 emissions', indicating financial materiality without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'is expected to result' indicates a forward-looking assessment of potential future impacts of carbon costs."
@@ -415,13 +415,13 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The disclosure describes the company's current practices and policies regarding carbon pricing mechanisms and internal carbon pricing, presenting factual information without framing it as a clear risk or opportunity.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides a specific monetary value ('USD 50 per tonne of CO2') for its internal carbon price and discusses carbon costs for scope 1 and 2 emissions, indicating a financial impact. It also explicitly states the absence of an internal carbon price for scope 3, which is a financial-type statement, but it does not provide an overall financial materiality statement for the business.",
               "timeframe": "Current",
               "timeframe_justification": "The language describes current practices and policies ('Yara makes use', 'is embedded', 'are utilized', 'is applied'), indicating a present-day timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 50 (USD 50)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -497,7 +497,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could impact Yara’s earnings and its license to operate' clearly frames the increasing regulations as a potential threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure indicates a potential financial impact ('impact Yara’s earnings') but does not provide any specific monetary values, classifying it as a partial-type financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'increasing trend' and 'could impact' indicates a forward-looking perspective on potential future regulatory changes and their consequences."
@@ -660,7 +660,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'increasing trend of stricter governmental regulations' and 'could impact Yara’s earnings and its license to operate' clearly frames this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'earnings' and 'license to operate' as potential impacts, which are financial in nature, but it does not provide any specific monetary values or state whether the risk is financially material or immaterial.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'increasing trend' and 'could impact' indicates that the risk and its consequences are anticipated future events or developments."
@@ -968,13 +968,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'provisions for environmental restoration and remediation costs' and 'outflow of resources embodying economic benefits will be required to settle the obligation' clearly frames this as a negative financial obligation and a business risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "An explicit, quantifiable financial value of 'USD 180 million' is provided for the provisions related to environmental restoration and remediation costs, directly addressing the financial impact.",
               "timeframe": "Current",
               "timeframe_justification": "The statement 'The carrying amount of environmental provisions was USD 180 million as of 31 December 2024' indicates a current, present-day financial obligation, even though the actual restoration work may extend into the future."
             },
             "financial_amounts": [
-              "None"
+              "USD 180000000 (USD 180 million)",
+              "USD 175000000 (USD 175 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1015,7 +1016,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'exposure to incompliance with regulatory requirements impacting the product portfolio' and the mention of 'operational, commercial and financial consequences' clearly frames this as a potential negative impact or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'financial consequences' but does not provide any specific monetary values or state whether the risk is financially material or immaterial.",
               "timeframe": "Future",
               "timeframe_justification": "The statement refers to 'regulatory changes' and 'stricter regulations' that Yara 'proactively seeks to reduce exposure to', indicating a forward-looking perspective on potential future developments."
@@ -1052,7 +1053,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'increasing trend of stricter governmental regulations' and 'could impact Yara’s earnings and its license to operate' frames this as a potential negative business outcome or threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'earnings' and 'license to operate' as potential impacts, which are financial in nature, but it does not provide any specific monetary values or state whether the risk is financially material or immaterial.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'increasing trend' and 'could impact' indicates that the risk and its consequences are anticipated future events or developments."
@@ -1170,13 +1171,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'provisions for environmental restoration and remediation costs' and 'outflow of resources embodying economic benefits will be required to settle the obligation' clearly frames this as a negative financial obligation and a business risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "An explicit, quantifiable financial value of 'USD 180 million' is provided for the provisions related to environmental restoration and remediation costs, directly addressing the financial impact.",
               "timeframe": "Current",
               "timeframe_justification": "The statement 'The carrying amount of environmental provisions was USD 180 million as of 31 December 2024' indicates a current, present-day financial obligation, even though the actual restoration work may extend into the future."
             },
             "financial_amounts": [
-              "None"
+              "USD 180000000 (USD 180 million)",
+              "USD 175000000 (USD 175 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1206,7 +1208,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'prevent soil pollution', 'remediate any contaminated sites', 'manage soil pollution risks', and 'established provisions for these costs' frames this as a challenge and an obligation to mitigate negative impacts, aligning with a risk framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'established provisions for these costs', indicating a financial impact, but it does not provide the actual monetary value in this specific snippet.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to 'historical contaminated sites' (backward-looking), 'remediation efforts are ongoing' (present day), and a 'long-term goal' (forward-looking), thus covering multiple timeframes."
@@ -1289,7 +1291,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language emphasizes 'stricter governmental regulations' and 'could impact Yara’s earnings and its license to operate,' clearly framing this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'impact Yara's earnings' which indicates a financial impact, but it does not provide any specific quantifiable financial figures or explicitly state financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'increasing trend of stricter governmental regulations' and 'could impact Yara's earnings' indicates an ongoing trend and potential future impacts, making it forward-looking."
@@ -1325,7 +1327,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'exposure to incompliance with regulatory requirements' and 'reduce exposure to operational, commercial and financial consequences' clearly frames this as a potential negative consequence or threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'financial consequences' but does not provide any specific monetary values or state whether the risk is financially material or immaterial.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'regulatory changes' and 'adapt and adhere to stricter regulations' implies an ongoing and future-oriented nature of these changes and the company's response."
@@ -1361,7 +1363,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'imposing additional costs' frames this as a negative consequence or burden on the business, indicating a risk framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'additional costs,' which is a financial impact, but it does not provide any specific monetary values.",
               "timeframe": "Current",
               "timeframe_justification": "The statement refers to impacts that 'arise from different climate regulations,' implying an ongoing or future effect of these regulations."
@@ -1572,7 +1574,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement that favorably priced natural gas is 'imperative' for operations and competitiveness implies that the opposite (unfavorably priced gas) is a threat, thus framing it as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The mention of 'favorably priced natural gas' and its impact on 'competitiveness' indicates a financial dimension, but no specific monetary values are provided.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The discussion of securing supply and entering contracts for gas prices indicates an ongoing and forward-looking concern for the company's operations."
@@ -1608,7 +1610,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'critical strategic factors' and 'significantly impact' frames fluctuations in natural gas prices as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet discusses impacts on 'operational efficiency' and 'competitive edge' due to natural gas prices, implying financial consequences, but no specific monetary values are provided.",
               "timeframe": "Future",
               "timeframe_justification": "The mention of 'Sudden shifts' and 'may trigger these shifts' indicates a forward-looking perspective on potential future events and their impacts."
@@ -1644,7 +1646,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'Increased production cost' and its listing under 'Challenges' clearly frames this as a negative factor or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet directly mentions 'Increased production cost,' indicating a financial impact, but it does not provide any specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The 'rules for electricity for hydrogen production' are current or anticipated regulations, and the 'increased production cost' is a future or ongoing consequence, making it forward-looking."
@@ -1680,13 +1682,24 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "This is a factual presentation of historical energy costs. While the broader context of the report frames energy costs as a risk, this specific snippet is neutral and descriptive.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for gas costs ('USD per MMBtu') directly linked to a key input for manufacturing.",
               "timeframe": "Historical",
               "timeframe_justification": "The data presented covers multiple past years (2019-2024), making it backward-looking."
             },
             "financial_amounts": [
-              "None"
+              "USD 8.8 (8.8 USD per MMBtu)",
+              "USD 11 (11.0 USD per MMBtu)",
+              "USD 21.8 (21.8 USD per MMBtu)",
+              "USD 9.3 (9.3 USD per MMBtu)",
+              "USD 3.8 (3.8 USD per MMBtu)",
+              "USD 4.7 (4.7 USD per MMBtu)",
+              "USD 11.4 (11.4 USD per MMBtu)",
+              "USD 14.9 (14.9 USD per MMBtu)",
+              "USD 31.8 (31.8 USD per MMBtu)",
+              "USD 11.7 (11.7 USD per MMBtu)",
+              "USD 3.6 (3.6 USD per MMBtu)",
+              "USD 5.4 (5.4 USD per MMBtu)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -1724,7 +1737,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

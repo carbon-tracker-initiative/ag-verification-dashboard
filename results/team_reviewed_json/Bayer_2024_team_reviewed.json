@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -48,7 +48,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "The snippet mentions the topic but does not say it is a risk to the business\r\n\r\nSlightly contrary to the view of ADAMA above who do not see any competition from biological products",
+              "notes": "The snippet mentions the topic but does not say it is a risk to the business\n\nSlightly contrary to the view of ADAMA above who do not see any competition from biological products",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "UNCLEAR"
@@ -77,13 +77,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The description of 'lawsuits,' 'personal injuries,' 'compensatory and punitive damages,' and a 'provision' clearly frames this as a threat and negative consequence for the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "Explicit monetary values are provided for the provision ('US$5.9 billion', '€5.7 billion'), directly quantifying the financial impact of the litigation.",
               "timeframe": "Current",
               "timeframe_justification": "The disclosure refers to the provision 'As of December 31, 2024,' indicating a present-day financial commitment related to ongoing litigation."
             },
             "financial_amounts": [
-              "None"
+              "USD 5900000000 (US$5.9 billion)",
+              "EUR 5700000000 (€5.7 billion)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -112,13 +113,15 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure of agreements to 'pay US$160 million to settle the lawsuit' and 'pay US$35 million to settle the lawsuit' clearly frames these as financial burdens and negative consequences for the company, aligning with a 'Risk' framing.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values ('US$160 million', 'US$35 million', 'US$35 million') for settlements related to PCB litigation, directly illustrating the financial impact of the disclosed risk.",
               "timeframe": "Historical",
               "timeframe_justification": "The settlements occurred in 'July 2024' and 'September 2024,' making these backward-looking events, although the broader PCB litigation is ongoing."
             },
             "financial_amounts": [
-              "None"
+              "USD 160000000 (US$160 million)",
+              "USD 35000000 (US$35 million)",
+              "USD 35000000 (US$35 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -147,7 +150,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'exposed to risks from legal disputes,' 'penalties,' 'adverse financial consequences,' and 'harm our reputation' clearly frames this as a threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'substantial monetary fines' and 'adverse financial consequences,' indicating financial materiality without providing specific quantified amounts.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to risks 'currently a party' (present day) and those 'which could arise in the future' (forward-looking), indicating a multiple timeframe."
@@ -182,13 +185,17 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The detailed description of 'numerous lawsuits,' 'personal injury,' 'damages,' 'settlements,' and 'considerable financial disadvantages' clearly frames this as a significant threat and negative consequence for the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "Explicit monetary values are provided for damages awarded ('US$320 million') and various settlements ('US$160 million', 'US$35 million', 'US$456 million', 'US$698 million'), directly quantifying the financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to 'pending cases' (present day), 'trials had been completed' (backward-looking), and 'may incur considerable financial disadvantages from... future cases' (forward-looking), indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 320000000 (US$320 million)",
+              "USD 160000000 (US$160 million)",
+              "USD 35000000 (US$35 million)",
+              "USD 456000000 (US$456 million)",
+              "USD 698000000 (US$698 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -199,7 +206,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Row 89 is a duplicate, but this row contains more information from more cases. Keep this row\r\n\r\nProvides more context to the PCB example above",
+              "notes": "Row 89 is a duplicate, but this row contains more information from more cases. Keep this row\n\nProvides more context to the PCB example above",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "FULL DISCLOSURE"
@@ -217,7 +224,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'products may be partially or completely withdrawn,' 'negative effects,' 'loss of sales and earnings,' and 'potential liability claims' clearly frames this as a threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'loss of sales and earnings' and 'potential liability claims,' indicating financial impact without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The use of phrases like 'may be partially or completely withdrawn' and 'could... lead to' indicates potential future events and impacts."
@@ -270,7 +277,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "I think this is repeated elsewhere under another question\r\n\r\nInteresting quote \"We are receiving a great deal of support from farming associations who are concerned about the availability of one essential product, glyphosate\"",
+              "notes": "I think this is repeated elsewhere under another question\n\nInteresting quote \"We are receiving a great deal of support from farming associations who are concerned about the availability of one essential product, glyphosate\"",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "PARTIAL"
@@ -288,7 +295,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'uncertainty caused by ongoing litigation hurt our share price development' clearly frames the situation as a negative consequence and a threat to the company's financial standing and market perception, aligning with a 'Risk' framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'hurt our share price development,' indicating a financial impact, but does not provide specific quantifiable financial values or state the financial materiality of the litigation. It refers to a general negative financial effect.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'ongoing litigation' and 'hurt our share price development' (past effect) combined with the forward-looking commitment to 'unleashing the full potential' and confidence in 'future' financial outcomes, indicates a present-day and forward-looking timeframe for the risk."
@@ -323,7 +330,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'products may be partially or completely withdrawn from the market due... to unexpected side effects or negative effects' and 'potential liability claims' clearly frames this as a source of potential harm and negative consequences for the business, aligning with a 'Risk' framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'loss of sales and earnings' and 'potential liability claims,' indicating a financial impact, but it does not provide specific monetary values. It acknowledges financial consequences without precise quantification.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure discusses potential future events ('products may be... withdrawn,' 'could lead to a loss of sales') and ongoing mitigation efforts ('We counter such risks by taking comprehensive measures'), indicating a forward-looking and present-day timeframe."
@@ -358,7 +365,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The discussion of 'PCB litigation,' 'punitive damages,' and the need to 'continue to fight' clearly frames this as a threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'punitive damages,' which indicates a financial impact, but it does not provide specific monetary values in this particular passage.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to 'coming months' (forward-looking) for a judgment and the ongoing effort to 'continue to fight,' indicating a multiple timeframe."
@@ -404,7 +411,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'Transitory climate risk' and the mention of 'capital expenditure requirement' and 'emissions trading systems' clearly frame this as a potential negative consequence or challenge for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet refers to a 'capital expenditure requirement' and 'emissions trading systems,' which inherently involve financial costs, thereby indicating financial materiality without providing specific monetary values in this particular passage.",
               "timeframe": "Future",
               "timeframe_justification": "The disclosure discusses a 'capital expenditure requirement for adaptation... depending on regulations, legislation or availabilities,' indicating future costs and potential regulatory changes."
@@ -440,7 +447,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrases 'transitory risks necessitating significant investment' and 'capital expenditure requirement' clearly frame this as a threat and financial challenge that needs to be managed.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that 'significant investment' is necessitated and that 'capital expenditure requirement through 2029' has been 'assessed and budgeted,' indicating financial materiality without providing specific monetary values in this particular passage.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to 'through 2029' (forward-looking) and 'years after 2029' (long-term future), and 'currently are not publishing' (present day), indicating a multiple timeframe."
@@ -475,7 +482,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'reducing the risk of additional costs' and 'Carbon prices not only affect the cost structure... but could also impact demand' clearly frames this as a potential negative consequence or challenge for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'additional costs' and the impact on 'cost structure' and 'demand,' indicating financial materiality without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The disclosure refers to 'expected regulations,' 'could also impact demand,' and 'continuously analyze the further impacts,' indicating ongoing and potential future effects."
@@ -510,13 +517,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The capital expenditure is framed as a necessary cost to 'attain our climate targets,' implying a challenge or obligation that the company must address.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "An explicit monetary value of '€200 million' is provided for planned capital expenditures, directly quantifying a financial impact.",
               "timeframe": "Future",
               "timeframe_justification": "The disclosure refers to planned expenditures 'in the coming years through 2029,' indicating a forward-looking timeframe."
             },
             "financial_amounts": [
-              "None"
+              "EUR 200000000 (€200 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -635,7 +642,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'operations at our sites may be disrupted,' 'materialization of any of these risks could lead to,' and 'personal injury' clearly frames this as a threat and potential negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'declines in sales and/or margins,' indicating a financial impact without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The use of phrases like 'may be disrupted' and 'could lead to' indicates potential future events and impacts."
@@ -670,7 +677,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'Misconduct or noncompliance... may result in personal injury' and 'liability for compensation payments' clearly frames this as a threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'liability for compensation payments' and 'loss of production,' indicating financial impact without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may result in' indicates potential future events and impacts."
@@ -705,7 +712,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure explicitly states that the 'materialization of any of these risks could lead to production disruptions or stoppages, result in personal injury and damage to our reputation, give rise to declines in sales and/or margins,' clearly framing this as a source of actual or potential harm and negative consequences for the business, aligning with a 'Risk' framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'declines in sales and/or margins' and 'necessitate the reconstruction of damaged infrastructure,' indicating financial impacts, but it does not provide specific monetary values. It acknowledges financial consequences without precise quantification.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may be disrupted' and 'could lead to' indicates a forward-looking perspective on potential future events and their consequences."
@@ -740,7 +747,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure identifies 'personal injury' and 'loss of production, business interruptions and/or liability for compensation payments' as potential negative outcomes of noncompliance, clearly framing this as a source of actual or potential harm and negative consequences for the business, aligning with a 'Risk' framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'liability for compensation payments' and 'loss of production, business interruptions,' indicating financial impacts, but it does not provide specific monetary values. It acknowledges financial consequences without precise quantification.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The statement uses 'may result in' for potential negative outcomes and describes ongoing efforts ('We have put in place principles, standards and measures'), indicating a forward-looking and present-day timeframe."
@@ -792,7 +799,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "Part of a table stating this health risks could have potentially negative impacts on the company and business model. \r\n\r\nHave a look at this table for the report. Is this an example of a good risk disclosure matrix? Is there any context from the section above the table that we could include in the report? This table is the source of about another 4 disclosures in this table",
+              "notes": "Part of a table stating this health risks could have potentially negative impacts on the company and business model. \n\nHave a look at this table for the report. Is this an example of a good risk disclosure matrix? Is there any context from the section above the table that we could include in the report? This table is the source of about another 4 disclosures in this table",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "PARTIAL"
@@ -1024,7 +1031,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "It mentions run-off and the opprtunity of one of its products to address this as an opportunity, so have included it here as PARTIAL\r\n\r\nMight be interesting to include this as an example of an opportunity that companies are mentioning in the report",
+              "notes": "It mentions run-off and the opprtunity of one of its products to address this as an opportunity, so have included it here as PARTIAL\n\nMight be interesting to include this as an example of an opportunity that companies are mentioning in the report",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "PARTIAL"
@@ -1053,7 +1060,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'restrictions could be imposed', 'challenged in court', 'revocation of product registrations or approvals', and 'financial loss' clearly frames this as a threat or negative consequence for the business, aligning with the 'Risk' definition.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly mentions 'financial loss from reduced sales' but does not provide a specific monetary value, indicating an acknowledgment of financial impact without quantification, thus 'Partial-type'.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'continue to develop', 'may become more stringent', 'could be imposed', and 'will likely continue to be challenged' indicate potential future events and ongoing developments, aligning with 'Forward-looking'."
@@ -1204,13 +1211,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The recognition of 'Provisions for environmental protection measures' for 'obligations to remediate contaminated sites' implies a financial burden and a necessary cost, framing it as a 'Risk' to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides an explicit, quantifiable financial value of '€1,000 million' for provisions related to contaminated site remediation, directly linking a monetary figure to the risk, thus 'Financial'.",
               "timeframe": "Current",
               "timeframe_justification": "The statement refers to 'provisions... as of December 31, 2024' and 'expected costs... required to fulfill the obligations', indicating an existing liability that will be addressed in the present and future, aligning with 'Present day'."
             },
             "financial_amounts": [
-              "None"
+              "EUR 1000000000 (€1",
+              "000 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1424,13 +1432,18 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'named in lawsuits,' 'claiming... damages,' 'class settlement,' 'agreed... to pay,' and 'awarded... damages' clearly frames the topic as a source of actual and potential harm and negative financial consequences for the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides multiple explicit, quantifiable financial values directly linked to the risk events: 'US$650 million,' 'US$160 million,' 'US$35 million,' 'US$456 million,' 'US$698 million,' and 'US$320 million.'",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to a 'class settlement' in 2020 (backward-looking), settlements in 'July 2024' and 'September 2024' (backward-looking/present day), 'prior cases filed or threatened' (backward-looking), and 'Monsanto also faces numerous lawsuits claiming personal injury' (present day). This covers multiple timeframes."
             },
             "financial_amounts": [
-              "None"
+              "USD 650000000 (US$650 million)",
+              "USD 160000000 (US$160 million)",
+              "USD 35000000 (US$35 million)",
+              "USD 456000000 (US$456 million)",
+              "USD 698000000 (US$698 million)",
+              "USD 320000000 (US$320 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1459,13 +1472,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'lawsuits from plaintiffs claiming to have been exposed,' 'allege personal injuries,' 'seeking compensatory and punitive damages,' and 'Bayer’s provision for the glyphosate litigation' clearly frames this as a significant threat and negative consequence for the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values directly linked to the risk: 'US$5.9 billion (€5.7 billion)' for the provision for glyphosate litigation.",
               "timeframe": "Current",
               "timeframe_justification": "The phrase 'As of December 31, 2024, Bayer’s provision for the glyphosate litigation totaled US$5.9 billion' indicates a current financial liability. The mention of '29 Canadian lawsuits... are pending' also points to ongoing, present-day legal challenges."
             },
             "financial_amounts": [
-              "None"
+              "USD 5900000000 (US$5.9 billion)",
+              "EUR 5700000000 (€5.7 billion)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1495,7 +1509,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language uses phrases like 'may incur considerable financial disadvantages', 'compelled to cover any such increased financial requirements', and 'adversely affect our reputation and our commercial success', clearly framing the topic as a threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure references 'compensatory and possibly punitive damages' and 'payment obligations' without specific future amounts, and discusses impacts on 'financial requirements' and 'external financing', indicating an acknowledgment of financial materiality without precise quantification.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may incur', 'potential future cases', and 'could be compelled' indicates future possibilities and anticipated impacts, making it forward-looking."
@@ -1512,7 +1526,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "\"We may incur considerable financial disadvantages from pending lawsuits…\" and \"We could be compelled to cover any such increased financial requirements by issuing additional external debt, increasing our equity capital or divesting assets\"\r\n\r\nInteresting as it states the ways in which it may need to raise capital to cover the cost of risks",
+              "notes": "\"We may incur considerable financial disadvantages from pending lawsuits…\" and \"We could be compelled to cover any such increased financial requirements by issuing additional external debt, increasing our equity capital or divesting assets\"\n\nInteresting as it states the ways in which it may need to raise capital to cover the cost of risks",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "FULL DISCLOSURE"
@@ -1530,7 +1544,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'uncertainty caused by ongoing litigation hurt our share price development,' 'major developments on the litigation front,' and 'prepared to settle when it is in the company’s interest' clearly frames the topic as a threat and a challenge for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'settle when it is in the company's interest' and 'hurt our share price development,' indicating financial impacts without providing specific, quantifiable monetary values for the overall litigation risk or a definitive statement of its financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to 'ongoing litigation' (present day), 'major developments on the litigation front in 2025' (forward-looking), and 'Last year, we received positive outcomes in six of the eight trials heard in a court of first instance, and are appealing the other verdicts' (backward-looking). This covers multiple timeframes."
@@ -1565,7 +1579,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'exposed to risks from legal disputes,' 'may result in the imposition of civil or criminal penalties,' and 'adverse financial consequences' clearly frames this as a threat and potential harm to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'substantial monetary fines' and 'adverse financial consequences' and 'out-of-court settlements,' indicating financial impacts without providing specific monetary values or explicitly stating the financial materiality of these general legal risks.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'to which we are currently a party or which could arise in the future' indicates both present-day and forward-looking aspects."
@@ -1643,7 +1657,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

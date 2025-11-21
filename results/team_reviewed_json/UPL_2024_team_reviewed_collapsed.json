@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -31,7 +31,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language directly frames pest resistance as a 'risk' that reduces product effectiveness and impacts crop yields and performance, emphasizing negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states 'Risk intensity: Critical', which is an explicit statement about the financial materiality and significance of the risk, even without providing specific monetary values.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'increasing risk of resistance development' indicates an ongoing and future-oriented concern, while 'prolonged use' refers to past and present conditions contributing to the risk."
@@ -440,7 +440,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure focuses on ensuring 'product safety' and 'safe practices', which is a proactive approach to mitigate potential harm, thus framing it as a risk management activity.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'High implementation costs' as a negative impact, indicating a financial implication, but does not provide specific monetary values or a definitive statement of financial materiality for the risk of human health problems from products.",
               "timeframe": "Current",
               "timeframe_justification": "The discussion of ongoing policies and practices ('ensuring product safety', 'incorporation of responsible, safe, and sustainable practices') indicates a present-day timeframe."
@@ -558,7 +558,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure frames climate change as a source of 'climate risks' that could have a 'financial impact', clearly presenting it as a threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement explicitly mentions 'financial impact on our business', indicating that the company assesses the financial materiality of climate-related risks, including potential carbon costs.",
               "timeframe": "Future",
               "timeframe_justification": "The evaluation of climate risks and their potential financial impact is a forward-looking exercise, addressing future scenarios and consequences."
@@ -594,7 +594,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure focuses on 'identifying climate-related risks' and 'financial system’s exposure to climate risks', clearly framing the topic as a potential negative impact or threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'climate-related financial information' and 'financial system’s exposure to climate risks', indicating a definitive statement about financial materiality without providing specific figures.",
               "timeframe": "Current",
               "timeframe_justification": "The ongoing 'TCFD assessment' and the objective to 'enhance transparency' for stakeholders indicate a present-day and forward-looking timeframe."
@@ -630,7 +630,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure frames 'climate related risks' as challenges that necessitate actions to 'reduce cost' and 'fortify our resilience', clearly indicating a negative framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The explicit mention of 'reduce cost' in the context of addressing climate-related risks indicates a direct financial implication and an assessment of financial materiality, even without specific figures.",
               "timeframe": "Future",
               "timeframe_justification": "The adoption of the TCFD framework and the aim to 'fortify our resilience against climate related adversities' are forward-looking strategies to address future risks."
@@ -667,7 +667,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'Negative Impacts: Adjustment in operation practices and operational costs' clearly frames the topic as a potential threat or challenge to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'operational costs' as a negative impact, indicating a financial implication, but does not provide specific monetary values or a definitive statement of financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The discussion of a 'decarbonization roadmap' and 'transitioning to a low-carbon future' indicates a forward-looking timeframe, while 'operational costs' are present-day concerns."
@@ -703,7 +703,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The categorization as 'Transition risks' inherently frames these factors as potential threats or challenges that the business must navigate due to the shift to a low-carbon economy.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "While 'Legal and policy' does not explicitly state a financial amount, it implies potential financial impacts (e.g., fines, taxes, compliance costs) that could arise from regulatory changes related to carbon emissions, thus indicating partial financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "Transition risks are inherently forward-looking, referring to potential changes and impacts that have not yet fully manifested but are anticipated due to evolving climate policies."
@@ -1013,7 +1013,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure clearly frames 'operational hazards' as a 'risk' that can lead to 'significant environmental, legal, and reputational consequences', emphasizing negative impacts and threats to business sustainability.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement explicitly mentions 'significant environmental, legal, and reputational consequences' and assigns a 'Critical' risk intensity, indicating the financial materiality of these hazards, even without providing specific monetary values.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The risk is described as ongoing ('operational hazards') and potentially leading to future consequences ('may lead to'), indicating a present-day and forward-looking timeframe."
@@ -1231,7 +1231,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'Negative Impacts: Cost and Resources, Implementation charges' clearly frames the topic as a potential challenge or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'Cost and Resources' and 'Implementation charges' as negative impacts, indicating financial implications, but does not provide specific monetary values or a definitive statement of financial materiality.",
               "timeframe": "Current",
               "timeframe_justification": "The discussion of ongoing certifications, training, and implementation challenges indicates a present-day timeframe."
@@ -1890,7 +1890,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure uses terms like 'Reputational Risk' and describes potential negative outcomes such as affecting 'brand value and market share,' clearly framing the issue as a threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions that reputational risk 'can ultimately affect brand value and market share,' indicating a potential financial impact without providing specific monetary figures or stating financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The definition of reputational risk and its potential effects are described as ongoing or future possibilities ('can result from,' 'can ultimately affect'), making it forward-looking."
@@ -2006,7 +2006,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

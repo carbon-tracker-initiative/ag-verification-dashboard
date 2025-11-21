@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -75,7 +75,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The statement 'No significant risks or consumer-related issues have been identified' and 'low risk' indicates a neutral assessment of the current situation, not framing it as a threat or an opportunity.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that the topic is 'not considered material at this time', which is a definitive statement about financial materiality without providing specific figures.",
               "timeframe": "Current",
               "timeframe_justification": "The phrases 'have been identified' and 'is not considered material at this time' refer to the current assessment and status of risks, making it present day."
@@ -195,7 +195,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The term 'Transitional Risk' and 'impact on profitability' clearly frames this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'impact on profitability' which indicates a financial impact, but it does not provide specific monetary values, thus it is partial-type.",
               "timeframe": "Future",
               "timeframe_justification": "The term 'Transitional Risk' implies future changes and impacts, making it forward-looking."
@@ -232,7 +232,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The terms 'Transitional risk' and 'impacting profitability' clearly frame this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'Cost of decarbonization impacting profitability' which indicates a financial impact, but it does not provide specific monetary values, thus it is partial-type.",
               "timeframe": "Future",
               "timeframe_justification": "The term 'Transitional risk' implies future changes and impacts, making it forward-looking."
@@ -268,7 +268,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'impose operational challenges', 'lead to fines', 'reputational damage', and 'costly compliance measures' clearly frames this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'fines' and 'costly compliance measures', indicating financial impacts, but it does not provide specific monetary values, thus it is partial-type.",
               "timeframe": "Future",
               "timeframe_justification": "The phrasing 'may impose' and 'requiring adaptation' indicates potential future impacts, making it forward-looking."
@@ -340,13 +340,14 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The disclosure presents these expenditures as 'requirements' to achieve a target, implying a cost burden or challenge that the company must address, thus framing it as a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit monetary values ('50 M EUR' and '1 M EUR') for capital and operational expenditures related to decarbonization, clearly indicating a financial impact.",
               "timeframe": "Future",
               "timeframe_justification": "The disclosure refers to a target 'by 2030' and costs 'starting in 2025,' indicating future expenditures and a forward-looking timeframe."
             },
             "financial_amounts": [
-              "None"
+              "EUR 50 (50 M EUR)",
+              "EUR 1 (1 M EUR)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -387,7 +388,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The statement 'soil pollution... have been determined as non-material' and 'impacts and risks are very low' presents a factual assessment that the issue is not a significant threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that soil pollution is 'non-material', which is a definitive statement about financial materiality without providing specific figures.",
               "timeframe": "Current",
               "timeframe_justification": "The phrase 'have been determined' refers to a current assessment, making it present day."
@@ -424,7 +425,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The disclosure presents a factual assessment of low risk and non-materiality due to implemented measures, framing the topic in a balanced, matter-of-fact manner.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement 'effects on soil of current business processes... as non-material' provides a definitive assessment of the financial relevance (or lack thereof) of this risk, without needing to provide concrete financial figures.",
               "timeframe": "Current",
               "timeframe_justification": "The phrase 'current business processes' indicates that the assessment pertains to the present situation and ongoing practices."
@@ -460,7 +461,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The statement 'soil pollution is not a material topic' and 'minimized any significant soil pollution impacts' presents a factual assessment that the issue is not a significant threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that soil pollution is 'not a material topic', which is a definitive statement about financial materiality without providing specific figures.",
               "timeframe": "Current",
               "timeframe_justification": "The phrases 'is not a material topic' and 'existing measures have effectively minimized' refer to the current status and past effectiveness, making it present day."
@@ -881,7 +882,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure explicitly identifies 'water pollution' as a 'material' risk with 'significant potential impact,' clearly framing it as a negative consequence or threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet states that water pollution is 'material' but does not provide any specific financial figures or quantify the financial impact, focusing instead on its significance to the environment and communities.",
               "timeframe": "Current",
               "timeframe_justification": "The use of 'potential impact' and 'risks' indicates that this is an ongoing or future-oriented concern, relevant to the present day and looking forward."
@@ -1009,7 +1010,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure describes 'tightening environmental regulations' and 'increasing compliance costs' as challenges, framing the situation as a risk to the business's operations and finances.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'increasing compliance costs,' indicating a financial impact, but does not provide specific monetary values for these costs.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The use of 'are tightening' and 'increasing' indicates an ongoing and forward-looking trend, making the timeframe present day and future-oriented."
@@ -1128,7 +1129,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure explicitly identifies 'Sustainability Compliance Risk' and mentions 'force product phase-outs,' 'fines,' and 'reputational damage,' clearly framing it as a negative consequence or threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'fines' and 'costly compliance measures,' indicating financial impacts, but it does not provide specific monetary values for these costs or penalties.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may impose' and 'force' indicates a forward-looking perspective on potential future regulatory changes and their impacts."
@@ -1211,13 +1212,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'costs for the remediation' and 'provisions and claims,' indicating a negative financial obligation or burden, thus framing it as a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides a specific monetary value of '-4.7 million EUR' for provisions related to the remediation costs, clearly indicating a financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to 'historical' contamination but also mentions 'adjustments to provisions' and 'future cash outflows,' indicating that the financial implications span past events, present obligations, and future expenditures."
             },
             "financial_amounts": [
-              "None"
+              "EUR 4700000 (-4.7 million EUR)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1247,13 +1248,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure of 'provisions for environmental obligations' related to 'remediation' clearly frames this as a financial burden and a negative consequence, thus a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "An explicit monetary value of '108.0 million EUR' is provided for the total provision for environmental obligations, directly quantifying the financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The 'provisions' exist as of the reporting date, and 'estimated cash outflows are expected to occur over a period of 1 to 30 years,' indicating a present-day obligation with long-term forward-looking settlement."
             },
             "financial_amounts": [
-              "None"
+              "EUR 108000000 (108.0 million EUR)",
+              "EUR 107000000 (107.0 million EUR)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1284,7 +1286,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure describes 'Historical contamination' and the need for 'treatment' and 'provisions,' indicating a negative condition requiring action and financial commitment, thus framing it as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'necessary provisions' indicating a financial impact, but does not provide a specific monetary value in this snippet.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'Historical contamination has already been identified' clearly places the origin of the issue in the past, making it backward-looking."
@@ -1331,7 +1333,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The statement frames the topic as not being a material risk, indicating a lack of negative impact, and also mentions 'opportunities for refinement' and 'alignment with evolving sustainability expectations,' which suggests a positive outlook on managing the issue.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that biodiversity is 'not a material topic' for the organization, which is a direct assertion of its financial immateriality, even without providing specific monetary figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to a 'comprehensive study' that has been completed (backward-looking) and states that the company 'will continue to monitor and reassess' (forward-looking), indicating an ongoing and future-oriented approach to the topic."
@@ -1378,7 +1380,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'tightening environmental regulations,' 'reducing pesticide and fertilizer use,' and 'increasing compliance costs' clearly frames this as a potential negative consequence or threat to the business, indicating a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The phrase 'increasing compliance costs' indicates a financial impact without providing a specific monetary value, thus classifying it as partial-type financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'Governments worldwide are tightening environmental regulations' and 'increasing compliance costs' refers to an ongoing and future trend, indicating a forward-looking timeframe."
@@ -1414,7 +1416,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'Stricter environmental laws,' 'impose operational challenges,' 'lead to fines,' 'reputational damage,' 'force product phase-outs,' and 'costly compliance measures' all frame this as a negative consequence or threat, indicating a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The explicit mention of 'costly compliance measures' and 'fines' indicates a financial impact without providing specific monetary values, thus classifying it as partial-type financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may impose,' 'lead to,' and 'requiring adaptation' indicates potential future events and conditions, classifying the timeframe as forward-looking."
@@ -1450,7 +1452,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement focuses on the necessity to 'comply with laws and regulations' and the 'investments' made to 'reduce the impact on the environment' and 'remain compliant,' which frames the issue as a challenge requiring resources, thus a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The mention of 'investments have been made' directly indicates financial expenditure without providing specific monetary values, thus qualifying as a partial-type financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'investments have been made in recent years' is backward-looking, describing past actions, but the goal to 'remain compliant with increasingly strict regulations' implies an ongoing and forward-looking need for such investments."
@@ -1497,7 +1499,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The terms 'Reputation Risk,' 'Damage to brand image,' 'negative publicity,' 'undermine trust,' 'erode market position,' and 'reduce overall value' all clearly frame this disclosure as a negative threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions that reputation risk 'could undermine trust, erode market position, and reduce overall value,' indicating potential financial consequences without providing specific monetary values or a definitive statement of financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'could undermine' and 'erode' suggests a forward-looking perspective on potential future impacts of reputation risk."
@@ -1533,7 +1535,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "While the snippet is framed as an 'achievement' and 'recognition,' the underlying implication that customers 'increasingly prioritize sustainability' means that a lack of perceived sustainability (i.e., negative public perception) would be a 'Risk' to customer relationships and business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement implies potential financial impact (loss of customers if sustainability is not prioritized) without providing specific monetary values or a definitive statement of financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'increasingly prioritize sustainability' indicates an ongoing trend that will continue to affect future business decisions and customer relationships, making it forward-looking."
@@ -1579,7 +1581,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure focuses on 'provisions for environmental obligations' and 'estimated costs for the remediation of historical soil and groundwater contamination', clearly framing this as a financial burden and a negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly discusses 'provisions for environmental obligations' and 'estimated costs' and 'cash outflows', indicating a clear financial impact. While no specific total monetary value for the provision is given in this snippet, the detailed discussion of 'estimated costs' and 'cash outflows' for remediation, and the fact that it's a 'provision', signifies financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The 'historical soil and groundwater contamination' points to a backward-looking origin, but the 'estimated cash outflows are expected to occur in the period 2025-2050' and the 'discussion with the Flemish government' are present-day and forward-looking, making the timeframe span multiple periods."
@@ -1695,7 +1697,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

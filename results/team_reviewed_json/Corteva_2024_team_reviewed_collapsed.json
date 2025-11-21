@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -31,7 +31,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language clearly presents the topic as a source of potential harm and negative consequences for the business, including regulatory issues, product discontinuation, litigation, and financial impacts.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that the concerns 'could have a material adverse effect on Corteva’s business, results of operations, financial condition and cash flows,' which is a definitive statement of financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet discusses potential future outcomes ('could increase or accelerate,' 'could manifest themselves,' 'could have a material adverse effect') and ongoing trends ('growing trend in societal demands'), indicating a forward-looking perspective."
@@ -85,7 +85,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "\"seed hybrids and varieties could require modification to tolerate higher doses and/or new varieties...\"\r\n\r\nThis part of the quote is duplicated in row 189.\r\n\r\nThis quote has more of the surrounding context / info that’s relevant to the question.\r\n\r\nKeep this row.",
+              "notes": "\"seed hybrids and varieties could require modification to tolerate higher doses and/or new varieties...\"\n\nThis part of the quote is duplicated in row 189.\n\nThis quote has more of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "PARTIAL"
@@ -151,7 +151,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language clearly presents the topic as a source of potential harm and negative consequences for the business, including regulatory issues, product discontinuation, litigation, and financial impacts.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that the concerns 'could have a material adverse effect on Corteva’s business, results of operations, financial condition and cash flows,' which is a definitive statement of financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet discusses potential future outcomes ('could increase or accelerate,' 'could manifest themselves,' 'could have a material adverse effect') and ongoing trends ('growing trend in societal demands'), indicating a forward-looking perspective."
@@ -168,7 +168,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 195.\r\n\r\n195 has the same question but has less relevant context in the quote.\r\n\r\nKeep this row.",
+              "notes": "Duplicated in row 195.\n\n195 has the same question but has less relevant context in the quote.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -188,7 +188,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language clearly presents the topic as a source of actual or potential harm, uncertainty, or negative consequences for the business, emphasizing litigation, reputational damage, and financial losses.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that claims 'could have a material adverse effect on Corteva’s business' and 'could be material to Corteva's financial results,' which is a definitive statement of financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet discusses 'unasserted and asserted litigation matters' and 'may lead to similar suits,' indicating both present-day and forward-looking aspects, making the timeframe 'Multiple or Unclear'."
@@ -205,7 +205,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 196, 326.\r\n\r\nThis has the same question but has more of the surrounding context / info that’s relevant to the question.\r\n\r\nKeep this row.",
+              "notes": "Duplicated in row 196, 326.\n\nThis has the same question but has more of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -224,13 +224,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'personal injury claims' and a 'settlement' for a significant monetary amount, clearly presenting this as a negative consequence or threat to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value of '$670 million' for the settlement of personal injury lawsuits, directly illustrating the financial impact of the disclosed risk.",
               "timeframe": "Historical",
               "timeframe_justification": "The settlement occurred 'in early 2017,' making this a completed event in the past."
             },
             "financial_amounts": [
-              "None"
+              "USD 670000000 ($670 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -260,13 +260,18 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'settlements' and 'personal injury cases,' clearly presenting this as a negative consequence or threat to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for settlements ('$83 million,' '$59 million') and contributions ('$29 million,' '$27 million,' '$4 million'), directly illustrating the financial impact of the disclosed risk.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to past settlements ('January 2021'), a recent settlement ('December 2024'), and an ongoing accrual, indicating a combination of backward-looking, present-day, and potentially forward-looking elements, making the timeframe 'Multiple or Unclear'."
             },
             "financial_amounts": [
-              "None"
+              "USD 83000000 ($83 million)",
+              "USD 29000000 ($29 million)",
+              "USD 27000000 ($27 million)",
+              "USD 59000000 ($59 million)",
+              "USD 30000000 ($30 million)",
+              "USD 4000000 ($4 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -296,7 +301,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could incur liabilities,' 'ultimate liability could be material,' and 'unable to estimate the possible loss' clearly presents the topic as a source of potential harm and negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that the ultimate liability 'could be material to the results of operations and the cash flows,' indicating financial materiality without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'could incur liabilities' and 'ultimate liability could be material' indicate potential future events and impacts that have not yet occurred."
@@ -332,7 +337,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'pending asserted claims for personal injury,' 'alleging injuries related to chlorpyrifos exposure,' and 'lawsuits' clearly presents the topic as a source of actual harm and negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states that 'an accrual has been established' for claims, indicating a financial impact without providing the specific monetary value of the accrual in this snippet.",
               "timeframe": "Current",
               "timeframe_justification": "The phrase 'As of December 31, 2024, there were pending asserted claims' and 'an accrual has been established' indicates an ongoing situation actively impacting the company at the reporting date."
@@ -368,13 +373,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes lawsuits, alleged damages, and settlements, clearly presenting this as a source of harm and negative consequences for the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for a settlement ('$110 million') and Corteva's share ('$16 million'), directly illustrating the financial impact of the disclosed risk.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to a settlement in 'December 2023' (backward-looking), an ongoing accrual (present day), and a new case filed in 'June 2024' (present day/forward-looking), indicating a 'Multiple or Unclear' timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 110000000 ($110 million)",
+              "USD 16000000 ($16 million)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -560,7 +566,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could inhibit or interrupt,' 'significant unanticipated costs or liabilities,' and 'materially higher than Corteva’s accruals' clearly presents the topic as a source of potential harm and negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that regulatory matters 'could result in significant unanticipated costs or liabilities, which may be materially higher than Corteva’s accruals,' indicating financial materiality without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'changes in environmental regulations... could inhibit or interrupt... in the future' and 'could result in significant unanticipated costs' indicate potential future events and impacts that have not yet occurred."
@@ -643,7 +649,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'substantial costs and liabilities' and 'potential remediation costs' associated with 'soil and groundwater contamination,' framing these as threats or negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'substantial costs and liabilities' and 'potential remediation costs' but does not provide specific financial figures or a definitive statement about the materiality of these costs in this particular passage.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to past occurrences ('has occurred in the past'), present monitoring and remediation ('continue to be monitored, investigated and remediated'), and future possibilities ('may be identified at other sites in the future'), indicating a 'Multiple or Unclear' timeframe."
@@ -679,7 +685,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'environmental operating costs' and 'environmental remediation and restoration costs' that 'could be adversely affected,' framing these as threats or negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'environmental operating costs' and 'accruals for probable environmental remediation and restoration costs,' indicating financial impacts, but does not provide specific financial figures or a definitive statement about the materiality of these costs in this particular passage.",
               "timeframe": "Current",
               "timeframe_justification": "The snippet discusses ongoing activities ('incurs environmental operating costs,' 'maintains and periodically reviews and adjusts its accruals') and past operations, indicating a present-day timeframe."
@@ -715,13 +721,15 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'accrued obligations' and 'potential liability' for 'environmental remediation and restoration costs,' framing these as threats or negative consequences for the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values ('$478 million,' '$46 million,' '$600 million') for environmental remediation costs and states that these costs 'could have a material impact' on financial results, demonstrating financial materiality.",
               "timeframe": "Current",
               "timeframe_justification": "The snippet refers to the balance 'At December 31, 2024' and discusses 'future site remediation costs' and 'potential liability,' indicating a present-day and forward-looking timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 478000000 ($478 million)",
+              "USD 46000000 ($46 million)",
+              "USD 600000000 ($600 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -751,13 +759,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'Remediation Accrual' and 'potential liability' under 'Superfund' laws, clearly presenting this as a negative consequence or threat to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value of '$478 million' for the remediation accrual, directly illustrating the financial impact of the disclosed risk.",
               "timeframe": "Current",
               "timeframe_justification": "The snippet refers to the balance 'at December 31, 2024' and states that 'Active remediation is under way,' indicating a present-day timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 478000000 ($478 million)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -869,7 +877,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could inhibit or interrupt Corteva’s operations,' 'significant unanticipated costs or liabilities,' and 'materially higher than Corteva’s accruals' clearly presents the topic as a source of potential harm and negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that regulatory matters 'could result in significant unanticipated costs or liabilities, which may be materially higher than Corteva’s accruals,' indicating financial materiality without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'are subject to evolving regulatory requirements' and 'could result in significant unanticipated costs or liabilities' indicate potential future events and impacts that have not yet occurred."
@@ -989,7 +997,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language emphasizes 'risks,' 'harm,' 'lawsuits,' 'negative publicity,' and 'damage to Corteva’s reputation,' clearly framing the issue as a threat requiring mitigation or management.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet states that these claims 'could have a material adverse effect on Corteva’s business, results of operations, financial condition and cash flows,' indicating financial materiality without providing specific monetary figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to 'unasserted and asserted litigation matters' and 'claims alleging harm,' indicating ongoing and potential future legal actions, making it present day and forward-looking."
@@ -1035,7 +1043,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on 'concerns,' 'claims,' 'negative impact,' 'delays,' 'failures,' 'lack of market acceptance,' and 'material adverse effect,' clearly framing the issue as a risk to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that these concerns 'could have a material adverse effect on Corteva’s business, results of operations, financial condition and cash flows,' indicating financial materiality without providing specific monetary values.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet discusses 'a growing trend in societal demands' and potential future outcomes like 'delays or failures,' 'delayed product launches,' and 'lack of market acceptance,' indicating a forward-looking perspective."
@@ -1128,7 +1136,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'future regulatory bans... may materially impact our financial performance' clearly presents this as a potential negative event or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states 'may materially impact our financial performance,' indicating a financial impact without providing specific monetary values, thus qualifying as partial-type.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'future regulatory bans' and 'may result in the company not achieving' clearly indicates a forward-looking timeframe for this risk."
@@ -1165,7 +1173,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'Corteva may not be able to obtain or maintain' and 'could restrict its ability to sell' clearly frames this as a potential negative event or threat to the business operations and financial performance.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'harm Corteva’s sales and profitability,' indicating a financial impact, but it does not provide specific monetary values, making it a partial-type financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'may not be able to obtain or maintain' and 'could restrict' indicates a forward-looking assessment of potential future events and their impacts."
@@ -1321,13 +1329,15 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The discussion of 'accrued obligations,' 'potential liability,' 'uncertainty,' and 'material impact' clearly frames the restoration of contaminated sites as a financial risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit monetary values for accrued obligations ($478 million, $46 million) and a quantified range for potential additional liability ($600 million), along with a statement about potential 'material impact,' making it a financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The 'accrued obligations' are present-day liabilities, while the 'potential liability' and 'future site remediation costs' refer to forward-looking impacts. The remediation activities are ongoing, indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 478000000 ($478 million)",
+              "USD 46000000 ($46 million)",
+              "USD 600000000 ($600 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1338,7 +1348,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in rows 228, 229.\r\n\r\nThey have the same question but this has more context in the quote .\r\n\r\nKeep this row.",
+              "notes": "Duplicated in rows 228, 229.\n\nThey have the same question but this has more context in the quote .\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -1357,13 +1367,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'request for a preliminary injunction,' 'seeking the establishment of a Remediation Funding Source,' and 'environmental remediation' frames this as a legal and financial burden.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides a specific, quantifiable financial value: 'exceeding $900 million.'",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The event 'On January 28, 2022' is backward-looking, but the 'request for a preliminary injunction' and 'seeking the establishment' implies ongoing legal proceedings and future financial implications, making it multiple or unclear."
             },
             "financial_amounts": [
-              "None"
+              "USD 900000000 ($900 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1466,7 +1476,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The establishment of an 'accrual' for 'remedial action plans' at a contaminated site frames this as a financial obligation and a risk to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions an 'accrual was established' for a 'contribution' but does not provide the specific monetary value of this accrual, making it a partial-type financial disclosure.",
               "timeframe": "Current",
               "timeframe_justification": "The phrase 'an accrual was established' as of 'December 31, 2024' for 'remedial action plans' indicates a present-day liability for future or ongoing remediation."
@@ -1595,7 +1605,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language highlights negative consequences such as 'increasingly more complex' processes, 'higher development and maintenance costs,' 'materially impact our financial performance,' and 'not achieving its sustainability targets, or its anticipated returns on research and development investments.' This clearly frames the issue as a risk to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that rising costs 'may materially impact our financial performance' and reduce 'anticipated returns on research and development investments.' This constitutes a definitive statement about the financial materiality of the risk, even without providing specific monetary figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to processes 'becoming increasingly more complex' and ongoing investments ('continue to invest on an ongoing basis'), as well as 'future regulatory bans' and impacts on 'anticipated returns,' indicating a present-day and forward-looking time horizon."
@@ -1632,7 +1642,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on the negative implications of regulatory changes, such as 'significant costs or capital expenditures' and 'reduced profitability,' clearly framing this as a risk to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that significant costs 'could result in reduced profitability,' which is a definitive statement about the financial materiality of the risk, even without providing specific monetary figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to 'existing and new requirements' and 'near- and long-term effects,' indicating a present-day and forward-looking time horizon for the described risks."
@@ -1668,7 +1678,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes the regulatory process as 'lengthy, costly, complex and in some markets unpredictable,' and highlights negative potential outcomes such as reduced 'return on its research and development investments' and impeded ability to meet 'sales, profitability, or sustainability metrics.' This clearly frames the issue as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that the costly and lengthy regulatory process 'may reduce Corteva’s return on its research and development investments, and impede its ability to meet sales, profitability, or sustainability metrics.' This is a definitive statement about the financial materiality of the risk, even without providing specific monetary figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure describes an ongoing process ('must be extensively tested,' 'must periodically renew') and potential future impacts ('may reduce Corteva’s return,' 'impede its ability to meet'), indicating a present-day and forward-looking time horizon."
@@ -1787,7 +1797,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on 'concerns and claims,' 'potential impact,' and various negative outcomes like 'delays or failures in obtaining regulatory approvals,' 'product discontinuation,' 'litigation,' and 'damage to Corteva’s reputation.' The concluding statement about a 'material adverse effect' clearly frames this as a significant risk to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that 'such concerns could have a material adverse effect on Corteva’s business, results of operations, financial condition and cash flows.' This is a definitive statement about the financial materiality of the risk, even without providing specific monetary figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure discusses a 'growing trend in societal demands,' 'potential impact,' and future manifestations ('could manifest themselves,' 'could have a material adverse effect'), indicating a forward-looking perspective on these risks. It also refers to 'existing' concerns, suggesting a present-day component."
@@ -1804,7 +1814,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 243, 244.\r\n\r\nThey have the same question but has less relevant context in the quote.\r\n\r\nKeep this row.",
+              "notes": "Duplicated in row 243, 244.\n\nThey have the same question but has less relevant context in the quote.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -1823,7 +1833,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrases 'claims and allegations', 'damage to Corteva’s reputation', and 'material adverse effect' clearly frame this as a significant negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states 'material adverse effect on Corteva’s business' and 'damage to Corteva’s reputation' (which has financial implications), indicating financial materiality without providing specific figures.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'could result in' indicates potential future impacts, making it a forward-looking statement."
@@ -1870,7 +1880,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'pending asserted claims for personal injury' and 'remediation claims due to alleged property contamination,' which are inherently negative and represent threats or challenges to the company. This clearly frames the issue as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet states that 'an accrual has been established for the estimated resolution of certain claims,' indicating that the company has recognized a probable and estimable financial liability, thus providing a definitive statement about financial materiality without providing the specific amount.",
               "timeframe": "Current",
               "timeframe_justification": "The disclosure refers to claims 'As of December 31, 2024' and 'pending asserted claims,' indicating a present-day time horizon for these legal challenges."
@@ -1887,7 +1897,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 259.\r\n\r\n259 has the same question but has less of the surrounding context / info that’s relevant to the question.\r\n\r\nKeep this row.",
+              "notes": "Duplicated in row 259.\n\n259 has the same question but has less of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -1906,7 +1916,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on 'risks arising from various unasserted and asserted litigation matters,' 'alleging harm to the general public and the environment,' and 'claims and allegations that Corteva’s products... are not safe.' The potential for 'material adverse effect' on business and financial results clearly frames this as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that an adverse outcome 'could be material to Corteva's financial results' and 'have a material adverse effect on Corteva’s business, results of operations, financial condition and cash flows.' This is a definitive statement about the financial materiality of the risk, even without providing specific monetary figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to 'unasserted and asserted litigation matters,' 'trend in public and private suits being filed,' and potential future impacts ('may lead to similar suits,' 'could result in litigation,' 'could have a material adverse effect,' 'future charges'). This indicates a present-day and forward-looking time horizon."
@@ -1923,7 +1933,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in rows 258, 389.\r\n\r\n258, 389 have the same question but has less of the surrounding context / info that’s relevant to the question.\r\n\r\nKeep this row.",
+              "notes": "Duplicated in rows 258, 389.\n\n258, 389 have the same question but has less of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -1942,7 +1952,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language describes 'complaints alleging contamination,' seeking to 'recover costs incurred' and 'damages,' and a 'criminal investigation,' which are inherently negative and represent threats or challenges to the company. This clearly frames the issue as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet states that 'an accrual has been established for the estimated environmental remediation,' indicating that the company has recognized a probable and estimable financial liability, thus providing a definitive statement about financial materiality without providing the specific amount.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to complaints filed in 'April 2021,' a court judgment in 'September 2023,' a letter of intent in 'June 2024,' an accrual 'As of December 31, 2024,' and ongoing discussions, indicating a backward-looking, present-day, and forward-looking time horizon."
@@ -1978,13 +1988,15 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language discusses 'accrued obligations' and 'potential liability' for 'environmental remediation and restoration costs,' and the possibility of a 'material impact' on financial results. This clearly frames the issue as a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit monetary values for accrued obligations ('$478 million,' '$46 million') and a potential exposure ('$600 million'), and explicitly states that these costs 'could have a material impact on the company’s results of operations, financial condition and cash flows.' This is a definitive statement about financial materiality with quantified figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to accrued obligations 'At December 31, 2024' (present day) and 'future site remediation costs' and 'ultimate cost' (forward-looking), indicating a multiple time horizon."
             },
             "financial_amounts": [
-              "None"
+              "USD 478000000 ($478 million)",
+              "USD 46000000 ($46 million)",
+              "USD 600000000 ($600 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -2014,7 +2026,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'could incur liabilities' and 'could be material' clearly frames this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that the 'ultimate liability could be material to the results of operations and the cash flows', providing a definitive statement about financial materiality without providing specific figures.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'could incur' and 'could be material' indicates potential future impacts, making it a forward-looking statement."
@@ -2051,13 +2063,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of a 'settled' claim and an 'accrual' frames this as a resolved or managed negative financial consequence.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit monetary values for the settlement ('$110 million') and Corteva's share ('$16 million'), making it a financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The settlement occurred in 'December 2023', and an accrual was established 'As of December 31, 2024', indicating a backward-looking event with present-day financial recognition."
             },
             "financial_amounts": [
-              "None"
+              "USD 110000000 ($110 million)",
+              "USD 16000000 ($16 million)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -2177,7 +2190,7 @@
               "analyst": "Dona",
               "relevant_risk": "YES",
               "duplicate": "YES",
-              "notes": "Duplicated in row 260.\r\n\r\nThis has the same question but has more of the surrounding context / info that’s relevant to the question.\r\n\r\nKeep this row.",
+              "notes": "Duplicated in row 260.\n\nThis has the same question but has more of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": ""
@@ -2348,7 +2361,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

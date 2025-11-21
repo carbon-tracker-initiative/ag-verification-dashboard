@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -74,7 +74,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'inherent difficulties in estimating liabilities', 'uncertainty', and 'additional costs may be incurred materially' clearly frames this as a significant threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly states that expenditures 'could have a material effect on Syngenta’s consolidated operating results and cash flows', providing a definitive statement about financial materiality without providing specific figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The discussion of 'future expenditures' and 'uncertainty concerning both the amount and timing of future expenditures' indicates a forward-looking timeframe, while 'provisions recorded' refers to present-day liabilities."
@@ -111,7 +111,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language explicitly describes thousands of lawsuits seeking 'damages' due to alleged health problems from Syngenta's products, framing this as a direct threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'damages' being sought in thousands of lawsuits, indicating a financial impact, but does not provide specific quantified financial figures for these potential damages or settlements, only that they are 'unspecified'.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The lawsuits began in 2017 and are ongoing, with court decisions and appeals extending into 2025, indicating a present and forward-looking impact."
@@ -675,7 +675,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The snippet explicitly states 'risks and uncertainties' and uses language like 'could cause the actual results to differ materially', clearly framing the listed items as potential negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement mentions that risks 'could cause the actual results to differ materially', indicating a financial impact, but it does not provide specific monetary values or a definitive statement of financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The use of 'could cause' and 'potential' indicates that these are anticipated future events or conditions, making the disclosure forward-looking."
@@ -711,13 +711,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The snippet details a lawsuit alleging 'negligence' and 'misrepresentations' related to product sales, seeking 'damages', which clearly frames the situation as a threat and negative consequence for the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for the damages claimed ('400 million Canadian dollars ($278 million)' and '50 million Canadian dollars ($35 million)'), directly illustrating the financial impact of the disclosed risk.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The lawsuit was filed in 2014 and claims damages since 2006, indicating a backward-looking and present-day context, with the litigation still ongoing."
             },
             "financial_amounts": [
-              "None"
+              "USD 278000000 ($278 million)",
+              "USD 35000000 ($35 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -748,7 +749,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'withdrawal of or restrictions placed upon product registrations' and 'impairment tests' clearly presents this as a potential negative consequence or threat to the business's asset values.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet refers to 'impairment tests', which are inherently financial in nature, but it does not provide specific monetary values or explicitly state the financial materiality of such events.",
               "timeframe": "Current",
               "timeframe_justification": "The statement describes current conditions ('when there are asset specific indicators') that trigger present-day actions ('performs detailed impairment tests')."
@@ -820,7 +821,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'uncertainty inherent in the outcome of the regulatory approval process' clearly presents a challenge or potential negative outcome for the business, aligning with a risk framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states that costs are 'expensed as incurred' due to regulatory uncertainty, indicating a financial impact (expenditure). However, it does not provide specific monetary values or state the financial materiality of this risk, only the accounting treatment of the associated costs.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The statement refers to ongoing development and the 'outcome of the regulatory approval process,' which is inherently forward-looking for new products, but the expensing of costs is a present-day accounting treatment."
@@ -856,7 +857,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The text describes 'factors' that can cause 'significant adjustments' to 'recoverable amounts', indicating a potential negative impact or threat to the business's financial valuations.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet discusses 'recoverable amounts' and 'significant adjustments' to financial assumptions, indicating a financial impact, but it does not provide specific monetary values or explicitly state the financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The discussion of 'future sales prices and volumes', 'future development expenditures', and 'changes in product registration' indicates a forward-looking perspective on potential impacts."
@@ -939,7 +940,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure highlights 'inherent difficulties in estimating liabilities' and the 'uncertainty' of 'future expenditures' for environmental matters, with the potential for 'material effect', clearly framing it as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet states that expenditures 'could have a material effect on Syngenta’s consolidated operating results and cash flows', indicating financial impact, but it does not provide specific monetary values and includes a qualifying statement about overall financial position and liquidity.",
               "timeframe": "Future",
               "timeframe_justification": "The discussion of 'future expenditures' and 'could have a material effect' indicates a forward-looking timeframe for these potential impacts."
@@ -975,13 +976,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on 'provisions for environmental remediation,' 'environmental damage,' 'uncertainties that impact the outcome of remediation,' and 'sharing of costs,' all of which highlight potential negative financial consequences and obligations, clearly framing it as a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit monetary values for 'provisions for environmental remediation' ($138 million and $156 million), directly linking the identified business risk to quantifiable financial liabilities. It also discusses the potential for these provisions to 'change significantly,' indicating financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to existing 'provisions' at the balance sheet date (December 31, 2024), describes ongoing 'remediation activities,' and discusses 'long-term future obligations' and how assumptions 'may change significantly before or during the remediation period,' indicating a present-day and forward-looking timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 138000000 ($138 million)",
+              "USD 156000000 ($156 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1012,13 +1014,18 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure details 'additional environmental provisions', 'costs for remediation activity', and 'regulatory issues' requiring cost sharing, all of which represent negative financial consequences or threats to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for provisions, releases, and cash outflows ('$2 million', '$10 million', '$4 million', '$18 million', '$13 million'), directly illustrating the financial impact of the disclosed risk.",
               "timeframe": "Historical",
               "timeframe_justification": "The snippet describes events and financial figures 'in 2024' and '2023', indicating a backward-looking timeframe for these specific financial impacts."
             },
             "financial_amounts": [
-              "None"
+              "USD 2000000 ($2 million)",
+              "USD 10000000 ($10 million)",
+              "USD 4000000 ($4 million)",
+              "USD 10000000 ($10 million)",
+              "USD 18000000 ($18 million)",
+              "USD 13000000 ($13 million)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -1049,7 +1056,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure discusses 'remediation of existing contamination', 'regulatory uncertainty', and the potential for 'higher or lower' ultimate liability, clearly framing this as a threat and negative financial consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet quantifies the potential financial impact as a percentage ('approximately 150 percent') of existing provisions, acknowledging financial materiality without providing a precise monetary value for the potential increase.",
               "timeframe": "Future",
               "timeframe_justification": "The discussion of 'proposals have been made', 'Syngenta will negotiate', and 'ultimate liability may be higher or lower' indicates a forward-looking perspective on potential future outcomes."
@@ -1169,13 +1176,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure describes 'lawsuits,' 'claims,' 'negligence,' and 'damages,' all of which are terms indicating actual or potential negative consequences and liabilities for the business, clearly framing the issue as a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit monetary values for 'general and punitive damages' in Canadian dollars and their USD equivalents (USD 278 million and USD 35 million), directly quantifying the financial impact of the alleged harm to pollinators. This is a clear financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The lawsuits 'were filed in September 2014' and 'October 2014,' with ongoing legal proceedings and authorizations in 'August 2018,' and the company stating 'Syngenta will defend these lawsuits,' indicating a backward-looking origin but a present-day and forward-looking ongoing legal challenge."
             },
             "financial_amounts": [
-              "None"
+              "USD 278000000 (USD 278 million)",
+              "USD 35000000 (USD 35 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1456,7 +1464,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure explicitly mentions 'product liability claims' and 'tort claims relating to the release of chemicals into the environment' as part of legal proceedings, clearly framing these as sources of harm and uncertainty for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet refers to 'Provisions for legal and product liability settlements' and states that individual settlements are 'individually immaterial,' indicating an acknowledgment of financial impact without providing specific monetary values for the overall risk or asserting its materiality.",
               "timeframe": "Current",
               "timeframe_justification": "The mention of 'provisions' implies existing liabilities, and 'legal proceedings incidental to the normal conduct of Syngenta’s business' suggests ongoing relevance, making the timeframe present day."
@@ -1492,7 +1500,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'subject to many uncertainties,' 'expenditures in excess,' and 'cannot be reasonably estimated' clearly frames litigation as a significant threat and source of financial uncertainty, aligning with a risk framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly discusses 'expenditures in excess of the established provisions' and the inability to 'reasonably estimate' the range of amounts, indicating an acknowledgment of financial materiality without providing specific quantified amounts for these potential excess costs. This is a partial financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The statement refers to 'Litigation' as an ongoing condition and discusses 'expenditures... in excess' that 'could require Syngenta to make' in the future, making it present-day and forward-looking."
@@ -1647,7 +1655,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

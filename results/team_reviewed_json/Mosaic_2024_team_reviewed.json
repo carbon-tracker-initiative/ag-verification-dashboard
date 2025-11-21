@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -20,7 +20,7 @@
         "disclosures": [
           {
             "snippet_id": "99902-001",
-            "quote": "Both excess and insufficient fertilizer use have negative effects on ecosystems and the balance of natural habitats, as they put some form of pressure on the agriculture and food systems:\r\n•\tUnderuse of fertilizers has many negative implications for biodiversity, climate and food preservation: Nutrient-depleted soils trigger a degradation process, marked by accelerated erosion and lack of water retention, depletion of soil organic carbon, poor root and plant development, and reduced crop production, which drives important biodiversity loss and leads to more land conversion for agricultural purposes.",
+            "quote": "Both excess and insufficient fertilizer use have negative effects on ecosystems and the balance of natural habitats, as they put some form of pressure on the agriculture and food systems:\n•\tUnderuse of fertilizers has many negative implications for biodiversity, climate and food preservation: Nutrient-depleted soils trigger a degradation process, marked by accelerated erosion and lack of water retention, depletion of soil organic carbon, poor root and plant development, and reduced crop production, which drives important biodiversity loss and leads to more land conversion for agricultural purposes.",
             "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 55, Environmental (Biodiversity)",
             "source_versions": [
               "v4"
@@ -111,7 +111,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "While the statement asserts no harm 'when handled and used as intended', the qualification itself, and the mention of 'additional standards or regulatory requirements', indicates an awareness of potential negative impacts or challenges, framing it as a managed risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement explicitly mentions 'material adverse effect on our business or financial condition', indicating an assessment of financial materiality, but without providing specific figures.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The statement refers to the current belief about product safety and future regulatory requirements, indicating both present-day conditions and forward-looking considerations."
@@ -147,13 +147,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The classification of products as 'hazardous substances' inherently frames the topic as a potential source of harm or negative consequences, indicating a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides a specific financial figure ('$5.4 billion in revenue') directly linked to the volume of products classified as hazardous, indicating a financial dimension to the disclosure without quantifying the risk itself.",
               "timeframe": "Current",
               "timeframe_justification": "The statement refers to the current classification of products and associated revenue in 2024, indicating a present-day condition and ongoing relevance."
             },
             "financial_amounts": [
-              "None"
+              "USD 5400000000 ($5.4 billion)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -228,7 +228,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language used, such as 'restrict our operating activities,' 'increase our operating costs,' 'adversely affect,' and 'could be material,' clearly frames governmental GHG initiatives as a source of potential harm and negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure states that the effects 'could be material' and mentions 'significant capital costs or increases in operating costs,' indicating a financial impact without providing specific quantifiable figures for these costs.",
               "timeframe": "Future",
               "timeframe_justification": "The disclosure refers to initiatives 'under way or under consideration' and potential future impacts ('could restrict,' 'would increase,' 'could be material'), indicating a forward-looking perspective."
@@ -264,13 +264,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The description of a 'carbon tax' and 'indirect costs' being 'passed through to Mosaic' clearly frames this as a negative financial consequence and a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "A specific monetary value ('$80 per tonne') for the carbon tax is provided, directly quantifying a carbon cost. The mention of 'indirect costs' being 'passed through' also indicates a financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet states that a carbon tax 'now applies' as of April 1, 2024, indicating a present-day impact, and also mentions that 'More stringent laws and regulations may be enacted', indicating a forward-looking aspect."
             },
             "financial_amounts": [
-              "None"
+              "USD 80 ($80 per tonne)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -416,7 +416,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'New nutrient regulatory initiatives could have a material effect on either us or our customers' and the description of 'nutrient use restrictions' clearly frames this as a potential threat and negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement explicitly mentions 'material effect' on the business, indicating financial materiality, even without providing specific monetary figures.",
               "timeframe": "Future",
               "timeframe_justification": "The discussion of 'New nutrient regulatory initiatives' and what 'could be' required in the future indicates a forward-looking timeframe."
@@ -476,7 +476,7 @@
           },
           {
             "snippet_id": "99907-003",
-            "quote": "Water. We recognize that water is a critical natural resource that is essential to the sustainability of our operations, as well as to the communities and ecosystems in which we operate. As it relates to the use of our products, crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality. We manage this priority by:\r\n•\tReducing companywide freshwater use\r\n•\tMinimizing tailings management area storage and phosphogypsum pond water inventories\r\n•\tMaintaining the quality of the water we use in the communities where we operate\r\n•\tPromoting agricultural best practices and 4R Nutrient Stewardship to minimize runoff of fertilizers into waterways\r\n•\tPartnering with organizations that address habitat conservation, nutrient stewardship and watershed restoration",
+            "quote": "Water. We recognize that water is a critical natural resource that is essential to the sustainability of our operations, as well as to the communities and ecosystems in which we operate. As it relates to the use of our products, crop nutrient products like those Mosaic manufactures have the potential to run off farmland and into waterways, which can contribute to impaired water quality. We manage this priority by:\n•\tReducing companywide freshwater use\n•\tMinimizing tailings management area storage and phosphogypsum pond water inventories\n•\tMaintaining the quality of the water we use in the communities where we operate\n•\tPromoting agricultural best practices and 4R Nutrient Stewardship to minimize runoff of fertilizers into waterways\n•\tPartnering with organizations that address habitat conservation, nutrient stewardship and watershed restoration",
             "source": "0-2024-Sustainability-Disclosure-and-GRI.pdf, PDF pg. 53, Environmental (Water)",
             "source_versions": [
               "v4"
@@ -521,13 +521,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'potential impact relates to downstream use... which if used improperly, can run into waterways and contribute to impaired water quality and can also nourish algal blooms' clearly frames this as a negative consequence or threat, thus a risk. The investment in mitigation reinforces this framing.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides a specific financial figure ('over $34.5 million') for investments in water-related initiatives, directly linking financial resources to the management of this environmental impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet discusses past investments ('Since 2004'), current support ('supports and promotes'), and a forward-looking target ('target to empower farmers... by 2025'), indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 34500000 ($34.5 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -556,7 +556,7 @@
         "disclosures": [
           {
             "snippet_id": "99908-001",
-            "quote": "Factors that could cause reported results to differ materially from those expressed or implied by the forward-looking statements include, but are not limited to, the following:\r\n•\tchanges in farmers’ application rates for crop nutrients;",
+            "quote": "Factors that could cause reported results to differ materially from those expressed or implied by the forward-looking statements include, but are not limited to, the following:\n•\tchanges in farmers’ application rates for crop nutrients;",
             "source": "FINAL-2024_Annual_Report.pdf, Page 28, Cautionary Statement Regarding Forward Looking Information",
             "source_versions": [
               "v4"
@@ -566,7 +566,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'could cause reported results to differ materially' frames this as a potential negative impact or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The statement mentions 'reported results to differ materially', indicating a potential financial impact, but without providing specific figures or further details on materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'changes in farmers’ application rates' refers to potential future shifts in behavior, indicating a forward-looking timeframe."
@@ -612,7 +612,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'could have a material effect' and the discussion of 'nutrient use restrictions' and 'legislative or regulatory action' clearly frame this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that regulatory initiatives 'could have a material effect,' indicating financial materiality without providing a specific quantifiable amount.",
               "timeframe": "Future",
               "timeframe_justification": "The discussion of 'New nutrient regulatory initiatives' and 'will require legislative or regulatory action' indicates a focus on future events and potential impacts."
@@ -684,13 +684,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'potential impact,' 'impaired water quality,' and 'algal blooms' clearly frames the issue as a negative consequence or threat associated with the company's products. The company's investment in mitigation further supports a risk framing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure provides a specific, quantifiable financial investment ($34.5 million) and quantitative targets (25 million acres, 15.8 million acres) related to mitigating the environmental impact of product use, indicating a financial commitment without explicitly stating financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The mention of 'potential impact,' a target for 2025, and past investments ('since 2004') indicates a concern that spans past, present, and future, making the timeframe multiple."
             },
             "financial_amounts": [
-              "None"
+              "USD 34500000 ($34.5 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -766,13 +766,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The terms 'liabilities,' 'financial assurance requirements,' and 'consent decrees' frame the disposal of gypstacks as a significant financial and regulatory burden, indicating a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit, quantifiable financial values for the undiscounted ($3.0 billion) and discounted ($1.5 billion) AROs related to gypstack closure costs, directly linking the risk to financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The AROs represent 'estimated future closure and post-closure costs,' indicating a forward-looking timeframe, while the current recognition of these liabilities and ongoing compliance with financial assurance requirements also points to a present-day impact."
             },
             "financial_amounts": [
-              "None"
+              "USD 3000000000 ($3.0 billion)",
+              "USD 1500000000 ($1.5 billion)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -801,13 +802,18 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure of significant 'environmental capital expenditures' and 'additional expenditures' for gypstack closure, coupled with the warning of 'greater-than-anticipated' future requirements, frames this as an ongoing and future financial burden and threat.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for past and future expenditures related to gypstack closure and water treatment, directly linking the risk to financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure includes expenditures for '2025,' '2026' (forward-looking) and '2024 and 2023' (backward-looking), indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 480000000 ($480 million)",
+              "USD 275000000 ($275 million)",
+              "USD 465000000 ($465 million)",
+              "USD 215000000 ($215 million)",
+              "USD 545000000 ($545 million)",
+              "USD 470000000 ($470 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -836,13 +842,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'incur liabilities' and the need to 'provide credit support' frames gypstack closure as a financial burden and obligation, which is a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit, quantifiable financial values for surety bonds ('$411.8 million') and a letter of credit ('$50 million') directly linked to gypstack closure obligations.",
               "timeframe": "Current",
               "timeframe_justification": "The statement 'As of December 31, 2024, we had...' indicates a present-day status of these financial commitments, although the underlying closure obligations extend into the future."
             },
             "financial_amounts": [
-              "None"
+              "USD 411800000 ($411.8 million)",
+              "USD 50000000 ($50 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -871,13 +878,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'consent decrees' and 'claims under RCRA and state hazardous waste laws' leading to 'financial assurance for the estimated costs of closure and post-closure care' frames gypstack management as a regulatory and financial burden, which is a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides a specific, quantifiable financial value of '$630 million' deposited into trust funds for gypstack closure and post-closure care.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The deposit was made 'in 2016' (backward-looking), but it is for 'estimated costs of closure and post-closure care' which are future obligations, making the overall timeframe multiple."
             },
             "financial_amounts": [
-              "None"
+              "USD 630000000 ($630 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -906,13 +913,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The discussion of a 'bond' for 'closure cost estimates' and the potential for 'additional financial assurance' if costs increase frames gypstack closure as a financial obligation and a forward-looking risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides a specific financial amount for the Plant City Bond ('$327.1 million') and discusses the financial implications of potential cost increases, indicating financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The bond amount is stated 'as of December 31, 2024' (present day), but the potential for 'additional financial assurance would be required in the future' clearly indicates a forward-looking risk."
             },
             "financial_amounts": [
-              "None"
+              "USD 327100000 ($327.1 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1024,13 +1031,20 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure of 'estimated cash outflows required to settle the AROs' and the classification as 'Other Long-Term Obligations' frames reclamation as a significant financial burden and a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for AROs, including the undiscounted total ($4,484.5 million) and the present value ($2.6 billion), directly linking the risk to financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The AROs represent 'estimated cash outflows required to settle' obligations over a long period ('161 to 391 years until completion'), indicating a forward-looking timeframe, while the current recognition of these liabilities also points to a present-day impact."
             },
             "financial_amounts": [
-              "None"
+              "USD 4484 ($4",
+              "484.5)",
+              "USD 295.7 ($295.7)",
+              "USD 398.4 ($398.4)",
+              "USD 320.9 ($320.9)",
+              "USD 3469 ($3",
+              "469.5)",
+              "USD 2600000000 ($2.6 billion)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1060,13 +1074,17 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure of significant 'expenditures for land reclamation activities,' coupled with the warning of 'greater-than-anticipated' future requirements, frames this as an ongoing and future financial burden and threat.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for past and future expenditures related to land reclamation, directly linking the risk to financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure includes expenditures for '2025,' '2026' (forward-looking) and '2024 and 2023' (backward-looking), indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 275000000 ($275 million)",
+              "USD 465000000 ($465 million)",
+              "USD 215000000 ($215 million)",
+              "USD 545000000 ($545 million)",
+              "USD 470000000 ($470 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1095,13 +1113,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'accrued liabilities' and 'AROs' for 'reclamation matters' frames these obligations as a financial burden and a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit, quantifiable financial values of '$2.6 billion' and '$2.2 billion' for accrued AROs related to reclamation, demonstrating financial materiality.",
               "timeframe": "Current",
               "timeframe_justification": "The accrual amounts are stated 'As of December 31, 2024 and 2023,' indicating a present-day financial obligation, although the actual restoration activities will occur in the future."
             },
             "financial_amounts": [
-              "None"
+              "USD 2600000000 ($2.6 billion)",
+              "USD 2200000000 ($2.2 billion)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1130,13 +1149,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'incur liabilities for reclamation activities' and the requirement to 'provide credit support' frames these obligations as a financial burden and a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit, quantifiable financial values for surety bonds ('$411.8 million') and a letter of credit ('$50 million') directly linked to reclamation obligations.",
               "timeframe": "Current",
               "timeframe_justification": "The financial instruments are reported 'As of December 31, 2024' (present day), indicating current financial commitments for ongoing and future reclamation obligations."
             },
             "financial_amounts": [
-              "None"
+              "USD 411800000 ($411.8 million)",
+              "USD 50000000 ($50 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1165,13 +1185,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'fully funded a trust' for 'financial assurance requirements for closure' frames this as a financial obligation and a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides a specific, quantifiable financial value of '$25 million (Canadian dollars)' for a trust fund related to facility closure, demonstrating financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The trust was 'fully funded' (backward-looking event) but is for 'closure' requirements, which are future obligations, making the overall timeframe multiple."
             },
             "financial_amounts": [
-              "None"
+              "USD 25000000 ($25 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1200,13 +1220,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'executed and thereafter have maintained a surety bond' for 'financial assurance for closure' frames this as a financial obligation and a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides a specific, quantifiable financial value of 'approximately $82 million' for a surety bond related to facility closure, demonstrating financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The bond was 'executed in 2020' (backward-looking) and 'maintained' thereafter (present day) for 'closure' requirements, which are future obligations, making the overall timeframe multiple."
             },
             "financial_amounts": [
-              "None"
+              "USD 82000000 ($82 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1236,7 +1256,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'significant costs to fulfill our reclamation obligations' frames reclamation as a financial burden, indicating a risk to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'significant costs' but does not provide explicit monetary values in this snippet, nor does it make a definitive statement about financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The statement 'have incurred and will continue to incur' indicates both backward-looking (past costs) and forward-looking (future costs) aspects, making the timeframe multiple."
@@ -1352,7 +1372,7 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The discussion of 'standards' and 'regulatory requirements' that 'do not pose harm' and 'will not have a material adverse effect' presents the topic in a neutral to slightly positive light, indicating that while regulations exist, they are not currently perceived as a significant threat.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that additional standards or regulatory requirements 'will not have a material adverse effect on our business or financial condition,' providing a definitive statement about financial materiality (or immateriality).",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The statement refers to existing 'standards' and 'regulatory requirements' (present day) and 'any additional standards or regulatory requirements' (forward-looking), indicating a multiple timeframe."
@@ -1398,13 +1418,18 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure of significant 'environmental capital expenditures' for 'remediation of contamination,' coupled with the warning of 'greater-than-anticipated' future requirements, frames this as an ongoing and future financial burden and threat.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for past and future expenditures related to remediation of contamination, directly linking the risk to financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure includes expenditures for '2025,' '2026' (forward-looking) and '2024 and 2023' (backward-looking), indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 480000000 ($480 million)",
+              "USD 275000000 ($275 million)",
+              "USD 465000000 ($465 million)",
+              "USD 215000000 ($215 million)",
+              "USD 545000000 ($545 million)",
+              "USD 470000000 ($470 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1434,7 +1459,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The description of 'soil, surface water and groundwater impacts,' the potential for 'cleanup efforts,' and the warning that 'material expenditures by us could be required in the future' clearly frames this as a significant negative consequence and a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that 'material expenditures by us could be required in the future,' indicating financial materiality without providing specific quantifiable amounts in this particular passage.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet discusses past occurrences ('occurred previously'), ongoing investigations ('currently are in progress'), and future potential ('potentially could occur in the future,' 'could be required in the future'), covering multiple timeframes."
@@ -1469,13 +1494,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The terms 'accrued liabilities,' 'contingent environmental liabilities,' and 'cost of remediation' clearly frame the restoration of contaminated sites as a financial burden and a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit, quantifiable financial values for accrued environmental liabilities ($197.5 million), directly linking the risk to financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The accruals are for existing liabilities ('As of December 31, 2024') but relate to 'previously operated sites' and 'future periods,' indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 197500000 ($197.5 million)",
+              "USD 203200000 ($203.2 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1504,13 +1530,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The terms 'contingent environmental remedial liabilities,' 'Superfund,' and the acknowledgment that 'material expenditures could be required in the future' clearly frame the restoration of contaminated sites as a significant and ongoing threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure provides a specific financial accrual ($197.5 million) and explicitly states that 'material expenditures could be required in the future,' providing a definitive statement about potential future financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The accruals are 'as of December 31, 2024' (present day), but the liabilities arise from 'formerly owned' sites (backward-looking) and 'material expenditures could be required in the future' (forward-looking), indicating a multiple timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 197500000 ($197.5 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1539,13 +1565,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'accrued liabilities' for 'environmental and reclamation matters' frames these obligations as a financial burden and a risk to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides explicit, quantifiable financial values of '$197.5 million' and '$203.2 million' for accrued environmental matters, demonstrating financial materiality.",
               "timeframe": "Current",
               "timeframe_justification": "The accrual amounts are stated 'As of December 31, 2024 and 2023,' indicating a present-day financial obligation, although the actual remediation activities may occur in the future."
             },
             "financial_amounts": [
-              "None"
+              "USD 197500000 ($197.5 million)",
+              "USD 203200000 ($203.2 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1574,13 +1601,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrases 'contingent environmental remedial liabilities' and 'material expenditures could be required in the future to remediate the contamination' clearly frame this as a potential negative financial consequence and a risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides a specific financial amount for accruals ('$197.5 million') and explicitly states that 'material expenditures could be required in the future,' indicating financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The accrual is 'as of December 31, 2024' (present day), but the potential for 'material expenditures could be required in the future' makes it forward-looking."
             },
             "financial_amounts": [
-              "None"
+              "USD 197500000 ($197.5 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1620,7 +1647,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement addresses potential negative impacts ('material adverse effect') from regulatory requirements, framing it as a potential threat that the company assesses as not material.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that additional standards 'will not have a material adverse effect', providing a definitive statement about financial materiality without quantifying it.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'any additional standards or regulatory requirements' refers to future or potential regulations, making this a forward-looking statement."
@@ -1709,7 +1736,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'changes in the costs... of raw materials or energy' and 'could cause reported results to differ materially' clearly frames this as a source of potential harm and negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'changes in the costs' and that these 'could cause reported results to differ materially', indicating a financial impact and potential materiality, but without providing specific figures or a definitive statement of materiality.",
               "timeframe": "Future",
               "timeframe_justification": "This is a forward-looking statement, listing factors that 'could cause reported results to differ materially' in the future."
@@ -1745,7 +1772,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'increase our operating costs', 'adversely affect our results of operations', and 'these effects could be material to us' clearly frames this as a source of potential harm and negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states that the effects 'could be material to us', providing a definitive statement about the financial materiality of increased energy costs, without quantifying the exact amount.",
               "timeframe": "Future",
               "timeframe_justification": "The snippet discusses 'governmental initiatives... under way or under consideration' and effects that 'could' happen, indicating a forward-looking perspective."
@@ -1780,7 +1807,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement identifies 'natural gas costs' as a factor affecting 'cost of goods sold', implying a negative impact on profitability, thus framing it as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure refers to 'natural gas costs' affecting 'cost of goods sold', indicating a financial impact, but does not provide specific monetary values or a definitive statement of financial materiality.",
               "timeframe": "Current",
               "timeframe_justification": "This statement describes an ongoing condition that 'is affected by' natural gas costs, indicating a present-day relevance."
@@ -1815,7 +1842,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement describes a dependency ('highly dependent') of product price on natural gas, implying that fluctuations could negatively impact the business, thus framing it as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'product price for ammonia' and its dependency on natural gas, indicating a financial impact, but does not provide specific monetary values or a definitive statement of financial materiality.",
               "timeframe": "Current",
               "timeframe_justification": "This statement describes a general, ongoing dependency and price behavior, indicating a present-day and continuous relevance."
@@ -1858,7 +1885,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

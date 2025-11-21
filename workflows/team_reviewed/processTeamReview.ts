@@ -91,7 +91,8 @@ const INPUT_FILE = path.join(
   process.cwd(),
   "reports",
   "team_reviewed",
-  "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+  // "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx",
+  "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
 );
 
 const OUTPUT_JSON_DIR = path.join(process.cwd(), "results", "team_reviewed_json");

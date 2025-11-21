@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -190,7 +190,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The statement highlights 'increased attention to human health' as a factor leading to 'rising pesticide registration thresholds and costs', framing this as a challenge or threat to the business due to increased regulatory burden.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'costs' ('登记门槛和成本在逐年提高' - registration thresholds and costs are increasing annually) but does not provide specific quantifiable financial figures for these costs, making it a partial-type financial disclosure.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase '逐年提高' (increasing annually) indicates an ongoing trend that has been happening and is expected to continue, making it a present-day and forward-looking concern."
@@ -237,7 +237,7 @@
             "categorization": {
               "framing": "Opportunity",
               "framing_justification": "The disclosure focuses on '降低碳排放成本' (reducing carbon emission costs) and '减少温室气体排放' (reducing greenhouse gas emissions) through efficiency improvements, framing this as a positive outcome of managing a recognized cost/risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value of '22.83万元' (228,300 RMB) for the reduction in carbon emission costs, directly linking it to the risk.",
               "timeframe": "Current",
               "timeframe_justification": "The statement '全年可节约...降低碳排放成本' (can save... reduce carbon emission costs annually) refers to the current reporting period's achievements and ongoing benefits."
@@ -274,7 +274,7 @@
             "categorization": {
               "framing": "Opportunity",
               "framing_justification": "The disclosure highlights '碳配额盈余' (carbon allowance surplus) and '实现收益851万元' (generated 8.51 million RMB in revenue) from carbon asset transactions, framing the carbon market as an opportunity for financial gain through effective management.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value of '851万元' (8.51 million RMB) as revenue from carbon asset transactions, directly linked to carbon costs/trading.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure covers '2019-2023年度' (2019-2023 period) for compliance and '自2021年7月...以来' (since July 2021) for transactions, indicating both backward-looking and present-day activities."
@@ -310,7 +310,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The snippet explicitly lists '向高排放产品征收碳税、规定企业碳排放配额等' (imposing carbon taxes on high-emission products, stipulating corporate carbon emission allowances) as a '转型风险' (transition risk), clearly framing it as a potential negative consequence.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The mention of '碳税' (carbon tax) and '碳排放配额' (carbon emission allowances) directly implies financial costs, even without specific monetary values. The company assesses its '影响程度' (impact level) as '低' (low), which is a definitive statement about its financial relevance.",
               "timeframe": "Future",
               "timeframe_justification": "The risk description uses future-oriented language ('征收', '规定' - impose, stipulate) and is categorized as a 'transition risk', indicating a forward-looking perspective on potential future costs."
@@ -347,7 +347,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure frames the 'EU carbon tariffs and other policies' as something the company is 'actively responding to' ('积极因应'), indicating a challenge or threat that requires strategic action.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The mention of '欧盟碳关税等政策' (EU carbon tariffs and other policies) directly implies potential financial costs, even if no specific figures are provided in this snippet. The company is taking action to understand and manage these implied costs.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The company 'has conducted' (开展了) studies and 'has planned to conduct' (已计划开展) further work, indicating both present-day activities and forward-looking plans in response to existing and anticipated policies."
@@ -455,7 +455,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure explicitly lists 'levying carbon taxes' and 'carbon emission quotas' under 'Transition Risk,' clearly framing these as potential negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet mentions 'carbon taxes' and 'carbon emission quotas,' which are inherently financial, but it does not provide specific monetary values or state the financial materiality of these costs.",
               "timeframe": "Future",
               "timeframe_justification": "The risk description refers to 'levying carbon taxes' and 'stipulating carbon emission quotas,' which are future or ongoing regulatory actions, indicating a forward-looking perspective on potential impacts."
@@ -764,7 +764,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure emphasizes '安全理念' (safety philosophy) and '强化行为安全和工艺安全管理' (strengthening behavioral safety and process safety management), clearly framing workplace hazards as a threat that requires proactive management and mitigation.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial figure of '超亿元' (over 100 million RMB) for annual safety production investment, directly linking financial resources to managing this risk.",
               "timeframe": "Current",
               "timeframe_justification": "The statement '每年安全生产投入超亿元' (invests over 100 million RMB annually in safety production) indicates an ongoing, present-day commitment and investment."
@@ -800,7 +800,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The data presented, such as 'lost-time injury incidents' and 'lost workdays due to work-related injuries,' clearly indicates negative consequences that the company is tracking and managing, thus framing it as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet provides explicit financial figures for 'safety production investment' and quantifiable non-financial metrics like 'lost-time injury incidents' and 'lost workdays due to work-related injuries,' which represent a financial impact without precise monetary values for the losses themselves.",
               "timeframe": "Historical",
               "timeframe_justification": "The data covers '2022, 2023, and 2024,' indicating a backward-looking review of past performance and present-day status."
@@ -1665,7 +1665,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language '价格可能会出现异常波动情况' (prices may experience abnormal fluctuations) and '影响公司经济效益' (affect the company's economic efficiency) clearly frames this as a potential negative consequence or threat to the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet states that price fluctuations '将一定程度上影响公司经济效益' (will affect the company's economic efficiency to some extent), indicating a financial impact without providing specific quantifiable figures.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase '可能会出现异常波动情况' (may experience abnormal fluctuations) indicates a forward-looking assessment of potential future events, while '一定程度上影响公司经济效益' (affect the company's economic efficiency to some extent) implies a present or future impact."
@@ -1709,7 +1709,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

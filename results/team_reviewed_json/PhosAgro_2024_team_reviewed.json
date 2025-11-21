@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -155,7 +155,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The direct identification of 'failure to comply with regulations' and the mention of 'carbon border adjustment mechanism' clearly frames this as a regulatory threat and potential negative consequence for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "While no specific monetary value is given in this snippet, the reference to 'carbon border adjustment mechanism' implies potential financial costs (tariffs, penalties) for non-compliance, thus indicating financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The reference to 'following the adoption of the carbon border adjustment mechanism' implies a forward-looking risk, as the company anticipates and prepares for future regulatory changes."
@@ -191,7 +191,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The assessment of 'impact of the carbon border adjustment mechanism (CBAM) on PhosAgro’s operating expenses' clearly frames this as a potential negative financial consequence or challenge for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly mentions 'operating expenses' and the 'impact' of CBAM on them, directly linking the carbon costs to a financial consequence for the company, thus indicating financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The assessment of CBAM's impact and the refinement of the carbon footprint mechanism in 2024 to align with CBAM requirements indicate a present-day focus on preparing for future regulatory changes, making it forward-looking."
@@ -227,7 +227,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'GHG border tariffs' and the need to 'minimise emissions' to address this, frames the carbon footprint of products as a potential financial threat or challenge in export markets.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The reference to 'GHG border tariffs' implies potential financial costs or impacts on product competitiveness, thus indicating financial materiality, even without specific figures in this snippet.",
               "timeframe": "Future",
               "timeframe_justification": "The statement 'An important task planned for 2025' and the discussion of 'products exported to markets with GHG border tariffs' clearly indicate a forward-looking timeframe for this risk and mitigation strategy."
@@ -262,7 +262,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'climate risks' and 'consequences for its production and business processes' clearly frames the topic as a potential source of harm or negative impact, aligning with a risk perspective.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure explicitly states the use of 'internal carbon price mechanisms' in investment decisions, which is a direct acknowledgment of financial impact and materiality, even without specific figures in this particular snippet.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to 'short, medium and long term consequences' of climate risks, indicating a forward-looking perspective that spans multiple time horizons."
@@ -368,13 +368,13 @@
             "categorization": {
               "framing": "Neutral",
               "framing_justification": "The calculation of 'internal carbon price' and 'cost of carbon units' is a neutral, factual disclosure of a financial metric used for internal assessment, rather than framing it as a direct threat or opportunity in this context.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The disclosure provides an explicit monetary value of 'RUB 658 per carbon unit' for the cost of carbon units, which is a direct quantification of a financial impact.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The calculation of the 'cost of carbon units' and the incorporation of a 'price per tonne of CO2-eq.' as a parameter for investment projects indicate an ongoing and forward-looking financial assessment."
             },
             "financial_amounts": [
-              "None"
+              "RUB 658 (RUB 658)"
             ],
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
@@ -543,7 +543,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language focuses on 'environmental impact payments' and 'over-limit payments' associated with disposal, framing it as a negative consequence and a threat to the business's financial performance.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The snippet explicitly mentions 'environmental impact payments' and 'over-limit payments' as financial consequences, even providing percentages of total payments, indicating a financial impact without providing a specific total monetary value for the risk itself.",
               "timeframe": "Current",
               "timeframe_justification": "The snippet discusses 'reduction in... payments' in 2024 and compares it to 2023, indicating an ongoing situation and current efforts to mitigate a present-day issue."
@@ -827,7 +827,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'legislative changes that might bring about higher cost of doing business, restrictive policies by regulators' clearly frames this as a potential negative consequence or threat to the business, emphasizing adverse impacts.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The phrase 'higher cost of doing business' indicates a financial impact without providing a specific quantifiable monetary value. It acknowledges financial significance but does not quantify it.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'might bring about' suggests a future potential impact or development that has not yet manifested, making the disclosure forward-looking."
@@ -1037,7 +1037,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }

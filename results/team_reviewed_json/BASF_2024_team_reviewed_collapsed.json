@@ -7,7 +7,7 @@
     "fiscal_year": 2024,
     "version": "team-reviewed",
     "model_used": "team-reviewed",
-    "analysis_date": "2025-11-18T19:57:34.320Z",
+    "analysis_date": "2025-11-21T16:19:08.382Z",
     "schema_version": "team-reviewed-v1",
     "analysis_results": [
       {
@@ -157,7 +157,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "I would argue this as a FULL disclosure even though the statement doesn’t explicitly mention human health issues. \r\n\r\nInteresting for the report as it classifies \"Challenged Products\" which is an interesting concept, and they describe why they remove these products from market after an event has happened.",
+              "notes": "I would argue this as a FULL disclosure even though the statement doesn’t explicitly mention human health issues. \n\nInteresting for the report as it classifies \"Challenged Products\" which is an interesting concept, and they describe why they remove these products from market after an event has happened.",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "FULL DISCLOSURE"
@@ -176,7 +176,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'adverse effects on human health,' 'reducing the risks,' and setting targets for reduction clearly frames this as a threat or negative consequence that the company is actively managing, indicating a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure provides quantitative metrics related to sales percentage and total volume of SVHCs, and sets targets for their reduction. While not explicit monetary values, these are quantifiable business metrics directly linked to the risk, indicating a partial financial type.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The commitment to 'continuously reducing the risks' and setting targets for 'by 2030' indicates a forward-looking timeframe, while current sales percentages and volumes are present day."
@@ -193,7 +193,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "I'm tempted to put this as a full disclosure as it mentions targets for reducing substance of very high concern even though it doesn't mention financial materiality explictly, but it does say they account for 1.3% of sales\r\n\r\nInteresting information to include in the report. Do other companies categorise their products in this way? Is it misleading in any way?",
+              "notes": "I'm tempted to put this as a full disclosure as it mentions targets for reducing substance of very high concern even though it doesn't mention financial materiality explictly, but it does say they account for 1.3% of sales\n\nInteresting information to include in the report. Do other companies categorise their products in this way? Is it misleading in any way?",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "PARTIAL"
@@ -332,7 +332,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The explicit mention of 'financial implications' and the 'risk of losing competitiveness' clearly frames carbon costs as a threat to the business's financial viability and market standing.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure references 'financial implications' and 'increased carbon costs' but does not provide specific monetary values, indicating a partial financial type.",
               "timeframe": "Future",
               "timeframe_justification": "The statement refers to 'investment decisions and business planning' and 'regularly review our transition plan,' which are inherently forward-looking activities, addressing future impacts."
@@ -655,7 +655,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The text describes the company's response to 'marketing ban' or 'loses its approval', which are negative events, thus framing it as a 'Risk'.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure discusses the impact of bans and withdrawals without providing specific financial figures, although it implies potential financial consequences through product withdrawal. The statement 'No products of significance for BASF were impacted by bans in the 2024 business year' is a non-financial statement about the absence of impact, thus it is 'Non-Financial'.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet discusses both the company's general processes for handling future bans ('If a product is affected...') and a specific backward-looking statement ('No products... in the 2024 business year'), making the timeframe 'Multiple or Unclear'."
@@ -739,13 +739,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The mention of 'increased provisions' and 'restoration obligations' clearly frames this as a financial burden and a liability, indicating a 'Risk' to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit monetary value of '€199 million' for provisions related to restoration obligations, directly quantifying a financial impact, thus classifying it as 'Financial'.",
               "timeframe": "Current",
               "timeframe_justification": "The 'increase' in provisions is a present-day financial event, even though the 'restoration obligations' are for a 'planned closure', indicating a current financial impact for a future activity. This makes the timeframe 'Present day'."
             },
             "financial_amounts": [
-              "None"
+              "EUR 199000000 (€199 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -785,7 +785,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The phrase 'loss of biodiversity may be facilitated by the use of crop protection products' highlights a potential negative consequence, framing the topic as a risk.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure describes a potential negative impact but does not provide any explicit quantifiable financial values or state whether the risk is financially material or immaterial.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The use of 'may be facilitated' suggests a potential or ongoing impact, making the timeframe multiple or unclear as it could refer to past, present, or future facilitation."
@@ -874,7 +874,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "Includes targets so tempted to categorise it as partial, but it only mentions the topic but not as a risk\r\n\r\nInteresting for the report as the company is mentioning a target for reduction, hence acknowledging a problem.",
+              "notes": "Includes targets so tempted to categorise it as partial, but it only mentions the topic but not as a risk\n\nInteresting for the report as the company is mentioning a target for reduction, hence acknowledging a problem.",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "UNCLEAR"
@@ -910,7 +910,7 @@
               "analyst": "Chris",
               "relevant_risk": "YES",
               "duplicate": "NO",
-              "notes": "Mentions the topic but not as a risk\r\n\r\nWhat does this actually mean? Is this linked to the biodiversity metric mentioned above or is it different?",
+              "notes": "Mentions the topic but not as a risk\n\nWhat does this actually mean? Is this linked to the biodiversity metric mentioned above or is it different?",
               "remove_from_analysis": "NO",
               "highlight": "YES",
               "correct_classification": "UNCLEAR"
@@ -977,7 +977,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The language 'competitive risk' and 'higher costs' clearly frames the topic as a source of potential harm or negative consequences for the business.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'higher costs' and 'administrative effort' indicating a financial impact, but it does not provide an exact monetary value, classifying it as partial-type financial disclosure.",
               "timeframe": "Future",
               "timeframe_justification": "The phrase 'could represent a competitive risk' indicates a potential future impact, making it forward-looking."
@@ -1023,13 +1023,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure describes BASF as a 'defendant in multidistrict litigation' and mentions 'personal injury claims, property damage claims and claims by states and other governmental entities,' clearly framing these as actual and potential negative consequences or threats to the business.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for a class settlement: '$316.5 million (equivalent to €301 million).' It also states that 'Provisions are recognized for all identifiable risks from legal proceedings and investigations if... it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation and a reliable estimate of the amount of the obligation can be made,' indicating financial materiality for other legal risks.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The disclosure refers to a settlement that 'was approved by the court in 2024' and 'payment was made in 2024,' indicating a backward-looking event. However, it also mentions 'resolve current and future claims related to AFFF' and 'other AFFF-related lawsuits, including personal injury claims, property damage claims and claims by states and other governmental entities,' and 'other legal proceedings and investigations' for which provisions are recognized, indicating ongoing and forward-looking aspects. Therefore, 'Multiple or Unclear' is the most appropriate timeframe."
             },
             "financial_amounts": [
-              "None"
+              "USD 316500000 ($316.5 million)",
+              "EUR 301000000 (€301 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1059,13 +1060,14 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure describes 'special charges' and a 'class settlement' in connection with 'litigation', clearly framing the event as a negative financial consequence or risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides explicit, quantifiable financial values for the charges (€500 million) and the class settlement (€301 million), directly linked to the legal risk, classifying it as financial.",
               "timeframe": "Historical",
               "timeframe_justification": "The phrase 'charges... arose' indicates that these are past events that have been accounted for in the current reporting period, making it backward-looking."
             },
             "financial_amounts": [
-              "None"
+              "EUR 500000000 (€500 million)",
+              "EUR 301000000 (€301 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1095,13 +1097,13 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure mentions 'other liabilities' and 'class settlement' in connection with 'litigation', clearly framing the event as a negative financial consequence or risk.",
-              "financial_type": "Non-Financial",
+              "financial_type": "Financial",
               "financial_justification": "The snippet provides an explicit, quantifiable financial value (€424 million) for a liability directly linked to the legal risk, classifying it as financial.",
               "timeframe": "Current",
               "timeframe_justification": "The statement refers to 'other liabilities rose' and 'liability relating to the class settlement', indicating an existing financial obligation as of the reporting date, making it present day."
             },
             "financial_amounts": [
-              "None"
+              "EUR 424000000 (€424 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",
@@ -1131,7 +1133,7 @@
             "categorization": {
               "framing": "Risk",
               "framing_justification": "The disclosure explicitly mentions 'risks from current legal disputes and proceedings' and the need to 'recognize a provision', clearly framing the topic as a risk that requires management.",
-              "financial_type": "Partial",
+              "financial_type": "Partial-type",
               "financial_justification": "The disclosure mentions 'provisions' which are financial in nature, but it does not provide specific monetary values for any particular legal dispute, classifying it as partial-type financial.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrases 'constantly monitor current and potential legal disputes' and 'if sufficient probability of occurrence is identified' indicate an ongoing process for both present and future risks, making the timeframe multiple or unclear."
@@ -1174,7 +1176,7 @@
       ]
     },
     "metadata": {
-      "source_excel": "2025-11-11 AG_Verification_Deduped_Reviewed v0_01NG.xlsx"
+      "source_excel": "AG_Verification_Deduped_Reviewed_and_fixed.xlsx"
     }
   }
 }
