@@ -9,9 +9,10 @@ import type { Classification } from '../../types/analysis';
 interface Props {
   classification: Classification;
   size?: 'sm' | 'md' | 'lg';
+  displayLabel?: string;
 }
 
-const { classification, size = 'md' } = Astro.props;
+const { classification, size = 'md', displayLabel } = Astro.props;
 
 // Format label (remove underscore)
 const rawLabel = classification.replace('_', ' ');
@@ -19,6 +20,7 @@ const label = rawLabel
   .split(' ')
   .map(part => part.charAt(0) + part.slice(1).toLowerCase())
   .join(' ');
+const computedLabel = displayLabel || label;
 
 // Color schemes
 const colors: Record<Classification, { bg: string; text: string; border: string }> = {
@@ -63,10 +65,10 @@ const colorScheme = colors[classification];
     sizeClasses[size]
   ]}
   role="status"
-  aria-label={`Classification: ${label}`}
-  title={`Classification: ${label}`}
+  aria-label={`Classification: ${computedLabel}`}
+  title={`Classification: ${computedLabel}`}
 >
-  <span>{label}</span>
+  <span>{computedLabel}</span>
 </span>
 
 

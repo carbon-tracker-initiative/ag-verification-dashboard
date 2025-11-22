@@ -818,7 +818,7 @@ async function loadTeamReviewedFiles(resultsPath: string): Promise<CompanyYearDa
 }
 
 function buildTeamReviewedCompanyYear(entry: any): CompanyYearData {
-  const verified = normalizeAnalysisResult(entry.verified);
+  const verified = applyCollapsedBinary(normalizeAnalysisResult(entry.verified));
   verified.company_name = entry.company;
   verified.fiscal_year = entry.year;
   verified.version = entry.version || 'team-reviewed';
@@ -848,6 +848,38 @@ async function loadTeamReviewedOnly(resultsPath: string): Promise<CompanyYearDat
 
   const perFile = await loadTeamReviewedFiles(resultsPath);
   return perFile;
+}
+
+function applyCollapsedBinary(result: AnalysisResult): AnalysisResult {
+  const updatedQuestions = result.analysis_results.map(q => {
+    const disclosures = q.disclosures.map(s => {
+      const collapsed = (s as any).collapsed_classification || s.classification || '';
+      const normalized = (collapsed || '').toString().toLowerCase();
+      const classificationUpper = (s.classification || '').toString().toUpperCase();
+      const isDisclosure =
+        normalized.startsWith('disclosure') ||
+        normalized === 'full_disclosure' ||
+        normalized === 'full' ||
+        normalized === 'partial' ||
+        classificationUpper === 'FULL_DISCLOSURE' ||
+        classificationUpper === 'PARTIAL';
+      const collapsedDisplay = isDisclosure ? 'Disclosure' : 'No Disclosure';
+      return {
+        ...s,
+        classification: isDisclosure ? 'FULL_DISCLOSURE' : 'NO_DISCLOSURE',
+        collapsed_display: collapsedDisplay
+      };
+    });
+    return { ...q, disclosures };
+  });
+
+  const updatedResult: AnalysisResult = {
+    ...result,
+    analysis_results: updatedQuestions,
+    summary_statistics: buildSummaryStatisticsFromQuestions(updatedQuestions as Question[])
+  };
+
+  return updatedResult;
 }
 
 

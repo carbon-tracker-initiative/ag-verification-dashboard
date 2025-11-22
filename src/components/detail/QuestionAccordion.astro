@@ -31,9 +31,11 @@ const {
   year
 } = Astro.props;
 
+const bestClassificationSnippet = question.disclosures[0];
 const bestClassification = question.disclosures.length > 0
-  ? question.disclosures[0].classification
+  ? bestClassificationSnippet.classification
   : 'NO_DISCLOSURE';
+const bestCollapsedLabel = (bestClassificationSnippet as any)?.collapsed_display;
 
 const snippetCount = question.disclosures.length;
 const isExpandable = snippetCount > 0;
@@ -121,7 +123,11 @@ if (!framings.length) framings.push('none');
         </div>
 
         <div class="flex items-center gap-2">
-          <ClassificationBadge classification={bestClassification} size="lg" />
+          <ClassificationBadge
+            classification={bestClassification}
+            displayLabel={bestCollapsedLabel || undefined}
+            size="lg"
+          />
           {hasVerificationCorrection && (
             <span class="chip correction-chip uppercase whitespace-nowrap">
               Corrected by verification
