@@ -116,6 +116,18 @@ const { categories } = Astro.props;
         </select>
       </div>
 
+      <div class="min-w-[180px]">
+        <label for="question-jump" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
+          Jump to Question
+        </label>
+        <select
+          id="question-jump"
+          class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
+        >
+          <option value="">Select question...</option>
+        </select>
+      </div>
+
       <button
         id="reset-filters"
         class="px-4 py-2 text-sm font-medium text-slate-200 bg-slate-800/70 hover:bg-slate-700/80 rounded-lg transition-colors border border-slate-700"
@@ -157,6 +169,7 @@ const { categories } = Astro.props;
     const timeframeFilter = document.getElementById('timeframe-filter');
     const framingFilter = document.getElementById('framing-filter');
     const sortSelect = document.getElementById('sort-select');
+    const questionJumpSelect = document.getElementById('question-jump');
     const resetButton = document.getElementById('reset-filters');
     const toggleAllButton = document.getElementById('toggle-all');
     const activeFiltersDiv = document.getElementById('active-filters');
@@ -168,6 +181,7 @@ const { categories } = Astro.props;
         !(timeframeFilter instanceof HTMLSelectElement) ||
         !(framingFilter instanceof HTMLSelectElement) ||
         !(sortSelect instanceof HTMLSelectElement) ||
+        !(questionJumpSelect instanceof HTMLSelectElement) ||
         !(resetButton instanceof HTMLButtonElement) ||
         !(toggleAllButton instanceof HTMLButtonElement)) {
       return;
@@ -355,7 +369,49 @@ const { categories } = Astro.props;
       timeframeFilter.value = 'all';
       framingFilter.value = 'all';
       sortSelect.value = 'question-id';
+      questionJumpSelect.value = '';
       applyFiltersAndSort();
+    }
+
+    function buildQuestionJumpOptions() {
+      const ids = Array.from(new Set(
+        questionNodes
+          .map(node => node.dataset.questionId || '')
+          .filter(Boolean)
+      )).sort((a, b) => a.localeCompare(b));
+
+      questionJumpSelect.innerHTML = '<option value=\"\">Select question...</option>';
+      ids.forEach(id => {
+        const option = document.createElement('option');
+        option.value = id;
+        option.textContent = id;
+        questionJumpSelect.appendChild(option);
+      });
+    }
+
+    function jumpToQuestion(questionId) {
+      if (!questionId) return;
+
+      const targetCard = questionNodes.find(
+        node => (node.dataset.questionId || '').toLowerCase() === questionId.toLowerCase()
+      );
+
+      if (!targetCard) {
+        return;
+      }
+
+      if (targetCard.style.display === 'none') {
+        categoryFilter.value = 'all';
+        classificationFilter.value = 'all';
+        financialFilter.value = 'all';
+        timeframeFilter.value = 'all';
+        framingFilter.value = 'all';
+        sortSelect.value = 'question-id';
+        applyFiltersAndSort();
+      }
+
+      setQuestionExpanded(targetCard, true);
+      targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function toggleAll() {
@@ -420,9 +476,11 @@ const { categories } = Astro.props;
     timeframeFilter.addEventListener('change', applyFiltersAndSort);
     framingFilter.addEventListener('change', applyFiltersAndSort);
     sortSelect.addEventListener('change', applyFiltersAndSort);
+    questionJumpSelect.addEventListener('change', () => jumpToQuestion(questionJumpSelect.value));
     resetButton.addEventListener('click', resetFilters);
     toggleAllButton.addEventListener('click', toggleAll);
 
+    buildQuestionJumpOptions();
     applyFiltersAndSort();
   }
 
