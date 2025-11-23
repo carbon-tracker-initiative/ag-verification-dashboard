@@ -124,7 +124,7 @@ const { categories } = Astro.props;
           id="question-jump"
           class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
         >
-          <option value="">Select question...</option>
+          <option value="">Show all questions</option>
         </select>
       </div>
 
@@ -192,6 +192,7 @@ const { categories } = Astro.props;
     );
 
     let allExpanded = false;
+    let selectedQuestionId = '';
     const totalQuestionCount = questionNodes.length;
 
     function setQuestionExpanded(card, expand) {
@@ -273,6 +274,9 @@ const { categories } = Astro.props;
 
       const activeFilters = [];
 
+      if (selectedQuestionId) {
+        activeFilters.push(`Question: ${selectedQuestionId} (only)`);
+      }
       if (categoryFilter.value !== 'all') {
         activeFilters.push(`Category: ${categoryFilter.options[categoryFilter.selectedIndex].text}`);
       }
@@ -313,6 +317,8 @@ const { categories } = Astro.props;
       let visibleCount = 0;
 
       questionNodes.forEach(questionEl => {
+        const matchesSelected = !selectedQuestionId ||
+          (questionEl.dataset.questionId || '').toLowerCase() === selectedQuestionId.toLowerCase();
         const matchesCategory = categoryValue === 'all' || questionEl.dataset.categoryId === categoryValue;
         const matchesClassification = classificationValue === 'all' || questionEl.dataset.classification === classificationValue;
 
@@ -333,7 +339,9 @@ const { categories } = Astro.props;
         const matchesTimeframe = timeframeValue === 'all' || questionTimeframes.includes(timeframeValue);
         const matchesFraming = framingValue === 'all' || questionFramings.includes(framingValue);
 
-        const visible = matchesCategory && matchesClassification && matchesFinancial && matchesTimeframe && matchesFraming;
+        const visible = selectedQuestionId
+          ? matchesSelected
+          : matchesCategory && matchesClassification && matchesFinancial && matchesTimeframe && matchesFraming;
 
         if (visible) {
           questionEl.style.display = '';
@@ -370,6 +378,7 @@ const { categories } = Astro.props;
       framingFilter.value = 'all';
       sortSelect.value = 'question-id';
       questionJumpSelect.value = '';
+      selectedQuestionId = '';
       applyFiltersAndSort();
     }
 
@@ -380,7 +389,7 @@ const { categories } = Astro.props;
           .filter(Boolean)
       )).sort((a, b) => a.localeCompare(b));
 
-      questionJumpSelect.innerHTML = '<option value=\"\">Select question...</option>';
+      questionJumpSelect.innerHTML = '<option value=\"\">Show all questions</option>';
       ids.forEach(id => {
         const option = document.createElement('option');
         option.value = id;
@@ -390,7 +399,12 @@ const { categories } = Astro.props;
     }
 
     function jumpToQuestion(questionId) {
-      if (!questionId) return;
+      selectedQuestionId = questionId;
+      applyFiltersAndSort();
+
+      if (!questionId) {
+        return;
+      }
 
       const targetCard = questionNodes.find(
         node => (node.dataset.questionId || '').toLowerCase() === questionId.toLowerCase()
@@ -400,18 +414,13 @@ const { categories } = Astro.props;
         return;
       }
 
-      if (targetCard.style.display === 'none') {
-        categoryFilter.value = 'all';
-        classificationFilter.value = 'all';
-        financialFilter.value = 'all';
-        timeframeFilter.value = 'all';
-        framingFilter.value = 'all';
-        sortSelect.value = 'question-id';
-        applyFiltersAndSort();
-      }
-
       setQuestionExpanded(targetCard, true);
       targetCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      targetCard.classList.add('ring', 'ring-sky-400');
+      window.setTimeout(() => {
+        targetCard.classList.remove('ring', 'ring-sky-400');
+      }, 1200);
     }
 
     function toggleAll() {
