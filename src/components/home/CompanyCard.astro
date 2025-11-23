@@ -5,6 +5,7 @@
  */
 
 import type { CompanyMetrics } from '../../types/metrics';
+import type { SectorCode } from '../../types/questions';
 import { formatNumber, formatPercentage } from '../../utils/formatters';
 
 interface Props {
@@ -12,13 +13,15 @@ interface Props {
   year: number;
   companyName: string;
   version: string;
+  sector?: SectorCode;
 }
 
 const {
   company,
   year,
   companyName,
-  version
+  version,
+  sector
 } = Astro.props;
 
 const totalSnippets = company.total_snippets || 0;
@@ -35,6 +38,15 @@ const financialPct = {
   full: totalSnippets ? (financialFull / totalSnippets) * 100 : 0,
   partial: totalSnippets ? (financialPartial / totalSnippets) * 100 : 0
 };
+
+const sectorLabelMap: Record<SectorCode | 'ALL', { short: string; long: string }> = {
+  F: { short: 'F', long: 'Fertilizers' },
+  P: { short: 'P', long: 'Crop protection' },
+  PF: { short: 'PF', long: 'Fertilizers + Crop protection' },
+  ALL: { short: 'ALL', long: 'All sectors' }
+};
+
+const sectorInfo = sector ? sectorLabelMap[sector] || sectorLabelMap.ALL : sectorLabelMap.ALL;
 ---
 
 <div class="surface flex flex-col h-full p-6 transition-transform duration-200 hover:-translate-y-1">
@@ -45,6 +57,12 @@ const financialPct = {
       </div>
       <p class="text-sm text-slate-400">Calendar Year {company.fiscal_year}</p>
       <p class="text-xs text-slate-500 uppercase tracking-wide">Team-reviewed</p>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="px-2 py-0.5 rounded-full border border-slate-700 bg-slate-900/70 text-[11px] font-semibold uppercase tracking-wide text-slate-200">
+        {sectorInfo.short}
+      </span>
+      <span class="text-[11px] text-slate-400">{sectorInfo.long}</span>
     </div>
   </div>
 

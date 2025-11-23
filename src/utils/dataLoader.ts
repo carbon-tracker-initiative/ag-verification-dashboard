@@ -13,12 +13,62 @@ import type {
   Snippet,
   Classification
 } from '../types/analysis';
-import { normalizeSectorCode } from '../types/questions';
+import { normalizeSectorCode, SectorCode } from '../types/questions';
 
 // Re-export Question type for backward compatibility
 export type { Question };
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
+
+function normalizeCompanyKey(name: string): string {
+  return name
+    .toUpperCase()
+    .replace(/[.,]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+const sectorOverrides: Record<string, SectorCode> = {
+  // Pesticide / crop protection manufacturers
+  'SYNGENTA': 'P',
+  'UPL': 'P',
+  'UPL LTD': 'P',
+  'FMC CORP': 'P',
+  'FMC': 'P',
+  'ADAMA LTD': 'P',
+  'ADAMA': 'P',
+  'TESSENDERLO GROUP NV': 'P',
+  'TESSENDERLO GROUP': 'P',
+  'ZHEJIANG XINAN CHEMICAL INDUSTRIAL GROUP CO LTD': 'P',
+  'CORTEVA': 'P',
+  'BAYER CROPSCIENCE': 'P',
+  'BASF': 'P',
+
+  // Fertiliser manufacturers
+  'NUTRIEN': 'F',
+  'NUTRIEN LTD': 'F',
+  'YARA INTERNATIONAL ASA': 'F',
+  'THE MOSAIC CO': 'F',
+  'MOSAIC': 'F',
+  'CF INDUSTRIES HOLDINGS INC': 'F',
+  'ICL GROUP LTD': 'F',
+  'SOCIEDAD QUIMICA Y MINERA DE CHILE SA': 'F',
+  'SQM': 'F',
+  'PHOSAGRO PJSC': 'F',
+  'PHOSAGRO': 'F',
+  'GRUPA AZOTY SA': 'F',
+  'SCOTTS MIRACLE-GRO CO': 'F',
+  'FERTIGLOBE PLC': 'F',
+  'SABIC AGRI-NUTRIENTS CO': 'F'
+};
+
+function applySectorOverride(company: string, current: SectorCode): SectorCode {
+  if (current !== 'ALL') {
+    return current;
+  }
+  const key = normalizeCompanyKey(company);
+  return sectorOverrides[key] || current;
+}
 
 /**
  * Parse filename to extract metadata
@@ -670,8 +720,11 @@ async function loadMergedCompanyData(resultsPath: string): Promise<CompanyYearDa
         year,
         version: 'merged',
         model: metadata.merger_model || 'merged-model',
-        sector: normalizeSectorCode(
-          analysisResult.metadata?.company_sector as string | undefined
+        sector: applySectorOverride(
+          company,
+          normalizeSectorCode(
+            analysisResult.metadata?.company_sector as string | undefined
+          )
         ),
         verified: analysisResult,
         hasComparison: false,
@@ -741,8 +794,11 @@ async function loadMergedReviewedData(resultsPath: string): Promise<CompanyYearD
         year,
         version: 'merged-reviewed',
         model: metadata.merger_model || 'merged-model',
-        sector: normalizeSectorCode(
-          analysisResult.metadata?.company_sector as string | undefined
+        sector: applySectorOverride(
+          company,
+          normalizeSectorCode(
+            analysisResult.metadata?.company_sector as string | undefined
+          )
         ),
         verified: analysisResult,
         hasComparison: false,
@@ -824,8 +880,11 @@ function buildTeamReviewedCompanyYear(entry: any): CompanyYearData {
   verified.version = entry.version || 'team-reviewed';
   verified.model_used = verified.model_used || entry.verified?.model_used || 'team-reviewed';
 
-  const sector = normalizeSectorCode(
-    verified.metadata?.company_sector as string | undefined
+  const sector = applySectorOverride(
+    entry.company,
+    normalizeSectorCode(
+      verified.metadata?.company_sector as string | undefined
+    )
   );
 
   return {

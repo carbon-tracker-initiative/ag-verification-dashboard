@@ -117,6 +117,14 @@ const breadcrumbItems = [
   { label: displayCompanyName, href: '#' },
   { label: `${year} ${version}`, href: '#', current: true }
 ];
+
+const sectorLabelMap: Record<string, { short: string; long: string }> = {
+  F: { short: 'F', long: 'Fertilizers' },
+  P: { short: 'P', long: 'Crop protection' },
+  PF: { short: 'PF', long: 'Fertilizers + Crop protection' },
+  ALL: { short: 'ALL', long: 'All sectors' }
+};
+const sectorInfo = sectorLabelMap[(companyData.sector || 'ALL').toUpperCase()] || sectorLabelMap.ALL;
 ---
 
 <Layout title={`${displayCompanyName} ${year} ${version} - Analysis`}>
@@ -135,6 +143,9 @@ const breadcrumbItems = [
                 {displayCompanyName} - Year {year}
               </h1>
               <VersionBadge version={version} isLatest={isLatestVersion} size="md" />
+              <span class="px-2.5 py-1 rounded-full border border-slate-600 bg-slate-900/70 text-xs font-semibold uppercase tracking-wide text-slate-100">
+                {sectorInfo.short}
+              </span>
             </div>
             <div class="flex items-center gap-4 text-sm text-slate-400 flex-wrap">
               <span>Model: {companyData.model}</span>
@@ -142,6 +153,10 @@ const breadcrumbItems = [
               <span>{totalQuestionsAnalyzed} questions analyzed</span>
               <span aria-hidden="true">&bull;</span>
               <span>{companyMetrics.total_snippets} evidence snippets</span>
+              <span aria-hidden="true">&bull;</span>
+              <span class="text-xs text-slate-400">
+                Sector: <span class="text-slate-200 font-semibold">{sectorInfo.long}</span>
+              </span>
             </div>
 
             <!-- Version Selector -->
