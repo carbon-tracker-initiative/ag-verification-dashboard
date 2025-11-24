@@ -183,7 +183,7 @@ const { categories } = Astro.props;
   const framingFilter = document.getElementById('framing-filter');
   const sortSelect = document.getElementById('sort-select');
   const questionJumpSelect = document.getElementById('question-jump');
-  const questionJumpTextFullSelect = document.getElementById('question-jump-text-full');
+    const questionJumpTextFullSelect = document.getElementById('question-jump-text-full');
   const resetButton = document.getElementById('reset-filters');
   const toggleAllButton = document.getElementById('toggle-all');
   const activeFiltersDiv = document.getElementById('active-filters');
@@ -425,6 +425,7 @@ const { categories } = Astro.props;
         const option = document.createElement('option');
         option.value = item.id;
         option.textContent = item.text || item.id;
+        option.title = item.text || item.id;
         questionJumpTextFullSelect.appendChild(option);
       });
     }
