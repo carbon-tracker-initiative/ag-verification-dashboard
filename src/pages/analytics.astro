@@ -262,7 +262,13 @@ allCompanyData.forEach(bundle => {
       };
 
     const snippets = Array.isArray(question.disclosures) ? question.disclosures : [];
-    const classification = snippets.length > 0 ? 'Disclosure' : 'No Disclosure';
+    const hasDisclosure = snippets.some(snippet => {
+      const collapsed = collapseClassification(snippet.classification);
+      const quote = (snippet.quote || '').toLowerCase();
+      const looksLikeNoDisclosure = quote.includes('no disclosure found');
+      return collapsed === 'Disclosure' && !looksLikeNoDisclosure;
+    });
+    const classification: 'Disclosure' | 'No Disclosure' = hasDisclosure ? 'Disclosure' : 'No Disclosure';
 
     existing.entries.push({
       company,
@@ -289,6 +295,11 @@ const questionEvidence = Array.from(questionEvidenceMap.entries())
     entries: data.entries.sort((a, b) => a.company.localeCompare(b.company) || b.year - a.year)
   }))
   .sort((a, b) => a.question_id.localeCompare(b.question_id));
+
+const qePayload = JSON.stringify(questionEvidence)
+  .replace(/</g, '\\u003c')
+  .replace(/-->/g, '--\\u003e')
+  .replace(/<\/script/gi, '<\\\\/script');
 ---
 
 <Layout title="Analytics - Cross-Company Insights">
@@ -493,27 +504,35 @@ const questionEvidence = Array.from(questionEvidenceMap.entries())
                   Pick a question ID to see how every company addressed it, including cases with no disclosure.
                 </p>
               </div>
-              <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
-                <label class="text-xs uppercase tracking-wide text-slate-400">Question ID</label>
-                <select
-                  id="qe-select"
-                  class="bg-slate-900/80 border border-slate-700 text-slate-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent min-w-[220px]"
-                >
-                  <option value="">Select a question...</option>
-                </select>
+              <div class="flex flex-col sm:flex-row gap-4 sm:items-end">
+                <div class="flex flex-col gap-2">
+                  <label class="text-xs uppercase tracking-wide text-slate-400">Question ID</label>
+                  <select
+                    id="qe-select-id"
+                    class="bg-slate-900/80 border border-slate-700 text-slate-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent min-w-[200px]"
+                  >
+                    <option value="">Select a question...</option>
+                  </select>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label class="text-xs uppercase tracking-wide text-slate-400">Question</label>
+                  <select
+                    id="qe-select-text"
+                    class="bg-slate-900/80 border border-slate-700 text-slate-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent min-w-[260px]"
+                  >
+                    <option value="">Select a question...</option>
+                  </select>
+                </div>
               </div>
             </div>
 
             <div id="qe-summary" class="text-sm text-slate-400"></div>
+            <div id="qe-question-text" class="text-sm text-slate-200"></div>
 
             <div id="qe-results" class="space-y-4"></div>
           </div>
 
-          <script
-            id="qe-data"
-            type="application/json"
-            data-payload={encodeURIComponent(JSON.stringify(questionEvidence).replace(/</g, '\\u003c'))}
-          ></script>
+          <script id="qe-data" type="application/json" data-base64={Buffer.from(qePayload, 'utf-8').toString('base64')} is:inline></script>
         </div>
       </div>
     </section>
@@ -524,11 +543,11 @@ const questionEvidence = Array.from(questionEvidenceMap.entries())
   document.addEventListener('DOMContentLoaded', () => {
     const navTabs = document.querySelectorAll<HTMLButtonElement>('.nav-tab');
     const tabContents = document.querySelectorAll<HTMLElement>('.tab-content');
-    const qeSelect = document.getElementById('qe-select') as HTMLSelectElement | null;
+    const qeSelectId = document.getElementById('qe-select-id') as HTMLSelectElement | null;
+    const qeSelectText = document.getElementById('qe-select-text') as HTMLSelectElement | null;
     const qeResults = document.getElementById('qe-results');
     const qeSummary = document.getElementById('qe-summary');
-    const qeDataScript = document.getElementById('qe-data') as HTMLScriptElement | null;
-
+    const qeQuestionText = document.getElementById('qe-question-text');
     let evidenceData: Array<{
       question_id: string;
       question_text: string;
@@ -542,9 +561,12 @@ const questionEvidence = Array.from(questionEvidenceMap.entries())
       }>;
     }> = [];
 
-    if (qeDataScript?.dataset?.payload) {
+    const qeScript = document.getElementById('qe-data');
+    const base64 = qeScript?.dataset?.base64;
+    if (base64) {
       try {
-        evidenceData = JSON.parse(decodeURIComponent(qeDataScript.dataset.payload));
+        const json = atob(base64);
+        evidenceData = JSON.parse(json);
       } catch (err) {
         console.error('Failed to parse Question Explorer data', err);
       }
@@ -553,19 +575,22 @@ const questionEvidence = Array.from(questionEvidenceMap.entries())
     const evidenceMap = new Map(evidenceData.map(item => [item.question_id, item]));
 
     function renderQuestion(questionId: string) {
-      if (!qeResults || !qeSummary) return;
+      if (!qeResults || !qeSummary || !qeQuestionText) return;
       qeResults.innerHTML = '';
       if (!questionId) {
         qeSummary.textContent = 'Select a question to view cross-company evidence.';
+        qeQuestionText.textContent = '';
         return;
       }
       const record = evidenceMap.get(questionId);
       if (!record) {
         qeSummary.textContent = 'No data available for this question.';
+        qeQuestionText.textContent = '';
         return;
       }
 
-      qeSummary.textContent = `${record.entries.length} company-year analyses for ${questionId} — ${record.question_text}`;
+      qeSummary.textContent = `${record.entries.length} company-year analyses for ${questionId}`;
+      qeQuestionText.textContent = record.question_text;
 
       record.entries.forEach(entry => {
         const card = document.createElement('div');
@@ -633,13 +658,30 @@ const questionEvidence = Array.from(questionEvidenceMap.entries())
       });
     }
 
-    if (qeSelect) {
-      const opts = ['<option value=\"\">Select a question...</option>'];
+    function syncSelects(questionId: string) {
+      if (qeSelectId && qeSelectId.value !== questionId) qeSelectId.value = questionId;
+      if (qeSelectText && qeSelectText.value !== questionId) qeSelectText.value = questionId;
+    }
+
+    if (qeSelectId && qeSelectText) {
+      const idOpts = ['<option value=\"\">Select a question...</option>'];
+      const textOpts = ['<option value=\"\">Select a question...</option>'];
       evidenceData.forEach(item => {
-        opts.push(`<option value=\"${item.question_id}\">${item.question_id} — ${item.question_text}</option>`);
+        idOpts.push(`<option value=\"${item.question_id}\">${item.question_id}</option>`);
+        const label = item.question_text.length > 160 ? item.question_text.slice(0, 157) + '…' : item.question_text;
+        textOpts.push(`<option value=\"${item.question_id}\">${label}</option>`);
       });
-      qeSelect.innerHTML = opts.join('');
-      qeSelect.addEventListener('change', () => renderQuestion(qeSelect.value));
+      qeSelectId.innerHTML = idOpts.join('');
+      qeSelectText.innerHTML = textOpts.join('');
+
+      qeSelectId.addEventListener('change', () => {
+        syncSelects(qeSelectId.value);
+        renderQuestion(qeSelectId.value);
+      });
+      qeSelectText.addEventListener('change', () => {
+        syncSelects(qeSelectText.value);
+        renderQuestion(qeSelectText.value);
+      });
     }
 
     const activeClasses = [
