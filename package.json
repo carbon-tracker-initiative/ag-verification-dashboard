@@ -14,6 +14,7 @@
     "export:excel": "node --import tsx src/scripts/generateExcelReport.ts",
     "export:excel-merged-reviewed-v1": "node --import tsx src/scripts/generateMergedReviewedReports.ts",
     "export:excel-merged-reviewed-v2": "python workflows/excel_merged_reviewed_v2/export_comprehensive.py",
+    "summarize:pages": "node --import tsx scripts/generatePageSummaries.ts",
     "ingest:team-review": "node --import tsx workflows/team_reviewed/processTeamReview.ts",
     "test": "node --import tsx tests/metricsCalculator.test.ts && node --import tsx tests/dataValidation.test.ts && node --import tsx tests/dataLoader.test.ts && node --import tsx tests/components.smoke.test.ts",
     "test:metrics": "node --import tsx tests/metricsCalculator.test.ts",
@@ -29,6 +30,7 @@
     "exceljs": "^4.4.0",
     "file-saver": "^2.0.5",
     "lucide-react": "^0.545.0",
+    "pdf-lib": "^1.17.1",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

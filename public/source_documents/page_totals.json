@@ -1,0 +1,202 @@
+{
+  "ADAMA": {
+    "2024": {
+      "totalPages": 358,
+      "files": {
+        "ADAMA-Annual-Report-2024.pdf": 287,
+        "ESG_report_2024.pdf": 71
+      }
+    }
+  },
+  "BASF": {
+    "2020": {
+      "totalPages": 324,
+      "files": {
+        "basf-report-2020-basf-ar20.pdf": 324
+      }
+    },
+    "2021": {
+      "totalPages": 290,
+      "files": {
+        "entire-basf-ar21.pdf": 290
+      }
+    },
+    "2022": {
+      "totalPages": 296,
+      "files": {
+        "entire-basf-ar22.pdf": 296
+      }
+    },
+    "2023": {
+      "totalPages": 0,
+      "files": {}
+    },
+    "2024": {
+      "totalPages": 536,
+      "files": {
+        "BASF ESG Report 2024.pdf": 477,
+        "BASF_in_South_America_Report_2024.pdf": 59
+      }
+    }
+  },
+  "Bayer": {
+    "2024": {
+      "totalPages": 0,
+      "files": {}
+    }
+  },
+  "CF Industries": {
+    "2024": {
+      "totalPages": 238,
+      "files": {
+        "2024_cf-industries_corporate-stewardship-report.pdf": 104,
+        "CF-Industries-2024-Annual-Report.pdf": 134
+      }
+    }
+  },
+  "Corteva": {
+    "2024": {
+      "totalPages": 306,
+      "files": {
+        "corteva_ars_2025.pdf": 178,
+        "Corteva_Our_2024_Impact_report.pdf": 128
+      }
+    }
+  },
+  "Fertiglobe": {
+    "2024": {
+      "totalPages": 328,
+      "files": {
+        "Fertiglobe-Annual-Report-24-vF.pdf": 256,
+        "Fertiglobe-AR2023-E-vF-Sustainability.pdf": 72
+      }
+    }
+  },
+  "FMC": {
+    "2024": {
+      "totalPages": 187,
+      "files": {
+        "FMC 2024 Sustainability Report_5.pdf": 83,
+        "FMC CORP files (ARS) Annual report to security holders (paper filing), for period end 31-Dec-24.pdf": 104
+      }
+    }
+  },
+  "Grupa Azoty": {
+    "2024": {
+      "totalPages": 462,
+      "files": {
+        "Azoty_Group_Directors_Report_2024.pdf": 277,
+        "Social and Environmental Annual Report 2024.pdf": 185
+      }
+    }
+  },
+  "ICL": {
+    "2024": {
+      "totalPages": 741,
+      "files": {
+        "ESG report 2024.pdf": 307,
+        "ICL-2024-20F-Report-FINAL.pdf": 434
+      }
+    }
+  },
+  "Mosaic": {
+    "2024": {
+      "totalPages": 196,
+      "files": {
+        "0-2024-Sustainability-Disclosure-and-GRI.pdf": 108,
+        "FINAL-2024_Annual_Report.pdf": 88
+      }
+    }
+  },
+  "Nutrien": {
+    "2024": {
+      "totalPages": 333,
+      "files": {
+        "2024 Nutrien Annual Report.pdf": 132,
+        "2024 Nutrien Sustainability Report.pdf": 80,
+        "MANAGEMENT’S DISCUSSION AND ANALYSIS 2024.pdf": 75,
+        "Nutrien Ltd. - Audited annual financial statements – English.pdf": 46
+      }
+    }
+  },
+  "PhosAgro": {
+    "2024": {
+      "totalPages": 221,
+      "files": {
+        "Annual integrated report 2024.pdf": 203,
+        "appendix annual report.pdf": 18
+      }
+    }
+  },
+  "SABIC Agri-Nutrients": {
+    "2024": {
+      "totalPages": 0,
+      "files": {}
+    }
+  },
+  "Scotts Miracle-Gro": {
+    "2024": {
+      "totalPages": 225,
+      "files": {
+        "SMG-2024-CR-Report-Final.pdf": 65,
+        "WEB FINAL- SMG ANNUAL REPORT (1).pdf": 160
+      }
+    }
+  },
+  "SQM": {
+    "2024": {
+      "totalPages": 582,
+      "files": {
+        "2024 SQM Sustainability Report.pdf": 366,
+        "ANÁLISIS RAZONADO DE LOS ESTADOS FINANCIEROS CONSOLIDADOS 2024.pdf": 18,
+        "ESTADOS FINANCIEROS CONSOLIDADOS - 2024.pdf": 196,
+        "Hechos Relevantes - Sociedad Quimica y Minera de Chile SA (SQM-CL) - Annual Report for period end 31-Dec-2024 (Spanish).pdf": 2
+      }
+    }
+  },
+  "Syngenta": {
+    "2024": {
+      "totalPages": 194,
+      "files": {
+        "Syngenta-AG-2024-Financial-Report.pdf": 96,
+        "Syngenta-AG-ESG-Report-2024.pdf": 57,
+        "Syngenta-AG-PSF - Handbook for CP & Seeds Field Crops.pdf": 41
+      }
+    }
+  },
+  "Tessenderlo": {
+    "2024": {
+      "totalPages": 294,
+      "files": {
+        "annual-report-2024-english.pdf": 294
+      }
+    }
+  },
+  "UPL": {
+    "2024": {
+      "totalPages": 309,
+      "files": {
+        "SUSTAINABILITY REPORT 2023-24_1.pdf": 79,
+        "UPL Ltd. (512070-IN) - Annual Report for period end 31-Mar-2025 (English).pdf": 225,
+        "Water Conservation Policy_Feb_2024.pdf": 5
+      }
+    }
+  },
+  "Xinan": {
+    "2024": {
+      "totalPages": 356,
+      "files": {
+        "Wynca group 2024 sustainability report.pdf": 59,
+        "Xinan Annual Report 2024.pdf": 297
+      }
+    }
+  },
+  "Yara": {
+    "2024": {
+      "totalPages": 345,
+      "files": {
+        "yara-integrated-report-2024.pdf": 345
+      }
+    }
+  }
+}

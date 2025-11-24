@@ -19,6 +19,8 @@ import { calculateCompanyMetrics, calculateQuestionMetrics } from '../../../util
 import { compareOriginalVsVerified } from '../../../utils/verificationComparison';
 import categoriesConfig from '../../../config/categories.json';
 import { formatNumber } from '../../../utils/formatters';
+import { readFile } from 'node:fs/promises';
+import { join } from 'node:path';
 
 // Add getStaticPaths for static site generation
 export async function getStaticPaths() {
@@ -35,6 +37,7 @@ export async function getStaticPaths() {
 
 // Get company, year, and version from URL
 const { company, year, version } = Astro.params;
+const versionLower = version.toLowerCase();
 
 if (!company || !year || !version) {
   return Astro.redirect('/');
@@ -122,9 +125,24 @@ const sectorLabelMap: Record<string, { short: string; long: string }> = {
   F: { short: 'F', long: 'Fertilizers' },
   P: { short: 'P', long: 'Crop protection' },
   PF: { short: 'PF', long: 'Fertilizers + Crop protection' },
-  ALL: { short: 'ALL', long: 'All sectors' }
+  ALL: { short: 'ALL', long: 'All sectors (Fertilizers and Crop Protection)' }
 };
 const sectorInfo = sectorLabelMap[(companyData.sector || 'ALL').toUpperCase()] || sectorLabelMap.ALL;
+
+async function loadPageTotals(): Promise<Record<string, Record<string, { totalPages: number }>>> {
+  try {
+    const path = join(process.cwd(), 'public', 'source_documents', 'page_totals.json');
+    const raw = await readFile(path, 'utf-8');
+    return JSON.parse(raw);
+  } catch (error) {
+    console.warn('Page totals file not found or unreadable:', error);
+    return {};
+  }
+}
+
+const pageTotals = await loadPageTotals();
+const totalPages = pageTotals[companyData.company]?.[String(companyData.year)]?.totalPages ?? null;
+const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
 ---
 
 <Layout title={`${displayCompanyName} ${year} ${version} - Analysis`}>
@@ -142,10 +160,19 @@ const sectorInfo = sectorLabelMap[(companyData.sector || 'ALL').toUpperCase()] |
               <h1 class="text-3xl font-bold text-slate-50 tracking-tight">
                 {displayCompanyName} - Year {year}
               </h1>
-              <VersionBadge version={version} isLatest={isLatestVersion} size="md" />
-              <span class="px-2.5 py-1 rounded-full border border-slate-600 bg-slate-900/70 text-xs font-semibold uppercase tracking-wide text-slate-100">
-                {sectorInfo.short}
-              </span>
+              {versionLower !== 'team-reviewed' && (
+                <VersionBadge version={version} isLatest={isLatestVersion} size="md" />
+              )}
+              {versionLower === 'team-reviewed' && isLatestVersion && (
+                <span class="inline-flex items-center rounded-md bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-800 ring-1 ring-inset ring-blue-600/20">
+                  Latest
+                </span>
+              )}
+              {sectorInfo.short !== 'ALL' && (
+                <span class="px-2.5 py-1 rounded-full border border-slate-600 bg-slate-900/70 text-xs font-semibold uppercase tracking-wide text-slate-100">
+                  {sectorInfo.short}
+                </span>
+              )}
             </div>
             <div class="flex items-center gap-4 text-sm text-slate-400 flex-wrap">
               <span>Model: {companyData.model}</span>
@@ -157,6 +184,14 @@ const sectorInfo = sectorLabelMap[(companyData.sector || 'ALL').toUpperCase()] |
               <span class="text-xs text-slate-400">
                 Sector: <span class="text-slate-200 font-semibold">{sectorInfo.long}</span>
               </span>
+              {totalPagesDisplay && (
+                <>
+                  <span aria-hidden="true">&bull;</span>
+                  <span class="text-xs text-slate-400">
+                    Source pages: <span class="text-slate-200 font-semibold">{totalPagesDisplay}</span>
+                  </span>
+                </>
+              )}
             </div>
 
             <!-- Version Selector -->
@@ -203,6 +238,11 @@ const sectorInfo = sectorLabelMap[(companyData.sector || 'ALL').toUpperCase()] |
                 {companyMetrics.total_snippets}
               </div>
               <div class="text-xs text-slate-500 uppercase tracking-wide mt-2">Total Evidence Snippets</div>
+              {totalPagesDisplay && (
+                <div class="text-[11px] text-slate-400 mt-1">
+                  From {totalPagesDisplay} pages
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -277,15 +317,17 @@ const sectorInfo = sectorLabelMap[(companyData.sector || 'ALL').toUpperCase()] |
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
           <h2 class="text-lg font-semibold text-slate-200">Overview</h2>
         </div>
-        <SummaryDashboard metrics={companyMetrics} />
+        <SummaryDashboard metrics={companyMetrics} totalPages={totalPages ?? undefined} />
       </section>
 
-      <section class="mb-8">
-        <ComparisonToggle
-          hasComparison={companyData.hasComparison}
-          verificationMetrics={verificationMetrics}
-        />
-      </section>
+      {companyData.hasComparison && (
+        <section class="mb-8">
+          <ComparisonToggle
+            hasComparison={companyData.hasComparison}
+            verificationMetrics={verificationMetrics}
+          />
+        </section>
+      )}
 
       <!-- Filters and Questions -->
       <section>
