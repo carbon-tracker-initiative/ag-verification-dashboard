@@ -15,9 +15,9 @@ const { categories } = Astro.props;
 ---
 
 <div class="surface sticky top-20 z-40 border border-slate-800/70 shadow-xl p-5">
-  <div class="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between w-full">
-    <!-- Left Side: Filters -->
-    <div class="flex flex-col lg:flex-row flex-wrap gap-3 flex-1 w-full">
+  <div class="flex flex-col gap-4 w-full">
+    <!-- Row 1 -->
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
       <div class="flex-1 min-w-[200px]">
         <label for="category-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
           Category
@@ -42,9 +42,7 @@ const { categories } = Astro.props;
           class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
         >
           <option value="all">All Classifications</option>
-          <option value="FULL_DISCLOSURE">Full Disclosure</option>
-          <option value="PARTIAL">Partial</option>
-          <option value="UNCLEAR">Unclear</option>
+          <option value="FULL_DISCLOSURE">Disclosure</option>
           <option value="NO_DISCLOSURE">No Disclosure</option>
         </select>
       </div>
@@ -97,8 +95,8 @@ const { categories } = Astro.props;
       </div>
     </div>
 
-    <!-- Right Side: Sort and Actions -->
-    <div class="flex gap-3 items-end">
+    <!-- Row 2 -->
+    <div class="flex flex-col sm:flex-row gap-3 sm:items-end">
       <div class="min-w-[180px]">
         <label for="sort-select" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
           Sort By
@@ -116,9 +114,9 @@ const { categories } = Astro.props;
         </select>
       </div>
 
-      <div class="min-w-[180px]">
+      <div class="min-w-[200px]">
         <label for="question-jump" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
-          Jump to Question
+          Jump to Question (ID)
         </label>
         <select
           id="question-jump"
@@ -128,21 +126,35 @@ const { categories } = Astro.props;
         </select>
       </div>
 
-      <button
-        id="reset-filters"
-        class="px-4 py-2 text-sm font-medium text-slate-200 bg-slate-800/70 hover:bg-slate-700/80 rounded-lg transition-colors border border-slate-700"
-        title="Reset all filters"
-      >
-        Reset
-      </button>
+      <div class="min-w-[260px]">
+        <label for="question-jump-text" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
+          Jump to Question (Text)
+        </label>
+        <select
+          id="question-jump-text"
+          class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
+        >
+          <option value="">Show all questions</option>
+        </select>
+      </div>
 
-      <button
-        id="toggle-all"
-        class="px-4 py-2 text-sm font-medium text-sky-200 bg-sky-600/20 hover:bg-sky-500/30 rounded-lg transition-colors border border-sky-500/40"
-        title="Expand or collapse all questions"
-      >
-        Expand All
-      </button>
+      <div class="flex gap-3">
+        <button
+          id="reset-filters"
+          class="px-4 py-2 text-sm font-medium text-slate-200 bg-slate-800/70 hover:bg-slate-700/80 rounded-lg transition-colors border border-slate-700"
+          title="Reset all filters"
+        >
+          Reset
+        </button>
+
+        <button
+          id="toggle-all"
+          class="px-4 py-2 text-sm font-medium text-sky-200 bg-sky-600/20 hover:bg-sky-500/30 rounded-lg transition-colors border border-sky-500/40"
+          title="Expand or collapse all questions"
+        >
+          Expand All
+        </button>
+      </div>
     </div>
   </div>
 
@@ -164,16 +176,17 @@ const { categories } = Astro.props;
     }
 
     const categoryFilter = document.getElementById('category-filter');
-    const classificationFilter = document.getElementById('classification-filter');
-    const financialFilter = document.getElementById('financial-filter');
-    const timeframeFilter = document.getElementById('timeframe-filter');
-    const framingFilter = document.getElementById('framing-filter');
-    const sortSelect = document.getElementById('sort-select');
-    const questionJumpSelect = document.getElementById('question-jump');
-    const resetButton = document.getElementById('reset-filters');
-    const toggleAllButton = document.getElementById('toggle-all');
-    const activeFiltersDiv = document.getElementById('active-filters');
-    const resultsCountDiv = document.getElementById('results-count');
+  const classificationFilter = document.getElementById('classification-filter');
+  const financialFilter = document.getElementById('financial-filter');
+  const timeframeFilter = document.getElementById('timeframe-filter');
+  const framingFilter = document.getElementById('framing-filter');
+  const sortSelect = document.getElementById('sort-select');
+  const questionJumpSelect = document.getElementById('question-jump');
+  const questionJumpTextSelect = document.getElementById('question-jump-text');
+  const resetButton = document.getElementById('reset-filters');
+  const toggleAllButton = document.getElementById('toggle-all');
+  const activeFiltersDiv = document.getElementById('active-filters');
+  const resultsCountDiv = document.getElementById('results-count');
 
     if (!(categoryFilter instanceof HTMLSelectElement) ||
         !(classificationFilter instanceof HTMLSelectElement) ||
@@ -182,6 +195,7 @@ const { categories } = Astro.props;
         !(framingFilter instanceof HTMLSelectElement) ||
         !(sortSelect instanceof HTMLSelectElement) ||
         !(questionJumpSelect instanceof HTMLSelectElement) ||
+        !(questionJumpTextSelect instanceof HTMLSelectElement) ||
         !(resetButton instanceof HTMLButtonElement) ||
         !(toggleAllButton instanceof HTMLButtonElement)) {
       return;
@@ -378,6 +392,7 @@ const { categories } = Astro.props;
       framingFilter.value = 'all';
       sortSelect.value = 'question-id';
       questionJumpSelect.value = '';
+      questionJumpTextSelect.value = '';
       selectedQuestionId = '';
       applyFiltersAndSort();
     }
@@ -389,12 +404,28 @@ const { categories } = Astro.props;
           .filter(Boolean)
       )).sort((a, b) => a.localeCompare(b));
 
+      const texts = questionNodes
+        .map(node => ({
+          id: node.dataset.questionId || '',
+          text: node.dataset.questionText || ''
+        }))
+        .filter(item => item.id);
+
       questionJumpSelect.innerHTML = '<option value=\"\">Show all questions</option>';
       ids.forEach(id => {
         const option = document.createElement('option');
         option.value = id;
         option.textContent = id;
         questionJumpSelect.appendChild(option);
+      });
+
+      questionJumpTextSelect.innerHTML = '<option value=\"\">Show all questions</option>';
+      texts.forEach(item => {
+        const label = item.text.length > 150 ? item.text.slice(0, 147) + '…' : item.text;
+        const option = document.createElement('option');
+        option.value = item.id;
+        option.textContent = label || item.id;
+        questionJumpTextSelect.appendChild(option);
       });
     }
 
@@ -486,6 +517,7 @@ const { categories } = Astro.props;
     framingFilter.addEventListener('change', applyFiltersAndSort);
     sortSelect.addEventListener('change', applyFiltersAndSort);
     questionJumpSelect.addEventListener('change', () => jumpToQuestion(questionJumpSelect.value));
+    questionJumpTextSelect.addEventListener('change', () => jumpToQuestion(questionJumpTextSelect.value));
     resetButton.addEventListener('click', resetFilters);
     toggleAllButton.addEventListener('click', toggleAll);
 
