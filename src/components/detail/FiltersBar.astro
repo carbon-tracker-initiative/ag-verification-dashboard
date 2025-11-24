@@ -182,7 +182,7 @@ const { categories } = Astro.props;
   const timeframeFilter = document.getElementById('timeframe-filter');
   const framingFilter = document.getElementById('framing-filter');
   const sortSelect = document.getElementById('sort-select');
-  const questionJumpSelect = document.getElementById('question-jump');
+    const questionJumpSelect = document.getElementById('question-jump');
     const questionJumpTextFullSelect = document.getElementById('question-jump-text-full');
   const resetButton = document.getElementById('reset-filters');
   const toggleAllButton = document.getElementById('toggle-all');
@@ -420,8 +420,12 @@ const { categories } = Astro.props;
         questionJumpSelect.appendChild(option);
       });
 
+      // Deduplicate by id to avoid repeats when same question text appears multiple times
+      const seen = new Set<string>();
       questionJumpTextFullSelect.innerHTML = '<option value=\"\">Show all questions</option>';
       texts.forEach(item => {
+        if (seen.has(item.id)) return;
+        seen.add(item.id);
         const option = document.createElement('option');
         option.value = item.id;
         option.textContent = item.text || item.id;
