@@ -13,7 +13,8 @@ import type {
   Snippet,
   Classification
 } from '../types/analysis';
-import { normalizeSectorCode, SectorCode } from '../types/questions';
+import type { SectorCode } from '../types/questions';
+import { normalizeSectorCode } from '../types/questions';
 
 // Re-export Question type for backward compatibility
 export type { Question };

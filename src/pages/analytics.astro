@@ -235,6 +235,60 @@ const binaryDisclosureData = {
   categoryFramingFinancial,
   categoryShare
 };
+
+type QuestionEntry = {
+  company: string;
+  year: number;
+  version: string;
+  classification: 'Disclosure' | 'No Disclosure';
+  snippet_count: number;
+  snippets: Array<{ id: string; quote: string; source?: string }>;
+};
+
+const questionEvidenceMap = new Map<string, { question_text: string; category: string; entries: QuestionEntry[] }>();
+
+allCompanyData.forEach(bundle => {
+  const company = bundle.company;
+  const year = bundle.year;
+  const version = bundle.version;
+
+  bundle.verified.analysis_results.forEach(question => {
+    const key = question.question_id;
+    const existing =
+      questionEvidenceMap.get(key) || {
+        question_text: question.question_text,
+        category: question.category || 'Unknown',
+        entries: []
+      };
+
+    const snippets = Array.isArray(question.disclosures) ? question.disclosures : [];
+    const classification = snippets.length > 0 ? 'Disclosure' : 'No Disclosure';
+
+    existing.entries.push({
+      company,
+      year,
+      version,
+      classification,
+      snippet_count: snippets.length,
+      snippets: snippets.map(snippet => ({
+        id: snippet.snippet_id || '',
+        quote: snippet.quote || '',
+        source: snippet.source || ''
+      }))
+    });
+
+    questionEvidenceMap.set(key, existing);
+  });
+});
+
+const questionEvidence = Array.from(questionEvidenceMap.entries())
+  .map(([question_id, data]) => ({
+    question_id,
+    question_text: data.question_text,
+    category: data.category,
+    entries: data.entries.sort((a, b) => a.company.localeCompare(b.company) || b.year - a.year)
+  }))
+  .sort((a, b) => a.question_id.localeCompare(b.question_id));
 ---
 
 <Layout title="Analytics - Cross-Company Insights">
@@ -384,6 +438,16 @@ const binaryDisclosureData = {
             </svg>
             Category Deep Dive
           </button>
+          <button
+            class="nav-tab flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition-all duration-200 border border-transparent text-slate-400 hover:text-slate-200 hover:border-slate-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-500/60"
+            data-target="question-explorer"
+            aria-pressed="false"
+          >
+            <svg class="w-4 h-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-2m3-5h-8m0 0l3-3m-3 3l3 3"></path>
+            </svg>
+            Question Explorer
+          </button>
         </div>
       </div>
 
@@ -419,6 +483,38 @@ const binaryDisclosureData = {
         <div id="tab-categories" class="tab-content hidden">
           <CategoryDeepDive crossCompanyMetrics={crossCompanyMetrics} />
         </div>
+
+        <div id="tab-question-explorer" class="tab-content hidden">
+          <div class="surface border border-slate-700/60 p-6 rounded-2xl space-y-6">
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div>
+                <h2 class="text-xl font-semibold text-slate-100">Question Explorer</h2>
+                <p class="text-sm text-slate-400 mt-1">
+                  Pick a question ID to see how every company addressed it, including cases with no disclosure.
+                </p>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3 sm:items-center">
+                <label class="text-xs uppercase tracking-wide text-slate-400">Question ID</label>
+                <select
+                  id="qe-select"
+                  class="bg-slate-900/80 border border-slate-700 text-slate-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent min-w-[220px]"
+                >
+                  <option value="">Select a question...</option>
+                </select>
+              </div>
+            </div>
+
+            <div id="qe-summary" class="text-sm text-slate-400"></div>
+
+            <div id="qe-results" class="space-y-4"></div>
+          </div>
+
+          <script
+            id="qe-data"
+            type="application/json"
+            data-payload={encodeURIComponent(JSON.stringify(questionEvidence).replace(/</g, '\\u003c'))}
+          ></script>
+        </div>
       </div>
     </section>
   </main>
@@ -428,6 +524,123 @@ const binaryDisclosureData = {
   document.addEventListener('DOMContentLoaded', () => {
     const navTabs = document.querySelectorAll<HTMLButtonElement>('.nav-tab');
     const tabContents = document.querySelectorAll<HTMLElement>('.tab-content');
+    const qeSelect = document.getElementById('qe-select') as HTMLSelectElement | null;
+    const qeResults = document.getElementById('qe-results');
+    const qeSummary = document.getElementById('qe-summary');
+    const qeDataScript = document.getElementById('qe-data') as HTMLScriptElement | null;
+
+    let evidenceData: Array<{
+      question_id: string;
+      question_text: string;
+      entries: Array<{
+        company: string;
+        year: number;
+        version: string;
+        classification: string;
+        snippet_count: number;
+        snippets: Array<{ id: string; quote: string; source?: string }>;
+      }>;
+    }> = [];
+
+    if (qeDataScript?.dataset?.payload) {
+      try {
+        evidenceData = JSON.parse(decodeURIComponent(qeDataScript.dataset.payload));
+      } catch (err) {
+        console.error('Failed to parse Question Explorer data', err);
+      }
+    }
+
+    const evidenceMap = new Map(evidenceData.map(item => [item.question_id, item]));
+
+    function renderQuestion(questionId: string) {
+      if (!qeResults || !qeSummary) return;
+      qeResults.innerHTML = '';
+      if (!questionId) {
+        qeSummary.textContent = 'Select a question to view cross-company evidence.';
+        return;
+      }
+      const record = evidenceMap.get(questionId);
+      if (!record) {
+        qeSummary.textContent = 'No data available for this question.';
+        return;
+      }
+
+      qeSummary.textContent = `${record.entries.length} company-year analyses for ${questionId} — ${record.question_text}`;
+
+      record.entries.forEach(entry => {
+        const card = document.createElement('div');
+        card.className = 'surface border border-slate-800 rounded-xl p-4';
+
+        const header = document.createElement('div');
+        header.className = 'flex flex-wrap items-center gap-3 justify-between';
+
+        const left = document.createElement('div');
+        left.className = 'text-sm text-slate-200';
+        left.textContent = `${entry.company} — ${entry.year} (${entry.version})`;
+
+        const badge = document.createElement('span');
+        badge.className =
+          entry.classification === 'Disclosure'
+            ? 'px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-200 text-xs font-semibold'
+            : 'px-2 py-0.5 rounded-full bg-slate-700 text-slate-200 text-xs font-semibold';
+        badge.textContent = entry.classification;
+
+        const count = document.createElement('span');
+        count.className = 'text-xs text-slate-400';
+        count.textContent = `${entry.snippet_count} snippet${entry.snippet_count === 1 ? '' : 's'}`;
+
+        header.appendChild(left);
+        header.appendChild(count);
+        header.appendChild(badge);
+        card.appendChild(header);
+
+        const body = document.createElement('div');
+        body.className = 'mt-3 space-y-3';
+
+        if (entry.snippet_count === 0) {
+          const noData = document.createElement('div');
+          noData.className = 'text-sm text-slate-400';
+          noData.textContent = 'No disclosure surfaced for this question.';
+          body.appendChild(noData);
+        } else {
+          entry.snippets.forEach((snippet, idx) => {
+            const snippetBox = document.createElement('div');
+            snippetBox.className = 'border border-slate-800 bg-slate-900/60 rounded-lg p-3';
+
+            const title = document.createElement('div');
+            title.className = 'text-xs uppercase tracking-wide text-slate-500 mb-1';
+            title.textContent = `Snippet ${idx + 1}`;
+            snippetBox.appendChild(title);
+
+            const quote = document.createElement('div');
+            quote.className = 'text-sm text-slate-200';
+            quote.textContent = `"${snippet.quote}"`;
+            snippetBox.appendChild(quote);
+
+            if (snippet.source) {
+              const source = document.createElement('div');
+              source.className = 'text-[11px] text-slate-500 mt-1';
+              source.textContent = snippet.source;
+              snippetBox.appendChild(source);
+            }
+
+            body.appendChild(snippetBox);
+          });
+        }
+
+        card.appendChild(body);
+        qeResults.appendChild(card);
+      });
+    }
+
+    if (qeSelect) {
+      const opts = ['<option value=\"\">Select a question...</option>'];
+      evidenceData.forEach(item => {
+        opts.push(`<option value=\"${item.question_id}\">${item.question_id} — ${item.question_text}</option>`);
+      });
+      qeSelect.innerHTML = opts.join('');
+      qeSelect.addEventListener('change', () => renderQuestion(qeSelect.value));
+    }
 
     const activeClasses = [
       'bg-slate-900/70',
