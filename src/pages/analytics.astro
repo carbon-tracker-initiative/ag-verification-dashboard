@@ -497,37 +497,38 @@ const qePayload = JSON.stringify(questionEvidence)
 
         <div id="tab-question-explorer" class="tab-content hidden">
           <div class="surface border border-slate-700/60 p-6 rounded-2xl space-y-6">
-            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+            <div class="flex flex-col gap-4">
               <div>
                 <h2 class="text-xl font-semibold text-slate-100">Question Explorer</h2>
                 <p class="text-sm text-slate-400 mt-1">
                   Pick a question ID to see how every company addressed it, including cases with no disclosure.
                 </p>
               </div>
-              <div class="flex flex-col sm:flex-row gap-4 sm:items-end">
-                <div class="flex flex-col gap-2">
-                  <label class="text-xs uppercase tracking-wide text-slate-400">Question ID</label>
-                  <select
-                    id="qe-select-id"
-                    class="bg-slate-900/80 border border-slate-700 text-slate-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent min-w-[200px]"
-                  >
-                    <option value="">Select a question...</option>
-                  </select>
-                </div>
-                <div class="flex flex-col gap-2">
-                  <label class="text-xs uppercase tracking-wide text-slate-400">Question</label>
-                  <select
-                    id="qe-select-text"
-                    class="bg-slate-900/80 border border-slate-700 text-slate-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent min-w-[260px]"
-                  >
-                    <option value="">Select a question...</option>
-                  </select>
-                </div>
-              </div>
             </div>
 
             <div id="qe-summary" class="text-sm text-slate-400"></div>
             <div id="qe-question-text" class="text-sm text-slate-200"></div>
+
+            <div class="flex flex-col sm:flex-row gap-4 sm:items-end">
+              <div class="flex flex-col gap-2">
+                <label class="text-xs uppercase tracking-wide text-slate-400">Question ID</label>
+                <select
+                  id="qe-select-id"
+                  class="bg-slate-900/80 border border-slate-700 text-slate-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent min-w-[200px]"
+                >
+                  <option value="">Select a question...</option>
+                </select>
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-xs uppercase tracking-wide text-slate-400">Question</label>
+                <select
+                  id="qe-select-text"
+                  class="bg-slate-900/80 border border-slate-700 text-slate-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent min-w-[260px]"
+                >
+                  <option value="">Select a question...</option>
+                </select>
+              </div>
+            </div>
 
             <div id="qe-results" class="space-y-4"></div>
           </div>
