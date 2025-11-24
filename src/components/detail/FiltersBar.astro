@@ -521,8 +521,20 @@ const { categories } = Astro.props;
     timeframeFilter.addEventListener('change', applyFiltersAndSort);
     framingFilter.addEventListener('change', applyFiltersAndSort);
     sortSelect.addEventListener('change', applyFiltersAndSort);
-    questionJumpSelect.addEventListener('change', () => jumpToQuestion(questionJumpSelect.value));
-    questionJumpTextFullSelect.addEventListener('change', () => jumpToQuestion(questionJumpTextFullSelect.value));
+      questionJumpSelect.addEventListener('change', () => {
+        const val = questionJumpSelect.value;
+        if (questionJumpTextFullSelect && questionJumpTextFullSelect.value !== val) {
+          questionJumpTextFullSelect.value = val;
+        }
+        jumpToQuestion(val);
+      });
+      questionJumpTextFullSelect.addEventListener('change', () => {
+        const val = questionJumpTextFullSelect.value;
+        if (questionJumpSelect && questionJumpSelect.value !== val) {
+          questionJumpSelect.value = val;
+        }
+        jumpToQuestion(val);
+      });
     resetButton.addEventListener('click', resetFilters);
     toggleAllButton.addEventListener('click', toggleAll);
 

@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [adding-merged-results]
+    branches: [collapsed-view]
   workflow_dispatch:
 
 permissions:
