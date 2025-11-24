@@ -28,21 +28,26 @@
       }
     },
     "2023": {
-      "totalPages": 0,
-      "files": {}
+      "totalPages": 321,
+      "files": {
+        "BASF SE (BAS-DE) - Annual Report for period end 31-Dec-2023 (English) - PDF_20240411-643ed4ee-d0f7-ee11-abdb-020716c124e7_0.pdf": 321
+      }
     },
     "2024": {
-      "totalPages": 536,
+      "totalPages": 1013,
       "files": {
         "BASF ESG Report 2024.pdf": 477,
+        "BASF SE (BAS-DE) - Annual Report for period end 31-Dec-2024 (English).pdf": 477,
         "BASF_in_South_America_Report_2024.pdf": 59
       }
     }
   },
   "Bayer": {
     "2024": {
-      "totalPages": 0,
-      "files": {}
+      "totalPages": 410,
+      "files": {
+        "Annual report 2024.pdf": 410
+      }
     }
   },
   "CF Industries": {
@@ -130,8 +135,10 @@
   },
   "SABIC Agri-Nutrients": {
     "2024": {
-      "totalPages": 0,
-      "files": {}
+      "totalPages": 288,
+      "files": {
+        "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf": 288
+      }
     }
   },
   "Scotts Miracle-Gro": {

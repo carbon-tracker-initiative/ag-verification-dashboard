@@ -8,6 +8,7 @@
  */
 
 import { PDFDocument } from 'pdf-lib';
+import pdfParse from 'pdf-parse';
 import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, extname } from 'node:path';
 
@@ -27,8 +28,16 @@ async function getPdfPageCount(filePath: string): Promise<number | null> {
     });
     return pdf.getPageCount();
   } catch (error) {
-    console.warn(`Could not read PDF pages for ${filePath}:`, (error as Error).message);
-    return null;
+    console.warn(`pdf-lib failed for ${filePath}:`, (error as Error).message);
+    // Fallback to pdf-parse (pdf.js)
+    try {
+      const buffer = await readFile(filePath);
+      const parsed = await pdfParse(buffer);
+      return parsed.numpages || null;
+    } catch (fallbackError) {
+      console.warn(`pdf-parse failed for ${filePath}:`, (fallbackError as Error).message);
+      return null;
+    }
   }
 }
 
