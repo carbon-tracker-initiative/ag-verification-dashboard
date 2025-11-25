@@ -124,7 +124,7 @@ const chartPayload = questionOptions.map(q => ({
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
           <div>
             <h2 class="text-2xl font-bold text-slate-100">Cross-company disclosures by question</h2>
-            <p class="text-sm text-slate-400">Select a risk question to compare total disclosures (excluding NO_DISCLOSURE) across companies.</p>
+            <p class="text-sm text-slate-400">Select a risk question to compare total disclosures across companies.</p>
           </div>
           <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
             <label for="question-selector" class="text-sm font-medium text-slate-300">Choose a question</label>
@@ -144,7 +144,7 @@ const chartPayload = questionOptions.map(q => ({
         <div class="surface border border-slate-800 p-4 sm:p-6 rounded-xl">
           <div class="flex items-center gap-2 text-sm text-slate-500 mb-3">
             <span class="w-3 h-3 rounded-full" style="background-color: #435f74;"></span>
-            <span>Count of disclosures (excluding NO_DISCLOSURE)</span>
+            <span>Count of disclosures</span>
           </div>
           <canvas id="question-chart" aria-label="Disclosure counts by company" role="img"></canvas>
         </div>
@@ -170,80 +170,111 @@ const chartPayload = questionOptions.map(q => ({
     </div>
   </main>
 
-  <script type="module" define:vars={{ chartPayload, selectedQuestionId }}>
-    import Chart from 'chart.js/auto';
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 
-    const baseColor = '#435f74';
-
-    const selectEl = document.getElementById('question-selector');
-    const canvas = document.getElementById('question-chart');
-    let chartInstance;
-
-    function renderChart(questionId) {
-      const entry = chartPayload.find(q => q.question_id === questionId) || chartPayload[0];
-      if (!entry) return;
-
-      const labels = entry.companyCounts.map(c => c.label);
-      const data = entry.companyCounts.map(c => c.count);
-      const links = entry.companyCounts.map(c => c.href);
-
-      // Adjust height based on number of companies
-      if (canvas) {
-        const height = Math.max(300, labels.length * 28);
-        canvas.style.height = `${height}px`;
+  <script define:vars={{ chartPayload, selectedQuestionId }}>
+    function waitForChart() {
+      if (typeof Chart === 'undefined') {
+        setTimeout(waitForChart, 50);
+        return;
       }
 
-      if (chartInstance) chartInstance.destroy();
+      const canvas = document.getElementById('question-chart');
+      const selectEl = document.getElementById('question-selector');
+      let chart = null;
 
-      chartInstance = new Chart(canvas, {
-        type: 'bar',
-        data: {
-          labels,
-          datasets: [
-            {
-              label: 'Disclosures',
-              data,
-              backgroundColor: baseColor,
-              borderRadius: 6
-            }
-          ]
-        },
-        options: {
-          indexAxis: 'y',
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              callbacks: {
-                label(ctx) {
-                  const count = ctx.raw ?? 0;
-                  return `${count} disclosure${count === 1 ? '' : 's'}`;
+      // Set explicit canvas dimensions
+      canvas.width = 800;
+      canvas.height = 400;
+      canvas.style.width = '100%';
+      canvas.style.height = '400px';
+
+      function drawChart(questionId) {
+        const questionData = chartPayload.find(q => q.question_id === questionId);
+        if (!questionData) return;
+
+        // Sort companies alphabetically
+        const sorted = [...questionData.companyCounts].sort((a, b) =>
+          a.label.localeCompare(b.label)
+        );
+
+        const companyLabels = sorted.map(c => c.label);
+        const disclosureCounts = sorted.map(c => c.count);
+        const companyLinks = sorted.map(c => c.href);
+
+        // Destroy previous chart
+        if (chart) {
+          chart.destroy();
+          chart = null;
+        }
+
+        // Create chart with absolutely NO animations
+        chart = new Chart(canvas, {
+          type: 'bar',
+          data: {
+            labels: companyLabels,
+            datasets: [{
+              data: disclosureCounts,
+              backgroundColor: '#435f74',
+              borderRadius: 0
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: {
+              duration: 0,
+              onComplete: function() {},
+              onProgress: function() {}
+            },
+            hover: {
+              animationDuration: 0
+            },
+            responsiveAnimationDuration: 0,
+            plugins: {
+              legend: false,
+              tooltip: {
+                enabled: true,
+                mode: 'index',
+                intersect: true,
+                animation: {
+                  duration: 0
+                },
+                callbacks: {
+                  label: function(context) {
+                    return context.parsed.y + ' disclosure' + (context.parsed.y === 1 ? '' : 's');
+                  }
                 }
               }
-            }
-          },
-          scales: {
-            x: { beginAtZero: true, ticks: { precision: 0 } }
-          },
-          onClick(evt) {
-            if (!chartInstance) return;
-            const points = chartInstance.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, false);
-            const idx = points?.[0]?.index;
-            if (idx != null) {
-              window.location.href = links[idx];
+            },
+            scales: {
+              y: {
+                beginAtZero: true,
+                ticks: {
+                  precision: 0
+                }
+              }
+            },
+            onClick: function(event, elements) {
+              if (elements.length > 0) {
+                const index = elements[0].index;
+                window.location.href = companyLinks[index];
+              }
             }
           }
-        }
+        });
+      }
+
+      // Draw initial chart
+      drawChart(selectedQuestionId);
+
+      // Handle question selector change
+      selectEl.addEventListener('change', function(e) {
+        drawChart(e.target.value);
       });
     }
 
-    if (selectEl && chartPayload.length) {
-      renderChart(selectedQuestionId);
-      selectEl.addEventListener('change', (e) => {
-        renderChart(e.target.value);
-      });
-    }
+    waitForChart();
   </script>
 
   <script>
