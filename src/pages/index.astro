@@ -10,7 +10,6 @@ import Footer from '../components/layout/Footer.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import CategoryCard from '../components/home/CategoryCard.astro';
 import QuestionRankings from '../components/home/QuestionRankings.astro';
-import CompanyCard from '../components/home/CompanyCard.astro';
 
 import { loadAllCompanyData } from '../utils/dataLoader';
 import { calculateCompanyMetrics, calculateCrossCompanyMetrics, calculateCategoryMetrics } from '../utils/metricsCalculator';
@@ -53,17 +52,39 @@ const categoryMetrics = Array.from(allCategories).map(categoryName => {
 });
 
 const normalizedBaseUrl = (import.meta.env.BASE_URL || '').replace(/\/$/, '');
-const companyOptions = enrichedCompanyData
-  .slice()
-  .sort((a, b) => {
-    const nameCompare = a.data.company.localeCompare(b.data.company);
-    if (nameCompare !== 0) return nameCompare;
-    return b.data.year - a.data.year;
-  })
-  .map(item => ({
-    label: `${item.data.company} – ${item.data.year}`,
-    href: `${normalizedBaseUrl}/${item.data.company.toLowerCase()}/${item.data.year}/${item.data.version}`
-  }));
+// Build question-to-company disclosure counts (excluding NO_DISCLOSURE)
+const questionMap = new Map<string, { question_id: string; question_text: string; companyCounts: Array<{ label: string; href: string; count: number }> }>();
+
+enrichedCompanyData.forEach(({ data }) => {
+  const companyLabel = `${data.company} (${data.year}, ${data.version})`;
+  const href = `${normalizedBaseUrl}/${data.company.toLowerCase()}/${data.year}/${data.version}`;
+
+  data.verified.analysis_results.forEach(question => {
+    const disclosures = Array.isArray(question.disclosures) ? question.disclosures : [];
+    const counted = disclosures.filter(d => d.classification !== 'NO_DISCLOSURE').length;
+
+    if (!questionMap.has(question.question_id)) {
+      questionMap.set(question.question_id, {
+        question_id: question.question_id,
+        question_text: question.question_text,
+        companyCounts: []
+      });
+    }
+    questionMap.get(question.question_id)!.companyCounts.push({
+      label: companyLabel,
+      href,
+      count: counted
+    });
+  });
+});
+
+const questionOptions = Array.from(questionMap.values()).sort((a, b) => a.question_id.localeCompare(b.question_id));
+const selectedQuestionId = url.searchParams.get('question') || (questionOptions[0]?.question_id ?? '');
+const chartPayload = questionOptions.map(q => ({
+  question_id: q.question_id,
+  question_text: q.question_text,
+  companyCounts: q.companyCounts.sort((a, b) => b.count - a.count)
+}));
 ---
 
 <Layout title="Verification Dashboard - Home">
@@ -74,36 +95,34 @@ const companyOptions = enrichedCompanyData
     <HeroSection globalStats={crossCompanyMetrics.global_stats} />
 
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <!-- Company Cards -->
+      <!-- Question-based cross-company disclosure chart -->
       <section class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 mb-6">Companies Analyzed</h2>
-        <div class="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center">
-          <label for="company-selector" class="text-sm font-medium text-slate-700">
-            Jump to a company analysis
-          </label>
-          <select
-            id="company-selector"
-            class="w-full sm:w-auto rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
-            onchange="if (this.value) window.location.href = this.value;"
-          >
-            <option value="">Select a company...</option>
-            {companyOptions.map(option => (
-              <option value={option.href}>{option.label}</option>
-            ))}
-          </select>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
+          <div>
+            <h2 class="text-2xl font-bold text-slate-900">Cross-company disclosures by question</h2>
+            <p class="text-sm text-slate-600">Select a risk question to compare total disclosures (excluding NO_DISCLOSURE) across companies.</p>
+          </div>
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
+            <label for="question-selector" class="text-sm font-medium text-slate-700">Choose a question</label>
+            <select
+              id="question-selector"
+              class="w-full sm:w-72 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+            >
+              {questionOptions.map(option => (
+                <option value={option.question_id} selected={option.question_id === selectedQuestionId}>
+                  {option.question_id} — {option.question_text}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {enrichedCompanyData
-            .sort((a, b) => b.metrics.total_snippets - a.metrics.total_snippets)
-            .map(item => (
-              <CompanyCard
-                company={item.metrics}
-                version={item.data.version}
-                year={item.data.year}
-                companyName={item.data.company}
-                sector={item.data.sector}
-              />
-            ))}
+
+        <div class="surface border border-slate-800 p-4 sm:p-6 rounded-xl">
+          <div class="flex items-center gap-2 text-sm text-slate-500 mb-3">
+            <span class="w-3 h-3 rounded-full" style="background-color: #435f74;"></span>
+            <span>Count of disclosures (excluding NO_DISCLOSURE)</span>
+          </div>
+          <canvas id="question-chart" aria-label="Disclosure counts by company" role="img"></canvas>
         </div>
       </section>
 
@@ -126,6 +145,84 @@ const companyOptions = enrichedCompanyData
       </section>
     </div>
   </main>
+
+  <script type="module">
+    import Chart from 'chart.js/auto';
+
+    const chartPayload = ${JSON.stringify(chartPayload)};
+    const selectedQuestionId = ${JSON.stringify(selectedQuestionId)};
+    const baseColor = '#435f74';
+
+    const selectEl = document.getElementById('question-selector');
+    const canvas = document.getElementById('question-chart');
+    let chartInstance;
+
+    function renderChart(questionId) {
+      const entry = chartPayload.find(q => q.question_id === questionId) || chartPayload[0];
+      if (!entry) return;
+
+      const labels = entry.companyCounts.map(c => c.label);
+      const data = entry.companyCounts.map(c => c.count);
+      const links = entry.companyCounts.map(c => c.href);
+
+      // Adjust height based on number of companies
+      if (canvas) {
+        const height = Math.max(300, labels.length * 28);
+        canvas.style.height = `${height}px`;
+      }
+
+      if (chartInstance) chartInstance.destroy();
+
+      chartInstance = new Chart(canvas, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [
+            {
+              label: 'Disclosures',
+              data,
+              backgroundColor: baseColor,
+              borderRadius: 6
+            }
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label(ctx) {
+                  const count = ctx.raw ?? 0;
+                  return `${count} disclosure${count === 1 ? '' : 's'}`;
+                }
+              }
+            }
+          },
+          scales: {
+            x: { beginAtZero: true, ticks: { precision: 0 } }
+          },
+          onClick(evt) {
+            if (!chartInstance) return;
+            const points = chartInstance.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, false);
+            const idx = points?.[0]?.index;
+            if (idx != null) {
+              window.location.href = links[idx];
+            }
+          }
+        }
+      });
+    }
+
+    if (selectEl && chartPayload.length) {
+      renderChart(selectedQuestionId);
+      selectEl.addEventListener('change', (e) => {
+        renderChart(e.target.value);
+      });
+    }
+  </script>
 
   <Footer />
 </Layout>
