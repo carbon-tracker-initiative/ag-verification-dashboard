@@ -124,8 +124,8 @@ const breadcrumbItems = [
 const sectorLabelMap: Record<string, { short: string; long: string }> = {
   F: { short: 'F', long: 'Fertilizers' },
   P: { short: 'P', long: 'Crop protection' },
-  PF: { short: 'PF', long: 'Fertilizers + Crop protection' },
-  ALL: { short: 'ALL', long: 'All sectors (Fertilizers and Crop Protection)' }
+  PF: { short: 'F&P', long: 'Fertilizers & Crop protection' },
+  ALL: { short: 'F&P', long: 'Fertilizers & Crop protection' }
 };
 const sectorInfo = sectorLabelMap[(companyData.sector || 'ALL').toUpperCase()] || sectorLabelMap.ALL;
 
@@ -179,7 +179,7 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
               <span aria-hidden="true">&bull;</span>
               <span>{totalQuestionsAnalyzed} questions analyzed</span>
               <span aria-hidden="true">&bull;</span>
-              <span>{companyMetrics.total_snippets} evidence disclosures</span>
+              <span>{companyMetrics.total_snippets} total disclosures</span>
               <span aria-hidden="true">&bull;</span>
               <span class="text-xs text-slate-400">
                 Sector: <span class="text-slate-200 font-semibold">{sectorInfo.long}</span>
@@ -400,8 +400,6 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
     }
   }
 </style>
-
-
 
 
 

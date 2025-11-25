@@ -48,8 +48,15 @@ const { categories } = Astro.props;
       </div>
 
       <div class="flex-1 min-w-[200px]">
-        <label for="financial-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
+        <label for "financial-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
           Disclosure Type
+          <span
+            class="text-[12px] text-slate-400"
+            title="Financial (explicit amounts), Partial-type (financial impact noted, no exact amount), Non-Financial (no financials)."
+            aria-label="Financial (explicit amounts), Partial-type (financial impact noted, no exact amount), Non-Financial (no financials)."
+          >
+            ⓘ
+          </span>
         </label>
         <select
           id="financial-filter"
@@ -65,6 +72,13 @@ const { categories } = Astro.props;
       <div class="flex-1 min-w-[200px]">
         <label for="timeframe-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
           Disclosure Timeframe
+          <span
+            class="text-[12px] text-slate-400"
+            title="Backward-looking (past only), Present day (ongoing), Forward-looking (not yet started), Multiple or Unclear."
+            aria-label="Backward-looking (past only), Present day (ongoing), Forward-looking (not yet started), Multiple or Unclear."
+          >
+            ⓘ
+          </span>
         </label>
         <select
           id="timeframe-filter"
@@ -81,6 +95,13 @@ const { categories } = Astro.props;
       <div class="flex-1 min-w-[200px]">
         <label for="framing-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
           Narrative Framing
+          <span
+            class="text-[12px] text-slate-400"
+            title="Risk (harm/uncertainty), Opportunity (value-creating), Neutral (factual/undirected), Balanced (both)."
+            aria-label="Risk (harm/uncertainty), Opportunity (value-creating), Neutral (factual/undirected), Balanced (both)."
+          >
+            ⓘ
+          </span>
         </label>
         <select
           id="framing-filter"

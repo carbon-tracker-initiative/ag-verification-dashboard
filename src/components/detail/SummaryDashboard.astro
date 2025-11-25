@@ -72,7 +72,7 @@ const framingData = {
       <div class="text-sm font-semibold text-slate-200 mb-3">Evidence Statistics</div>
       <div class="space-y-3 text-slate-100">
         <div class="flex items-center justify-between">
-          <span class="text-xs text-slate-400">Total snippets</span>
+          <span class="text-xs text-slate-400">Total disclosures</span>
           <span class="text-lg font-bold">{metrics.total_snippets}</span>
         </div>
         {totalPagesDisplay && (
@@ -121,14 +121,23 @@ const framingData = {
     </div>
 
     <div class="surface border border-slate-800 p-6 rounded-xl">
-      <div class="text-sm font-semibold text-slate-200 mb-4">Financial Disclosure Rate</div>
+      <div class="flex items-center gap-2 text-sm font-semibold text-slate-200 mb-4">
+        Financial Disclosure Rate
+        <span
+          class="text-[12px] text-slate-400"
+          title="Percent of all disclosures that include financial detail (Financial or Partial-type) out of 100% of disclosures."
+          aria-label="Percent of all disclosures that include financial detail (Financial or Partial-type) out of 100% of disclosures."
+        >
+          ⓘ
+        </span>
+      </div>
       <div class="space-y-3">
         <div class="flex items-center justify-between">
           <span class="text-2xl font-bold text-emerald-300">
             {financialData.percentages[0].toFixed(1)}%
           </span>
           <span class="text-xs text-slate-400">
-            {financialData.values[0]} of {metrics.total_snippets} snippets
+            {financialData.values[0]} of {metrics.total_snippets} disclosures
           </span>
         </div>
         <div>
@@ -162,7 +171,16 @@ const framingData = {
   <!-- Additional charts -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div class="surface border border-slate-800 p-6 rounded-xl">
-      <h3 class="text-sm font-semibold text-slate-200 mb-4">Temporal Specificity</h3>
+      <h3 class="flex items-center gap-2 text-sm font-semibold text-slate-200 mb-4">
+        Temporal Specificity
+        <span
+          class="text-[12px] text-slate-400"
+          title="Backward-looking (past only), Present day (ongoing now), Forward-looking (not yet started), Multiple or Unclear."
+          aria-label="Backward-looking (past only), Present day (ongoing now), Forward-looking (not yet started), Multiple or Unclear."
+        >
+          ⓘ
+        </span>
+      </h3>
       <div class="space-y-2">
         {timeframeData.labels.map((label, i) => {
           const percentage = (timeframeData.values[i] / metrics.total_snippets) * 100;
@@ -188,7 +206,16 @@ const framingData = {
     </div>
 
     <div class="surface border border-slate-800 p-6 rounded-xl">
-      <h3 class="text-sm font-semibold text-slate-200 mb-4">Narrative Framing</h3>
+      <h3 class="flex items-center gap-2 text-sm font-semibold text-slate-200 mb-4">
+        Narrative Framing
+        <span
+          class="text-[12px] text-slate-400"
+          title="Risk (harm/uncertainty), Opportunity (benefit/value-creating), Neutral (factual/undirected)."
+          aria-label="Risk (harm/uncertainty), Opportunity (benefit/value-creating), Neutral (factual/undirected)."
+        >
+          ⓘ
+        </span>
+      </h3>
       <div class="space-y-2">
         {framingData.labels.map((label, i) => {
           const percentage = (framingData.values[i] / metrics.total_snippets) * 100;
