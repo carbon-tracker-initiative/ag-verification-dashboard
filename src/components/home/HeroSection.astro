@@ -54,20 +54,20 @@ const { globalStats } = Astro.props;
 
       <!-- Disclosures -->
       <div class="surface p-6 text-center">
-        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Evidence Snippets</div>
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Evidence Disclosures</div>
         <div class="text-3xl sm:text-4xl font-semibold text-slate-100 mb-2">
           {formatNumber(globalStats.total_snippets)}
         </div>
-        <div class="text-sm text-slate-400">triangulated citations</div>
+        <div class="text-sm text-slate-400">verified disclosures</div>
       </div>
 
       <!-- Avg Financial Rate -->
       <div class="surface p-6 text-center">
-        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Financial Rate</div>
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Financial Disclosures</div>
         <div class="text-3xl sm:text-4xl font-semibold text-slate-100 mb-2">
           {formatPercentage(globalStats.average_financial_rate_all, 1)}
         </div>
-        <div class="text-sm text-slate-400">with financial data</div>
+        <div class="text-sm text-slate-400">with financially-related disclosures</div>
       </div>
     </div>
   </div>

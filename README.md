@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 An interactive dashboard for analyzing agricultural risk disclosure quality through evidence-based analysis with multi-dimensional categorization and cross-company benchmarking.
-Durand
+
 ## Table of Contents
 
 - [Overview](#overview)
