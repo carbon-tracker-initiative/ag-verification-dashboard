@@ -33,7 +33,7 @@ const { globalStats } = Astro.props;
     </div>
 
     <!-- Global stats bar -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
       <!-- Companies -->
       <div class="surface p-6 text-center">
         <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Companies</div>
@@ -59,15 +59,6 @@ const { globalStats } = Astro.props;
           {formatNumber(globalStats.total_snippets)}
         </div>
         <div class="text-sm text-slate-400">verified disclosures</div>
-      </div>
-
-      <!-- Avg Financial Rate -->
-      <div class="surface p-6 text-center">
-        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Financial Disclosures</div>
-        <div class="text-3xl sm:text-4xl font-semibold text-slate-100 mb-2">
-          {formatPercentage(globalStats.average_financial_rate_all, 1)}
-        </div>
-        <div class="text-sm text-slate-400">with financially-related disclosures</div>
       </div>
     </div>
   </div>

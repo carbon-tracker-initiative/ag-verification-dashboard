@@ -79,7 +79,7 @@ enrichedCompanyData.forEach(({ data }) => {
 });
 
 const questionOptions = Array.from(questionMap.values()).sort((a, b) => a.question_id.localeCompare(b.question_id));
-const selectedQuestionId = url.searchParams.get('question') || (questionOptions[0]?.question_id ?? '');
+const selectedQuestionId = url.searchParams.get('question') || '99901';
 const chartPayload = questionOptions.map(q => ({
   question_id: q.question_id,
   question_text: q.question_text,
@@ -94,23 +94,47 @@ const chartPayload = questionOptions.map(q => ({
     <!-- Hero Section with Global Stats -->
     <HeroSection globalStats={crossCompanyMetrics.global_stats} />
 
+    <!-- Company Navigation -->
+    <div class="border-b border-slate-800 bg-slate-950/70 py-8">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <label for="company-selector" class="text-lg font-semibold text-slate-100">
+            Go directly to a company of your interest
+          </label>
+          <select
+            id="company-selector"
+            class="w-full sm:w-96 rounded-md border border-slate-700 bg-slate-900/70 px-4 py-3 text-sm text-slate-100 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
+          >
+            <option value="">Select a company...</option>
+            {enrichedCompanyData
+              .sort((a, b) => a.data.company.localeCompare(b.data.company))
+              .map(({ data }) => (
+                <option value={`${normalizedBaseUrl}/${data.company.toLowerCase()}/${data.year}/${data.version}`}>
+                  {data.company} - {data.year} ({data.version})
+                </option>
+              ))}
+          </select>
+        </div>
+      </div>
+    </div>
+
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <!-- Question-based cross-company disclosure chart -->
       <section class="mb-12">
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
           <div>
-            <h2 class="text-2xl font-bold text-slate-900">Cross-company disclosures by question</h2>
-            <p class="text-sm text-slate-600">Select a risk question to compare total disclosures (excluding NO_DISCLOSURE) across companies.</p>
+            <h2 class="text-2xl font-bold text-slate-100">Cross-company disclosures by question</h2>
+            <p class="text-sm text-slate-400">Select a risk question to compare total disclosures (excluding NO_DISCLOSURE) across companies.</p>
           </div>
           <div class="flex flex-col gap-2 sm:flex-row sm:items-center">
-            <label for="question-selector" class="text-sm font-medium text-slate-700">Choose a question</label>
+            <label for="question-selector" class="text-sm font-medium text-slate-300">Choose a question</label>
             <select
               id="question-selector"
-              class="w-full sm:w-72 rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+              class="w-full sm:w-72 rounded-md border border-slate-700 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
             >
               {questionOptions.map(option => (
                 <option value={option.question_id} selected={option.question_id === selectedQuestionId}>
-                  {option.question_id} — {option.question_text}
+                  {option.question_text}
                 </option>
               ))}
             </select>
@@ -146,11 +170,9 @@ const chartPayload = questionOptions.map(q => ({
     </div>
   </main>
 
-  <script type="module">
+  <script type="module" define:vars={{ chartPayload, selectedQuestionId }}>
     import Chart from 'chart.js/auto';
 
-    const chartPayload = ${JSON.stringify(chartPayload)};
-    const selectedQuestionId = ${JSON.stringify(selectedQuestionId)};
     const baseColor = '#435f74';
 
     const selectEl = document.getElementById('question-selector');
@@ -220,6 +242,19 @@ const chartPayload = questionOptions.map(q => ({
       renderChart(selectedQuestionId);
       selectEl.addEventListener('change', (e) => {
         renderChart(e.target.value);
+      });
+    }
+  </script>
+
+  <script>
+    // Company selector navigation
+    const companySelector = document.getElementById('company-selector');
+    if (companySelector) {
+      companySelector.addEventListener('change', (e) => {
+        const select = e.target;
+        if (select.value) {
+          window.location.href = select.value;
+        }
       });
     }
   </script>
