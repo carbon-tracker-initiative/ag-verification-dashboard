@@ -68,11 +68,20 @@ const sectorInfo = sector ? sectorLabelMap[sector] || sectorLabelMap.ALL : secto
 
   <div class="space-y-3 mb-5">
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-500 w-28 uppercase tracking-wide">Disclosure</span>
+      <span class="flex items-center gap-1 text-xs text-slate-500 w-28 uppercase tracking-wide">
+        Verified Disclosures
+        <span
+          class="text-[11px] text-slate-400"
+          title="Percent of all verified disclosures (FULL or PARTIAL) out of every disclosure identified for this company-year."
+          aria-label="Percent of all verified disclosures (FULL or PARTIAL) out of every disclosure identified for this company-year."
+        >
+          ⓘ
+        </span>
+      </span>
       <div class="flex-1 bg-slate-900 rounded-full h-2">
         <div
-          class="bg-sky-400 h-2 rounded-full transition-all"
-          style={`width: ${disclosureRate}%`}
+          class="h-2 rounded-full transition-all"
+          style={`width: ${disclosureRate}%; background-color: #435f74;`}
         ></div>
       </div>
       <span class="text-xs font-semibold text-slate-200 w-12 text-right">
@@ -80,11 +89,20 @@ const sectorInfo = sector ? sectorLabelMap[sector] || sectorLabelMap.ALL : secto
       </span>
     </div>
     <div class="flex items-center gap-2">
-      <span class="text-xs text-slate-500 w-28 uppercase tracking-wide">Financial mix</span>
+      <span class="flex items-center gap-1 text-xs text-slate-500 w-28 uppercase tracking-wide">
+        Financially-related Disclosures
+        <span
+          class="text-[11px] text-slate-400"
+          title="Percent of all disclosures that include financial detail (Financial or Partial-type), calculated out of 100% of disclosures."
+          aria-label="Percent of all disclosures that include financial detail (Financial or Partial-type), calculated out of 100% of disclosures."
+        >
+          ⓘ
+        </span>
+      </span>
       <div class="flex-1 bg-slate-900 rounded-full h-2">
         <div
-          class="bg-purple-400 h-2 rounded-full transition-all"
-          style={`width: ${financialRate}%`}
+          class="h-2 rounded-full transition-all"
+          style={`width: ${financialRate}%; background-color: #b6b740;`}
         ></div>
       </div>
       <span class="text-xs font-semibold text-slate-200 w-12 text-right">
