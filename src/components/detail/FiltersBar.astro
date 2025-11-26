@@ -365,15 +365,17 @@ const { categories } = Astro.props;
       });
     }
 
-    function jumpToQuestion(questionId) {
+    function jumpToQuestion(questionId, preserveText = false) {
       selectedQuestionId = questionId;
 
-      // Get the question text from the dropdown
-      if (questionId && questionJumpTextFullSelect instanceof HTMLSelectElement) {
-        const selectedOption = questionJumpTextFullSelect.options[questionJumpTextFullSelect.selectedIndex];
-        selectedQuestionText = selectedOption ? selectedOption.textContent || '' : '';
-      } else {
-        selectedQuestionText = '';
+      // Get the question text from the dropdown only if not already set
+      if (!preserveText) {
+        if (questionId && questionJumpTextFullSelect instanceof HTMLSelectElement) {
+          const selectedOption = questionJumpTextFullSelect.options[questionJumpTextFullSelect.selectedIndex];
+          selectedQuestionText = selectedOption ? selectedOption.textContent || '' : '';
+        } else {
+          selectedQuestionText = '';
+        }
       }
 
       applyFiltersAndSort();
@@ -521,7 +523,7 @@ const { categories } = Astro.props;
             selectedQuestionText = allQuestionsMap.get(questionId) || '';
           }
           
-          jumpToQuestion(questionId);
+          jumpToQuestion(questionId, true);
         }, 100);
       }
     }
