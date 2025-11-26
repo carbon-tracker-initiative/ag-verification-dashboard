@@ -154,6 +154,7 @@ const { categories } = Astro.props;
 
     let allExpanded = false;
     let selectedQuestionId = '';
+    let selectedQuestionText = '';
     const totalQuestionCount = questionNodes.length;
 
     function setQuestionExpanded(card, expand) {
@@ -236,7 +237,8 @@ const { categories } = Astro.props;
       const activeFilters = [];
 
       if (selectedQuestionId) {
-        activeFilters.push(`Question: ${selectedQuestionId} (only)`);
+        const displayText = selectedQuestionText || selectedQuestionId;
+        activeFilters.push(`Question: ${displayText}`);
       }
       if (categoryFilter.value !== 'all') {
         activeFilters.push(`Category: ${categoryFilter.options[categoryFilter.selectedIndex].text}`);
@@ -319,6 +321,7 @@ const { categories } = Astro.props;
       framingFilter.value = 'all';
       questionJumpTextFullSelect.value = '';
       selectedQuestionId = '';
+      selectedQuestionText = '';
       applyFiltersAndSort();
     }
 
@@ -352,6 +355,15 @@ const { categories } = Astro.props;
 
     function jumpToQuestion(questionId) {
       selectedQuestionId = questionId;
+
+      // Get the question text from the dropdown
+      if (questionId && questionJumpTextFullSelect instanceof HTMLSelectElement) {
+        const selectedOption = questionJumpTextFullSelect.options[questionJumpTextFullSelect.selectedIndex];
+        selectedQuestionText = selectedOption ? selectedOption.textContent || '' : '';
+      } else {
+        selectedQuestionText = '';
+      }
+
       applyFiltersAndSort();
 
       if (!questionId) {
@@ -451,6 +463,10 @@ const { categories } = Astro.props;
         const questionId = hash.replace('question-', '');
         // Small delay to ensure DOM is ready
         window.setTimeout(() => {
+          // Set the dropdown value first so jumpToQuestion can read the text
+          if (questionJumpTextFullSelect instanceof HTMLSelectElement) {
+            questionJumpTextFullSelect.value = questionId;
+          }
           jumpToQuestion(questionId);
         }, 100);
       }
