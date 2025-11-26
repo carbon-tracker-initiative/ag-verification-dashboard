@@ -104,9 +104,46 @@ const chartPayload = questionOptions.map(q => ({
     <!-- Hero Section with Global Stats -->
     <HeroSection globalStats={crossCompanyMetrics.global_stats} />
 
-    <!-- Company Navigation -->
-    <div class="border-b border-slate-800 bg-slate-950/70 py-8">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <!-- Question-based cross-company disclosure chart -->
+      <section class="mb-12">
+        <div class="mb-4">
+          <h2 class="text-2xl font-bold text-slate-100 mb-2">Cross-company disclosures by question</h2>
+          <p class="text-sm text-slate-400 mb-3">Select a risk question to compare total disclosures across companies.</p>
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:flex-wrap">
+            <label for="question-selector" class="text-sm font-medium text-slate-300 whitespace-nowrap">
+              Choose a question/risk: <span class="text-slate-300">Does the company disclose whether it thinks</span>
+            </label>
+            <select
+              id="question-selector"
+              class="flex-1 min-w-0 rounded-md border border-slate-700 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
+            >
+              {questionOptions.map(option => (
+                <option value={option.question_id} selected={option.question_id === selectedQuestionId}>
+                  {stripQuestionPrefix(option.question_text)}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3 h-16 flex items-start">
+          <h3 id="question-title" class="text-lg font-semibold text-sky-400 line-clamp-3">Does the company disclose...</h3>
+        </div>
+
+        <div class="surface border border-slate-800 p-4 sm:p-6 rounded-xl">
+          <div class="flex items-center gap-2 text-sm text-slate-500 mb-3">
+            <span class="w-3 h-3 rounded-full" style="background-color: #10b981;"></span>
+            <span class="text-emerald-400 font-medium">Total disclosures</span>
+          </div>
+          <div id="question-chart" class="flex items-end justify-around gap-2 h-96 px-4">
+            <!-- Bars will be rendered here via JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Company Navigation -->
+      <section class="mb-12 border-t border-slate-800 pt-8">
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <label for="company-selector" class="text-lg font-semibold text-slate-100">
             Go directly to a company of your interest
@@ -124,45 +161,6 @@ const chartPayload = questionOptions.map(q => ({
                 </option>
               ))}
           </select>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <!-- Question-based cross-company disclosure chart -->
-      <section class="mb-12">
-        <div class="mb-4">
-          <h2 class="text-2xl font-bold text-slate-100 mb-2">Cross-company disclosures by question</h2>
-          <p class="text-sm text-slate-400 mb-3">Select a risk question to compare total disclosures across companies.</p>
-          <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:flex-wrap">
-            <label for="question-selector" class="text-sm font-medium text-slate-300 whitespace-nowrap">
-              Choose a question/risk: <span class="text-slate-400">Does the company disclose whether it thinks</span>
-            </label>
-            <select
-              id="question-selector"
-              class="flex-1 min-w-0 rounded-md border border-slate-700 bg-slate-900/70 px-3 py-2 text-sm text-slate-100 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-500"
-            >
-              {questionOptions.map(option => (
-                <option value={option.question_id} selected={option.question_id === selectedQuestionId}>
-                  {stripQuestionPrefix(option.question_text)}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <h3 id="question-title" class="text-lg font-semibold text-sky-400">Does the company disclose...</h3>
-        </div>
-
-        <div class="surface border border-slate-800 p-4 sm:p-6 rounded-xl">
-          <div class="flex items-center gap-2 text-sm text-slate-500 mb-3">
-            <span class="w-3 h-3 rounded-full" style="background-color: #10b981;"></span>
-            <span class="text-emerald-400 font-medium">Total disclosures</span>
-          </div>
-          <div id="question-chart" class="flex items-end justify-around gap-2 h-96 px-4">
-            <!-- Bars will be rendered here via JavaScript -->
-          </div>
         </div>
       </section>
 
@@ -254,7 +252,7 @@ const chartPayload = questionOptions.map(q => ({
       sortedCompanies.forEach(companyLabel => {
         const companyData = countMap.get(companyLabel);
         const count = companyData?.count || 0;
-        const href = companyData?.href || '#';
+        const href = companyData ? `${companyData.href}#question-${questionId}` : '#';
 
         // Calculate height in pixels with minimum of 5px for visibility
         const heightPx = Math.max(5, (count / maxCount) * maxHeightPx);

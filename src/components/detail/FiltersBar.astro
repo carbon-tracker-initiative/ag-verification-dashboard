@@ -561,6 +561,18 @@ const { categories } = Astro.props;
 
     buildQuestionJumpOptions();
     applyFiltersAndSort();
+
+    // Check for URL hash and auto-expand the question
+    if (window.location.hash) {
+      const hash = window.location.hash.slice(1); // Remove the '#'
+      if (hash.startsWith('question-')) {
+        const questionId = hash.replace('question-', '');
+        // Small delay to ensure DOM is ready
+        window.setTimeout(() => {
+          jumpToQuestion(questionId);
+        }, 100);
+      }
+    }
   }
 
   if (document.readyState === 'loading') {
