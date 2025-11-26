@@ -1,0 +1,34 @@
+Disclosure Framing
+
+Risk
+Disclosures classified as "Risk" specifically present the topic as a source of actual or potential harm, uncertainty, or negative consequences for the business or its stakeholders. The framing emphasizes threats, losses, challenges, or exposures that require mitigation, management, or control to prevent or minimize adverse impacts. The disclosure's language centers on what could go wrong, actions being taken to protect the business, or the need to reduce negative effects on the company or others.
+
+Opportunity
+Disclosures in the "Opportunity" category frame the risk, issue, or topic primarily as beneficial or value-creating for the business. These statements highlight potential for growth, innovation, efficiency, or positive transformation—such as developing new products, expanding markets, improving business practices, or implementing new technologies. The disclosure’s focus is on how the situation can be leveraged for improvement, competitive advantage, or other desirable outcomes, regardless of whether financial gain is explicitly stated.​
+
+Neutral
+Disclosures classified as "Neutral" do not present the subject matter as specifically negative (risk) or positive (opportunity) for the business or its stakeholders. Instead, these disclosures provide factual, descriptive, or informational content about a situation, event, or condition, without language that indicates threat, mitigation needs, advantage, or value creation. The disclosure is presented in a balanced or matter-of-fact manner, simply outlining relevant details, status reports, or background information, without clear evaluative or directional framing as either a risk or an opportunity.
+
+
+Financial Disclosure Type
+
+Financial
+Disclosures in this category provide explicit, quantifiable financial values directly linked to the business risk being described. This includes specific amounts for fines, penalties, restoration costs, legal settlements, or any other concrete monetary figures illustrating the financial impact of the disclosed risk. The financial figure must be clearly stated in relation to the risk event or exposure, rather than inferred or assumed.​
+
+Non-Financial
+Disclosures in this category neither contain explicit financial amounts nor assert the financial materiality of the risk. Any discussion is limited to qualitative or descriptive aspects of the risk’s effects on the company or third parties, mitigation efforts, or general impacts. The disclosure either makes no mention of financial impacts or explicitly states that financial specifics are not disclosed, withheld, or considered immaterial. The absence of quantified or affirmed financial impact is the defining feature.​
+
+Partial-type
+These disclosures reference financial materiality or indicate a financial impact, but do not supply an exact monetary value for the risk. The company may state that a risk, event, or outcome is financially significant, or that expenses or losses have been incurred, but omit the actual amount. Qualifying language may signal that the amount is confidential, under negotiation, subject to uncertainty, pending legal appeal, or otherwise withheld. The key characteristic is acknowledgement of financial materiality without precise quantification.
+
+Disclosure Timeframe
+AI Refined
+Backward-looking
+Disclosures classified as backward-looking refer exclusively to risk events or conditions that began and were completed in the past, with no indication that they continue or affect the company at the time of reporting. These statements describe historical circumstances, incidents, or resolved exposures and do not claim ongoing relevance for current or future periods.
+Present day
+Disclosures categorized as present day pertain to activities, risks, or conditions actively impacting the company as of the reporting date. These disclosures involve events or actions that may have started before the report but are explicitly stated as ongoing, currently relevant, or expected to persist in the near term after disclosure. They signal continued exposure or engagement, distinguishing them from completed, past events.
+Forward-looking
+Disclosures marked as forward-looking describe risks, potential events, or conditions that have not yet manifested or commenced as of the reporting date. These statements, often couched in terms of probability or hypothetical scenarios, discuss anticipated impacts or possible future developments—including both unlikely and probable outcomes—but do not provide evidence that the events have already begun.​
+
+Multiple or Unclear
+The multiple or unclear category applies to disclosures where the time horizon is ambiguous or spans more than one classification, such as lengthy texts covering several events or risks without precise temporal boundaries. Ambiguity in wording or lack of clear signals about whether a risk or event is past, present, or future places the disclosure in this catch-all group for further review.

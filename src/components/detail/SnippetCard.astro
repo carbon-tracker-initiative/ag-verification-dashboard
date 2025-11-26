@@ -121,21 +121,11 @@ const shouldShowComparisonSummary =
         </div>
         <div class="space-y-1 flex-1">
           <div class="flex flex-wrap items-center gap-2 text-xs text-slate-400 uppercase tracking-wide">
-            <span>Snippet #{index}</span>
-            <span class="font-mono text-slate-500">{snippet.snippet_id}</span>
+            <span>Disclosure #{index}</span>
             <span class="px-2 py-0.5 rounded-full text-[11px] {statusBadge.classes} hidden" data-comparison-badge="true">
               {statusBadge.label}
             </span>
           </div>
-          {snippet.source_versions && snippet.source_versions.length > 0 && (
-            <div class="flex flex-wrap items-center gap-2 text-[10px] uppercase tracking-wide text-slate-500">
-              {snippet.source_versions.map(sourceVersion => (
-                <span class="px-2 py-0.5 rounded-full border border-slate-700 bg-slate-900/70 text-slate-300">
-                  Source {sourceVersion}
-                </span>
-              ))}
-            </div>
-          )}
           {shouldShowComparisonSummary && (
             <div class="comparison-summary flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-1 sm:gap-2 text-[11px] text-slate-300" data-comparison-summary>
               <span class={`px-2.5 py-0.5 rounded-full font-semibold uppercase tracking-wide ${statusConfig.classes}`}>

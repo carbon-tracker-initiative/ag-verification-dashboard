@@ -90,10 +90,16 @@ if (companyData.hasComparison && companyData.original) {
   );
 }
 
-// Group questions by category
+// Group questions by category - filter out NO_DISCLOSURE items
 const questionsByCategory = new Map<string, Array<{ question: any; metrics: any }>>();
 
 companyData.verified.analysis_results.forEach((question, index) => {
+  // Filter out questions with no actual disclosures (hide NO_DISCLOSURE)
+  const hasDisclosures = question.disclosures && question.disclosures.length > 0;
+  if (!hasDisclosures) {
+    return; // Skip this question entirely
+  }
+
   const category = question.category || 'Other';
   if (!questionsByCategory.has(category)) {
     questionsByCategory.set(category, []);
