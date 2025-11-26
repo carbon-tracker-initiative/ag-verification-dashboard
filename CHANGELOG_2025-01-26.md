@@ -46,7 +46,8 @@ Comprehensive improvements to the Cultivating Transparency dashboard including h
 
 **Changes:**
 - Removed "Financial Rate" badge from question headers (QuestionAccordion.astro lines 142-145)
-- Hidden "CORRECTED BY VERIFICATION" yellow badge from question headers (QuestionAccordion.astro line 134)
+- Completely removed "CORRECTED BY VERIFICATION" yellow badge from question headers (QuestionAccordion.astro lines 127-131)
+- Hidden question ID from question headers (QuestionAccordion.astro line 115) - now only shows category icon and name
 - Fixed NO_DISCLOSURE filtering in company detail pages
 - Questions now only display actual disclosures (NO_DISCLOSURE items completely filtered out)
 - Modified questionsByCategory logic to:
@@ -248,6 +249,8 @@ const actualDisclosures = question.disclosures?.filter(
 - Cleaner, less technical interface
 - Only shows actual disclosures (NO_DISCLOSURE completely filtered from display)
 - **NEW: Removed Financial Rate badge from question headers**
+- **NEW: Removed "CORRECTED BY VERIFICATION" badge from question headers**
+- **NEW: Hidden question IDs from display - now only shows category icon and name**
 - **NEW: Enhanced NO_DISCLOSURE filtering - questions and snippets properly hidden**
 - Simpler filtering options
 - Better tooltips with clear definitions
