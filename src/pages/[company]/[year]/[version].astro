@@ -225,7 +225,7 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
           <summary class="cursor-pointer font-semibold text-slate-100">Categorization criteria ⓘ</summary>
           <div class="mt-3 space-y-3 text-sm leading-relaxed">
             <div>
-              <div class="font-semibold text-slate-100">Disclosure Timeframe</div>
+              <div class="font-semibold text-slate-100">Risk Disclosure Time Horizon</div>
               <ul class="list-disc list-inside space-y-1 text-slate-300">
                 <li><strong>Backward-looking</strong>: Past-only; started and completed in the past.</li>
                 <li><strong>Present day</strong>: Ongoing at report time.</li>
@@ -234,7 +234,7 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
               </ul>
             </div>
             <div>
-              <div class="font-semibold text-slate-100">Disclosure Framing</div>
+              <div class="font-semibold text-slate-100">Risk Disclosure Framing</div>
               <ul class="list-disc list-inside space-y-1 text-slate-300">
                 <li><strong>Risk</strong>: Emphasizes harm/uncertainty.</li>
                 <li><strong>Opportunity</strong>: Emphasizes benefit/value creation.</li>
@@ -283,12 +283,12 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
           </div>
 
           <div class="flex items-center gap-6">
-            <!-- Total Evidence -->
+            <!-- Total Risk Disclosures -->
             <div class="text-center">
               <div class="text-5xl font-bold text-sky-300">
                 {companyMetrics.total_snippets}
               </div>
-              <div class="text-xs text-slate-500 uppercase tracking-wide mt-2">Total Evidence disclosures</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wide mt-2">Total Risk Disclosures</div>
               {totalPagesDisplay && (
                 <div class="text-[11px] text-slate-400 mt-1">
                   From {totalPagesDisplay} pages
@@ -307,7 +307,7 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
           <div class="surface p-6 space-y-4 border border-emerald-500/20">
             <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div>
-                <h2 class="text-xl font-semibold text-emerald-200">Merged Evidence Overview</h2>
+                <h2 class="text-xl font-semibold text-emerald-200">Merged Risk Disclosure Overview</h2>
                 <p class="text-sm text-slate-400 mt-1">
                   Combined snippets from {sourceVersions.join(' + ') || 'multiple versions'} reviewed for higher fidelity disclosure analysis.
                 </p>
@@ -324,7 +324,7 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
                 <div class="text-2xl font-semibold text-slate-100 mt-1">
                   {formatNumber(mergerSummary.total_merged_snippets ?? companyMetrics.total_snippets)}
                 </div>
-                <div class="text-xs text-slate-500 mt-1">Combined evidence retained after merge</div>
+                <div class="text-xs text-slate-500 mt-1">Combined risk disclosures retained after merge</div>
               </div>
               <div class="rounded-lg border border-slate-700 bg-slate-900/60 p-4">
                 <div class="text-[10px] uppercase tracking-wide text-slate-500">Source Contributions</div>
@@ -385,7 +385,7 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
         <div class="mb-6">
           <h2 class="text-2xl font-bold text-slate-100 mb-4">Detailed Question Analysis</h2>
           <p class="text-sm text-slate-400 mb-6">
-            Explore each question with verified disclosure evidence. Questions are collapsed by default—click to expand and review the supporting disclosures.
+            Explore each question with verified risk disclosure. Questions are collapsed by default—click to expand and review the supporting disclosures.
           </p>
 
           <!-- Filters Bar -->
