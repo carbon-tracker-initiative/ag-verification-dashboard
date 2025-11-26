@@ -2,7 +2,7 @@
 /**
  * Company-Year-Version Detail Page
  * Displays comprehensive analysis for a specific company, fiscal year, and version
- * with snippet-level evidence analysis
+ * with verified disclosure evidence analysis
  */
 
 import Layout from '../../../layouts/Layout.astro';
@@ -161,7 +161,7 @@ const totalPages = pageTotals[companyData.company]?.[String(companyData.year)]?.
 const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
 ---
 
-<Layout title={`${displayCompanyName} ${year} ${version} - Analysis`}>
+<Layout title={`${displayCompanyName} ${year} - Analysis`}>
   <Header />
 
   <div class="min-h-screen bg-slate-950/70">
@@ -375,7 +375,7 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
         <div class="mb-6">
           <h2 class="text-2xl font-bold text-slate-100 mb-4">Detailed Question Analysis</h2>
           <p class="text-sm text-slate-400 mb-6">
-            Explore each question with snippet-level evidence. Questions are collapsed by default—click to expand and review the supporting disclosures.
+            Explore each question with verified disclosure evidence. Questions are collapsed by default—click to expand and review the supporting disclosures.
           </p>
 
           <!-- Filters Bar -->
