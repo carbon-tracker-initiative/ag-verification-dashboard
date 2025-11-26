@@ -167,24 +167,6 @@ const chartPayload = questionOptions.map(q => ({
           </select>
         </div>
       </section>
-
-      <!-- Question Rankings -->
-      <QuestionRankings
-        questionRankings={crossCompanyMetrics.question_rankings}
-        sortBy={sortBy}
-      />
-
-      <!-- Category Performance Overview -->
-      <section class="mb-12">
-        <h2 class="text-2xl font-bold text-slate-900 mb-6">Risk Category Performance</h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categoryMetrics
-            .sort((a, b) => b.average_question_score - a.average_question_score)
-            .map(category => (
-              <CategoryCard category={category} expandable={true} />
-            ))}
-        </div>
-      </section>
     </div>
   </main>
 

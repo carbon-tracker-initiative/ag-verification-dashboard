@@ -1,7 +1,49 @@
 # Dashboard Improvements - January 26, 2025
 
 ## Summary
-Comprehensive improvements to the Cultivating Transparency dashboard including homepage rebranding, individual company page refinements, and removal of NO_DISCLOSURE classifications from all views.
+Comprehensive improvements to the Cultivating Transparency dashboard including homepage rebranding, individual company page refinements, removal of NO_DISCLOSURE classifications from all views, and homepage simplification by removing analytics sections.
+
+---
+
+## LATEST UPDATE - Homepage Simplification (January 26, 2025 - Evening)
+
+### 10. Removed Question Performance Rankings Section
+**File:** `src/pages/index.astro`
+
+**Changes:**
+- Removed entire Question Performance Rankings component from homepage
+- Section displayed "Best Disclosed" and "Poorly Disclosed" questions
+- Removed sortable metrics (by evidence, ID, evidence count)
+
+**Rationale:** Simplify homepage focus to core cross-company visualization
+
+### 11. Removed Risk Category Performance Section
+**File:** `src/pages/index.astro`
+
+**Changes:**
+- Removed Risk Category Performance grid with 4 category cards
+- Section showed Environmental, Human Health, Market/Business, and Regulatory/Financial risk cards
+- Each card displayed metrics, classification bars, and expandable details
+
+**Rationale:** Reduce cognitive load and streamline user experience
+
+### 12. Hidden Analytics Page from Navigation
+**Files Modified:**
+- `src/components/layout/Header.astro`
+- `src/components/layout/Footer.astro`
+
+**Changes:**
+- Removed "Analytics" link from header navigation menu
+- Removed "Analytics" link from footer
+- Analytics page file (`src/pages/analytics.astro`) remains in codebase but not accessible through UI
+
+**Rationale:** Simplify navigation and focus users on main disclosure comparison features
+
+### Technical Implementation Notes:
+- **Minimal cleanup approach**: Imports and data calculations remain in index.astro for easier restoration
+- Component files (`QuestionRankings.astro`, `CategoryCard.astro`) remain in codebase
+- `calculateCategoryMetrics` function still imported and executed (unused but preserved)
+- `sortBy` URL parameter extraction still present (unused but preserved)
 
 ---
 
@@ -150,13 +192,14 @@ Comprehensive improvements to the Cultivating Transparency dashboard including h
 
 ### Modified:
 1. `src/components/home/HeroSection.astro`
-2. `src/components/layout/Header.astro`
-3. `src/layouts/Layout.astro`
-4. `src/pages/index.astro`
-5. `src/pages/[company]/[year]/[version].astro`
-6. `src/components/detail/SummaryDashboard.astro`
-7. `src/components/detail/FiltersBar.astro`
-8. `src/components/detail/SnippetCard.astro`
+2. `src/components/layout/Header.astro` (Updated: Removed Analytics nav link)
+3. `src/components/layout/Footer.astro` (Updated: Removed Analytics footer link)
+4. `src/layouts/Layout.astro`
+5. `src/pages/index.astro` (Updated: Removed Question Rankings and Category Performance sections)
+6. `src/pages/[company]/[year]/[version].astro`
+7. `src/components/detail/SummaryDashboard.astro`
+8. `src/components/detail/FiltersBar.astro`
+9. `src/components/detail/SnippetCard.astro`
 
 ---
 
@@ -167,6 +210,9 @@ Comprehensive improvements to the Cultivating Transparency dashboard including h
 - More compact statistics
 - Improved logo visibility
 - Defaults to human health question (99903)
+- **NEW: Simplified layout with Question Rankings and Category Performance sections removed**
+- **NEW: Focused on core cross-company disclosure comparison chart**
+- **NEW: Analytics page hidden from navigation (still accessible via direct URL)**
 
 ### Individual Pages:
 - Cleaner, less technical interface

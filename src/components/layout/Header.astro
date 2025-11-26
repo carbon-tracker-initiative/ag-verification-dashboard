@@ -12,8 +12,7 @@ const { currentPath = '/' } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
 const assetBase = (import.meta.env.BASE_URL || '').replace(/\/$/, '');
 const navItems = [
-  { label: 'Home', href: baseUrl },
-  { label: 'Analytics', href: `${baseUrl}/analytics` }
+  { label: 'Home', href: baseUrl }
 ];
 
 function isActive(href: string): boolean {
