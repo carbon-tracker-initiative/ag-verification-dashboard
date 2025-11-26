@@ -39,6 +39,33 @@ Comprehensive improvements to the Cultivating Transparency dashboard including h
 
 **Rationale:** Simplify navigation and focus users on main disclosure comparison features
 
+### 13. Removed Financial Rate Badge and Fixed NO_DISCLOSURE Display
+**Files Modified:**
+- `src/components/detail/QuestionAccordion.astro`
+- `src/pages/[company]/[year]/[version].astro`
+
+**Changes:**
+- Removed "Financial Rate" badge from question headers (QuestionAccordion.astro lines 142-145)
+- Fixed NO_DISCLOSURE filtering in company detail pages
+- Questions now only display actual disclosures (NO_DISCLOSURE items completely filtered out)
+- Modified questionsByCategory logic to:
+  - Filter disclosures array to exclude `classification === 'NO_DISCLOSURE'`
+  - Skip questions with zero non-NO_DISCLOSURE disclosures
+  - Pass only filtered disclosures to QuestionAccordion component
+
+**Technical Details:**
+```typescript
+// Before: Only checked if disclosures exist
+const hasDisclosures = question.disclosures && question.disclosures.length > 0;
+
+// After: Filter out NO_DISCLOSURE and only show actual disclosures
+const actualDisclosures = question.disclosures?.filter(
+  (disclosure: any) => disclosure.classification !== 'NO_DISCLOSURE'
+) || [];
+```
+
+**Rationale:** Simplify question headers by removing financial metrics, ensure NO_DISCLOSURE snippets are hidden throughout the UI
+
 ### Technical Implementation Notes:
 - **Minimal cleanup approach**: Imports and data calculations remain in index.astro for easier restoration
 - Component files (`QuestionRankings.astro`, `CategoryCard.astro`) remain in codebase
@@ -196,10 +223,12 @@ Comprehensive improvements to the Cultivating Transparency dashboard including h
 3. `src/components/layout/Footer.astro` (Updated: Removed Analytics footer link)
 4. `src/layouts/Layout.astro`
 5. `src/pages/index.astro` (Updated: Removed Question Rankings and Category Performance sections)
-6. `src/pages/[company]/[year]/[version].astro`
+6. `src/pages/[company]/[year]/[version].astro` (Updated: NO_DISCLOSURE filtering)
 7. `src/components/detail/SummaryDashboard.astro`
 8. `src/components/detail/FiltersBar.astro`
 9. `src/components/detail/SnippetCard.astro`
+10. `src/components/detail/QuestionAccordion.astro` (Updated: Removed Financial Rate badge)
+11. `src/utils/metricsCalculator.ts` (Updated: Exclude NO_DISCLOSURE from total count)
 
 ---
 
@@ -216,7 +245,9 @@ Comprehensive improvements to the Cultivating Transparency dashboard including h
 
 ### Individual Pages:
 - Cleaner, less technical interface
-- Only shows actual disclosures (NO_DISCLOSURE hidden)
+- Only shows actual disclosures (NO_DISCLOSURE completely filtered from display)
+- **NEW: Removed Financial Rate badge from question headers**
+- **NEW: Enhanced NO_DISCLOSURE filtering - questions and snippets properly hidden**
 - Simpler filtering options
 - Better tooltips with clear definitions
 - "Disclosure" terminology instead of "Snippet"

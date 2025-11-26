@@ -94,18 +94,28 @@ if (companyData.hasComparison && companyData.original) {
 const questionsByCategory = new Map<string, Array<{ question: any; metrics: any }>>();
 
 companyData.verified.analysis_results.forEach((question, index) => {
-  // Filter out questions with no actual disclosures (hide NO_DISCLOSURE)
-  const hasDisclosures = question.disclosures && question.disclosures.length > 0;
-  if (!hasDisclosures) {
+  // Filter out NO_DISCLOSURE snippets from the question
+  const actualDisclosures = question.disclosures?.filter(
+    (disclosure: any) => disclosure.classification !== 'NO_DISCLOSURE'
+  ) || [];
+
+  // Skip questions with no actual disclosures (only NO_DISCLOSURE or empty)
+  if (actualDisclosures.length === 0) {
     return; // Skip this question entirely
   }
+
+  // Create a modified question object with filtered disclosures
+  const filteredQuestion = {
+    ...question,
+    disclosures: actualDisclosures
+  };
 
   const category = question.category || 'Other';
   if (!questionsByCategory.has(category)) {
     questionsByCategory.set(category, []);
   }
   questionsByCategory.get(category)!.push({
-    question,
+    question: filteredQuestion,
     metrics: questionMetrics[index]
   });
 });
