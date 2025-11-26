@@ -17,7 +17,7 @@ const { categories } = Astro.props;
 <div class="surface sticky top-20 z-40 border border-slate-800/70 shadow-xl p-5">
   <div class="flex flex-col gap-4 w-full">
     <!-- Row 1 -->
-    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
       <div class="flex-1 min-w-[200px]">
         <label for="category-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
           Category
@@ -34,26 +34,12 @@ const { categories } = Astro.props;
       </div>
 
       <div class="flex-1 min-w-[200px]">
-        <label for="classification-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
-          Classification
-        </label>
-        <select
-          id="classification-filter"
-          class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
-        >
-          <option value="all">All Classifications</option>
-          <option value="FULL_DISCLOSURE">Disclosure</option>
-          <option value="NO_DISCLOSURE">No Disclosure</option>
-        </select>
-      </div>
-
-      <div class="flex-1 min-w-[200px]">
         <label for="financial-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
           Disclosure Type
           <span
             class="text-[12px] text-slate-400"
-            title="Financial (explicit amounts), Partial-type (financial impact noted, no exact amount), Non-Financial (no financials)."
-            aria-label="Financial (explicit amounts), Partial-type (financial impact noted, no exact amount), Non-Financial (no financials)."
+            title="Financial: Explicit quantifiable financial values linked to the risk. Partial-type: References financial materiality but no exact amount. Non-Financial: No financial amounts or materiality assertions."
+            aria-label="Financial: Explicit quantifiable financial values linked to the risk. Partial-type: References financial materiality but no exact amount. Non-Financial: No financial amounts or materiality assertions."
           >
             ⓘ
           </span>
@@ -74,8 +60,8 @@ const { categories } = Astro.props;
           Disclosure Timeframe
           <span
             class="text-[12px] text-slate-400"
-            title="Backward-looking (past only), Present day (ongoing), Forward-looking (not yet started), Multiple or Unclear."
-            aria-label="Backward-looking (past only), Present day (ongoing), Forward-looking (not yet started), Multiple or Unclear."
+            title="Backward-looking: Completed past events. Present day: Ongoing as of reporting date. Forward-looking: Anticipated future risks not yet manifested. Multiple/Unclear: Ambiguous timeframe."
+            aria-label="Backward-looking: Completed past events. Present day: Ongoing as of reporting date. Forward-looking: Anticipated future risks not yet manifested. Multiple/Unclear: Ambiguous timeframe."
           >
             ⓘ
           </span>
@@ -97,8 +83,8 @@ const { categories } = Astro.props;
           Narrative Framing
           <span
             class="text-[12px] text-slate-400"
-            title="Risk (harm/uncertainty), Opportunity (value-creating), Neutral (factual/undirected), Balanced (both)."
-            aria-label="Risk (harm/uncertainty), Opportunity (value-creating), Neutral (factual/undirected), Balanced (both)."
+            title="Risk: Harm, uncertainty, or negative consequences. Opportunity: Beneficial or value-creating. Neutral: Factual content without evaluative framing. Both: Discusses risks and opportunities together."
+            aria-label="Risk: Harm, uncertainty, or negative consequences. Opportunity: Beneficial or value-creating. Neutral: Factual content without evaluative framing. Both: Discusses risks and opportunities together."
           >
             ⓘ
           </span>
@@ -117,59 +103,9 @@ const { categories } = Astro.props;
     </div>
 
     <!-- Row 2 -->
-    <div class="flex flex-col sm:flex-row gap-3 sm:items-end">
-      <div class="min-w-[180px]">
-        <label for="sort-select" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
-          Sort By
-        </label>
-        <select
-          id="sort-select"
-          class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
-        >
-          <option value="question-id" selected>Question ID</option>
-          <option value="evidence-desc">Evidence Count (High to Low)</option>
-          <option value="evidence-asc">Evidence Count (Low to High)</option>
-          <option value="financial-type">Disclosure Type</option>
-          <option value="timeframe">Disclosure Timeframe</option>
-          <option value="framing">Narrative Framing</option>
-        </select>
-      </div>
-
-      <div class="min-w-[200px]">
-        <label for="question-jump" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
-          Jump to Question (ID)
-        </label>
-        <select
-          id="question-jump"
-          class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
-        >
-          <option value="">Show all questions</option>
-        </select>
-      </div>
-
-      <div class="flex gap-3">
-        <button
-          id="reset-filters"
-          class="px-4 py-2 text-sm font-medium text-slate-200 bg-slate-800/70 hover:bg-slate-700/80 rounded-lg transition-colors border border-slate-700"
-          title="Reset all filters"
-        >
-          Reset
-        </button>
-
-        <button
-          id="toggle-all"
-          class="px-4 py-2 text-sm font-medium text-sky-200 bg-sky-600/20 hover:bg-sky-500/30 rounded-lg transition-colors border border-sky-500/40"
-          title="Expand or collapse all questions"
-        >
-          Expand All
-        </button>
-      </div>
-    </div>
-
-    <!-- Row 3 -->
     <div class="min-w-[260px]">
       <label for="question-jump-text-full" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
-        Jump to Question (Full Text)
+        Jump to Question
       </label>
       <select
         id="question-jump-text-full"
@@ -177,6 +113,25 @@ const { categories } = Astro.props;
       >
         <option value="">Show all questions</option>
       </select>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="flex gap-3">
+      <button
+        id="reset-filters"
+        class="px-4 py-2 text-sm font-medium text-slate-200 bg-slate-800/70 hover:bg-slate-700/80 rounded-lg transition-colors border border-slate-700"
+        title="Reset all filters"
+      >
+        Reset
+      </button>
+
+      <button
+        id="toggle-all"
+        class="px-4 py-2 text-sm font-medium text-sky-200 bg-sky-600/20 hover:bg-sky-500/30 rounded-lg transition-colors border border-sky-500/40"
+        title="Expand or collapse all questions"
+      >
+        Expand All
+      </button>
     </div>
   </div>
 
@@ -198,12 +153,9 @@ const { categories } = Astro.props;
     }
 
     const categoryFilter = document.getElementById('category-filter');
-  const classificationFilter = document.getElementById('classification-filter');
   const financialFilter = document.getElementById('financial-filter');
   const timeframeFilter = document.getElementById('timeframe-filter');
   const framingFilter = document.getElementById('framing-filter');
-  const sortSelect = document.getElementById('sort-select');
-    const questionJumpSelect = document.getElementById('question-jump');
     const questionJumpTextFullSelect = document.getElementById('question-jump-text-full');
   const resetButton = document.getElementById('reset-filters');
   const toggleAllButton = document.getElementById('toggle-all');
@@ -211,12 +163,9 @@ const { categories } = Astro.props;
   const resultsCountDiv = document.getElementById('results-count');
 
     if (!(categoryFilter instanceof HTMLSelectElement) ||
-        !(classificationFilter instanceof HTMLSelectElement) ||
         !(financialFilter instanceof HTMLSelectElement) ||
         !(timeframeFilter instanceof HTMLSelectElement) ||
         !(framingFilter instanceof HTMLSelectElement) ||
-        !(sortSelect instanceof HTMLSelectElement) ||
-        !(questionJumpSelect instanceof HTMLSelectElement) ||
         !(questionJumpTextFullSelect instanceof HTMLSelectElement) ||
         !(resetButton instanceof HTMLButtonElement) ||
         !(toggleAllButton instanceof HTMLButtonElement)) {
@@ -316,9 +265,6 @@ const { categories } = Astro.props;
       if (categoryFilter.value !== 'all') {
         activeFilters.push(`Category: ${categoryFilter.options[categoryFilter.selectedIndex].text}`);
       }
-      if (classificationFilter.value !== 'all') {
-        activeFilters.push(`Classification: ${classificationFilter.options[classificationFilter.selectedIndex].text}`);
-      }
       if (financialFilter.value !== 'all') {
         activeFilters.push(`Disclosure Type: ${financialFilter.options[financialFilter.selectedIndex].text}`);
       }
@@ -344,11 +290,9 @@ const { categories } = Astro.props;
 
     function applyFiltersAndSort() {
       const categoryValue = categoryFilter.value;
-      const classificationValue = classificationFilter.value;
       const financialValue = financialFilter.value;
       const timeframeValue = timeframeFilter.value;
       const framingValue = framingFilter.value;
-      const sortValue = sortSelect.value;
 
       let visibleCount = 0;
 
@@ -356,7 +300,6 @@ const { categories } = Astro.props;
         const matchesSelected = !selectedQuestionId ||
           (questionEl.dataset.questionId || '').toLowerCase() === selectedQuestionId.toLowerCase();
         const matchesCategory = categoryValue === 'all' || questionEl.dataset.categoryId === categoryValue;
-        const matchesClassification = classificationValue === 'all' || questionEl.dataset.classification === classificationValue;
 
         const questionFinancialTypes = (questionEl.dataset.financialTypes || '')
           .split('|')
@@ -377,7 +320,7 @@ const { categories } = Astro.props;
 
         const visible = selectedQuestionId
           ? matchesSelected
-          : matchesCategory && matchesClassification && matchesFinancial && matchesTimeframe && matchesFraming;
+          : matchesCategory && matchesFinancial && matchesTimeframe && matchesFraming;
 
         if (visible) {
           questionEl.style.display = '';
@@ -386,9 +329,6 @@ const { categories } = Astro.props;
           questionEl.style.display = 'none';
         }
       });
-
-      const comparator = getComparator(sortValue);
-      [...questionNodes].sort(comparator).forEach(node => container.appendChild(node));
 
       if (resultsCountDiv instanceof HTMLElement) {
         resultsCountDiv.textContent = `Showing ${visibleCount} of ${totalQuestionCount} questions`;
@@ -408,12 +348,9 @@ const { categories } = Astro.props;
 
     function resetFilters() {
       categoryFilter.value = 'all';
-      classificationFilter.value = 'all';
       financialFilter.value = 'all';
       timeframeFilter.value = 'all';
       framingFilter.value = 'all';
-      sortSelect.value = 'question-id';
-      questionJumpSelect.value = '';
       questionJumpTextFullSelect.value = '';
       selectedQuestionId = '';
       applyFiltersAndSort();
@@ -432,14 +369,6 @@ const { categories } = Astro.props;
           text: node.dataset.questionText || ''
         }))
         .filter(item => item.id);
-
-      questionJumpSelect.innerHTML = '<option value=\"\">Show all questions</option>';
-      ids.forEach(id => {
-        const option = document.createElement('option');
-        option.value = id;
-        option.textContent = id;
-        questionJumpSelect.appendChild(option);
-      });
 
       // Deduplicate by id to avoid repeats when same question text appears multiple times
       const seen = new Set<string>();
@@ -537,23 +466,11 @@ const { categories } = Astro.props;
     });
 
     categoryFilter.addEventListener('change', applyFiltersAndSort);
-    classificationFilter.addEventListener('change', applyFiltersAndSort);
     financialFilter.addEventListener('change', applyFiltersAndSort);
     timeframeFilter.addEventListener('change', applyFiltersAndSort);
     framingFilter.addEventListener('change', applyFiltersAndSort);
-    sortSelect.addEventListener('change', applyFiltersAndSort);
-      questionJumpSelect.addEventListener('change', () => {
-        const val = questionJumpSelect.value;
-        if (questionJumpTextFullSelect && questionJumpTextFullSelect.value !== val) {
-          questionJumpTextFullSelect.value = val;
-        }
-        jumpToQuestion(val);
-      });
       questionJumpTextFullSelect.addEventListener('change', () => {
         const val = questionJumpTextFullSelect.value;
-        if (questionJumpSelect && questionJumpSelect.value !== val) {
-          questionJumpSelect.value = val;
-        }
         jumpToQuestion(val);
       });
     resetButton.addEventListener('click', resetFilters);
