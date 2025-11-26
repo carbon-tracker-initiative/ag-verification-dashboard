@@ -237,7 +237,7 @@ const applicabilityMapping = questionApplicability;
       <section class="mb-12 border-t border-slate-800 pt-8">
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <label for="company-selector" class="text-lg font-semibold text-slate-100">
-            Go directly to a company of your interest
+            Go directly to the 2024 disclosures of a company of your interest
           </label>
           <select
             id="company-selector"
@@ -248,7 +248,7 @@ const applicabilityMapping = questionApplicability;
               .sort((a, b) => a.data.company.localeCompare(b.data.company))
               .map(({ data }) => (
                 <option value={`${normalizedBaseUrl}/${data.company.toLowerCase()}/${data.year}/${data.version}`}>
-                  {data.company} - {data.year} ({data.version})
+                  {data.company}
                 </option>
               ))}
           </select>

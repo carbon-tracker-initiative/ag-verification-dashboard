@@ -508,12 +508,16 @@ const { categories } = Astro.props;
         
         // Small delay to ensure DOM is ready
         window.setTimeout(() => {
+          // Set the dropdown value to the question ID
+          if (questionJumpTextFullSelect instanceof HTMLSelectElement) {
+            questionJumpTextFullSelect.value = questionId;
+          }
+          
           // Set selectedQuestionText BEFORE calling jumpToQuestion
           // Priority: URL parameter > dropdown > map
           if (questionTextFromUrl) {
             selectedQuestionText = questionTextFromUrl;
           } else if (questionJumpTextFullSelect instanceof HTMLSelectElement) {
-            questionJumpTextFullSelect.value = questionId;
             const selectedOption = questionJumpTextFullSelect.options[questionJumpTextFullSelect.selectedIndex];
             selectedQuestionText = selectedOption ? selectedOption.textContent || '' : '';
           }

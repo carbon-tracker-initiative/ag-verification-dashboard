@@ -194,11 +194,6 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
               {versionLower !== 'team-reviewed' && (
                 <VersionBadge version={version} isLatest={isLatestVersion} size="md" />
               )}
-              {versionLower === 'team-reviewed' && isLatestVersion && (
-                <span class="inline-flex items-center rounded-md bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-800 ring-1 ring-inset ring-blue-600/20">
-                  Latest
-                </span>
-              )}
               {sectorInfo.short !== 'ALL' && (
                 <span class="px-2.5 py-1 rounded-full border border-slate-600 bg-slate-900/70 text-xs font-semibold uppercase tracking-wide text-slate-100">
                   {sectorInfo.short}
