@@ -25,40 +25,40 @@ const { globalStats } = Astro.props;
     <!-- Title and subtitle -->
     <div class="text-center mb-12">
       <h1 class="text-4xl sm:text-[46px] font-semibold text-slate-50 mb-4 tracking-tight">
-        Agricultural Risk Verification Command Center
+        Cultivating Transparency - Disclosure Explorer
       </h1>
       <p class="text-base sm:text-lg text-slate-300 max-w-3xl mx-auto">
-        Comparing verified disclosure analysis across agricultural risk categories, powered by evidence-based categorization.
+        Explore the evidence behind our analysis. Search disclosures, compare companies, and discover which sustainability risks are being addressed.
       </p>
     </div>
 
     <!-- Global stats bar -->
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
       <!-- Companies -->
-      <div class="surface p-6 text-center">
-        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Companies</div>
-        <div class="text-3xl sm:text-4xl font-semibold text-slate-100 mb-2">
+      <div class="surface p-4 text-center">
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-1.5">Companies</div>
+        <div class="text-2xl sm:text-3xl font-semibold text-slate-100 mb-1.5">
           {globalStats.total_companies}
         </div>
-        <div class="text-sm text-slate-400">with verified disclosure reviews</div>
+        <div class="text-xs text-slate-400">with verified disclosure reviews</div>
       </div>
 
       <!-- Questions -->
-      <div class="surface p-6 text-center">
-        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Unique Questions</div>
-        <div class="text-3xl sm:text-4xl font-semibold text-slate-100 mb-2">
+      <div class="surface p-4 text-center">
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-1.5">Risk Questions</div>
+        <div class="text-2xl sm:text-3xl font-semibold text-slate-100 mb-1.5">
           18
         </div>
-        <div class="text-sm text-slate-400">analyzed for transparency</div>
+        <div class="text-xs text-slate-400">analyzed for transparency</div>
       </div>
 
       <!-- Disclosures -->
-      <div class="surface p-6 text-center">
-        <div class="text-xs uppercase tracking-widest text-slate-400 mb-2">Evidence Disclosures</div>
-        <div class="text-3xl sm:text-4xl font-semibold text-slate-100 mb-2">
+      <div class="surface p-4 text-center">
+        <div class="text-xs uppercase tracking-widest text-slate-400 mb-1.5">Evidence Disclosures</div>
+        <div class="text-2xl sm:text-3xl font-semibold text-slate-100 mb-1.5">
           {formatNumber(globalStats.total_snippets)}
         </div>
-        <div class="text-sm text-slate-400">verified disclosures</div>
+        <div class="text-xs text-slate-400">verified disclosures</div>
       </div>
     </div>
   </div>

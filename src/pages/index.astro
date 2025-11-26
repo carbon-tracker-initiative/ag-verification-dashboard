@@ -7,6 +7,7 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/layout/Header.astro';
 import Footer from '../components/layout/Footer.astro';
+import ReportIntroSection from '../components/home/ReportIntroSection.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import CategoryCard from '../components/home/CategoryCard.astro';
 import QuestionRankings from '../components/home/QuestionRankings.astro';
@@ -97,10 +98,13 @@ const chartPayload = questionOptions.map(q => ({
 }));
 ---
 
-<Layout title="Verification Dashboard - Home">
+<Layout title="Cultivating Transparency Dashboard">
   <Header currentPath="/" />
 
   <main class="min-h-screen">
+    <!-- Report Introduction Section -->
+    <ReportIntroSection />
+
     <!-- Hero Section with Global Stats -->
     <HeroSection globalStats={crossCompanyMetrics.global_stats} />
 
@@ -111,8 +115,8 @@ const chartPayload = questionOptions.map(q => ({
           <h2 class="text-2xl font-bold text-slate-100 mb-2">Cross-company disclosures by question</h2>
           <p class="text-sm text-slate-400 mb-3">Select a risk question to compare total disclosures across companies.</p>
           <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:flex-wrap">
-            <label for="question-selector" class="text-sm font-medium text-slate-300 whitespace-nowrap">
-              Choose a question/risk: <span class="text-slate-300">Does the company disclose whether it thinks</span>
+            <label for="question-selector" class="text-sm font-medium text-slate-100 whitespace-nowrap">
+              <span class="text-slate-100">Does the company disclose whether it thinks</span>
             </label>
             <select
               id="question-selector"
