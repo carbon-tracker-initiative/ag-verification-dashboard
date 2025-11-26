@@ -17,7 +17,7 @@ const { categories } = Astro.props;
 <div class="surface sticky top-20 z-40 border border-slate-800/70 shadow-xl p-5">
   <div class="flex flex-col gap-4 w-full">
     <!-- Row 1 -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
       <div class="flex-1 min-w-[200px]">
         <label for="category-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
           Category
@@ -30,28 +30,6 @@ const { categories } = Astro.props;
           {categoriesConfig.categories.map(cat => (
             <option value={cat.id}>{cat.name}</option>
           ))}
-        </select>
-      </div>
-
-      <div class="flex-1 min-w-[200px]">
-        <label for="financial-filter" class="block text-xs font-semibold text-slate-300 mb-1 uppercase tracking-wide">
-          Disclosure Type
-          <span
-            class="text-[12px] text-slate-400"
-            title="Financial: Explicit quantifiable financial values linked to the risk. Partial-type: References financial materiality but no exact amount. Non-Financial: No financial amounts or materiality assertions."
-            aria-label="Financial: Explicit quantifiable financial values linked to the risk. Partial-type: References financial materiality but no exact amount. Non-Financial: No financial amounts or materiality assertions."
-          >
-            ⓘ
-          </span>
-        </label>
-        <select
-          id="financial-filter"
-          class="w-full bg-slate-900/70 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:border-transparent"
-        >
-          <option value="all">All Disclosure Types</option>
-          <option value="financial">Financial</option>
-          <option value="partial-type">Partial-type</option>
-          <option value="non-financial">Non-Financial</option>
         </select>
       </div>
 
@@ -153,7 +131,6 @@ const { categories } = Astro.props;
     }
 
     const categoryFilter = document.getElementById('category-filter');
-  const financialFilter = document.getElementById('financial-filter');
   const timeframeFilter = document.getElementById('timeframe-filter');
   const framingFilter = document.getElementById('framing-filter');
     const questionJumpTextFullSelect = document.getElementById('question-jump-text-full');
@@ -163,7 +140,6 @@ const { categories } = Astro.props;
   const resultsCountDiv = document.getElementById('results-count');
 
     if (!(categoryFilter instanceof HTMLSelectElement) ||
-        !(financialFilter instanceof HTMLSelectElement) ||
         !(timeframeFilter instanceof HTMLSelectElement) ||
         !(framingFilter instanceof HTMLSelectElement) ||
         !(questionJumpTextFullSelect instanceof HTMLSelectElement) ||
@@ -265,9 +241,6 @@ const { categories } = Astro.props;
       if (categoryFilter.value !== 'all') {
         activeFilters.push(`Category: ${categoryFilter.options[categoryFilter.selectedIndex].text}`);
       }
-      if (financialFilter.value !== 'all') {
-        activeFilters.push(`Disclosure Type: ${financialFilter.options[financialFilter.selectedIndex].text}`);
-      }
       if (timeframeFilter.value !== 'all') {
         activeFilters.push(`Timeframe: ${timeframeFilter.options[timeframeFilter.selectedIndex].text}`);
       }
@@ -290,7 +263,6 @@ const { categories } = Astro.props;
 
     function applyFiltersAndSort() {
       const categoryValue = categoryFilter.value;
-      const financialValue = financialFilter.value;
       const timeframeValue = timeframeFilter.value;
       const framingValue = framingFilter.value;
 
@@ -301,10 +273,6 @@ const { categories } = Astro.props;
           (questionEl.dataset.questionId || '').toLowerCase() === selectedQuestionId.toLowerCase();
         const matchesCategory = categoryValue === 'all' || questionEl.dataset.categoryId === categoryValue;
 
-        const questionFinancialTypes = (questionEl.dataset.financialTypes || '')
-          .split('|')
-          .map(value => value.trim().toLowerCase())
-          .filter(Boolean);
         const questionTimeframes = (questionEl.dataset.timeframes || '')
           .split('|')
           .map(value => value.trim().toLowerCase())
@@ -314,13 +282,12 @@ const { categories } = Astro.props;
           .map(value => value.trim().toLowerCase())
           .filter(Boolean);
 
-        const matchesFinancial = financialValue === 'all' || questionFinancialTypes.includes(financialValue);
         const matchesTimeframe = timeframeValue === 'all' || questionTimeframes.includes(timeframeValue);
         const matchesFraming = framingValue === 'all' || questionFramings.includes(framingValue);
 
         const visible = selectedQuestionId
           ? matchesSelected
-          : matchesCategory && matchesFinancial && matchesTimeframe && matchesFraming;
+          : matchesCategory && matchesTimeframe && matchesFraming;
 
         if (visible) {
           questionEl.style.display = '';
@@ -348,7 +315,6 @@ const { categories } = Astro.props;
 
     function resetFilters() {
       categoryFilter.value = 'all';
-      financialFilter.value = 'all';
       timeframeFilter.value = 'all';
       framingFilter.value = 'all';
       questionJumpTextFullSelect.value = '';
@@ -466,7 +432,6 @@ const { categories } = Astro.props;
     });
 
     categoryFilter.addEventListener('change', applyFiltersAndSort);
-    financialFilter.addEventListener('change', applyFiltersAndSort);
     timeframeFilter.addEventListener('change', applyFiltersAndSort);
     framingFilter.addEventListener('change', applyFiltersAndSort);
       questionJumpTextFullSelect.addEventListener('change', () => {

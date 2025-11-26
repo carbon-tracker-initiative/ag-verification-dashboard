@@ -273,8 +273,10 @@ export function calculateCompanyMetrics(analysisResult: AnalysisResult): Company
   // Calculate question metrics first to properly capture NO_DISCLOSURE questions
   const questionMetrics = questions.map(q => calculateQuestionMetrics(q));
 
-  // Get all snippets
-  const allSnippets = questions.flatMap(q => q.disclosures);
+  // Get all snippets (excluding NO_DISCLOSURE classified snippets)
+  const allSnippets = questions.flatMap(q =>
+    q.disclosures.filter(d => d.classification !== 'NO_DISCLOSURE')
+  );
 
   // Get unique categories
   const categories = Array.from(new Set(questions.map(q => q.category)));
