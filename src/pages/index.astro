@@ -318,10 +318,24 @@ const applicabilityMapping = questionApplicability;
           const heightPx = Math.max(5, (count / maxCount) * maxHeightPx);
 
           const bar = existingBars[index];
-          const countElem = bar.parentElement.querySelector('.bar-count');
+          const barWrapper = bar.parentElement;
+          const countElem = barWrapper.querySelector('.bar-count');
 
           bar.style.height = `${heightPx}px`;
           if (countElem) countElem.textContent = count;
+          
+          // Update click handler based on count
+          const currentQuestionData = chartPayload.find(q => q.question_id === questionId);
+          const questionText = currentQuestionData ? encodeURIComponent(currentQuestionData.question_text) : '';
+          const href = companyData ? `${companyData.href}#question-${questionId}&qtext=${questionText}` : '#';
+          
+          if (count > 0 && companyData) {
+            barWrapper.style.cursor = 'pointer';
+            barWrapper.onclick = () => window.location.href = href;
+          } else {
+            barWrapper.style.cursor = 'default';
+            barWrapper.onclick = null;
+          }
         });
         return;
       }
@@ -333,7 +347,11 @@ const applicabilityMapping = questionApplicability;
       sortedCompanies.forEach((companyLabel, index) => {
         const companyData = countMap.get(companyLabel);
         const count = companyData?.count || 0;
-        const href = companyData ? `${companyData.href}#question-${questionId}` : '#';
+        
+        // Get the question text for this question ID
+        const currentQuestionData = chartPayload.find(q => q.question_id === questionId);
+        const questionText = currentQuestionData ? encodeURIComponent(currentQuestionData.question_text) : '';
+        const href = companyData ? `${companyData.href}#question-${questionId}&qtext=${questionText}` : '#';
 
         // Calculate height in pixels with minimum of 5px for visibility
         const heightPx = Math.max(5, (count / maxCount) * maxHeightPx);
@@ -342,9 +360,13 @@ const applicabilityMapping = questionApplicability;
         const companyName = companyLabel.split('(')[0].trim();
 
         const barWrapper = document.createElement('div');
-        barWrapper.className = 'bar-wrapper flex flex-col items-center gap-1 flex-1 min-w-0 cursor-pointer';
-        if (companyData) {
+        
+        // Only make clickable if count > 0, otherwise just show as non-interactive
+        if (count > 0 && companyData) {
+          barWrapper.className = 'bar-wrapper flex flex-col items-center gap-1 flex-1 min-w-0 cursor-pointer';
           barWrapper.onclick = () => window.location.href = href;
+        } else {
+          barWrapper.className = 'bar-wrapper flex flex-col items-center gap-1 flex-1 min-w-0';
         }
 
         // Company name label at TOP

@@ -152,6 +152,18 @@ const { categories } = Astro.props;
       (node) => node instanceof HTMLElement
     );
 
+    // Parse all questions map from data attribute
+    let allQuestionsMap = new Map();
+    const allQuestionsData = container.getAttribute('data-all-questions');
+    if (allQuestionsData) {
+      try {
+        const parsed = JSON.parse(allQuestionsData);
+        allQuestionsMap = new Map(Object.entries(parsed));
+      } catch (e) {
+        console.error('Failed to parse all questions data:', e);
+      }
+    }
+
     let allExpanded = false;
     let selectedQuestionId = '';
     let selectedQuestionText = '';
@@ -375,6 +387,25 @@ const { categories } = Astro.props;
       );
 
       if (!targetCard) {
+        // Question exists in URL but not on page (likely has 0 disclosures)
+        // Use the selectedQuestionText which was set from URL or map
+        const questionText = selectedQuestionText || allQuestionsMap.get(questionId) || `Question ${questionId}`;
+        if (resultsCountDiv instanceof HTMLElement) {
+          resultsCountDiv.innerHTML = `<span class="text-base font-semibold">No disclosures found for: ${questionText}</span>`;
+          resultsCountDiv.classList.add('text-amber-400');
+        }
+        // Clear the filter after showing the message
+        window.setTimeout(() => {
+          selectedQuestionId = '';
+          selectedQuestionText = '';
+          if (questionJumpTextFullSelect instanceof HTMLSelectElement) {
+            questionJumpTextFullSelect.value = '';
+          }
+          applyFiltersAndSort();
+          if (resultsCountDiv instanceof HTMLElement) {
+            resultsCountDiv.classList.remove('text-amber-400');
+          }
+        }, 4000);
         return;
       }
 
@@ -460,13 +491,36 @@ const { categories } = Astro.props;
     if (window.location.hash) {
       const hash = window.location.hash.slice(1); // Remove the '#'
       if (hash.startsWith('question-')) {
-        const questionId = hash.replace('question-', '');
+        // Parse question ID and optional question text from hash
+        const hashParts = hash.split('&');
+        const questionPart = hashParts[0];
+        const questionId = questionPart.replace('question-', '');
+        
+        // Look for qtext parameter
+        let questionTextFromUrl = '';
+        hashParts.forEach(part => {
+          if (part.startsWith('qtext=')) {
+            questionTextFromUrl = decodeURIComponent(part.substring(6));
+          }
+        });
+        
         // Small delay to ensure DOM is ready
         window.setTimeout(() => {
-          // Set the dropdown value first so jumpToQuestion can read the text
-          if (questionJumpTextFullSelect instanceof HTMLSelectElement) {
+          // Set selectedQuestionText BEFORE calling jumpToQuestion
+          // Priority: URL parameter > dropdown > map
+          if (questionTextFromUrl) {
+            selectedQuestionText = questionTextFromUrl;
+          } else if (questionJumpTextFullSelect instanceof HTMLSelectElement) {
             questionJumpTextFullSelect.value = questionId;
+            const selectedOption = questionJumpTextFullSelect.options[questionJumpTextFullSelect.selectedIndex];
+            selectedQuestionText = selectedOption ? selectedOption.textContent || '' : '';
           }
+          
+          // If we still don't have text, use the map
+          if (!selectedQuestionText) {
+            selectedQuestionText = allQuestionsMap.get(questionId) || '';
+          }
+          
           jumpToQuestion(questionId);
         }, 100);
       }

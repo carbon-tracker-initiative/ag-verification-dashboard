@@ -383,7 +383,9 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
         </div>
 
         <!-- Questions Container -->
-        <div id="questions-container" class="space-y-4">
+        <div id="questions-container" class="space-y-4" data-all-questions={JSON.stringify(
+          companyData.verified.analysis_results.map(q => ({ id: q.question_id, text: q.question_text }))
+        )}>
           {Array.from(questionsByCategory.entries()).map(([categoryName, items]) => {
             const categoryConfig = categoriesConfig.categories.find(c => c.name === categoryName);
             const categoryIcon = categoryConfig?.icon || '??';
