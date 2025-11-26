@@ -108,6 +108,28 @@ enrichedCompanyData.forEach(({ data }) => {
   companyToSector.set(companyName, sectorLabel);
 });
 
+// Question sector applicability mapping
+const questionApplicability: Record<string, { sector: string; label: string }> = {
+  '99901': { sector: 'P', label: 'Applicable only to Crop protection sector' },
+  '99902': { sector: 'F', label: 'Applicable only to Fertilizers sector' },
+  '99903': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99904': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99905': { sector: 'P', label: 'Applicable only to Crop protection sector' },
+  '99906': { sector: 'P', label: 'Applicable only to Crop protection sector' },
+  '99907': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99908': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99909': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99910': { sector: 'F', label: 'Applicable only to Fertilizers sector' },
+  '99911': { sector: 'F', label: 'Applicable only to Fertilizers sector' },
+  '99912': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99913': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99914': { sector: 'P', label: 'Applicable only to Crop protection sector' },
+  '99915': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99916': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99917': { sector: 'PF', label: 'Applicable to both sectors' },
+  '99918': { sector: 'F', label: 'Applicable only to Fertilizers sector' }
+};
+
 const chartPayload = questionOptions.map(q => ({
   question_id: q.question_id,
   question_text: q.question_text,
@@ -115,6 +137,7 @@ const chartPayload = questionOptions.map(q => ({
 }));
 
 const sectorMapping = Object.fromEntries(companyToSector);
+const applicabilityMapping = questionApplicability;
 ---
 
 <Layout title="Cultivating Transparency Dashboard">
@@ -152,6 +175,9 @@ const sectorMapping = Object.fromEntries(companyToSector);
 
         <div class="mb-3 h-16 flex items-start">
           <h3 id="question-title" class="text-lg font-semibold text-sky-400 line-clamp-3">Does the company disclose...</h3>
+        </div>
+        <div class="mb-3">
+          <p id="question-applicability" class="text-xs text-slate-400 italic"></p>
         </div>
 
         <div class="surface border border-slate-800 p-4 sm:p-6 rounded-xl">
@@ -228,10 +254,11 @@ const sectorMapping = Object.fromEntries(companyToSector);
     </div>
   </main>
 
-  <script define:vars={{ chartPayload, selectedQuestionId, sectorMapping }}>
+  <script define:vars={{ chartPayload, selectedQuestionId, sectorMapping, applicabilityMapping }}>
     const chartContainer = document.getElementById('question-chart');
     const selectEl = document.getElementById('question-selector');
     const questionTitle = document.getElementById('question-title');
+    const questionApplicability = document.getElementById('question-applicability');
 
     function updateQuestionTitle(questionId) {
       const questionData = chartPayload.find(q => q.question_id === questionId);
@@ -239,6 +266,13 @@ const sectorMapping = Object.fromEntries(companyToSector);
 
       // Show full question text in title
       questionTitle.textContent = questionData.question_text;
+      
+      // Update applicability info
+      if (questionApplicability && applicabilityMapping[questionId]) {
+        questionApplicability.textContent = applicabilityMapping[questionId].label;
+      } else if (questionApplicability) {
+        questionApplicability.textContent = '';
+      }
     }
 
     function getShortQuestionText(fullText) {
