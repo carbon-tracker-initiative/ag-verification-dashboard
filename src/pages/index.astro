@@ -185,7 +185,7 @@ const applicabilityMapping = questionApplicability;
             <span class="w-3 h-3 rounded-full" style="background-color: #10b981;"></span>
             <span class="text-emerald-400 font-medium">Total disclosures</span>
           </div>
-          <div id="question-chart" class="flex items-end justify-around gap-2 h-96 px-4">
+          <div id="question-chart" class="flex flex-col gap-1 w-full px-4 py-2">
             <!-- Bars will be rendered here via JavaScript -->
           </div>
           <div class="mt-4 text-xs text-slate-400 border-t border-slate-800 pt-3">
@@ -297,38 +297,61 @@ const applicabilityMapping = questionApplicability;
       // Create a map for quick lookup of counts by company label
       const countMap = new Map(questionData.companyCounts.map(c => [c.label, c]));
 
-      // Get all unique companies from all questions and sort alphabetically
+      // Get all unique companies from all questions and sort by count (descending)
       const allCompanies = new Set();
       chartPayload.forEach(q => {
         q.companyCounts.forEach(c => allCompanies.add(c.label));
       });
-      const sortedCompanies = Array.from(allCompanies).sort((a, b) => a.localeCompare(b));
+      const sortedCompanies = Array.from(allCompanies).sort((a, b) => {
+        const countA = countMap.get(a)?.count || 0;
+        const countB = countMap.get(b)?.count || 0;
+        // Primary sort: by count (descending)
+        if (countB !== countA) {
+          return countB - countA;
+        }
+        // Secondary sort: alphabetically (ascending) for ties
+        return a.localeCompare(b);
+      });
 
       // Find max value for scaling across all companies
       const allCounts = sortedCompanies.map(label => countMap.get(label)?.count || 0);
       const maxCount = Math.max(...allCounts, 1);
-      const maxHeightPx = 320; // Max height in pixels
 
-      // If bars already exist, update their heights with transition
+      // If bars already exist, update their widths with transition
       const existingBars = chartContainer.querySelectorAll('.chart-bar');
       if (existingBars.length === sortedCompanies.length) {
         sortedCompanies.forEach((companyLabel, index) => {
           const companyData = countMap.get(companyLabel);
           const count = companyData?.count || 0;
-          const heightPx = Math.max(5, (count / maxCount) * maxHeightPx);
+          const widthPercent = Math.max(2, (count / maxCount) * 100);
 
           const bar = existingBars[index];
-          const barWrapper = bar.parentElement;
-          const countElem = barWrapper.querySelector('.bar-count');
+          const barContainer = bar.parentElement; // Navigate up to barContainer
+          const barWrapper = barContainer.parentElement; // Navigate up to wrapper
+          const countElem = barContainer.querySelector('.bar-count');
+          const sectorElem = bar.querySelector('.absolute.right-2');
 
-          bar.style.height = `${heightPx}px`;
+          // Update width with transition
+          bar.style.width = count === 0 ? '60px' : `${widthPercent}%`;
+          bar.style.opacity = count === 0 ? '0.15' : '1';
+          bar.style.border = count === 0 ? '1px dashed rgba(100, 116, 139, 0.3)' : 'none';
+          bar.style.background = count === 0
+            ? 'linear-gradient(90deg, rgba(16, 185, 129, 0.3) 0%, rgba(5, 150, 105, 0.3) 100%)'
+            : 'linear-gradient(90deg, #10b981 0%, #059669 100%)';
+
           if (countElem) countElem.textContent = count;
-          
+
+          if (sectorElem) {
+            sectorElem.style.color = count === 0
+              ? 'rgba(148, 163, 184, 0.6)'
+              : 'rgba(255, 255, 255, 0.7)';
+          }
+
           // Update click handler based on count
           const currentQuestionData = chartPayload.find(q => q.question_id === questionId);
           const questionText = currentQuestionData ? encodeURIComponent(currentQuestionData.question_text) : '';
           const href = companyData ? `${companyData.href}#question-${questionId}&qtext=${questionText}` : '#';
-          
+
           if (count > 0 && companyData) {
             barWrapper.style.cursor = 'pointer';
             barWrapper.onclick = () => window.location.href = href;
@@ -343,67 +366,87 @@ const applicabilityMapping = questionApplicability;
       // Clear and create new bars
       chartContainer.innerHTML = '';
 
-      // Create vertical bars for ALL companies
+      // Create horizontal bars for ALL companies
       sortedCompanies.forEach((companyLabel, index) => {
         const companyData = countMap.get(companyLabel);
         const count = companyData?.count || 0;
-        
+
         // Get the question text for this question ID
         const currentQuestionData = chartPayload.find(q => q.question_id === questionId);
         const questionText = currentQuestionData ? encodeURIComponent(currentQuestionData.question_text) : '';
         const href = companyData ? `${companyData.href}#question-${questionId}&qtext=${questionText}` : '#';
 
-        // Calculate height in pixels with minimum of 5px for visibility
-        const heightPx = Math.max(5, (count / maxCount) * maxHeightPx);
+        // Calculate width percentage with minimum of 2% for bars with counts
+        const widthPercent = Math.max(2, (count / maxCount) * 100);
 
         // Extract just company name (remove year and team-reviewed)
         const companyName = companyLabel.split('(')[0].trim();
 
         const barWrapper = document.createElement('div');
-        
+
         // Only make clickable if count > 0, otherwise just show as non-interactive
         if (count > 0 && companyData) {
-          barWrapper.className = 'bar-wrapper flex flex-col items-center gap-1 flex-1 min-w-0 cursor-pointer';
+          barWrapper.className = 'bar-wrapper flex flex-row items-center gap-3 w-full cursor-pointer hover:bg-slate-900/30 rounded-lg p-1.5 transition-all duration-200';
           barWrapper.onclick = () => window.location.href = href;
         } else {
-          barWrapper.className = 'bar-wrapper flex flex-col items-center gap-1 flex-1 min-w-0';
+          barWrapper.className = 'bar-wrapper flex flex-row items-center gap-3 w-full rounded-lg p-1.5';
         }
 
-        // Company name label at TOP
+        // Company name label at LEFT
         const label = document.createElement('div');
-        label.className = 'text-xs text-slate-400 text-center w-full leading-tight mb-1';
-        label.style.wordWrap = 'break-word';
-        label.style.hyphens = 'auto';
+        label.className = 'text-sm text-slate-300 font-medium text-left flex-shrink-0';
+        label.style.width = '140px';
+        label.style.overflow = 'hidden';
+        label.style.textOverflow = 'ellipsis';
+        label.style.whiteSpace = 'nowrap';
         label.textContent = companyName;
         label.title = companyName;
 
+        // Bar container (flex-1 to fill available space, flex-row for bar + count)
+        const barContainer = document.createElement('div');
+        barContainer.className = 'flex-1 flex flex-row items-center gap-2';
+        barContainer.style.minWidth = '0';
+
+        // Bar element
         const bar = document.createElement('div');
-        bar.className = 'chart-bar w-full rounded-t shadow-lg';
-        bar.style.height = `${heightPx}px`;
-        bar.style.background = 'linear-gradient(180deg, #10b981 0%, #059669 100%)';
-        bar.style.minHeight = '5px';
+        bar.className = 'chart-bar h-8 rounded shadow-lg relative flex items-center';
+        bar.style.width = count === 0 ? '60px' : `${widthPercent}%`;
+        bar.style.background = count === 0
+          ? 'linear-gradient(90deg, rgba(16, 185, 129, 0.3) 0%, rgba(5, 150, 105, 0.3) 100%)'
+          : 'linear-gradient(90deg, #10b981 0%, #059669 100%)';
+        bar.style.opacity = count === 0 ? '0.15' : '1';
+        bar.style.border = count === 0 ? '1px dashed rgba(100, 116, 139, 0.3)' : 'none';
+        bar.style.boxShadow = count === 0
+          ? 'none'
+          : '0 2px 4px -1px rgba(16, 185, 129, 0.3), 0 1px 2px -1px rgba(16, 185, 129, 0.2)';
         bar.style.transition = 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)';
-        bar.style.boxShadow = '0 4px 6px -1px rgba(16, 185, 129, 0.3), 0 2px 4px -1px rgba(16, 185, 129, 0.2)';
         bar.title = `${companyName}: ${count} disclosure${count === 1 ? '' : 's'}`;
 
-        const count_elem = document.createElement('div');
-        count_elem.className = 'bar-count text-xs font-semibold text-slate-300 mt-1';
-        count_elem.textContent = count;
-
-        // Separator line between count and sector
-        const separator = document.createElement('div');
-        separator.className = 'w-full border-t border-slate-700 my-1';
-
-        // Sector label at BOTTOM
+        // Sector label INSIDE the bar (absolute positioned)
         const sectorLabel = document.createElement('div');
-        sectorLabel.className = 'text-[10px] text-slate-500 text-center w-full font-semibold';
+        sectorLabel.className = 'text-xs font-semibold absolute right-2';
+        sectorLabel.style.color = count === 0
+          ? 'rgba(148, 163, 184, 0.9)'  // More visible gray for zero-count
+          : 'rgba(255, 255, 255, 0.7)';  // Semi-transparent white
+        sectorLabel.style.textShadow = count === 0
+          ? 'none'
+          : '0 1px 2px rgba(0, 0, 0, 0.3)'; // Subtle shadow for readability
+        sectorLabel.style.pointerEvents = 'none';
         sectorLabel.textContent = sectorMapping[companyName] || 'F&P';
 
+        // Count element NEXT TO bar
+        const count_elem = document.createElement('div');
+        count_elem.className = 'bar-count text-sm font-semibold text-slate-300 flex-shrink-0';
+        count_elem.style.minWidth = '30px';
+        count_elem.style.textAlign = 'left';
+        count_elem.textContent = count;
+
+        // Assemble DOM: label → barContainer (bar + count)
+        bar.appendChild(sectorLabel);
+        barContainer.appendChild(bar);
+        barContainer.appendChild(count_elem);
         barWrapper.appendChild(label);
-        barWrapper.appendChild(bar);
-        barWrapper.appendChild(count_elem);
-        barWrapper.appendChild(separator);
-        barWrapper.appendChild(sectorLabel);
+        barWrapper.appendChild(barContainer);
         chartContainer.appendChild(barWrapper);
       });
 
@@ -413,7 +456,7 @@ const applicabilityMapping = questionApplicability;
         wrapper.addEventListener('mouseenter', () => {
           allBars.forEach(other => {
             if (other !== wrapper) {
-              other.style.opacity = '0.3';
+              other.style.opacity = '0.5';
             }
           });
         });
