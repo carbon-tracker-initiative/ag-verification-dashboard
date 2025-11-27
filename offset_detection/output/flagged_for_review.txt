@@ -1,0 +1,11 @@
+================================================================================
+ITEMS FLAGGED FOR MANUAL REVIEW
+================================================================================
+
+Total flagged: 1
+
+Company: FMC
+Document: FMC CORP files (ARS) Annual report to security holders (paper filing), for period end 31-Dec-24.pdf
+Confidence: LOW
+Reason: Low confidence: Only 1/2 samples agree. Manual review recommended.
+

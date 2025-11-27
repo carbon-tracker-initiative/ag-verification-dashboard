@@ -1,0 +1,39 @@
+================================================================================
+PAGE OFFSET DETECTION REPORT
+================================================================================
+
+Generated: 2025-11-22 16:50:11
+Source: H:\D_and_M\Ag_project\ag-verification-dashboard\public\source_documents
+Year: 2024
+
+SUMMARY STATISTICS
+--------------------------------------------------------------------------------
+Total documents processed: 1
+
+Confidence Distribution:
+  HIGH      :   0 (  0.0%)
+  MEDIUM    :   0 (  0.0%)
+  LOW       :   1 (100.0%)
+  NONE      :   0 (  0.0%)
+
+Documents with offset: 1
+Documents without offset: 0
+
+Offset Statistics:
+  Min: 31
+  Max: 31
+  Mean: 31.00
+  Median: 31
+  Mode: 31
+
+
+DETAILED RESULTS
+================================================================================
+
+FMC_2024
+  Document: FMC CORP files (ARS) Annual report to security holders (paper filing), for period end 31-Dec-24.pdf
+  Offset: 31
+  Confidence: LOW
+  Samples: 1/2 agreed
+  WARNING: Low confidence: Only 1/2 samples agree. Manual review recommended.
+

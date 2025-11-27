@@ -141,7 +141,7 @@ const displayCompanyName = companyData.company;
 const breadcrumbItems = [
   { label: 'Home', href: import.meta.env.BASE_URL },
   { label: displayCompanyName, href: '#' },
-  { label: `${year} ${version}`, href: '#', current: true }
+  { label: year.toString(), href: '#', current: true }
 ];
 
 const sectorLabelMap: Record<string, { short: string; long: string }> = {
