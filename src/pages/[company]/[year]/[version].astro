@@ -51,6 +51,13 @@ if (!companyData) {
   return Astro.redirect('/');
 }
 
+// Get all company data for navigation
+const allCompanyData = await loadAllCompanyData();
+const allCompanyNames = [...new Set(allCompanyData.map(d => d.company))].sort();
+const currentCompanyIndex = allCompanyNames.findIndex(c => c.toLowerCase() === company.toLowerCase());
+const previousCompany = currentCompanyIndex > 0 ? allCompanyNames[currentCompanyIndex - 1] : null;
+const nextCompany = currentCompanyIndex < allCompanyNames.length - 1 ? allCompanyNames[currentCompanyIndex + 1] : null;
+
 // Get all available versions for this company-year
 const availableVersions = await getVersionsForCompanyYear(company, yearNum);
 const isLatestVersion = availableVersions[0] === version;
@@ -165,18 +172,71 @@ const totalPagesDisplay = totalPages ? formatNumber(totalPages) : null;
   <Header />
 
   <div class="min-h-screen bg-slate-950/70">
-    <!-- Sticky Back Button -->
+    <!-- Sticky Navigation Header -->
     <div class="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-sm border-b border-slate-800/50 shadow-lg">
       <div class="container mx-auto px-6 py-3">
-        <a 
-          href="/ag-verification-dashboard/" 
-          class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg transition-colors duration-200 text-sm font-medium border border-slate-700 hover:border-slate-600"
-        >
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-          </svg>
-          Back to All Companies
-        </a>
+        <div class="flex items-center justify-between gap-4">
+          <!-- Back Button -->
+          <a 
+            href="/ag-verification-dashboard/" 
+            class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg transition-colors duration-200 text-sm font-medium border border-slate-700 hover:border-slate-600"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+            </svg>
+            Back to All Companies
+          </a>
+          
+          <!-- Company Navigation -->
+          <div class="flex items-center gap-2">
+            <!-- Previous Company Button -->
+            {previousCompany ? (
+              <a 
+                href={`/ag-verification-dashboard/${previousCompany.toLowerCase()}/${year}/${version}`}
+                class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg transition-colors duration-200 text-sm font-medium border border-slate-700 hover:border-slate-600"
+                title={`Previous: ${previousCompany}`}
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Previous
+              </a>
+            ) : (
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-600 text-slate-400 rounded-lg text-sm font-medium border border-slate-600 cursor-not-allowed">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Previous
+              </div>
+            )}
+            
+            <!-- Company indicator -->
+            <span class="px-3 py-2 bg-slate-800 text-slate-300 rounded-lg text-sm font-medium border border-slate-700">
+              {currentCompanyIndex + 1} of {allCompanyNames.length}
+            </span>
+            
+            <!-- Next Company Button -->
+            {nextCompany ? (
+              <a 
+                href={`/ag-verification-dashboard/${nextCompany.toLowerCase()}/${year}/${version}`}
+                class="inline-flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg transition-colors duration-200 text-sm font-medium border border-slate-700 hover:border-slate-600"
+                title={`Next: ${nextCompany}`}
+              >
+                Next
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            ) : (
+              <div class="inline-flex items-center gap-2 px-4 py-2 bg-slate-600 text-slate-400 rounded-lg text-sm font-medium border border-slate-600 cursor-not-allowed">
+                Next
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
     
