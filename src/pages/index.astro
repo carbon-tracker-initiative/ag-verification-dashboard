@@ -185,7 +185,7 @@ const applicabilityMapping = questionApplicability;
             <span class="w-3 h-3 rounded-full" style="background-color: #10b981;"></span>
             <span class="text-emerald-400 font-medium">Total disclosures</span>
           </div>
-          <div id="question-chart" class="flex flex-col gap-1 w-full px-4 py-2">
+          <div id="question-chart" class="flex flex-col gap-1 w-full px-4 py-2" style="max-width: 80%;">
             <!-- Bars will be rendered here via JavaScript -->
           </div>
           <div class="mt-4 text-xs text-slate-400 border-t border-slate-800 pt-3">
@@ -317,53 +317,7 @@ const applicabilityMapping = questionApplicability;
       const allCounts = sortedCompanies.map(label => countMap.get(label)?.count || 0);
       const maxCount = Math.max(...allCounts, 1);
 
-      // If bars already exist, update their widths with transition
-      const existingBars = chartContainer.querySelectorAll('.chart-bar');
-      if (existingBars.length === sortedCompanies.length) {
-        sortedCompanies.forEach((companyLabel, index) => {
-          const companyData = countMap.get(companyLabel);
-          const count = companyData?.count || 0;
-          const widthPercent = Math.max(2, (count / maxCount) * 100);
-
-          const bar = existingBars[index];
-          const barContainer = bar.parentElement; // Navigate up to barContainer
-          const barWrapper = barContainer.parentElement; // Navigate up to wrapper
-          const countElem = barContainer.querySelector('.bar-count');
-          const sectorElem = bar.querySelector('.absolute.right-2');
-
-          // Update width with transition
-          bar.style.width = count === 0 ? '60px' : `${widthPercent}%`;
-          bar.style.opacity = count === 0 ? '0.15' : '1';
-          bar.style.border = count === 0 ? '1px dashed rgba(100, 116, 139, 0.3)' : 'none';
-          bar.style.background = count === 0
-            ? 'linear-gradient(90deg, rgba(16, 185, 129, 0.3) 0%, rgba(5, 150, 105, 0.3) 100%)'
-            : 'linear-gradient(90deg, #10b981 0%, #059669 100%)';
-
-          if (countElem) countElem.textContent = count;
-
-          if (sectorElem) {
-            sectorElem.style.color = count === 0
-              ? 'rgba(148, 163, 184, 0.6)'
-              : 'rgba(255, 255, 255, 0.7)';
-          }
-
-          // Update click handler based on count
-          const currentQuestionData = chartPayload.find(q => q.question_id === questionId);
-          const questionText = currentQuestionData ? encodeURIComponent(currentQuestionData.question_text) : '';
-          const href = companyData ? `${companyData.href}#question-${questionId}&qtext=${questionText}` : '#';
-
-          if (count > 0 && companyData) {
-            barWrapper.style.cursor = 'pointer';
-            barWrapper.onclick = () => window.location.href = href;
-          } else {
-            barWrapper.style.cursor = 'default';
-            barWrapper.onclick = null;
-          }
-        });
-        return;
-      }
-
-      // Clear and create new bars
+      // Always clear and create new bars to ensure correct order and click handlers
       chartContainer.innerHTML = '';
 
       // Create horizontal bars for ALL companies
