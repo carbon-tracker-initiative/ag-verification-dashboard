@@ -824,6 +824,42 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99918-001",
+            "quote": "Transition Risks... Increased energy transition costs.",
+            "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly identifies 'Increased energy transition costs' as a 'Transition Risk.' This directly addresses the concern of rising energy input costs, framing it as a negative consequence or threat to the business in the context of transitioning to a decarbonized economy.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The snippet explicitly labels this as a 'Transition Risk' and uses the term 'Increased costs,' clearly framing it as a negative consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet explicitly mentions 'Increased energy transition costs' as a financial impact, but does not provide specific monetary values for these potential increases.",
+              "timeframe": "Future",
+              "timeframe_justification": "The term 'energy transition costs' implies future investments and changes, making this a forward-looking risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
             "snippet_id": "99918-002",
             "quote": "Market Risks... Increased production costs due to greater costs of resources such as energy and/or water.",
             "source": "2024 SQM Sustainability Report.pdf, Page 185, Climate Change Risks and Opportunities",

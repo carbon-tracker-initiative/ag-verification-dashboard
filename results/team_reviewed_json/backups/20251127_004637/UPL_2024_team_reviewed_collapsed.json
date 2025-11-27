@@ -93,6 +93,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99901-003",
+            "quote": "Mitigation measures: Develop innovative products and improved formulations while engaging closely with farmers and customers to address evolving trends and pest resistance.",
+            "source": "UPL Ltd. (512070-IN) - Annual Report for period end 31-Mar-2025 (English).pdf, Page 49, Risk Management",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet provides the company's mitigation strategy for the identified risk of pest resistance, detailing actions like developing 'innovative products and improved formulations'. While it doesn't re-state the risk, it directly addresses the management of a previously identified business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "This snippet describes actions taken to 'address evolving trends and pest resistance', which is a response to a perceived threat, thus framing it as a risk management activity.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure outlines strategic actions and efforts but does not include any explicit financial figures or statements about financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The mitigation measures described are ongoing ('develop innovative products') and aimed at addressing 'evolving trends' and future 'pest resistance', indicating a forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Language is risk adjacent i.e. mitigation",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99901-004",
             "quote": "UPL with its range of herbicides provides sustained weed-control at all stages of the crop growth. Herbicides get rid of weeds that would otherwise compete for light, moisture, and nutrients with the crops, affecting the quality and quantity of produce. Our newer formulations have been developed to tackle the increasing problem of glyphosate-resistance and to kill weeds with real-time data from the field.",
             "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 40, Crop Protection",
@@ -194,6 +230,78 @@
               "relevant_risk": "YES",
               "duplicate": "NO",
               "notes": "Language is risk adjacent i.e. increasing problem, but more of an opportunity focus.",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99901-007",
+            "quote": "The integration of biosolutions with conventional plant protection products answers the latest challenges in agriculture by: ... Manage Resistance and Residues",
+            "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 41, ProNutiva",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly lists 'Manage Resistance' as one of the 'latest challenges in agriculture' that their integrated solutions address. This directly identifies pesticide resistance as a business challenge.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'answers the latest challenges in agriculture' frames resistance as a problem that requires a solution, indicating a risk to agricultural productivity and, by extension, to the business providing solutions.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This disclosure identifies a challenge and a solution but does not provide any financial figures or explicit statements about the financial materiality of managing resistance.",
+              "timeframe": "Current",
+              "timeframe_justification": "The term 'latest challenges' implies a current and ongoing issue that the company is actively addressing."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Language is risk adjacent but more opportunity adjacent",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99901-008",
+            "quote": "In Spain, UPL is developing sustainable strategies for citrus growers facing new challenges due to the Farm to Fork agenda, resistance issues, and climate change.",
+            "source": "UPL Ltd. (512070-IN) - Annual Report for period end 31-Mar-2025 (English).pdf, Page 56, Message from the CEO, UPL Corporation",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly states that citrus growers are 'facing new challenges due to... resistance issues'. This directly links resistance to challenges for their customers, which in turn poses a risk to UPL's business in serving those customers.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'facing new challenges due to... resistance issues' clearly frames resistance as a negative condition that requires strategic development, indicating a risk to their customers' operations and UPL's market.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This disclosure identifies 'resistance issues' as a challenge but does not provide any financial figures or explicit statements about its financial materiality to UPL.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrase 'facing new challenges' indicates an ongoing and current situation that requires the development of strategies."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Actions but no risk indication",
               "remove_from_analysis": "",
               "highlight": "",
               "correct_classification": "UNCLEAR"
@@ -391,6 +499,42 @@
               "correct_classification": "UNCLEAR"
             },
             "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99903-007",
+            "quote": "In Brazil, the UPspray project, initiated in 2020, involves a free app offering around 40 guidelines and recommendations for safer pesticide application. The primary objective is to guide farmers in the correct and safe application of products by providing data on product quantities, appropriate use of PPE, filter adjustments, sprayer maintenance, and application history, the app allows the farmers to minimize environmental risks and improve their resource management.",
+            "source": "UPL Ltd. (512070-IN) - Annual Report for period end 31-Mar-2025 (English).pdf, Page 145, UPspray App",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a risk mitigation action but does not explicitly frame the underlying issue (health problems from unsafe application) as a risk to the business. It acknowledges the topic of safe application but doesn't characterize it as a business risk, making UNCLEAR the correct classification.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'safer pesticide application' and 'correct and safe application' implies that unsafe application poses risks, which the company is addressing through an opportunity (the app) to improve safety.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This disclosure describes a project and its objectives related to safety but does not provide any financial figures or explicit statements about the financial materiality of potential health problems from unsafe product use.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The project was 'initiated in 2020' and continues to be active, with the app providing ongoing guidelines, indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes a risk mitigation action but does not explicitly frame the underlying issue (health problems from unsafe application) as a risk to the business. It acknowledges the topic of safe application but doesn't characterize it as a business risk, making UNCLEAR the correct classification.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Mentions environmental risk, but for Farmers. Corporate role?",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
           }
         ]
       },
@@ -527,6 +671,42 @@
               "financial_justification": "The snippet explicitly mentions 'operational costs' as a negative impact, indicating a financial implication, but does not provide specific monetary values or a definitive statement of financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The discussion of a 'decarbonization roadmap' and 'transitioning to a low-carbon future' indicates a forward-looking timeframe, while 'operational costs' are present-day concerns."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99904-005",
+            "quote": "Transition risks: Legal and policy, Technology, Market. Reputational",
+            "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 62, Climate Risk",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet lists 'Legal and policy' as a 'Transition risk' under climate change. Regulatory changes, such as carbon pricing or taxes, fall under legal and policy risks and can lead to carbon costs, thus identifying a potential financial risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The categorization as 'Transition risks' inherently frames these factors as potential threats or challenges that the business must navigate due to the shift to a low-carbon economy.",
+              "financial_type": "Partial-type",
+              "financial_justification": "While 'Legal and policy' does not explicitly state a financial amount, it implies potential financial impacts (e.g., fines, taxes, compliance costs) that could arise from regulatory changes related to carbon emissions, thus indicating partial financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "Transition risks are inherently forward-looking, referring to potential changes and impacts that have not yet fully manifested but are anticipated due to evolving climate policies."
             },
             "financial_amounts": [
               "None"
@@ -1039,6 +1219,43 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99906-007",
+            "quote": "Occupational Health and Safety: Most of our Indian sites are ISO45001:2018 certified. We are actively considering additional ISO certifications for all our UPL sites, prioritizing their relevance and significance to our business. Moreover, we ensure regular safety training for both our permanent and contractual staff members. Positive Impacts: Safety and Compliance, Employee Well-being. Negative Impacts: Cost and Resources, Implementation charges (time consuming and challenging)",
+            "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 68, Material Topics",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet acknowledges Occupational Health and Safety as a material topic but does not characterize the underlying hazards as a risk to the business. It frames the costs of implementing safety measures ('Cost and Resources') as a 'Negative Impact', which is distinct from identifying the risk of workplace incidents.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The mention of 'Negative Impacts: Cost and Resources, Implementation charges' clearly frames the topic as a potential challenge or threat to the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The snippet explicitly mentions 'Cost and Resources' and 'Implementation charges' as negative impacts, indicating financial implications, but does not provide specific monetary values or a definitive statement of financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The discussion of ongoing certifications, training, and implementation challenges indicates a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet acknowledges Occupational Health and Safety as a material topic but does not characterize the underlying hazards as a risk to the business. It frames the costs of implementing safety measures ('Cost and Resources') as a 'Negative Impact', which is distinct from identifying the risk of workplace incidents.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
             "snippet_id": "99906-008",
             "quote": "0.22 Global Total Recordable Injury Frequency Rate (TRFR)",
             "source": "UPL Ltd. (512070-IN) - Annual Report for period end 31-Mar-2025 (English).pdf, Page 4, UPL Factsheet - Social",
@@ -1061,6 +1278,42 @@
             "verification_corrected": true,
             "comparison_status": "classification_corrected",
             "correction_note": "[CORRECTED BY VERIFICATION] The snippet provides a data point (TRFR) but does not characterize workplace injuries or the underlying hazards as a risk to the business. It is a neutral metric, which fits the definition of UNCLEAR (topic acknowledged but not characterized as a business risk).",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99906-009",
+            "quote": "Tier 1 Process Safety Incident: 0 (FY23-24), Tier 2 Process Safety Incident: 0.02 (FY23-24)",
+            "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 128, Process Safety Incident Rates: India Manufacturing",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] Similar to the TRFR snippet, this provides data points on safety incidents without characterizing them as a risk to the business. It acknowledges the topic but does not frame it as a business risk, making the classification UNCLEAR.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The reporting of 'Process Safety Incident Rates' implies that such incidents are negative events that the company tracks and aims to minimize, framing process safety hazards as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "These are quantitative, non-financial metrics that indicate the frequency of process safety incidents, which can have indirect financial implications but do not provide explicit monetary values.",
+              "timeframe": "Historical",
+              "timeframe_justification": "These incident rates are reported for the financial year FY23-24, indicating a backward-looking assessment of past performance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] Similar to the TRFR snippet, this provides data points on safety incidents without characterizing them as a risk to the business. It acknowledges the topic but does not frame it as a business risk, making the classification UNCLEAR.",
             "original_classification": "UNCLEAR",
             "reviewer_classification_missing": false,
             "annotations": {
@@ -1215,6 +1468,43 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99909-002",
+            "quote": "Applique Bem- Brazil is a program carried out in partnership with the Agronomic Institute (IAC). It evaluates the conditions of sprayers used in agriculture, assesses spraying and safety conditions, proposes necessary improvements, and provides training to applicators and farmers. The program’s benefits include increased applicator safety, improved pest and disease resistance management, reduced water use, enhanced food quality, and minimized environmental contamination, all contributing to sustainable and secure food chains.",
+            "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 145, Aplique Bem- Brazil",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes the benefits of a farmer training program. While it aims to minimize environmental contamination, it does not identify this contamination as a risk *to the company's business*. Therefore, the classification should be UNCLEAR.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The program's benefit of 'minimized environmental contamination' is framed as a positive outcome, but it inherently acknowledges the underlying 'risk' of contamination if proper practices are not followed.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes the benefits of a training program for reducing environmental contamination but does not provide any explicit financial figures or statements about the financial materiality of these risks.",
+              "timeframe": "Current",
+              "timeframe_justification": "The program is 'still active in Brazil' and provides ongoing training, indicating a present-day and continuous effort to address the risk."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes the benefits of a farmer training program. While it aims to minimize environmental contamination, it does not identify this contamination as a risk *to the company's business*. Therefore, the classification should be UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
             "snippet_id": "99909-003",
             "quote": "Our NPP portfolio offers growers technologically advanced biological solutions designed to have sustainable production practices, with higher yield and quality, improved soil health, water conservation, biodiversity, and reduced carbon footprint. Through our commitment to nutrient use efficiency and environmental responsibility, we aim to pave the way towards a more sustainable agricultural future.",
             "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 42, Naturally-derived solutions: portfolio segments",
@@ -1296,6 +1586,78 @@
               "correct_classification": "PARTIAL"
             },
             "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99912-002",
+            "quote": "Pronutiva Programs in Potato, Citrus & Apple Value Chains... Following the ban on chlorpropham, processors migrated to more sustainable PGR solutions, with UPL launching an innovative PGR sprout suppression solution. The project aims to consolidate and centralize strategies with stakeholders, identify ESG responsibilities, and understand sustainability needs and expectations. The impact includes Argos, a 100% natural solution with no residues, which serves as a gateway for UPL’s broader potato portfolio, positioning UPL as a holistic solutions provider and increasing market share in this segment.",
+            "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 90, Europe Region",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes a past ban and the company's successful response, framing it as a business opportunity ('increasing market share') rather than explicitly identifying product bans as a current or future risk to the business. The 'PARTIAL' classification requires the item to be clearly identified as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The mention of a 'ban' and the subsequent need for 'more sustainable solutions' and 'increasing market share' frames the situation as a challenge (risk) that also presents an opportunity for new product development.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions a past product ban and the company's response, but it does not provide any explicit financial figures or statements about the financial materiality of this specific ban or future bans.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet refers to a past event ('Following the ban') but also discusses ongoing strategies and future market positioning, indicating a backward-looking event with present-day and forward-looking implications."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes a past ban and the company's successful response, framing it as a business opportunity ('increasing market share') rather than explicitly identifying product bans as a current or future risk to the business. The 'PARTIAL' classification requires the item to be clearly identified as a business risk.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Specific discussion. Not clear relevance",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99912-003",
+            "quote": "NPP innovation for Cereal Crops... Thiopron and Iodus contribute to farmer resilience by maintaining yield levels despite the ban on conventional active ingredients. In Poland, the NPP team also launched Yukon, a multisite biofungicide for sugar beet, in collaboration with local sugar mills to replace conventional multisites for controlling Cercospora and Powdery Mildew. In its first year (FY23-24), the program reached 60,000 hectares, ensuring farmers can sustain yield levels amid important regulatory changes.",
+            "source": "SUSTAINABILITY REPORT 2023-24_1.pdf, Page 91, Europe Region",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet discusses product bans as a market reality that its products help solve for farmers. It does not frame these bans as a risk to UPL's own business; rather, it presents an opportunity to provide solutions. Therefore, it does not meet the 'PARTIAL' criteria of being clearly identified as a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure mentions a 'ban on conventional active ingredients' as a challenge, framing it as a 'risk' that necessitates new solutions to maintain 'farmer resilience'.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure mentions product bans and the company's response, but it does not provide any explicit financial figures or statements about the financial materiality of these specific bans or future bans.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet refers to existing bans ('despite the ban') and ongoing efforts ('In its first year (FY23-24), the program reached...'), indicating a present-day relevance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet discusses product bans as a market reality that its products help solve for farmers. It does not frame these bans as a risk to UPL's own business; rather, it presents an opportunity to provide solutions. Therefore, it does not meet the 'PARTIAL' criteria of being clearly identified as a business risk.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Specific discussion. Not clear relevance",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            },
+            "collapsed_classification": "No disclosure/unclear"
           }
         ]
       },
@@ -1307,6 +1669,42 @@
         "applicability": "",
         "sub_category": "",
         "disclosures": [
+          {
+            "snippet_id": "99913-001",
+            "quote": "Environmental health and safety risk (EHS). Risk from changing EHS regulations and operational hazards like fires, spills, and equipment failures may lead to significant environmental, legal, and reputational consequences impacting overall business sustainability. Mitigation measures: Staying updated on environmental laws, planning for EHS changes, investing in safety equipment, conducting regular inspections, and promoting awareness campaigns to build a strong, safety-focused organisational culture.",
+            "source": "UPL Ltd. (512070-IN) - Annual Report for period end 31-Mar-2025 (English).pdf, Page 50, Risk Management",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'Environmental health and safety risk (EHS)' as a key risk, including 'operational hazards like fires, spills, and equipment failures' that 'may lead to significant environmental, legal, and reputational consequences impacting overall business sustainability'. Spills and equipment failures at manufacturing sites can lead to contamination requiring restoration. The mention of 'environmental consequences' and impact on 'business sustainability' directly links site contamination and the need for restoration to a business risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly labels 'EHS risk' as a 'risk' and details negative consequences like 'environmental, legal, and reputational consequences', clearly framing it as a threat to business operations and sustainability.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure identifies potential 'environmental, legal, and reputational consequences' but does not provide any explicit financial figures or statements about the financial materiality of site restoration costs.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The risk is described as potential future events ('may lead to') and ongoing efforts ('Staying updated', 'planning', 'investing'), indicating a forward-looking and present-day relevance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
           {
             "snippet_id": "99913-002",
             "quote": "We embrace a circular economy through sustainable operations; we have adopted low-impact procedures and resource-efficient technologies to minimise waste generation. Recognising that the manufacturing of agrochemical products inevitably produces waste that can be hazardous to both people and the environment, we place great emphasis on the safe handling, management and disposal of all forms of waste, whether hazardous or non-hazardous.",

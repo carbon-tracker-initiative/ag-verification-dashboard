@@ -410,7 +410,44 @@
         "status": "",
         "applicability": "",
         "sub_category": "",
-        "disclosures": []
+        "disclosures": [
+          {
+            "snippet_id": "99911-001",
+            "quote": "Environmental provisions: The Group is subject to various environmental laws and regulations that require the Group to incur costs for environmental remediation and restoration activities. The Group recognizes a provision for environmental remediation and restoration costs when it is probable that such costs will be incurred and can be reasonably estimated. The amount of the provision is based on current estimates of the costs of remediation and restoration, taking into account available technology and current regulatory requirements. The Group’s environmental provisions primarily relate to the estimated costs of closing and reclaiming certain mining sites and other environmental remediation activities. As of December 31, 2024, the Group has recognized environmental provisions of SR 1,250 million (2023: SR 1,180 million). These provisions are expected to be utilized over the next 10 to 30 years. The Group is also involved in various environmental investigations and remediation activities at certain sites. While the ultimate outcome of these matters cannot be predicted with certainty, management believes that the existing provisions are adequate to cover the Group’s obligations.",
+            "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 230, Notes to the consolidated financial statements, Note 24. Provisions",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly identifies 'environmental remediation and restoration activities' as costs the Group is required to incur due to 'environmental laws and regulations.' It specifically states that 'The Group’s environmental provisions primarily relate to the estimated costs of closing and reclaiming certain mining sites.' The disclosure quantifies these provisions as 'SR 1,250 million' for 2024 and 'SR 1,180 million' for 2023, and provides a timeframe for their utilization ('over the next 10 to 30 years'). This clearly establishes the restoration of mining sites as a financially material risk and obligation for the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on 'costs,' 'obligations,' and 'provisions' required by 'environmental laws and regulations,' framing the restoration of mining sites as a financial burden and a threat to the company's resources.",
+              "financial_type": "Financial",
+              "financial_justification": "The snippet provides explicit, quantifiable financial values for the environmental provisions, stating 'SR 1,250 million' for 2024 and 'SR 1,180 million' for 2023, directly linked to the costs of closing and reclaiming mining sites.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to provisions 'As of December 31, 2024' (present day) and states that these provisions are 'expected to be utilized over the next 10 to 30 years' (forward-looking), indicating a multiple timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Financial values showed",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
       },
       {
         "question_id": "99912",
@@ -573,7 +610,44 @@
         "status": "",
         "applicability": "",
         "sub_category": "",
-        "disclosures": []
+        "disclosures": [
+          {
+            "snippet_id": "99913-002",
+            "quote": "Environmental provisions: The Group is subject to various environmental laws and regulations. Provisions for environmental remediation costs are recognized when a clean-up is probable and the amount can be reliably estimated. The Group’s environmental liabilities are primarily related to the remediation of contaminated sites and the closure and post-closure care of waste disposal facilities. These provisions are based on current technology and environmental laws and regulations, and are subject to change due to future developments.",
+            "source": "SABIC-Integrated-Annual-Report-2024-EN_tcm1010-46870.pdf, Page 230, Note 24: Provisions",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'remediation of contaminated sites' as a primary environmental liability for which provisions are recognized. It clearly states that this is a risk requiring an outflow of resources, thus acknowledging it as a business risk. However, the specific financial amount is presented in a separate table, not directly within this descriptive text.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language explicitly refers to 'environmental liabilities' and 'remediation costs' related to 'contaminated sites,' which are inherently negative consequences or threats to the business, requiring an outflow of resources.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The snippet mentions 'Provisions for environmental remediation costs' and states that 'an outflow of resources embodying economic benefits will be required to settle the obligation,' indicating a financial impact and materiality, but it does not provide a specific quantified monetary value within this descriptive text.",
+              "timeframe": "Current",
+              "timeframe_justification": "The text states that 'Provisions for environmental remediation costs are recognized when a clean-up is probable' and that these provisions 'are subject to change due to future developments,' indicating an existing, ongoing obligation with future implications."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "YES",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
       },
       {
         "question_id": "99915",

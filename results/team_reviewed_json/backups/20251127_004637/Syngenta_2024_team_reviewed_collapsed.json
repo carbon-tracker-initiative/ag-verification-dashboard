@@ -237,6 +237,78 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99906-001",
+            "quote": "Syngenta is committed to providing a safe and healthy work environment for all its employees, contractors, and visitors. This commitment extends to ensuring that all operations are conducted in a manner that minimizes risks to health and safety, including those associated with chemical exposure, machinery operation, and other workplace hazards. Effective health and safety management is crucial for protecting our people, maintaining operational continuity, and upholding our reputation as a responsible employer.",
+            "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, Section 3.3.3 Health and safety - Topic description",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that Syngenta is committed to minimizing 'risks to health and safety, including those associated with chemical exposure, machinery operation, and other workplace hazards' in its operations. It further clarifies that 'Effective health and safety management is crucial for protecting our people, maintaining operational continuity, and upholding our reputation as a responsible employer,' directly linking these hazards to business risks such as operational continuity and reputation.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure frames workplace hazards and chemical exposure as 'risks to health and safety' that need to be minimized, and links effective management to 'maintaining operational continuity, and upholding our reputation', clearly presenting them as threats to business operations and standing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses the importance of managing risks for 'operational continuity' and 'reputation' but does not provide any explicit financial figures or statements of financial materiality related to these hazards.",
+              "timeframe": "Current",
+              "timeframe_justification": "The commitment to 'providing a safe and healthy work environment' and 'minimizes risks' implies ongoing efforts and current conditions, making it a present-day disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-002",
+            "quote": "Syngenta’s HSE Code of Practice on Occupational Health and Hygiene defines the requirements for managing occupational health risks, including those related to chemical exposure. This includes conducting risk assessments, implementing control measures, providing personal protective equipment (PPE), and conducting health surveillance where appropriate. The HSE Code of Practice on Process Safety Management addresses the risks associated with hazardous chemicals and processes in manufacturing operations, ensuring that appropriate safeguards are in place to prevent major accidents.",
+            "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, Section 3.3.3 Health and safety - Management approach",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet details specific management practices and codes of practice (HSE Code of Practice on Occupational Health and Hygiene, Process Safety Management) designed to manage 'occupational health risks, including those related to chemical exposure' and 'risks associated with hazardous chemicals and processes in manufacturing operations'. This clearly acknowledges these as risks requiring active management within the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The text describes 'managing occupational health risks' and 'addresses the risks associated with hazardous chemicals and processes', explicitly framing these as threats that require mitigation and control.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This disclosure outlines management approaches and programs but does not provide any explicit financial figures or statements of financial materiality related to these occupational health and safety risks.",
+              "timeframe": "Current",
+              "timeframe_justification": "The description of 'HSE Code of Practice' and 'Process Safety Management' indicates established and ongoing systems and requirements, making this a present-day disclosure."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99906-003",
             "quote": "Syngenta tracks several KPIs to monitor its health and safety performance, including Total Recordable Incident Rate (TRIR), Lost Time Incident Rate (LTIR), and Occupational Illness Rate (OIR). These metrics help Syngenta to identify areas for improvement and track progress towards its goal of zero harm. In 2024, Syngenta continued to improve its health and safety performance, with a slight decrease in TRIR and LTIR. The OIR remained stable. These improvements reflect the ongoing commitment to strengthening safety culture, implementing robust safety programs, and providing comprehensive training to employees and contractors.",
             "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, Section 3.3.3 Health and safety - Key performance indicators",
@@ -271,6 +343,222 @@
               "correct_classification": "PARTIAL"
             },
             "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-004",
+            "quote": "The company’s operations involve handling hazardous materials, operating complex machinery, and working in various environments, which inherently carry risks. Syngenta recognizes the importance of robust health and safety management to prevent accidents, injuries, and occupational illnesses, ensuring the well-being of its workforce and maintaining operational continuity.",
+            "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, 3.3.3 Health and safety",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that Syngenta's operations 'inherently carry risks' due to 'handling hazardous materials' and 'operating complex machinery', and that robust management is needed 'to prevent accidents, injuries, and occupational illnesses'. This directly identifies factory workplace hazards, including chemical exposure, as a human health risk to the business, impacting workforce well-being and operational continuity.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'inherently carry risks' and the need 'to prevent accidents, injuries, and occupational illnesses' clearly frames this as a threat and negative consequence for the business and its workforce.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses the importance of preventing 'accidents, injuries, and occupational illnesses' and maintaining 'operational continuity', which implies financial impacts (e.g., costs of incidents, lost productivity) but does not provide any specific monetary values or state financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement describes the ongoing nature of risks in current operations and the continuous need for management, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-006",
+            "quote": "Syngenta’s HSE Code of Practice on Process Safety Management defines the requirements for managing risks associated with hazardous processes, including the design, operation, and maintenance of facilities handling highly hazardous chemicals. The Code of Practice requires sites to conduct process hazard analyses, implement safeguards, and establish emergency response plans.",
+            "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, 3.3.3 Health and safety",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly defines 'requirements for managing risks associated with hazardous processes' and 'facilities handling highly hazardous chemicals', directly addressing factory workplace hazards and chemical exposure during production. This confirms the company recognizes these as significant human health risks to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'managing risks associated with hazardous processes' and 'highly hazardous chemicals' clearly frames this as a threat that requires robust management and control to prevent negative outcomes.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes risk management practices but does not provide any specific financial figures related to the costs of these risks or their financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The description of ongoing 'requirements for managing', 'design, operation, and maintenance', and 'emergency response plans' indicates a present-day and continuous timeframe for this risk and its management."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-007",
+            "quote": "Syngenta tracks its health and safety performance using several key indicators, including Total Recordable Incident Rate (TRIR), Lost Time Injury Frequency Rate (LTIFR), and Occupational Illness Rate (OIR). These indicators are used to monitor trends, identify areas for improvement, and benchmark performance against industry peers.",
+            "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, 3.3.3 Health and safety",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet indicates that Syngenta tracks 'health and safety performance' using specific metrics like 'Occupational Illness Rate (OIR)', which directly relates to human health problems from workplace hazards. The use of these indicators to 'monitor trends' and 'identify areas for improvement' confirms that these issues are recognized as ongoing risks to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The tracking of 'health and safety performance' and the use of indicators to 'monitor trends' and 'identify areas for improvement' implies an underlying risk that needs to be managed and reduced.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This snippet describes quantitative metrics for safety performance but does not include any explicit financial amounts or statements of financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The tracking of performance and monitoring of trends are ongoing activities, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-008",
+            "quote": "Total Recordable Incident Rate (TRIR) (per 200,000 hours worked) 0.28 in 2024, 0.31 in 2023.",
+            "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, 3.3.3 Health and safety",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides a specific quantitative metric (TRIR) for workplace safety, which is a direct measure of incidents related to factory workplace hazards. The reporting of this rate confirms that the company acknowledges and monitors these hazards as a human health risk to its workforce and operations.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The reporting of an 'Incident Rate' implies the existence of incidents and associated risks that the company is tracking to manage negative outcomes.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This snippet provides a quantitative non-financial metric (TRIR) but no explicit financial amounts or statements of financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The data is provided for 2024 and 2023, reflecting current and recent past performance, indicating a present-day and backward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99906-009",
+            "quote": "Lost Time Injury Frequency Rate (LTIFR) (per 200,000 hours worked) 0.08 in 2024, 0.09 in 2023.",
+            "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, 3.3.3 Health and safety",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides another specific quantitative metric (LTIFR) for workplace safety, directly measuring the frequency of lost-time injuries. This metric is a clear indicator that the company recognizes and monitors the human health risks associated with factory workplace hazards, including potential chemical exposure, as a business concern.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The reporting of an 'Injury Frequency Rate' implies the occurrence of injuries and associated risks that the company is tracking to manage negative outcomes.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This snippet provides a quantitative non-financial metric (LTIFR) but no explicit financial amounts or statements of financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The data is provided for 2024 and 2023, reflecting current and recent past performance, indicating a present-day and backward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99906-010",
+            "quote": "Occupational Illness Rate (OIR) (per 200,000 hours worked) 0.02 in 2024, 0.02 in 2023.",
+            "source": "Syngenta-AG-ESG-Report-2024.pdf, Page 26, 3.3.3 Health and safety",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides a specific quantitative metric (OIR) for occupational illnesses, which directly addresses human health problems in the workplace, including those potentially arising from chemical exposure. The consistent reporting of this rate confirms that the company acknowledges and monitors these health risks as a business concern.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The reporting of an 'Illness Rate' directly indicates the occurrence of health problems and associated risks that the company is tracking to manage negative outcomes.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This snippet provides a quantitative non-financial metric (OIR) but no explicit financial amounts or statements of financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The data is provided for 2024 and 2023, reflecting current and recent past performance, indicating a present-day and backward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
           }
         ]
       },
@@ -976,6 +1264,42 @@
               "financial_justification": "The snippet identifies 'regulatory approvals' and 'compliance and remediation' as risks but does not provide any explicit financial figures or statements about their financial materiality.",
               "timeframe": "Future",
               "timeframe_justification": "The 'Cautionary statement regarding forward-looking statements' indicates that these are potential future risks and uncertainties, making the disclosure forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99915-002",
+            "quote": "Costs of projects to develop new crop protection chemical active ingredients that have not yet obtained regulatory approval, or to develop new seed varieties containing genetically modified (GM) traits that have not yet obtained regulatory approval, are expensed as incurred because of the uncertainty inherent in the outcome of the regulatory approval process. Costs incurred in the design, development and testing of new or improved non-GM or deregulated GM seed varieties and hybrids, of formulations of existing registered chemical active ingredients or projects to extend the application range of existing crop protection products, or of new and improved production processes that do not themselves require regulatory approval and that can be applied to products which have already obtained approval, are capitalized if the processes are technically feasible, Syngenta intends and has sufficient resources to complete the development, the product or process will generate future economic benefits, and expenditure attributable to developing the product or process can be measured reliably.",
+            "source": "Syngenta-AG-2024-Financial-Report.pdf, Page 72, Notes to the Syngenta AG Group Consolidated Financial Statements, Note 26. New IFRSs and accounting policies",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet highlights the 'uncertainty inherent in the outcome of the regulatory approval process' for new products, which directly relates to the risk of incurring costs (expensed as incurred) without guaranteed commercial viability. While it doesn't explicitly state 'rising costs' as a risk, the uncertainty of regulatory approval for new products implies a significant financial risk associated with these processes.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly mentions 'uncertainty inherent in the outcome of the regulatory approval process,' framing the regulatory environment as a challenge and a source of potential negative consequences for product development.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet discusses 'costs of projects' being expensed due to regulatory uncertainty, indicating a financial impact (expenditure) without providing specific monetary values or asserting financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The discussion of costs for projects 'that have not yet obtained regulatory approval' and the 'uncertainty inherent in the outcome' clearly points to future events and potential impacts, making it forward-looking."
             },
             "financial_amounts": [
               "None"

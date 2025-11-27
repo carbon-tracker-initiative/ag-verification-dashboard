@@ -290,6 +290,78 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99903-007",
+            "quote": "For the litigation matters discussed below, management believes that it is reasonably possible that the company could incur liabilities in excess of amounts accrued, for which the ultimate liability could be material to the results of operations and the cash flows in the period recognized. However, the company is unable to estimate the possible loss beyond amounts accrued due to various reasons, including, among others, that the underlying matters are either in early stages and/or have significant factual issues to be resolved.",
+            "source": "corteva_ars_2025.pdf, Page 38, Item 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet, referring to litigation matters (which include product liability/human health claims like Lorsban®), explicitly states that the 'ultimate liability could be material to the results of operations and the cash flows.' This provides a definitive statement about the financial materiality of the human health problems from its products.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'could incur liabilities,' 'ultimate liability could be material,' and 'unable to estimate the possible loss' clearly presents the topic as a source of potential harm and negative consequences for the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure explicitly states that the ultimate liability 'could be material to the results of operations and the cash flows,' indicating financial materiality without providing specific monetary values.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrases 'could incur liabilities' and 'ultimate liability could be material' indicate potential future events and impacts that have not yet occurred."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99903-008",
+            "quote": "Lorsban® Lawsuits As of December 31, 2024, there were pending asserted claims for personal injury against the former Dow Agrosciences LLC, alleging injuries related to chlorpyrifos exposure, the active ingredient in Lorsban®, an insecticide used by commercial farms for field fruit, nut and vegetable crops. Corteva ended its production of Lorsban® in 2020. ... Claimants allege personal injury, including autism, developmental delays and/or decreased neurologic function, resulting from farm worker exposure and bystander drift and in utero exposure to chlorpyrifos. ... As of December 31, 2024, an accrual has been established for the estimated resolution of certain claims.",
+            "source": "corteva_ars_2025.pdf, Page 40, Item 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet provides a specific example of 'human health problems from its products' (Lorsban®) leading to 'pending asserted claims for personal injury' and states that 'an accrual has been established for the estimated resolution of certain claims.' This clearly identifies the risk and its financial impact (accrual), but the specific amount of the accrual is not disclosed in this snippet, nor is a statement of overall financial materiality for the risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'pending asserted claims for personal injury,' 'alleging injuries related to chlorpyrifos exposure,' and 'lawsuits' clearly presents the topic as a source of actual harm and negative consequences for the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure states that 'an accrual has been established' for claims, indicating a financial impact without providing the specific monetary value of the accrual in this snippet.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrase 'As of December 31, 2024, there were pending asserted claims' and 'an accrual has been established' indicates an ongoing situation actively impacting the company at the reporting date."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99903-009",
             "quote": "Ohio. EIDP is a defendant in two lawsuits, including an action by the State of Ohio based on alleged damage to natural resources. The natural resources damage claim was settled in December 2023 for $110 million and received final approval under Ohio's judicial consent order process. If approved, Corteva’s share of the settlement under the MOU will be approximately $16 million. As of December 31, 2024, an accrual has been established. The second, a putative nationwide class action (\"the Hardwick Class Action\") brought on behalf of anyone who has detectable levels of PFAS in their blood serum seeks declaratory and injunctive relief, including the establishment of a “PFAS Science Panel.” In December 2023, the Sixth Circuit Court of Appeals dismissed the Hardwick Class Action due to lack of standing by Mr. Hardwick. With further opportunities for appeals expired, the plaintiffs filed a new case, narrowing their original claims, in June 2024.",
             "source": "corteva_ars_2025.pdf, Page F-41, Note 16 - Commitments and Contingent Liabilities - Ohio",
@@ -343,6 +415,43 @@
               "financial_justification": "The snippet mentions a large number of cases alleging personal injury but does not provide specific financial figures for potential liabilities or a definitive statement about their financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The snippet refers to 'cases remain filed' (present day) and a 'first bellwether personal injury trial is expected to begin in October 2025' (forward-looking), indicating a 'Multiple or Unclear' timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99903-011",
+            "quote": "Fayetteville Works Facility, North Carolina ... At December 31, 2024, several actions, including personal injury, are pending in the North Carolina federal court against Chemours and EIDP relating to PFC discharges from the Fayetteville Works facility. ... In addition, several personal injury cases have been filed in the North Carolina federal court alleging thyroid disease, and prostate, breast and kidney cancers as a result of PFAS exposure.",
+            "source": "corteva_ars_2025.pdf, Page F-42, Note 16 - Commitments and Contingent Liabilities - Fayetteville Works Facility, North Carolina",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that 'several actions, including personal injury, are pending' and details specific health allegations such as 'thyroid disease, and prostate, breast and kidney cancers as a result of PFAS exposure.' This clearly identifies human health problems as a risk leading to ongoing litigation, but does not quantify the financial impact for Corteva.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes 'personal injury' allegations and 'pending' legal actions, clearly presenting this as a source of harm and negative consequences for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes ongoing litigation alleging personal injury but does not provide specific financial figures for potential liabilities or a definitive statement about their financial materiality for Corteva.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrase 'At December 31, 2024, several actions... are pending' indicates a present-day timeframe for these ongoing legal proceedings."
             },
             "financial_amounts": [
               "None"
@@ -1247,6 +1356,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99913-005",
+            "quote": "On January 28, 2022, the State of New Jersey filed a request for a preliminary injunction against EIDP and Chemours seeking the establishment of a Remediation Funding Source (“RFS”) in an amount exceeding $900 million for environmental remediation at EIDP’s former Chambers Works facility in New Jersey. The RFS primarily relates to non-PFAS remediation, which is not subject to the MOU.",
+            "source": "corteva_ars_2025.pdf, Page 43, Note 16 - Commitments and Contingent Liabilities, Environmental",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet describes a specific legal action seeking 'environmental remediation' at a 'former Chambers Works facility' for an 'amount exceeding $900 million,' clearly identifying a significant financial risk related to contaminated site restoration.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'request for a preliminary injunction,' 'seeking the establishment of a Remediation Funding Source,' and 'environmental remediation' frames this as a legal and financial burden.",
+              "financial_type": "Financial",
+              "financial_justification": "The snippet provides a specific, quantifiable financial value: 'exceeding $900 million.'",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The event 'On January 28, 2022' is backward-looking, but the 'request for a preliminary injunction' and 'seeking the establishment' implies ongoing legal proceedings and future financial implications, making it multiple or unclear."
+            },
+            "financial_amounts": [
+              "USD 900000000 ($900 million)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Statement of potential libabilities for remediation. Implicit financial risk.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99913-006",
             "quote": "As of December 31, 2024, the company has been notified of potential liability under the Comprehensive Environmental Response, Compensation and Liability Act (\"Superfund\") or similar state laws at 507 sites around the U.S., including approximately 100 sites for which the company does not believe it has liability based on current information. Active remediation is under way at approximately 60 of the 507 sites. In addition, the company has resolved its liability at about 212 sites, either by completing remedial actions with other PRPs or by participating in \"de minimis buyouts\" with other PRPs whose waste, like the company's, represented only a small fraction of the total waste present at a site. There were no new notices in 2024 and two new notices in 2023.",
             "source": "corteva_ars_2025.pdf, Page 59, Item 7. Management's Discussion and Analysis of Financial Condition and Results of Operations",
@@ -1366,6 +1511,42 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99914-002",
+            "quote": "Beginning in January 2022, before registering any new conventional pesticide active ingredient, the EPA evaluates the potential effects on listed species and their designated critical habitats under the Endangered Species Act (the “ESA”). The EPA also has initiated such evaluations for certain other active ingredients in response to existing or threatened litigation. Where the EPA determines that a pesticide in the registration and re-evaluation processes “may affect” a listed species, the EPA must consult with the U.S. Fish and Wildlife Service and the National Marine Fisheries Service. As part of its approval, registration, and reevaluation processes, the EPA may impose certain use restrictions on crop protection products under the ESA. When the U.S. Fish and Wildlife Service and the National Marine Fisheries Service add additional listed specifies, the EPA may initiate new ESA evaluations. Under the citizen suit provisions, the ESA also includes citizen suit provisions that allow the public to bring suit in court against federal agencies when they believe a listed species is not being adequately protected by the EPA. FIFRA contains similar provisions that allow the public to challenge an EPA’s registration decision. These lawsuits may subject products to additional use limitations and labeling requirements and further studies, as well as result in registrations being revoked, in whole or in part.",
+            "source": "corteva_ars_2025.pdf, Page 27, Regulatory Considerations",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet clearly identifies the potential for regulatory actions (use restrictions, labeling requirements, revoked registrations) and lawsuits due to the 'potential effects on listed species' under the Endangered Species Act. While 'pollinators and beneficial insects' are not explicitly named, 'listed species' is a broad category that includes them, and the consequences described directly impact the business's ability to sell products, thus constituting a clear business risk. It describes the nature of the risk and its potential operational impacts.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language explicitly discusses 'potential effects on listed species,' 'use restrictions,' 'labeling requirements,' 'registrations being revoked,' and 'lawsuits,' all of which represent negative consequences or threats to the business's operations and product viability. This clearly frames the issue as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure outlines potential business impacts such as 'use limitations,' 'labeling requirements,' 'further studies,' and 'registrations being revoked,' which imply financial consequences (e.g., lost sales, increased costs). However, it does not provide any specific monetary values or a definitive statement about the financial materiality of these impacts, making it non-financial.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet refers to ongoing regulatory evaluations ('EPA evaluates,' 'EPA has initiated'), re-evaluation processes, and potential future actions ('EPA may impose,' 'may subject products,' 'result in registrations being revoked'). This indicates a present-day and forward-looking time horizon for the described risks."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Doesn't mention bees explicitly but they would fall under the protected species as pollinators",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99914-003",
             "quote": "In fact, 100% of the newly-developed Corteva solutions in our pipeline meet at least one of our stringent sustainability criteria, which range from increasing water use efficiency to protecting biodiversity and ecosystems, while also offering improvements in product performance as compared to those in the market today.",
             "source": "corteva_ars_2025.pdf, Page 8, Advancing Food, Fuel and Farming",
@@ -1411,6 +1592,80 @@
         "applicability": "",
         "sub_category": "",
         "disclosures": [
+          {
+            "snippet_id": "99915-001",
+            "quote": "The regulatory approval processes and procedures globally are becoming increasingly more complex, which has resulted in additional testing needs, longer approval timelines that are difficult to predict, and higher development and maintenance costs. We continue to invest on an ongoing basis to keep dossiers current, respond to regulators and meet evolving regulatory standards required by global regulatory frameworks. Failure to comply with these regulations or future regulatory bans and requirements related to our products and their use may materially impact our financial performance. The increase in timelines for regulatory approvals may result in the company not achieving its sustainability targets, or its anticipated returns on research and development investments.",
+            "source": "corteva_ars_2025.pdf, Page 27, Regulatory Considerations",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that increasing complexity in regulatory approval processes leads to 'additional testing needs, longer approval timelines... and higher development and maintenance costs.' It further links 'Failure to comply with these regulations' or 'future regulatory bans' to a potential 'material impact our financial performance' and reduced 'anticipated returns on research and development investments.' This clearly identifies rising costs as a business risk and indicates its financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language highlights negative consequences such as 'increasingly more complex' processes, 'higher development and maintenance costs,' 'materially impact our financial performance,' and 'not achieving its sustainability targets, or its anticipated returns on research and development investments.' This clearly frames the issue as a risk to the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The snippet explicitly states that rising costs 'may materially impact our financial performance' and reduce 'anticipated returns on research and development investments.' This constitutes a definitive statement about the financial materiality of the risk, even without providing specific monetary figures.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to processes 'becoming increasingly more complex' and ongoing investments ('continue to invest on an ongoing basis'), as well as 'future regulatory bans' and impacts on 'anticipated returns,' indicating a present-day and forward-looking time horizon."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99915-002",
+            "quote": "Responding to these changes and meeting existing and new requirements may involve significant costs or capital expenditures or require changes in business practice that could result in reduced profitability. The failure to receive necessary permits or approvals could have near- and long-term effects on Corteva’s ability to produce and sell some current and future products.",
+            "source": "corteva_ars_2025.pdf, Page 29, Risks Related to our Industry",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet directly states that 'meeting existing and new requirements may involve significant costs or capital expenditures' and 'could result in reduced profitability.' This explicitly identifies rising compliance costs as a business risk and indicates its financial materiality through the mention of 'reduced profitability,' even without specific figures.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language focuses on the negative implications of regulatory changes, such as 'significant costs or capital expenditures' and 'reduced profitability,' clearly framing this as a risk to the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The snippet explicitly states that significant costs 'could result in reduced profitability,' which is a definitive statement about the financial materiality of the risk, even without providing specific monetary figures.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to 'existing and new requirements' and 'near- and long-term effects,' indicating a present-day and forward-looking time horizon for the described risks."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
           {
             "snippet_id": "99915-003",
             "quote": "Seed products incorporating biotechnology derived traits and crop protection products must be extensively tested for safety, efficacy and environmental impact before they can be registered for production, use, sale or commercialization in a given market. In certain jurisdictions, Corteva must periodically renew its approvals for both biotechnology and crop protection products, which typically require Corteva to demonstrate compliance with then-current standards which generally are more stringent since the prior registration. The regulatory approvals process is lengthy, costly, complex and in some markets unpredictable, with requirements that can vary by product, technology, industry and country. The regulatory approvals process for products that incorporate novel modes of action or new technologies can be particularly unpredictable and uncertain due to the then-current state of regulatory guidelines and objectives, as well as governmental policy considerations and non- governmental organization and other stakeholder considerations. The uncertainty and increased length of regulatory approvals may reduce Corteva’s return on its research and development investments, and impede its ability to meet sales, profitability, or sustainability metrics.",
@@ -1613,6 +1868,43 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99917-001",
+            "quote": "As of December 31, 2024, there were pending asserted claims for personal injury against the former Dow Agrosciences LLC, alleging injuries related to chlorpyrifos exposure, the active ingredient in Lorsban®, an insecticide used by commercial farms for field fruit, nut and vegetable crops. Corteva ended its production of Lorsban® in 2020. Chlorpyrifos products are restricted-use pesticides, which are not available for purchase or use by the general public, and may only be sold to, and used by, certified applicators or someone under the certified applicator's direct supervision. These lawsuits do not relate to Dursban®, a residential type chlorpyrifos product that was authorized for indoor purposes, which was discontinued over two decades ago prior to the Merger and Corteva’s formation and Separation. Claimants allege personal injury, including autism, developmental delays and/or decreased neurologic function, resulting from farm worker exposure and bystander drift and in utero exposure to chlorpyrifos. Certain claimants have also put forth remediation claims due to alleged property contamination from chlorpyrifos. As of December 31, 2024, an accrual has been established for the estimated resolution of certain claims.",
+            "source": "corteva_ars_2025.pdf, Page 42, NOTE 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly details 'pending asserted claims for personal injury' and 'remediation claims due to alleged property contamination' related to the Lorsban® product. It states that 'an accrual has been established for the estimated resolution of certain claims,' which indicates that the company has assessed the financial impact and deemed a loss probable and estimable, thus providing a full disclosure of the risk's financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes 'pending asserted claims for personal injury' and 'remediation claims due to alleged property contamination,' which are inherently negative and represent threats or challenges to the company. This clearly frames the issue as a risk.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The snippet states that 'an accrual has been established for the estimated resolution of certain claims,' indicating that the company has recognized a probable and estimable financial liability, thus providing a definitive statement about financial materiality without providing the specific amount.",
+              "timeframe": "Current",
+              "timeframe_justification": "The disclosure refers to claims 'As of December 31, 2024' and 'pending asserted claims,' indicating a present-day time horizon for these legal challenges."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Duplicated in row 259.\n\n259 has the same question but has less of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99917-002",
             "quote": "Corteva faces risks arising from various unasserted and asserted litigation matters arising out of the normal course of its current and former business operations, including intellectual property, commercial, product liability, environmental and antitrust lawsuits. Corteva has noted a trend in public and private suits being filed on behalf of states, counties, cities and utilities alleging harm to the general public and the environment, including waterways and watersheds. Claims alleging harm to the public and the environment may be brought against Corteva, notwithstanding years of scientific evidence and regulatory determinations supporting the safety of crop protection products. The litigation involving Monsanto’s Roundup® non-selective glyphosate containing weedkiller products has resulted in negative publicity and sentiment and may lead to similar suits with respect to glyphosate-containing products and/or other established crop protection products. Claims and allegations that Corteva’s products or products that Corteva manufactures or markets on behalf of third parties are not safe could result in litigation, damage to Corteva’s reputation and have a material adverse effect on Corteva’s business. It is not possible to predict the outcome of these various proceedings and any potential impact on Corteva. An adverse outcome in any one or more of these matters may result in losses not fully covered by Corteva's insurance policies, and could be material to Corteva's financial results. Various factors or developments can lead to changes in current estimates of liabilities. Such factors and developments may include, but are not limited to, additional data, safety or risk assessments, as well as a final adverse judgment, significant settlement or changes in applicable law. A future adverse ruling or unfavorable development could result in future charges that could have a material adverse effect on Corteva.",
             "source": "corteva_ars_2025.pdf, Page 33, Risks Related to Our Operations",
@@ -1642,6 +1934,80 @@
               "relevant_risk": "YES",
               "duplicate": "YES",
               "notes": "Duplicated in rows 258, 389.\n\n258, 389 have the same question but has less of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-003",
+            "quote": "In April 2021, four municipalities in the Netherlands filed complaints alleging contamination of land and groundwater resulting from the emission of PFOA and GenX by Corteva, DuPont and Chemours. The municipalities seek to recover costs incurred due to the alleged emissions, including damages for investigation costs, construction project delays, depreciation of land, soil remediation, liabilities to contractors, and attorneys’ fees. In September 2023, the court entered a second interlocutory judgment, ruling, inter alia, that defendants were liable to the municipalities for PFOA emissions during a certain time period, and the removal costs of deposited emissions on the municipalities land infringes their property rights by an objective standard. In June 2024, Chemours and these Dutch municipalities signed a letter of intent that included the implementation of a specific remediation plan for the restoration of restricted vegetable gardens in certain areas of those municipalities to be funded by Chemours, sampling and developing a program to address a recreational lake, and further settlement discussions, including a potential fund to cover certain other expenditures aimed at environmental-related activities. While the letter of intent contemplates the possibility of settlement, discussions between the parties related to the resolution to these matters remain ongoing. Although the company believes a loss is probable, it is not estimable at this time due to various reasons including, among others, that such discussions remain in their early stages. As of December 31, 2024, an accrual has been established for the estimated environmental remediation set forth in the letter of intent. Additionally, the Office of Public Prosecutor in the Netherlands opened a criminal investigation against certain Dutch subsidiaries of Chemours and Historical DuPont, as well as each subsidiary's directors, alleging unlawful PFOA and GenX emissions from Chemours' Dordrecht Works facility.",
+            "source": "corteva_ars_2025.pdf, Page 43, NOTE 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly details 'complaints alleging contamination of land and groundwater' by four municipalities in the Netherlands, seeking to 'recover costs incurred due to the alleged emissions, including damages for investigation costs, construction project delays, depreciation of land, soil remediation, liabilities to contractors, and attorneys’ fees.' It also mentions a 'criminal investigation' and states that 'an accrual has been established for the estimated environmental remediation.' The establishment of an accrual indicates that the company has assessed the financial impact and deemed a loss probable and estimable, thus providing a full disclosure of the risk's financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes 'complaints alleging contamination,' seeking to 'recover costs incurred' and 'damages,' and a 'criminal investigation,' which are inherently negative and represent threats or challenges to the company. This clearly frames the issue as a risk.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The snippet states that 'an accrual has been established for the estimated environmental remediation,' indicating that the company has recognized a probable and estimable financial liability, thus providing a definitive statement about financial materiality without providing the specific amount.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to complaints filed in 'April 2021,' a court judgment in 'September 2023,' a letter of intent in 'June 2024,' an accrual 'As of December 31, 2024,' and ongoing discussions, indicating a backward-looking, present-day, and forward-looking time horizon."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-004",
+            "quote": "Accruals for environmental matters are recorded when it is probable that a liability has been incurred and the amount of the liability can be reasonably estimated. At December 31, 2024, the company had accrued obligations of $478 million for probable environmental remediation and restoration costs, including $46 million for the remediation of Superfund sites. As remediation activities vary substantially in duration and cost from site to site, it is difficult to develop precise estimates of future site remediation costs. The company's estimates are based on a number of factors, including the complexity of the geology, the nature and extent of contamination, the type of remedy, the outcome of discussions with regulatory agencies and other Potentially Responsible Parties (\"PRPs\") at multi-party sites and the number of and financial viability of other PRPs. Therefore, considerable uncertainty exists with respect to environmental remediation and costs, and, under adverse changes in circumstances, it is reasonably possible that the ultimate cost with respect to these particular matters could range up to approximately $600 million above the accrued obligations amount. Consequently, it is reasonably possible that environmental remediation and restoration costs in excess of amounts accrued could have a material impact on the company’s results of operations, financial condition and cash flows. It is the opinion of the company’s management, however, that the possibility is remote that costs in excess of the range disclosed will have a material impact on the company’s results of operations, financial condition or cash flows.",
+            "source": "corteva_ars_2025.pdf, Page 44, NOTE 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet provides a comprehensive disclosure of accrued environmental liabilities, stating 'accrued obligations of $478 million for probable environmental remediation and restoration costs, including $46 million for the remediation of Superfund sites.' It also quantifies a potential exposure of 'approximately $600 million above the accrued obligations amount' and explicitly states that these costs 'could have a material impact on the company’s results of operations, financial condition and cash flows.' This provides a definitive statement about the financial materiality of environmental claims and their associated costs.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language discusses 'accrued obligations' and 'potential liability' for 'environmental remediation and restoration costs,' and the possibility of a 'material impact' on financial results. This clearly frames the issue as a risk.",
+              "financial_type": "Financial",
+              "financial_justification": "The snippet provides explicit monetary values for accrued obligations ('$478 million,' '$46 million') and a potential exposure ('$600 million'), and explicitly states that these costs 'could have a material impact on the company’s results of operations, financial condition and cash flows.' This is a definitive statement about financial materiality with quantified figures.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to accrued obligations 'At December 31, 2024' (present day) and 'future site remediation costs' and 'ultimate cost' (forward-looking), indicating a multiple time horizon."
+            },
+            "financial_amounts": [
+              "USD 478000000 ($478 million)",
+              "USD 46000000 ($46 million)",
+              "USD 600000000 ($600 million)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -1723,6 +2089,43 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99917-007",
+            "quote": "Approximately 5,000 cases remain filed against 3M and other defendants, including EIDP and Chemours, and some including Corteva and DuPont, alleging personal injury (primarily prostate, kidney, and testicular cancer) from the use of aqueous film-forming foams (“AFFF”) and consolidated in a multi-district litigation proceeding in federal district court in South Carolina (“SC MDL”). Most of these recent cases also assert claims that the EIDP and Chemours separation constituted a fraudulent conveyance. The SC MDL ordered the dismissal of plaintiff claims by September 10, 2024, without prejudice, if such plaintiff could not produce peer reviewed science and expert reports supporting PFAS as both the general and specific causation of their personal injury. The first bellwether personal injury trial is expected to begin in October 2025. Additionally, in December 2023, a class action was filed in Canada against 3M and other defendants, including EIDP and Chemours, alleging PFOS and PFOA environmental contamination and personal injury from use of AFFF.",
+            "source": "corteva_ars_2025.pdf, Page 42, NOTE 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly details 'Approximately 5,000 cases' and a 'class action... filed in Canada' alleging 'personal injury (primarily prostate, kidney, and testicular cancer)' and 'PFOS and PFOA environmental contamination' from AFFF, involving Corteva. This clearly identifies numerous class action lawsuits and legal challenges from health and environmental claims as a risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes '5,000 cases' and a 'class action' alleging 'personal injury' and 'environmental contamination,' which are inherently negative and represent threats or challenges to the company. This clearly frames the issue as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet identifies a large number of cases and a class action lawsuit alleging personal injury and environmental contamination, which imply significant financial exposure. However, it does not provide any specific monetary values, accruals, or a definitive statement about the financial materiality of these particular legal challenges, making it non-financial.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to cases that 'remain filed,' a dismissal order by 'September 10, 2024,' a trial expected in 'October 2025,' and a class action filed in 'December 2023,' indicating a present-day and forward-looking time horizon."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99917-008",
             "quote": "As discussed below and in Note 16 - Commitments and Contingent Liabilities, to the Consolidated Financial Statements, certain of the environmental proceedings and litigation allocated to Corteva as part of the Separation from DuPont relate to the legacy EIDP businesses, including their use of PFOA, which, for purposes of this report, means collectively perfluorooctanoic acid and its salts, including the ammonium salt and does not distinguish between the two forms, and PFAS, which means per- and polyfluoroalkyl substances, including PFOA, PFOS (perfluorooctanesulfonic acid), GenX and other perfluorinated chemicals and compounds (\"PFCs\"). This litigation includes multiple natural resource damage lawsuits across the United States filed by municipalities and alleging PFOA contamination, as well as, lawsuits by four municipalities in the Netherlands alleging contamination of land and groundwater resulting from the emission of PFOA and GenX by Corteva, DuPont and Chemours.",
             "source": "corteva_ars_2025.pdf, Page 41, ITEM 3. LEGAL PROCEEDINGS",
@@ -1752,6 +2155,150 @@
               "relevant_risk": "YES",
               "duplicate": "NO",
               "notes": "Inferred risk.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-010",
+            "quote": "On June 1, 2023, Corteva, EIDP, Inc., DuPont, and Chemours (collectively, the “settling companies”) entered into a binding agreement in principle to comprehensively resolve all drinking water claims related to PFAS of a defined class of U.S. public water systems that serve the vast majority of the United States population, including, but not limited to the AFFF claims in the SC MDL Nationwide Water District Settlement. PFAS, as defined in the settlement, includes PFOA and HFPO-DA, among a broad range of fluorinated organic substances. The Nationwide Water District Settlement was entered into solely by way of compromise and settlement and is not in any way an admission of liability or fault by Corteva or EIDP.",
+            "source": "corteva_ars_2025.pdf, Page 42, NOTE 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet discloses that Corteva, along with other companies, 'entered into a binding agreement in principle to comprehensively resolve all drinking water claims related to PFAS of a defined class of U.S. public water systems.' This clearly indicates the existence and resolution of a significant legal challenge (class action-like settlement) related to environmental claims (PFAS contamination), thus acknowledging it as a business risk that has been addressed.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes an 'agreement in principle to comprehensively resolve all drinking water claims related to PFAS,' which addresses a past and present challenge. While a resolution, the underlying claims represent a risk that the company had to mitigate.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a settlement agreement for drinking water claims but does not provide any specific monetary values for the settlement or a definitive statement about its financial materiality. It indicates a financial impact without quantifying it.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The agreement was entered into on 'June 1, 2023,' and aims to 'comprehensively resolve all drinking water claims related to PFAS,' indicating a backward-looking and present-day resolution of past and ongoing issues."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": true,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Duplicated in row 260.\n\nThis has the same question but has more of the surrounding context / info that’s relevant to the question.\n\nKeep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": ""
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-011",
+            "quote": "EIDP is a defendant in a putative class action (the \"Baker Class Action\"), brought by persons who live in and around Hoosick Falls, New York. These lawsuits assert claims for medical monitoring, property damage and personal injury based on alleged PFOA releases from manufacturing facilities owned and operated by co-defendants in Hoosick Falls. The lawsuits allege that EIDP and others supplied materials used at these facilities resulting in PFOA air and water contamination. A court approved settlement was reached between the plaintiffs and the other co-defendants regarding the Baker Class Action case. In September 2022, the class certification of the Baker Class Action was granted, with the court certifying three separate classes consisting of a private well property damage class, a medical monitoring class and a nuisance class. The trial for the Baker Class Action is expected to begin in July 2025.",
+            "source": "corteva_ars_2025.pdf, Page 43, NOTE 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly describes a 'putative class action' asserting claims for 'medical monitoring, property damage and personal injury based on alleged PFOA releases' and mentions that 'class certification... was granted.' This clearly identifies a class action lawsuit and legal challenges from health/environmental claims as a risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes a 'putative class action' asserting claims for 'medical monitoring, property damage and personal injury' based on 'alleged PFOA releases,' which are inherently negative and represent threats or challenges to the company. This clearly frames the issue as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet identifies a class action lawsuit and the types of claims (medical monitoring, property damage, personal injury) but does not provide any specific monetary values, accruals, or a definitive statement about the financial materiality of these particular legal challenges, making it non-financial.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to a class action where certification was granted in 'September 2022' and a trial expected to begin in 'July 2025,' indicating a backward-looking, present-day, and forward-looking time horizon."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-012",
+            "quote": "In addition to the natural resource damage cases in New Jersey and New York, natural resource damage filed lawsuits against EIDP, Chemours, and others, claiming, among other things, PFC (including PFOA) contamination of groundwater and drinking water, have been filed by 31 state attorneys general, the District of Columbia and three U.S. territories. Certain cases also name DuPont and Corteva as defendants and include claims of fraudulent conveyance. The complaints seek reimbursement for past and future costs to investigate and remediate the alleged contamination and compensation for the loss of value and use of the state’s natural resources. Due to overlapping AFFF allegations, virtually all of these cases have been transferred, or are pending transfer to the SC MDL. These cases are largely in the discovery phase. While the recent mediation of the natural resource case in North Carolina and New Jersey concluded without resolution, discussions continue between the parties to seek a resolution.",
+            "source": "corteva_ars_2025.pdf, Page 43, NOTE 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet broadly discloses 'natural resource damage filed lawsuits' by '31 state attorneys general, the District of Columbia and three U.S. territories,' claiming 'PFC (including PFOA) contamination of groundwater and drinking water.' It states that 'The complaints seek reimbursement for past and future costs to investigate and remediate the alleged contamination and compensation for the loss of value and use of the state’s natural resources.' This clearly identifies widespread legal challenges from environmental claims as a risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes 'natural resource damage filed lawsuits' claiming 'contamination' and seeking 'reimbursement for past and future costs' and 'compensation for the loss of value,' which are inherently negative and represent threats or challenges to the company. This clearly frames the issue as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes the nature of the claims, including seeking 'reimbursement for past and future costs' and 'compensation,' which indicates a financial impact. However, it does not provide any specific monetary values, accruals, or a definitive statement about the financial materiality of these particular legal challenges, making it non-financial.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to lawsuits that 'have been filed' and are 'largely in the discovery phase,' with ongoing 'discussions continue between the parties to seek a resolution,' indicating a present-day and forward-looking time horizon."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99917-013",
+            "quote": "The Province of British Columbia, filed a class action against various defendants, including 3M, DuPont Canada, EIDP, and Chemours alleging harms caused by PFAS/AFFF. The class consists of all municipalities, regional districts, and other governance authorities and other persons in Canada that were responsible for a “Drinking Water System” from 1970 to the present. The plaintiff seeks to recover costs for the treatment and restoration of natural resources, as well as property, economic, and punitive damages. A putative class action was also filed in July 2024 on behalf of citizens of Quebec, Canada seeking class certification to recover for alleged PFAS and AFFF contamination of private wells and public water treatment facilities.",
+            "source": "corteva_ars_2025.pdf, Page 43, NOTE 16 - Commitments and Contingent Liabilities",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly details a 'class action' filed in British Columbia and a 'putative class action' filed in Quebec, Canada, alleging 'harms caused by PFAS/AFFF' and seeking to 'recover costs for the treatment and restoration of natural resources, as well as property, economic, and punitive damages.' This clearly identifies class action lawsuits and legal challenges from health/environmental claims as a risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language describes 'class action' lawsuits alleging 'harms caused by PFAS/AFFF' and seeking to 'recover costs' and 'damages,' which are inherently negative and represent threats or challenges to the company. This clearly frames the issue as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet identifies class action lawsuits seeking to 'recover costs' and 'damages' (property, economic, punitive), which indicates a financial impact. However, it does not provide any specific monetary values, accruals, or a definitive statement about the financial materiality of these particular legal challenges, making it non-financial.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The disclosure refers to a class action that 'filed' and a putative class action 'filed in July 2024,' with claims spanning 'from 1970 to the present,' indicating a backward-looking, present-day, and forward-looking time horizon."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "PARTIAL"

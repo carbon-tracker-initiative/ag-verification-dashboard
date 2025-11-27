@@ -1231,6 +1231,43 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99913-002",
+            "quote": "Provisions for environmental protection measures are recognized for obligations to remediate contaminated sites, for example, or to dispose of hazardous waste. The measurement of these provisions is based on the expected costs of the measures required to fulfill the obligations. The expected costs are determined on the basis of current legal requirements and the remediation technologies available at the time of measurement. The provisions are discounted to their present value. The discount rates used are pretax interest rates that reflect the current market assessment of the time value of money and the risks specific to the liability. The unwinding of the discount is recognized in the financial result. The provisions for environmental protection measures amounted to €1,000 million as of December 31, 2024 (2023: €1,000 million).",
+            "source": "Annual report 2024.pdf, Page 318, Section Note [23] Other provisions",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that 'Provisions for environmental protection measures are recognized for obligations to remediate contaminated sites' and provides a specific financial amount of '€1,000 million' for these provisions. This demonstrates a clear identification of the risk and its financial materiality, even without concrete remediation figures.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The recognition of 'Provisions for environmental protection measures' for 'obligations to remediate contaminated sites' implies a financial burden and a necessary cost, framing it as a 'Risk' to the business.",
+              "financial_type": "Financial",
+              "financial_justification": "The disclosure provides an explicit, quantifiable financial value of '€1,000 million' for provisions related to contaminated site remediation, directly linking a monetary figure to the risk, thus 'Financial'.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement refers to 'provisions... as of December 31, 2024' and 'expected costs... required to fulfill the obligations', indicating an existing liability that will be addressed in the present and future, aligning with 'Present day'."
+            },
+            "financial_amounts": [
+              "EUR 1000000000 (€1",
+              "000 million)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Growing the evidence base around the litigation information we found in relation to human health risk",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99913-005",
             "quote": "Misconduct or noncompliance with legal requirements or Bayer Group standards may result in personal injury, damage to property, reputation or the environment, loss of production, business interruptions and/or liability for compensation payments. This also includes the obligation to remediate contamination, or risks concerning the observance of human rights and potential failure to address them adequately.",
             "source": "Annual report 2024.pdf, Page 92, Section 3.2.2 Opportunity and Risk Status",

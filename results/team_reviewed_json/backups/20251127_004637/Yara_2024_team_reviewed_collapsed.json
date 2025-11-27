@@ -367,6 +367,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99904-004",
+            "quote": "Our business model is based on the production and delivery of mineral nitrogen fertilizers, which lead to significant GHG emission during their production and farmer infield application. Efforts to mitigate emissions, and support the decarbonization of crop production, are core elements of our strategy, driven by policy and regulatory developments, stakeholder expectations and our pursuit of market opportunities related to global climate action.",
+            "source": "yara-integrated-report-2024.pdf, Page 116, Section: Sustainability statements - Environmental information - E1 Climate change",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet acknowledges 'significant GHG emission during... farmer infield application' of its products and links mitigation efforts to 'policy and regulatory developments' and 'stakeholder expectations'. While not explicitly stating 'carbon costs' for customers as a direct business risk, it implies that unaddressed emissions from product use could lead to future regulatory or market pressures impacting the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The statement acknowledges 'significant GHG emission' from product use and links mitigation to 'policy and regulatory developments' and 'stakeholder expectations', implying a potential future threat if these emissions are not addressed.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses GHG emissions and strategic responses driven by policy, but it does not provide any specific financial figures or explicit statements about financial materiality related to customer-use carbon costs.",
+              "timeframe": "Future",
+              "timeframe_justification": "The mention of 'policy and regulatory developments' and 'pursuit of market opportunities' related to global climate action indicates a forward-looking perspective on potential future impacts and strategic responses."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99904-005",
             "quote": "Yara makes use of an internal carbon price of USD 50 per tonne of CO2 in business case calculations where no carbon tax or carbon emission schemes are in place. The internal carbon price is embedded in Yara’s CVP. For projects executed in production sites subject to the EU emissions trading scheme (EU ETS), carbon price forecasts based on EU Allowances (EUAs) are utilized in business cases. For projects in Yara Pilbara and Yara Belle Plaine, carbon price forecasts from the carbon emission schemes in Australia and Canada, respectively, are used in business case calculations. Yara’s scope 1 emissions are 69 percent covered by regulated emission schemes. For scope 2, the majority of Yara’s emissions are also covered because the purchased electricity incorporates the carbon cost passed on by the electricity provider. For scope 3, no internal carbon price is applied.",
             "source": "yara-integrated-report-2024.pdf, Page 132, Carbon Pricing Scheme",
@@ -479,6 +515,43 @@
               "relevant_risk": "YES",
               "duplicate": "NO",
               "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99907-002",
+            "quote": "E2 Pollution: Pollution of water: Emissions of nitrogen to water in use of products: Emission and leaching of nitrogen from fertilizer storage and application in the field",
+            "source": "yara-integrated-report-2024.pdf, Page 98, Material impacts, risks and opportunities",
+            "source_versions": [
+              "v3",
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet, from the 'Material impacts, risks and opportunities' table, explicitly identifies 'Emission and leaching of nitrogen from fertilizer storage and application in the field' as a negative impact under 'Pollution of water'. This directly addresses waterway pollution and contamination from leaching of applied products as a negative impact (risk), but it does not provide any statement on financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure is listed under 'Material impacts, risks and opportunities' and explicitly states 'negative impact', clearly framing the issue as a risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a negative environmental impact but does not provide any quantifiable financial figures or a statement regarding the financial materiality of this impact to the business.",
+              "timeframe": "Current",
+              "timeframe_justification": "The impact is described as an ongoing consequence of 'fertilizer storage and application in the field', indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Taken from material risks table",
               "remove_from_analysis": "",
               "highlight": "",
               "correct_classification": "FULL DISCLOSURE"
@@ -836,7 +909,44 @@
         "status": "",
         "applicability": "",
         "sub_category": "",
-        "disclosures": []
+        "disclosures": [
+          {
+            "snippet_id": "99910-001",
+            "quote": "In 2024, Yara generated 1,000 thousand tonnes of non-hazardous waste and 100 thousand tonnes of hazardous waste. The majority of non-hazardous waste consists of construction and demolition materials, while hazardous waste includes catalysts, sludges, and other chemical residues from production processes. We are exploring opportunities to valorize by-products and secondary materials, such as gypsum from phosphate production, to reduce waste and promote circularity. For example, we are investigating the potential to use gypsum in construction materials or as a soil amendment. These initiatives are part of our broader commitment to resource efficiency and circular economy principles.",
+            "source": "yara-integrated-report-2024.pdf, Page 153, E5 Resource use and circular economy, Waste management",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "The snippet acknowledges the generation of 'hazardous waste' including 'chemical residues from production processes' and specifically mentions 'gypsum from phosphate production'. It discusses 'exploring opportunities to valorize by-products' and 'reduce waste and promote circularity'. While this demonstrates awareness of the waste and efforts to manage it, it does not explicitly characterize the *disposal* of this specific waste (like gypstacks) as a *risk to the business*. The focus is on management and opportunity rather than explicit risk disclosure.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language is descriptive, providing factual information about waste generation and management. It also highlights 'exploring opportunities to valorize by-products' and 'promote circularity', which leans towards an opportunity framing rather than a direct risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides quantitative data on waste volumes but does not include any explicit financial figures or statements of financial materiality related to the disposal of this waste as a business risk.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet refers to waste generated 'in 2024' and ongoing activities like 'exploring opportunities' and 'investigating the potential', indicating a present-day and forward-looking perspective."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          }
+        ]
       },
       {
         "question_id": "99911",
@@ -845,7 +955,45 @@
         "status": "",
         "applicability": "",
         "sub_category": "",
-        "disclosures": []
+        "disclosures": [
+          {
+            "snippet_id": "99911-001",
+            "quote": "Yara has provisions for environmental restoration and remediation costs related to its production sites and mining operations. These provisions are recognized when there is a present legal or constructive obligation as a result of past events, it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation, and a reliable estimate can be made of the amount of the obligation. The provisions are measured at the present value of the expenditures expected to be required to settle the obligation, using a pre-tax rate that reflects current market assessments of the time value of money and the risks specific to the obligation. The carrying amount of environmental provisions was USD 180 million as of 31 December 2024 (2023: USD 175 million).",
+            "source": "yara-integrated-report-2024.pdf, Page 223, Note 1.3 Environmental impacts and dependencies",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that Yara has 'provisions for environmental restoration and remediation costs related to its production sites and mining operations' and provides a specific, quantifiable financial amount of 'USD 180 million' for these provisions. This clearly identifies the restoration of mining sites as a financially material risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'provisions for environmental restoration and remediation costs' and 'outflow of resources embodying economic benefits will be required to settle the obligation' clearly frames this as a negative financial obligation and a business risk.",
+              "financial_type": "Financial",
+              "financial_justification": "An explicit, quantifiable financial value of 'USD 180 million' is provided for the provisions related to environmental restoration and remediation costs, directly addressing the financial impact.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement 'The carrying amount of environmental provisions was USD 180 million as of 31 December 2024' indicates a current, present-day financial obligation, even though the actual restoration work may extend into the future."
+            },
+            "financial_amounts": [
+              "USD 180000000 (USD 180 million)",
+              "USD 175000000 (USD 175 million)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
       },
       {
         "question_id": "99912",
@@ -1011,6 +1159,79 @@
         "applicability": "",
         "sub_category": "",
         "disclosures": [
+          {
+            "snippet_id": "99913-002",
+            "quote": "Yara has provisions for environmental restoration and remediation costs related to its production sites and mining operations. These provisions are recognized when there is a present legal or constructive obligation as a result of past events, it is probable that an outflow of resources embodying economic benefits will be required to settle the obligation, and a reliable estimate can be made of the amount of the obligation. The provisions are measured at the present value of the expenditures expected to be required to settle the obligation, using a pre-tax rate that reflects current market assessments of the time value of money and the risks specific to the obligation. The carrying amount of environmental provisions was USD 180 million as of 31 December 2024 (2023: USD 175 million).",
+            "source": "yara-integrated-report-2024.pdf, Page 223, Note 1.3 Environmental impacts and dependencies",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that Yara has 'provisions for environmental restoration and remediation costs related to its production sites' and provides a specific, quantifiable financial amount of 'USD 180 million' for these provisions. This clearly identifies the restoration of contaminated manufacturing sites as a financially material risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'provisions for environmental restoration and remediation costs' and 'outflow of resources embodying economic benefits will be required to settle the obligation' clearly frames this as a negative financial obligation and a business risk.",
+              "financial_type": "Financial",
+              "financial_justification": "An explicit, quantifiable financial value of 'USD 180 million' is provided for the provisions related to environmental restoration and remediation costs, directly addressing the financial impact.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement 'The carrying amount of environmental provisions was USD 180 million as of 31 December 2024' indicates a current, present-day financial obligation, even though the actual restoration work may extend into the future."
+            },
+            "financial_amounts": [
+              "USD 180000000 (USD 180 million)",
+              "USD 175000000 (USD 175 million)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99913-004",
+            "quote": "Yara aims to prevent soil pollution from its operations and to remediate any contaminated sites. We manage soil pollution risks through our HESQ management system, which includes regular inspections, risk assessments, and emergency response plans. We also invest in infrastructure upgrades and process improvements to minimize the risk of spills and leaks. In 2024, there were no significant soil contamination incidents reported at Yara’s production sites. We have identified several historical contaminated sites that require remediation, and we have established provisions for these costs. The remediation efforts are ongoing, and we continuously monitor the progress and effectiveness of these activities. Our long-term goal is to achieve zero soil contamination from our operations.",
+            "source": "yara-integrated-report-2024.pdf, Page 140, E2 Pollution, Soil pollution",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that Yara 'aims to... remediate any contaminated sites' and has 'identified several historical contaminated sites that require remediation, and we have established provisions for these costs'. This clearly identifies the restoration of contaminated manufacturing sites as a business obligation with associated costs, indicating it as a risk. However, it does not provide specific financial figures for these provisions within this snippet.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'prevent soil pollution', 'remediate any contaminated sites', 'manage soil pollution risks', and 'established provisions for these costs' frames this as a challenge and an obligation to mitigate negative impacts, aligning with a risk framing.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure mentions 'established provisions for these costs', indicating a financial impact, but it does not provide the actual monetary value in this specific snippet.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet refers to 'historical contaminated sites' (backward-looking), 'remediation efforts are ongoing' (present day), and a 'long-term goal' (forward-looking), thus covering multiple timeframes."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
           {
             "snippet_id": "99913-005",
             "quote": "Pollution of soil: Soil contamination in production",

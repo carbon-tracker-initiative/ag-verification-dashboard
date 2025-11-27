@@ -562,6 +562,42 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99905-001",
+            "quote": "新安按照相关法律法规要求认真落实化学品标 识标签和化学品安全技术说明（MSDS）责任， 在产品外包装、标签上明确标注产品性质、安 全措施和警示信息；新安为客户提供详细的化 学品安全技术说明书，描述化学品物理和化学 风险，并为客户提供关于正确保存、运 输和使用产品的详细指导；新安在产品推广和 客户培训中，将化学品安全技术规范作为必选 内容向客户和使用者做全面详尽讲解，以尽可 能避免/降低相关产品的环境和健康影响与风 险。",
+            "source": "Wynca group 2024 sustainability report.pdf, Page 41, 化学品管理",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that the company provides information to customers and users to 'minimize/reduce environmental and health impacts and risks' associated with its chemical products. This directly acknowledges the potential for environmental problems, including soil toxicity, from its products and the company's efforts to mitigate this risk, indicating it is a recognized business concern.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on providing safety information and training to 'minimize/reduce environmental and health impacts and risks', clearly framing the potential for negative consequences as a risk that needs to be managed.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes qualitative actions and impacts ('environmental and health impacts and risks') but does not provide any specific financial figures or explicitly state the financial materiality of these risks.",
+              "timeframe": "Current",
+              "timeframe_justification": "The activities described, such as providing MSDS, labeling, and customer training, are ongoing and pertain to the current and future use of products."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99905-003",
             "quote": "农药。调整产品结构，逐步淘汰高残留 以及对环境或农产品质量安全影响大的农药，加快发展高效、安全、环境友好型农药及中间体， 以及水基化、超低容量、缓释等制剂剂型。",
             "source": "Xinan Annual Report 2024.pdf, Page 26, 化工行业经营性信息分析",
@@ -897,6 +933,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99906-009",
+            "quote": "近三年安全生产管理绩效 指标 单位 2022年 2023年 2024年 损失工时伤害事件 件 8 3 5 工伤损失工作日数 天 7,586 8,033 1,375",
+            "source": "Wynca group 2024 sustainability report.pdf, Page 72, 守护安全",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet provides quantitative metrics for 'lost-time injury incidents' and 'lost workdays due to work-related injuries' over three years. These are direct indicators of the occurrence and impact of workplace hazards, including potential chemical exposure incidents, clearly demonstrating that these are recognized and measured risks to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The presentation of '损失工时伤害事件' (lost-time injury incidents) and '工伤损失工作日数' (lost workdays due to work-related injuries) as performance indicators implies that these are negative outcomes that the company tracks and aims to reduce, framing them as risks.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides quantitative metrics ('件' for incidents, '天' for lost workdays) that indicate the scale of impact, but it does not provide explicit monetary values for these impacts, making it a non-financial disclosure.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The data covers '近三年' (the past three years), making it backward-looking, but the inclusion in a current report implies ongoing relevance and monitoring."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99906-010",
             "quote": "新安通过定期开展职业病危害因素检测，对岗位职业病危害程度进行分析，按照员工实际接触有害因素的水平采取 相应的职业病危害因素控制措施，防止员工暴露在有害物质环境中。",
             "source": "Wynca group 2024 sustainability report.pdf, Page 73, 保障健康",
@@ -1193,7 +1265,44 @@
         "status": "",
         "applicability": "",
         "sub_category": "",
-        "disclosures": []
+        "disclosures": [
+          {
+            "snippet_id": "99911-001",
+            "quote": "生态系统和生物多样性 新安深知生物多样性对于维持生态平衡、促进物种繁衍以及保障人类福祉的重要性，致力于最大程度地保护生物多样性... 退出 ■ 根据环境影响评价结果，开展针对性的生态修复工作，确保项目退出后，相关区域的生态系统能够及时有效恢复，实现生态系统的可持续。",
+            "source": "Wynca group 2024 sustainability report.pdf, Page 47, 生态系统和生物多样性",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet indicates the company's involvement in silicon ore mining and mentions '生态修复' (ecological restoration) during the '退出' (exit) phase of projects, which would apply to mining sites. It frames this as a commitment to ecological protection and sustainability, acknowledging the activity and the need for restoration. However, it does not explicitly characterize the restoration of mining sites as a direct 'risk to the business', but rather as a strategic measure for environmental management.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language emphasizes the company's commitment to '生态保护' (ecological protection) and '生态修复' (ecological restoration) to achieve '生态系统的可持续' (ecosystem sustainability). This framing presents the activity as a responsible practice rather than a threat or negative consequence for the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses ecological restoration efforts but does not provide any specific financial figures, costs, or statements about the financial materiality of these activities.",
+              "timeframe": "Future",
+              "timeframe_justification": "The mention of '项目退出后' (after project exit) for restoration work indicates a forward-looking perspective, addressing future obligations rather than past or present events."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          }
+        ]
       },
       {
         "question_id": "99912",

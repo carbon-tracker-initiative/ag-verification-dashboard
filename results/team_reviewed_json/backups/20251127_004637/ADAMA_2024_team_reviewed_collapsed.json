@@ -521,6 +521,43 @@
               "correct_classification": "UNCLEAR"
             },
             "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99906-007",
+            "quote": "Administrative punishment for environmental problems during the reporting period... Adama Huifeng (Jiangsu) Ltd. Laboratories were not equipped with exhaust gas treatment facilities. Administrative Violation Fine of 30,600 RMB None Impact on the Production and Business of the Listed Company Rectification Measures Treatment facilities newly installed",
+            "source": "ADAMA-Annual-Report-2024.pdf, Page 88, Section V - Environment and Social Responsibilities, I. Major Environmental Protection Issues",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet discloses an 'Administrative punishment' and a 'Fine of 30,600 RMB' for 'Laboratories were not equipped with exhaust gas treatment facilities'. While framed as an environmental problem, the lack of exhaust gas treatment in a laboratory setting directly implies a risk of chemical exposure to workers, which is a factory workplace hazard. The fine represents a concrete financial impact, indicating materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure of an 'Administrative punishment' and a 'Fine' for a violation related to safety facilities clearly presents the topic as a negative consequence or threat to the business, aligning with a 'Risk' framing.",
+              "financial_type": "Financial",
+              "financial_justification": "The snippet explicitly states a 'Fine of 30,600 RMB', providing a specific monetary value directly linked to the violation, which is a financial impact. This fits the 'Financial' definition.",
+              "timeframe": "Historical",
+              "timeframe_justification": "The 'Administrative punishment' occurred 'during the reporting period' and the 'Fine' was incurred in the past, making the timeframe 'Backward-looking'."
+            },
+            "financial_amounts": [
+              "CNY 30600 (30",
+              "600 RMB)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "Just mentioning a find it received for poor business practices",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
           }
         ]
       },

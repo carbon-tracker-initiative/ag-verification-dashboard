@@ -369,6 +369,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99904-005",
+            "quote": "More stringent GHG regulations, if enacted, may require us to make changes in our operating activities that would increase our operating costs, reduce our efficiency, limit our output, require us to make capital improvements to our facilities, or increase our costs for or limit the availability of energy, raw materials or transportation. Changes could also be made to tax policies related to decarbonization, electricity generation or clean energy that could impact our business and investment decisions. In addition, to the extent GHG restrictions are not imposed in countries where our competitors operate or are less stringent than regulations that may be imposed in the United States, Canada or the United Kingdom, our competitors may have cost or other competitive advantages over us.",
+            "source": "CF-Industries-2024-Annual-Report.pdf, Page 10, Regulation of Greenhouse Gases",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet clearly identifies potential future carbon costs as a risk to the business ('increase our operating costs', 'impact our business'). However, it does not explicitly state the financial materiality of this risk. Therefore, it should be classified as PARTIAL.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language uses terms like 'may require,' 'increase our operating costs,' 'limit our output,' and 'competitive disadvantages,' clearly framing potential future regulatory changes as threats to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure explicitly mentions 'increase our operating costs' and 'impact our business and investment decisions' due to tax policies, indicating a financial impact without providing specific monetary values. This qualifies as partial-type financial disclosure.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet uses conditional and future-oriented language such as 'if enacted,' 'may require,' 'could impact,' and 'could have,' indicating potential future risks and scenarios."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet clearly identifies potential future carbon costs as a risk to the business ('increase our operating costs', 'impact our business'). However, it does not explicitly state the financial materiality of this risk. Therefore, it should be classified as PARTIAL.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Snippet says operating costs could increase, reduce efficiency, limit output…",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99904-006",
             "quote": "Clear and long-term pricing policies (including carbon border measures) are vital to creating durable market signals that will foster industry growth and decarbonization. Well-designed pricing systems should incentivize global emissions reductions and prevent carbon emissions that would otherwise result from the import of lower-priced, higher carbon-intensive goods (i.e., carbon leakage). We understand the importance of price signals leading towards global sustainability goals. CF Industries supports global policies to institute these signals and allow viable, market-tested solutions to emerge. We routinely meet with policymakers and other stakeholders to support the development of market-driven and coherent global pricing systems to create long-term signals supporting clean energy investment.",
             "source": "2024_cf-industries_corporate-stewardship-report.pdf, Page 67, POLICY ENGAGEMENT",
@@ -1071,6 +1107,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99915-002",
+            "quote": "Our production facilities emit greenhouse gases (GHGs), such as carbon dioxide (CO2) and nitrous oxide. Natural gas, a fossil fuel, is a primary raw material used in our nitrogen production process. We are subject to GHG regulations in the United Kingdom, Canada and the United States. ... More stringent GHG regulations, if enacted, may require us to make changes in our operating activities that would increase our operating costs, reduce our efficiency, limit our output, require us to make capital improvements to our facilities, or increase our costs for or limit the availability of energy, raw materials or transportation. Changes could also be made to tax policies related to decarbonization, electricity generation or clean energy that could impact our business and investment decisions. In addition, to the extent GHG restrictions are not imposed in countries where our competitors operate or are less stringent than regulations that may be imposed in the United States, Canada or the United Kingdom, our competitors may have cost or other competitive advantages over us.",
+            "source": "CF-Industries-2024-Annual-Report.pdf, Page 10, Regulation of Greenhouse Gases",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet identifies rising compliance costs as a business risk but does not explicitly state that the financial impact would be 'material,' 'significant,' or 'substantial.' Therefore, it meets the criteria for PARTIAL, not FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language highlights potential negative consequences such as 'increase our operating costs,' 'reduce our efficiency,' and 'competitive disadvantages,' framing the issue as a clear risk.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure explicitly states that regulations 'would increase our operating costs' and 'require us to make capital improvements,' acknowledging financial impact without providing specific monetary values.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet uses forward-looking language like 'if enacted,' 'may require,' and 'could impact,' indicating potential future risks."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet identifies rising compliance costs as a business risk but does not explicitly state that the financial impact would be 'material,' 'significant,' or 'substantial.' Therefore, it meets the criteria for PARTIAL, not FULL_DISCLOSURE.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99915-003",
             "quote": "Regulatory risk, particularly in the form of regulatory restrictions on emissions in the jurisdictions in which we operate our production facilities, presents the most tangible and direct risk to how we currently conduct our business and operations because our production facilities emit greenhouse gases (GHGs) such as carbon dioxide and nitrous oxide and because natural gas, a fossil fuel, is a primary raw material used in our nitrogen production process. More stringent GHG regulations, if enacted, may require us to make changes in our operating activities that would increase our operating costs, reduce our efficiency, limit our output, require us to make capital improvements to our facilities, or increase our costs for or limit the availability of energy, raw materials or transportation. Changes could also be made to tax policies related to decarbonization, electricity generation or clean energy that could impact our business and investment decisions.",
             "source": "2024_cf-industries_corporate-stewardship-report.pdf, Page 71, TCFD Index, STRATEGY A",
@@ -1115,7 +1187,44 @@
         "status": "",
         "applicability": "",
         "sub_category": "",
-        "disclosures": []
+        "disclosures": [
+          {
+            "snippet_id": "99916-002",
+            "quote": "Our reputation could be harmed, which could have a material adverse effect on our business, financial condition, results of operations and cash flows. Our business could be harmed if our reputation is damaged. Damage to our reputation could arise from a number of factors, including: ... (ii) negative publicity or perceptions regarding our products, our industry or our environmental, social and governance (ESG) practices; ... (iv) litigation or regulatory enforcement actions; ... (vi) the actual or perceived negative impacts of our products on human health or the environment; or (vii) the actual or perceived negative impacts of our operations on human health or the environment. Any damage to our reputation could result in reduced demand for our products, increased regulatory scrutiny, increased litigation, or difficulty attracting and retaining employees, any of which could have a material adverse effect on our business, financial condition, results of operations and cash flows.",
+            "source": "CF-Industries-2024-Annual-Report.pdf, Page 24, Item 1A. Risk Factors",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet directly identifies that 'negative publicity or perceptions regarding our products, our industry or our environmental, social and governance (ESG) practices' and 'the actual or perceived negative impacts of our products on human health or the environment' are factors that could damage reputation. It explicitly links this damage to 'reduced demand for our products,' 'increased regulatory scrutiny,' and 'increased litigation,' all of which 'could have a material adverse effect' on the business, thus fully disclosing the risk and its financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language clearly focuses on 'harmed reputation,' 'negative publicity or perceptions,' 'reduced demand,' and 'increased regulatory scrutiny,' framing the issue as a direct threat to the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The statement 'could have a material adverse effect on our business, financial condition, results of operations and cash flows' explicitly indicates financial materiality, even without specific monetary figures.",
+              "timeframe": "Future",
+              "timeframe_justification": "The snippet discusses potential future harm ('could be harmed,' 'could result in') from existing or potential negative perceptions, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          }
+        ]
       },
       {
         "question_id": "99917",

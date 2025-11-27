@@ -317,6 +317,42 @@
             "collapsed_classification": "No disclosure/unclear"
           },
           {
+            "snippet_id": "99903-008",
+            "quote": "Testing of Chemicals... data must be submitted regarding the properties of registered substances and their effect on human health and the environment. Most of this data is collected through studies, including animal testing, and conclusions are then extrapolated to humans. Such studies and tests are conducted only when no alternative in vitro testing methods are available, and in certified laboratories which are subject to certain industry and regulatory accepted guidelines (as the OECD guidelines), ensuring the welfare of the animals as per any applicable legal requirements. Due to increasing global awareness of animal welfare, the use of animals has been limited, at least for purposes of product development and licensing. As a result, methods are constantly being developed around the world, including the use of computerized models for prediction, as well as experimental models in tissue cultures. Some of these models are even accepted by authorities as substitutes for studies on animals. Over the years, ICL has worked to identify the most reliable and appropriate models that can provide data on the properties of substances under development. These models have replaced some animal testing, at least in the initial stages of product development. To date, we have succeeded in identifying alternative methods relating to several properties, such as the immediate toxicity of substances and skin and eye irritations. We are currently examining methods that could provide data on endocrine (hormonal) system disruption effects.",
+            "source": "ESG report 2024.pdf, Page 168, Product Stewardship & Lifecycle",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly discusses the need to submit data on the 'effect on human health' for product licensing and the company's efforts to test for properties like 'immediate toxicity of substances and skin and eye irritations' and 'endocrine (hormonal) system disruption effects.' This demonstrates a clear recognition of potential human health problems from products as a risk that requires extensive testing and data submission.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'effect on human health,' 'toxicity,' and 'endocrine disruption effects' frames these as potential harms or negative consequences that the company must understand and manage.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes testing and research efforts but does not provide explicit financial figures or a definitive statement about the financial materiality of these risks.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The activities described are ongoing ('data must be submitted,' 'methods are constantly being developed,' 'currently examining') and relate to both existing and 'substances under development,' indicating a present-day and forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "NO",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "NOT RELEVANT"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
             "snippet_id": "99903-009",
             "quote": "Phasing out substances and developing alternatives Identification of products with toxicological/ environmental concerns is an ongoing process at ICL, in which regulatory inputs are communicated internally to take required measures and identify safer alternatives. ICL closely monitors regulatory developments related to its products and is compliant with all relevant regulatory decisions in each region, including restrictions and bans. We have a long- term plan to phase out all chemicals of concern, guided by regulatory requirements. ICL identifies relevant substances that are being phased out over time due to regulatory requirements and is developing sustainable alternatives to these substances. As an example of our transition to sustainable alternatives, ICL’s VeriQuel R100 and VeriQuel F100 products will replace conventional flame retardants such as TCPP and TDCP. These products offer reduced persistence, lower toxicity and potentially improved biodegradability. Additionally, they meet stringent regulatory standards, demonstrating our commitment to a safer and greener chemical landscape.",
             "source": "ESG report 2024.pdf, Page 168, Product Stewardship & Lifecycle",

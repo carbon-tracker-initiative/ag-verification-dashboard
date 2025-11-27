@@ -1814,6 +1814,42 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99918-001",
+            "quote": "$1 per MMBtu change in NYMEX natural gas price 3 ± 190 (Adjusted EBITDA) ± 0.30 (Adjusted EPS)",
+            "source": "2024 Nutrien Annual Report.pdf, Page 58, 2025 Sensitivities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet quantifies the financial impact of a change in natural gas prices on Adjusted EBITDA and Adjusted EPS, directly linking energy input costs to the business's financial performance. The provision of specific financial sensitivity figures demonstrates a clear assessment of financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The sensitivity analysis inherently frames changes in natural gas prices as a factor that can negatively (or positively) impact financial results, thus representing a risk to be managed.",
+              "financial_type": "Financial",
+              "financial_justification": "The disclosure provides explicit quantifiable financial values ('± 190' million for Adjusted EBITDA and '± 0.30' for Adjusted EPS) directly linked to the risk of natural gas price changes.",
+              "timeframe": "Future",
+              "timeframe_justification": "This information is presented in the '2025 Sensitivities' section, clearly indicating a forward-looking timeframe for these potential impacts."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
             "snippet_id": "99918-002",
             "quote": "Access to reliable and competitively priced energy feedstock supply is an important driver of profitability, as recent geopolitical events continue to create additional volatility in certain global energy markets. North American nitrogen producers currently have an advantaged cost position due to the relatively low price of natural gas compared to competitors in Europe and Asia.",
             "source": "2024 Nutrien Annual Report.pdf, Page 21, Market fundamentals",

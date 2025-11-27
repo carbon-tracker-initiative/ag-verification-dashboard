@@ -270,6 +270,42 @@
               "correct_classification": "UNCLEAR"
             },
             "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99907-002",
+            "quote": "Directive concerning the protection of waters against pollution caused by nitrates from agricultural sources (Nitrates Directive) and Directive of 14 December 2016 on the reduction of national emissions of certain atmospheric pollutants (NEC directive). The evaluation is a fitness check against adopted objectives and compliance with the EU’s objectives for the protection of human health and the environment. It also aims to identify the potential for simplifications and reducing administrative burden. Additionally, in the second quarter of 2024, the European Commission held public consultations on a draft amendment to the Nitrate Directive aimed at excluding RENURE products (processed manure with a simultaneous increase in nitrogen content relative to the starting material) from the application limit for natural fertilizers – the application of animal manure is currently limited to 170 kg of nitrogen (N) per hectare annually.",
+            "source": "Azoty_Group_Directors_Report_2024.pdf, Page 106, Section 6.2",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The snippet describes the existence and review of a directive related to water pollution from agricultural sources. However, it does not explicitly frame this as a risk to the business. It is a neutral, factual description of the regulatory landscape. Per the definitions, when the topic is acknowledged but not characterized as a business risk, the correct classification is UNCLEAR.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The discussion of a 'Directive concerning the protection of waters against pollution' and 'application limit for natural fertilizers' frames this as a regulatory challenge and a potential constraint on business operations, indicating a negative impact or threat.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes regulatory measures and limits ('application limit') but does not provide explicit financial figures for compliance costs, penalties, or other financial impacts. It focuses on the qualitative regulatory aspect.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet discusses an ongoing 'evaluation' of the Directive and 'public consultations on a draft amendment', indicating that this is a present-day and forward-looking issue with potential future regulatory changes."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The snippet describes the existence and review of a directive related to water pollution from agricultural sources. However, it does not explicitly frame this as a risk to the business. It is a neutral, factual description of the regulatory landscape. Per the definitions, when the topic is acknowledged but not characterized as a business risk, the correct classification is UNCLEAR.",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
           }
         ]
       },

@@ -1824,6 +1824,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99918-004",
+            "quote": "Statements contained in this 2024 Annual Report, other than statements of historical fact, which address activities, events, and developments that the Company expects or anticipates will or may occur in the future, including, but not limited to, information regarding the future economic performance and financial condition of the Company, the plans and objectives of the Company's management, the Company's assumptions regarding such performance and plans, as well as the amount and timing of repurchases of the Company's common shares are \"forward-looking statements\" within the meaning of the U.S. federal securities laws that are subject to risks and uncertainties. Actual results could differ materially from the forward-looking information in this 2024 Annual Report due to a variety of factors. Additional detailed information concerning a number of the important factors that could cause actual results to differ materially from the forward-looking information contained in this 2024 Annual Report is readily available in the Company's Annual Report on Form 10-K for the fiscal year ended September 30, 2024, which is filed with the Securities and Exchange Commission. ... including, but not limited to, the precautionary statements included in this report as well as the following factors: global socio-demographic and economic trends, climate-related conditions and weather events, energy prices and technological innovations, consumer and client behavior, data limitations and uncertainty, legislative and regulatory changes, and other unforeseen events or conditions.",
+            "source": "SMG-2024-CR-Report-Final.pdf, Page 2, ABOUT THIS REPORT",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet lists 'energy prices' as one of the 'important factors that could cause actual results to differ materially from the forward-looking information.' This acknowledges energy prices as a risk with potential material financial impact on the company's performance. However, it is a general statement within a list of factors and does not provide a definitive statement of financial materiality for the company, aligning with a PARTIAL disclosure.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language frames 'energy prices' as a factor that 'could cause actual results to differ materially,' indicating a potential negative impact or uncertainty, thus classifying it as a risk.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure mentions that energy prices 'could cause actual results to differ materially,' indicating a potential financial impact, but it does not provide specific monetary values or a definitive statement of financial materiality for the company.",
+              "timeframe": "Future",
+              "timeframe_justification": "The statement refers to 'activities, events, and developments that the Company expects or anticipates will or may occur in the future,' clearly indicating a forward-looking timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99918-006",
             "quote": "We purchase raw materials for our products from various sources. We are subject to market risk as a result of the fluctuating prices of raw materials, including urea and other fertilizer inputs, resins, diesel, gasoline, natural gas, sphagnum peat, bark and grass seed. Our objectives surrounding the procurement of these materials are to ensure continuous supply, minimize costs and improve supply and pricing predictability. We seek to achieve these objectives through negotiation of contracts with favorable terms directly with vendors. When appropriate, we commit to purchase a certain percentage of our needs in advance of the lawn and garden season to secure pre-determined prices. We also hedge certain commodities, particularly diesel and urea, to improve cost predictability and control. Sufficient raw materials were available during fiscal 2024.",
             "source": "WEB FINAL- SMG ANNUAL REPORT (1).pdf, Page 7, Item 1. Business",

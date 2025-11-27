@@ -581,6 +581,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99910-002",
+            "quote": "Total waste landfilled: 93,400,262.0 (2022), 65,294,928.0 (2023), 80,586,785.7 (2024)... Promoting phosphogypsum utilisation: In 2024, PhosAgro expanded the use of phosphogypsum as a construction material at Apatit’s Cherepovets and Balakovo sites. This helped reduce the volume of phosphogypsum sent to waste disposal facilities.",
+            "source": "Annual integrated report 2024.pdf, Page 206, Environmental review",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet provides quantitative data on the large volumes of waste landfilled, including phosphogypsum, and explicitly states efforts to 'reduce the volume of phosphogypsum sent to waste disposal facilities'. The act of reducing this volume implies that the disposal itself is a managed issue, likely due to associated costs, environmental concerns, or capacity limitations, thus representing a business risk or liability. However, it does not state the financial materiality of the risk of disposal.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus is on 'reducing the volume' of waste sent to disposal facilities, indicating a management effort to mitigate a negative aspect of operations.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet provides quantitative data on waste volume in tonnes but does not include any specific monetary figures related to the risk of disposal.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The snippet presents data for multiple past years (2022, 2023, 2024) and describes ongoing efforts ('expanded the use', 'helped reduce'), indicating a multiple or unclear timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Nico",
+              "relevant_risk": "UNSURE",
+              "duplicate": "NO",
+              "notes": "is it safe to use readioactive material such as phosphogypsum in construction?",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99910-003",
             "quote": "Land disturbance resulting from the Company's operations occurs due to mineral extraction, construction of waste disposal facilities, and other construction activities... Increasing the share of waste diverted for recycling reduces pressure on these disposal sites and extends their operational lifespan.",
             "source": "Annual integrated report 2024.pdf, Page 218, Environmental review",

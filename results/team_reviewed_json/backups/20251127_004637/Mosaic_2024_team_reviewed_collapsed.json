@@ -925,6 +925,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99910-005",
+            "quote": "The amount of the Plant City Bond is $327.1 million, which reflects our closure cost estimates as of December 31, 2024. ... Under our current approach to satisfying applicable requirements, additional financial assurance would be required in the future if increases in cost estimates exceed the face amount of the Plant City Bond or the amount supported by the Bonnie Financial Test.",
+            "source": "FINAL-2024_Annual_Report.pdf, Page 21, Plant City and Bonnie Facilities",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet provides a specific financial amount for a bond related to gypstack closure ('$327.1 million') and explicitly states that 'additional financial assurance would be required in the future if increases in cost estimates exceed' this amount. This clearly identifies a financial risk and its potential future increase.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The discussion of a 'bond' for 'closure cost estimates' and the potential for 'additional financial assurance' if costs increase frames gypstack closure as a financial obligation and a forward-looking risk.",
+              "financial_type": "Financial",
+              "financial_justification": "The disclosure provides a specific financial amount for the Plant City Bond ('$327.1 million') and discusses the financial implications of potential cost increases, indicating financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The bond amount is stated 'as of December 31, 2024' (present day), but the potential for 'additional financial assurance would be required in the future' clearly indicates a forward-looking risk."
+            },
+            "financial_amounts": [
+              "USD 327100000 ($327.1 million)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99910-006",
             "quote": "Management of Residual Materials and Closure of Management Areas. Mining and processing of potash and phosphate generate residual materials that must be managed both during the operation of the facility and after facility closure. Potash tailings, consisting primarily of salt and clay, are stored in surface disposal sites. Phosphate clay residuals from mining are deposited in clay storage areas (“CSAs”). Processing of phosphate rock with sulfuric acid generates phosphogypsum that currently is stored in Gypstacks. During the life of the tailings management areas, CSAs and Gypstacks, we have incurred and will continue to incur significant costs to manage residual materials in accordance with environmental laws and regulations and with permit requirements. Additional legal and permit requirements will take effect when these facilities are closed. Our AROs are further discussed in Note 14 of our Notes to Consolidated Financial Statements.",
             "source": "FINAL-2024_Annual_Report.pdf, Page 24, Operating Requirements and Impacts",
@@ -1113,6 +1149,43 @@
             "financial_amounts": [
               "USD 2600000000 ($2.6 billion)",
               "USD 2200000000 ($2.2 billion)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Durand",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99911-004",
+            "quote": "We primarily incur liabilities for reclamation activities in our Florida operations... where, for permitting purposes, we must either pass a test of financial strength or provide credit support, typically in the form of cash deposits, surety bonds or letters of credit. As of December 31, 2024, we had $411.8 million in surety bonds and a $50 million letter of credit included in the total amount above. These bonds and letters of credit are outstanding for reclamation obligations, primarily related to mining in Florida.",
+            "source": "FINAL-2024_Annual_Report.pdf, Page 18, Other Commercial Commitments",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet explicitly states that the company 'incur[s] liabilities for reclamation activities' and must provide financial assurance, detailing specific amounts for surety bonds ($411.8 million) and a letter of credit ($50 million) for these obligations. This clearly identifies restoration of mining sites as a financial risk.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'incur liabilities for reclamation activities' and the requirement to 'provide credit support' frames these obligations as a financial burden and a risk to the business.",
+              "financial_type": "Financial",
+              "financial_justification": "The disclosure provides explicit, quantifiable financial values for surety bonds ('$411.8 million') and a letter of credit ('$50 million') directly linked to reclamation obligations.",
+              "timeframe": "Current",
+              "timeframe_justification": "The financial instruments are reported 'As of December 31, 2024' (present day), indicating current financial commitments for ongoing and future reclamation obligations."
+            },
+            "financial_amounts": [
+              "USD 411800000 ($411.8 million)",
+              "USD 50000000 ($50 million)"
             ],
             "verification_corrected": false,
             "comparison_status": "unchanged",

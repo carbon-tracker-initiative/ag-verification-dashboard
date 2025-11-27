@@ -450,6 +450,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99905-003",
+            "quote": "E2 – Pollution of Soil: Following a comprehensive study on soil pollution impacts, we have determined that soil pollution is not a material topic for our organization. The study concluded that our existing measures have effectively minimized any significant soil pollution impacts across our operations. While the study provided recommendations for further improvement and proposed KPI’s, these are deemed opportunities for refinement rather than indicators of materiality. We will continue to monitor and reassess soil pollution impacts periodically to ensure alignment with evolving sustainability expectations.",
+            "source": "annual-report-2024-english.pdf, Page 102, Deep Dive into Topical Double Materiality Assessment Methodology",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet directly states that 'soil pollution is not a material topic for our organization' and that 'our existing measures have effectively minimized any significant soil pollution impacts across our operations'. This is a definitive statement about the financial materiality (or lack thereof) of soil pollution as a risk.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The statement 'soil pollution is not a material topic' and 'minimized any significant soil pollution impacts' presents a factual assessment that the issue is not a significant threat to the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure explicitly states that soil pollution is 'not a material topic', which is a definitive statement about financial materiality without providing specific figures.",
+              "timeframe": "Current",
+              "timeframe_justification": "The phrases 'is not a material topic' and 'existing measures have effectively minimized' refer to the current status and past effectiveness, making it present day."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Focused on own operations. Not really discussing downstream, so sort of half not a FD",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99905-004",
             "quote": "Reputation Risk – Damage to brand image, whether from negative publicity or customer dissatisfaction, environmental concerns, product safety, regulatory compliance, and ethical business practices, that could undermine trust, erode market position, and reduce overall value. Agro: e.g. Carbon footprint, potential soil degradation, water contamination concerns, fossil-fuel by-product links",
             "source": "annual-report-2024-english.pdf, Page 72, ERM Main Radar",
@@ -1201,6 +1237,43 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99913-002",
+            "quote": "The provisions for environmental obligations mainly relate to the remediation of historical soil and groundwater contamination in Belgium (Ham, Tessenderlo and Vilvoorde) and France (Loos). The estimated cash outflows are expected to occur over a period of 1 to 30 years. The total amount of the provision for environmental obligations amounts to 108.0 million EUR as per December 31, 2024 (2023: 107.0 million EUR).",
+            "source": "annual-report-2024-english.pdf, Page 238, 24. PROVISIONS",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "FULL_DISCLOSURE",
+            "classification_justification": "This snippet provides a definitive statement about the financial materiality of restoring contaminated sites, explicitly stating 'The total amount of the provision for environmental obligations amounts to 108.0 million EUR' for 'remediation of historical soil and groundwater contamination.' This is a clear, quantified financial risk to the business.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure of 'provisions for environmental obligations' related to 'remediation' clearly frames this as a financial burden and a negative consequence, thus a risk.",
+              "financial_type": "Financial",
+              "financial_justification": "An explicit monetary value of '108.0 million EUR' is provided for the total provision for environmental obligations, directly quantifying the financial impact.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The 'provisions' exist as of the reporting date, and 'estimated cash outflows are expected to occur over a period of 1 to 30 years,' indicating a present-day obligation with long-term forward-looking settlement."
+            },
+            "financial_amounts": [
+              "EUR 108000000 (108.0 million EUR)",
+              "EUR 107000000 (107.0 million EUR)"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "FULL_DISCLOSURE",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "FULL DISCLOSURE"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99913-003",
             "quote": "Historical contamination has already been identified and Tessenderlo Group has made the necessary provisions for further treatment of this historical contamination.",
             "source": "annual-report-2024-english.pdf, Page 116, Section: ESRS E2 POLLUTION - SOIL POLLUTION",
@@ -1496,6 +1569,42 @@
         "applicability": "",
         "sub_category": "",
         "disclosures": [
+          {
+            "snippet_id": "99917-001",
+            "quote": "The provisions for environmental obligations relate to the estimated costs for the remediation of historical soil and groundwater contamination in Belgium (Ham, Tessenderlo and Vilvoorde) and France (Loos). The estimated cash outflows are expected to occur in the period 2025-2050. The discount rate used to calculate the present value of the estimated cash outflows is 3.0% (2023: 3.0%). The increase of the provisions for environmental obligations can be explained by the increase of the estimated cash outflows for the remediation of historical soil and groundwater contamination in Belgium and France. The increase of the estimated cash outflows is mainly due to the increase of the estimated volumes of contaminated soil and groundwater to be treated and the increase of the estimated costs for the treatment of the contaminated soil and groundwater. The group believes that the estimates are reasonable and consistent with the internal reporting and reflect management’s best estimates. However, actual results may differ from these estimates under different assumptions or conditions. The group is currently in discussion with the Flemish government regarding the remediation of the Winterbeek and Grote Laak (two small rivers in Belgium). The group expects to reach an agreement with the Flemish government in the first half of 2025. The estimated costs for the remediation of the Winterbeek and Grote Laak are included in the provisions for environmental obligations.",
+            "source": "annual-report-2024-english.pdf, Page 238, Note 24 Provisions",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "[CORRECTED BY VERIFICATION] The classification definition for FULL_DISCLOSURE requires an explicit statement of financial materiality (e.g., 'this is a material risk' or 'this is not a material risk'). While the snippet discusses financial provisions, which implies materiality, it does not explicitly state it. Therefore, it meets the criteria for PARTIAL (identified as a business risk) but not FULL_DISCLOSURE.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on 'provisions for environmental obligations' and 'estimated costs for the remediation of historical soil and groundwater contamination', clearly framing this as a financial burden and a negative consequence for the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The snippet explicitly discusses 'provisions for environmental obligations' and 'estimated costs' and 'cash outflows', indicating a clear financial impact. While no specific total monetary value for the provision is given in this snippet, the detailed discussion of 'estimated costs' and 'cash outflows' for remediation, and the fact that it's a 'provision', signifies financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The 'historical soil and groundwater contamination' points to a backward-looking origin, but the 'estimated cash outflows are expected to occur in the period 2025-2050' and the 'discussion with the Flemish government' are present-day and forward-looking, making the timeframe span multiple periods."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": true,
+            "comparison_status": "classification_corrected",
+            "correction_note": "[CORRECTED BY VERIFICATION] The classification definition for FULL_DISCLOSURE requires an explicit statement of financial materiality (e.g., 'this is a material risk' or 'this is not a material risk'). While the snippet discusses financial provisions, which implies materiality, it does not explicitly state it. Therefore, it meets the criteria for PARTIAL (identified as a business risk) but not FULL_DISCLOSURE.",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Richard",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Not clear if this is legal claims. Seems more like remediation requirements.",
+              "remove_from_analysis": "",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
           {
             "snippet_id": "99917-003",
             "quote": "In addition, Tessenderlo Group does undertake actions related to historical contamination not caused by current operations but by historical old processes that today are not active anymore. An example is the remediation of the Winterbeek and Grote Laak (two small rivers in Belgium), where since the start of the project together with the Flemish government more than 350.000 tonnes of contaminated material is removed and remediated.",

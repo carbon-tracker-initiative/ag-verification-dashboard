@@ -483,7 +483,44 @@
         "status": "",
         "applicability": "",
         "sub_category": "",
-        "disclosures": []
+        "disclosures": [
+          {
+            "snippet_id": "99908-002",
+            "quote": "Transition Risks: ... (iii) dietary shifts to more plant-based nutrition...",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 18, Our Operating Environment",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly lists 'dietary shifts to more plant-based nutrition' as a 'Transition Risk.' This is a direct acknowledgment of a market trend (related to alternatives and potentially organic farming) that poses a risk to the business by potentially reducing demand for its products. However, it does not provide specific financial figures or a statement of financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure explicitly categorizes 'dietary shifts to more plant-based nutrition' as a 'Transition Risk,' clearly framing it as a potential negative consequence or threat to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet mentions 'dietary shifts' but does not provide any explicit financial figures or statements about the financial materiality of this risk.",
+              "timeframe": "Future",
+              "timeframe_justification": "The listing under 'Transition Risks' indicates a forward-looking perspective on anticipated changes and their potential impacts."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Duplicated in row 284.\n\nThis part of the quote is most relevant. Keep this row.",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          }
+        ]
       },
       {
         "question_id": "99913",
@@ -943,6 +980,42 @@
               "financial_justification": "No explicit financial amounts or statements of financial materiality are provided in this snippet.",
               "timeframe": "Future",
               "timeframe_justification": "The phrases 'limit the potential impact of future external events' and 'will significantly improve' indicate future-oriented actions and benefits, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99918-016",
+            "quote": "Energy Efficiency: • Energy-efficient designs featured by Fertiglobe’s young asset base. • Implemented monitoring tools to continuously improve energy consumption, supported by industry leading monitoring tools. • Reviewing our energy and feedstock purchases with the aim to increase our use of green or renewable sources, including increasing our purchase of renewable power (such as solar and wind energy) and increasing our consumption of biofuels and alternative green feedstocks. • Identify and pursue further efficiency through select value-accretive investments.",
+            "source": "Fertiglobe-Annual-Report-24-vF.pdf, Page 54, Energy and Climate Change - continued",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet details the company's focus on 'Energy Efficiency' as part of its operational excellence program, including efforts to 'continuously improve energy consumption' and 'Reviewing our energy and feedstock purchases.' This implicitly acknowledges that energy consumption and associated costs are a significant operational concern that the company is actively managing. However, it does not explicitly state 'high energy input costs' as a risk or quantify its financial impact, making it unclear.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The focus is on 'Energy Efficiency' and 'continuously improve energy consumption,' which are proactive management strategies aimed at operational improvement, rather than explicitly framing high costs as a direct threat.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "No explicit financial amounts or statements of financial materiality are provided in this snippet.",
+              "timeframe": "Current",
+              "timeframe_justification": "The snippet describes ongoing efforts and implemented tools ('Implemented monitoring tools,' 'Reviewing our energy and feedstock purchases'), indicating a present-day timeframe."
             },
             "financial_amounts": [
               "None"

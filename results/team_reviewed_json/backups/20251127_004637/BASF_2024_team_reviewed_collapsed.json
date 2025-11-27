@@ -165,6 +165,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99903-007",
+            "quote": "BASF’s product portfolio includes substances of concern (SC) and substances of very high concern (SVHC). These are substances that may have adverse effects on human health or the environment. We are committed to continuously reducing the risks associated with these substances and to replacing them with more sustainable alternatives where possible. We manage these substances in accordance with our Responsible Care Management System and our global standards for product safety. We also apply our TripleS method (Sustainable Solution Steering) to assess the sustainability performance of our product portfolio and to identify products with sustainability concerns (see page 161). In 2024, products containing SVHCs that are used in the end consumer market accounted for 1.3% of BASF’s sales (2023: 1.3%). We aim to reduce this share to less than 1% by 2030. We also aim to reduce the total volume of SVHCs in our product portfolio by 20% by 2030 compared with 2022 (2022: 1.2 million metric tons, 2024: 1.1 million metric tons). We are on track to achieve this target.",
+            "source": "BASF ESG Report 2024.pdf, Page 218, E2 Pollution Prevention, E2-5 Substances of concern and substances of very high concern",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly states that 'substances of concern (SC) and substances of very high concern (SVHC)' 'may have adverse effects on human health' and that BASF is 'committed to continuously reducing the risks associated with these substances.' It further provides quantitative targets to reduce the share of sales from products containing SVHCs and the total volume of SVHCs in its portfolio by 2030. This clear identification of health impacts as risks, coupled with specific, measurable targets and management systems, constitutes a partial disclosure of financial significance through the commitment to reduce sales and volume of these products, which implies a business impact.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'adverse effects on human health,' 'reducing the risks,' and setting targets for reduction clearly frames this as a threat or negative consequence that the company is actively managing, indicating a risk.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure provides quantitative metrics related to sales percentage and total volume of SVHCs, and sets targets for their reduction. While not explicit monetary values, these are quantifiable business metrics directly linked to the risk, indicating a partial financial type.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The commitment to 'continuously reducing the risks' and setting targets for 'by 2030' indicates a forward-looking timeframe, while current sales percentages and volumes are present day."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "I'm tempted to put this as a full disclosure as it mentions targets for reducing substance of very high concern even though it doesn't mention financial materiality explictly, but it does say they account for 1.3% of sales\n\nInteresting information to include in the report. Do other companies categorise their products in this way? Is it misleading in any way?",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99903-008",
             "quote": "Aqueous film-forming foam (AFFF) – class settlement with drinking water suppliers in the United States",
             "source": "BASF ESG Report 2024.pdf, Page 132, Corporate Governance",
@@ -278,6 +314,42 @@
               "relevant_risk": "YES",
               "duplicate": "NO",
               "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99904-004",
+            "quote": "We also consider the financial implications of carbon pricing and emissions trading systems in our investment decisions and business planning. We aim to pass on increased carbon costs to our customers where possible, but we also recognize the risk of losing competitiveness if we are unable to do so. We regularly review our transition plan and adjust it as necessary to reflect new technological developments, market conditions and regulatory changes.",
+            "source": "BASF ESG Report 2024.pdf, Page 185, E1 Climate Change, E1-1 Transition plan for climate change mitigation",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet reiterates BASF's consideration of the 'financial implications of carbon pricing and emissions trading systems' in its planning and the 'risk of losing competitiveness' if these 'increased carbon costs' cannot be passed to customers. This confirms that carbon costs, both from direct operations and indirectly from product use by customers, are recognized as a business risk with financial implications.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The explicit mention of 'financial implications' and the 'risk of losing competitiveness' clearly frames carbon costs as a threat to the business's financial viability and market standing.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure references 'financial implications' and 'increased carbon costs' but does not provide specific monetary values, indicating a partial financial type.",
+              "timeframe": "Future",
+              "timeframe_justification": "The statement refers to 'investment decisions and business planning' and 'regularly review our transition plan,' which are inherently forward-looking activities, addressing future impacts."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "YES",
+              "notes": "Keep this entry and remove row 54.",
               "remove_from_analysis": "NO",
               "highlight": "",
               "correct_classification": "PARTIAL"
@@ -487,6 +559,78 @@
               "correct_classification": "UNCLEAR"
             },
             "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99907-002",
+            "quote": "We aim to minimize emissions to water from our production sites and from the use of our products.",
+            "source": "BASF ESG Report 2024.pdf, Page 211, Section: E2-2 Actions and resources related to pollution",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet acknowledges 'emissions to water from... the use of our products' and states an aim to 'minimize' them. This implies that these emissions are recognized as a negative aspect or a business concern that requires management, thus identifying it as a risk. However, it stops short of discussing financial significance or materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrase 'aim to minimize emissions' clearly indicates that the company views these emissions as a negative factor or threat that needs to be reduced, aligning with a 'Risk' framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses an aim to reduce emissions but does not provide any explicit financial figures or make a statement about the financial materiality of this risk.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement describes an ongoing objective and action ('We aim to minimize'), indicating a present-day and continuous effort."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99907-004",
+            "quote": "Emissions to water from the use of our products by customers are mainly caused by the application of crop protection products in agriculture.",
+            "source": "BASF ESG Report 2024.pdf, Page 216, Section: E2-4 Pollution of air, water and soil",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides a factual statement about the source of emissions to water, specifically linking it to the application of crop protection products in agriculture. However, it does not explicitly characterize this as a 'risk to the business' or discuss its financial implications, leaving the direct business impact unclear.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The language used is descriptive and factual, stating a cause-and-effect relationship without explicitly framing it as a positive or negative consequence for BASF's business. While the broader context is 'Pollution Prevention', this specific sentence is neutral in its framing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The snippet describes a source of environmental emissions but does not provide any quantifiable financial values, nor does it make a statement about financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The statement uses present tense ('are mainly caused by'), indicating an ongoing and currently relevant phenomenon."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "UNCLEAR",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
           }
         ]
       },
@@ -661,6 +805,114 @@
               "notes": "Mentions the topic but not as a risk",
               "remove_from_analysis": "NO",
               "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99914-002",
+            "quote": "In the downstream value chain, the use of crop protection products in agriculture can have a negative impact on biodiversity, for example, through effects on non-target organisms such as pollinators.",
+            "source": "BASF ESG Report 2024.pdf, Page 233, Section E4-1 Transition plan and consideration of biodiversity and ecosystems in strategy and business model",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet explicitly identifies that the company's crop protection products can have a negative impact on biodiversity, specifically mentioning pollinators. This clearly characterizes the topic as a risk to the business, even without quantifying financial impact.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'negative impact on biodiversity' and 'effects on non-target organisms' frames the topic as a source of potential harm or negative consequences for the environment, which in turn poses a risk to the business.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure describes a potential negative impact but does not provide any explicit quantifiable financial values or state whether the risk is financially material or immaterial.",
+              "timeframe": "Future",
+              "timeframe_justification": "The phrase 'can have a negative impact' indicates a potential future or ongoing effect, making it forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Mentions the topic but not as a risk",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99914-003",
+            "quote": "By 2030, we aim to reduce the impact of our crop protection products on biodiversity by 20% compared with 2020 (baseline). This target is measured by a biodiversity impact indicator that considers the toxicity of our products to non-target organisms, including pollinators, and their exposure in the environment.",
+            "source": "BASF ESG Report 2024.pdf, Page 243, Section E4-4 Targets related to biodiversity and ecosystems",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet sets a specific, measurable target to reduce the impact of crop protection products on biodiversity, explicitly including pollinators. The existence of such a target confirms that the company views this impact as a business risk that requires management and reduction, without stating financial materiality.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The disclosure focuses on reducing a negative 'impact' and mentions 'toxicity' of products, clearly framing the topic as a risk that requires mitigation and management.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides a quantitative, non-financial target (20% reduction) and a metric (biodiversity impact indicator) but does not include any explicit monetary values or a statement of financial materiality.",
+              "timeframe": "Future",
+              "timeframe_justification": "The target 'By 2030' and the comparison to a '2020 (baseline)' clearly indicate a forward-looking timeframe for the target, with ongoing measurement."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Includes targets so tempted to categorise it as partial, but it only mentions the topic but not as a risk\n\nInteresting for the report as the company is mentioning a target for reduction, hence acknowledging a problem.",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
+            "snippet_id": "99914-004",
+            "quote": "In 2024, our biodiversity impact indicator for crop protection products was 15% below the 2020 baseline (2023: 10% below baseline). This indicates progress toward our 2030 target.",
+            "source": "BASF ESG Report 2024.pdf, Page 245, Section E4-5 Impact metrics related to biodiversity and ecosystems change",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "This snippet provides a quantitative metric showing the company's current performance against its biodiversity impact reduction target, which explicitly includes pollinators. This demonstrates ongoing monitoring and management of a recognized business risk, without stating financial materiality.",
+            "categorization": {
+              "framing": "Neutral",
+              "framing_justification": "The statement reports on 'progress toward our 2030 target' to reduce negative impacts, indicating a neutral reporting of ongoing efforts to manage a recognized risk.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure provides a quantitative, non-financial metric (15% below baseline) but does not include any explicit monetary values or a statement of financial materiality.",
+              "timeframe": "Current",
+              "timeframe_justification": "The data refers to 'In 2024' and '2023', indicating a present day and backward-looking assessment of performance."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Chris",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Mentions the topic but not as a risk\n\nWhat does this actually mean? Is this linked to the biodiversity metric mentioned above or is it different?",
+              "remove_from_analysis": "NO",
+              "highlight": "YES",
               "correct_classification": "UNCLEAR"
             },
             "collapsed_classification": "No disclosure/unclear"

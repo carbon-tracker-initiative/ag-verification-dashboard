@@ -810,6 +810,42 @@
         "sub_category": "",
         "disclosures": [
           {
+            "snippet_id": "99905-003",
+            "quote": "FMC 2024 DOUBLE MATERIALITY... Priority Topics: ... Soil/Plant Health",
+            "source": "FMC 2024 Sustainability Report_5.pdf, Page 61, DOUBLE MATERIALITY ASSESSMENT",
+            "source_versions": [
+              "v3"
+            ],
+            "classification": "UNCLEAR",
+            "classification_justification": "Listing 'Soil/Plant Health' as a 'Priority Topic' in a double materiality assessment signifies that the company considers it both financially material and an impact material topic. This directly indicates that issues related to soil health (such as reduced fertility) are identified as a risk to the business, even if not explicitly stating the cause as 'its pesticides' or providing specific financial figures.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "Identifying 'Soil/Plant Health' as a 'Priority Topic' in a materiality assessment implies that its degradation or negative status is a concern that could lead to adverse impacts, thus framing it as a risk that requires management and attention.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The concept of 'double materiality' explicitly includes 'financial materiality,' indicating that the topic has financial relevance for the company. However, the snippet does not provide specific monetary values or quantify the financial impact.",
+              "timeframe": "Current",
+              "timeframe_justification": "The disclosure presents the company's current assessment of material topics for the 2024 report, indicating a present-day timeframe."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Not specific enough",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "UNCLEAR"
+            },
+            "collapsed_classification": "No disclosure/unclear"
+          },
+          {
             "snippet_id": "99905-004",
             "quote": "Overuse of fertilizers and other inputs have left soil degraded, resulting in lower yields.",
             "source": "FMC 2024 Sustainability Report_5.pdf, Page 31, Strengthening Rural Livelihoods: Project Utkarsh",
@@ -1125,6 +1161,42 @@
               "financial_justification": "The disclosure describes a specific incident and corrective actions but does not provide any specific financial figures or explicit statements about financial materiality.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The example of an incident and the implementation of a 'new learning program' to prevent recurrence indicates a backward-looking event with present-day and forward-looking implications."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99906-011",
+            "quote": "Description of efforts to assess, monitor and reduce exposure of employees and contract workers to long-term (chronic) health risks",
+            "source": "FMC CORP files (ARS) Annual report to security holders (paper filing), for period end 31-Dec-24.pdf, Page 56, SASB Index",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This SASB metric directly asks for and implies FMC's disclosure of efforts to 'assess, monitor and reduce exposure of employees and contract workers to long-term (chronic) health risks,' explicitly acknowledging these risks in the workplace.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The focus on 'reduce exposure' and 'health risks' clearly frames this as a threat or negative impact that the company is actively managing.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "This is a descriptive metric about efforts, not containing financial figures or explicit statements about financial materiality.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The description of ongoing 'efforts to assess, monitor and reduce' indicates a present-day and forward-looking timeframe for managing these risks."
             },
             "financial_amounts": [
               "None"
@@ -1652,6 +1724,42 @@
             "collapsed_classification": "Disclosure"
           },
           {
+            "snippet_id": "99914-004",
+            "quote": "As an Early Adopter of the Taskforce on Nature-related Financial Disclosures (TNFD), we recognize that our business is intertwined with the ecosystems where we operate. In 2024, we mapped our manufacturing sites to key biodiversity-sensitive areas. This was a critical first step in understanding our nature-related dependencies, risks, and opportunities across our global operations.",
+            "source": "FMC 2024 Sustainability Report_5.pdf, Page 52, Nature and Biodiversity",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet explicitly identifies 'nature-related dependencies, risks, and opportunities' and mentions mapping 'biodiversity-sensitive areas' as a critical first step. While not directly naming pollinators, biodiversity encompasses them, and the framing clearly indicates that nature-related issues are considered risks to the business. However, it does not provide a definitive statement about the financial materiality of these risks.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The language 'nature-related dependencies, risks, and opportunities' clearly frames the topic as a potential source of harm or uncertainty for the business, indicating a risk perspective.",
+              "financial_type": "Non-Financial",
+              "financial_justification": "The disclosure discusses 'risks' and 'dependencies' but does not provide any explicit financial figures or state whether these risks are financially material or immaterial, focusing on qualitative aspects.",
+              "timeframe": "Future",
+              "timeframe_justification": "The statement describes ongoing work ('critical first step,' 'will help guide our efforts in 2025 and beyond') to understand and manage future risks, indicating a forward-looking perspective."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "Bees would be encompassed in \"biodiversity\"",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
             "snippet_id": "99914-005",
             "quote": "Long-term, higher average global temperatures could result in induced changes in natural resources, growing seasons, precipitation patterns, weather patterns, species distributions, water availability, sea levels, and biodiversity. These impacts could cause changes in supplies of raw materials used to maintain FMC’s production capacity and could lead to possible increased sourcing costs.",
             "source": "FMC CORP files (ARS) Annual report to security holders (paper filing), for period end 31-Dec-24.pdf, Page 34, Climate Change",
@@ -1894,6 +2002,42 @@
               "financial_justification": "The disclosure mentions 'requires more resources' which implies increased costs, but it does not provide specific financial figures or explicitly state the financial materiality of these resource requirements.",
               "timeframe": "Multiple or Unclear",
               "timeframe_justification": "The phrase 'is becoming increasingly complex' indicates an ongoing trend that will continue to affect the company in the present and future, making the timeframe present day and forward-looking."
+            },
+            "financial_amounts": [
+              "None"
+            ],
+            "verification_corrected": false,
+            "comparison_status": "unchanged",
+            "correction_note": "",
+            "original_classification": "PARTIAL",
+            "reviewer_classification_missing": false,
+            "annotations": {
+              "analyst": "Dona",
+              "relevant_risk": "YES",
+              "duplicate": "NO",
+              "notes": "",
+              "remove_from_analysis": "NO",
+              "highlight": "",
+              "correct_classification": "PARTIAL"
+            },
+            "collapsed_classification": "Disclosure"
+          },
+          {
+            "snippet_id": "99915-005",
+            "quote": "Additional green taxes, extended producer responsibility requirements, and mandated sustainability disclosures may continue to impact FMC as a part of the EU Green Deal and other global regulations. Many countries FMC does business in are in the process of establishing mandates for non-financial disclosures by aligning with International Sustainability Standards Board (ISSB) or other directives such as the EU Corporate Sustainability Reporting Directive, California SB 253 and 261 and the SEC climate proposal. FMC is closely following regulatory developments, and the cost of complying with global regulations, including reporting requirements and green taxes, is difficult to estimate at this time.",
+            "source": "FMC 2024 Sustainability Report_5.pdf, Page 39, Climate Transition Plan Update",
+            "source_versions": [
+              "v4"
+            ],
+            "classification": "PARTIAL",
+            "classification_justification": "This snippet identifies 'Additional green taxes, extended producer responsibility requirements, and mandated sustainability disclosures' as factors that 'may continue to impact FMC' and states that 'the cost of complying with global regulations, including reporting requirements and green taxes, is difficult to estimate at this time.' This clearly identifies rising compliance costs as a risk to the business, acknowledging financial impact without quantification.",
+            "categorization": {
+              "framing": "Risk",
+              "framing_justification": "The phrases 'may continue to impact FMC' and 'cost of complying... is difficult to estimate' frame these regulatory developments as challenges and potential negative financial consequences for the business.",
+              "financial_type": "Partial-type",
+              "financial_justification": "The disclosure explicitly mentions 'green taxes,' 'extended producer responsibility requirements,' and 'cost of complying with global regulations,' indicating financial impacts, but states that the cost is 'difficult to estimate,' making it a partial-type financial disclosure.",
+              "timeframe": "Multiple or Unclear",
+              "timeframe_justification": "The use of 'may continue to impact' and 'are in the process of establishing' indicates ongoing and anticipated future regulatory developments and their consequences, making the timeframe multiple or unclear."
             },
             "financial_amounts": [
               "None"
