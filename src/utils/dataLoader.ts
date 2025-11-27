@@ -15,6 +15,7 @@ import type {
 } from '../types/analysis';
 import type { SectorCode } from '../types/questions';
 import { normalizeSectorCode } from '../types/questions';
+import { getCompanySector } from './companySectorUtils';
 
 // Re-export Question type for backward compatibility
 export type { Question };
@@ -67,6 +68,14 @@ function applySectorOverride(company: string, current: SectorCode): SectorCode {
   if (current !== 'ALL') {
     return current;
   }
+  
+  // Use the new company-sector mapping
+  const companySector = getCompanySector(company);
+  if (companySector !== 'ALL') {
+    return companySector;
+  }
+  
+  // Fallback to legacy mapping if not found
   const key = normalizeCompanyKey(company);
   return sectorOverrides[key] || current;
 }

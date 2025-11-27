@@ -1,0 +1,22 @@
+{
+  "ADAMA": "pesticide",
+  "BASF": "pesticide",
+  "Bayer": "pesticide", 
+  "CF Industries": "fertiliser",
+  "Corteva": "pesticide",
+  "Fertiglobe": "fertiliser",
+  "FMC": "pesticide",
+  "Grupa Azoty": "fertiliser",
+  "ICL": "fertiliser",
+  "Mosaic": "fertiliser",
+  "Nutrien": "fertiliser",
+  "PhosAgro": "fertiliser",
+  "SABIC Agri-Nutrients": "fertiliser",
+  "Scotts Miracle-Gro": "fertiliser",
+  "SQM": "fertiliser",
+  "Syngenta": "pesticide",
+  "Tessenderlo": "pesticide",
+  "UPL": "pesticide",
+  "Xinan": "pesticide",
+  "Yara": "fertiliser"
+}

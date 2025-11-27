@@ -110,24 +110,24 @@ enrichedCompanyData.forEach(({ data }) => {
 
 // Question sector applicability mapping
 const questionApplicability: Record<string, { sector: string; label: string }> = {
-  '99901': { sector: 'P', label: 'Applicable only to Crop protection sector' },
-  '99902': { sector: 'F', label: 'Applicable only to Fertilizers sector' },
-  '99903': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99904': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99905': { sector: 'P', label: 'Applicable only to Crop protection sector' },
-  '99906': { sector: 'P', label: 'Applicable only to Crop protection sector' },
-  '99907': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99908': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99909': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99910': { sector: 'F', label: 'Applicable only to Fertilizers sector' },
-  '99911': { sector: 'F', label: 'Applicable only to Fertilizers sector' },
-  '99912': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99913': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99914': { sector: 'P', label: 'Applicable only to Crop protection sector' },
-  '99915': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99916': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99917': { sector: 'PF', label: 'Applicable to both sectors' },
-  '99918': { sector: 'F', label: 'Applicable only to Fertilizers sector' }
+  '99901': { sector: 'P', label: 'Risk question applicable to Crop protection sector' },
+  '99902': { sector: 'F', label: 'Risk question applicable to Fertilizer sector' },
+  '99903': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99904': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99905': { sector: 'P', label: 'Risk question applicable to Crop protection sector' },
+  '99906': { sector: 'P', label: 'Risk question applicable to Crop protection sector' },
+  '99907': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99908': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99909': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99910': { sector: 'F', label: 'Risk question applicable to Fertilizer sector' },
+  '99911': { sector: 'F', label: 'Risk question applicable to Fertilizer sector' },
+  '99912': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99913': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99914': { sector: 'P', label: 'Risk question applicable to Crop protection sector' },
+  '99915': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99916': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99917': { sector: 'PF', label: 'Risk question applicable to Fertilizer and Crop protection sector' },
+  '99918': { sector: 'F', label: 'Risk question applicable to Fertilizer sector' }
 };
 
 const chartPayload = questionOptions.map(q => ({
@@ -185,8 +185,7 @@ const applicabilityMapping = questionApplicability;
           <div class="font-semibold text-slate-300 mb-1">Company's sector:</div>
           <div class="flex gap-4 mb-2">
             <span><strong class="text-slate-200">F</strong> = Fertilizers</span>
-            <span><strong class="text-slate-200">P</strong> = Crop protection</span>
-            <span><strong class="text-slate-200">F&P</strong> = Both</span>
+            <span><strong class="text-slate-200">P</strong> = Crop protection</span>            
           </div>
           <div class="text-[13px] text-slate-500 italic">
             💡 Click on any bar to explore the company's detailed disclosures
