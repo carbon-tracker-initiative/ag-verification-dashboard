@@ -180,6 +180,37 @@ const applicabilityMapping = questionApplicability;
           <p id="question-applicability" class="text-[13px] text-slate-400 italic"></p>
         </div>
 
+        <!-- Question Navigation Controls -->
+        <div class="mb-4">
+          <div class="flex items-center justify-center gap-4">
+            <button
+              id="prev-question"
+              class="flex items-center gap-2 px-4 py-2 rounded-md border border-slate-700 bg-slate-900/70 text-slate-200 hover:bg-slate-800 hover:border-slate-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              title="Previous question (or use ↑ arrow key)"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+              <span class="text-sm font-medium">Previous</span>
+            </button>
+
+            <div class="text-xs text-slate-500 text-center">
+              Navigate with keyboard: <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">↑</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">↓</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">←</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">→</kbd>
+            </div>
+
+            <button
+              id="next-question"
+              class="flex items-center gap-2 px-4 py-2 rounded-md border border-slate-700 bg-slate-900/70 text-slate-200 hover:bg-slate-800 hover:border-slate-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+              title="Next question (or use ↓ arrow key)"
+            >
+              <span class="text-sm font-medium">Next</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
         <div class="surface border border-slate-800 p-4 sm:p-6 rounded-xl">
           <div class="flex items-center gap-2 text-sm text-slate-500 mb-3">
             <span class="w-3 h-3 rounded-full" style="background-color: #10b981;"></span>
@@ -199,37 +230,6 @@ const applicabilityMapping = questionApplicability;
               💡 Click on any bar to explore the company's detailed disclosures
             </div>
           </div>
-        </div>
-      </section>
-
-      <!-- Question Navigation Controls -->
-      <section class="mb-8 border-t border-slate-800 pt-6">
-        <div class="flex items-center justify-center gap-4">
-          <button
-            id="prev-question"
-            class="flex items-center gap-2 px-4 py-2 rounded-md border border-slate-700 bg-slate-900/70 text-slate-200 hover:bg-slate-800 hover:border-slate-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-            title="Previous question (or use ↑ arrow key)"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-            <span class="text-sm font-medium">Previous</span>
-          </button>
-          
-          <div class="text-xs text-slate-500 text-center">
-            Navigate with keyboard: <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">↑</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">↓</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">←</kbd> <kbd class="px-1.5 py-0.5 bg-slate-800 rounded border border-slate-700">→</kbd>
-          </div>
-
-          <button
-            id="next-question"
-            class="flex items-center gap-2 px-4 py-2 rounded-md border border-slate-700 bg-slate-900/70 text-slate-200 hover:bg-slate-800 hover:border-slate-600 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-            title="Next question (or use ↓ arrow key)"
-          >
-            <span class="text-sm font-medium">Next</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
         </div>
       </section>
 
